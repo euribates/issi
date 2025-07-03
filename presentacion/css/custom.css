@@ -1,0 +1,46 @@
+.title {
+  z-index:500;
+  width: 100%;
+  background-color: #30303099;
+  border-bottom: 2px solid silver;
+  font-size: 120%;
+
+  }
+
+blockquote {
+  background-color: #20202099;
+  border-left: 4px solid lime;
+
+}
+
+.container {
+  display: flex;
+}
+
+.col{
+  flex: 1;
+  font-size: 85%;
+}
+
+
+.full {
+  display: flex;
+  flex-direction: column;
+  min-height: 500px;
+  margin-left: 12%;
+  text-align: center;
+  justify-content: center;
+}
+
+.desventaja {
+  color: red;
+}
+
+.ventaja {
+  color: green;
+}
+
+.pie {
+  font-size: 75%;
+  border-top: 2px solid silver;
+}
