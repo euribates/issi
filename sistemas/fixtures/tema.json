@@ -1,0 +1,466 @@
+[
+{
+    "model": "sistemas.tema",
+    "pk": "AEX",
+    "fields": {
+        "nombre_tema": "Acción Exterior",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "AGR",
+    "fields": {
+        "nombre_tema": "Agricultura",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "AGU",
+    "fields": {
+        "nombre_tema": "Aguas",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ALI",
+    "fields": {
+        "nombre_tema": "Alimentación",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ART",
+    "fields": {
+        "nombre_tema": "Artesanía",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ASO",
+    "fields": {
+        "nombre_tema": "Asociaciones",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "BIS",
+    "fields": {
+        "nombre_tema": "Bienestar Social",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "CDE",
+    "fields": {
+        "nombre_tema": "Cooperación al desarrollo",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "CNT",
+    "fields": {
+        "nombre_tema": "Contratación",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "COM",
+    "fields": {
+        "nombre_tema": "Comercio",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "CON",
+    "fields": {
+        "nombre_tema": "Consumo",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "COP",
+    "fields": {
+        "nombre_tema": "Cooperativas",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "CPR",
+    "fields": {
+        "nombre_tema": "Colegios profesionales",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "CTB",
+    "fields": {
+        "nombre_tema": "Contabilidad",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "CUL",
+    "fields": {
+        "nombre_tema": "Cultura",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "DSS",
+    "fields": {
+        "nombre_tema": "Desarrollo Sostenible",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ECE",
+    "fields": {
+        "nombre_tema": "Entidades Canarias Exterior",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ECO",
+    "fields": {
+        "nombre_tema": "Economía",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ECS",
+    "fields": {
+        "nombre_tema": "Economía Social",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "EDU",
+    "fields": {
+        "nombre_tema": "Educación",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "EMG",
+    "fields": {
+        "nombre_tema": "Emergencias",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "EMI",
+    "fields": {
+        "nombre_tema": "Emigración",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "EMP",
+    "fields": {
+        "nombre_tema": "Empleo",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ENG",
+    "fields": {
+        "nombre_tema": "Energía",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "EPR",
+    "fields": {
+        "nombre_tema": "Elaboración presupuestaria",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "EST",
+    "fields": {
+        "nombre_tema": "Estadísticas",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "FEM",
+    "fields": {
+        "nombre_tema": "Formación para el empleo",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "FIS",
+    "fields": {
+        "nombre_tema": "Fiscalización",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "FUN",
+    "fields": {
+        "nombre_tema": "Fundaciones",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "FYF",
+    "fields": {
+        "nombre_tema": "Flora y Fauna",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "GAN",
+    "fields": {
+        "nombre_tema": "Ganadería",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "GGA",
+    "fields": {
+        "nombre_tema": "Gestión de gastos",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "GIN",
+    "fields": {
+        "nombre_tema": "Gestión de ingresos",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "GRH",
+    "fields": {
+        "nombre_tema": "Gestión RRHH",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "HAC",
+    "fields": {
+        "nombre_tema": "Hacienda",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "IDI",
+    "fields": {
+        "nombre_tema": "I+D+i",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "IGE",
+    "fields": {
+        "nombre_tema": "Igualdad de género",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "IND",
+    "fields": {
+        "nombre_tema": "Industria",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "INM",
+    "fields": {
+        "nombre_tema": "Inmigración",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "JUE",
+    "fields": {
+        "nombre_tema": "Juego",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "JUS",
+    "fields": {
+        "nombre_tema": "Justicia",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "JUV",
+    "fields": {
+        "nombre_tema": "Juventud",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "MCO",
+    "fields": {
+        "nombre_tema": "Medios de Comunicación Social",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "OPB",
+    "fields": {
+        "nombre_tema": "Obras Públicas",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "OTE",
+    "fields": {
+        "nombre_tema": "Ordenación Territorial",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "PAC",
+    "fields": {
+        "nombre_tema": "Participación Ciudadana",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "PAT",
+    "fields": {
+        "nombre_tema": "Patrimonio",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "PES",
+    "fields": {
+        "nombre_tema": "Pesca",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "PTO",
+    "fields": {
+        "nombre_tema": "Puertos",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "SAN",
+    "fields": {
+        "nombre_tema": "Sanidad",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TEC",
+    "fields": {
+        "nombre_tema": "Tecnología",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TPF",
+    "fields": {
+        "nombre_tema": "Tesoro y política financiera",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TRD",
+    "fields": {
+        "nombre_tema": "Transformación digital",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TRF",
+    "fields": {
+        "nombre_tema": "Tráfico",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TRI",
+    "fields": {
+        "nombre_tema": "Tributos",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TRP",
+    "fields": {
+        "nombre_tema": "Transportes",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TUR",
+    "fields": {
+        "nombre_tema": "Turismo",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "VIV",
+    "fields": {
+        "nombre_tema": "Vivienda",
+        "transversal": false
+    }
+}
+]

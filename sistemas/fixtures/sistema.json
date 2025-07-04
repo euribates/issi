@@ -1,0 +1,26 @@
+[
+{
+    "model": "sistemas.sistema",
+    "pk": 1,
+    "fields": {
+        "dir3_id": "A05003248",
+        "codigo": "ISSI",
+        "nombre": "Inventario de Sistemas de Información",
+        "descripcion": "Inventario global de los sistemas de información de las administraciones publicas de la Comunidad Autónoma de Canarias",
+        "explicacion": "En este sistema se considera un **sistema de información** como el conjunto organizado de elementos interrelacionados (personas, procesos, datos, tecnología y recursos) que trabajan juntos para recopilar, procesar, almacenar, distribuir y gestionar información con el fin de apoyar la toma de decisiones, la coordinación operativa y el control dentro de una organización\"",
+        "tema": "TRD"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 2,
+    "fields": {
+        "dir3_id": "A05017155",
+        "codigo": "TURIDATA",
+        "nombre": "Registro General de Empresas, Actividades y Establecimientos Turísticos",
+        "descripcion": "Un sistema único completo y manejable, que sirva como herramienta de apoyo a la gestión administrativa del sector, y que proporciona información en tiempo real para la gestión estratégica del turismo canario",
+        "explicacion": "El funcionamiento de Turidata permite la introducción de datos por parte de los Cabildos, que se registren las resoluciones y que se emitan los certificados de inscripción de forma automática.",
+        "tema": "TUR"
+    }
+}
+]
