@@ -14,4 +14,21 @@ de un sistema de información:
 > distribuir y gestionar información con el fin de apoyar la toma de decisiones,
 > la coordinación operativa y el control dentro de una organización. 
 
+Pero, qué **no** es un sistema de información:
+
+- No es (necesariamente) una aplicación informática (aunque a menudo lo sea)
+
+- Puede incluir **más de una** aplicación informática
+
+- Puede **no tener ninguna** aplicación informática
+
+
+En el sistema de inventario se propone solo **identificar**
+cada sistema. Si se quiere incluir un mayor detalle que incluya
+las personas, procesos, datos y recursos asociados, estos se gestionan
+en un nivel superior.
+
+
+
+
 

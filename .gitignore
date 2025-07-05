@@ -2,6 +2,7 @@
 *.iml
 *.iws
 *.eml
+*.swp
 out/
 .DS_Store
 .svn
@@ -10,3 +11,4 @@ tmp/**
 node_modules/
 **/__pycache__/
 .sass-cache
+db.sqlite3

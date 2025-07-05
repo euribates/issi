@@ -5,13 +5,15 @@ from sistemas.models import Tema
 
 
 class SistemaAdmin(admin.ModelAdmin):
-    pass
+    list_display = ["codigo", "nombre", "descripcion", "tema"]
+    list_filter = ['tema']
 
 
 admin.site.register(Sistema, SistemaAdmin)
 
 
 class TemaAdmin(admin.ModelAdmin):
-    pass
+    list_display = ["id_tema", "nombre_tema", "transversal"]
+
 
 admin.site.register(Tema, TemaAdmin)
