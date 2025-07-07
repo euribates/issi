@@ -1,7 +1,8 @@
 .title {
   z-index:500;
   width: 100%;
-  background-color: #30303099;
+  background: #246196;
+  background: linear-gradient(0deg,rgba(36, 97, 150, 1) 0%, rgba(0, 0, 0, 1) 100%);
   border-bottom: 2px solid silver;
   font-size: 120%;
 

@@ -12,3 +12,4 @@ node_modules/
 **/__pycache__/
 .sass-cache
 db.sqlite3
+static/*
