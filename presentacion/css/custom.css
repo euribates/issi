@@ -2,8 +2,8 @@
   z-index:500;
   width: 100%;
   background: #246196;
-  background: linear-gradient(0deg,rgba(36, 97, 150, 1) 0%, rgba(0, 0, 0, 1) 100%);
-  border-bottom: 2px solid silver;
+  background: linear-gradient(180deg,rgba(36, 97, 150, 1) 0%, rgba(0, 0, 0, 1) 100%);
+  border-bottom: 2px solid #222288;
   font-size: 120%;
 
   }
@@ -28,7 +28,8 @@ blockquote {
   display: flex;
   flex-direction: column;
   min-height: 500px;
-  margin-left: 12%;
+  margin-left: 6%;
+  margin-right: 6%;
   text-align: center;
   justify-content: center;
 }
@@ -44,4 +45,9 @@ blockquote {
 .pie {
   font-size: 75%;
   border-top: 2px solid silver;
+}
+
+.link {
+  font-size: 12pt;
+  font-family: monospace;
 }
