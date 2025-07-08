@@ -337,6 +337,14 @@
 },
 {
     "model": "sistemas.tema",
+    "pk": "LEG",
+    "fields": {
+        "nombre_tema": "Legislación",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
     "pk": "MCO",
     "fields": {
         "nombre_tema": "Medios de Comunicación Social",
