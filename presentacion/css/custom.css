@@ -9,13 +9,15 @@
   }
 
 blockquote {
-  background-color: #20202099;
+  background-color: #f0f0f099;
   border-left: 4px solid lime;
-
+  text-align: left;
+  padding: 16px!important;
 }
 
 .container {
   display: flex;
+  min-height: 500px;
 }
 
 .col{
