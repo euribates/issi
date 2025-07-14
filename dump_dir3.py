@@ -53,7 +53,6 @@ class Organismo:
         return f'{self.id_dir3}-{slugify(self.nombre_organismo)}.{ext}'
 
 
-
 def iter_organigrama():
     """Iterador sobre el organigrama.
     """
@@ -71,6 +70,7 @@ def iter_organigrama():
                 es_superior=(row[7] == 'A05003638'),
                 )
 
+
 def create_map() -> dict:
     """Devuelve el mapa del organigrama.
     """
@@ -80,6 +80,7 @@ def create_map() -> dict:
         if org.depende_de in orgs_map:
             orgs_map[org.depende_de].add(org)
     return orgs_map
+
 
 def create_tree(orgs_map) -> set:
     return {org for org in orgs_map.values() if org.es_superior }
@@ -101,13 +102,28 @@ def list_organismo(id_dir3, level=0, tree=None):
         list_organismo(child.id_dir3, level+1, tree=tree)
 
 
+def iter_organismo(org):
+    for child in org.childs:
+        yield from iter_organismo(child)
+    yield org
+
 
 def list_top():
     """Lista todos los organismos de nivel superior.
     """
     tree = create_tree(create_map())
     for org in tree:
-        print(f'Creando {org.get_filename()}')
+        filename = org.get_filename()
+        print(f'Creando {filename}', end=' ')
+        orgs = sorted(iter_organismo(org))
+        with open(filename, 'w', encoding="utf-8") as f_out:
+            print(f'nombre_organismo;DIR3', file=f_out)
+            for _ in orgs:
+                print('.', end='')
+                print(f'"{_.nombre_organismo}";"{_.id_dir3}"', file=f_out)
+        print('[OK]')
+
+
 
 
 def travel(org):
