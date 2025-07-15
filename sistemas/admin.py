@@ -5,8 +5,8 @@ from sistemas.models import Tema
 
 
 class SistemaAdmin(admin.ModelAdmin):
-    list_display = ["codigo", "nombre", "descripcion", "tema"]
-    list_filter = ['tema']
+    list_display = ["codigo", "nombre", "descripcion", "tema", "es_transversal"]
+    list_filter = ['tema', "es_transversal"]
 
 
 admin.site.register(Sistema, SistemaAdmin)

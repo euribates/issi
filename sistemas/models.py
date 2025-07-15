@@ -26,6 +26,13 @@ class Sistema(models.Model):
         related_name='sistemas',
         on_delete=models.PROTECT,
         )
+    es_transversal = models.BooleanField(
+        default=False,
+        help_text=(
+            "Este sistema de información es horizontal a todos"
+            " los departamentos."
+            )
+        )
 
     def __str__(self):
         return self.nombre

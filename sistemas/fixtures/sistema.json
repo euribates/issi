@@ -5,10 +5,11 @@
     "fields": {
         "dir3_id": "A05003248",
         "codigo": "ISSI",
-        "nombre": "Inventario de Sistemas de InformaciÃ³n",
-        "descripcion": "Inventario global de los sistemas de informaciÃ³n de las administraciones publicas de la Comunidad AutÃ³noma de Canarias",
-        "explicacion": "En este sistema se considera un **sistema de informaciÃ³n** como el conjunto organizado de elementos interrelacionados (personas, procesos, datos, tecnologÃ­a y recursos) que trabajan juntos para recopilar, procesar, almacenar, distribuir y gestionar informaciÃ³n con el fin de apoyar la toma de decisiones, la coordinaciÃ³n operativa y el control dentro de una organizaciÃ³n\"",
-        "tema": "TRD"
+        "nombre": "Inventario de Sistemas de Información",
+        "descripcion": "Inventario global de los sistemas de información de las administraciones publicas de la Comunidad Autónoma de Canarias",
+        "explicacion": "En este sistema se considera un **sistema de información** como el conjunto organizado de elementos interrelacionados (personas, procesos, datos, tecnología y recursos) que trabajan juntos para recopilar, procesar, almacenar, distribuir y gestionar información con el fin de apoyar la toma de decisiones, la coordinación operativa y el control dentro de una organización\"",
+        "tema": "TRD",
+        "es_transversal": false
     }
 },
 {
@@ -17,10 +18,11 @@
     "fields": {
         "dir3_id": "A05017155",
         "codigo": "TURIDATA",
-        "nombre": "Registro General de Empresas, Actividades y Establecimientos TurÃ­sticos",
-        "descripcion": "Un sistema Ãºnico completo y manejable, que sirva como herramienta de apoyo a la gestiÃ³n administrativa del sector, y que proporciona informaciÃ³n en tiempo real para la gestiÃ³n estratÃ©gica del turismo canario",
-        "explicacion": "El funcionamiento de Turidata permite la introducciÃ³n de datos por parte de los Cabildos, que se registren las resoluciones y que se emitan los certificados de inscripciÃ³n de forma automÃ¡tica.",
-        "tema": "TUR"
+        "nombre": "Registro General de Empresas, Actividades y Establecimientos Turísticos",
+        "descripcion": "Un sistema único completo y manejable, que sirva como herramienta de apoyo a la gestión administrativa del sector, y que proporciona información en tiempo real para la gestión estratégica del turismo canario",
+        "explicacion": "El funcionamiento de Turidata permite la introducción de datos por parte de los Cabildos, que se registren las resoluciones y que se emitan los certificados de inscripción de forma automática.",
+        "tema": "TUR",
+        "es_transversal": false
     }
 },
 {
@@ -30,9 +32,10 @@
         "dir3_id": "A05046372",
         "codigo": "JURISCAN",
         "nombre": "Juriscan",
-        "descripcion": "Base de datos cuyo objetivo es difundir el conocimiento y facilitar la consulta del sistema jurÃ­dico de la Comunidad AutÃ³noma",
-        "explicacion": "**JURISCAN** es una base de datos desarrollada por el Gobierno de Canarias con el objetivo de difundir el conocimiento y facilitar la consulta del sistema jurÃ­dico de la Comunidad AutÃ³noma.\r\n\r\nEs una base de datos principalmente legislativa, en la que pueden encontrarse todas las disposiciones generales emanadas de las instituciones autonÃ³micas; pero tambiÃ©n es una base de datos limitadamente jurisprudencial, en la medida que incluye nota de las sentencias que afectan a las disposiciones autonÃ³micas.\r\n\r\nLa presentaciÃ³n de los documentos se hace desde una perspectiva dinÃ¡mica. Cada disposiciÃ³n tiene su ficha, que comprende detalladamente cuanto estÃ¡ relacionado con ella, antes y despuÃ©s de su vigencia, con la relaciÃ³n de las disposiciones a las que ha afectado y de las referencias, legislativas y jurisprudenciales, que de alguna manera tienen una incidencia posterior. La actualizaciÃ³n permanente de estas fichas constituye una garantÃ­a de seguridad jurÃ­dica en la aplicaciÃ³n del Derecho de la Comunidad AutÃ³noma.\r\n\r\nEl sistema de consultas permite desde la mÃ¡s simple, con un mÃ­nimo de argumentos de bÃºsqueda relativos a la presentaciÃ³n formal de la disposiciÃ³n, hasta la mÃ¡s compleja, en la que pueden combinarse elementos relacionados con el tÃ­tulo, el rango, las materias o la fecha de la disposiciÃ³n. La bÃºsqueda por materias se facilita con un tesauro de unos 3.000 tÃ©rminos que sirve para uniformar la terminologÃ­a y estructurar la recuperaciÃ³n de documentos.",
-        "tema": "LEG"
+        "descripcion": "Base de datos cuyo objetivo es difundir el conocimiento y facilitar la consulta del sistema jurídico de la Comunidad Autónoma",
+        "explicacion": "**JURISCAN** es una base de datos desarrollada por el Gobierno de Canarias con el objetivo de difundir el conocimiento y facilitar la consulta del sistema jurídico de la Comunidad Autónoma.\r\n\r\nEs una base de datos principalmente legislativa, en la que pueden encontrarse todas las disposiciones generales emanadas de las instituciones autonómicas; pero también es una base de datos limitadamente jurisprudencial, en la medida que incluye nota de las sentencias que afectan a las disposiciones autonómicas.\r\n\r\nLa presentación de los documentos se hace desde una perspectiva dinámica. Cada disposición tiene su ficha, que comprende detalladamente cuanto está relacionado con ella, antes y después de su vigencia, con la relación de las disposiciones a las que ha afectado y de las referencias, legislativas y jurisprudenciales, que de alguna manera tienen una incidencia posterior. La actualización permanente de estas fichas constituye una garantía de seguridad jurídica en la aplicación del Derecho de la Comunidad Autónoma.\r\n\r\nEl sistema de consultas permite desde la más simple, con un mínimo de argumentos de búsqueda relativos a la presentación formal de la disposición, hasta la más compleja, en la que pueden combinarse elementos relacionados con el título, el rango, las materias o la fecha de la disposición. La búsqueda por materias se facilita con un tesauro de unos 3.000 términos que sirve para uniformar la terminología y estructurar la recuperación de documentos.",
+        "tema": "LEG",
+        "es_transversal": false
     }
 },
 {
@@ -41,10 +44,11 @@
     "fields": {
         "dir3_id": "A05018778",
         "codigo": "SIRHUS",
-        "nombre": "Sistema de informaciÃ³n de recursos humanos",
-        "descripcion": "Sistema para la gestiÃ³n de los procedimientos en materia de personal, asÃ­ como para la gestiÃ³n del registro general de personal",
-        "explicacion": "Con la implantaciÃ³n de la aplicaciÃ³n **SIRHUS** (Sistema de InformaciÃ³n de Recursos Humanos), se persigue  que esta herramienta sirva de instrumento para:\r\n\r\n- La planificaciÃ³n, gestiÃ³n y seguimiento en materia de personal.\r\n\r\n- La implantaciÃ³n de un sistema de informaciÃ³n Ãºnico de recursos humanos para todos los colectivos de personal de la Comunidad AutÃ³noma de Canarias.",
-        "tema": "TEC"
+        "nombre": "Sistema de información de recursos humanos",
+        "descripcion": "Sistema para la gestión de los procedimientos en materia de personal, así como para la gestión del registro general de personal",
+        "explicacion": "Con la implantación de la aplicación **SIRHUS** (Sistema de Información de Recursos Humanos), se persigue  que esta herramienta sirva de instrumento para:\r\n\r\n- La planificación, gestión y seguimiento en materia de personal.\r\n\r\n- La implantación de un sistema de información único de recursos humanos para todos los colectivos de personal de la Comunidad Autónoma de Canarias.",
+        "tema": "TEC",
+        "es_transversal": true
     }
 },
 {
@@ -54,9 +58,23 @@
         "dir3_id": "A05003248",
         "codigo": "PLATEA",
         "nombre": "Gestor de Expedientes Corporativo",
-        "descripcion": "Facilitar a los departamentos una herramienta que posibilite la automatizaciÃ³n y tramitaciÃ³n electrÃ³nica de los expedientes administrativos.",
-        "explicacion": "La Ley 11/2007 reconoce a los ciudadanos el derecho a conocer por medios electrÃ³nicos el estado de tramitaciÃ³n de los procedimientos en los que sean interesados. Dicho derecho, obliga a los departamentos disponer de uno o varios gestores de expedientes.\r\n\r\nEl Gobierno de Canarias, para cumplir con este derecho, puso en marcha el proyecto de un gestor de expedientes corporativo, ofreciendo con ello la posibilidad de implementar y utilizar PLATEA por los departamentos sin gasto ninguno.\r\n\r\n## Objetivos\r\n\r\n- Facilitar a los departamentos una herramienta que posibilite la automatizaciÃ³n y tramitaciÃ³n electrÃ³nica de los expedientes administrativos.\r\n\r\n- Integrar la gestiÃ³n electrÃ³nica de procedimientos con la plataforma PLATINO de interoperabilidad corporativa en el Gobierno de Canarias y otros sistemas de gestiÃ³n de expedientes ya existentes en otros Departamentos (GexTur, MAyTe, etc.).\r\n\r\n- ConsecuciÃ³n efectiva del derecho de los ciudadanos a conocer el estado de los expedientes por medios electrÃ³nicos, definido en el artÃ­culo 6 de la Ley 11/2007.\r\n\r\n\r\nPrincipales dificultades y aspectos clave para la implantaciÃ³n\r\n\r\n- Se recomienda utilizar un motor de workflow adecuado a las necesidades de la organizaciÃ³n y que permita acciones complejas como deshacer fases, gestiÃ³n de eventos y relacionar expedientes.\r\n\r\n- Simplificar previamente todos los procedimientos a modelar en la herramienta de gestiÃ³n, para facilitar el proceso posterior de diseÃ±o y parametrizaciÃ³n de expedientes.\r\n\r\n- Dificultad derivada de la adecuaciÃ³n a los requisitos funcionales y aspectos organizativos de cada departamento, de forma que sea vÃ¡lida para cualquier modelo de negocio.\r\n\r\n- Las lÃ­neas de evoluciÃ³n girarÃ¡n entorno a modelar todas las sub/familias, soportar modelado de eventos configurables asociados a cada fase/trÃ¡mite/procedimiento, funcionalidades avanzadas en la tramitaciÃ³n de expedientes e integraciÃ³n con nuevos servicios de PLATINO.",
-        "tema": "TEC"
+        "descripcion": "Facilitar a los departamentos una herramienta que posibilite la automatización y tramitación electrónica de los expedientes administrativos.",
+        "explicacion": "La Ley 11/2007 reconoce a los ciudadanos el derecho a conocer por medios electrónicos el estado de tramitación de los procedimientos en los que sean interesados. Dicho derecho, obliga a los departamentos disponer de uno o varios gestores de expedientes.\r\n\r\nEl Gobierno de Canarias, para cumplir con este derecho, puso en marcha el proyecto de un gestor de expedientes corporativo, ofreciendo con ello la posibilidad de implementar y utilizar PLATEA por los departamentos sin gasto ninguno.\r\n\r\n## Objetivos\r\n\r\n- Facilitar a los departamentos una herramienta que posibilite la automatización y tramitación electrónica de los expedientes administrativos.\r\n\r\n- Integrar la gestión electrónica de procedimientos con la plataforma PLATINO de interoperabilidad corporativa en el Gobierno de Canarias y otros sistemas de gestión de expedientes ya existentes en otros Departamentos (GexTur, MAyTe, etc.).\r\n\r\n- Consecución efectiva del derecho de los ciudadanos a conocer el estado de los expedientes por medios electrónicos, definido en el artículo 6 de la Ley 11/2007.\r\n\r\n\r\nPrincipales dificultades y aspectos clave para la implantación\r\n\r\n- Se recomienda utilizar un motor de workflow adecuado a las necesidades de la organización y que permita acciones complejas como deshacer fases, gestión de eventos y relacionar expedientes.\r\n\r\n- Simplificar previamente todos los procedimientos a modelar en la herramienta de gestión, para facilitar el proceso posterior de diseño y parametrización de expedientes.\r\n\r\n- Dificultad derivada de la adecuación a los requisitos funcionales y aspectos organizativos de cada departamento, de forma que sea válida para cualquier modelo de negocio.\r\n\r\n- Las líneas de evolución girarán entorno a modelar todas las sub/familias, soportar modelado de eventos configurables asociados a cada fase/trámite/procedimiento, funcionalidades avanzadas en la tramitación de expedientes e integración con nuevos servicios de PLATINO.",
+        "tema": "TEC",
+        "es_transversal": true
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 6,
+    "fields": {
+        "dir3_id": "A05003248",
+        "codigo": "GiD",
+        "nombre": "Gestión de identidad",
+        "descripcion": "Gestor centralizado de datos de personas",
+        "explicacion": "Gestión centralizada de datos de personas",
+        "tema": "GRH",
+        "es_transversal": true
     }
 }
 ]
