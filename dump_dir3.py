@@ -50,7 +50,7 @@ class Organismo:
         self.childs.add(item)
     
     def get_filename(self, ext='csv'):
-        return f'{self.id_dir3}-{slugify(self.nombre_organismo)}.{ext}'
+        return f'{slugify(self.nombre_organismo)}-{self.id_dir3}.{ext}'
 
 
 def iter_organigrama():
