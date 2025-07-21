@@ -15,6 +15,10 @@ class Tema(models.Model):
 
 
 class Sistema(models.Model):
+
+    class Meta:
+        ordering = ['nombre',]
+
     id_sistema = models.BigAutoField(primary_key=True)
     dir3_id = models.CharField(max_length=9)
     codigo = models.CharField(max_length=32, unique=True)
