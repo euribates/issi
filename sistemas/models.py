@@ -39,12 +39,25 @@ class Sistema(models.Model):
         )
     es_subsistema_de = models.ForeignKey(
         "Sistema",
+        null=True,
         blank=True,
         default=None,
         help_text="Es un subsistema de otro S.I.",
         related_name='subsistemas',
         on_delete=models.PROTECT,
         )
+    icono_height = models.PositiveIntegerField(default=0)
+    icono_width = models.PositiveIntegerField(default=0)
+    icono = models.ImageField(
+        upload_to="sistemas/iconos/%Y/",
+        blank=True,
+        null=True,
+        default=None,
+        height_field='icono_height',
+        width_field='icono_width',
+        max_length=512,
+        )
+
 
     def __str__(self):
         return self.nombre
