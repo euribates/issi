@@ -69,20 +69,20 @@ clean:
 
 # Mostrar migraciones Django
 showmigrations $APP='': check
-    python3 manage.py showmigrations {{APP}}
+    python manage.py showmigrations {{APP}}
 
 alias sm := showmigrations
 
 # Crear nuevas migraciones Django
 makemigrations $APP='': check
-    python3 manage.py makemigrations {{APP}}
+    python manage.py makemigrations {{APP}}
 
 alias mm := makemigrations
 
 # Ejecutar migraciones Django
 migrate $APP='': check
-    python3 manage.py migrate {{APP}} --database $DATABASE
+    python manage.py migrate {{APP}} --database $DATABASE
 
 # Generar imagenes paa la documentación de los modelos
 docs:
-    python3 ./manage.py graph_models -g -o docs/dc2_models.png
+    python ./manage.py graph_models -g -o docs/dc2_models.png

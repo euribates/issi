@@ -33,9 +33,17 @@ class Sistema(models.Model):
     es_transversal = models.BooleanField(
         default=False,
         help_text=(
-            "Este sistema de información es horizontal a todos"
+            "Este S.I. es horizontal a todos"
             " los departamentos."
             )
+        )
+    es_subsistema_de = models.ForeignKey(
+        "Sistema",
+        blank=True,
+        default=None,
+        help_text="Es un subsistema de otro S.I.",
+        related_name='subsistemas',
+        on_delete=models.PROTECT,
         )
 
     def __str__(self):
