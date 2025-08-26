@@ -487,7 +487,7 @@
         "codigo": "ISSI",
         "nombre": "Inventario de Sistemas de Información",
         "descripcion": "Inventario global de los sistemas de información de las administraciones publicas de la Comunidad Autónoma de Canarias",
-        "proposito": "En este sistema se considera un **sistema de información** como el conjunto organizado de elementos interrelacionados (personas, procesos, datos, tecnología y recursos) que trabajan juntos para recopilar, procesar, almacenar, distribuir y gestionar información con el fin de apoyar la toma de decisiones, la coordinación operativa y el control dentro de una organización\"",
+        "proposito": "Gestionar y mantener un inventario de todos los sistemas de información utilizados en el Gobierno de Canarias y organismos relaciones.\r\n\r\nEn este sistema se considera un **sistema de información** como el conjunto organizado de elementos interrelacionados (personas, procesos, datos, tecnología y recursos) que trabajan juntos para recopilar, procesar, almacenar, distribuir y gestionar información con el fin de apoyar la toma de decisiones, la coordinación operativa y el control dentro de una organización\"",
         "tema": "TRD",
         "es_transversal": false,
         "es_subsistema_de": null,
@@ -624,6 +624,23 @@
         "nombre": "Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias",
         "descripcion": "inventario de las actuaciones administrativas, tanto externas como internas, que gestiona la Administración Pública de la Comunidad Autónoma de Canarias y sus organismos públicos dependientes",
         "proposito": "Gestión de un Inventario de todas las actuaciones administrativas, tanto externas como internas, que gestiona la Administración Pública de la Comunidad Autónoma de Canarias y sus organismos públicos dependientes.\r\n\r\n- La información relativa a las actuaciones administrativas externas estará disponible de forma pública\r\n \r\n- Incluirá información básica sobre la tramitación de cada actuación por parte de los interesados\r\n\r\n- A efectos de la interoperabilidad administrativa, las actuaciones administrativas incorporadas al SICAC se clasificarán en familias y subfamilias y en temas y subtema.",
+        "tema": "TRD",
+        "es_transversal": true,
+        "es_subsistema_de": null,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 10,
+    "fields": {
+        "dir3_id": "A05003248",
+        "codigo": "HIPERREG",
+        "nombre": "Registro de entrada  y salida",
+        "descripcion": "Sistema Intercomunicado de Registros de Entrada y Salida de documentos de la Administración Pública de la Comunidad Autónoma de Canarias",
+        "proposito": "Gestiona el registro de entrada y salida de documentos de la Administración Pública de la Comunidad Autónoma de Canarias.",
         "tema": "TRD",
         "es_transversal": true,
         "es_subsistema_de": null,
