@@ -5,23 +5,42 @@
 
 <h2>Sistemas de información</h2>
 
-<table class="table">
-  {% for sistema in sistemas.all %}
-    <tr>
-      <th>
-        <b class="badge text-bg-secondary">{{ sistema.codigo }}</b>
-      </th>
-      <td>
-        <b>{{ sistema.nombre }}</b><br>
-        {{ sistema.descripcion|markdownify }}
-      </td>
-      <td>
-        <code>
-          {{ sistema.tema }}
-        </code>
-      </td>
-    </tr>
-  {% endfor %}
-</table>
+<div class="container">
+  <div class="row">
   
+{% for sistema in sistemas.all %}
+<div class="col">
+<div class="card" style="width: 18rem;">
+  {% if sistema.icono %}
+    <img src="{{ sistema.icono.url }}" class="card-img-top" alt="{{ sistema }}">
+  {% else %}
+    <img src="https://placehold.co/64x64" class="card-img-top" alt="{{ sistema }}">
+  {% endif %}  
+  <div class="card-body">
+      <h4 class="card-title">{{ sistema.codigo }}
+          <br><small>{{ sistema.nombre }}</small>
+      </h4>
+    <p class="card-text">
+      {{ sistema.descripcion|markdownify }}
+    </p>
+    <span class="badge text-bg-primary">
+        {{ sistema.tema }}
+    </span>
+    {% if sistema.es_transversal %}
+      <span class="badge text-bg-info">Transversal</span>
+    {% endif %}
+    {% if sistema.es_subsistema_de %}
+    <span class="badge text-bg-warning" title="de {{ sistema.es_subsistema_de }}">
+        Subsistema
+    </span>
+    {% endif %}
+  </div>
+</div>
+</div>
+{% endfor %}
+  
+  </div>
+</div>  
+
+
 {% endblock content %}

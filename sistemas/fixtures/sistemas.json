@@ -489,11 +489,11 @@
         "descripcion": "Inventario global de los sistemas de información de las administraciones publicas de la Comunidad Autónoma de Canarias",
         "proposito": "Gestionar y mantener un inventario de todos los sistemas de información utilizados en el Gobierno de Canarias y organismos relaciones.\r\n\r\nEn este sistema se considera un **sistema de información** como el conjunto organizado de elementos interrelacionados (personas, procesos, datos, tecnología y recursos) que trabajan juntos para recopilar, procesar, almacenar, distribuir y gestionar información con el fin de apoyar la toma de decisiones, la coordinación operativa y el control dentro de una organización\"",
         "tema": "TRD",
-        "es_transversal": false,
+        "es_transversal": true,
         "es_subsistema_de": null,
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": ""
+        "icono_height": 531,
+        "icono_width": 531,
+        "icono": "sistemas/iconos/2025/logo.issi.png"
     }
 },
 {
@@ -559,9 +559,9 @@
         "tema": "TEC",
         "es_transversal": true,
         "es_subsistema_de": null,
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": ""
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/logo_platea_8ugjV2e.png"
     }
 },
 {
@@ -593,9 +593,9 @@
         "tema": "TEC",
         "es_transversal": true,
         "es_subsistema_de": null,
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": ""
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/logo-platino.png"
     }
 },
 {
@@ -610,9 +610,9 @@
         "tema": "HAC",
         "es_transversal": true,
         "es_subsistema_de": null,
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": ""
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/logo-seflogic.png"
     }
 },
 {
@@ -622,11 +622,11 @@
         "dir3_id": "A05003248",
         "codigo": "SICAC",
         "nombre": "Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias",
-        "descripcion": "inventario de las actuaciones administrativas, tanto externas como internas, que gestiona la Administración Pública de la Comunidad Autónoma de Canarias y sus organismos públicos dependientes",
+        "descripcion": "inventario de las actuaciones administrativas, tanto externas como internas, que gestiona la APCAC y sus organismos públicos dependientes",
         "proposito": "Gestión de un Inventario de todas las actuaciones administrativas, tanto externas como internas, que gestiona la Administración Pública de la Comunidad Autónoma de Canarias y sus organismos públicos dependientes.\r\n\r\n- La información relativa a las actuaciones administrativas externas estará disponible de forma pública\r\n \r\n- Incluirá información básica sobre la tramitación de cada actuación por parte de los interesados\r\n\r\n- A efectos de la interoperabilidad administrativa, las actuaciones administrativas incorporadas al SICAC se clasificarán en familias y subfamilias y en temas y subtema.",
         "tema": "TRD",
         "es_transversal": true,
-        "es_subsistema_de": null,
+        "es_subsistema_de": 8,
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -644,9 +644,9 @@
         "tema": "TRD",
         "es_transversal": true,
         "es_subsistema_de": null,
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": ""
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/logo-hiperreg_y6TMSbi.png"
     }
 }
 ]

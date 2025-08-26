@@ -48,5 +48,35 @@
         "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
         "id_juriscan": 0
     }
+},
+{
+    "model": "normativa.norma",
+    "pk": 6,
+    "fields": {
+        "nombre_norma": "Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Común de las Administraciones Públicas",
+        "sobrenombre": "LPACAP",
+        "url": "https://www.boe.es/eli/es/l/2015/10/01/39/con",
+        "id_juriscan": 0
+    }
+},
+{
+    "model": "normativa.norma",
+    "pk": 7,
+    "fields": {
+        "nombre_norma": "Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público",
+        "sobrenombre": "LRJSP",
+        "url": "https://www.boe.es/eli/es/l/2015/10/01/40/con",
+        "id_juriscan": 0
+    }
+},
+{
+    "model": "normativa.norma",
+    "pk": 8,
+    "fields": {
+        "nombre_norma": "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno",
+        "sobrenombre": "LTAIBG",
+        "url": "https://www.boe.es/eli/es/l/2013/12/09/19/con",
+        "id_juriscan": 0
+    }
 }
 ]

@@ -11,7 +11,7 @@ class Tema(models.Model):
     transversal = models.BooleanField(default=False)
 
     def __str__(self):
-        return f'{self.nombre_tema} ({self.id_tema})'
+        return self.nombre_tema
 
 
 class Sistema(models.Model):
