@@ -1,0 +1,20 @@
+{% load static %}<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ titulo }} - ISSI</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+
+  </head>
+  <body>
+      <div class="container">
+      {% include "comun/navbar.html" %}
+      {% block content %}
+          
+      {% endblock content %}
+      </div>
+  <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+  </body>
+</html>
+

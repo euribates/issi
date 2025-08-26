@@ -1,0 +1,635 @@
+[
+{
+    "model": "sistemas.tema",
+    "pk": "AEX",
+    "fields": {
+        "nombre_tema": "Acción Exterior",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "AGR",
+    "fields": {
+        "nombre_tema": "Agricultura",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "AGU",
+    "fields": {
+        "nombre_tema": "Aguas",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ALI",
+    "fields": {
+        "nombre_tema": "Alimentación",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ART",
+    "fields": {
+        "nombre_tema": "Artesanía",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ASO",
+    "fields": {
+        "nombre_tema": "Asociaciones",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "BIS",
+    "fields": {
+        "nombre_tema": "Bienestar Social",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "CDE",
+    "fields": {
+        "nombre_tema": "Cooperación al desarrollo",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "CNT",
+    "fields": {
+        "nombre_tema": "Contratación",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "COM",
+    "fields": {
+        "nombre_tema": "Comercio",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "CON",
+    "fields": {
+        "nombre_tema": "Consumo",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "COP",
+    "fields": {
+        "nombre_tema": "Cooperativas",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "CPR",
+    "fields": {
+        "nombre_tema": "Colegios profesionales",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "CTB",
+    "fields": {
+        "nombre_tema": "Contabilidad",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "CUL",
+    "fields": {
+        "nombre_tema": "Cultura",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "DSS",
+    "fields": {
+        "nombre_tema": "Desarrollo Sostenible",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ECE",
+    "fields": {
+        "nombre_tema": "Entidades Canarias Exterior",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ECO",
+    "fields": {
+        "nombre_tema": "Economía",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ECS",
+    "fields": {
+        "nombre_tema": "Economía Social",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "EDU",
+    "fields": {
+        "nombre_tema": "Educación",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "EMG",
+    "fields": {
+        "nombre_tema": "Emergencias",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "EMI",
+    "fields": {
+        "nombre_tema": "Emigración",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "EMP",
+    "fields": {
+        "nombre_tema": "Empleo",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "ENG",
+    "fields": {
+        "nombre_tema": "Energía",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "EPR",
+    "fields": {
+        "nombre_tema": "Elaboración presupuestaria",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "EST",
+    "fields": {
+        "nombre_tema": "Estadísticas",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "FEM",
+    "fields": {
+        "nombre_tema": "Formación para el empleo",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "FIS",
+    "fields": {
+        "nombre_tema": "Fiscalización",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "FUN",
+    "fields": {
+        "nombre_tema": "Fundaciones",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "FYF",
+    "fields": {
+        "nombre_tema": "Flora y Fauna",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "GAN",
+    "fields": {
+        "nombre_tema": "Ganadería",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "GGA",
+    "fields": {
+        "nombre_tema": "Gestión de gastos",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "GIN",
+    "fields": {
+        "nombre_tema": "Gestión de ingresos",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "GRH",
+    "fields": {
+        "nombre_tema": "Gestión RRHH",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "HAC",
+    "fields": {
+        "nombre_tema": "Hacienda",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "IDI",
+    "fields": {
+        "nombre_tema": "I+D+i",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "IGE",
+    "fields": {
+        "nombre_tema": "Igualdad de género",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "IND",
+    "fields": {
+        "nombre_tema": "Industria",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "INM",
+    "fields": {
+        "nombre_tema": "Inmigración",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "JUE",
+    "fields": {
+        "nombre_tema": "Juego",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "JUS",
+    "fields": {
+        "nombre_tema": "Justicia",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "JUV",
+    "fields": {
+        "nombre_tema": "Juventud",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "LEG",
+    "fields": {
+        "nombre_tema": "Legislación",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "MAB",
+    "fields": {
+        "nombre_tema": "Medio Ambiente",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "MCO",
+    "fields": {
+        "nombre_tema": "Medios de Comunicación Social",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "OPB",
+    "fields": {
+        "nombre_tema": "Obras Públicas",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "OTE",
+    "fields": {
+        "nombre_tema": "Ordenación Territorial",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "PAC",
+    "fields": {
+        "nombre_tema": "Participación Ciudadana",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "PAT",
+    "fields": {
+        "nombre_tema": "Patrimonio",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "PES",
+    "fields": {
+        "nombre_tema": "Pesca",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "PTO",
+    "fields": {
+        "nombre_tema": "Puertos",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "SAN",
+    "fields": {
+        "nombre_tema": "Sanidad",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TEC",
+    "fields": {
+        "nombre_tema": "Tecnología",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TPF",
+    "fields": {
+        "nombre_tema": "Tesoro y política financiera",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TRD",
+    "fields": {
+        "nombre_tema": "Transformación digital",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TRF",
+    "fields": {
+        "nombre_tema": "Tráfico",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TRI",
+    "fields": {
+        "nombre_tema": "Tributos",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TRP",
+    "fields": {
+        "nombre_tema": "Transportes",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "TUR",
+    "fields": {
+        "nombre_tema": "Turismo",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "VIV",
+    "fields": {
+        "nombre_tema": "Vivienda",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 1,
+    "fields": {
+        "dir3_id": "A05003248",
+        "codigo": "ISSI",
+        "nombre": "Inventario de Sistemas de Información",
+        "descripcion": "Inventario global de los sistemas de información de las administraciones publicas de la Comunidad Autónoma de Canarias",
+        "proposito": "En este sistema se considera un **sistema de información** como el conjunto organizado de elementos interrelacionados (personas, procesos, datos, tecnología y recursos) que trabajan juntos para recopilar, procesar, almacenar, distribuir y gestionar información con el fin de apoyar la toma de decisiones, la coordinación operativa y el control dentro de una organización\"",
+        "tema": "TRD",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 2,
+    "fields": {
+        "dir3_id": "A05017155",
+        "codigo": "TURIDATA",
+        "nombre": "Registro General de Empresas, Actividades y Establecimientos Turísticos",
+        "descripcion": "Un sistema único completo y manejable, que sirva como herramienta de apoyo a la gestión administrativa del sector, y que proporciona información en tiempo real para la gestión estratégica del turismo canario",
+        "proposito": "El funcionamiento de Turidata permite la introducción de datos por parte de los Cabildos, que se registren las resoluciones y que se emitan los certificados de inscripción de forma automática.",
+        "tema": "TUR",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 3,
+    "fields": {
+        "dir3_id": "A05046372",
+        "codigo": "JURISCAN",
+        "nombre": "Juriscan",
+        "descripcion": "Base de datos cuyo objetivo es difundir el conocimiento y facilitar la consulta del sistema jurídico de la Comunidad Autónoma",
+        "proposito": "**JURISCAN** es una base de datos desarrollada por el Gobierno de Canarias con el objetivo de difundir el conocimiento y facilitar la consulta del sistema jurídico de la Comunidad Autónoma.\r\n\r\nEs una base de datos principalmente legislativa, en la que pueden encontrarse todas las disposiciones generales emanadas de las instituciones autonómicas; pero también es una base de datos limitadamente jurisprudencial, en la medida que incluye nota de las sentencias que afectan a las disposiciones autonómicas.\r\n\r\nLa presentación de los documentos se hace desde una perspectiva dinámica. Cada disposición tiene su ficha, que comprende detalladamente cuanto está relacionado con ella, antes y después de su vigencia, con la relación de las disposiciones a las que ha afectado y de las referencias, legislativas y jurisprudenciales, que de alguna manera tienen una incidencia posterior. La actualización permanente de estas fichas constituye una garantía de seguridad jurídica en la aplicación del Derecho de la Comunidad Autónoma.\r\n\r\nEl sistema de consultas permite desde la más simple, con un mínimo de argumentos de búsqueda relativos a la presentación formal de la disposición, hasta la más compleja, en la que pueden combinarse elementos relacionados con el título, el rango, las materias o la fecha de la disposición. La búsqueda por materias se facilita con un tesauro de unos 3.000 términos que sirve para uniformar la terminología y estructurar la recuperación de documentos.",
+        "tema": "LEG",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 4,
+    "fields": {
+        "dir3_id": "A05018778",
+        "codigo": "SIRhUS",
+        "nombre": "Sistema de información de recursos humanos",
+        "descripcion": "Sistema para la gestión de los procedimientos en materia de personal, así como para la gestión del registro general de personal",
+        "proposito": "Con la implantación de la aplicación **SIRHUS** (Sistema de Información de Recursos Humanos), se persigue  que esta herramienta sirva de instrumento para:\r\n\r\n- La planificación, gestión y seguimiento en materia de personal.\r\n\r\n- La implantación de un sistema de información único de recursos humanos para todos los colectivos de personal de la Comunidad Autónoma de Canarias.",
+        "tema": "TEC",
+        "es_transversal": true,
+        "es_subsistema_de": null,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 5,
+    "fields": {
+        "dir3_id": "A05003248",
+        "codigo": "PLATEA",
+        "nombre": "Gestor de Expedientes Corporativo",
+        "descripcion": "Facilitar a los departamentos una herramienta que posibilite la automatización y tramitación electrónica de los expedientes administrativos.",
+        "proposito": "La Ley 11/2007 reconoce a los ciudadanos el derecho a conocer por medios electrónicos el estado de tramitación de los procedimientos en los que sean interesados. Dicho derecho, obliga a los departamentos disponer de uno o varios gestores de expedientes.\\r\\n\\r\\nEl Gobierno de Canarias, para cumplir con este derecho, puso en marcha el proyecto de un gestor de expedientes corporativo, ofreciendo con ello la posibilidad de implementar y utilizar PLATEA por los departamentos sin gasto ninguno.\\r\\n\\r\\n## Objetivos\\r\\n\\r\\n- Facilitar a los departamentos una herramienta que posibilite la automatización y tramitación electrónica de los expedientes administrativos.\\r\\n\\r\\n- Integrar la gestión electrónica de procedimientos con la plataforma PLATINO de interoperabilidad corporativa en el Gobierno de Canarias y otros sistemas de gestión de expedientes ya existentes en otros Departamentos (GexTur, MAyTe, etc.).\\r\\n\\r\\n- Consecución efectiva del derecho de los ciudadanos a conocer el estado de los expedientes por medios electrónicos, definido en el artículo 6 de la Ley 11/2007.\\r\\n\\r\\n\\r\\nPrincipales dificultades y aspectos clave para la implantación\\r\\n\\r\\n- Se recomienda utilizar un motor de workflow adecuado a las necesidades de la organización y que permita acciones complejas como deshacer fases, gestión de eventos y relacionar expedientes.\\r\\n\\r\\n- Simplificar previamente todos los procedimientos a modelar en la herramienta de gestión, para facilitar el proceso posterior de diseño y parametrización de expedientes.\\r\\n\\r\\n- Dificultad derivada de la adecuación a los requisitos funcionales y aspectos organizativos de cada departamento, de forma que sea válida para cualquier modelo de negocio.\\r\\n\\r\\n- Las líneas de evolución girarán entorno a modelar todas las sub/familias, soportar modelado de eventos configurables asociados a cada fase/trámite/procedimiento, funcionalidades avanzadas en la tramitación de expedientes e integración con nuevos servicios de PLATINO.",
+        "tema": "TEC",
+        "es_transversal": true,
+        "es_subsistema_de": null,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 6,
+    "fields": {
+        "dir3_id": "A05003248",
+        "codigo": "SIRVETE",
+        "nombre": "Sirvete",
+        "descripcion": "Gestión de incidencias y solicitudes de los usuarios realizadas as CiberCentro",
+        "proposito": "Facilitar la gestión de incidencias y solicitudes para los usuarios, especialmente para aquellos que necesiten interactuar con el CiberCentro, el centro de servicios telemáticos del gobierno. Es una herramienta que permite a los usuarios registrar sus peticiones, realizar trámites y dar seguimiento a sus incidencias de manera cómoda y eficiente.",
+        "tema": "TEC",
+        "es_transversal": true,
+        "es_subsistema_de": null,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 7,
+    "fields": {
+        "dir3_id": "A05003248",
+        "codigo": "PLATINO",
+        "nombre": "Platino",
+        "descripcion": "Servicio de Interoperabilidad del Gobierno de Canarias",
+        "proposito": "Una infraestructura tecnológica para facilitar la ejecución de trámites administrativos electrónicos, siguiendo estándares y directrices de la administración electrónica.",
+        "tema": "TEC",
+        "es_transversal": true,
+        "es_subsistema_de": null,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 8,
+    "fields": {
+        "dir3_id": "A05032840",
+        "codigo": "SEFLOGIC",
+        "nombre": "SEFLOGIC",
+        "descripcion": "Sistema de Información Económico-Financiera y Logística",
+        "proposito": "Es el Sistema de Información Económico-Financiera y Logística de la Comunidad Autónoma. Este sistema registra todas las operaciones presupuestarias, económicas, financieras, patrimoniales y de tesorería de la administración pública canaria, sus organismos autónomos y entes con presupuesto.",
+        "tema": "HAC",
+        "es_transversal": true,
+        "es_subsistema_de": null,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 9,
+    "fields": {
+        "dir3_id": "A05003248",
+        "codigo": "SICAC",
+        "nombre": "Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias",
+        "descripcion": "inventario de las actuaciones administrativas, tanto externas como internas, que gestiona la Administración Pública de la Comunidad Autónoma de Canarias y sus organismos públicos dependientes",
+        "proposito": "Gestión de un Inventario de todas las actuaciones administrativas, tanto externas como internas, que gestiona la Administración Pública de la Comunidad Autónoma de Canarias y sus organismos públicos dependientes.\r\n\r\n- La información relativa a las actuaciones administrativas externas estará disponible de forma pública\r\n \r\n- Incluirá información básica sobre la tramitación de cada actuación por parte de los interesados\r\n\r\n- A efectos de la interoperabilidad administrativa, las actuaciones administrativas incorporadas al SICAC se clasificarán en familias y subfamilias y en temas y subtema.",
+        "tema": "TRD",
+        "es_transversal": true,
+        "es_subsistema_de": null,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+}
+]

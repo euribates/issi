@@ -6,6 +6,7 @@ from . import models
 class TerminoAdmin(admin.ModelAdmin):
     list_display = ["entrada", "descripcion"]
     list_filter = ['fuente']
+    search_fields = ["entrada", "descripcion"]
 
 
 admin.site.register(models.Termino, TerminoAdmin)

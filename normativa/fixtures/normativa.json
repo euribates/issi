@@ -1,0 +1,52 @@
+[
+{
+    "model": "normativa.norma",
+    "pk": 1,
+    "fields": {
+        "nombre_norma": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica",
+        "sobrenombre": "ENI",
+        "url": "https://www.boe.es/eli/es/rd/2010/01/08/4/con",
+        "id_juriscan": 0
+    }
+},
+{
+    "model": "normativa.norma",
+    "pk": 2,
+    "fields": {
+        "nombre_norma": "Real Decreto 311/2022, de 3 de mayo, por el que se regula el Esquema Nacional de Seguridad",
+        "sobrenombre": "ENS",
+        "url": "https://www.boe.es/eli/es/rd/2022/05/03/311",
+        "id_juriscan": 0
+    }
+},
+{
+    "model": "normativa.norma",
+    "pk": 3,
+    "fields": {
+        "nombre_norma": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público",
+        "sobrenombre": "RISP",
+        "url": "https://www.boe.es/eli/es/l/2007/11/16/37/con",
+        "id_juriscan": 0
+    }
+},
+{
+    "model": "normativa.norma",
+    "pk": 4,
+    "fields": {
+        "nombre_norma": "DECRETO 37/2015, de 27 de marzo, por el que se aprueba y regula el Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias.",
+        "sobrenombre": "",
+        "url": "https://www.gobiernodecanarias.org/boc/2015/066/001.html",
+        "id_juriscan": 72421
+    }
+},
+{
+    "model": "normativa.norma",
+    "pk": 5,
+    "fields": {
+        "nombre_norma": "Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento general de protección de datos)",
+        "sobrenombre": "RGPD",
+        "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+        "id_juriscan": 0
+    }
+}
+]

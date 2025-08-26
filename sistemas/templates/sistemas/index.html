@@ -1,0 +1,27 @@
+{% extends "comun/base.html" %}
+{% load markdownify %}
+
+{% block content %}
+
+<h2>Glosario de términos</h2>
+
+<table class="table">
+  {% for sistema in sistemas.all %}
+    <tr>
+      <th>
+        <b class="badge text-bg-secondary">{{ sistema.codigo }}</b>
+      </th>
+      <td>
+        <b>{{ sistema.nombre }}</b><br>
+        {{ sistema.descripcion|markdownify }}
+      </td>
+      <td>
+        <code>
+          {{ sistema.tema }}
+        </code>
+      </td>
+    </tr>
+  {% endfor %}
+</table>
+  
+{% endblock content %}

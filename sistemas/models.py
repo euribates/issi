@@ -23,8 +23,12 @@ class Sistema(models.Model):
     dir3_id = models.CharField(max_length=9)
     codigo = models.CharField(max_length=32, unique=True)
     nombre = models.CharField(max_length=220)
-    descripcion = models.CharField(max_length=512)
-    explicacion = models.TextField(blank=True, default='')
+    descripcion = models.TextField(max_length=512)
+    proposito = models.TextField(
+        blank=True,
+        default='',
+        verbose_name="Propósito",
+        )
     tema = models.ForeignKey(
         Tema,
         related_name='sistemas',

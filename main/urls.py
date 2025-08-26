@@ -14,9 +14,20 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
+from django.urls import include
 from django.urls import path
 
+from comun.views import homepage
+
+def tie(ruta, vista, name=None):
+    return path(ruta, vista, name=name or vista.__name__)
+
+
 urlpatterns = [
+    tie("", homepage),
+    path("glosario/", include('glosario.urls')),
+    path("sistemas/", include('sistemas.urls')),
     path('admin/', admin.site.urls),
 ]

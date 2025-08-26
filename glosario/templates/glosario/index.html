@@ -1,0 +1,24 @@
+{% extends "comun/base.html" %}
+{% load markdownify %}
+
+{% block content %}
+
+<h2>Glosario de términos</h2>
+
+<table class="table">
+  {% for termino in terminos.all %}
+    <tr>
+      <th>
+        <b>{{ termino.entrada }}</b>
+      </th>
+      <td>{{ termino.descripcion|markdownify }}</td>
+      <td>
+        <code>
+          {{ termino.fuente }}
+        </code>
+      </td>
+    </tr>
+  {% endfor %}
+</table>
+  
+{% endblock content %}
