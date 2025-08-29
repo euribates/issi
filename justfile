@@ -23,7 +23,7 @@ tags:
     cd {{justfile_directory()}} && ctags -R  --exclude=media/*  --exclude=*/static/* --exclude=static/* .
 
 
-# Mostrat versiones del software instlado
+# Mostrar versiones del software instalado
 versions:
     python --version
     python -c "import django; print('Django', django.__version__)"
@@ -34,7 +34,7 @@ versions:
 dbshell:
     python ./manage.py dbshell
 
-# Mustra información del S.O., arquitectura, software y hardware
+# Muestra información del S.O., arquitectura, software y hardware
 @info:
     echo "OS: {{os()}} / {{os_family()}}"
     echo "Arch: This is an {{arch()}} machine"
@@ -83,6 +83,12 @@ alias mm := makemigrations
 migrate $APP='': check
     python manage.py migrate {{APP}} --database $DATABASE
 
-# Generar imagenes paa la documentación de los modelos
+# Generar imágenes para la documentación de los modelos
 docs:
     python ./manage.py graph_models -g -o docs/dc2_models.png
+
+# Actualiza en caliente contenidos estaticos js/css/png/svg
+[unix]
+watch: static
+    just termtitle Watch
+    watchmedo shell-command  --patterns "*.css;*.js;*.png;*.jpg;*.webp;*.svg" --recursive --command "just static"
