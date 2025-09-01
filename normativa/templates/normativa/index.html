@@ -1,0 +1,41 @@
+{% extends "comun/base.html" %}
+
+{% block content %}
+  
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Ficha Juriscán</th>
+      <th>Transversal</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for norma in normas %}<tr>
+      <td>
+        <b style="font-size:120%">{{ norma }}</b><br>
+        <a href="{{ norma.url }}">
+          <pre>{{ norma.url }}<pre>
+          </a>
+      </td>
+      <td>
+        {% if norma.id_juriscan %}
+          <a href="{{ norma.url_juriscan }}">
+          {{ norma.id_juriscan }}
+          </a>
+        {% else %}    
+          <i class="atenuado">N/A</i>
+        {% endif %}
+      </td>
+      <td>
+      {% if norma.es_transversal %}
+        Si
+      {% else %}
+        No
+      {% endif %}
+      </td>
+    </tr>{% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}

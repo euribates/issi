@@ -31,6 +31,7 @@ def tie(ruta, vista, name=None):
 urlpatterns = [
     tie("", homepage),
     path("glosario/", include('glosario.urls')),
+    path("normativa/", include('normativa.urls')),
     path("sistemas/", include('sistemas.urls')),
     path('admin/', admin.site.urls),
 ]

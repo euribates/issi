@@ -51,7 +51,7 @@ INSTALLED_APPS = [
 
 EXTENDED = False
 if EXTENDED:
-    INSTALLES_APPS.extend([
+    INSTALLED_APPS.extend([
         'django_extensions',
         ])
 

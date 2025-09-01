@@ -1,6 +1,14 @@
 from django.contrib import admin
 
-from .models import Norma
+from . import models
+
+
+class RangoAdmin(admin.ModelAdmin):
+    list_display = [
+        "id_rango",
+        "nombre_rango",
+        "peso",
+        ]
 
 
 class NormaAdmin(admin.ModelAdmin):
@@ -8,6 +16,7 @@ class NormaAdmin(admin.ModelAdmin):
         "id_norma",
         "nombre_norma",
         "sobrenombre",
+        "rango",
         "id_juriscan",
         ]
     search_fields = [
@@ -16,4 +25,5 @@ class NormaAdmin(admin.ModelAdmin):
         ]
 
 
-admin.site.register(Norma, NormaAdmin)
+admin.site.register(models.Rango, RangoAdmin)
+admin.site.register(models.Norma, NormaAdmin)

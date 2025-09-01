@@ -117,7 +117,7 @@ def list_top():
         print(f'Creando {filename}', end=' ')
         orgs = sorted(iter_organismo(org))
         with open(filename, 'w', encoding="utf-8") as f_out:
-            print(f'nombre_organismo;DIR3', file=f_out)
+            print('nombre_organismo;DIR3', file=f_out)
             for _ in orgs:
                 print('.', end='')
                 print(f'"{_.nombre_organismo}";"{_.id_dir3}"', file=f_out)
