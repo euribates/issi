@@ -270,6 +270,15 @@
     }
 },
 {
+    "model": "glosario.termino",
+    "pk": 31,
+    "fields": {
+        "entrada": "Datos sensibles",
+        "descripcion": "Los siguientes datos personales se consideran **sensibles** y están sujetos a condiciones de tratamiento específicas:\r\n\r\n- datos personales que revelen el origen racial o étnico, las opiniones políticas, las convicciones religiosas o filosóficas\r\n\r\n- la afiliación sindical\r\n\r\n- datos genéticos, datos biométricos tratados únicamente para identificar un ser humano,\r\n\r\n- datos relativos a la salud,\r\n\r\n- datos relativos a la vida sexual u orientación sexual de una persona.",
+        "fuente": "http://data.europa.eu/eli/reg/2016/679/oj"
+    }
+},
+{
     "model": "glosario.fuente",
     "pk": 1,
     "fields": {
@@ -294,6 +303,15 @@
         "alias": "Ley 37/2007 (RISP)",
         "descripcion": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público",
         "url": "https://www.boe.es/eli/es/l/2007/11/16/37/con"
+    }
+},
+{
+    "model": "glosario.fuente",
+    "pk": 4,
+    "fields": {
+        "alias": "RGDP",
+        "descripcion": "Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento general de protección de datos)",
+        "url": "http://data.europa.eu/eli/reg/2016/679/oj"
     }
 }
 ]
