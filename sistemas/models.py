@@ -61,7 +61,46 @@ class Sistema(models.Model):
         width_field='icono_width',
         max_length=512,
         )
-
+    responsable_funcional = models.CharField(
+        max_length=32,
+        default=None,
+        blank=True,
+        null=True,
+        )
+    responsable_tecnico = models.CharField(
+        max_length=32,
+        default=None,
+        blank=True,
+        null=True,
+        )
 
     def __str__(self):
         return self.nombre
+
+
+class Activo(models.Model):
+
+    NIVELES_DATOS_PERSONALES = [
+        ('NO', 'No contiene datos personales'),
+        ('DP', 'Contiene datos personales'),
+        ('XS', 'Contiene datos personales especialmente sensibles'),
+        ]
+
+    id_activo = models.BigAutoField(primary_key=True)
+    sistema = models.ForeignKey(
+        Sistema,
+        on_delete=models.PROTECT,
+        related_name='activos',
+        )
+    nombre_activo = models.CharField(max_length=288)
+    descripcion = models.TextField()
+    es_prioritario = models.BooleanField(default=False)
+    esta_georeferenciado = models.BooleanField(default=False)
+    datos_personales = models.CharField(
+        max_length=2,
+        choices=NIVELES_DATOS_PERSONALES,
+        default='NO',
+        )
+
+    def __str__(self):
+        return self.nombre_activo

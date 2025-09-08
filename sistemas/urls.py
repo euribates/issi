@@ -13,4 +13,5 @@ def tie(ruta, vista, name=None):
 
 urlpatterns = [
     tie('', views.index),
+    tie('alta/', views.alta_sistema),
     ]

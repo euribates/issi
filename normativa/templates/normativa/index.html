@@ -11,7 +11,8 @@
     </tr>
   </thead>
   <tbody>
-    {% for norma in normas %}<tr>
+    {% for norma in normas %}
+    <tr class="table-{% if norma.es_transversal %}primary{% else %}default{% endif %}">
       <td>
         <b style="font-size:120%">{{ norma }}</b><br>
         <a href="{{ norma.url }}">

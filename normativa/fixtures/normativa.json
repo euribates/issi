@@ -152,7 +152,7 @@
         "rango": "_na",
         "url": "https://www.boe.es/eli/es/rd/2010/01/08/4/con",
         "id_juriscan": 0,
-        "es_transversal": false
+        "es_generica": false
     }
 },
 {
@@ -164,7 +164,7 @@
         "rango": "_na",
         "url": "https://www.boe.es/eli/es/rd/2022/05/03/311",
         "id_juriscan": 0,
-        "es_transversal": false
+        "es_generica": false
     }
 },
 {
@@ -176,7 +176,7 @@
         "rango": "_na",
         "url": "https://www.boe.es/eli/es/l/2007/11/16/37/con",
         "id_juriscan": 0,
-        "es_transversal": false
+        "es_generica": false
     }
 },
 {
@@ -185,10 +185,10 @@
     "fields": {
         "nombre_norma": "DECRETO 37/2015, de 27 de marzo, por el que se aprueba y regula el Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias.",
         "sobrenombre": "",
-        "rango": "_na",
+        "rango": "d",
         "url": "https://www.gobiernodecanarias.org/boc/2015/066/001.html",
         "id_juriscan": 72421,
-        "es_transversal": false
+        "es_generica": false
     }
 },
 {
@@ -200,7 +200,7 @@
         "rango": "_na",
         "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
         "id_juriscan": 0,
-        "es_transversal": false
+        "es_generica": false
     }
 },
 {
@@ -212,7 +212,7 @@
         "rango": "_na",
         "url": "https://www.boe.es/eli/es/l/2015/10/01/39/con",
         "id_juriscan": 0,
-        "es_transversal": false
+        "es_generica": true
     }
 },
 {
@@ -224,7 +224,7 @@
         "rango": "_na",
         "url": "https://www.boe.es/eli/es/l/2015/10/01/40/con",
         "id_juriscan": 0,
-        "es_transversal": false
+        "es_generica": true
     }
 },
 {
@@ -236,7 +236,7 @@
         "rango": "l",
         "url": "https://www.boe.es/eli/es/l/2013/12/09/19/con",
         "id_juriscan": 0,
-        "es_transversal": false
+        "es_generica": false
     }
 },
 {
@@ -248,7 +248,19 @@
         "rango": "lo",
         "url": "https://www.boe.es/eli/es/lo/2018/11/05/1/con",
         "id_juriscan": 77547,
-        "es_transversal": true
+        "es_generica": true
+    }
+},
+{
+    "model": "normativa.norma",
+    "pk": 10,
+    "fields": {
+        "nombre_norma": "Decreto 108/2024, de 31 de julio, por el que se aprueba el Reglamento Orgánico de la Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad.",
+        "sobrenombre": "",
+        "rango": "d",
+        "url": "https://www.gobiernodecanarias.org/boc/2024/156/2519.html",
+        "id_juriscan": 79417,
+        "es_generica": false
     }
 }
 ]

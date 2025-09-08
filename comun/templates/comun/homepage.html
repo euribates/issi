@@ -1,35 +1,92 @@
 {% extends "comun/base.html" %}
 
 {% block content %}
-  <h2>Hola, mundo</h2>
-
-
-
-<h1>h1. Bootstrap heading</h1>
-<h2>h2. Bootstrap heading</h2>
-<h3>h3. Bootstrap heading</h3>
-<h4>h4. Bootstrap heading</h4>
-<h5>h5. Bootstrap heading</h5>
-<h6>h6. Bootstrap heading</h6>
-
-
-
 
 <h3>
-  Fancy display heading
-  <small class="text-body-secondary">With faded secondary text</small>
+  ISSI
+  <small class="text-body-secondary">Inventario de
+  Sistemas de Información</small>
 </h3>
 
 
-<div class="card">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
+
+
+
+
+<div class="container text-center">
+
+  <div class="row">
+
+    <div class="col">
+  
+      <div class="card">
+       <div class="card-header">
+        <h3 class="card-title">
+        Sistemas de información
+        </h3>
+       </div>
+       <div class="card-body">
+         <p class="card-text">
+
+        Conjunto organizado de elementos interrelacionados (personas,
+        procesos, datos, tecnología y recursos) que trabajan juntos para
+        recopilar, procesar, almacenar, distribuir y gestionar
+        información con el fin de apoyar la toma de decisiones, la
+        coordinación operativa y el control dentro de una organización.
+         </p>
+    
+         <a href="{% url 'sistemas:index' %}" class="btn btn-primary">Ver sistemas</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+       <div class="card-header">
+        <h3 class="card-title">
+        Activos de datos
+        </h3>
+       </div>
+       <div class="card-body">
+         <p class="card-text">
+
+         Es cualquier recurso de datos con valor para el desarrollo de
+         las funciones de una organización, que puede ser comprendido y
+         tratado como una única unidad a efectos de gestión, uso,
+         protección e intercambio.
+         </p>
+         <a href="{% url 'sistemas:index' %}" class="btn
+             btn-primary">Ver activos de datos</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+       <div class="card-header">
+       Más informacióm
+       </div>
+       <div class="card-body">
+        <ul class="list-group">
+          <li class="list-group-item">
+              <a href="{% url 'normativa:index' %}">
+              Normativa
+            </a>  
+          </li>
+          <li class="list-group-item">
+              <a href="{% url 'glosario:index' %}">
+              Glosario de términos
+            </a>  
+          </li>
+        </ul>
+
+
+       </div>
+    </div>
+
+  </div><!-- de row -->
+
 </div>
 
 

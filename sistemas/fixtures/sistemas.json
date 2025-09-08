@@ -419,8 +419,8 @@
     "model": "sistemas.tema",
     "pk": "TEC",
     "fields": {
-        "nombre_tema": "Tecnología",
-        "transversal": false
+        "nombre_tema": "Organización administrativa",
+        "transversal": true
     }
 },
 {
@@ -493,7 +493,9 @@
         "es_subsistema_de": null,
         "icono_height": 531,
         "icono_width": 531,
-        "icono": "sistemas/iconos/2025/logo.issi.png"
+        "icono": "sistemas/iconos/2025/logo.issi.png",
+        "responsable_funcional": "malosua",
+        "responsable_tecnico": "jrodleo"
     }
 },
 {
@@ -510,7 +512,9 @@
         "es_subsistema_de": null,
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "responsable_funcional": null,
+        "responsable_tecnico": null
     }
 },
 {
@@ -525,9 +529,11 @@
         "tema": "LEG",
         "es_transversal": false,
         "es_subsistema_de": null,
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": ""
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/juriscan-logo.png",
+        "responsable_funcional": null,
+        "responsable_tecnico": null
     }
 },
 {
@@ -538,13 +544,15 @@
         "codigo": "SIRhUS",
         "nombre": "Sistema de información de recursos humanos",
         "descripcion": "Sistema para la gestión de los procedimientos en materia de personal, así como para la gestión del registro general de personal",
-        "proposito": "Con la implantación de la aplicación **SIRHUS** (Sistema de Información de Recursos Humanos), se persigue  que esta herramienta sirva de instrumento para:\r\n\r\n- La planificación, gestión y seguimiento en materia de personal.\r\n\r\n- La implantación de un sistema de información único de recursos humanos para todos los colectivos de personal de la Comunidad Autónoma de Canarias.",
-        "tema": "TEC",
+        "proposito": "Con la implantación de la aplicación **SIRHUS** (Sistema de Información de Recursos Humanos), se persigue  que esta herramienta sirva de instrumento para:\r\n\r\n- La planificación, gestión y seguimiento en materia de personal.\r\n\r\n- Potenciar las tareas de gestión y seguimiento simplificando las tareas esencialmente burocráticas\r\n\r\n- Mejorar la calidad y oportunidad en la toma de decisiones \r\n\r\n- La implantación de un sistema de información único de recursos humanos para todos los colectivos de personal de la Comunidad Autónoma de Canarias en una una plataforma integrada y flexible que permita soportar todo tipo de esquemas competenciales y colectivos.",
+        "tema": "GRH",
         "es_transversal": true,
         "es_subsistema_de": null,
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": ""
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/sirhus-logo.png",
+        "responsable_funcional": null,
+        "responsable_tecnico": null
     }
 },
 {
@@ -561,7 +569,9 @@
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo_platea_8ugjV2e.png"
+        "icono": "sistemas/iconos/2025/logo_platea_8ugjV2e.png",
+        "responsable_funcional": null,
+        "responsable_tecnico": null
     }
 },
 {
@@ -578,7 +588,9 @@
         "es_subsistema_de": null,
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "responsable_funcional": null,
+        "responsable_tecnico": null
     }
 },
 {
@@ -595,7 +607,9 @@
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-platino.png"
+        "icono": "sistemas/iconos/2025/logo-platino.png",
+        "responsable_funcional": null,
+        "responsable_tecnico": null
     }
 },
 {
@@ -612,7 +626,9 @@
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-seflogic.png"
+        "icono": "sistemas/iconos/2025/logo-seflogic.png",
+        "responsable_funcional": null,
+        "responsable_tecnico": null
     }
 },
 {
@@ -629,24 +645,102 @@
         "es_subsistema_de": 8,
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "responsable_funcional": null,
+        "responsable_tecnico": null
     }
 },
 {
     "model": "sistemas.sistema",
     "pk": 10,
     "fields": {
-        "dir3_id": "A05003248",
+        "dir3_id": "A05017100",
         "codigo": "HIPERREG",
         "nombre": "Registro de entrada  y salida",
         "descripcion": "Sistema Intercomunicado de Registros de Entrada y Salida de documentos de la Administración Pública de la Comunidad Autónoma de Canarias",
-        "proposito": "Gestiona el registro de entrada y salida de documentos de la Administración Pública de la Comunidad Autónoma de Canarias.",
+        "proposito": "HiperReg es el sistema corporativo que gestiona el registro de entradas y salidas de documentos en el que se anotan todos los escritos o comunicaciones que se han presentado o recibido en la organización, así como la salida de aquellos escritos o notificaciones oficiales dirigidas a particulares u otras administraciones. Además, también gestiona las comunicaciones internas que posibilitan la notificación de documentación entre unidades de la misma organización para su tramitación.",
         "tema": "TRD",
         "es_transversal": true,
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-hiperreg_y6TMSbi.png"
+        "icono": "sistemas/iconos/2025/logo-hiperreg_y6TMSbi.png",
+        "responsable_funcional": "fbezcar",
+        "responsable_tecnico": "pcanper"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 11,
+    "fields": {
+        "dir3_id": "A05017100",
+        "codigo": "TRISKELL",
+        "nombre": "Sistema de Dirección por Objetivos",
+        "descripcion": "Sistema de información del modelo de referencia de planificación y gestión estratégica y dirección por objetivos en la APCAC.",
+        "proposito": "El Decreto 88/2023, establece la estructura que ha de regir el nuevo marco de programación de\r\nla Administración Pública de la Comunidad Autónoma de Canarias en el periodo 2024-2027. En\r\neste periodo, cada departamento debe elaborar su Plan Estratégico Departamental y aprobar\r\nsus Planes Operativos Anuales. La herramienta que contendrá toda esta información, Triskell, ha\r\nsido configurada para dar soporte a todo el sistema de información del Gobierno de Canarias.",
+        "tema": "TEC",
+        "es_transversal": true,
+        "es_subsistema_de": null,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/triskell-logo.png",
+        "responsable_funcional": "crivlez",
+        "responsable_tecnico": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 12,
+    "fields": {
+        "dir3_id": "A05017100",
+        "codigo": "DIRCAC",
+        "nombre": "Directorio de Unidades Administrativas y Oficinas de Registro y Atención a la Ciudadanía",
+        "descripcion": "Inventario de información de las unidades administrativas, oficinas de registro y de atención a la ciudadanía que proporciona información centralizada y actualizada sobre las distintas unidades orgánicas y oficinas de atención al público, facilitando tanto la gestión interna de la administración como el acceso de la ciudadanía a sus servicios y la presentación de documentos.",
+        "proposito": "Inventario de información de las unidades administrativas, oficinas de registro y de atención a la ciudadanía que proporciona información centralizada y actualizada sobre las distintas unidades orgánicas y oficinas de atención al público, facilitando tanto la gestión interna de la administración como el acceso de la ciudadanía a sus servicios y la presentación de documentos.",
+        "tema": "TEC",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/logo-dircac.png",
+        "responsable_funcional": "crivlez",
+        "responsable_tecnico": "rmuncam"
+    }
+},
+{
+    "model": "sistemas.activo",
+    "pk": 1,
+    "fields": {
+        "sistema": 1,
+        "nombre_activo": "Sistemas de información",
+        "descripcion": "Relación de los sistemas de información utilizados en la AP del Gobierno de Canarias y organismos dependientes.",
+        "es_prioritario": false,
+        "esta_georeferenciado": false,
+        "datos_personales": "NO"
+    }
+},
+{
+    "model": "sistemas.activo",
+    "pk": 2,
+    "fields": {
+        "sistema": 1,
+        "nombre_activo": "Activo",
+        "descripcion": "Los activos de datos más relevantes utilizados por cada sistema de información",
+        "es_prioritario": false,
+        "esta_georeferenciado": false,
+        "datos_personales": "NO"
+    }
+},
+{
+    "model": "sistemas.activo",
+    "pk": 3,
+    "fields": {
+        "sistema": 11,
+        "nombre_activo": "Indicadores comunes",
+        "descripcion": "Indicadores comunes",
+        "es_prioritario": true,
+        "esta_georeferenciado": false,
+        "datos_personales": "NO"
     }
 }
 ]

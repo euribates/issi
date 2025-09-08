@@ -25,7 +25,8 @@ class Norma(models.Model):
         )
     url = models.URLField(max_length=320, blank=True)
     id_juriscan = models.IntegerField(default=0)
-    es_transversal = models.BooleanField(
+    es_generica = models.BooleanField(
+        verbose_name='La norma es de ámbito genérico',
         default=False,
         help_text=(
             "Este norma es aplicable a todos"
