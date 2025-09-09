@@ -27,7 +27,7 @@
     "model": "normativa.rango",
     "pk": "c",
     "fields": {
-        "nombre_rango": "Constituci贸n",
+        "nombre_rango": "Constituci髇",
         "peso": 1000
     }
 },
@@ -67,7 +67,7 @@
     "model": "normativa.rango",
     "pk": "ins",
     "fields": {
-        "nombre_rango": "Instrucci贸n",
+        "nombre_rango": "Instrucci髇",
         "peso": 50
     }
 },
@@ -83,7 +83,7 @@
     "model": "normativa.rango",
     "pk": "lo",
     "fields": {
-        "nombre_rango": "Ley Org谩nica",
+        "nombre_rango": "Ley Org醤ica",
         "peso": 500
     }
 },
@@ -139,7 +139,7 @@
     "model": "normativa.rango",
     "pk": "res",
     "fields": {
-        "nombre_rango": "Resoluci贸n",
+        "nombre_rango": "Resoluci髇",
         "peso": 50
     }
 },
@@ -147,12 +147,12 @@
     "model": "normativa.norma",
     "pk": 1,
     "fields": {
-        "nombre_norma": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el 谩mbito de la Administraci贸n Electr贸nica",
+        "nombre_norma": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el 醡bito de la Administraci髇 Electr髇ica",
         "sobrenombre": "ENI",
-        "rango": "_na",
+        "rango": "rd",
         "url": "https://www.boe.es/eli/es/rd/2010/01/08/4/con",
         "id_juriscan": 0,
-        "es_generica": false
+        "es_generica": true
     }
 },
 {
@@ -164,14 +164,14 @@
         "rango": "_na",
         "url": "https://www.boe.es/eli/es/rd/2022/05/03/311",
         "id_juriscan": 0,
-        "es_generica": false
+        "es_generica": true
     }
 },
 {
     "model": "normativa.norma",
     "pk": 3,
     "fields": {
-        "nombre_norma": "Ley 37/2007, de 16 de noviembre, sobre reutilizaci贸n de la informaci贸n del sector p煤blico",
+        "nombre_norma": "Ley 37/2007, de 16 de noviembre, sobre reutilizaci髇 de la informaci髇 del sector p鷅lico",
         "sobrenombre": "RISP",
         "rango": "_na",
         "url": "https://www.boe.es/eli/es/l/2007/11/16/37/con",
@@ -183,7 +183,7 @@
     "model": "normativa.norma",
     "pk": 4,
     "fields": {
-        "nombre_norma": "DECRETO 37/2015, de 27 de marzo, por el que se aprueba y regula el Sistema de Informaci贸n de Actuaciones Administrativas de la Administraci贸n P煤blica de la Comunidad Aut贸noma de Canarias.",
+        "nombre_norma": "Decreto 37/2015, de 27 de marzo, por el que se aprueba y regula el Sistema de Informaci髇 de Actuaciones Administrativas de la Administraci髇 P鷅lica de la Comunidad Aut髇oma de Canarias.",
         "sobrenombre": "",
         "rango": "d",
         "url": "https://www.gobiernodecanarias.org/boc/2015/066/001.html",
@@ -195,19 +195,19 @@
     "model": "normativa.norma",
     "pk": 5,
     "fields": {
-        "nombre_norma": "Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protecci贸n de las personas f铆sicas en lo que respecta al tratamiento de datos personales y a la libre circulaci贸n de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento general de protecci贸n de datos)",
+        "nombre_norma": "Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protecci髇 de las personas f韘icas en lo que respecta al tratamiento de datos personales y a la libre circulaci髇 de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento general de protecci髇 de datos)",
         "sobrenombre": "RGPD",
         "rango": "_na",
         "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
         "id_juriscan": 0,
-        "es_generica": false
+        "es_generica": true
     }
 },
 {
     "model": "normativa.norma",
     "pk": 6,
     "fields": {
-        "nombre_norma": "Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Com煤n de las Administraciones P煤blicas",
+        "nombre_norma": "Ley 39/2015, de 1 de octubre, del Procedimiento Administrativo Com鷑 de las Administraciones P鷅licas",
         "sobrenombre": "LPACAP",
         "rango": "_na",
         "url": "https://www.boe.es/eli/es/l/2015/10/01/39/con",
@@ -219,7 +219,7 @@
     "model": "normativa.norma",
     "pk": 7,
     "fields": {
-        "nombre_norma": "Ley 40/2015, de 1 de octubre, de R茅gimen Jur铆dico del Sector P煤blico",
+        "nombre_norma": "Ley 40/2015, de 1 de octubre, de R間imen Jur韉ico del Sector P鷅lico",
         "sobrenombre": "LRJSP",
         "rango": "_na",
         "url": "https://www.boe.es/eli/es/l/2015/10/01/40/con",
@@ -231,19 +231,19 @@
     "model": "normativa.norma",
     "pk": 8,
     "fields": {
-        "nombre_norma": "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la informaci贸n p煤blica y buen gobierno",
+        "nombre_norma": "Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la informaci髇 p鷅lica y buen gobierno",
         "sobrenombre": "LTAIBG",
         "rango": "l",
         "url": "https://www.boe.es/eli/es/l/2013/12/09/19/con",
         "id_juriscan": 0,
-        "es_generica": false
+        "es_generica": true
     }
 },
 {
     "model": "normativa.norma",
     "pk": 9,
     "fields": {
-        "nombre_norma": "Ley Org谩nica 1/2018, de 5 de noviembre, de reforma del Estatuto de Autonom铆a de Canarias",
+        "nombre_norma": "Ley Org醤ica 1/2018, de 5 de noviembre, de reforma del Estatuto de Autonom韆 de Canarias",
         "sobrenombre": "EAC18",
         "rango": "lo",
         "url": "https://www.boe.es/eli/es/lo/2018/11/05/1/con",
@@ -255,7 +255,7 @@
     "model": "normativa.norma",
     "pk": 10,
     "fields": {
-        "nombre_norma": "Decreto 108/2024, de 31 de julio, por el que se aprueba el Reglamento Org谩nico de la Consejer铆a de Presidencia, Administraciones P煤blicas, Justicia y Seguridad.",
+        "nombre_norma": "Decreto 108/2024, de 31 de julio, por el que se aprueba el Reglamento Org醤ico de la Consejer韆 de Presidencia, Administraciones P鷅licas, Justicia y Seguridad.",
         "sobrenombre": "",
         "rango": "d",
         "url": "https://www.gobiernodecanarias.org/boc/2024/156/2519.html",

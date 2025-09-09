@@ -3,8 +3,8 @@
     "model": "glosario.termino",
     "pk": 1,
     "fields": {
-        "entrada": "Sistema de informaciÃ³n",
-        "descripcion": "Conjunto organizado de elementos interrelacionados (personas, procesos, datos, tecnologÃ­a y recursos) que trabajan juntos para recopilar, procesar, almacenar, distribuir y gestionar informaciÃ³n con el fin de apoyar la toma de decisiones, la coordinaciÃ³n operativa y el control dentro de una organizaciÃ³n.",
+        "entrada": "Sistema de información",
+        "descripcion": "Conjunto organizado de elementos interrelacionados (personas, procesos, datos, tecnología y recursos) que trabajan juntos para recopilar, procesar, almacenar, distribuir y gestionar información con el fin de apoyar la toma de decisiones, la coordinación operativa y el control dentro de una organización.",
         "fuente": ""
     }
 },
@@ -13,7 +13,7 @@
     "pk": 2,
     "fields": {
         "entrada": "Activo de datos",
-        "descripcion": "Es cualquier recurso de datos con valor para el desarrollo de las funciones de una organizaciÃ³n, que puede ser comprendido y tratado como una Ãºnica unidad a efectos de gestiÃ³n, uso, protecciÃ³n e intercambio.",
+        "descripcion": "Es cualquier recurso de datos con valor para el desarrollo de las funciones de una organización, que puede ser comprendido y tratado como una única unidad a efectos de gestión, uso, protección e intercambio.",
         "fuente": ""
     }
 },
@@ -21,8 +21,8 @@
     "model": "glosario.termino",
     "pk": 3,
     "fields": {
-        "entrada": "Activo samÃ¡ntico",
-        "descripcion": "Unidad que describe la estructura y el significado de los datos, facilitando su intercambio, interpretaciÃ³n automÃ¡tica y reutilizaciÃ³n por diferentes aplicaciones o sistemas.",
+        "entrada": "Activo samántico",
+        "descripcion": "Unidad que describe la estructura y el significado de los datos, facilitando su intercambio, interpretación automática y reutilización por diferentes aplicaciones o sistemas.",
         "fuente": ""
     }
 },
@@ -30,8 +30,8 @@
     "model": "glosario.termino",
     "pk": 4,
     "fields": {
-        "entrada": "AnÃ¡lisis de riesgo",
-        "descripcion": "El anÃ¡lisis de riesgos es el proceso mediante el cual se identifican, evalÃºan y priorizan los riesgos potenciales que pueden afectar a los activos de informaciÃ³n de una organizaciÃ³n.",
+        "entrada": "Análisis de riesgo",
+        "descripcion": "El análisis de riesgos es el proceso mediante el cual se identifican, evalúan y priorizan los riesgos potenciales que pueden afectar a los activos de información de una organización.",
         "fuente": ""
     }
 },
@@ -39,9 +39,9 @@
     "model": "glosario.termino",
     "pk": 5,
     "fields": {
-        "entrada": "AnonimizaciÃ³n",
-        "descripcion": "Tratamiento de datos personales de manera que la informaciÃ³n que se obtenga no pueda asociarse con persona identificada o identificable.",
-        "fuente": "Ley OrgÃ¡nica 3/2018, de ProtecciÃ³n de Datos Personales y garantÃ­a de los derechos digitales"
+        "entrada": "Anonimización",
+        "descripcion": "Tratamiento de datos personales de manera que la información que se obtenga no pueda asociarse con persona identificada o identificable.",
+        "fuente": "Ley Orgánica 3/2018, de Protección de Datos Personales y garantía de los derechos digitales"
     }
 },
 {
@@ -49,7 +49,7 @@
     "pk": 6,
     "fields": {
         "entrada": "Clasificaciones",
-        "descripcion": "OrganizaciÃ³n de los datos segÃºn su significado, uso y contexto dentro de un sistema de informaciÃ³n. Esto implica definir criterios y estructuras que permitan su identificaciÃ³n, gestiÃ³n e interoperabilidad.",
+        "descripcion": "Organización de los datos según su significado, uso y contexto dentro de un sistema de información. Esto implica definir criterios y estructuras que permitan su identificación, gestión e interoperabilidad.",
         "fuente": ""
     }
 },
@@ -58,7 +58,7 @@
     "pk": 7,
     "fields": {
         "entrada": "Clasificaciones normalizadas",
-        "descripcion": "Una clasificaciÃ³n normalizada es un sistema de categorizaciÃ³n de datos basado en estÃ¡ndares reconocidos que garantizan la coherencia, interoperabilidad y reutilizaciÃ³n de la informaciÃ³n entre diferentes sistemas y entidades.",
+        "descripcion": "Una clasificación normalizada es un sistema de categorización de datos basado en estándares reconocidos que garantizan la coherencia, interoperabilidad y reutilización de la información entre diferentes sistemas y entidades.",
         "fuente": ""
     }
 },
@@ -67,7 +67,7 @@
     "pk": 8,
     "fields": {
         "entrada": "Conjunto de datos",
-        "descripcion": "Un conjunto de datos es una recopilaciÃ³n de datos estructurada. Un ejemplo de conjunto de datos es una tabla en la que cada columna representa una variable concreta y cada fila corresponde a un registro diferente.",
+        "descripcion": "Un conjunto de datos es una recopilación de datos estructurada. Un ejemplo de conjunto de datos es una tabla en la que cada columna representa una variable concreta y cada fila corresponde a un registro diferente.",
         "fuente": "https://www.aepd.es/"
     }
 },
@@ -76,8 +76,8 @@
     "pk": 9,
     "fields": {
         "entrada": "Conjuntos de datos de alto valor",
-        "descripcion": "Documentos cuya reutilizaciÃ³n estÃ¡ asociada a considerables beneficios para la sociedad, el medio ambiente y la economÃ­a, en particular debido a su idoneidad para la creaciÃ³n de servicios de valor aÃ±adido, aplicaciones y puestos de trabajo nuevos, dignos y de calidad, y del nÃºmero de beneficiarios potenciales de los servicios de valor aÃ±adido y aplicaciones basados en tales conjuntos de datos.",
-        "fuente": "Ley 37/2007, de 16 de noviembre, sobre reutilizaciÃ³n de la informaciÃ³n del sector pÃºblico"
+        "descripcion": "Documentos cuya reutilización está asociada a considerables beneficios para la sociedad, el medio ambiente y la economía, en particular debido a su idoneidad para la creación de servicios de valor añadido, aplicaciones y puestos de trabajo nuevos, dignos y de calidad, y del número de beneficiarios potenciales de los servicios de valor añadido y aplicaciones basados en tales conjuntos de datos.",
+        "fuente": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público"
     }
 },
 {
@@ -85,8 +85,8 @@
     "pk": 10,
     "fields": {
         "entrada": "Dato",
-        "descripcion": "Una representaciÃ³n de hechos, conceptos o instrucciones de un modo formalizado, y adecuado para su comunicaciÃ³n, interpretaciÃ³n o procesamiento por medios automÃ¡ticos o humanos.",
-        "fuente": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el Ã¡mbito de la AdministraciÃ³n ElectrÃ³nica"
+        "descripcion": "Una representación de hechos, conceptos o instrucciones de un modo formalizado, y adecuado para su comunicación, interpretación o procesamiento por medios automáticos o humanos.",
+        "fuente": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica"
     }
 },
 {
@@ -94,17 +94,17 @@
     "pk": 11,
     "fields": {
         "entrada": "Datos abiertos",
-        "descripcion": "Son aquellos que cualquiera es libre de utilizar, reutilizar y redistribuir, con el Ãºnico lÃ­mite, en su caso, del requisito de atribuciÃ³n de su fuente o reconocimiento de su autorÃ­a.",
-        "fuente": "Ley 37/2007, de 16 de noviembre, sobre reutilizaciÃ³n de la informaciÃ³n del sector pÃºblico"
+        "descripcion": "Son aquellos que cualquiera es libre de utilizar, reutilizar y redistribuir, con el único límite, en su caso, del requisito de atribución de su fuente o reconocimiento de su autoría.",
+        "fuente": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público"
     }
 },
 {
     "model": "glosario.termino",
     "pk": 12,
     "fields": {
-        "entrada": "Datos dinÃ¡micos",
-        "descripcion": "Documentos en formato digital, sujetos a actualizaciones frecuentes o en tiempo real, debido, en particular, a su volatilidad o rÃ¡pida obsolescencia; los datos generados por los sensores suelen considerarse datos dinÃ¡micos.",
-        "fuente": "Ley 37/2007, de 16 de noviembre, sobre reutilizaciÃ³n de la informaciÃ³n del sector pÃºblico"
+        "entrada": "Datos dinámicos",
+        "descripcion": "Documentos en formato digital, sujetos a actualizaciones frecuentes o en tiempo real, debido, en particular, a su volatilidad o rápida obsolescencia; los datos generados por los sensores suelen considerarse datos dinámicos.",
+        "fuente": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público"
     }
 },
 {
@@ -112,8 +112,8 @@
     "pk": 13,
     "fields": {
         "entrada": "Datos personales",
-        "descripcion": "Toda informaciÃ³n sobre una persona fÃ­sica identificada o identificable (Â«el interesadoÂ»); se considerarÃ¡ persona fÃ­sica identificable toda persona cuya identidad pueda determinarse, directa o indirectamente, en particular mediante un identificador, como por ejemplo un nombre, un nÃºmero de identificaciÃ³n, datos de localizaciÃ³n, un identificador en lÃ­nea o uno o varios elementos propios de la identidad fÃ­sica, fisiolÃ³gica, genÃ©tica, psÃ­quica, econÃ³mica, cultural o social de dicha persona.",
-        "fuente": "Reglamento (UE) 2016/679 relativo a la protecciÃ³n de las personas fÃ­sicas en lo que respecta al tratamiento de datos personales y a la libre circulaciÃ³n de estos datos y por el que se deroga la Directiva 95/46/CE"
+        "descripcion": "Toda información sobre una persona física identificada o identificable («el interesado»); se considerará persona física identificable toda persona cuya identidad pueda determinarse, directa o indirectamente, en particular mediante un identificador, como por ejemplo un nombre, un número de identificación, datos de localización, un identificador en línea o uno o varios elementos propios de la identidad física, fisiológica, genética, psíquica, económica, cultural o social de dicha persona.",
+        "fuente": "Reglamento (UE) 2016/679 relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE"
     }
 },
 {
@@ -121,16 +121,16 @@
     "pk": 14,
     "fields": {
         "entrada": "Dato maestro",
-        "descripcion": "Dato que posee una organizaciÃ³n para describir las entidades que son independientes y fundamentales para dicha organizaciÃ³n, y a las que se hace referencia para realizar sus transacciones.",
-        "fuente": "UNE 0078:2023 GestiÃ³n del Dato"
+        "descripcion": "Dato que posee una organización para describir las entidades que son independientes y fundamentales para dicha organización, y a las que se hace referencia para realizar sus transacciones.",
+        "fuente": "UNE 0078:2023 Gestión del Dato"
     }
 },
 {
     "model": "glosario.termino",
     "pk": 15,
     "fields": {
-        "entrada": "EncriptaciÃ³n",
-        "descripcion": "La encriptaciÃ³n o cifrado es un mecanismo de seguridad que permite modificar un mensaje de modo que su contenido sea ilegible, salvo para su destinatario. De modo inverso, la desencriptaciÃ³n o descifrado permitirÃ¡ hacer legible un mensaje que estaba cifrado.\r\n\r\nLos esquemas modernos de encriptaciÃ³n utilizan los conceptos de **cifrado simÃ©trico** y **cifrado asimÃ©trico**.",
+        "entrada": "Encriptación",
+        "descripcion": "La encriptación o cifrado es un mecanismo de seguridad que permite modificar un mensaje de modo que su contenido sea ilegible, salvo para su destinatario. De modo inverso, la desencriptación o descifrado permitirá hacer legible un mensaje que estaba cifrado.\r\n\r\nLos esquemas modernos de encriptación utilizan los conceptos de **cifrado simétrico** y **cifrado asimétrico**.",
         "fuente": ""
     }
 },
@@ -138,8 +138,8 @@
     "model": "glosario.termino",
     "pk": 16,
     "fields": {
-        "entrada": "Cifrado simÃ©trico",
-        "descripcion": "En los esquemas de clave simÃ©trica, las claves de cifrado y descifrado son las mismas, o trivialmente deducibles la una a partir de la otra. Las partes comunicantes deben tener la misma clave para lograr una comunicaciÃ³n segura.",
+        "entrada": "Cifrado simétrico",
+        "descripcion": "En los esquemas de clave simétrica, las claves de cifrado y descifrado son las mismas, o trivialmente deducibles la una a partir de la otra. Las partes comunicantes deben tener la misma clave para lograr una comunicación segura.",
         "fuente": ""
     }
 },
@@ -147,8 +147,8 @@
     "model": "glosario.termino",
     "pk": 17,
     "fields": {
-        "entrada": "Cifrado asimÃ©trico",
-        "descripcion": "En los esquemas de cifrado de clave asimÃ©rico, o clave pÃºblica/privada, se utilizan dos claves distintas, muy dificilmente deducibles la una a partir de la otra. La clave pÃºblica, como su nombre indica, es bien conocida, mientras que la clave privada se mantiene secreta. La particularidad de este mÃ©todo es que, una vez cifrado un mensaje con una de las claves, solo se puede descifrar usando la otra.\r\n\r\nLa criptografÃ­a asimÃ©trica presenta dos ventajas principales: suprime el problema de transmisiÃ³n segura de la clave y permite la **firma electrÃ³nica**. No reemplaza sin embargo los cifrados simÃ©tricos, ya que los tiempos de cÃ¡lculo son mucho mÃ¡s cortos con los sistemas simÃ©tricos que con los asimÃ©tricos.",
+        "entrada": "Cifrado asimétrico",
+        "descripcion": "En los esquemas de cifrado de clave asimérico, o clave pública/privada, se utilizan dos claves distintas, muy dificilmente deducibles la una a partir de la otra. La clave pública, como su nombre indica, es bien conocida, mientras que la clave privada se mantiene secreta. La particularidad de este método es que, una vez cifrado un mensaje con una de las claves, solo se puede descifrar usando la otra.\r\n\r\nLa criptografía asimétrica presenta dos ventajas principales: suprime el problema de transmisión segura de la clave y permite la **firma electrónica**. No reemplaza sin embargo los cifrados simétricos, ya que los tiempos de cálculo son mucho más cortos con los sistemas simétricos que con los asimétricos.",
         "fuente": ""
     }
 },
@@ -156,9 +156,9 @@
     "model": "glosario.termino",
     "pk": 18,
     "fields": {
-        "entrada": "GestiÃ³n del dato",
-        "descripcion": "Desarrollo, ejecuciÃ³n y supervisiÃ³n de planes, polÃ­ticas, programas y prÃ¡cticas que proporcionen, controlen, protejan y mejoren el valor de los activos de datos e informaciÃ³n a lo largo de su ciclo de vida.",
-        "fuente": "UNE 0078:2023 GestiÃ³n del Dato"
+        "entrada": "Gestión del dato",
+        "descripcion": "Desarrollo, ejecución y supervisión de planes, políticas, programas y prácticas que proporcionen, controlen, protejan y mejoren el valor de los activos de datos e información a lo largo de su ciclo de vida.",
+        "fuente": "UNE 0078:2023 Gestión del Dato"
     }
 },
 {
@@ -166,16 +166,16 @@
     "pk": 19,
     "fields": {
         "entrada": "Gobierno de datos",
-        "descripcion": "Desarrollo y aplicaciÃ³n de polÃ­ticas relacionadas con la **gestiÃ³n del dato**.",
-        "fuente": "UNE 0078:2023 GestiÃ³n del Dato"
+        "descripcion": "Desarrollo y aplicación de políticas relacionadas con la **gestión del dato**.",
+        "fuente": "UNE 0078:2023 Gestión del Dato"
     }
 },
 {
     "model": "glosario.termino",
     "pk": 20,
     "fields": {
-        "entrada": "IntegraciÃ³n",
-        "descripcion": "En el Ã¡mbito tecnolÃ³gico es la acciÃ³n de establecer mecanismos de comunicaciÃ³n automÃ¡tica basada en la implementaciÃ³n de protocolos y formatos comunes de intercambio de datos entre dos o mÃ¡s sistemas de informaciÃ³n.",
+        "entrada": "Integración",
+        "descripcion": "En el ámbito tecnológico es la acción de establecer mecanismos de comunicación automática basada en la implementación de protocolos y formatos comunes de intercambio de datos entre dos o más sistemas de información.",
         "fuente": ""
     }
 },
@@ -184,26 +184,26 @@
     "pk": 21,
     "fields": {
         "entrada": "Interoperabilidad",
-        "descripcion": "Capacidad de los sistemas de informaciÃ³n, y por ende de los procedimientos a los que estos dan soporte, de compartir datos y posibilitar el intercambio de informaciÃ³n y conocimiento entre ellos.",
-        "fuente": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el Ã¡mbito de la AdministraciÃ³n ElectrÃ³nica"
+        "descripcion": "Capacidad de los sistemas de información, y por ende de los procedimientos a los que estos dan soporte, de compartir datos y posibilitar el intercambio de información y conocimiento entre ellos.",
+        "fuente": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica"
     }
 },
 {
     "model": "glosario.termino",
     "pk": 22,
     "fields": {
-        "entrada": "Interoperabilidad semÃ¡ntica",
-        "descripcion": "DimensiÃ³n de la **interoperabilidad** relativa a que la informaciÃ³n intercambiada pueda ser interpretable de forma automÃ¡tica y reutilizable por aplicaciones que no intervinieron en su creaciÃ³n.",
-        "fuente": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el Ã¡mbito de la AdministraciÃ³n ElectrÃ³nica"
+        "entrada": "Interoperabilidad semántica",
+        "descripcion": "Dimensión de la **interoperabilidad** relativa a que la información intercambiada pueda ser interpretable de forma automática y reutilizable por aplicaciones que no intervinieron en su creación.",
+        "fuente": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica"
     }
 },
 {
     "model": "glosario.termino",
     "pk": 23,
     "fields": {
-        "entrada": "Interoperabilidad tÃ©cnica",
-        "descripcion": "DimensiÃ³n de la **interoperabilidad** relativa a la relaciÃ³n entre sistemas y servicios de tecnologÃ­as de la informaciÃ³n, incluyendo aspectos tales como las interfaces, la interconexiÃ³n, la integraciÃ³n de datos y servicios, la presentaciÃ³n de la informaciÃ³n, la accesibilidad y la seguridad, u otros de naturaleza anÃ¡loga.",
-        "fuente": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el Ã¡mbito de la AdministraciÃ³n ElectrÃ³nica"
+        "entrada": "Interoperabilidad técnica",
+        "descripcion": "Dimensión de la **interoperabilidad** relativa a la relación entre sistemas y servicios de tecnologías de la información, incluyendo aspectos tales como las interfaces, la interconexión, la integración de datos y servicios, la presentación de la información, la accesibilidad y la seguridad, u otros de naturaleza análoga.",
+        "fuente": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica"
     }
 },
 {
@@ -212,7 +212,7 @@
     "fields": {
         "entrada": "Metadatos",
         "descripcion": "Datos que definen y describen otros datos.",
-        "fuente": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el Ã¡mbito de la AdministraciÃ³n ElectrÃ³nica"
+        "fuente": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica"
     }
 },
 {
@@ -220,8 +220,8 @@
     "pk": 25,
     "fields": {
         "entrada": "Modelo de datos",
-        "descripcion": "Conjunto de definiciones (modelo conceptual), interrelaciones (modelo lÃ³gico) y reglas y convenciones (modelo fÃ­sico) que permiten describir los datos para su intercambio.",
-        "fuente": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el Ã¡mbito de la AdministraciÃ³n ElectrÃ³nica"
+        "descripcion": "Conjunto de definiciones (modelo conceptual), interrelaciones (modelo lógico) y reglas y convenciones (modelo físico) que permiten describir los datos para su intercambio.",
+        "fuente": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica"
     }
 },
 {
@@ -229,16 +229,16 @@
     "pk": 26,
     "fields": {
         "entrada": "Nivel de madurez",
-        "descripcion": "Punto en una escala ordinal de madurez de procesos organizativos que caracteriza la madurez de la unidad de la organizaciÃ³n evaluada en el Ã¡mbito del modelo de madurez utilizado.",
-        "fuente": "UNE 0078:2023 GestiÃ³n del Dato"
+        "descripcion": "Punto en una escala ordinal de madurez de procesos organizativos que caracteriza la madurez de la unidad de la organización evaluada en el ámbito del modelo de madurez utilizado.",
+        "fuente": "UNE 0078:2023 Gestión del Dato"
     }
 },
 {
     "model": "glosario.termino",
     "pk": 27,
     "fields": {
-        "entrada": "OrganizaciÃ³n",
-        "descripcion": "En el contexto del presente documento, se considera como organizaciÃ³n tanto los departamentos del gobierno, como las organizaciones pÃºblicas autÃ³nomas.",
+        "entrada": "Organización",
+        "descripcion": "En el contexto del presente documento, se considera como organización tanto los departamentos del gobierno, como las organizaciones públicas autónomas.",
         "fuente": ""
     }
 },
@@ -247,7 +247,7 @@
     "pk": 28,
     "fields": {
         "entrada": "Tratamiento",
-        "descripcion": "Cualquier operaciÃ³n o conjunto de operaciones realizadas sobre datos personales o conjuntos de datos personales, ya sea por procedimientos automatizados o no, como la recogida, registro, organizaciÃ³n, estructuraciÃ³n, conservaciÃ³n, adaptaciÃ³n o modificaciÃ³n, extracciÃ³n, consulta, utilizaciÃ³n, comunicaciÃ³n por transmisiÃ³n, difusiÃ³n o cualquier otra forma de habilitaciÃ³n de acceso, cotejo o interconexiÃ³n, limitaciÃ³n, supresiÃ³n o destrucciÃ³n.",
+        "descripcion": "Cualquier operación o conjunto de operaciones realizadas sobre datos personales o conjuntos de datos personales, ya sea por procedimientos automatizados o no, como la recogida, registro, organización, estructuración, conservación, adaptación o modificación, extracción, consulta, utilización, comunicación por transmisión, difusión o cualquier otra forma de habilitación de acceso, cotejo o interconexión, limitación, supresión o destrucción.",
         "fuente": "Reglamento (UE) 2016/679"
     }
 },
@@ -256,7 +256,7 @@
     "pk": 29,
     "fields": {
         "entrada": "Gobernanza del dato",
-        "descripcion": "La gobernanza de los datos es un conjunto de procesos, funciones, polÃ­ticas, normas y mÃ©tricas que garantizan el uso eficiente de la informaciÃ³n para que su organizaciÃ³n alcance sus objetivos. Una estrategia de gobierno de datos bien elaborada garantiza que los datos de su empresa sean fiables, precisos y estÃ©n disponibles.",
+        "descripcion": "La gobernanza de los datos es un conjunto de procesos, funciones, políticas, normas y métricas que garantizan el uso eficiente de la información para que su organización alcance sus objetivos. Una estrategia de gobierno de datos bien elaborada garantiza que los datos de su empresa sean fiables, precisos y estén disponibles.",
         "fuente": ""
     }
 },
@@ -265,7 +265,7 @@
     "pk": 30,
     "fields": {
         "entrada": "ETL",
-        "descripcion": "Iniciales de _Extract, Transform and Load_ (Â«Extraer, transformar y cargarÂ», se refiere el proceso que permite a las organizaciones mover datos desde mÃºltiples fuentes, reformatearlos y limpiarlos, y cargarlos en otra base de datos, _data mart_, o _data warehouse_ para analizar, o en otro sistema operacional para apoyar un proceso de negocio.",
+        "descripcion": "Iniciales de _Extract, Transform and Load_ («Extraer, transformar y cargar», se refiere el proceso que permite a las organizaciones mover datos desde múltiples fuentes, reformatearlos y limpiarlos, y cargarlos en otra base de datos, _data mart_, o _data warehouse_ para analizar, o en otro sistema operacional para apoyar un proceso de negocio.",
         "fuente": "https://es.wikipedia.org/wiki/Extract,_transform_and_load"
     }
 },
@@ -274,7 +274,7 @@
     "pk": 31,
     "fields": {
         "entrada": "Datos sensibles",
-        "descripcion": "Los siguientes datos personales se consideran **sensibles** y estÃ¡n sujetos a condiciones de tratamiento especÃ­ficas:\r\n\r\n- datos personales que revelen el origen racial o Ã©tnico, las opiniones polÃ­ticas, las convicciones religiosas o filosÃ³ficas\r\n\r\n- la afiliaciÃ³n sindical\r\n\r\n- datos genÃ©ticos, datos biomÃ©tricos tratados Ãºnicamente para identificar un ser humano,\r\n\r\n- datos relativos a la salud,\r\n\r\n- datos relativos a la vida sexual u orientaciÃ³n sexual de una persona.",
+        "descripcion": "Los siguientes datos personales se consideran **sensibles** y están sujetos a condiciones de tratamiento específicas:\r\n\r\n- datos personales que revelen el origen racial o étnico, las opiniones políticas, las convicciones religiosas o filosóficas\r\n\r\n- la afiliación sindical\r\n\r\n- datos genéticos, datos biométricos tratados únicamente para identificar un ser humano,\r\n\r\n- datos relativos a la salud,\r\n\r\n- datos relativos a la vida sexual u orientación sexual de una persona.",
         "fuente": "http://data.europa.eu/eli/reg/2016/679/oj"
     }
 },
@@ -283,7 +283,7 @@
     "pk": 1,
     "fields": {
         "alias": "AEPD",
-        "descripcion": "Agencia EspaÃ±ola de ProtecciÃ³n de Datos",
+        "descripcion": "Agencia Española de Protección de Datos",
         "url": "https://www.aepd.es/"
     }
 },
@@ -292,7 +292,7 @@
     "pk": 2,
     "fields": {
         "alias": "ENI",
-        "descripcion": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el Ã¡mbito de la AdministraciÃ³n ElectrÃ³nica",
+        "descripcion": "Real Decreto 4/2010, de 8 de enero, por el que se regula el Esquema Nacional de Interoperabilidad en el ámbito de la Administración Electrónica",
         "url": "https://www.boe.es/eli/es/rd/2010/01/08/4"
     }
 },
@@ -301,7 +301,7 @@
     "pk": 3,
     "fields": {
         "alias": "Ley 37/2007 (RISP)",
-        "descripcion": "Ley 37/2007, de 16 de noviembre, sobre reutilizaciÃ³n de la informaciÃ³n del sector pÃºblico",
+        "descripcion": "Ley 37/2007, de 16 de noviembre, sobre reutilización de la información del sector público",
         "url": "https://www.boe.es/eli/es/l/2007/11/16/37/con"
     }
 },
@@ -310,7 +310,7 @@
     "pk": 4,
     "fields": {
         "alias": "RGDP",
-        "descripcion": "Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, relativo a la protecciÃ³n de las personas fÃ­sicas en lo que respecta al tratamiento de datos personales y a la libre circulaciÃ³n de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento general de protecciÃ³n de datos)",
+        "descripcion": "Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento general de protección de datos)",
         "url": "http://data.europa.eu/eli/reg/2016/679/oj"
     }
 }

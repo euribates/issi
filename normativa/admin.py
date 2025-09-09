@@ -23,6 +23,10 @@ class NormaAdmin(admin.ModelAdmin):
         "nombre_norma",
         "sobrenombre",
         ]
+    list_filter = [
+        'es_generica', 
+        'rango',
+        ]
 
 
 admin.site.register(models.Rango, RangoAdmin)
