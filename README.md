@@ -23,10 +23,24 @@ Pero, qué **no** es un sistema de información:
 - Puede **no tener ninguna** aplicación informática
 
 
-En el sistema de inventario se propone solo **identificar**
-cada sistema. Si se quiere incluir un mayor detalle que incluya
-las personas, procesos, datos y recursos asociados, estos se gestionan
-en un nivel superior.
+En el sistema de inventario se propone solo **inventariar** cada
+sistema, junto con los **activos de datos** que gestiona. Si se quiere
+incluir un mayor detalle que incluya las personas, procesos, datos y
+recursos asociados, estos se gestionan en un nivel superior.
+
+## Algunos aspectos claves
+
+- El acceso a la consulta del inventario es completa para cualquier
+  persona perteneciente a las administraciones públicas de la Comunidad
+  Autónoma de Canarias.
+
+- También sera completa el acceso a la consulta por parte de cualquier
+  persona previamente autorizada por una persona perteneciente al
+  Gobierno de Canarias.
+
+- Algunos datos del inventario podrán ser publicados como datos
+  abiertos.
+
 
 ## Pistas de información para descubrir sistemas de información
 
