@@ -1,26 +1,52 @@
 {% load static %}
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand"
-       href="https://www.gobiernodecanarias.org/">
-     <i class="bi bi-house-door-fill"></i>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page"o
-            href="https://www.gobiernodecanarias.net/">Intranet</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Aplicaciones</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Inventario SSI</a>
-        </li>
-    </div>
-  </div>
-</nav>
+<div id="navbar">
+ <div class="btn-group" role="group" aria-label="Basic example">
+  <a role="button" type="button" class="btn btn-default"
+    href="detalle.html#personal">
+    Área personal
+  </a>
+      
+  <a role="button" type="button" class="btn btn-default"
+    href="detalle.html#herramientas">
+    Herramientas de servicio
+  </a>
+
+  <a role="button" type="button" class="btn btn-default"
+    href="detalle.html#bibliogafia">
+    Documentación
+  </a>
+  <button type="button" class="btn btn-primary">Middle</button>
+  <button type="button" class="btn btn-primary">Right</button>
+ </div>
+</div> 
+
+
+
+<div class="collapse navbar-collapse">
+		<ul id="navigation" class="nav navbar-nav">
+			<li class="active"><a href="#">INTRANET</a></li>
+			<li><a href="detalle.html#personal">ÁREA PERSONAL</a></li>
+			<li></li>
+			<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">DOCUMENTACIÓN
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="documentacion.html#bibliografia">Bibliográfica</a></li>
+          <li><a href="documentacion.html#editorial">Editorial</a></li>
+          <li><a href="documentacion.html#referencial">Referencial</a></li>
+		  <li><a href="documentacion.html#normativa">Normativa</a></li>
+          <li><a href="documentacion.html#estadistica">Estadística</a></li>
+          <li><a href="documentacion.html#geografica">Geográfica</a></li>
+		  <li><a href="documentacion.html#manuales">Manuales y guías</a></li>
+        </ul>
+      </li>				
+			<li><a href="detalle.html#recursos">RECURSOS</a></li>			
+			<li><a href="hemeroteca.html">HEMEROTECA</a></li>			
+		</ul>
+		
+		<ul id="navigation-right" class="nav navbar-nav navbar-right">      
+		<li><a href="https://www.gobiernodecanarias.net/intranet/cgi-bin/cierre.cgi"><span class="glyphicon glyphicon-log-out"></span> CERRAR SESIÓN</a></li>
+      <!--<li><a href="http://www.gobiernodecanarias.net/sesionweb/cgi-bin/cierre.cgi"><span class="glyphicon glyphicon-log-out"></span> CERRAR SESIÓN</a></li>-->
+    </ul>
+		</div>

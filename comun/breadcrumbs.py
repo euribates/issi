@@ -90,4 +90,9 @@ HOME = BreadCrumb(
     'https:/www.gobiernodecanarias.org/',
     )
 
-APPS = HOME.step('Apps', '#')
+INTRANET = HOME.step(
+    'Intranet',
+    'https://www.gobiernodecanarias.net/',
+    )
+
+APPS = INTRANET.step('Apps', '#')

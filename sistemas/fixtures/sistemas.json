@@ -3,7 +3,7 @@
     "model": "sistemas.tema",
     "pk": "AEX",
     "fields": {
-        "nombre_tema": "Acci√≥n Exterior",
+        "nombre_tema": "AcciÛn Exterior",
         "transversal": false
     }
 },
@@ -27,7 +27,7 @@
     "model": "sistemas.tema",
     "pk": "ALI",
     "fields": {
-        "nombre_tema": "Alimentaci√≥n",
+        "nombre_tema": "AlimentaciÛn",
         "transversal": false
     }
 },
@@ -35,7 +35,7 @@
     "model": "sistemas.tema",
     "pk": "ART",
     "fields": {
-        "nombre_tema": "Artesan√≠a",
+        "nombre_tema": "ArtesanÌa",
         "transversal": false
     }
 },
@@ -59,7 +59,7 @@
     "model": "sistemas.tema",
     "pk": "CDE",
     "fields": {
-        "nombre_tema": "Cooperaci√≥n al desarrollo",
+        "nombre_tema": "CooperaciÛn al desarrollo",
         "transversal": false
     }
 },
@@ -67,7 +67,7 @@
     "model": "sistemas.tema",
     "pk": "CNT",
     "fields": {
-        "nombre_tema": "Contrataci√≥n",
+        "nombre_tema": "ContrataciÛn",
         "transversal": true
     }
 },
@@ -139,7 +139,7 @@
     "model": "sistemas.tema",
     "pk": "ECO",
     "fields": {
-        "nombre_tema": "Econom√≠a",
+        "nombre_tema": "EconomÌa",
         "transversal": false
     }
 },
@@ -147,7 +147,7 @@
     "model": "sistemas.tema",
     "pk": "ECS",
     "fields": {
-        "nombre_tema": "Econom√≠a Social",
+        "nombre_tema": "EconomÌa Social",
         "transversal": false
     }
 },
@@ -155,7 +155,7 @@
     "model": "sistemas.tema",
     "pk": "EDU",
     "fields": {
-        "nombre_tema": "Educaci√≥n",
+        "nombre_tema": "EducaciÛn",
         "transversal": false
     }
 },
@@ -171,7 +171,7 @@
     "model": "sistemas.tema",
     "pk": "EMI",
     "fields": {
-        "nombre_tema": "Emigraci√≥n",
+        "nombre_tema": "EmigraciÛn",
         "transversal": false
     }
 },
@@ -187,7 +187,7 @@
     "model": "sistemas.tema",
     "pk": "ENG",
     "fields": {
-        "nombre_tema": "Energ√≠a",
+        "nombre_tema": "EnergÌa",
         "transversal": false
     }
 },
@@ -195,7 +195,7 @@
     "model": "sistemas.tema",
     "pk": "EPR",
     "fields": {
-        "nombre_tema": "Elaboraci√≥n presupuestaria",
+        "nombre_tema": "ElaboraciÛn presupuestaria",
         "transversal": true
     }
 },
@@ -203,7 +203,7 @@
     "model": "sistemas.tema",
     "pk": "EST",
     "fields": {
-        "nombre_tema": "Estad√≠sticas",
+        "nombre_tema": "EstadÌsticas",
         "transversal": true
     }
 },
@@ -211,7 +211,7 @@
     "model": "sistemas.tema",
     "pk": "FEM",
     "fields": {
-        "nombre_tema": "Formaci√≥n para el empleo",
+        "nombre_tema": "FormaciÛn para el empleo",
         "transversal": false
     }
 },
@@ -219,7 +219,7 @@
     "model": "sistemas.tema",
     "pk": "FIS",
     "fields": {
-        "nombre_tema": "Fiscalizaci√≥n",
+        "nombre_tema": "FiscalizaciÛn",
         "transversal": true
     }
 },
@@ -243,7 +243,7 @@
     "model": "sistemas.tema",
     "pk": "GAN",
     "fields": {
-        "nombre_tema": "Ganader√≠a",
+        "nombre_tema": "GanaderÌa",
         "transversal": false
     }
 },
@@ -251,7 +251,7 @@
     "model": "sistemas.tema",
     "pk": "GGA",
     "fields": {
-        "nombre_tema": "Gesti√≥n de gastos",
+        "nombre_tema": "GestiÛn de gastos",
         "transversal": true
     }
 },
@@ -259,7 +259,7 @@
     "model": "sistemas.tema",
     "pk": "GIN",
     "fields": {
-        "nombre_tema": "Gesti√≥n de ingresos",
+        "nombre_tema": "GestiÛn de ingresos",
         "transversal": true
     }
 },
@@ -267,7 +267,7 @@
     "model": "sistemas.tema",
     "pk": "GRH",
     "fields": {
-        "nombre_tema": "Gesti√≥n RRHH",
+        "nombre_tema": "GestiÛn RRHH",
         "transversal": true
     }
 },
@@ -291,7 +291,7 @@
     "model": "sistemas.tema",
     "pk": "IGE",
     "fields": {
-        "nombre_tema": "Igualdad de g√©nero",
+        "nombre_tema": "Igualdad de gÈnero",
         "transversal": true
     }
 },
@@ -307,7 +307,7 @@
     "model": "sistemas.tema",
     "pk": "INM",
     "fields": {
-        "nombre_tema": "Inmigraci√≥n",
+        "nombre_tema": "InmigraciÛn",
         "transversal": false
     }
 },
@@ -339,7 +339,7 @@
     "model": "sistemas.tema",
     "pk": "LEG",
     "fields": {
-        "nombre_tema": "Legislaci√≥n",
+        "nombre_tema": "LegislaciÛn",
         "transversal": true
     }
 },
@@ -355,7 +355,7 @@
     "model": "sistemas.tema",
     "pk": "MCO",
     "fields": {
-        "nombre_tema": "Medios de Comunicaci√≥n Social",
+        "nombre_tema": "Medios de ComunicaciÛn Social",
         "transversal": true
     }
 },
@@ -363,7 +363,7 @@
     "model": "sistemas.tema",
     "pk": "OPB",
     "fields": {
-        "nombre_tema": "Obras P√∫blicas",
+        "nombre_tema": "Obras P˙blicas",
         "transversal": false
     }
 },
@@ -371,7 +371,7 @@
     "model": "sistemas.tema",
     "pk": "OTE",
     "fields": {
-        "nombre_tema": "Ordenaci√≥n Territorial",
+        "nombre_tema": "OrdenaciÛn Territorial",
         "transversal": false
     }
 },
@@ -379,7 +379,7 @@
     "model": "sistemas.tema",
     "pk": "PAC",
     "fields": {
-        "nombre_tema": "Participaci√≥n Ciudadana",
+        "nombre_tema": "ParticipaciÛn Ciudadana",
         "transversal": true
     }
 },
@@ -419,7 +419,7 @@
     "model": "sistemas.tema",
     "pk": "TEC",
     "fields": {
-        "nombre_tema": "Organizaci√≥n administrativa",
+        "nombre_tema": "OrganizaciÛn administrativa",
         "transversal": true
     }
 },
@@ -427,7 +427,7 @@
     "model": "sistemas.tema",
     "pk": "TPF",
     "fields": {
-        "nombre_tema": "Tesoro y pol√≠tica financiera",
+        "nombre_tema": "Tesoro y polÌtica financiera",
         "transversal": false
     }
 },
@@ -435,7 +435,7 @@
     "model": "sistemas.tema",
     "pk": "TRD",
     "fields": {
-        "nombre_tema": "Transformaci√≥n digital",
+        "nombre_tema": "TransformaciÛn digital",
         "transversal": false
     }
 },
@@ -443,7 +443,7 @@
     "model": "sistemas.tema",
     "pk": "TRF",
     "fields": {
-        "nombre_tema": "Tr√°fico",
+        "nombre_tema": "Tr·fico",
         "transversal": false
     }
 },
@@ -485,9 +485,9 @@
     "fields": {
         "dir3_id": "A05003248",
         "codigo": "ISSI",
-        "nombre": "Inventario de Sistemas de Informaci√≥n",
-        "descripcion": "Inventario global de los sistemas de informaci√≥n de las administraciones publicas de la Comunidad Aut√≥noma de Canarias",
-        "proposito": "Gestionar y mantener un inventario de todos los sistemas de informaci√≥n utilizados en el Gobierno de Canarias y organismos relaciones.\r\n\r\nEn este sistema se considera un **sistema de informaci√≥n** como el conjunto organizado de elementos interrelacionados (personas, procesos, datos, tecnolog√≠a y recursos) que trabajan juntos para recopilar, procesar, almacenar, distribuir y gestionar informaci√≥n con el fin de apoyar la toma de decisiones, la coordinaci√≥n operativa y el control dentro de una organizaci√≥n\"",
+        "nombre": "Inventario de Sistemas de InformaciÛn",
+        "descripcion": "Inventario global de los sistemas de informaciÛn de las administraciones publicas de la Comunidad AutÛnoma de Canarias",
+        "proposito": "Gestionar y mantener un inventario de todos los sistemas de informaciÛn utilizados en el Gobierno de Canarias y organismos relaciones.\r\n\r\nEn este sistema se considera un **sistema de informaciÛn** como el conjunto organizado de elementos interrelacionados (personas, procesos, datos, tecnologÌa y recursos) que trabajan juntos para recopilar, procesar, almacenar, distribuir y gestionar informaciÛn con el fin de apoyar la toma de decisiones, la coordinaciÛn operativa y el control dentro de una organizaciÛn\"",
         "tema": "TRD",
         "es_transversal": true,
         "es_subsistema_de": null,
@@ -504,9 +504,9 @@
     "fields": {
         "dir3_id": "A05017155",
         "codigo": "TURIDATA",
-        "nombre": "Registro General de Empresas, Actividades y Establecimientos Tur√≠sticos",
-        "descripcion": "Un sistema √∫nico completo y manejable, que sirva como herramienta de apoyo a la gesti√≥n administrativa del sector, y que proporciona informaci√≥n en tiempo real para la gesti√≥n estrat√©gica del turismo canario",
-        "proposito": "El funcionamiento de Turidata permite la introducci√≥n de datos por parte de los Cabildos, que se registren las resoluciones y que se emitan los certificados de inscripci√≥n de forma autom√°tica.",
+        "nombre": "Registro General de Empresas, Actividades y Establecimientos TurÌsticos",
+        "descripcion": "Un sistema ˙nico completo y manejable, que sirva como herramienta de apoyo a la gestiÛn administrativa del sector, y que proporciona informaciÛn en tiempo real para la gestiÛn estratÈgica del turismo canario",
+        "proposito": "El funcionamiento de Turidata permite la introducciÛn de datos por parte de los Cabildos, que se registren las resoluciones y que se emitan los certificados de inscripciÛn de forma autom·tica.",
         "tema": "TUR",
         "es_transversal": false,
         "es_subsistema_de": null,
@@ -524,8 +524,8 @@
         "dir3_id": "A05046372",
         "codigo": "JURISCAN",
         "nombre": "Juriscan",
-        "descripcion": "Base de datos cuyo objetivo es difundir el conocimiento y facilitar la consulta del sistema jur√≠dico de la Comunidad Aut√≥noma",
-        "proposito": "**JURISCAN** es una base de datos desarrollada por el Gobierno de Canarias con el objetivo de difundir el conocimiento y facilitar la consulta del sistema jur√≠dico de la Comunidad Aut√≥noma.\r\n\r\nEs una base de datos principalmente legislativa, en la que pueden encontrarse todas las disposiciones generales emanadas de las instituciones auton√≥micas; pero tambi√©n es una base de datos limitadamente jurisprudencial, en la medida que incluye nota de las sentencias que afectan a las disposiciones auton√≥micas.\r\n\r\nLa presentaci√≥n de los documentos se hace desde una perspectiva din√°mica. Cada disposici√≥n tiene su ficha, que comprende detalladamente cuanto est√° relacionado con ella, antes y despu√©s de su vigencia, con la relaci√≥n de las disposiciones a las que ha afectado y de las referencias, legislativas y jurisprudenciales, que de alguna manera tienen una incidencia posterior. La actualizaci√≥n permanente de estas fichas constituye una garant√≠a de seguridad jur√≠dica en la aplicaci√≥n del Derecho de la Comunidad Aut√≥noma.\r\n\r\nEl sistema de consultas permite desde la m√°s simple, con un m√≠nimo de argumentos de b√∫squeda relativos a la presentaci√≥n formal de la disposici√≥n, hasta la m√°s compleja, en la que pueden combinarse elementos relacionados con el t√≠tulo, el rango, las materias o la fecha de la disposici√≥n. La b√∫squeda por materias se facilita con un tesauro de unos 3.000 t√©rminos que sirve para uniformar la terminolog√≠a y estructurar la recuperaci√≥n de documentos.",
+        "descripcion": "Base de datos cuyo objetivo es difundir el conocimiento y facilitar la consulta del sistema jurÌdico de la Comunidad AutÛnoma",
+        "proposito": "**JURISCAN** es una base de datos desarrollada por el Gobierno de Canarias con el objetivo de difundir el conocimiento y facilitar la consulta del sistema jurÌdico de la Comunidad AutÛnoma.\r\n\r\nEs una base de datos principalmente legislativa, en la que pueden encontrarse todas las disposiciones generales emanadas de las instituciones autonÛmicas; pero tambiÈn es una base de datos limitadamente jurisprudencial, en la medida que incluye nota de las sentencias que afectan a las disposiciones autonÛmicas.\r\n\r\nLa presentaciÛn de los documentos se hace desde una perspectiva din·mica. Cada disposiciÛn tiene su ficha, que comprende detalladamente cuanto est· relacionado con ella, antes y despuÈs de su vigencia, con la relaciÛn de las disposiciones a las que ha afectado y de las referencias, legislativas y jurisprudenciales, que de alguna manera tienen una incidencia posterior. La actualizaciÛn permanente de estas fichas constituye una garantÌa de seguridad jurÌdica en la aplicaciÛn del Derecho de la Comunidad AutÛnoma.\r\n\r\nEl sistema de consultas permite desde la m·s simple, con un mÌnimo de argumentos de b˙squeda relativos a la presentaciÛn formal de la disposiciÛn, hasta la m·s compleja, en la que pueden combinarse elementos relacionados con el tÌtulo, el rango, las materias o la fecha de la disposiciÛn. La b˙squeda por materias se facilita con un tesauro de unos 3.000 tÈrminos que sirve para uniformar la terminologÌa y estructurar la recuperaciÛn de documentos.",
         "tema": "LEG",
         "es_transversal": false,
         "es_subsistema_de": null,
@@ -542,9 +542,9 @@
     "fields": {
         "dir3_id": "A05018778",
         "codigo": "SIRhUS",
-        "nombre": "Sistema de informaci√≥n de recursos humanos",
-        "descripcion": "Sistema para la gesti√≥n de los procedimientos en materia de personal, as√≠ como para la gesti√≥n del registro general de personal",
-        "proposito": "Con la implantaci√≥n de la aplicaci√≥n **SIRHUS** (Sistema de Informaci√≥n de Recursos Humanos), se persigue  que esta herramienta sirva de instrumento para:\r\n\r\n- La planificaci√≥n, gesti√≥n y seguimiento en materia de personal.\r\n\r\n- Potenciar las tareas de gesti√≥n y seguimiento simplificando las tareas esencialmente burocr√°ticas\r\n\r\n- Mejorar la calidad y oportunidad en la toma de decisiones \r\n\r\n- La implantaci√≥n de un sistema de informaci√≥n √∫nico de recursos humanos para todos los colectivos de personal de la Comunidad Aut√≥noma de Canarias en una una plataforma integrada y flexible que permita soportar todo tipo de esquemas competenciales y colectivos.",
+        "nombre": "Sistema de informaciÛn de recursos humanos",
+        "descripcion": "Sistema para la gestiÛn de los procedimientos en materia de personal, asÌ como para la gestiÛn del registro general de personal",
+        "proposito": "Con la implantaciÛn de la aplicaciÛn **SIRHUS** (Sistema de InformaciÛn de Recursos Humanos), se persigue  que esta herramienta sirva de instrumento para:\r\n\r\n- La planificaciÛn, gestiÛn y seguimiento en materia de personal.\r\n\r\n- Potenciar las tareas de gestiÛn y seguimiento simplificando las tareas esencialmente burocr·ticas\r\n\r\n- Mejorar la calidad y oportunidad en la toma de decisiones \r\n\r\n- La implantaciÛn de un sistema de informaciÛn ˙nico de recursos humanos para todos los colectivos de personal de la Comunidad AutÛnoma de Canarias en una una plataforma integrada y flexible que permita soportar todo tipo de esquemas competenciales y colectivos.",
         "tema": "GRH",
         "es_transversal": true,
         "es_subsistema_de": null,
@@ -562,8 +562,8 @@
         "dir3_id": "A05003248",
         "codigo": "PLATEA",
         "nombre": "Gestor de Expedientes Corporativo",
-        "descripcion": "Facilitar a los departamentos una herramienta que posibilite la automatizaci√≥n y tramitaci√≥n electr√≥nica de los expedientes administrativos.",
-        "proposito": "La Ley 11/2007 reconoce a los ciudadanos el derecho a conocer por medios electr√≥nicos el estado de tramitaci√≥n de los procedimientos en los que sean interesados. Dicho derecho, obliga a los departamentos disponer de uno o varios gestores de expedientes.\\r\\n\\r\\nEl Gobierno de Canarias, para cumplir con este derecho, puso en marcha el proyecto de un gestor de expedientes corporativo, ofreciendo con ello la posibilidad de implementar y utilizar PLATEA por los departamentos sin gasto ninguno.\\r\\n\\r\\n## Objetivos\\r\\n\\r\\n- Facilitar a los departamentos una herramienta que posibilite la automatizaci√≥n y tramitaci√≥n electr√≥nica de los expedientes administrativos.\\r\\n\\r\\n- Integrar la gesti√≥n electr√≥nica de procedimientos con la plataforma PLATINO de interoperabilidad corporativa en el Gobierno de Canarias y otros sistemas de gesti√≥n de expedientes ya existentes en otros Departamentos (GexTur, MAyTe, etc.).\\r\\n\\r\\n- Consecuci√≥n efectiva del derecho de los ciudadanos a conocer el estado de los expedientes por medios electr√≥nicos, definido en el art√≠culo 6 de la Ley 11/2007.\\r\\n\\r\\n\\r\\nPrincipales dificultades y aspectos clave para la implantaci√≥n\\r\\n\\r\\n- Se recomienda utilizar un motor de workflow adecuado a las necesidades de la organizaci√≥n y que permita acciones complejas como deshacer fases, gesti√≥n de eventos y relacionar expedientes.\\r\\n\\r\\n- Simplificar previamente todos los procedimientos a modelar en la herramienta de gesti√≥n, para facilitar el proceso posterior de dise√±o y parametrizaci√≥n de expedientes.\\r\\n\\r\\n- Dificultad derivada de la adecuaci√≥n a los requisitos funcionales y aspectos organizativos de cada departamento, de forma que sea v√°lida para cualquier modelo de negocio.\\r\\n\\r\\n- Las l√≠neas de evoluci√≥n girar√°n entorno a modelar todas las sub/familias, soportar modelado de eventos configurables asociados a cada fase/tr√°mite/procedimiento, funcionalidades avanzadas en la tramitaci√≥n de expedientes e integraci√≥n con nuevos servicios de PLATINO.",
+        "descripcion": "Facilitar a los departamentos una herramienta que posibilite la automatizaciÛn y tramitaciÛn electrÛnica de los expedientes administrativos.",
+        "proposito": "La Ley 11/2007 reconoce a los ciudadanos el derecho a conocer por medios electrÛnicos el estado de tramitaciÛn de los procedimientos en los que sean interesados. Dicho derecho, obliga a los departamentos disponer de uno o varios gestores de expedientes.\\r\\n\\r\\nEl Gobierno de Canarias, para cumplir con este derecho, puso en marcha el proyecto de un gestor de expedientes corporativo, ofreciendo con ello la posibilidad de implementar y utilizar PLATEA por los departamentos sin gasto ninguno.\\r\\n\\r\\n## Objetivos\\r\\n\\r\\n- Facilitar a los departamentos una herramienta que posibilite la automatizaciÛn y tramitaciÛn electrÛnica de los expedientes administrativos.\\r\\n\\r\\n- Integrar la gestiÛn electrÛnica de procedimientos con la plataforma PLATINO de interoperabilidad corporativa en el Gobierno de Canarias y otros sistemas de gestiÛn de expedientes ya existentes en otros Departamentos (GexTur, MAyTe, etc.).\\r\\n\\r\\n- ConsecuciÛn efectiva del derecho de los ciudadanos a conocer el estado de los expedientes por medios electrÛnicos, definido en el artÌculo 6 de la Ley 11/2007.\\r\\n\\r\\n\\r\\nPrincipales dificultades y aspectos clave para la implantaciÛn\\r\\n\\r\\n- Se recomienda utilizar un motor de workflow adecuado a las necesidades de la organizaciÛn y que permita acciones complejas como deshacer fases, gestiÛn de eventos y relacionar expedientes.\\r\\n\\r\\n- Simplificar previamente todos los procedimientos a modelar en la herramienta de gestiÛn, para facilitar el proceso posterior de diseÒo y parametrizaciÛn de expedientes.\\r\\n\\r\\n- Dificultad derivada de la adecuaciÛn a los requisitos funcionales y aspectos organizativos de cada departamento, de forma que sea v·lida para cualquier modelo de negocio.\\r\\n\\r\\n- Las lÌneas de evoluciÛn girar·n entorno a modelar todas las sub/familias, soportar modelado de eventos configurables asociados a cada fase/tr·mite/procedimiento, funcionalidades avanzadas en la tramitaciÛn de expedientes e integraciÛn con nuevos servicios de PLATINO.",
         "tema": "TEC",
         "es_transversal": true,
         "es_subsistema_de": null,
@@ -581,8 +581,8 @@
         "dir3_id": "A05003248",
         "codigo": "SIRVETE",
         "nombre": "Sirvete",
-        "descripcion": "Gesti√≥n de incidencias y solicitudes de los usuarios realizadas as CiberCentro",
-        "proposito": "Facilitar la gesti√≥n de incidencias y solicitudes para los usuarios, especialmente para aquellos que necesiten interactuar con el CiberCentro, el centro de servicios telem√°ticos del gobierno. Es una herramienta que permite a los usuarios registrar sus peticiones, realizar tr√°mites y dar seguimiento a sus incidencias de manera c√≥moda y eficiente.",
+        "descripcion": "GestiÛn de incidencias y solicitudes de los usuarios realizadas as CiberCentro",
+        "proposito": "Facilitar la gestiÛn de incidencias y solicitudes para los usuarios, especialmente para aquellos que necesiten interactuar con el CiberCentro, el centro de servicios telem·ticos del gobierno. Es una herramienta que permite a los usuarios registrar sus peticiones, realizar tr·mites y dar seguimiento a sus incidencias de manera cÛmoda y eficiente.",
         "tema": "TEC",
         "es_transversal": true,
         "es_subsistema_de": null,
@@ -601,7 +601,7 @@
         "codigo": "PLATINO",
         "nombre": "Platino",
         "descripcion": "Servicio de Interoperabilidad del Gobierno de Canarias",
-        "proposito": "Una infraestructura tecnol√≥gica para facilitar la ejecuci√≥n de tr√°mites administrativos electr√≥nicos, siguiendo est√°ndares y directrices de la administraci√≥n electr√≥nica.",
+        "proposito": "Una infraestructura tecnolÛgica para facilitar la ejecuciÛn de tr·mites administrativos electrÛnicos, siguiendo est·ndares y directrices de la administraciÛn electrÛnica.",
         "tema": "TEC",
         "es_transversal": true,
         "es_subsistema_de": null,
@@ -619,8 +619,8 @@
         "dir3_id": "A05032840",
         "codigo": "SEFLOGIC",
         "nombre": "SEFLOGIC",
-        "descripcion": "Sistema de Informaci√≥n Econ√≥mico-Financiera y Log√≠stica",
-        "proposito": "Es el Sistema de Informaci√≥n Econ√≥mico-Financiera y Log√≠stica de la Comunidad Aut√≥noma. Este sistema registra todas las operaciones presupuestarias, econ√≥micas, financieras, patrimoniales y de tesorer√≠a de la administraci√≥n p√∫blica canaria, sus organismos aut√≥nomos y entes con presupuesto.",
+        "descripcion": "Sistema de InformaciÛn EconÛmico-Financiera y LogÌstica",
+        "proposito": "Es el Sistema de InformaciÛn EconÛmico-Financiera y LogÌstica de la Comunidad AutÛnoma. Este sistema registra todas las operaciones presupuestarias, econÛmicas, financieras, patrimoniales y de tesorerÌa de la administraciÛn p˙blica canaria, sus organismos autÛnomos y entes con presupuesto.",
         "tema": "HAC",
         "es_transversal": true,
         "es_subsistema_de": null,
@@ -637,9 +637,9 @@
     "fields": {
         "dir3_id": "A05003248",
         "codigo": "SICAC",
-        "nombre": "Sistema de Informaci√≥n de Actuaciones Administrativas de la Administraci√≥n P√∫blica de la Comunidad Aut√≥noma de Canarias",
-        "descripcion": "inventario de las actuaciones administrativas, tanto externas como internas, que gestiona la APCAC y sus organismos p√∫blicos dependientes",
-        "proposito": "Gesti√≥n de un Inventario de todas las actuaciones administrativas, tanto externas como internas, que gestiona la Administraci√≥n P√∫blica de la Comunidad Aut√≥noma de Canarias y sus organismos p√∫blicos dependientes.\r\n\r\n- La informaci√≥n relativa a las actuaciones administrativas externas estar√° disponible de forma p√∫blica\r\n \r\n- Incluir√° informaci√≥n b√°sica sobre la tramitaci√≥n de cada actuaci√≥n por parte de los interesados\r\n\r\n- A efectos de la interoperabilidad administrativa, las actuaciones administrativas incorporadas al SICAC se clasificar√°n en familias y subfamilias y en temas y subtema.",
+        "nombre": "Sistema de InformaciÛn de Actuaciones Administrativas de la AdministraciÛn P˙blica de la Comunidad AutÛnoma de Canarias",
+        "descripcion": "inventario de las actuaciones administrativas, tanto externas como internas, que gestiona la APCAC y sus organismos p˙blicos dependientes",
+        "proposito": "GestiÛn de un Inventario de todas las actuaciones administrativas, tanto externas como internas, que gestiona la AdministraciÛn P˙blica de la Comunidad AutÛnoma de Canarias y sus organismos p˙blicos dependientes.\r\n\r\n- La informaciÛn relativa a las actuaciones administrativas externas estar· disponible de forma p˙blica\r\n \r\n- Incluir· informaciÛn b·sica sobre la tramitaciÛn de cada actuaciÛn por parte de los interesados\r\n\r\n- A efectos de la interoperabilidad administrativa, las actuaciones administrativas incorporadas al SICAC se clasificar·n en familias y subfamilias y en temas y subtema.",
         "tema": "TRD",
         "es_transversal": true,
         "es_subsistema_de": 8,
@@ -657,8 +657,8 @@
         "dir3_id": "A05017100",
         "codigo": "HIPERREG",
         "nombre": "Registro de entrada  y salida",
-        "descripcion": "Sistema Intercomunicado de Registros de Entrada y Salida de documentos de la Administraci√≥n P√∫blica de la Comunidad Aut√≥noma de Canarias",
-        "proposito": "HiperReg es el sistema corporativo que gestiona el registro de entradas y salidas de documentos en el que se anotan todos los escritos o comunicaciones que se han presentado o recibido en la organizaci√≥n, as√≠ como la salida de aquellos escritos o notificaciones oficiales dirigidas a particulares u otras administraciones. Adem√°s, tambi√©n gestiona las comunicaciones internas que posibilitan la notificaci√≥n de documentaci√≥n entre unidades de la misma organizaci√≥n para su tramitaci√≥n.",
+        "descripcion": "Sistema Intercomunicado de Registros de Entrada y Salida de documentos de la AdministraciÛn P˙blica de la Comunidad AutÛnoma de Canarias",
+        "proposito": "HiperReg es el sistema corporativo que gestiona el registro de entradas y salidas de documentos en el que se anotan todos los escritos o comunicaciones que se han presentado o recibido en la organizaciÛn, asÌ como la salida de aquellos escritos o notificaciones oficiales dirigidas a particulares u otras administraciones. Adem·s, tambiÈn gestiona las comunicaciones internas que posibilitan la notificaciÛn de documentaciÛn entre unidades de la misma organizaciÛn para su tramitaciÛn.",
         "tema": "TRD",
         "es_transversal": true,
         "es_subsistema_de": null,
@@ -675,9 +675,9 @@
     "fields": {
         "dir3_id": "A05017100",
         "codigo": "TRISKELL",
-        "nombre": "Sistema de Direcci√≥n por Objetivos",
-        "descripcion": "Sistema de informaci√≥n del modelo de referencia de planificaci√≥n y gesti√≥n estrat√©gica y direcci√≥n por objetivos en la APCAC.",
-        "proposito": "El Decreto 88/2023, establece la estructura que ha de regir el nuevo marco de programaci√≥n de\r\nla Administraci√≥n P√∫blica de la Comunidad Aut√≥noma de Canarias en el periodo 2024-2027. En\r\neste periodo, cada departamento debe elaborar su Plan Estrat√©gico Departamental y aprobar\r\nsus Planes Operativos Anuales. La herramienta que contendr√° toda esta informaci√≥n, Triskell, ha\r\nsido configurada para dar soporte a todo el sistema de informaci√≥n del Gobierno de Canarias.",
+        "nombre": "Sistema de DirecciÛn por Objetivos",
+        "descripcion": "Sistema de informaciÛn del modelo de referencia de planificaciÛn y gestiÛn estratÈgica y direcciÛn por objetivos en la APCAC.",
+        "proposito": "El Decreto 88/2023, establece la estructura que ha de regir el nuevo marco de programaciÛn de\r\nla AdministraciÛn P˙blica de la Comunidad AutÛnoma de Canarias en el periodo 2024-2027. En\r\neste periodo, cada departamento debe elaborar su Plan EstratÈgico Departamental y aprobar\r\nsus Planes Operativos Anuales. La herramienta que contendr· toda esta informaciÛn, Triskell, ha\r\nsido configurada para dar soporte a todo el sistema de informaciÛn del Gobierno de Canarias.",
         "tema": "TEC",
         "es_transversal": true,
         "es_subsistema_de": null,
@@ -694,9 +694,9 @@
     "fields": {
         "dir3_id": "A05017100",
         "codigo": "DIRCAC",
-        "nombre": "Directorio de Unidades Administrativas y Oficinas de Registro y Atenci√≥n a la Ciudadan√≠a",
-        "descripcion": "Inventario de informaci√≥n de las unidades administrativas, oficinas de registro y de atenci√≥n a la ciudadan√≠a que proporciona informaci√≥n centralizada y actualizada sobre las distintas unidades org√°nicas y oficinas de atenci√≥n al p√∫blico, facilitando tanto la gesti√≥n interna de la administraci√≥n como el acceso de la ciudadan√≠a a sus servicios y la presentaci√≥n de documentos.",
-        "proposito": "Inventario de informaci√≥n de las unidades administrativas, oficinas de registro y de atenci√≥n a la ciudadan√≠a que proporciona informaci√≥n centralizada y actualizada sobre las distintas unidades org√°nicas y oficinas de atenci√≥n al p√∫blico, facilitando tanto la gesti√≥n interna de la administraci√≥n como el acceso de la ciudadan√≠a a sus servicios y la presentaci√≥n de documentos.",
+        "nombre": "Directorio de Unidades Administrativas y Oficinas de Registro y AtenciÛn a la CiudadanÌa",
+        "descripcion": "Inventario de informaciÛn de las unidades administrativas, oficinas de registro y de atenciÛn a la ciudadanÌa que proporciona informaciÛn centralizada y actualizada sobre las distintas unidades org·nicas y oficinas de atenciÛn al p˙blico, facilitando tanto la gestiÛn interna de la administraciÛn como el acceso de la ciudadanÌa a sus servicios y la presentaciÛn de documentos.",
+        "proposito": "Inventario de informaciÛn de las unidades administrativas, oficinas de registro y de atenciÛn a la ciudadanÌa que proporciona informaciÛn centralizada y actualizada sobre las distintas unidades org·nicas y oficinas de atenciÛn al p˙blico, facilitando tanto la gestiÛn interna de la administraciÛn como el acceso de la ciudadanÌa a sus servicios y la presentaciÛn de documentos.",
         "tema": "TEC",
         "es_transversal": false,
         "es_subsistema_de": null,
@@ -712,8 +712,8 @@
     "pk": 1,
     "fields": {
         "sistema": 1,
-        "nombre_activo": "Sistemas de informaci√≥n",
-        "descripcion": "Relaci√≥n de los sistemas de informaci√≥n utilizados en la AP del Gobierno de Canarias y organismos dependientes.",
+        "nombre_activo": "Sistemas de informaciÛn",
+        "descripcion": "RelaciÛn de los sistemas de informaciÛn utilizados en la AP del Gobierno de Canarias y organismos dependientes.",
         "es_prioritario": false,
         "esta_georeferenciado": false,
         "datos_personales": "NO"
@@ -725,7 +725,7 @@
     "fields": {
         "sistema": 1,
         "nombre_activo": "Activo",
-        "descripcion": "Los activos de datos m√°s relevantes utilizados por cada sistema de informaci√≥n",
+        "descripcion": "Los activos de datos m·s relevantes utilizados por cada sistema de informaciÛn",
         "es_prioritario": false,
         "esta_georeferenciado": false,
         "datos_personales": "NO"

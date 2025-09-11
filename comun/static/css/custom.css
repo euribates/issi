@@ -1,3 +1,44 @@
+:root {
+  --bs-breadcrumb-font-size: 0.85em;
+  --bs-breadcrumb-bg: #101030;
+  --bs-breadcrumb-divider: "❭"
+}
+
+
 .atenuado {
   color: silver;
+}
+
+
+#header {
+  display: flex;
+  margin-bottom: 3px;
+  border: 0px solid red;
+  min-height: 100px;
+  justify-content: space-between;
+  }
+
+#logo {
+  align-self: center;
+  }
+
+#top-menu {
+  font-size: 0.8em;
+  color: #535353;
+  border: 0px dashed green;
+  padding-right: 10px;
+}
+
+#top-menu a {
+  color: #535353!important;
+  text-decoration: none!important;
+  }
+
+
+#top-menu ul {
+  list-style-type: none;
+  }
+
+#breadcrumbs {
+  background-color: #D6D6E0;
 }

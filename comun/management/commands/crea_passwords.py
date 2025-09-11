@@ -13,7 +13,8 @@ EPILOG   = 'ISSI - Inventario de sistemas de información'
 
 ALFABETO = 'abcdefghijklmnopqrstuvwxyz'
 NUMBERS  = r'0123456789'
-SYMBOLS  = r'/\#@:][}{*+-=&%|.;,'
+# SYMBOLS  = r'/\#@:][}{*+-=&%|.;,'
+SYMBOLS  = r'#:][}{*+-=%|.;,'
 
 DEFAULT_NUM_PASSWORDS = 1
 DEFAULT_LEN_PASSWORD = 24
@@ -23,21 +24,18 @@ DEFAULT_USE_1337      = True
 
 MAP_1337 = {
     'a': ['4', '@'],
-    'b': ['8', '|3'],
-    'c': ['(', '<', '['],
-    'd': ['|)'],
+    'b': ['8'],
+    'c': ['(', '['],
     'e': ['3', ],
-    'f': ['|='],
     'g': ['9', '&'],
-    'h': ['|-|', '#'],
+    'h': ['#'],
     'i': ['1', '|', ':', '!'],
-    'o': ['0', '[]', '*', '{}'],
+    'o': ['0', '*'],
     's': ['5', '~'],
     't': ['7', '+'],
-    'u': ['|_|'],
-    'z': ['2',],
-    'w': ['vv', 'vV', 'Vv', 'VV'],
+    'z': ['2'],
     }
+
 
 def alter_case(c):
     if random.random() >= 0.65:
@@ -61,6 +59,7 @@ def troff(msg, buffer):
     indent = ' ' * (24 - len(msg))
     label = ''.join(buffer)
     print(f'{indent}\x1b[31m{msg}\x1b[0m: \x1b[91m{label}\x1b[0m')
+
 
 class Command(BaseCommand):
     '''Generador de contraseñas pronunciables.
@@ -86,7 +85,7 @@ class Command(BaseCommand):
             )
         parser.add_argument(
             '-s', '--symbols',
-            help='Número de caracteres no alfanumericos en la contraseña',
+            help='Número mínimo de caracteres no alfanumericos en la contraseña',
             type=int,
             default=DEFAULT_NUM_SYMBOLS,
             )
@@ -118,7 +117,7 @@ class Command(BaseCommand):
         _letter = random.choice(ALFABETO)
         buffer = [_letter]
         size = len(buffer)
-        for _ in range(len_password - num_digits - num_symbols):
+        for _ in range(len_password - num_digits - num_symbols - 1):
             fraqs = letter_frequencies.FREQS[_letter]
             population = [_[0] for _ in fraqs]
             cum_weights = [_[1] for _ in fraqs]
@@ -132,11 +131,6 @@ class Command(BaseCommand):
                 if target in MAP_1337 and random.random() < 0.4:
                     reemplazo = random.choice(MAP_1337[target])
                     buffer[index:index+1] = list(reemplazo)
-                    for c in reemplazo:
-                        if c.isnumeric():
-                            num_digits -= 1
-                        else:
-                            num_symbols -= 1
                     size += len(reemplazo)
             if verbosity > 1:
                 tron('1337 code', buffer)
