@@ -2,15 +2,22 @@
 
 {% block content %}
 
+{{ organismos|pprint }}
 
 <table class="table table.striped">
   <thead>
     <caption>de primer nivel</section>
   </thead>
   <tbody>
-    <tr>
-      for-t
-    </tr>  
+      {% for organismo in organismos.all %}
+      <tr>
+        <th>
+            <td>{{ organismo.nombre_organismo }}</td>
+            <td></td>
+            <td></td>
+        </th>
+      </tr>  
+      {% endfor%}
   </tbody>
 
 
