@@ -89,8 +89,8 @@ class Activo(models.Model):
     id_activo = models.BigAutoField(primary_key=True)
     sistema = models.ForeignKey(
         Sistema,
-        on_delete=models.PROTECT,
         related_name='activos',
+        on_delete=models.PROTECT,
         )
     nombre_activo = models.CharField(max_length=288)
     descripcion = models.TextField()

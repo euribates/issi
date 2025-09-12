@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'comun',
     'normativa',
     'sistemas',
+    'directorio',
     'glosario',
     ]
 

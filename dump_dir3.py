@@ -4,8 +4,6 @@ import sys
 import dataclasses
 import csv
 
-from filters import clean_text
-from filters import clean_integer
 from filters import slugify
 
 

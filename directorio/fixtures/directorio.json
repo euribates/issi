@@ -1,0 +1,1778 @@
+[
+{
+    "model": "directorio.organismo",
+    "pk": 6547,
+    "fields": {
+        "nombre_organismo": "Consejería de Sanidad",
+        "dir3": "A05002852",
+        "id_sirhus": 360540,
+        "categoria": "Consejería",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6564,
+    "fields": {
+        "nombre_organismo": "Escuela de Servicios Sanitarios y Sociales de Canarias",
+        "dir3": "A05003615",
+        "id_sirhus": 3443910,
+        "categoria": "Entidad Pública Empresarial",
+        "depende_de": 6547,
+        "ruta": "/6547"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6583,
+    "fields": {
+        "nombre_organismo": "Secretaría General Técnica de Sanidad",
+        "dir3": "A05003607",
+        "id_sirhus": 360840,
+        "categoria": "Secretaría General Técnica",
+        "depende_de": 6547,
+        "ruta": "/6547"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6594,
+    "fields": {
+        "nombre_organismo": "Servicio Canario de la Salud",
+        "dir3": "A05003608",
+        "id_sirhus": 2340,
+        "categoria": "Organismo Autónomo",
+        "depende_de": 6547,
+        "ruta": "/6547"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6603,
+    "fields": {
+        "nombre_organismo": "Dirección de Área de Salud de Fuerteventura",
+        "dir3": "A05006304",
+        "id_sirhus": 437540,
+        "categoria": "Dirección Area",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6630,
+    "fields": {
+        "nombre_organismo": "Dirección de Área de Salud de Tenerife",
+        "dir3": "A05006310",
+        "id_sirhus": 439040,
+        "categoria": "Dirección Area",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6632,
+    "fields": {
+        "nombre_organismo": "Dirección de Área de Salud de Gran Canaria",
+        "dir3": "A05006306",
+        "id_sirhus": 437940,
+        "categoria": "Dirección Area",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6634,
+    "fields": {
+        "nombre_organismo": "Dirección de Área de Salud de La Gomera",
+        "dir3": "A05006307",
+        "id_sirhus": 438440,
+        "categoria": "Dirección Area",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6636,
+    "fields": {
+        "nombre_organismo": "Dirección General de Salud Pública",
+        "dir3": "A05003613",
+        "id_sirhus": 434940,
+        "categoria": "Dirección General",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6644,
+    "fields": {
+        "nombre_organismo": "Dirección General de Recursos Humanos",
+        "dir3": "A05003612",
+        "id_sirhus": 437140,
+        "categoria": "Dirección General",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6652,
+    "fields": {
+        "nombre_organismo": "Secretaría General del Servicio Canario de la Salud",
+        "dir3": "A05003609",
+        "id_sirhus": 434040,
+        "categoria": "Secretaría General",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6666,
+    "fields": {
+        "nombre_organismo": "Dirección de Área de Salud de La Palma",
+        "dir3": "A05006309",
+        "id_sirhus": 438840,
+        "categoria": "Dirección Area",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6668,
+    "fields": {
+        "nombre_organismo": "Dirección de Área de Salud de El Hierro",
+        "dir3": "A05006308",
+        "id_sirhus": 438640,
+        "categoria": "Dirección Area",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6679,
+    "fields": {
+        "nombre_organismo": "Dirección General de Recursos Económicos",
+        "dir3": "A05003611",
+        "id_sirhus": 436240,
+        "categoria": "Dirección General",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6687,
+    "fields": {
+        "nombre_organismo": "Dirección General de Programas Asistenciales",
+        "dir3": "A05003610",
+        "id_sirhus": 435540,
+        "categoria": "Dirección General",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 6701,
+    "fields": {
+        "nombre_organismo": "Dirección de Área de Salud de Lanzarote",
+        "dir3": "A05006305",
+        "id_sirhus": 437740,
+        "categoria": "Dirección Area",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 7251,
+    "fields": {
+        "nombre_organismo": "Vicepresidencia del Gobierno",
+        "dir3": "A05003332",
+        "id_sirhus": 321840,
+        "categoria": "Vicepresidencia",
+        "depende_de": 42091,
+        "ruta": "/42091"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 7268,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de la Presidencia",
+        "dir3": "A05003333",
+        "id_sirhus": 320640,
+        "categoria": "Viceconsejería",
+        "depende_de": 42091,
+        "ruta": "/42091"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 7400,
+    "fields": {
+        "nombre_organismo": "Secretaría General",
+        "dir3": "A05003338",
+        "id_sirhus": 319740,
+        "categoria": "Secretaría General",
+        "depende_de": 42091,
+        "ruta": "/42091"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 10847,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Comunicación y Relaciones con los Medios",
+        "dir3": "A05003335",
+        "id_sirhus": 324140,
+        "categoria": "Viceconsejería",
+        "depende_de": 42091,
+        "ruta": "/42091"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 10855,
+    "fields": {
+        "nombre_organismo": "Dirección General de Comunicación",
+        "dir3": "A05003344",
+        "id_sirhus": 322640,
+        "categoria": "Dirección General",
+        "depende_de": 10847,
+        "ruta": "/42091/10847"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 24414,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Acción Exterior",
+        "dir3": "A05003334",
+        "id_sirhus": 3303410,
+        "categoria": "Viceconsejería",
+        "depende_de": 42091,
+        "ruta": "/42091"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 25954,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Justicia y Seguridad",
+        "dir3": "A05003241",
+        "id_sirhus": 334740,
+        "categoria": "Viceconsejería",
+        "depende_de": 42118,
+        "ruta": "/42118"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 25963,
+    "fields": {
+        "nombre_organismo": "Dirección General de Relaciones con la Administración de Justicia",
+        "dir3": "A05003250",
+        "id_sirhus": 460040,
+        "categoria": "Dirección General",
+        "depende_de": 25954,
+        "ruta": "/42118/25954"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 25972,
+    "fields": {
+        "nombre_organismo": "Instituto Canario de Administración Pública",
+        "dir3": "A05003243",
+        "id_sirhus": 318940,
+        "categoria": "Organismo Autónomo",
+        "depende_de": 42118,
+        "ruta": "/42118"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 25999,
+    "fields": {
+        "nombre_organismo": "Instituto Canario de Igualdad",
+        "dir3": "A05033134",
+        "id_sirhus": 426740,
+        "categoria": "Organismo Autónomo",
+        "depende_de": 42165,
+        "ruta": "/42165"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 32738,
+    "fields": {
+        "nombre_organismo": "Instituto Canario de Calidad Agroalimentaria",
+        "dir3": "A05003567",
+        "id_sirhus": 3401010,
+        "categoria": "Organismo Autónomo",
+        "depende_de": 42084,
+        "ruta": "/42084"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 32766,
+    "fields": {
+        "nombre_organismo": "Instituto Canario de Investigaciones Agrarias",
+        "dir3": "A05003618",
+        "id_sirhus": 429240,
+        "categoria": "Organismo Autónomo",
+        "depende_de": 42084,
+        "ruta": "/42084"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 37091,
+    "fields": {
+        "nombre_organismo": "Dirección General de Emigración",
+        "dir3": "A05017165",
+        "id_sirhus": 3448910,
+        "categoria": "Dirección General",
+        "depende_de": 24414,
+        "ruta": "/42091/24414"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 37097,
+    "fields": {
+        "nombre_organismo": "Dirección General de Relaciones Exteriores",
+        "dir3": "A05017166",
+        "id_sirhus": 3449110,
+        "categoria": "Dirección General",
+        "depende_de": 24414,
+        "ruta": "/42091/24414"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 37152,
+    "fields": {
+        "nombre_organismo": "Instituto Canario de la Vivienda",
+        "dir3": "A05032835",
+        "id_sirhus": 349940,
+        "categoria": "Organismo Autónomo",
+        "depende_de": 42114,
+        "ruta": "/42114"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 37364,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Economía e Internacionalización",
+        "dir3": "A05033182",
+        "id_sirhus": 348140,
+        "categoria": "Viceconsejería",
+        "depende_de": 42104,
+        "ruta": "/42104"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 37422,
+    "fields": {
+        "nombre_organismo": "Dirección General de Asuntos Europeos",
+        "dir3": "A05032842",
+        "id_sirhus": 347140,
+        "categoria": "Dirección General",
+        "depende_de": 42087,
+        "ruta": "/42086/42087"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 37542,
+    "fields": {
+        "nombre_organismo": "Dirección General de Juventud",
+        "dir3": "A05033133",
+        "id_sirhus": 3450210,
+        "categoria": "Dirección General",
+        "depende_de": 41970,
+        "ruta": "/42165/41970"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 37815,
+    "fields": {
+        "nombre_organismo": "Agencia Tributaria Canaria",
+        "dir3": "A05010223",
+        "id_sirhus": 3444410,
+        "categoria": "Entidad Pública",
+        "depende_de": 42086,
+        "ruta": "/42086"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 37829,
+    "fields": {
+        "nombre_organismo": "Instituto Canario de Estadística",
+        "dir3": "A05003423",
+        "id_sirhus": 428340,
+        "categoria": "Organismo Autónomo",
+        "depende_de": 42086,
+        "ruta": "/42086"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 37849,
+    "fields": {
+        "nombre_organismo": "Intervención General",
+        "dir3": "A05003421",
+        "id_sirhus": 338040,
+        "categoria": "Intervención General",
+        "depende_de": 42086,
+        "ruta": "/42086"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 37894,
+    "fields": {
+        "nombre_organismo": "Dirección General del Tesoro y Política Financiera",
+        "dir3": "A05003430",
+        "id_sirhus": 344940,
+        "categoria": "Dirección General",
+        "depende_de": 42087,
+        "ruta": "/42086/42087"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 37905,
+    "fields": {
+        "nombre_organismo": "Dirección General de Planificación y Presupuesto",
+        "dir3": "A05003429",
+        "id_sirhus": 341340,
+        "categoria": "Dirección General",
+        "depende_de": 42087,
+        "ruta": "/42086/42087"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 37916,
+    "fields": {
+        "nombre_organismo": "Dirección General de Patrimonio y Contratación",
+        "dir3": "A05003432",
+        "id_sirhus": 346740,
+        "categoria": "Dirección General",
+        "depende_de": 42087,
+        "ruta": "/42086/42087"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 38576,
+    "fields": {
+        "nombre_organismo": "Puertos Canarios",
+        "dir3": "A05003606",
+        "id_sirhus": 3443510,
+        "categoria": "Entidad Pública Empresarial",
+        "depende_de": 42114,
+        "ruta": "/42114"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 38592,
+    "fields": {
+        "nombre_organismo": "Dirección General de Infraestructura Viaria",
+        "dir3": "A05003601",
+        "id_sirhus": 350840,
+        "categoria": "Dirección General",
+        "depende_de": 42115,
+        "ruta": "/42114/42115"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 38600,
+    "fields": {
+        "nombre_organismo": "Dirección General de Transportes y Movilidad",
+        "dir3": "A05003602",
+        "id_sirhus": 385740,
+        "categoria": "Dirección General",
+        "depende_de": 42115,
+        "ruta": "/42114/42115"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 38691,
+    "fields": {
+        "nombre_organismo": "Agencia Canaria de Calidad Universitaria y Evaluación Educativa",
+        "dir3": "A05003410",
+        "id_sirhus": 3306410,
+        "categoria": "Organismo Autónomo",
+        "depende_de": 42123,
+        "ruta": "/42123"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 39053,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Sector Primario",
+        "dir3": "A05017081",
+        "id_sirhus": 359740,
+        "categoria": "Viceconsejería",
+        "depende_de": 42084,
+        "ruta": "/42084"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 39060,
+    "fields": {
+        "nombre_organismo": "Dirección General de Agricultura",
+        "dir3": "A05017082",
+        "id_sirhus": 358340,
+        "categoria": "Dirección General",
+        "depende_de": 39053,
+        "ruta": "/42084/39053"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 39073,
+    "fields": {
+        "nombre_organismo": "Dirección General de Ganadería",
+        "dir3": "A05003564",
+        "id_sirhus": 360440,
+        "categoria": "Dirección General",
+        "depende_de": 39053,
+        "ruta": "/42084/39053"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 39153,
+    "fields": {
+        "nombre_organismo": "Dirección General de Pesca",
+        "dir3": "A05017084",
+        "id_sirhus": 3450910,
+        "categoria": "Dirección General",
+        "depende_de": 39053,
+        "ruta": "/42084/39053"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 39166,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Turismo",
+        "dir3": "A05017154",
+        "id_sirhus": 389240,
+        "categoria": "Viceconsejería",
+        "depende_de": 42143,
+        "ruta": "/42143"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 41518,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Relaciones con el Parlamento",
+        "dir3": "A05018780",
+        "id_sirhus": 3277810,
+        "categoria": "Viceconsejería",
+        "depende_de": 42118,
+        "ruta": "/42118"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 41545,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Administraciones y Transparencia",
+        "dir3": "A05018778",
+        "id_sirhus": 330540,
+        "categoria": "Viceconsejería",
+        "depende_de": 42118,
+        "ruta": "/42118"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 41567,
+    "fields": {
+        "nombre_organismo": "Dirección General de la Función Pública",
+        "dir3": "A05003247",
+        "id_sirhus": 333740,
+        "categoria": "Dirección General",
+        "depende_de": 41545,
+        "ruta": "/42118/41545"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 41588,
+    "fields": {
+        "nombre_organismo": "Dirección General de Transparencia y Participación Ciudadana",
+        "dir3": "A05018781",
+        "id_sirhus": 3410810,
+        "categoria": "Dirección General",
+        "depende_de": 41545,
+        "ruta": "/42118/41545"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 41854,
+    "fields": {
+        "nombre_organismo": "Agencia Canaria de Protección del Medio Natural",
+        "dir3": "A05022869",
+        "id_sirhus": 427140,
+        "categoria": "Organismo Autónomo",
+        "depende_de": 42136,
+        "ruta": "/42136"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 41970,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Igualdad y Diversidad",
+        "dir3": "A05033131",
+        "id_sirhus": 3498710,
+        "categoria": "Viceconsejería",
+        "depende_de": 42165,
+        "ruta": "/42165"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 41971,
+    "fields": {
+        "nombre_organismo": "Dirección General de Diversidad",
+        "dir3": "A05033132",
+        "id_sirhus": 3498910,
+        "categoria": "Dirección General",
+        "depende_de": 41970,
+        "ruta": "/42165/41970"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42082,
+    "fields": {
+        "nombre_organismo": "Dirección General Salud Mental y Adicciones",
+        "dir3": "A05046378",
+        "id_sirhus": 3540210,
+        "categoria": "Dirección General",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42083,
+    "fields": {
+        "nombre_organismo": "Dirección General del Paciente y Cronicidad",
+        "dir3": "A05046379",
+        "id_sirhus": 3540410,
+        "categoria": "Dirección General",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42084,
+    "fields": {
+        "nombre_organismo": "Consejería de Agricultura, Ganadería, Pesca y Soberanía Alimentaria",
+        "dir3": "A05033198",
+        "id_sirhus": 357440,
+        "categoria": "Consejería",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42085,
+    "fields": {
+        "nombre_organismo": "Secretaría General Técnica de Agricultura, Ganadería, Pesca y Soberanía Alimentaria",
+        "dir3": "A05033199",
+        "id_sirhus": 357740,
+        "categoria": "Secretaría General Técnica",
+        "depende_de": 42084,
+        "ruta": "/42084"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42086,
+    "fields": {
+        "nombre_organismo": "Consejería de Hacienda y Relaciones con la Unión Europea",
+        "dir3": "A05032839",
+        "id_sirhus": 464640,
+        "categoria": "Consejería",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42087,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Hacienda y Relaciones con la Unión Europea",
+        "dir3": "A05032841",
+        "id_sirhus": 347540,
+        "categoria": "Viceconsejería",
+        "depende_de": 42086,
+        "ruta": "/42086"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42088,
+    "fields": {
+        "nombre_organismo": "Secretaría General Técnica de Hacienda y Relaciones con la Unión Europea",
+        "dir3": "A05032840",
+        "id_sirhus": 336940,
+        "categoria": "Secretaría General Técnica",
+        "depende_de": 42086,
+        "ruta": "/42086"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42089,
+    "fields": {
+        "nombre_organismo": "Comisionado del Régimen Económico y Fiscal de Canarias",
+        "dir3": "A05047178",
+        "id_sirhus": 3535410,
+        "categoria": "Comisionado",
+        "depende_de": 42086,
+        "ruta": "/42086"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42090,
+    "fields": {
+        "nombre_organismo": "Ente Público Radiotelevisión Canaria",
+        "dir3": "A05003424",
+        "id_sirhus": 3444010,
+        "categoria": "Entidad Pública",
+        "depende_de": 42091,
+        "ruta": "/42091"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42091,
+    "fields": {
+        "nombre_organismo": "Presidencia del Gobierno",
+        "dir3": "A05002844",
+        "id_sirhus": 319640,
+        "categoria": "Presidencia",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42092,
+    "fields": {
+        "nombre_organismo": "Dirección General de Coordinación Orgánica y Proyectos Estratégicos",
+        "dir3": "A05046377",
+        "id_sirhus": 3534210,
+        "categoria": "Dirección General",
+        "depende_de": 7268,
+        "ruta": "/42091/7268"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42093,
+    "fields": {
+        "nombre_organismo": "Dirección General de Transformación Digital de los Servicios Públicos",
+        "dir3": "A05003248",
+        "id_sirhus": 459540,
+        "categoria": "Dirección General",
+        "depende_de": 7268,
+        "ruta": "/42091/7268"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42094,
+    "fields": {
+        "nombre_organismo": "Viceconsejería del Gabinete de la Presidencia",
+        "dir3": "A05003340",
+        "id_sirhus": 3534410,
+        "categoria": "Viceconsejería",
+        "depende_de": 42091,
+        "ruta": "/42091"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42095,
+    "fields": {
+        "nombre_organismo": "Dirección General de Relaciones con África",
+        "dir3": "A05017317",
+        "id_sirhus": 325240,
+        "categoria": "Dirección General",
+        "depende_de": 24414,
+        "ruta": "/42091/24414"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42096,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Servicios Jurídicos",
+        "dir3": "A05033189",
+        "id_sirhus": 3449310,
+        "categoria": "Viceconsejería",
+        "depende_de": 42091,
+        "ruta": "/42091"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42097,
+    "fields": {
+        "nombre_organismo": "Dirección General de Servicios Jurídicos",
+        "dir3": "A05046372",
+        "id_sirhus": 3534510,
+        "categoria": "Dirección General",
+        "depende_de": 42096,
+        "ruta": "/42091/42096"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42098,
+    "fields": {
+        "nombre_organismo": "Viceconsejería del Gabinete de la Vicepresidencia",
+        "dir3": "A05003342",
+        "id_sirhus": 3533610,
+        "categoria": "Viceconsejería",
+        "depende_de": 7251,
+        "ruta": "/42091/7251"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42099,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Coordinación y Relaciones Institucionales de la Vicepresidencia",
+        "dir3": "A05046374",
+        "id_sirhus": 3533710,
+        "categoria": "Viceconsejería",
+        "depende_de": 7251,
+        "ruta": "/42091/7251"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42100,
+    "fields": {
+        "nombre_organismo": "Dirección General de Planificación e Información",
+        "dir3": "A05046375",
+        "id_sirhus": 3533810,
+        "categoria": "Dirección General",
+        "depende_de": 42099,
+        "ruta": "/42091/7251/42099"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42101,
+    "fields": {
+        "nombre_organismo": "Dirección General de Análisis y Estudios",
+        "dir3": "A05046376",
+        "id_sirhus": 3533910,
+        "categoria": "Dirección General",
+        "depende_de": 42099,
+        "ruta": "/42091/7251/42099"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42102,
+    "fields": {
+        "nombre_organismo": "Portavocía del Gobierno",
+        "dir3": "A05046373",
+        "id_sirhus": 3534710,
+        "categoria": "Viceconsejería",
+        "depende_de": 42091,
+        "ruta": "/42091"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42103,
+    "fields": {
+        "nombre_organismo": "Consejo Económico y Social",
+        "dir3": "A05017335",
+        "id_sirhus": 425840,
+        "categoria": "Entidad Pública",
+        "depende_de": 42091,
+        "ruta": "/42091"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42104,
+    "fields": {
+        "nombre_organismo": "Consejería de Economía, Industria, Comercio y Autónomos",
+        "dir3": "A05033180",
+        "id_sirhus": 3277910,
+        "categoria": "Consejería",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42106,
+    "fields": {
+        "nombre_organismo": "Dirección General de Promoción y Diversificación Económica",
+        "dir3": "A05022215",
+        "id_sirhus": 346040,
+        "categoria": "Dirección General",
+        "depende_de": 37364,
+        "ruta": "/42104/37364"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42107,
+    "fields": {
+        "nombre_organismo": "Dirección General de Autónomos",
+        "dir3": "A05046474",
+        "id_sirhus": 3534910,
+        "categoria": "Dirección General",
+        "depende_de": 37364,
+        "ruta": "/42104/37364"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42108,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Industria, Comercio y Consumo",
+        "dir3": "A05030990",
+        "id_sirhus": 3450010,
+        "categoria": "Viceconsejería",
+        "depende_de": 42104,
+        "ruta": "/42104"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42109,
+    "fields": {
+        "nombre_organismo": "Dirección General de Industria",
+        "dir3": "A05030992",
+        "id_sirhus": 464040,
+        "categoria": "Dirección General",
+        "depende_de": 42108,
+        "ruta": "/42104/42108"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42110,
+    "fields": {
+        "nombre_organismo": "Dirección General de Comercio y Consumo",
+        "dir3": "A05030991",
+        "id_sirhus": 465240,
+        "categoria": "Dirección General",
+        "depende_de": 42108,
+        "ruta": "/42104/42108"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42111,
+    "fields": {
+        "nombre_organismo": "Secretaría General Técnica de Economía, Industria, Comercio y Autónomos",
+        "dir3": "A05033181",
+        "id_sirhus": 3278010,
+        "categoria": "Secretaría General Técnica",
+        "depende_de": 42104,
+        "ruta": "/42104"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42112,
+    "fields": {
+        "nombre_organismo": "Dirección General de Relaciones Externas e Inspección",
+        "dir3": "A05046380",
+        "id_sirhus": 3541210,
+        "categoria": "Dirección General",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42114,
+    "fields": {
+        "nombre_organismo": "Consejería de Obras Públicas, Vivienda y Movilidad",
+        "dir3": "A05032833",
+        "id_sirhus": 348340,
+        "categoria": "Consejería",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42115,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Infraestructuras",
+        "dir3": "A05017191",
+        "id_sirhus": 353240,
+        "categoria": "Viceconsejería",
+        "depende_de": 42114,
+        "ruta": "/42114"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42116,
+    "fields": {
+        "nombre_organismo": "Dirección General de Costas y Gestión del espacio marítimo canario",
+        "dir3": "A05047064",
+        "id_sirhus": 3535110,
+        "categoria": "Dirección General",
+        "depende_de": 42115,
+        "ruta": "/42114/42115"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42117,
+    "fields": {
+        "nombre_organismo": "Secretaría General Técnica de Obras Públicas, Vivienda y Movilidad",
+        "dir3": "A05032834",
+        "id_sirhus": 348640,
+        "categoria": "Secretaría General Técnica",
+        "depende_de": 42114,
+        "ruta": "/42114"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42118,
+    "fields": {
+        "nombre_organismo": "Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad",
+        "dir3": "A05033187",
+        "id_sirhus": 459040,
+        "categoria": "Consejería",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42119,
+    "fields": {
+        "nombre_organismo": "Dirección General de Modernización y Calidad de los Servicios Públicos",
+        "dir3": "A05017100",
+        "id_sirhus": 329340,
+        "categoria": "Dirección General",
+        "depende_de": 41545,
+        "ruta": "/42118/41545"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42120,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de recuperación económica y social de La Palma",
+        "dir3": "A05046793",
+        "id_sirhus": 3535610,
+        "categoria": "Viceconsejería",
+        "depende_de": 42118,
+        "ruta": "/42118"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42121,
+    "fields": {
+        "nombre_organismo": "Secretaría General Técnica de Presidencia, Administraciones Públicas, Justicia y Seguridad",
+        "dir3": "A05033188",
+        "id_sirhus": 327540,
+        "categoria": "Secretaría General Técnica",
+        "depende_de": 42118,
+        "ruta": "/42118"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42122,
+    "fields": {
+        "nombre_organismo": "Dirección General de Seguridad",
+        "dir3": "A05046792",
+        "id_sirhus": 335040,
+        "categoria": "Dirección General",
+        "depende_de": 25954,
+        "ruta": "/42118/25954"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42123,
+    "fields": {
+        "nombre_organismo": "Consejería de Educación, Formación Profesional, Actividad Física y Deportes",
+        "dir3": "A05047932",
+        "id_sirhus": 391140,
+        "categoria": "Consejería",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42124,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Educación",
+        "dir3": "A05047934",
+        "id_sirhus": 573140,
+        "categoria": "Viceconsejería",
+        "depende_de": 42123,
+        "ruta": "/42123"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42125,
+    "fields": {
+        "nombre_organismo": "Dirección General de Personal y Formación del Profesorado",
+        "dir3": "A05003414",
+        "id_sirhus": 395440,
+        "categoria": "Dirección General",
+        "depende_de": 42124,
+        "ruta": "/42123/42124"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42126,
+    "fields": {
+        "nombre_organismo": "Dirección General de Ordenación de las Enseñanzas, Inclusión e Innovación",
+        "dir3": "A05003415",
+        "id_sirhus": 394640,
+        "categoria": "Dirección General",
+        "depende_de": 42124,
+        "ruta": "/42123/42124"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42127,
+    "fields": {
+        "nombre_organismo": "Dirección General de Administración de Centros, Escolarización y Servicios Complementarios",
+        "dir3": "A05047943",
+        "id_sirhus": 3535810,
+        "categoria": "Dirección General",
+        "depende_de": 42124,
+        "ruta": "/42123/42124"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42128,
+    "fields": {
+        "nombre_organismo": "Dirección General de Infraestructuras y Equipamientos",
+        "dir3": "A05047944",
+        "id_sirhus": 395940,
+        "categoria": "Dirección General",
+        "depende_de": 42124,
+        "ruta": "/42123/42124"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42129,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Formación Profesional y Cualificaciones Profesionales",
+        "dir3": "A05047940",
+        "id_sirhus": 3536010,
+        "categoria": "Viceconsejería",
+        "depende_de": 42123,
+        "ruta": "/42123"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42130,
+    "fields": {
+        "nombre_organismo": "Dirección General de Formación Profesional y Enseñanzas de Régimen Especial",
+        "dir3": "A05003413",
+        "id_sirhus": 3281810,
+        "categoria": "Dirección General",
+        "depende_de": 42129,
+        "ruta": "/42123/42129"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42131,
+    "fields": {
+        "nombre_organismo": "Dirección General de Cualificaciones Profesionales",
+        "dir3": "A05047941",
+        "id_sirhus": 3536210,
+        "categoria": "Dirección General",
+        "depende_de": 42129,
+        "ruta": "/42123/42129"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42132,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de la Actividad Física y Deportes",
+        "dir3": "A05047936",
+        "id_sirhus": 3536410,
+        "categoria": "Viceconsejería",
+        "depende_de": 42123,
+        "ruta": "/42123"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42133,
+    "fields": {
+        "nombre_organismo": "Dirección General de la Actividad Física y el Deporte",
+        "dir3": "A05031005",
+        "id_sirhus": 399640,
+        "categoria": "Dirección General",
+        "depende_de": 42132,
+        "ruta": "/42123/42132"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42134,
+    "fields": {
+        "nombre_organismo": "Dirección General de Deportes Autóctonos",
+        "dir3": "A05047942",
+        "id_sirhus": 3536710,
+        "categoria": "Dirección General",
+        "depende_de": 42132,
+        "ruta": "/42123/42132"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42135,
+    "fields": {
+        "nombre_organismo": "Secretaría General Técnica de Educación, Formación Profesional, Actividad Física y Deportes",
+        "dir3": "A05047938",
+        "id_sirhus": 392140,
+        "categoria": "Secretaría General Técnica",
+        "depende_de": 42123,
+        "ruta": "/42123"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42136,
+    "fields": {
+        "nombre_organismo": "Consejería de Política Territorial, Cohesión Territorial y Aguas",
+        "dir3": "A05047663",
+        "id_sirhus": 3450410,
+        "categoria": "Consejería",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42137,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Planificación Territorial y Reto Demográfico",
+        "dir3": "A05047670",
+        "id_sirhus": 3279110,
+        "categoria": "Viceconsejería",
+        "depende_de": 42136,
+        "ruta": "/42136"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42138,
+    "fields": {
+        "nombre_organismo": "Dirección General de Ordenación del Territorio y Cohesión Territorial",
+        "dir3": "A05047672",
+        "id_sirhus": 467640,
+        "categoria": "Dirección General",
+        "depende_de": 42137,
+        "ruta": "/42136/42137"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42139,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Emergencias y Aguas",
+        "dir3": "A05047669",
+        "id_sirhus": 3536910,
+        "categoria": "Viceconsejería",
+        "depende_de": 42136,
+        "ruta": "/42136"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42140,
+    "fields": {
+        "nombre_organismo": "Dirección General de Aguas",
+        "dir3": "A05047671",
+        "id_sirhus": 3537110,
+        "categoria": "Dirección General",
+        "depende_de": 42139,
+        "ruta": "/42136/42139"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42141,
+    "fields": {
+        "nombre_organismo": "Dirección General de Emergencias",
+        "dir3": "A05047673",
+        "id_sirhus": 3537310,
+        "categoria": "Dirección General",
+        "depende_de": 42139,
+        "ruta": "/42136/42139"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42142,
+    "fields": {
+        "nombre_organismo": "Secretaría General Técnica de Política Territorial, Cohesión Territorial y Aguas",
+        "dir3": "A05047667",
+        "id_sirhus": 3539410,
+        "categoria": "Secretaría General Técnica",
+        "depende_de": 42136,
+        "ruta": "/42136"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42143,
+    "fields": {
+        "nombre_organismo": "Consejería de Turismo y Empleo",
+        "dir3": "A05030988",
+        "id_sirhus": 3451210,
+        "categoria": "Consejería",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42144,
+    "fields": {
+        "nombre_organismo": "Dirección General de Infraestructura, Sostenibilidad y Calidad Turística",
+        "dir3": "A05017155",
+        "id_sirhus": 387540,
+        "categoria": "Dirección General",
+        "depende_de": 39166,
+        "ruta": "/42143/39166"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42145,
+    "fields": {
+        "nombre_organismo": "Dirección General de Ordenación, Formación y Promoción Turística",
+        "dir3": "A05017156",
+        "id_sirhus": 386640,
+        "categoria": "Dirección General",
+        "depende_de": 39166,
+        "ruta": "/42143/39166"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42146,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Empleo",
+        "dir3": "A05033183",
+        "id_sirhus": 3449810,
+        "categoria": "Viceconsejería",
+        "depende_de": 42143,
+        "ruta": "/42143"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42147,
+    "fields": {
+        "nombre_organismo": "Dirección General de Trabajo",
+        "dir3": "A05033137",
+        "id_sirhus": 404840,
+        "categoria": "Dirección General",
+        "depende_de": 42146,
+        "ruta": "/42143/42146"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42148,
+    "fields": {
+        "nombre_organismo": "Secretaría General Técnica de Turismo y Empleo",
+        "dir3": "A05030989",
+        "id_sirhus": 3451810,
+        "categoria": "Secretaría General Técnica",
+        "depende_de": 42143,
+        "ruta": "/42143"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42149,
+    "fields": {
+        "nombre_organismo": "Servicio Canario de Empleo",
+        "dir3": "A05033138",
+        "id_sirhus": 419840,
+        "categoria": "Organismo Autónomo",
+        "depende_de": 42143,
+        "ruta": "/42143"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42150,
+    "fields": {
+        "nombre_organismo": "Consejería de Universidades, Ciencia e Innovación y Cultura",
+        "dir3": "A05046692",
+        "id_sirhus": 3537510,
+        "categoria": "Consejería",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42151,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Universidades e Investigación",
+        "dir3": "A05047012",
+        "id_sirhus": 3537810,
+        "categoria": "Viceconsejería",
+        "depende_de": 42150,
+        "ruta": "/42150"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42152,
+    "fields": {
+        "nombre_organismo": "Dirección General de Universidades e Investigación",
+        "dir3": "A05003416",
+        "id_sirhus": 397340,
+        "categoria": "Dirección General",
+        "depende_de": 42151,
+        "ruta": "/42150/42151"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42153,
+    "fields": {
+        "nombre_organismo": "Dirección General de Ordenación, Innovación y de la Calidad Universitaria",
+        "dir3": "A05047013",
+        "id_sirhus": 3538010,
+        "categoria": "Dirección General",
+        "depende_de": 42151,
+        "ruta": "/42150/42151"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42154,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Cultura y Patrimonio Cultural",
+        "dir3": "A05030997",
+        "id_sirhus": 3451610,
+        "categoria": "Viceconsejería",
+        "depende_de": 42150,
+        "ruta": "/42150"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42155,
+    "fields": {
+        "nombre_organismo": "Dirección General de Cultura y Patrimonio Cultural",
+        "dir3": "A05047355",
+        "id_sirhus": 399340,
+        "categoria": "Dirección General",
+        "depende_de": 42154,
+        "ruta": "/42150/42154"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42156,
+    "fields": {
+        "nombre_organismo": "Dirección General de Innovación Cultural e Industrias Creativas",
+        "dir3": "A05047474",
+        "id_sirhus": 3538210,
+        "categoria": "Dirección General",
+        "depende_de": 42154,
+        "ruta": "/42150/42154"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42157,
+    "fields": {
+        "nombre_organismo": "Secretaría General Técnica de Universidades, Ciencia e Innovación y Cultura",
+        "dir3": "A05046712",
+        "id_sirhus": 3538510,
+        "categoria": "Secretaría General Técnica",
+        "depende_de": 42150,
+        "ruta": "/42150"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42158,
+    "fields": {
+        "nombre_organismo": "Agencia Canaria de Investigación, Innovación y Sociedad de la Información",
+        "dir3": "A05017323",
+        "id_sirhus": 3308710,
+        "categoria": "Dirección General",
+        "depende_de": 42150,
+        "ruta": "/42150"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42159,
+    "fields": {
+        "nombre_organismo": "Consejería de Transición Ecológica y Energía",
+        "dir3": "A05047664",
+        "id_sirhus": 3538710,
+        "categoria": "Consejería",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42160,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Transición Ecológica, Lucha contra el Cambio Climático y Energía",
+        "dir3": "A05033174",
+        "id_sirhus": 467140,
+        "categoria": "Viceconsejería",
+        "depende_de": 42159,
+        "ruta": "/42159"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42161,
+    "fields": {
+        "nombre_organismo": "Dirección General de Transición Ecológica y Lucha contra el Cambio Climático",
+        "dir3": "A05033175",
+        "id_sirhus": 3279310,
+        "categoria": "Dirección General",
+        "depende_de": 42160,
+        "ruta": "/42159/42160"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42162,
+    "fields": {
+        "nombre_organismo": "Dirección General de Espacios Naturales y Biodiversidad",
+        "dir3": "A05047674",
+        "id_sirhus": 3539210,
+        "categoria": "Dirección General",
+        "depende_de": 42160,
+        "ruta": "/42159/42160"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42163,
+    "fields": {
+        "nombre_organismo": "Dirección General de Energía",
+        "dir3": "A05033178",
+        "id_sirhus": 3499110,
+        "categoria": "Dirección General",
+        "depende_de": 42160,
+        "ruta": "/42159/42160"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42164,
+    "fields": {
+        "nombre_organismo": "Secretaría General Técnica de Transición Ecológica y Energía",
+        "dir3": "A05047668",
+        "id_sirhus": 3450710,
+        "categoria": "Secretaría General Técnica",
+        "depende_de": 42159,
+        "ruta": "/42159"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42165,
+    "fields": {
+        "nombre_organismo": "Consejería de Bienestar Social, Igualdad, Juventud, Infancia y Familias",
+        "dir3": "A05045232",
+        "id_sirhus": 472240,
+        "categoria": "Consejería",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42166,
+    "fields": {
+        "nombre_organismo": "Viceconsejería de Bienestar Social",
+        "dir3": "A05045234",
+        "id_sirhus": 3445610,
+        "categoria": "Viceconsejería",
+        "depende_de": 42165,
+        "ruta": "/42165"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42167,
+    "fields": {
+        "nombre_organismo": "Dirección General de Servicios Sociales e Inmigración",
+        "dir3": "A05045235",
+        "id_sirhus": 409340,
+        "categoria": "Dirección General",
+        "depende_de": 42166,
+        "ruta": "/42165/42166"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42168,
+    "fields": {
+        "nombre_organismo": "Dirección General de Dependencia",
+        "dir3": "A05046452",
+        "id_sirhus": 3449410,
+        "categoria": "Dirección General",
+        "depende_de": 42166,
+        "ruta": "/42165/42166"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42169,
+    "fields": {
+        "nombre_organismo": "Dirección General de Protección a la Infancia y las Familias",
+        "dir3": "A05045236",
+        "id_sirhus": 3449610,
+        "categoria": "Dirección General",
+        "depende_de": 42166,
+        "ruta": "/42165/42166"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42170,
+    "fields": {
+        "nombre_organismo": "Dirección General de Mayores y Participación Activa",
+        "dir3": "A05046454",
+        "id_sirhus": 3539810,
+        "categoria": "Dirección General",
+        "depende_de": 42166,
+        "ruta": "/42165/42166"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42171,
+    "fields": {
+        "nombre_organismo": "Dirección General de Discapacidad",
+        "dir3": "A05046453",
+        "id_sirhus": 3539910,
+        "categoria": "Dirección General",
+        "depende_de": 41970,
+        "ruta": "/42165/41970"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42172,
+    "fields": {
+        "nombre_organismo": "Secretaría General Técnica de Bienestar Social, Igualdad, Juventud, Infancia y Familias",
+        "dir3": "A05045233",
+        "id_sirhus": 401340,
+        "categoria": "Secretaría General Técnica",
+        "depende_de": 42165,
+        "ruta": "/42165"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42173,
+    "fields": {
+        "nombre_organismo": "Dirección General de Estudios, Formación e Investigación en Seguridad Pública",
+        "dir3": "A05046794",
+        "id_sirhus": 3541410,
+        "categoria": "Dirección General",
+        "depende_de": 25954,
+        "ruta": "/42118/25954"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42188,
+    "fields": {
+        "nombre_organismo": "Secretaría General del Consejo Económico y Social de Canarias",
+        "dir3": "A05033092",
+        "id_sirhus": 426140,
+        "categoria": "Secretaría General",
+        "depende_de": 42103,
+        "ruta": "/42091/42103"
+    }
+},
+{
+    "model": "directorio.organismo",
+    "pk": 42214,
+    "fields": {
+        "nombre_organismo": "Dirección General de Hemodonación y Hemoterapia",
+        "dir3": "A05050992",
+        "id_sirhus": 419340,
+        "categoria": "Dirección General",
+        "depende_de": 6594,
+        "ruta": "/6547/6594"
+    }
+}
+]

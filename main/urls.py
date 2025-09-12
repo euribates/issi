@@ -33,6 +33,7 @@ urlpatterns = [
     path("glosario/", include('glosario.urls')),
     path("normativa/", include('normativa.urls')),
     path("sistemas/", include('sistemas.urls')),
+    path("directorio/", include('directorio.urls')),
     path('admin/', admin.site.urls),
 ]
 
