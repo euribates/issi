@@ -1,12 +1,13 @@
+Running in DEBUG mode
 [
 {
     "model": "directorio.organismo",
     "pk": 6547,
     "fields": {
-        "nombre_organismo": "Consejer韆 de Sanidad",
+        "nombre_organismo": "Consejer铆a de Sanidad",
         "dir3": "A05002852",
         "id_sirhus": 360540,
-        "categoria": "Consejer韆",
+        "categoria": "Consejer铆a",
         "depende_de": null,
         "ruta": "/"
     }
@@ -18,7 +19,7 @@
         "nombre_organismo": "Escuela de Servicios Sanitarios y Sociales de Canarias",
         "dir3": "A05003615",
         "id_sirhus": 3443910,
-        "categoria": "Entidad P鷅lica Empresarial",
+        "categoria": "Entidad P煤blica Empresarial",
         "depende_de": 6547,
         "ruta": "/6547"
     }
@@ -27,10 +28,10 @@
     "model": "directorio.organismo",
     "pk": 6583,
     "fields": {
-        "nombre_organismo": "Secretar韆 General T閏nica de Sanidad",
+        "nombre_organismo": "Secretar铆a General T茅cnica de Sanidad",
         "dir3": "A05003607",
         "id_sirhus": 360840,
-        "categoria": "Secretar韆 General T閏nica",
+        "categoria": "Secretar铆a General T茅cnica",
         "depende_de": 6547,
         "ruta": "/6547"
     }
@@ -42,7 +43,7 @@
         "nombre_organismo": "Servicio Canario de la Salud",
         "dir3": "A05003608",
         "id_sirhus": 2340,
-        "categoria": "Organismo Aut髇omo",
+        "categoria": "Organismo Aut贸nomo",
         "depende_de": 6547,
         "ruta": "/6547"
     }
@@ -51,10 +52,10 @@
     "model": "directorio.organismo",
     "pk": 6603,
     "fields": {
-        "nombre_organismo": "Direcci髇 de 羠ea de Salud de Fuerteventura",
+        "nombre_organismo": "Direcci贸n de 脕rea de Salud de Fuerteventura",
         "dir3": "A05006304",
         "id_sirhus": 437540,
-        "categoria": "Direcci髇 Area",
+        "categoria": "Direcci贸n Area",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -63,10 +64,10 @@
     "model": "directorio.organismo",
     "pk": 6630,
     "fields": {
-        "nombre_organismo": "Direcci髇 de 羠ea de Salud de Tenerife",
+        "nombre_organismo": "Direcci贸n de 脕rea de Salud de Tenerife",
         "dir3": "A05006310",
         "id_sirhus": 439040,
-        "categoria": "Direcci髇 Area",
+        "categoria": "Direcci贸n Area",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -75,10 +76,10 @@
     "model": "directorio.organismo",
     "pk": 6632,
     "fields": {
-        "nombre_organismo": "Direcci髇 de 羠ea de Salud de Gran Canaria",
+        "nombre_organismo": "Direcci贸n de 脕rea de Salud de Gran Canaria",
         "dir3": "A05006306",
         "id_sirhus": 437940,
-        "categoria": "Direcci髇 Area",
+        "categoria": "Direcci贸n Area",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -87,10 +88,10 @@
     "model": "directorio.organismo",
     "pk": 6634,
     "fields": {
-        "nombre_organismo": "Direcci髇 de 羠ea de Salud de La Gomera",
+        "nombre_organismo": "Direcci贸n de 脕rea de Salud de La Gomera",
         "dir3": "A05006307",
         "id_sirhus": 438440,
-        "categoria": "Direcci髇 Area",
+        "categoria": "Direcci贸n Area",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -99,10 +100,10 @@
     "model": "directorio.organismo",
     "pk": 6636,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Salud P鷅lica",
+        "nombre_organismo": "Direcci贸n General de Salud P煤blica",
         "dir3": "A05003613",
         "id_sirhus": 434940,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -111,10 +112,10 @@
     "model": "directorio.organismo",
     "pk": 6644,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Recursos Humanos",
+        "nombre_organismo": "Direcci贸n General de Recursos Humanos",
         "dir3": "A05003612",
         "id_sirhus": 437140,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -123,10 +124,10 @@
     "model": "directorio.organismo",
     "pk": 6652,
     "fields": {
-        "nombre_organismo": "Secretar韆 General del Servicio Canario de la Salud",
+        "nombre_organismo": "Secretar铆a General del Servicio Canario de la Salud",
         "dir3": "A05003609",
         "id_sirhus": 434040,
-        "categoria": "Secretar韆 General",
+        "categoria": "Secretar铆a General",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -135,10 +136,10 @@
     "model": "directorio.organismo",
     "pk": 6666,
     "fields": {
-        "nombre_organismo": "Direcci髇 de 羠ea de Salud de La Palma",
+        "nombre_organismo": "Direcci贸n de 脕rea de Salud de La Palma",
         "dir3": "A05006309",
         "id_sirhus": 438840,
-        "categoria": "Direcci髇 Area",
+        "categoria": "Direcci贸n Area",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -147,10 +148,10 @@
     "model": "directorio.organismo",
     "pk": 6668,
     "fields": {
-        "nombre_organismo": "Direcci髇 de 羠ea de Salud de El Hierro",
+        "nombre_organismo": "Direcci贸n de 脕rea de Salud de El Hierro",
         "dir3": "A05006308",
         "id_sirhus": 438640,
-        "categoria": "Direcci髇 Area",
+        "categoria": "Direcci贸n Area",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -159,10 +160,10 @@
     "model": "directorio.organismo",
     "pk": 6679,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Recursos Econ髆icos",
+        "nombre_organismo": "Direcci贸n General de Recursos Econ贸micos",
         "dir3": "A05003611",
         "id_sirhus": 436240,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -171,10 +172,10 @@
     "model": "directorio.organismo",
     "pk": 6687,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Programas Asistenciales",
+        "nombre_organismo": "Direcci贸n General de Programas Asistenciales",
         "dir3": "A05003610",
         "id_sirhus": 435540,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -183,10 +184,10 @@
     "model": "directorio.organismo",
     "pk": 6701,
     "fields": {
-        "nombre_organismo": "Direcci髇 de 羠ea de Salud de Lanzarote",
+        "nombre_organismo": "Direcci贸n de 脕rea de Salud de Lanzarote",
         "dir3": "A05006305",
         "id_sirhus": 437740,
-        "categoria": "Direcci髇 Area",
+        "categoria": "Direcci贸n Area",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -207,10 +208,10 @@
     "model": "directorio.organismo",
     "pk": 7268,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de la Presidencia",
+        "nombre_organismo": "Viceconsejer铆a de la Presidencia",
         "dir3": "A05003333",
         "id_sirhus": 320640,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42091,
         "ruta": "/42091"
     }
@@ -219,10 +220,10 @@
     "model": "directorio.organismo",
     "pk": 7400,
     "fields": {
-        "nombre_organismo": "Secretar韆 General",
+        "nombre_organismo": "Secretar铆a General",
         "dir3": "A05003338",
         "id_sirhus": 319740,
-        "categoria": "Secretar韆 General",
+        "categoria": "Secretar铆a General",
         "depende_de": 42091,
         "ruta": "/42091"
     }
@@ -231,10 +232,10 @@
     "model": "directorio.organismo",
     "pk": 10847,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Comunicaci髇 y Relaciones con los Medios",
+        "nombre_organismo": "Viceconsejer铆a de Comunicaci贸n y Relaciones con los Medios",
         "dir3": "A05003335",
         "id_sirhus": 324140,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42091,
         "ruta": "/42091"
     }
@@ -243,10 +244,10 @@
     "model": "directorio.organismo",
     "pk": 10855,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Comunicaci髇",
+        "nombre_organismo": "Direcci贸n General de Comunicaci贸n",
         "dir3": "A05003344",
         "id_sirhus": 322640,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 10847,
         "ruta": "/42091/10847"
     }
@@ -255,10 +256,10 @@
     "model": "directorio.organismo",
     "pk": 24414,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Acci髇 Exterior",
+        "nombre_organismo": "Viceconsejer铆a de Acci贸n Exterior",
         "dir3": "A05003334",
         "id_sirhus": 3303410,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42091,
         "ruta": "/42091"
     }
@@ -267,10 +268,10 @@
     "model": "directorio.organismo",
     "pk": 25954,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Justicia y Seguridad",
+        "nombre_organismo": "Viceconsejer铆a de Justicia y Seguridad",
         "dir3": "A05003241",
         "id_sirhus": 334740,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42118,
         "ruta": "/42118"
     }
@@ -279,10 +280,10 @@
     "model": "directorio.organismo",
     "pk": 25963,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Relaciones con la Administraci髇 de Justicia",
+        "nombre_organismo": "Direcci贸n General de Relaciones con la Administraci贸n de Justicia",
         "dir3": "A05003250",
         "id_sirhus": 460040,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 25954,
         "ruta": "/42118/25954"
     }
@@ -291,10 +292,10 @@
     "model": "directorio.organismo",
     "pk": 25972,
     "fields": {
-        "nombre_organismo": "Instituto Canario de Administraci髇 P鷅lica",
+        "nombre_organismo": "Instituto Canario de Administraci贸n P煤blica",
         "dir3": "A05003243",
         "id_sirhus": 318940,
-        "categoria": "Organismo Aut髇omo",
+        "categoria": "Organismo Aut贸nomo",
         "depende_de": 42118,
         "ruta": "/42118"
     }
@@ -306,7 +307,7 @@
         "nombre_organismo": "Instituto Canario de Igualdad",
         "dir3": "A05033134",
         "id_sirhus": 426740,
-        "categoria": "Organismo Aut髇omo",
+        "categoria": "Organismo Aut贸nomo",
         "depende_de": 42165,
         "ruta": "/42165"
     }
@@ -318,7 +319,7 @@
         "nombre_organismo": "Instituto Canario de Calidad Agroalimentaria",
         "dir3": "A05003567",
         "id_sirhus": 3401010,
-        "categoria": "Organismo Aut髇omo",
+        "categoria": "Organismo Aut贸nomo",
         "depende_de": 42084,
         "ruta": "/42084"
     }
@@ -330,7 +331,7 @@
         "nombre_organismo": "Instituto Canario de Investigaciones Agrarias",
         "dir3": "A05003618",
         "id_sirhus": 429240,
-        "categoria": "Organismo Aut髇omo",
+        "categoria": "Organismo Aut贸nomo",
         "depende_de": 42084,
         "ruta": "/42084"
     }
@@ -339,10 +340,10 @@
     "model": "directorio.organismo",
     "pk": 37091,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Emigraci髇",
+        "nombre_organismo": "Direcci贸n General de Emigraci贸n",
         "dir3": "A05017165",
         "id_sirhus": 3448910,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 24414,
         "ruta": "/42091/24414"
     }
@@ -351,10 +352,10 @@
     "model": "directorio.organismo",
     "pk": 37097,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Relaciones Exteriores",
+        "nombre_organismo": "Direcci贸n General de Relaciones Exteriores",
         "dir3": "A05017166",
         "id_sirhus": 3449110,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 24414,
         "ruta": "/42091/24414"
     }
@@ -366,7 +367,7 @@
         "nombre_organismo": "Instituto Canario de la Vivienda",
         "dir3": "A05032835",
         "id_sirhus": 349940,
-        "categoria": "Organismo Aut髇omo",
+        "categoria": "Organismo Aut贸nomo",
         "depende_de": 42114,
         "ruta": "/42114"
     }
@@ -375,10 +376,10 @@
     "model": "directorio.organismo",
     "pk": 37364,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Econom韆 e Internacionalizaci髇",
+        "nombre_organismo": "Viceconsejer铆a de Econom铆a e Internacionalizaci贸n",
         "dir3": "A05033182",
         "id_sirhus": 348140,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42104,
         "ruta": "/42104"
     }
@@ -387,10 +388,10 @@
     "model": "directorio.organismo",
     "pk": 37422,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Asuntos Europeos",
+        "nombre_organismo": "Direcci贸n General de Asuntos Europeos",
         "dir3": "A05032842",
         "id_sirhus": 347140,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42087,
         "ruta": "/42086/42087"
     }
@@ -399,10 +400,10 @@
     "model": "directorio.organismo",
     "pk": 37542,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Juventud",
+        "nombre_organismo": "Direcci贸n General de Juventud",
         "dir3": "A05033133",
         "id_sirhus": 3450210,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 41970,
         "ruta": "/42165/41970"
     }
@@ -414,7 +415,7 @@
         "nombre_organismo": "Agencia Tributaria Canaria",
         "dir3": "A05010223",
         "id_sirhus": 3444410,
-        "categoria": "Entidad P鷅lica",
+        "categoria": "Entidad P煤blica",
         "depende_de": 42086,
         "ruta": "/42086"
     }
@@ -423,10 +424,10 @@
     "model": "directorio.organismo",
     "pk": 37829,
     "fields": {
-        "nombre_organismo": "Instituto Canario de Estad韘tica",
+        "nombre_organismo": "Instituto Canario de Estad铆stica",
         "dir3": "A05003423",
         "id_sirhus": 428340,
-        "categoria": "Organismo Aut髇omo",
+        "categoria": "Organismo Aut贸nomo",
         "depende_de": 42086,
         "ruta": "/42086"
     }
@@ -435,10 +436,10 @@
     "model": "directorio.organismo",
     "pk": 37849,
     "fields": {
-        "nombre_organismo": "Intervenci髇 General",
+        "nombre_organismo": "Intervenci贸n General",
         "dir3": "A05003421",
         "id_sirhus": 338040,
-        "categoria": "Intervenci髇 General",
+        "categoria": "Intervenci贸n General",
         "depende_de": 42086,
         "ruta": "/42086"
     }
@@ -447,10 +448,10 @@
     "model": "directorio.organismo",
     "pk": 37894,
     "fields": {
-        "nombre_organismo": "Direcci髇 General del Tesoro y Pol韙ica Financiera",
+        "nombre_organismo": "Direcci贸n General del Tesoro y Pol铆tica Financiera",
         "dir3": "A05003430",
         "id_sirhus": 344940,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42087,
         "ruta": "/42086/42087"
     }
@@ -459,10 +460,10 @@
     "model": "directorio.organismo",
     "pk": 37905,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Planificaci髇 y Presupuesto",
+        "nombre_organismo": "Direcci贸n General de Planificaci贸n y Presupuesto",
         "dir3": "A05003429",
         "id_sirhus": 341340,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42087,
         "ruta": "/42086/42087"
     }
@@ -471,10 +472,10 @@
     "model": "directorio.organismo",
     "pk": 37916,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Patrimonio y Contrataci髇",
+        "nombre_organismo": "Direcci贸n General de Patrimonio y Contrataci贸n",
         "dir3": "A05003432",
         "id_sirhus": 346740,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42087,
         "ruta": "/42086/42087"
     }
@@ -486,7 +487,7 @@
         "nombre_organismo": "Puertos Canarios",
         "dir3": "A05003606",
         "id_sirhus": 3443510,
-        "categoria": "Entidad P鷅lica Empresarial",
+        "categoria": "Entidad P煤blica Empresarial",
         "depende_de": 42114,
         "ruta": "/42114"
     }
@@ -495,10 +496,10 @@
     "model": "directorio.organismo",
     "pk": 38592,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Infraestructura Viaria",
+        "nombre_organismo": "Direcci贸n General de Infraestructura Viaria",
         "dir3": "A05003601",
         "id_sirhus": 350840,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42115,
         "ruta": "/42114/42115"
     }
@@ -507,10 +508,10 @@
     "model": "directorio.organismo",
     "pk": 38600,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Transportes y Movilidad",
+        "nombre_organismo": "Direcci贸n General de Transportes y Movilidad",
         "dir3": "A05003602",
         "id_sirhus": 385740,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42115,
         "ruta": "/42114/42115"
     }
@@ -519,10 +520,10 @@
     "model": "directorio.organismo",
     "pk": 38691,
     "fields": {
-        "nombre_organismo": "Agencia Canaria de Calidad Universitaria y Evaluaci髇 Educativa",
+        "nombre_organismo": "Agencia Canaria de Calidad Universitaria y Evaluaci贸n Educativa",
         "dir3": "A05003410",
         "id_sirhus": 3306410,
-        "categoria": "Organismo Aut髇omo",
+        "categoria": "Organismo Aut贸nomo",
         "depende_de": 42123,
         "ruta": "/42123"
     }
@@ -531,10 +532,10 @@
     "model": "directorio.organismo",
     "pk": 39053,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Sector Primario",
+        "nombre_organismo": "Viceconsejer铆a de Sector Primario",
         "dir3": "A05017081",
         "id_sirhus": 359740,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42084,
         "ruta": "/42084"
     }
@@ -543,10 +544,10 @@
     "model": "directorio.organismo",
     "pk": 39060,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Agricultura",
+        "nombre_organismo": "Direcci贸n General de Agricultura",
         "dir3": "A05017082",
         "id_sirhus": 358340,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 39053,
         "ruta": "/42084/39053"
     }
@@ -555,10 +556,10 @@
     "model": "directorio.organismo",
     "pk": 39073,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Ganader韆",
+        "nombre_organismo": "Direcci贸n General de Ganader铆a",
         "dir3": "A05003564",
         "id_sirhus": 360440,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 39053,
         "ruta": "/42084/39053"
     }
@@ -567,10 +568,10 @@
     "model": "directorio.organismo",
     "pk": 39153,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Pesca",
+        "nombre_organismo": "Direcci贸n General de Pesca",
         "dir3": "A05017084",
         "id_sirhus": 3450910,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 39053,
         "ruta": "/42084/39053"
     }
@@ -579,10 +580,10 @@
     "model": "directorio.organismo",
     "pk": 39166,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Turismo",
+        "nombre_organismo": "Viceconsejer铆a de Turismo",
         "dir3": "A05017154",
         "id_sirhus": 389240,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42143,
         "ruta": "/42143"
     }
@@ -591,10 +592,10 @@
     "model": "directorio.organismo",
     "pk": 41518,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Relaciones con el Parlamento",
+        "nombre_organismo": "Viceconsejer铆a de Relaciones con el Parlamento",
         "dir3": "A05018780",
         "id_sirhus": 3277810,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42118,
         "ruta": "/42118"
     }
@@ -603,10 +604,10 @@
     "model": "directorio.organismo",
     "pk": 41545,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Administraciones y Transparencia",
+        "nombre_organismo": "Viceconsejer铆a de Administraciones y Transparencia",
         "dir3": "A05018778",
         "id_sirhus": 330540,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42118,
         "ruta": "/42118"
     }
@@ -615,10 +616,10 @@
     "model": "directorio.organismo",
     "pk": 41567,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de la Funci髇 P鷅lica",
+        "nombre_organismo": "Direcci贸n General de la Funci贸n P煤blica",
         "dir3": "A05003247",
         "id_sirhus": 333740,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 41545,
         "ruta": "/42118/41545"
     }
@@ -627,10 +628,10 @@
     "model": "directorio.organismo",
     "pk": 41588,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Transparencia y Participaci髇 Ciudadana",
+        "nombre_organismo": "Direcci贸n General de Transparencia y Participaci贸n Ciudadana",
         "dir3": "A05018781",
         "id_sirhus": 3410810,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 41545,
         "ruta": "/42118/41545"
     }
@@ -639,10 +640,10 @@
     "model": "directorio.organismo",
     "pk": 41854,
     "fields": {
-        "nombre_organismo": "Agencia Canaria de Protecci髇 del Medio Natural",
+        "nombre_organismo": "Agencia Canaria de Protecci贸n del Medio Natural",
         "dir3": "A05022869",
         "id_sirhus": 427140,
-        "categoria": "Organismo Aut髇omo",
+        "categoria": "Organismo Aut贸nomo",
         "depende_de": 42136,
         "ruta": "/42136"
     }
@@ -651,10 +652,10 @@
     "model": "directorio.organismo",
     "pk": 41970,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Igualdad y Diversidad",
+        "nombre_organismo": "Viceconsejer铆a de Igualdad y Diversidad",
         "dir3": "A05033131",
         "id_sirhus": 3498710,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42165,
         "ruta": "/42165"
     }
@@ -663,10 +664,10 @@
     "model": "directorio.organismo",
     "pk": 41971,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Diversidad",
+        "nombre_organismo": "Direcci贸n General de Diversidad",
         "dir3": "A05033132",
         "id_sirhus": 3498910,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 41970,
         "ruta": "/42165/41970"
     }
@@ -675,10 +676,10 @@
     "model": "directorio.organismo",
     "pk": 42082,
     "fields": {
-        "nombre_organismo": "Direcci髇 General Salud Mental y Adicciones",
+        "nombre_organismo": "Direcci贸n General Salud Mental y Adicciones",
         "dir3": "A05046378",
         "id_sirhus": 3540210,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -687,10 +688,10 @@
     "model": "directorio.organismo",
     "pk": 42083,
     "fields": {
-        "nombre_organismo": "Direcci髇 General del Paciente y Cronicidad",
+        "nombre_organismo": "Direcci贸n General del Paciente y Cronicidad",
         "dir3": "A05046379",
         "id_sirhus": 3540410,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -699,10 +700,10 @@
     "model": "directorio.organismo",
     "pk": 42084,
     "fields": {
-        "nombre_organismo": "Consejer韆 de Agricultura, Ganader韆, Pesca y Soberan韆 Alimentaria",
+        "nombre_organismo": "Consejer铆a de Agricultura, Ganader铆a, Pesca y Soberan铆a Alimentaria",
         "dir3": "A05033198",
         "id_sirhus": 357440,
-        "categoria": "Consejer韆",
+        "categoria": "Consejer铆a",
         "depende_de": null,
         "ruta": "/"
     }
@@ -711,10 +712,10 @@
     "model": "directorio.organismo",
     "pk": 42085,
     "fields": {
-        "nombre_organismo": "Secretar韆 General T閏nica de Agricultura, Ganader韆, Pesca y Soberan韆 Alimentaria",
+        "nombre_organismo": "Secretar铆a General T茅cnica de Agricultura, Ganader铆a, Pesca y Soberan铆a Alimentaria",
         "dir3": "A05033199",
         "id_sirhus": 357740,
-        "categoria": "Secretar韆 General T閏nica",
+        "categoria": "Secretar铆a General T茅cnica",
         "depende_de": 42084,
         "ruta": "/42084"
     }
@@ -723,10 +724,10 @@
     "model": "directorio.organismo",
     "pk": 42086,
     "fields": {
-        "nombre_organismo": "Consejer韆 de Hacienda y Relaciones con la Uni髇 Europea",
+        "nombre_organismo": "Consejer铆a de Hacienda y Relaciones con la Uni贸n Europea",
         "dir3": "A05032839",
         "id_sirhus": 464640,
-        "categoria": "Consejer韆",
+        "categoria": "Consejer铆a",
         "depende_de": null,
         "ruta": "/"
     }
@@ -735,10 +736,10 @@
     "model": "directorio.organismo",
     "pk": 42087,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Hacienda y Relaciones con la Uni髇 Europea",
+        "nombre_organismo": "Viceconsejer铆a de Hacienda y Relaciones con la Uni贸n Europea",
         "dir3": "A05032841",
         "id_sirhus": 347540,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42086,
         "ruta": "/42086"
     }
@@ -747,10 +748,10 @@
     "model": "directorio.organismo",
     "pk": 42088,
     "fields": {
-        "nombre_organismo": "Secretar韆 General T閏nica de Hacienda y Relaciones con la Uni髇 Europea",
+        "nombre_organismo": "Secretar铆a General T茅cnica de Hacienda y Relaciones con la Uni贸n Europea",
         "dir3": "A05032840",
         "id_sirhus": 336940,
-        "categoria": "Secretar韆 General T閏nica",
+        "categoria": "Secretar铆a General T茅cnica",
         "depende_de": 42086,
         "ruta": "/42086"
     }
@@ -759,7 +760,7 @@
     "model": "directorio.organismo",
     "pk": 42089,
     "fields": {
-        "nombre_organismo": "Comisionado del R間imen Econ髆ico y Fiscal de Canarias",
+        "nombre_organismo": "Comisionado del R茅gimen Econ贸mico y Fiscal de Canarias",
         "dir3": "A05047178",
         "id_sirhus": 3535410,
         "categoria": "Comisionado",
@@ -771,10 +772,10 @@
     "model": "directorio.organismo",
     "pk": 42090,
     "fields": {
-        "nombre_organismo": "Ente P鷅lico Radiotelevisi髇 Canaria",
+        "nombre_organismo": "Ente P煤blico Radiotelevisi贸n Canaria",
         "dir3": "A05003424",
         "id_sirhus": 3444010,
-        "categoria": "Entidad P鷅lica",
+        "categoria": "Entidad P煤blica",
         "depende_de": 42091,
         "ruta": "/42091"
     }
@@ -795,10 +796,10 @@
     "model": "directorio.organismo",
     "pk": 42092,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Coordinaci髇 Org醤ica y Proyectos Estrat間icos",
+        "nombre_organismo": "Direcci贸n General de Coordinaci贸n Org谩nica y Proyectos Estrat茅gicos",
         "dir3": "A05046377",
         "id_sirhus": 3534210,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 7268,
         "ruta": "/42091/7268"
     }
@@ -807,10 +808,10 @@
     "model": "directorio.organismo",
     "pk": 42093,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Transformaci髇 Digital de los Servicios P鷅licos",
+        "nombre_organismo": "Direcci贸n General de Transformaci贸n Digital de los Servicios P煤blicos",
         "dir3": "A05003248",
         "id_sirhus": 459540,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 7268,
         "ruta": "/42091/7268"
     }
@@ -819,10 +820,10 @@
     "model": "directorio.organismo",
     "pk": 42094,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 del Gabinete de la Presidencia",
+        "nombre_organismo": "Viceconsejer铆a del Gabinete de la Presidencia",
         "dir3": "A05003340",
         "id_sirhus": 3534410,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42091,
         "ruta": "/42091"
     }
@@ -831,10 +832,10 @@
     "model": "directorio.organismo",
     "pk": 42095,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Relaciones con 羏rica",
+        "nombre_organismo": "Direcci贸n General de Relaciones con 脕frica",
         "dir3": "A05017317",
         "id_sirhus": 325240,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 24414,
         "ruta": "/42091/24414"
     }
@@ -843,10 +844,10 @@
     "model": "directorio.organismo",
     "pk": 42096,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Servicios Jur韉icos",
+        "nombre_organismo": "Viceconsejer铆a de Servicios Jur铆dicos",
         "dir3": "A05033189",
         "id_sirhus": 3449310,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42091,
         "ruta": "/42091"
     }
@@ -855,10 +856,10 @@
     "model": "directorio.organismo",
     "pk": 42097,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Servicios Jur韉icos",
+        "nombre_organismo": "Direcci贸n General de Servicios Jur铆dicos",
         "dir3": "A05046372",
         "id_sirhus": 3534510,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42096,
         "ruta": "/42091/42096"
     }
@@ -867,10 +868,10 @@
     "model": "directorio.organismo",
     "pk": 42098,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 del Gabinete de la Vicepresidencia",
+        "nombre_organismo": "Viceconsejer铆a del Gabinete de la Vicepresidencia",
         "dir3": "A05003342",
         "id_sirhus": 3533610,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 7251,
         "ruta": "/42091/7251"
     }
@@ -879,10 +880,10 @@
     "model": "directorio.organismo",
     "pk": 42099,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Coordinaci髇 y Relaciones Institucionales de la Vicepresidencia",
+        "nombre_organismo": "Viceconsejer铆a de Coordinaci贸n y Relaciones Institucionales de la Vicepresidencia",
         "dir3": "A05046374",
         "id_sirhus": 3533710,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 7251,
         "ruta": "/42091/7251"
     }
@@ -891,10 +892,10 @@
     "model": "directorio.organismo",
     "pk": 42100,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Planificaci髇 e Informaci髇",
+        "nombre_organismo": "Direcci贸n General de Planificaci贸n e Informaci贸n",
         "dir3": "A05046375",
         "id_sirhus": 3533810,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42099,
         "ruta": "/42091/7251/42099"
     }
@@ -903,10 +904,10 @@
     "model": "directorio.organismo",
     "pk": 42101,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de An醠isis y Estudios",
+        "nombre_organismo": "Direcci贸n General de An谩lisis y Estudios",
         "dir3": "A05046376",
         "id_sirhus": 3533910,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42099,
         "ruta": "/42091/7251/42099"
     }
@@ -915,10 +916,10 @@
     "model": "directorio.organismo",
     "pk": 42102,
     "fields": {
-        "nombre_organismo": "Portavoc韆 del Gobierno",
+        "nombre_organismo": "Portavoc铆a del Gobierno",
         "dir3": "A05046373",
         "id_sirhus": 3534710,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42091,
         "ruta": "/42091"
     }
@@ -927,10 +928,10 @@
     "model": "directorio.organismo",
     "pk": 42103,
     "fields": {
-        "nombre_organismo": "Consejo Econ髆ico y Social",
+        "nombre_organismo": "Consejo Econ贸mico y Social",
         "dir3": "A05017335",
         "id_sirhus": 425840,
-        "categoria": "Entidad P鷅lica",
+        "categoria": "Entidad P煤blica",
         "depende_de": 42091,
         "ruta": "/42091"
     }
@@ -939,10 +940,10 @@
     "model": "directorio.organismo",
     "pk": 42104,
     "fields": {
-        "nombre_organismo": "Consejer韆 de Econom韆, Industria, Comercio y Aut髇omos",
+        "nombre_organismo": "Consejer铆a de Econom铆a, Industria, Comercio y Aut贸nomos",
         "dir3": "A05033180",
         "id_sirhus": 3277910,
-        "categoria": "Consejer韆",
+        "categoria": "Consejer铆a",
         "depende_de": null,
         "ruta": "/"
     }
@@ -951,10 +952,10 @@
     "model": "directorio.organismo",
     "pk": 42106,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Promoci髇 y Diversificaci髇 Econ髆ica",
+        "nombre_organismo": "Direcci贸n General de Promoci贸n y Diversificaci贸n Econ贸mica",
         "dir3": "A05022215",
         "id_sirhus": 346040,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 37364,
         "ruta": "/42104/37364"
     }
@@ -963,10 +964,10 @@
     "model": "directorio.organismo",
     "pk": 42107,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Aut髇omos",
+        "nombre_organismo": "Direcci贸n General de Aut贸nomos",
         "dir3": "A05046474",
         "id_sirhus": 3534910,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 37364,
         "ruta": "/42104/37364"
     }
@@ -975,10 +976,10 @@
     "model": "directorio.organismo",
     "pk": 42108,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Industria, Comercio y Consumo",
+        "nombre_organismo": "Viceconsejer铆a de Industria, Comercio y Consumo",
         "dir3": "A05030990",
         "id_sirhus": 3450010,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42104,
         "ruta": "/42104"
     }
@@ -987,10 +988,10 @@
     "model": "directorio.organismo",
     "pk": 42109,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Industria",
+        "nombre_organismo": "Direcci贸n General de Industria",
         "dir3": "A05030992",
         "id_sirhus": 464040,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42108,
         "ruta": "/42104/42108"
     }
@@ -999,10 +1000,10 @@
     "model": "directorio.organismo",
     "pk": 42110,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Comercio y Consumo",
+        "nombre_organismo": "Direcci贸n General de Comercio y Consumo",
         "dir3": "A05030991",
         "id_sirhus": 465240,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42108,
         "ruta": "/42104/42108"
     }
@@ -1011,10 +1012,10 @@
     "model": "directorio.organismo",
     "pk": 42111,
     "fields": {
-        "nombre_organismo": "Secretar韆 General T閏nica de Econom韆, Industria, Comercio y Aut髇omos",
+        "nombre_organismo": "Secretar铆a General T茅cnica de Econom铆a, Industria, Comercio y Aut贸nomos",
         "dir3": "A05033181",
         "id_sirhus": 3278010,
-        "categoria": "Secretar韆 General T閏nica",
+        "categoria": "Secretar铆a General T茅cnica",
         "depende_de": 42104,
         "ruta": "/42104"
     }
@@ -1023,10 +1024,10 @@
     "model": "directorio.organismo",
     "pk": 42112,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Relaciones Externas e Inspecci髇",
+        "nombre_organismo": "Direcci贸n General de Relaciones Externas e Inspecci贸n",
         "dir3": "A05046380",
         "id_sirhus": 3541210,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
@@ -1035,10 +1036,10 @@
     "model": "directorio.organismo",
     "pk": 42114,
     "fields": {
-        "nombre_organismo": "Consejer韆 de Obras P鷅licas, Vivienda y Movilidad",
+        "nombre_organismo": "Consejer铆a de Obras P煤blicas, Vivienda y Movilidad",
         "dir3": "A05032833",
         "id_sirhus": 348340,
-        "categoria": "Consejer韆",
+        "categoria": "Consejer铆a",
         "depende_de": null,
         "ruta": "/"
     }
@@ -1047,10 +1048,10 @@
     "model": "directorio.organismo",
     "pk": 42115,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Infraestructuras",
+        "nombre_organismo": "Viceconsejer铆a de Infraestructuras",
         "dir3": "A05017191",
         "id_sirhus": 353240,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42114,
         "ruta": "/42114"
     }
@@ -1059,10 +1060,10 @@
     "model": "directorio.organismo",
     "pk": 42116,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Costas y Gesti髇 del espacio mar韙imo canario",
+        "nombre_organismo": "Direcci贸n General de Costas y Gesti贸n del espacio mar铆timo canario",
         "dir3": "A05047064",
         "id_sirhus": 3535110,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42115,
         "ruta": "/42114/42115"
     }
@@ -1071,10 +1072,10 @@
     "model": "directorio.organismo",
     "pk": 42117,
     "fields": {
-        "nombre_organismo": "Secretar韆 General T閏nica de Obras P鷅licas, Vivienda y Movilidad",
+        "nombre_organismo": "Secretar铆a General T茅cnica de Obras P煤blicas, Vivienda y Movilidad",
         "dir3": "A05032834",
         "id_sirhus": 348640,
-        "categoria": "Secretar韆 General T閏nica",
+        "categoria": "Secretar铆a General T茅cnica",
         "depende_de": 42114,
         "ruta": "/42114"
     }
@@ -1083,10 +1084,10 @@
     "model": "directorio.organismo",
     "pk": 42118,
     "fields": {
-        "nombre_organismo": "Consejer韆 de Presidencia, Administraciones P鷅licas, Justicia y Seguridad",
+        "nombre_organismo": "Consejer铆a de Presidencia, Administraciones P煤blicas, Justicia y Seguridad",
         "dir3": "A05033187",
         "id_sirhus": 459040,
-        "categoria": "Consejer韆",
+        "categoria": "Consejer铆a",
         "depende_de": null,
         "ruta": "/"
     }
@@ -1095,10 +1096,10 @@
     "model": "directorio.organismo",
     "pk": 42119,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Modernizaci髇 y Calidad de los Servicios P鷅licos",
+        "nombre_organismo": "Direcci贸n General de Modernizaci贸n y Calidad de los Servicios P煤blicos",
         "dir3": "A05017100",
         "id_sirhus": 329340,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 41545,
         "ruta": "/42118/41545"
     }
@@ -1107,10 +1108,10 @@
     "model": "directorio.organismo",
     "pk": 42120,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de recuperaci髇 econ髆ica y social de La Palma",
+        "nombre_organismo": "Viceconsejer铆a de recuperaci贸n econ贸mica y social de La Palma",
         "dir3": "A05046793",
         "id_sirhus": 3535610,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42118,
         "ruta": "/42118"
     }
@@ -1119,10 +1120,10 @@
     "model": "directorio.organismo",
     "pk": 42121,
     "fields": {
-        "nombre_organismo": "Secretar韆 General T閏nica de Presidencia, Administraciones P鷅licas, Justicia y Seguridad",
+        "nombre_organismo": "Secretar铆a General T茅cnica de Presidencia, Administraciones P煤blicas, Justicia y Seguridad",
         "dir3": "A05033188",
         "id_sirhus": 327540,
-        "categoria": "Secretar韆 General T閏nica",
+        "categoria": "Secretar铆a General T茅cnica",
         "depende_de": 42118,
         "ruta": "/42118"
     }
@@ -1131,10 +1132,10 @@
     "model": "directorio.organismo",
     "pk": 42122,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Seguridad",
+        "nombre_organismo": "Direcci贸n General de Seguridad",
         "dir3": "A05046792",
         "id_sirhus": 335040,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 25954,
         "ruta": "/42118/25954"
     }
@@ -1143,10 +1144,10 @@
     "model": "directorio.organismo",
     "pk": 42123,
     "fields": {
-        "nombre_organismo": "Consejer韆 de Educaci髇, Formaci髇 Profesional, Actividad F韘ica y Deportes",
+        "nombre_organismo": "Consejer铆a de Educaci贸n, Formaci贸n Profesional, Actividad F铆sica y Deportes",
         "dir3": "A05047932",
         "id_sirhus": 391140,
-        "categoria": "Consejer韆",
+        "categoria": "Consejer铆a",
         "depende_de": null,
         "ruta": "/"
     }
@@ -1155,10 +1156,10 @@
     "model": "directorio.organismo",
     "pk": 42124,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Educaci髇",
+        "nombre_organismo": "Viceconsejer铆a de Educaci贸n",
         "dir3": "A05047934",
         "id_sirhus": 573140,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42123,
         "ruta": "/42123"
     }
@@ -1167,10 +1168,10 @@
     "model": "directorio.organismo",
     "pk": 42125,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Personal y Formaci髇 del Profesorado",
+        "nombre_organismo": "Direcci贸n General de Personal y Formaci贸n del Profesorado",
         "dir3": "A05003414",
         "id_sirhus": 395440,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42124,
         "ruta": "/42123/42124"
     }
@@ -1179,10 +1180,10 @@
     "model": "directorio.organismo",
     "pk": 42126,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Ordenaci髇 de las Ense馻nzas, Inclusi髇 e Innovaci髇",
+        "nombre_organismo": "Direcci贸n General de Ordenaci贸n de las Ense帽anzas, Inclusi贸n e Innovaci贸n",
         "dir3": "A05003415",
         "id_sirhus": 394640,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42124,
         "ruta": "/42123/42124"
     }
@@ -1191,10 +1192,10 @@
     "model": "directorio.organismo",
     "pk": 42127,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Administraci髇 de Centros, Escolarizaci髇 y Servicios Complementarios",
+        "nombre_organismo": "Direcci贸n General de Administraci贸n de Centros, Escolarizaci贸n y Servicios Complementarios",
         "dir3": "A05047943",
         "id_sirhus": 3535810,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42124,
         "ruta": "/42123/42124"
     }
@@ -1203,10 +1204,10 @@
     "model": "directorio.organismo",
     "pk": 42128,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Infraestructuras y Equipamientos",
+        "nombre_organismo": "Direcci贸n General de Infraestructuras y Equipamientos",
         "dir3": "A05047944",
         "id_sirhus": 395940,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42124,
         "ruta": "/42123/42124"
     }
@@ -1215,10 +1216,10 @@
     "model": "directorio.organismo",
     "pk": 42129,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Formaci髇 Profesional y Cualificaciones Profesionales",
+        "nombre_organismo": "Viceconsejer铆a de Formaci贸n Profesional y Cualificaciones Profesionales",
         "dir3": "A05047940",
         "id_sirhus": 3536010,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42123,
         "ruta": "/42123"
     }
@@ -1227,10 +1228,10 @@
     "model": "directorio.organismo",
     "pk": 42130,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Formaci髇 Profesional y Ense馻nzas de R間imen Especial",
+        "nombre_organismo": "Direcci贸n General de Formaci贸n Profesional y Ense帽anzas de R茅gimen Especial",
         "dir3": "A05003413",
         "id_sirhus": 3281810,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42129,
         "ruta": "/42123/42129"
     }
@@ -1239,10 +1240,10 @@
     "model": "directorio.organismo",
     "pk": 42131,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Cualificaciones Profesionales",
+        "nombre_organismo": "Direcci贸n General de Cualificaciones Profesionales",
         "dir3": "A05047941",
         "id_sirhus": 3536210,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42129,
         "ruta": "/42123/42129"
     }
@@ -1251,10 +1252,10 @@
     "model": "directorio.organismo",
     "pk": 42132,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de la Actividad F韘ica y Deportes",
+        "nombre_organismo": "Viceconsejer铆a de la Actividad F铆sica y Deportes",
         "dir3": "A05047936",
         "id_sirhus": 3536410,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42123,
         "ruta": "/42123"
     }
@@ -1263,10 +1264,10 @@
     "model": "directorio.organismo",
     "pk": 42133,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de la Actividad F韘ica y el Deporte",
+        "nombre_organismo": "Direcci贸n General de la Actividad F铆sica y el Deporte",
         "dir3": "A05031005",
         "id_sirhus": 399640,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42132,
         "ruta": "/42123/42132"
     }
@@ -1275,10 +1276,10 @@
     "model": "directorio.organismo",
     "pk": 42134,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Deportes Aut骳tonos",
+        "nombre_organismo": "Direcci贸n General de Deportes Aut贸ctonos",
         "dir3": "A05047942",
         "id_sirhus": 3536710,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42132,
         "ruta": "/42123/42132"
     }
@@ -1287,10 +1288,10 @@
     "model": "directorio.organismo",
     "pk": 42135,
     "fields": {
-        "nombre_organismo": "Secretar韆 General T閏nica de Educaci髇, Formaci髇 Profesional, Actividad F韘ica y Deportes",
+        "nombre_organismo": "Secretar铆a General T茅cnica de Educaci贸n, Formaci贸n Profesional, Actividad F铆sica y Deportes",
         "dir3": "A05047938",
         "id_sirhus": 392140,
-        "categoria": "Secretar韆 General T閏nica",
+        "categoria": "Secretar铆a General T茅cnica",
         "depende_de": 42123,
         "ruta": "/42123"
     }
@@ -1299,10 +1300,10 @@
     "model": "directorio.organismo",
     "pk": 42136,
     "fields": {
-        "nombre_organismo": "Consejer韆 de Pol韙ica Territorial, Cohesi髇 Territorial y Aguas",
+        "nombre_organismo": "Consejer铆a de Pol铆tica Territorial, Cohesi贸n Territorial y Aguas",
         "dir3": "A05047663",
         "id_sirhus": 3450410,
-        "categoria": "Consejer韆",
+        "categoria": "Consejer铆a",
         "depende_de": null,
         "ruta": "/"
     }
@@ -1311,10 +1312,10 @@
     "model": "directorio.organismo",
     "pk": 42137,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Planificaci髇 Territorial y Reto Demogr醘ico",
+        "nombre_organismo": "Viceconsejer铆a de Planificaci贸n Territorial y Reto Demogr谩fico",
         "dir3": "A05047670",
         "id_sirhus": 3279110,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42136,
         "ruta": "/42136"
     }
@@ -1323,10 +1324,10 @@
     "model": "directorio.organismo",
     "pk": 42138,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Ordenaci髇 del Territorio y Cohesi髇 Territorial",
+        "nombre_organismo": "Direcci贸n General de Ordenaci贸n del Territorio y Cohesi贸n Territorial",
         "dir3": "A05047672",
         "id_sirhus": 467640,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42137,
         "ruta": "/42136/42137"
     }
@@ -1335,10 +1336,10 @@
     "model": "directorio.organismo",
     "pk": 42139,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Emergencias y Aguas",
+        "nombre_organismo": "Viceconsejer铆a de Emergencias y Aguas",
         "dir3": "A05047669",
         "id_sirhus": 3536910,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42136,
         "ruta": "/42136"
     }
@@ -1347,10 +1348,10 @@
     "model": "directorio.organismo",
     "pk": 42140,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Aguas",
+        "nombre_organismo": "Direcci贸n General de Aguas",
         "dir3": "A05047671",
         "id_sirhus": 3537110,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42139,
         "ruta": "/42136/42139"
     }
@@ -1359,10 +1360,10 @@
     "model": "directorio.organismo",
     "pk": 42141,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Emergencias",
+        "nombre_organismo": "Direcci贸n General de Emergencias",
         "dir3": "A05047673",
         "id_sirhus": 3537310,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42139,
         "ruta": "/42136/42139"
     }
@@ -1371,10 +1372,10 @@
     "model": "directorio.organismo",
     "pk": 42142,
     "fields": {
-        "nombre_organismo": "Secretar韆 General T閏nica de Pol韙ica Territorial, Cohesi髇 Territorial y Aguas",
+        "nombre_organismo": "Secretar铆a General T茅cnica de Pol铆tica Territorial, Cohesi贸n Territorial y Aguas",
         "dir3": "A05047667",
         "id_sirhus": 3539410,
-        "categoria": "Secretar韆 General T閏nica",
+        "categoria": "Secretar铆a General T茅cnica",
         "depende_de": 42136,
         "ruta": "/42136"
     }
@@ -1383,10 +1384,10 @@
     "model": "directorio.organismo",
     "pk": 42143,
     "fields": {
-        "nombre_organismo": "Consejer韆 de Turismo y Empleo",
+        "nombre_organismo": "Consejer铆a de Turismo y Empleo",
         "dir3": "A05030988",
         "id_sirhus": 3451210,
-        "categoria": "Consejer韆",
+        "categoria": "Consejer铆a",
         "depende_de": null,
         "ruta": "/"
     }
@@ -1395,10 +1396,10 @@
     "model": "directorio.organismo",
     "pk": 42144,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Infraestructura, Sostenibilidad y Calidad Tur韘tica",
+        "nombre_organismo": "Direcci贸n General de Infraestructura, Sostenibilidad y Calidad Tur铆stica",
         "dir3": "A05017155",
         "id_sirhus": 387540,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 39166,
         "ruta": "/42143/39166"
     }
@@ -1407,10 +1408,10 @@
     "model": "directorio.organismo",
     "pk": 42145,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Ordenaci髇, Formaci髇 y Promoci髇 Tur韘tica",
+        "nombre_organismo": "Direcci贸n General de Ordenaci贸n, Formaci贸n y Promoci贸n Tur铆stica",
         "dir3": "A05017156",
         "id_sirhus": 386640,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 39166,
         "ruta": "/42143/39166"
     }
@@ -1419,10 +1420,10 @@
     "model": "directorio.organismo",
     "pk": 42146,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Empleo",
+        "nombre_organismo": "Viceconsejer铆a de Empleo",
         "dir3": "A05033183",
         "id_sirhus": 3449810,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42143,
         "ruta": "/42143"
     }
@@ -1431,10 +1432,10 @@
     "model": "directorio.organismo",
     "pk": 42147,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Trabajo",
+        "nombre_organismo": "Direcci贸n General de Trabajo",
         "dir3": "A05033137",
         "id_sirhus": 404840,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42146,
         "ruta": "/42143/42146"
     }
@@ -1443,10 +1444,10 @@
     "model": "directorio.organismo",
     "pk": 42148,
     "fields": {
-        "nombre_organismo": "Secretar韆 General T閏nica de Turismo y Empleo",
+        "nombre_organismo": "Secretar铆a General T茅cnica de Turismo y Empleo",
         "dir3": "A05030989",
         "id_sirhus": 3451810,
-        "categoria": "Secretar韆 General T閏nica",
+        "categoria": "Secretar铆a General T茅cnica",
         "depende_de": 42143,
         "ruta": "/42143"
     }
@@ -1458,7 +1459,7 @@
         "nombre_organismo": "Servicio Canario de Empleo",
         "dir3": "A05033138",
         "id_sirhus": 419840,
-        "categoria": "Organismo Aut髇omo",
+        "categoria": "Organismo Aut贸nomo",
         "depende_de": 42143,
         "ruta": "/42143"
     }
@@ -1467,10 +1468,10 @@
     "model": "directorio.organismo",
     "pk": 42150,
     "fields": {
-        "nombre_organismo": "Consejer韆 de Universidades, Ciencia e Innovaci髇 y Cultura",
+        "nombre_organismo": "Consejer铆a de Universidades, Ciencia e Innovaci贸n y Cultura",
         "dir3": "A05046692",
         "id_sirhus": 3537510,
-        "categoria": "Consejer韆",
+        "categoria": "Consejer铆a",
         "depende_de": null,
         "ruta": "/"
     }
@@ -1479,10 +1480,10 @@
     "model": "directorio.organismo",
     "pk": 42151,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Universidades e Investigaci髇",
+        "nombre_organismo": "Viceconsejer铆a de Universidades e Investigaci贸n",
         "dir3": "A05047012",
         "id_sirhus": 3537810,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42150,
         "ruta": "/42150"
     }
@@ -1491,10 +1492,10 @@
     "model": "directorio.organismo",
     "pk": 42152,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Universidades e Investigaci髇",
+        "nombre_organismo": "Direcci贸n General de Universidades e Investigaci贸n",
         "dir3": "A05003416",
         "id_sirhus": 397340,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42151,
         "ruta": "/42150/42151"
     }
@@ -1503,10 +1504,10 @@
     "model": "directorio.organismo",
     "pk": 42153,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Ordenaci髇, Innovaci髇 y de la Calidad Universitaria",
+        "nombre_organismo": "Direcci贸n General de Ordenaci贸n, Innovaci贸n y de la Calidad Universitaria",
         "dir3": "A05047013",
         "id_sirhus": 3538010,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42151,
         "ruta": "/42150/42151"
     }
@@ -1515,10 +1516,10 @@
     "model": "directorio.organismo",
     "pk": 42154,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Cultura y Patrimonio Cultural",
+        "nombre_organismo": "Viceconsejer铆a de Cultura y Patrimonio Cultural",
         "dir3": "A05030997",
         "id_sirhus": 3451610,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42150,
         "ruta": "/42150"
     }
@@ -1527,10 +1528,10 @@
     "model": "directorio.organismo",
     "pk": 42155,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Cultura y Patrimonio Cultural",
+        "nombre_organismo": "Direcci贸n General de Cultura y Patrimonio Cultural",
         "dir3": "A05047355",
         "id_sirhus": 399340,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42154,
         "ruta": "/42150/42154"
     }
@@ -1539,10 +1540,10 @@
     "model": "directorio.organismo",
     "pk": 42156,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Innovaci髇 Cultural e Industrias Creativas",
+        "nombre_organismo": "Direcci贸n General de Innovaci贸n Cultural e Industrias Creativas",
         "dir3": "A05047474",
         "id_sirhus": 3538210,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42154,
         "ruta": "/42150/42154"
     }
@@ -1551,10 +1552,10 @@
     "model": "directorio.organismo",
     "pk": 42157,
     "fields": {
-        "nombre_organismo": "Secretar韆 General T閏nica de Universidades, Ciencia e Innovaci髇 y Cultura",
+        "nombre_organismo": "Secretar铆a General T茅cnica de Universidades, Ciencia e Innovaci贸n y Cultura",
         "dir3": "A05046712",
         "id_sirhus": 3538510,
-        "categoria": "Secretar韆 General T閏nica",
+        "categoria": "Secretar铆a General T茅cnica",
         "depende_de": 42150,
         "ruta": "/42150"
     }
@@ -1563,10 +1564,10 @@
     "model": "directorio.organismo",
     "pk": 42158,
     "fields": {
-        "nombre_organismo": "Agencia Canaria de Investigaci髇, Innovaci髇 y Sociedad de la Informaci髇",
+        "nombre_organismo": "Agencia Canaria de Investigaci贸n, Innovaci贸n y Sociedad de la Informaci贸n",
         "dir3": "A05017323",
         "id_sirhus": 3308710,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42150,
         "ruta": "/42150"
     }
@@ -1575,10 +1576,10 @@
     "model": "directorio.organismo",
     "pk": 42159,
     "fields": {
-        "nombre_organismo": "Consejer韆 de Transici髇 Ecol骻ica y Energ韆",
+        "nombre_organismo": "Consejer铆a de Transici贸n Ecol贸gica y Energ铆a",
         "dir3": "A05047664",
         "id_sirhus": 3538710,
-        "categoria": "Consejer韆",
+        "categoria": "Consejer铆a",
         "depende_de": null,
         "ruta": "/"
     }
@@ -1587,10 +1588,10 @@
     "model": "directorio.organismo",
     "pk": 42160,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Transici髇 Ecol骻ica, Lucha contra el Cambio Clim醫ico y Energ韆",
+        "nombre_organismo": "Viceconsejer铆a de Transici贸n Ecol贸gica, Lucha contra el Cambio Clim谩tico y Energ铆a",
         "dir3": "A05033174",
         "id_sirhus": 467140,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42159,
         "ruta": "/42159"
     }
@@ -1599,10 +1600,10 @@
     "model": "directorio.organismo",
     "pk": 42161,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Transici髇 Ecol骻ica y Lucha contra el Cambio Clim醫ico",
+        "nombre_organismo": "Direcci贸n General de Transici贸n Ecol贸gica y Lucha contra el Cambio Clim谩tico",
         "dir3": "A05033175",
         "id_sirhus": 3279310,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42160,
         "ruta": "/42159/42160"
     }
@@ -1611,10 +1612,10 @@
     "model": "directorio.organismo",
     "pk": 42162,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Espacios Naturales y Biodiversidad",
+        "nombre_organismo": "Direcci贸n General de Espacios Naturales y Biodiversidad",
         "dir3": "A05047674",
         "id_sirhus": 3539210,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42160,
         "ruta": "/42159/42160"
     }
@@ -1623,10 +1624,10 @@
     "model": "directorio.organismo",
     "pk": 42163,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Energ韆",
+        "nombre_organismo": "Direcci贸n General de Energ铆a",
         "dir3": "A05033178",
         "id_sirhus": 3499110,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42160,
         "ruta": "/42159/42160"
     }
@@ -1635,10 +1636,10 @@
     "model": "directorio.organismo",
     "pk": 42164,
     "fields": {
-        "nombre_organismo": "Secretar韆 General T閏nica de Transici髇 Ecol骻ica y Energ韆",
+        "nombre_organismo": "Secretar铆a General T茅cnica de Transici贸n Ecol贸gica y Energ铆a",
         "dir3": "A05047668",
         "id_sirhus": 3450710,
-        "categoria": "Secretar韆 General T閏nica",
+        "categoria": "Secretar铆a General T茅cnica",
         "depende_de": 42159,
         "ruta": "/42159"
     }
@@ -1647,10 +1648,10 @@
     "model": "directorio.organismo",
     "pk": 42165,
     "fields": {
-        "nombre_organismo": "Consejer韆 de Bienestar Social, Igualdad, Juventud, Infancia y Familias",
+        "nombre_organismo": "Consejer铆a de Bienestar Social, Igualdad, Juventud, Infancia y Familias",
         "dir3": "A05045232",
         "id_sirhus": 472240,
-        "categoria": "Consejer韆",
+        "categoria": "Consejer铆a",
         "depende_de": null,
         "ruta": "/"
     }
@@ -1659,10 +1660,10 @@
     "model": "directorio.organismo",
     "pk": 42166,
     "fields": {
-        "nombre_organismo": "Viceconsejer韆 de Bienestar Social",
+        "nombre_organismo": "Viceconsejer铆a de Bienestar Social",
         "dir3": "A05045234",
         "id_sirhus": 3445610,
-        "categoria": "Viceconsejer韆",
+        "categoria": "Viceconsejer铆a",
         "depende_de": 42165,
         "ruta": "/42165"
     }
@@ -1671,10 +1672,10 @@
     "model": "directorio.organismo",
     "pk": 42167,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Servicios Sociales e Inmigraci髇",
+        "nombre_organismo": "Direcci贸n General de Servicios Sociales e Inmigraci贸n",
         "dir3": "A05045235",
         "id_sirhus": 409340,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42166,
         "ruta": "/42165/42166"
     }
@@ -1683,10 +1684,10 @@
     "model": "directorio.organismo",
     "pk": 42168,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Dependencia",
+        "nombre_organismo": "Direcci贸n General de Dependencia",
         "dir3": "A05046452",
         "id_sirhus": 3449410,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42166,
         "ruta": "/42165/42166"
     }
@@ -1695,10 +1696,10 @@
     "model": "directorio.organismo",
     "pk": 42169,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Protecci髇 a la Infancia y las Familias",
+        "nombre_organismo": "Direcci贸n General de Protecci贸n a la Infancia y las Familias",
         "dir3": "A05045236",
         "id_sirhus": 3449610,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42166,
         "ruta": "/42165/42166"
     }
@@ -1707,10 +1708,10 @@
     "model": "directorio.organismo",
     "pk": 42170,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Mayores y Participaci髇 Activa",
+        "nombre_organismo": "Direcci贸n General de Mayores y Participaci贸n Activa",
         "dir3": "A05046454",
         "id_sirhus": 3539810,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 42166,
         "ruta": "/42165/42166"
     }
@@ -1719,10 +1720,10 @@
     "model": "directorio.organismo",
     "pk": 42171,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Discapacidad",
+        "nombre_organismo": "Direcci贸n General de Discapacidad",
         "dir3": "A05046453",
         "id_sirhus": 3539910,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 41970,
         "ruta": "/42165/41970"
     }
@@ -1731,10 +1732,10 @@
     "model": "directorio.organismo",
     "pk": 42172,
     "fields": {
-        "nombre_organismo": "Secretar韆 General T閏nica de Bienestar Social, Igualdad, Juventud, Infancia y Familias",
+        "nombre_organismo": "Secretar铆a General T茅cnica de Bienestar Social, Igualdad, Juventud, Infancia y Familias",
         "dir3": "A05045233",
         "id_sirhus": 401340,
-        "categoria": "Secretar韆 General T閏nica",
+        "categoria": "Secretar铆a General T茅cnica",
         "depende_de": 42165,
         "ruta": "/42165"
     }
@@ -1743,10 +1744,10 @@
     "model": "directorio.organismo",
     "pk": 42173,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Estudios, Formaci髇 e Investigaci髇 en Seguridad P鷅lica",
+        "nombre_organismo": "Direcci贸n General de Estudios, Formaci贸n e Investigaci贸n en Seguridad P煤blica",
         "dir3": "A05046794",
         "id_sirhus": 3541410,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 25954,
         "ruta": "/42118/25954"
     }
@@ -1755,10 +1756,10 @@
     "model": "directorio.organismo",
     "pk": 42188,
     "fields": {
-        "nombre_organismo": "Secretar韆 General del Consejo Econ髆ico y Social de Canarias",
+        "nombre_organismo": "Secretar铆a General del Consejo Econ贸mico y Social de Canarias",
         "dir3": "A05033092",
         "id_sirhus": 426140,
-        "categoria": "Secretar韆 General",
+        "categoria": "Secretar铆a General",
         "depende_de": 42103,
         "ruta": "/42091/42103"
     }
@@ -1767,10 +1768,10 @@
     "model": "directorio.organismo",
     "pk": 42214,
     "fields": {
-        "nombre_organismo": "Direcci髇 General de Hemodonaci髇 y Hemoterapia",
+        "nombre_organismo": "Direcci贸n General de Hemodonaci贸n y Hemoterapia",
         "dir3": "A05050992",
         "id_sirhus": 419340,
-        "categoria": "Direcci髇 General",
+        "categoria": "Direcci贸n General",
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
