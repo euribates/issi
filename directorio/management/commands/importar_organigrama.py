@@ -136,8 +136,8 @@ class Command(BaseCommand):
                         self.success(f'Organismo {organismo} actualizado')
                 except IntegrityError as err:
                     self.panic(
-                        f'{err}: saving/updating {id_organigrama}'
+                        f'{err}: saving/updating {id_organismo}'
                         )
                     self.warning(
-                        f'{err}: saving/updating {id_organigrama}'
+                        f'{err}: saving/updating {id_organismo}'
                         )
