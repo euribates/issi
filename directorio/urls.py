@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
-from django.urls import path
+from django.urls import path, register_converter
 
 from . import views
+from . import converters
 
 app_name = 'directorio'
+
+register_converter(converters.OrganismoConverter, 'org')
 
 
 def tie(ruta, vista, name=None):
@@ -13,4 +16,5 @@ def tie(ruta, vista, name=None):
 
 urlpatterns = [
     tie('', views.index),
+    tie('organismo/<org:organismo>/', views.detalle_organismo),
     ]

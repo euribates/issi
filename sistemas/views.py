@@ -12,7 +12,7 @@ def index(request, *args, **kwargs):
     return render(request, 'sistemas/index.html', {
         'titulo': 'Sistemas de información',
         'sistemas': sistemas,
-        'breadcrumbs': bc.bc_sistemas(),
+        'breadcrumbs': bc.sistemas(),
         })
 
 
@@ -22,3 +22,12 @@ def alta_sistema(request):
         'titulo': 'Alta de un nuevo sistemas de información',
         'breadcrumbs': bc.alta_sistema(),
         })
+
+
+def detalle_sistema(request, sistema):
+    return render(request, 'sistemas/detalle_sistema.html', {
+        'titulo': f'Detalles {sistema}',
+        'breadcrumbs': bc.detalle_sistema(sistema),
+        'sistema': sistema,
+        })
+       

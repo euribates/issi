@@ -1,0 +1,135 @@
+{% extends "comun/base.html" %}
+{% load comun_filters markdownify %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col col-5">
+
+        <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">{{ sistema.codigo }}
+                <br><small>{{ sistema.nombre }}</small>
+            </h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+            {{ sistema.descripcion|markdownify }}
+            </p>
+
+            <span class="badge text-bg-primary">
+                {{ sistema.tema }}
+            </span>
+            {% if sistema.es_transversal %}
+            <span class="badge text-bg-info">Transversal</span>
+            {% endif %}
+            {% if sistema.es_subsistema_de %}
+            <span class="badge text-bg-warning" title="de {{ sistema.es_subsistema_de }}">
+                Subsistema
+            </span>
+            {% endif %}
+        </div>
+        <footer class="card-footer">
+            <a role="button"
+            cls="button bg-info"
+            href="{{ sistema.url_detalle_sistema }}"
+            alt="Ver detalles del S.I. {sistema}">
+                Ver/Editar
+            </a>
+        </footer>
+      </div>
+
+
+      <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">
+              Propósito
+            </h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+              {{ sistema.proposito|markdownify }}    
+            </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col col-7">
+        Columna de detalles
+        <table class="table table-hover">
+            <tr>
+                <th>Área temática</th>
+                <td>{{ sistema.tema }}</td>
+            </tr>
+            <tr>
+                <th>URL principal</th>
+                <td>{{ sistema.url|default:"No disponible" }}</td>
+            </tr>
+            <tr>
+                <th>Organismo</th>
+                <td>{{ sistema.organismo }}</td>
+            </tr>
+            <tr>
+                <th>Es transversal</th>
+                <td>{{ sistema.es_transversal|as_boolean }}</td>
+            </tr>
+            <tr>
+                <td>Logotipo</td>
+                <td>
+                  {% if sistema.icono %}
+                    <img width="64" height="64"
+                         src="{{ sistema.icono.url }}"
+                         alt="{{ sistema }}">
+                  {% else %}
+                    [FALTA] Botón para dar de alta el icono
+                  {% endif %}  
+                </td>
+            </tr>
+            
+            {% if sistema.es_subsistema_de %}
+            <tr>
+                <th>Es subsistema de</th>
+                <td>
+                    <a href="{{ sistema.es_subsistema_de.url_detalle_sistema}}">
+                    {{ sistema.es_subsistema_de.codigo }}
+                    </a>  
+                </td>
+            </tr>
+            {% endif %}
+            
+            {% if sistema.subsistemas.exists %}
+              {% for subsistema in sistema.subsistemas.all %}
+              <tr>
+                <th>
+                    {% if forloop.first %}Subsistemas{% endif %}
+                </th>    
+                <td>
+                    <a href="{{ subsistema.url_detalle_sistema }}">
+                    {{ subsistema.codigo }}
+                    </a>
+                </td>
+              </tr>  
+              {% endfor %}  
+            {% endif %}
+
+            <tr>
+                <th>Responsable funcional</th>
+                <td>
+                    {{ sistema.responsable_funcional|default:"No definido" }}
+                </td>
+            </tr>
+            
+            <tr>
+                <th>Responsable técnico</th>
+                <td>
+                    {{ sistema.responsable_tecnico|default:"No definido" }}
+                </td>
+            </tr>
+
+        </table>
+    </div>
+  </div>
+</div>  
+  
+{% endblock content %}

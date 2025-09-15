@@ -10,3 +10,8 @@ def a_sistemas():
 def a_alta_sistema():
     return reverse_lazy('sistemas:alta_sistema')
 
+
+def a_detalle_sistema(id_sistema):
+    return reverse_lazy('sistemas:detalle_sistema', kwargs={
+        'sistema': id_sistema,
+        })

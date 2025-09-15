@@ -1,5 +1,8 @@
 from django.db import models
 
+from directorio.models import Organismo
+from . import links
+
 
 class Tema(models.Model):
 
@@ -20,9 +23,24 @@ class Sistema(models.Model):
         ordering = ['nombre',]
 
     id_sistema = models.BigAutoField(primary_key=True)
+    organismo = models.ForeignKey(
+        Organismo,
+        related_name='sistemas',
+        on_delete=models.PROTECT,
+        blank=True,
+        null=True,
+        default=None,
+        )
+
     dir3_id = models.CharField(max_length=9)
     codigo = models.CharField(max_length=32, unique=True)
     nombre = models.CharField(max_length=220)
+    url = models.URLField(
+        max_length=720,
+        default=None,
+        blank=True,
+        null=True,
+        )
     descripcion = models.TextField(max_length=512)
     proposito = models.TextField(
         blank=True,
@@ -74,8 +92,18 @@ class Sistema(models.Model):
         null=True,
         )
 
+    @classmethod
+    def load_sistema(cls, pk:int):
+        try:
+            return cls.objects.get(id_sistema=pk)
+        except cls.DoesNotExist:
+            return None
+
     def __str__(self):
         return self.nombre
+
+    def url_detalle_sistema(self):
+        return links.a_detalle_sistema(self.pk)
 
 
 class Activo(models.Model):

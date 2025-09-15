@@ -42,3 +42,11 @@
 #breadcrumbs {
   background-color: #D6D6E0;
 }
+
+img.card-top-logo {
+  vertical-align: middle;
+  border-style: none;
+  height: 100px;
+  width: 300px;
+  object-fit: cover;
+  }

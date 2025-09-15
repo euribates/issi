@@ -90,5 +90,5 @@ docs:
 # Actualiza en caliente contenidos estaticos js/css/png/svg
 [unix]
 watch: static
-    just termtitle Watch
+    # termtitle Watch
     watchmedo shell-command  --patterns "*.css;*.js;*.png;*.jpg;*.webp;*.svg" --recursive --command "just static"

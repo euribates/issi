@@ -1,4 +1,9 @@
+#!/usr/bin/env python3
+
 from django.db import models
+
+from . import links
+
 
 class Organismo(models.Model):
     id_organismo = models.BigIntegerField(primary_key=True)
@@ -36,7 +41,11 @@ class Organismo(models.Model):
             )
          return organismo, created
 
-    
+    def url_detalle_organismo(self):
+        return links.a_detalle_organismo(self.pk)
+
+    def url_organigrama(self):
+        return links.a_organigrama(self.pk)
 
     def __str__(self):
         return self.nombre_organismo
@@ -45,6 +54,4 @@ class Organismo(models.Model):
         self.ruta = f'{self.depende.ruta}{SEP}{self.depende_de.pk}'
 
     def es_primer_nivel(self) -> bool:
-        return self.depende_de.pk == 1
-    
-    
+        return self.depende_de is None

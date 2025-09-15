@@ -2,22 +2,31 @@
 
 {% block content %}
 
-{{ organismos|pprint }}
-
 <table class="table table.striped">
   <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Categoría</th>
+      <th>Id. DIRCAC</th>
+      <th>Id. SIRhUS</th>
+      <th>DIR3</th>
+    </tr>
     <caption>de primer nivel</section>
   </thead>
   <tbody>
-      {% for organismo in organismos.all %}
-      <tr>
-        <th>
-            <td>{{ organismo.nombre_organismo }}</td>
-            <td></td>
-            <td></td>
-        </th>
-      </tr>  
-      {% endfor%}
+    {% for organismo in organismos.all %}
+    <tr>
+      <td>
+          <a href="{% url 'directorio:detalle_organismo' organismo=organismo %}">
+          <b>{{ organismo.nombre_organismo }}</b>
+          </a>
+      </td>
+      <td>{{ organismo.categoria }}</td>
+      <td><span class="badge bg-primary">{{ organismo.pk }}</span></td>
+      <td><span class="badge bg-info">{{ organismo.id_sirhus }}</span></td>
+      <td><span class="badge bg-info">{{ organismo.dir3 }}</span></td>
+    </tr>  
+    {% endfor%}
   </tbody>
 
 

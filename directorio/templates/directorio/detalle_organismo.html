@@ -1,0 +1,100 @@
+{% extends 'comun/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col col-5">
+
+      <div class="card">
+
+        <div class="card-header bg-primary text-white">
+        Detalles del organismo
+        </div>
+
+        <div class="card-body">
+          <h3 class="card-title">
+              {{ organismo.nombre_organismo }}
+          </h3>
+          <h4 class="card-subtitle mb-2 text-muted">
+              {{ organismo.categoria }}
+          </h4>
+        </div>
+
+        <table class="table table-striped">
+        <tbody>
+        <tr>
+            <th>Id. DIRCAC</th>
+            <td><span class="badge bg-primary">{{ organismo.pk }}</span></td>
+        </tr>  
+        <tr>
+            <th>Id. DIR3</th>
+            <td><span class="badge bg-info">{{ organismo.dir3 }}</span></td>
+        </tr>  
+        <tr>
+            <th>Id. SIRhUS</th>
+            <td><span class="badge bg-info">{{ organismo.id_sirhus }}</span></td>
+        </tr>  
+        <tr>
+            <th>Ver organigrama</th>
+            <td><span class="badge bg-info">{{ organismo.id_sirhus }}</span></td>
+        </tr>  
+        </tbody>
+        </table>
+
+        <div class="card-footer">
+         <a role="button" class="btn bg-info" href="{{ org.url_organigrama }}">
+          Organigrama
+         </a>
+        </div>
+              
+      </div>
+    </div>
+
+    <div class="col col-7">
+      
+      <div class="card">
+        <div class="card-header bg-info bg-gradient">
+          Depende de
+        </div>
+        <div class="card-body">
+        <ul class="list-group list-group-flush">
+          {% if organismo.es_primer_nivel %}
+            <li class="list-group-item">Gobierno de Canarias</li>
+          {% else %}      
+            <li class="list-group-item">
+                <a href="{{ organismo.depende_de.url_detalle_organismo }}">
+                {{ organismo.depende_de.nombre_organismo }}
+                </a>
+            </li>
+          {% endif %}  
+        </ul>
+        </div>
+      </div>  
+
+        <br>
+
+
+      <div class="card">
+        <div class="card-header bg-info bg-info bg-gradient">
+          Organismos Dependientes
+        </div>
+        <div class="card-body">
+        <ul class="list-group list-group-flush">
+          {% for org in dependientes %}
+            <li class="list-group-item">
+                <a href="{{ org.url_detalle_organismo }}">  
+                {{ org.nombre_organismo }}
+                </a>
+            </li>
+          {% endfor %}  
+        </ul>
+
+        </div>
+    </div>
+  </div>
+</div>  
+
+
+{% endblock %}
