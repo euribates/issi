@@ -30,16 +30,10 @@
             </span>
             {% endif %}
         </div>
-        <footer class="card-footer">
-            <a role="button"
-            cls="button bg-info"
-            href="{{ sistema.url_detalle_sistema }}"
-            alt="Ver detalles del S.I. {sistema}">
-                Ver/Editar
-            </a>
-        </footer>
-      </div>
 
+      </div>
+      
+      <br>
 
       <div class="card">
         <div class="card-header">
@@ -56,7 +50,6 @@
     </div>
     
     <div class="col col-7">
-        Columna de detalles
         <table class="table table-hover">
             <tr>
                 <th>Área temática</th>
@@ -68,7 +61,10 @@
             </tr>
             <tr>
                 <th>Organismo</th>
-                <td>{{ sistema.organismo }}</td>
+                <td>{{ sistema.organismo }}
+                    <br>
+                    <div class="dir3">{{ sistema.organismo.dir3 }}</div>
+                </td>
             </tr>
             <tr>
                 <th>Es transversal</th>

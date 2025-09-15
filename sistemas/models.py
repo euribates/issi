@@ -32,7 +32,6 @@ class Sistema(models.Model):
         default=None,
         )
 
-    dir3_id = models.CharField(max_length=9)
     codigo = models.CharField(max_length=32, unique=True)
     nombre = models.CharField(max_length=220)
     url = models.URLField(

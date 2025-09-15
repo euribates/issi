@@ -20,6 +20,6 @@ def alta_sistema():
 
 def detalle_sistema(sistema):
     return sistemas().step(
-        str(sistema),
+        str(sistema.codigo),
         links.a_detalle_sistema(sistema.pk),
         )

@@ -9,22 +9,27 @@
   <div class="row">
   
 {% for sistema in sistemas.all %}
-<div class="col">
-<div class="card" style="width: 18rem;">
+<div class="col-4">
+<div class="card">
+
+  <a href="{{ sistema.url_detalle_sistema }}" alt="Ver detalles del S.I. {sistema}">
   {% if sistema.icono %}
-    <img src="{{ sistema.icono.url }}" class="card-img-top" alt="{{ sistema }}">
+    <img width="128" height="128"
+         src="{{ sistema.icono.url }}" class="card-top-logo" alt="{{ sistema }}">
   {% else %}
-    <img src="https://placehold.co/64x64" class="card-img-top" alt="{{ sistema }}">
+    <img src="https://placehold.co/128x128" class="card-top-logo" alt="{{ sistema }}">
   {% endif %}  
+  </a>  
+
   <div class="card-header">
       <h4 class="card-title">{{ sistema.codigo }}
           <br><small>{{ sistema.nombre }}</small>
       </h4>
   </div>
   <div class="card-body">
-    <p class="card-text">
-      {{ sistema.descripcion|markdownify }}
-    </p>
+    {% comment %}<p class="card-text">{% endcomment %}
+      {% comment %}{{ sistema.descripcion|markdownify }}{% endcomment %}
+    {% comment %}</p>{% endcomment %}
     <span class="badge text-bg-primary">
         {{ sistema.tema }}
     </span>
@@ -38,12 +43,13 @@
     {% endif %}
   </div>
   <footer class="card-footer">
-    <a role="button"
-       cls="button bg-info"
+    <div class="btn-group" role="group" aria-label="Acciones">
+    <a class="btn bg-info"
        href="{{ sistema.url_detalle_sistema }}"
        alt="Ver detalles del S.I. {sistema}">
-        Ver/Editar
+        <i class="bi bi-pencil"></i>
     </a>
+    </div>
     </footer>
 </div>
 </div>
