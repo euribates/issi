@@ -49,3 +49,7 @@ img.card-top-logo {
   height: 128px;
   width: 128px;
   }
+
+.just-for-print {
+  display: None;
+}

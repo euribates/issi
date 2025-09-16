@@ -17,4 +17,5 @@ def tie(ruta, vista, name=None):
 urlpatterns = [
     tie('', views.index),
     tie('organismo/<org:organismo>/', views.detalle_organismo),
+    tie('organismo/<org:organismo>/estudio/', views.estudio_organismo),
     ]

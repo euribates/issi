@@ -17,3 +17,9 @@ def detalle_organismo(organismo):
         organismo.nombre_organismo,
         links.a_detalle_organismo(organismo.pk),
         )
+
+def estudio_organismo(organismo):
+    return detalle_organismo(organismo).step(
+        'Estudio',
+        links.a_estudio_organismo(organismo.pk),
+        )

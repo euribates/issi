@@ -37,21 +37,6 @@ VALID_DAYS = 15
 
 
 
-def descargar_organigrama():
-    target_file = settings.BASE_DIR / Path(FILENAME)
-    if target_file.exists():
-        stat = target_file.stat()
-        mod_date = DateTime.fromtimestamp(stat.st_mtime)
-        delta = DateTime.now() - mod_date
-        if delta.days <= VALID_DAYS:  # Local file is still valid
-            return target_file
-    self.warning(f'El fichero local {target_file} no existe o está desfasado')
-    url = f'{CATALOG}/{DATASET}/{RESOURCE}/download/{FILENAME}'
-    urlretrieve(url, target_file)
-    self.success('Fichero {target_file} descargado')
-    return target_file
-
-
 class Command(BaseCommand):
     help = ABOUT
 
@@ -73,6 +58,21 @@ class Command(BaseCommand):
         self.stderr.write(
             f'{RED}Error{RESET_ALL}: {BRIGHT}{msg}{RESET_ALL}'
             )
+
+    def descargar_organigrama(self):
+        target_file = settings.BASE_DIR / Path(FILENAME)
+        if target_file.exists():
+            stat = target_file.stat()
+            mod_date = DateTime.fromtimestamp(stat.st_mtime)
+            delta = DateTime.now() - mod_date
+            if delta.days <= VALID_DAYS:  # Local file is still valid
+                return target_file
+        self.warning(f'El fichero local {target_file} no existe o está desfasado')
+        url = f'{CATALOG}/{DATASET}/{RESOURCE}/download/{FILENAME}'
+        urlretrieve(url, target_file)
+        self.success('Fichero {target_file} descargado')
+        return target_file
+
 
 
     def create_parser(self, prog_name, subcommand, **kwargs):

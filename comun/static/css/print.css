@@ -1,0 +1,36 @@
+/* Variables */
+
+--bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+
+body {
+    margin: 0;
+    color: #000;
+    background-color: #fff;
+  }
+
+.no-print {
+  display: None!important;
+}
+
+h3 {
+  margin-top: 1em;
+  border-bottom: 1px solid gray;
+}
+
+h3::before {
+  content: "• ";
+}
+
+th {
+  border-bottom: 1px solid black;
+  }
+
+td.number {
+  text-align: end;
+  font-family: var(--bs-font-monospace);
+  }
+
+.just-for-print {
+  display: block;
+}

@@ -36,19 +36,20 @@
             <th>Id. SIRhUS</th>
             <td><span class="badge bg-info">{{ organismo.id_sirhus }}</span></td>
         </tr>  
-        <tr>
-            <th>Ver organigrama</th>
-            <td><span class="badge bg-info">{{ organismo.id_sirhus }}</span></td>
-        </tr>  
         </tbody>
         </table>
 
         <div class="card-footer">
-         <a role="button" class="btn bg-info" href="{{ org.url_organigrama }}">
-          Organigrama
-         </a>
+          <div class="buttons">
+            <a role="button" class="btn bg-info" href="{{ organismo.url_organigrama }}">
+              Organigrama
+            </a>
+            <a role="button" class="btn bg-info"
+               href="{% url 'directorio:estudio_organismo' organismo=organismo %}">
+              Estudio
+            </a>
+          </div>
         </div>
-              
       </div>
     </div>
 

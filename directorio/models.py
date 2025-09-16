@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 
+from datetime import datetime as DateTime
+from pathlib import Path
+from urllib.request import urlretrieve
+
+from bs4 import BeautifulSoup
+
 from django.db import models
+from django.conf import settings
 
 from . import links
 
@@ -34,6 +41,13 @@ class Organismo(models.Model):
             return None
 
     @classmethod
+    def load_organismo_using_dir3(cls, dir3: str):
+        try:
+            return cls.objects.get(dir3=dir3)
+        except cls.DoesNotExist:
+            return None
+
+    @classmethod
     def upsert(cls, id_organismo, **kwargs):
          organismo, created = cls.objects.update_or_create(
             pk=id_organismo,
@@ -55,3 +69,50 @@ class Organismo(models.Model):
 
     def es_primer_nivel(self) -> bool:
         return self.depende_de is None
+
+
+class Ente(models.Model):
+    DATOS = 'datos.canarias.es'
+    VALID_DAYS = 14
+
+    id_ente = models.SlugField(
+        max_length=12,
+        primary_key=True,
+        )
+    organismo = models.OneToOneField(
+        Organismo,
+        related_name='ente',
+        on_delete=models.PROTECT,
+        )
+    url_open_data = models.URLField(
+        max_length=384,
+        unique=True,
+        blank=True,
+        null=True,
+        default=None,
+        )
+
+    def descargar_datos(self, url, force=False):
+        slug = url.rsplit('/', 1)[1]
+        filename = Path(f'{slug}.html')
+        target_file = settings.BASE_DIR / Path(filename)
+        if target_file.exists():
+            stat = target_file.stat()
+            mod_date = DateTime.fromtimestamp(stat.st_mtime)
+            delta = DateTime.now() - mod_date
+            is_still_valid = bool(delta.days <= self.VALID_DAYS)
+            if is_still_valid and not force:  # El fichero local aun es váłido
+                return target_file
+        # El fichero local tiene que actializarse
+        urlretrieve(url, target_file)
+        return target_file
+
+    def get_open_data(self):
+        url = self.url_open_data
+        with open(self.descargar_datos(url), 'r', encoding='utf-8') as source:
+            soup = BeautifulSoup(source, 'html.parser')
+            for item in soup.find_all('li', 'dataset-item'):
+                href = item.a.attrs['href']
+                url = f'https://{self.DATOS}/{href}'
+                desc = ''.join(item.a.contents)
+                yield(url, desc)
