@@ -38,7 +38,6 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
-    print('Running in DEBUG mode')
     urlpatterns += static(
         settings.STATIC_URL,
         document_root=settings.STATIC_ROOT,

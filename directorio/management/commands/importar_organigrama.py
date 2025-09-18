@@ -96,7 +96,7 @@ class Command(BaseCommand):
         elif id_dircac:
             print(f'Generar informe para DIRCAC {id_dircac}')
             self.warning('Aun por implementar')
-        with open(descargar_organigrama(), 'r', encoding='utf-8') as source:
+        with open(self.descargar_organigrama(), 'r', encoding='utf-8') as source:
             reader = csv.reader(source, delimiter=';', quotechar='"')
             next(reader) # Ignorar primera fila de nombres
             mapa = dict()
@@ -131,9 +131,9 @@ class Command(BaseCommand):
                             **row,
                             )
                     if created:
-                        self.success(f'Organismo {organismo} creado')
+                        self.success(f'Organismo {organismo} {RED}creado{RESET_ALL}')
                     else:
-                        self.success(f'Organismo {organismo} actualizado')
+                        self.success(f'Organismo {organismo} {YELLOW}actualizado{RESET_ALL}')
                 except IntegrityError as err:
                     self.panic(
                         f'{err}: saving/updating {id_organismo}'
