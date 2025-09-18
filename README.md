@@ -234,7 +234,7 @@ recursos asociados, estos se gestionan en un nivel superior.
 - Cada pregunta dentro de un área se pondera en el intervalo [0..1].  Se
   calcula el total de cada área de la forma:
 
-        $T_a = P_a \dot \sum_{i=1}^{n} P_i$
+    $T_a = P_a \dot \sum_{i=1}^{n} P_i$
 	
   Donde:
 
