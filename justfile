@@ -18,11 +18,6 @@ quicktest:
     python -m pytest -m "not slow" -x --reuse-db --no-migrations --failed-first consultas
 
 
-# Ejecutar ctags
-tags:
-    cd {{justfile_directory()}} && ctags -R  --exclude=media/*  --exclude=*/static/* --exclude=static/* .
-
-
 # Mostrar versiones del software instalado
 versions:
     python --version
@@ -95,6 +90,7 @@ watch: static
 
 
 # Genera el fichero de tags
-tags: clean
-    cd {{justfile_directory()}} && ctags -R --exclude=*.js --exclude=.venv .
+tags:
+    cd {{justfile_directory()}} && ctags -R  --exclude=media/*  --exclude=*/static/* --exclude=static/* .
+
 

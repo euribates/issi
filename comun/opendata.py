@@ -2,17 +2,17 @@
 
 from pathlib import Path
 from datetime import datetime as DateTime
+from dataclasses import dataclass
 from urllib.request import urlretrieve
 
 from django.conf import settings
 
-import dataclasses
 
 DIAS_VIGENTE = 15
 DATOS_CANARIAS = 'https://datos.canarias.es/catalogos/general'
 
 
-@dataclasses.dataclass
+@dataclass
 class OpenData:
     '''Clase de ayuda para consultar el catálogo de datos abiertos.
     '''

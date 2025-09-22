@@ -70,6 +70,11 @@ class Organismo(models.Model):
     def es_primer_nivel(self) -> bool:
         return self.depende_de is None
 
+    def iter_jerarquia(self, nivel=0):
+        yield self, nivel
+        for hijo in self.organismos_dependientes.all():
+            yield from hijo.iter_jerarquia(nivel+1)
+
 
 class Ente(models.Model):
     DATOS = 'datos.canarias.es'
@@ -91,6 +96,13 @@ class Ente(models.Model):
         null=True,
         default=None,
         )
+
+    @classmethod
+    def load_ente(cls, pk:str):
+        try:
+            return cls.objects.get(id_ente=pk)
+        except cls.DoesNotExist:
+            return None
 
     def descargar_datos(self, url, force=False):
         slug = url.rsplit('/', 1)[1]
