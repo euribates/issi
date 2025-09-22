@@ -92,3 +92,9 @@ docs:
 watch: static
     # termtitle Watch
     watchmedo shell-command  --patterns "*.css;*.js;*.png;*.jpg;*.webp;*.svg" --recursive --command "just static"
+
+
+# Genera el fichero de tags
+tags: clean
+    cd {{justfile_directory()}} && ctags -R --exclude=*.js --exclude=.venv .
+

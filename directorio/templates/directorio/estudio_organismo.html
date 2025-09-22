@@ -1,0 +1,84 @@
+{% extends 'comun/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>
+    <span class="just-for-print">
+        Informe de pistas
+        para la detección de sistemas de información
+        de: 
+    </span>
+    {{ organismo.nombre_organismo }}
+</h1>
+<h2>{{ organismo.categoria }}</h2>
+
+<h3>Códigos identificadores</h3>
+
+<dl>
+    <dt>Id. DIRCAC</dt>
+    <dd>{{ organismo.pk }}</dd>
+
+    <dt> DIR3 </dt>
+    <dd> {{ organismo.dir3 }} </dd>
+
+    <dt>Id. SIRhUS</dt>
+    <dd>{{ organismo.id_sirhus }}</dd>
+</dl>
+
+<h3>Estructura orgánica</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>DIR3</th>
+            <th>DIRCAC</th>
+        </tr>
+    </thead>
+    
+{% for j in jerarquia %}<tr>
+<td>
+<span style="margin-left: {{ j.nivel }}em;">
+{% if j.nivel == 0 %}
+  <big><b>{{ j.organismo }}</b></big>
+  {% elif j.nivel == 1 %}
+  <b>{{ j.organismo }}</b>
+  {% else %}
+  {{ j.organismo }}
+{% endif %}
+</span>
+</td>
+<td>
+{{ j.organismo.dir3 }}
+</td>
+<td class="number">
+    {{ j.organismo.pk }}
+</td>
+</tr>{% endfor %}
+</table>
+
+{% if organismo.ente %}
+<h3>Fuentes de datos abiertos publicadas</h3>
+
+<table class="table">
+    <thead>
+        <th>Conjunto de datos</th>
+        <th>url</th>
+    </thead>
+    <tbody>
+{% for url,desc in organismo.ente.get_open_data %}
+    <tr>
+        <td><b>{{ desc }}</b></td>
+        <td>
+            <a href="{{ url }}">
+                {{ url }}
+            </a>
+        </td>
+    </tr> 
+{% endfor %}    
+    </tbody>
+</table>
+{% endif %}
+
+{% endblock %}

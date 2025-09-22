@@ -101,9 +101,8 @@ class Ente(models.Model):
             mod_date = DateTime.fromtimestamp(stat.st_mtime)
             delta = DateTime.now() - mod_date
             is_still_valid = bool(delta.days <= self.VALID_DAYS)
-            if is_still_valid and not force:  # El fichero local aun es váłido
+            if is_still_valid and not force:  # El fichero local aun es válido
                 return target_file
-        # El fichero local tiene que actializarse
         urlretrieve(url, target_file)
         return target_file
 

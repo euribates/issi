@@ -1,57 +1,65 @@
 #!/usr/bin/env python3
 
+import dataclasses
+
 import colorama
 from django.core.management.base import BaseCommand
 
+from comun.opendata import 
 CMD_NAME = 'crea_reporte'
 ABOUT    = 'Crea un informe indivizualizado por organismo'
 EPILOG   = 'ISSI - Inventario de sistemas de información'
 
-DATOS_CANARIAS = 'https://datos.canarias.es/catalogos/general/dataset'
-URL_PROCEDIMIENTOS = (
-    f'{DATOS_CANARIAS}/946cdcde-2118-48ef-a30a-f9dc812c82db'
-    '/resource/10b71b12-fb77-47b7-88f6-ec46ebee1548/download/procedimientos.csv'
-    )
-
 RED = colorama.Fore.RED
 RESET_ALL = colorama.Style.RESET_ALL
 
+@dataclasses.dataclass
+class OpenData:
+
+    DATOS_CANARIAS = 'https://datos.canarias.es/catalogos/general'
+
+    dataset: str
+    resource: str
+    filemame: str
+
+    def url(self):
+        '''Devuelve la URL de descarga del recurso.
+
+        Ejemplo de uso:
+
+            >>> servicios = OpenData(
+            ...     dataset='41d56909-566f-4ab2-99e2-78a03577bb97',
+            ...     resource='c636e6f7-e1a6-441a-9519-007ef69197e9',
+            ...     filename='servicios.csv',
+            ...     )
+            >>> 
+            >>> assert servicios.url() == (
+            ...     'https://datos.canarias.es/catalogos/general/'
+            ...     'dataset/41d56909-566f-4ab2-99e2-78a03577bb97/'
+            ...     'resource/c636e6f7-e1a6-441a-9519-007ef69197e9/'
+            ...     'download/servicios.csv'
+            ...     )
+        '''
+        return '/'.join([
+            DATOS_CANARIAS,
+            'dataset',
+            self.dataset,
+            'resource',
+            self.resource,
+            'download',
+            self.filename,
+            ])
+            
 
 
-def warning(msg: str):
-    return f'Atención: {RED}{msg}{RESET_ALL}'
-    
+procedimientos = (
+    dataset='946cdcde-2118-48ef-a30a-f9dc812c82db',
+    resource='10b71b12-fb77-47b7-88f6-ec46ebee1548',
+    filename='procedimientos.csv',
+    )
 
-class Command(BaseCommand):
-    help = ABOUT
-
-    def __init__(self, *args, **kwargs):
-        colorama.just_fix_windows_console()
-        super().__init__(*args, **kwargs)
-
-    def create_parser(self, prog_name, subcommand, **kwargs):
-        print('kwargs', kwargs)
-        kwargs['epilog'] = EPILOG
-        return super().create_parser(prog_name, subcommand, **kwargs)
-
-    def add_arguments(self, parser):
-        parser.add_argument('-i', '--id', help='Identificador DIRCAC/SIRHUS', type=int)
-        parser.add_argument('-d', '--dir3', help='Identificador DIR3')
-    
-    def handle(self, *args, **options):
-        id_dir3 = options.get('dir3')
-        id_dircac = options.get('id')
-        if id_dir3:
-            print(f'Generar informe para DIR3 {id_dir3}')
-            print(warning('Aun por implementar'))
-        elif id_dircac:
-            print(f'Generar informe para DIRCAC {id_dircac}')
-            print(warning('Aun por implementar'))
-        else:
-            for name, value in options.items():
-                print(name, value)
-        return 0
-
-
-
-
+servicios = OpenData(
+    dataset='41d56909-566f-4ab2-99e2-78a03577bb97',
+    resource='c636e6f7-e1a6-441a-9519-007ef69197e9',
+    filename='servicios.csv',
+    )
