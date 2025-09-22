@@ -1774,5 +1774,21 @@
         "depende_de": 6594,
         "ruta": "/6547/6594"
     }
+},
+{
+    "model": "directorio.ente",
+    "pk": "PAPJS",
+    "fields": {
+        "organismo": 42118,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-administraciones-publicas"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "PREGOB",
+    "fields": {
+        "organismo": 42091,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/presidencia-del-gobierno"
+    }
 }
 ]
