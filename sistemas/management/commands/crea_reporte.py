@@ -55,6 +55,17 @@ class Command(BaseCommand):
             help='Especificar el ente',
             )
     
+    def add_jerarquia(self, pdf, organismo) -> set:
+        pdf.set_font('helvetica', size=12)
+        result = set()
+        for org, level in organismo.iter_jerarquia():
+            indent = '    ' * level
+            pdf.cell(text=f'{indent}{org}')
+            pdf.cell(text=f' [{org.dir3}]')
+            pdf.ln(10)
+            result.add(org.dir3)
+        return result
+
     def handle(self, *args, **options):
         tag = options.get('tag')
         if not tag:
@@ -79,21 +90,13 @@ class Command(BaseCommand):
         pdf.set_font('helvetica', size=18)
         pdf.cell(text='Organigrama')
         pdf.ln(10)
-        pdf.set_font('helvetica', size=12)
-        all_dir3 = set()
-        for org, level in organismo.iter_jerarquia():
-            indent = '    ' * level
-            pdf.cell(text=f'{indent}{org}')
-            pdf.cell(text=f' [{org.dir3}]')
-            pdf.ln(10)
-            all_dir3.add(org.dir3)
-
+        all_dir3 = self.add_jerarquia(pdf, organismo)
         pdf.add_page()
         pdf.set_font('helvetica', size=18)
         pdf.cell(text='Procedimientos')
         pdf.ln(10)
         pdf.set_font('helvetica', size=12)
-        with open(procedimientos.descargar_datos()) as f:
+        with open(procedimientos.descargar_datos(), 'r', encoding='utf-8') as f:
             reader = csv.reader(f, delimiter=';')
             next(reader)  # Ignorar cabecera
             for line in reader:
@@ -110,7 +113,7 @@ class Command(BaseCommand):
         pdf.cell(text='Carta de servicios')
         pdf.ln(10)
         pdf.set_font('helvetica', size=12)
-        with open(servicios.descargar_datos()) as f:
+        with open(servicios.descargar_datos(), 'r', encoding='utf-8') as f:
             reader = csv.reader(f, delimiter=';')
             next(reader)  # Ignorar cabecera
             for line in reader:

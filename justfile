@@ -92,5 +92,3 @@ watch: static
 # Genera el fichero de tags
 tags:
     cd {{justfile_directory()}} && ctags -R  --exclude=media/*  --exclude=*/static/* --exclude=static/* .
-
-

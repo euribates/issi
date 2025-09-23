@@ -254,3 +254,7 @@ recursos asociados, estos se gestionan en un nivel superior.
   - $T_p$ es la estimación en la dimensión de personas
   - $T_{cd}$ es la estimación en la dimensión de calidad de datos
   - $T_{pd}$ es la estimación en la dimensión de protección de datos
+
+  - Alguna de las preguntas pueden ser solo informativas, y no aportarían
+    nada al cálculo. Estas preguntas se marcarán para que no se tengan en
+    cuenta.
