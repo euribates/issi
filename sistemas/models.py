@@ -31,7 +31,6 @@ class Sistema(models.Model):
         null=True,
         default=None,
         )
-
     codigo = models.CharField(max_length=32, unique=True)
     nombre = models.CharField(max_length=220)
     url = models.URLField(

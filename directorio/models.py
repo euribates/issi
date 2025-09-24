@@ -13,6 +13,10 @@ from . import links
 
 
 class Organismo(models.Model):
+
+    class Meta:
+        ordering = ['nombre_organismo']
+
     id_organismo = models.BigIntegerField(primary_key=True)
     nombre_organismo = models.CharField(
         max_length=144,

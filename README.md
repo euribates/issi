@@ -258,3 +258,18 @@ recursos asociados, estos se gestionan en un nivel superior.
   - Alguna de las preguntas pueden ser solo informativas, y no aportarían
     nada al cálculo. Estas preguntas se marcarán para que no se tengan en
     cuenta.
+
+## Perfiles que deberían participar en la creación y mantenimiento
+
+- Interlocutores designados para gestión y gobierno de datos.
+- Delegado/a de protección de datos.
+- Responsable de seguridad del departamento/organismo con funciones en materia de seguridad de la información
+- Responsable de DPO - planificación estratégica.
+- Responsable UMCI - Modernización y mejora continua
+- Archivero/a.
+- Técnico/a estadístico.
+- Responsable de datos abiertos.
+- Los responsables funcionales que estén al tanto de los sistemas de información más relevantes.
+- Técnicos de sistemas y otros técnicos que conozcan la plataforma tecnológica.
+- Cualquier directivo o técnico que se considere
+
