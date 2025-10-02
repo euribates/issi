@@ -130,3 +130,64 @@ class Activo(models.Model):
 
     def __str__(self):
         return self.nombre_activo
+
+
+class Usuario(models.Model):
+    login = models.CharField(max_length=32, primary_key=True)
+    email = models.CharField(max_length=384, unique=True)
+    nombre = models.CharField(
+        max_length=96,
+        blank=True,
+        null=True,
+        default=None,
+        )
+    apellidos = models.CharField(
+        max_length=192,
+        blank=True,
+        null=True,
+        default=None,
+        )
+    organismo = models.ForeignKey(
+        Organismo,
+        related_name='usurioos',
+        on_delete=models.PROTECT,
+        )
+    f_alta = models.DateTimeField(auto_now_add=True)
+    f_cambio = models.DateTimeField(auto_now=True)
+    f_baja = models.DateTimeField(default=None)
+
+    def __str__(self):
+        if self.nombre:
+            if self.apellidos:
+                return f'{self.nombre} {self.apellidos} (self.login)'
+            return f'{self.nombre} (self.login)'
+        return self.login
+
+
+# class Perfil(models.Model):
+    # COMETIDOS = [
+        # ('FUN', 'Responsable funcional'),
+        # ('TEC', 'Responsable técnico'),
+        # ('PDD', 'Protección de datos'),
+        # ]
+    # id_perfil = models.BigAutoField(primary_key=True)
+    # usuario = models.ForeignKey(
+        # Usuario,
+        # related_name='perfiles',
+        # on_delete=models.CASCADE,
+        # )
+    # cometido = models.CharField(max_length=3, choices=COMETIDOS)
+    # sistema = models.ForeignKey(
+        # Sistema,
+        # related_name='perfiles',
+        # on_delete=models.CASCADE,
+        # )
+
+
+    # onsable_funcional = models.CharField(
+        # max_length=32,
+        # default=None,
+        # blank=True,
+        # null=True,
+        # )
+

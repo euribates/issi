@@ -273,3 +273,16 @@ recursos asociados, estos se gestionan en un nivel superior.
 - Técnicos de sistemas y otros técnicos que conozcan la plataforma tecnológica.
 - Cualquier directivo o técnico que se considere
 
+## TODO
+
+[ ] Listado de sistemas con filtrado dinámico
+[ ] Listado de activos de datos con filtrado dinámico
+[ ] Exportación a CSV de los sistemas
+[ ] Los usuarios tiene que ser asignados con cardinalidad n-n
+[ ] Alta de sistema de información
+[ ] Alta de activo de datos
+[ ] Buscador (con sqlite)
+[ ] listado de usuarios
+[ ] _Dashboard_ Núm. Usuarios / Núm. Sistemas / núm. AD
+
+
