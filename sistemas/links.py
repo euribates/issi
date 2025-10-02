@@ -15,3 +15,7 @@ def a_detalle_sistema(id_sistema):
     return reverse_lazy('sistemas:detalle_sistema', kwargs={
         'sistema': id_sistema,
         })
+
+
+def a_usuarios():
+    return reverse_lazy('sistemas:listado_usuarios')

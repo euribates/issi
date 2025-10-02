@@ -1,0 +1,24 @@
+{% extends "comun/base.html" %}
+
+{% block content %}
+
+<h2 class="title">Listado de usuarios</h2>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Login</th>  
+      <th>Nombre</th>
+      <th>Organismo</th>
+    </tr>  
+  </thead> 
+  <tbody>
+    {% for usuario in usuarios.all %}<tr>
+      <td>{{ usuario.login }}</td>
+      <td>{{ usuario.nombre_completo }}</td>
+      <td>{{ usuario.organismo }}</td>
+    </tr>{% endfor %}
+  
+  </tbody>
+</table>  
+{% endblock content %}

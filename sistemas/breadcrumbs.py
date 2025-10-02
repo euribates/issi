@@ -23,3 +23,7 @@ def detalle_sistema(sistema):
         str(sistema.codigo),
         links.a_detalle_sistema(sistema.pk),
         )
+
+
+def usuarios():
+    return bc_issi().step('Usuarios', links.a_usuarios())

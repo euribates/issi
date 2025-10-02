@@ -46,3 +46,9 @@ class TemaAdmin(admin.ModelAdmin):
     list_display = ["id_tema", "nombre_tema", "transversal"]
 
 admin.site.register(models.Tema, TemaAdmin)
+
+
+class UsuarioAdmin(admin.ModelAdmin):
+    list_display = ["login", "nombre_completo", "organismo"]
+
+admin.site.register(models.Usuario, UsuarioAdmin)

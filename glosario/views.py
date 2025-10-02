@@ -12,6 +12,7 @@ def index(request, *args, **kwargs):
     return render(request, 'glosario/index.html', {
         'titulo': 'Términos',
         'breadcrumbs': breadcrumbs.bc_glosario(),
+        'tab': 'glosario',
         'terminos': terminos,
         })
 

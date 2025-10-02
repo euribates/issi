@@ -155,12 +155,15 @@ class Usuario(models.Model):
         except cls.DoesNotExist:
             return None
 
-    def __str__(self):
+    def nombre_completo(self):
         if self.nombre:
             if self.apellidos:
-                return f'{self.nombre} {self.apellidos} (self.login)'
-            return f'{self.nombre} (self.login)'
+                return f'{self.nombre} {self.apellidos}'
+            return self.nombre
         return self.login
+
+    def __str__(self):
+        return self.nombre_completo()
 
 
 class Perfil(models.Model):
@@ -168,6 +171,7 @@ class Perfil(models.Model):
         ('FUN', 'Responsable funcional'),
         ('TEC', 'Responsable técnico'),
         ('PDD', 'Protección de datos'),
+        ('INT', 'Interlocutor'),
         ]
     id_perfil = models.BigAutoField(primary_key=True)
     usuario = models.ForeignKey(
