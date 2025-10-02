@@ -77,18 +77,6 @@ class Sistema(models.Model):
         width_field='icono_width',
         max_length=512,
         )
-    responsable_funcional = models.CharField(
-        max_length=32,
-        default=None,
-        blank=True,
-        null=True,
-        )
-    responsable_tecnico = models.CharField(
-        max_length=32,
-        default=None,
-        blank=True,
-        null=True,
-        )
 
     @classmethod
     def load_sistema(cls, pk:int):
@@ -149,12 +137,23 @@ class Usuario(models.Model):
         )
     organismo = models.ForeignKey(
         Organismo,
-        related_name='usurioos',
+        related_name='usurios',
         on_delete=models.PROTECT,
         )
     f_alta = models.DateTimeField(auto_now_add=True)
     f_cambio = models.DateTimeField(auto_now=True)
-    f_baja = models.DateTimeField(default=None)
+    f_baja = models.DateTimeField(
+        default=None,
+        blank=True,
+        null=True,
+        )
+
+    @classmethod
+    def load_usuario(cls, pk:str):
+        try:
+            return cls.objects.get(login=pk)
+        except cls.DoesNotExist:
+            return None
 
     def __str__(self):
         if self.nombre:
@@ -164,30 +163,28 @@ class Usuario(models.Model):
         return self.login
 
 
-# class Perfil(models.Model):
-    # COMETIDOS = [
-        # ('FUN', 'Responsable funcional'),
-        # ('TEC', 'Responsable técnico'),
-        # ('PDD', 'Protección de datos'),
-        # ]
-    # id_perfil = models.BigAutoField(primary_key=True)
-    # usuario = models.ForeignKey(
-        # Usuario,
-        # related_name='perfiles',
-        # on_delete=models.CASCADE,
-        # )
-    # cometido = models.CharField(max_length=3, choices=COMETIDOS)
-    # sistema = models.ForeignKey(
-        # Sistema,
-        # related_name='perfiles',
-        # on_delete=models.CASCADE,
-        # )
-
-
-    # onsable_funcional = models.CharField(
-        # max_length=32,
-        # default=None,
-        # blank=True,
-        # null=True,
-        # )
-
+class Perfil(models.Model):
+    COMETIDOS = [
+        ('FUN', 'Responsable funcional'),
+        ('TEC', 'Responsable técnico'),
+        ('PDD', 'Protección de datos'),
+        ]
+    id_perfil = models.BigAutoField(primary_key=True)
+    usuario = models.ForeignKey(
+        Usuario,
+        related_name='perfiles',
+        on_delete=models.CASCADE,
+        )
+    cometido = models.CharField(max_length=3, choices=COMETIDOS)
+    sistema = models.ForeignKey(
+        Sistema,
+        related_name='perfiles',
+        on_delete=models.CASCADE,
+        )
+    f_alta = models.DateTimeField(auto_now_add=True)
+    f_cambio = models.DateTimeField(auto_now=True)
+    f_baja = models.DateTimeField(
+        default=None,
+        blank=True,
+        null=True,
+        )
