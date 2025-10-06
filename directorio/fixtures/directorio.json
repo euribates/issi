@@ -1,14 +1,26 @@
 [
 {
     "model": "directorio.organismo",
+    "pk": 1,
+    "fields": {
+        "nombre_organismo": "Comunidad Autónoma de Canarias",
+        "dir3": "A05003638",
+        "id_sirhus": 1,
+        "categoria": "Root",
+        "depende_de": null,
+        "ruta": "/"
+    }
+},
+{
+    "model": "directorio.organismo",
     "pk": 6547,
     "fields": {
         "nombre_organismo": "Consejería de Sanidad",
         "dir3": "A05002852",
         "id_sirhus": 360540,
         "categoria": "Consejería",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "//6547"
     }
 },
 {
@@ -20,7 +32,7 @@
         "id_sirhus": 3443910,
         "categoria": "Entidad Pública Empresarial",
         "depende_de": 6547,
-        "ruta": "/6547"
+        "ruta": "/6547/6564"
     }
 },
 {
@@ -32,7 +44,7 @@
         "id_sirhus": 360840,
         "categoria": "Secretaría General Técnica",
         "depende_de": 6547,
-        "ruta": "/6547"
+        "ruta": "/6547/6583"
     }
 },
 {
@@ -44,7 +56,7 @@
         "id_sirhus": 2340,
         "categoria": "Organismo Autónomo",
         "depende_de": 6547,
-        "ruta": "/6547"
+        "ruta": "/6547/6594"
     }
 },
 {
@@ -56,7 +68,7 @@
         "id_sirhus": 437540,
         "categoria": "Dirección Area",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/6603"
     }
 },
 {
@@ -68,7 +80,7 @@
         "id_sirhus": 439040,
         "categoria": "Dirección Area",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/6630"
     }
 },
 {
@@ -80,7 +92,7 @@
         "id_sirhus": 437940,
         "categoria": "Dirección Area",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/6632"
     }
 },
 {
@@ -92,7 +104,7 @@
         "id_sirhus": 438440,
         "categoria": "Dirección Area",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/6634"
     }
 },
 {
@@ -104,7 +116,7 @@
         "id_sirhus": 434940,
         "categoria": "Dirección General",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/6636"
     }
 },
 {
@@ -116,7 +128,7 @@
         "id_sirhus": 437140,
         "categoria": "Dirección General",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/6644"
     }
 },
 {
@@ -128,7 +140,7 @@
         "id_sirhus": 434040,
         "categoria": "Secretaría General",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/6652"
     }
 },
 {
@@ -140,7 +152,7 @@
         "id_sirhus": 438840,
         "categoria": "Dirección Area",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/6666"
     }
 },
 {
@@ -152,7 +164,7 @@
         "id_sirhus": 438640,
         "categoria": "Dirección Area",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/6668"
     }
 },
 {
@@ -164,7 +176,7 @@
         "id_sirhus": 436240,
         "categoria": "Dirección General",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/6679"
     }
 },
 {
@@ -176,7 +188,7 @@
         "id_sirhus": 435540,
         "categoria": "Dirección General",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/6687"
     }
 },
 {
@@ -188,7 +200,7 @@
         "id_sirhus": 437740,
         "categoria": "Dirección Area",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/6701"
     }
 },
 {
@@ -200,7 +212,7 @@
         "id_sirhus": 321840,
         "categoria": "Vicepresidencia",
         "depende_de": 42091,
-        "ruta": "/42091"
+        "ruta": "/42091/7251"
     }
 },
 {
@@ -212,7 +224,7 @@
         "id_sirhus": 320640,
         "categoria": "Viceconsejería",
         "depende_de": 42091,
-        "ruta": "/42091"
+        "ruta": "/42091/7268"
     }
 },
 {
@@ -224,7 +236,7 @@
         "id_sirhus": 319740,
         "categoria": "Secretaría General",
         "depende_de": 42091,
-        "ruta": "/42091"
+        "ruta": "/42091/7400"
     }
 },
 {
@@ -236,7 +248,7 @@
         "id_sirhus": 324140,
         "categoria": "Viceconsejería",
         "depende_de": 42091,
-        "ruta": "/42091"
+        "ruta": "/42091/10847"
     }
 },
 {
@@ -248,7 +260,7 @@
         "id_sirhus": 322640,
         "categoria": "Dirección General",
         "depende_de": 10847,
-        "ruta": "/42091/10847"
+        "ruta": "/42091/10847/10855"
     }
 },
 {
@@ -260,7 +272,7 @@
         "id_sirhus": 3303410,
         "categoria": "Viceconsejería",
         "depende_de": 42091,
-        "ruta": "/42091"
+        "ruta": "/42091/24414"
     }
 },
 {
@@ -272,7 +284,7 @@
         "id_sirhus": 334740,
         "categoria": "Viceconsejería",
         "depende_de": 42118,
-        "ruta": "/42118"
+        "ruta": "/42118/25954"
     }
 },
 {
@@ -284,7 +296,7 @@
         "id_sirhus": 460040,
         "categoria": "Dirección General",
         "depende_de": 25954,
-        "ruta": "/42118/25954"
+        "ruta": "/42118/25954/25963"
     }
 },
 {
@@ -296,7 +308,7 @@
         "id_sirhus": 318940,
         "categoria": "Organismo Autónomo",
         "depende_de": 42118,
-        "ruta": "/42118"
+        "ruta": "/42118/25972"
     }
 },
 {
@@ -308,7 +320,7 @@
         "id_sirhus": 426740,
         "categoria": "Organismo Autónomo",
         "depende_de": 42165,
-        "ruta": "/42165"
+        "ruta": "/42165/25999"
     }
 },
 {
@@ -320,7 +332,7 @@
         "id_sirhus": 3401010,
         "categoria": "Organismo Autónomo",
         "depende_de": 42084,
-        "ruta": "/42084"
+        "ruta": "/42084/32738"
     }
 },
 {
@@ -332,7 +344,7 @@
         "id_sirhus": 429240,
         "categoria": "Organismo Autónomo",
         "depende_de": 42084,
-        "ruta": "/42084"
+        "ruta": "/42084/32766"
     }
 },
 {
@@ -344,7 +356,7 @@
         "id_sirhus": 3448910,
         "categoria": "Dirección General",
         "depende_de": 24414,
-        "ruta": "/42091/24414"
+        "ruta": "/42091/24414/37091"
     }
 },
 {
@@ -356,7 +368,7 @@
         "id_sirhus": 3449110,
         "categoria": "Dirección General",
         "depende_de": 24414,
-        "ruta": "/42091/24414"
+        "ruta": "/42091/24414/37097"
     }
 },
 {
@@ -368,7 +380,7 @@
         "id_sirhus": 349940,
         "categoria": "Organismo Autónomo",
         "depende_de": 42114,
-        "ruta": "/42114"
+        "ruta": "/42114/37152"
     }
 },
 {
@@ -380,7 +392,7 @@
         "id_sirhus": 348140,
         "categoria": "Viceconsejería",
         "depende_de": 42104,
-        "ruta": "/42104"
+        "ruta": "/42104/37364"
     }
 },
 {
@@ -392,7 +404,7 @@
         "id_sirhus": 347140,
         "categoria": "Dirección General",
         "depende_de": 42087,
-        "ruta": "/42086/42087"
+        "ruta": "/42086/42087/37422"
     }
 },
 {
@@ -404,7 +416,7 @@
         "id_sirhus": 3450210,
         "categoria": "Dirección General",
         "depende_de": 41970,
-        "ruta": "/42165/41970"
+        "ruta": "/42165/41970/37542"
     }
 },
 {
@@ -416,7 +428,7 @@
         "id_sirhus": 3444410,
         "categoria": "Entidad Pública",
         "depende_de": 42086,
-        "ruta": "/42086"
+        "ruta": "/42086/37815"
     }
 },
 {
@@ -428,7 +440,7 @@
         "id_sirhus": 428340,
         "categoria": "Organismo Autónomo",
         "depende_de": 42086,
-        "ruta": "/42086"
+        "ruta": "/42086/37829"
     }
 },
 {
@@ -440,7 +452,7 @@
         "id_sirhus": 338040,
         "categoria": "Intervención General",
         "depende_de": 42086,
-        "ruta": "/42086"
+        "ruta": "/42086/37849"
     }
 },
 {
@@ -452,7 +464,7 @@
         "id_sirhus": 344940,
         "categoria": "Dirección General",
         "depende_de": 42087,
-        "ruta": "/42086/42087"
+        "ruta": "/42086/42087/37894"
     }
 },
 {
@@ -464,7 +476,7 @@
         "id_sirhus": 341340,
         "categoria": "Dirección General",
         "depende_de": 42087,
-        "ruta": "/42086/42087"
+        "ruta": "/42086/42087/37905"
     }
 },
 {
@@ -476,7 +488,7 @@
         "id_sirhus": 346740,
         "categoria": "Dirección General",
         "depende_de": 42087,
-        "ruta": "/42086/42087"
+        "ruta": "/42086/42087/37916"
     }
 },
 {
@@ -488,7 +500,7 @@
         "id_sirhus": 3443510,
         "categoria": "Entidad Pública Empresarial",
         "depende_de": 42114,
-        "ruta": "/42114"
+        "ruta": "/42114/38576"
     }
 },
 {
@@ -500,7 +512,7 @@
         "id_sirhus": 350840,
         "categoria": "Dirección General",
         "depende_de": 42115,
-        "ruta": "/42114/42115"
+        "ruta": "/42114/42115/38592"
     }
 },
 {
@@ -512,7 +524,7 @@
         "id_sirhus": 385740,
         "categoria": "Dirección General",
         "depende_de": 42115,
-        "ruta": "/42114/42115"
+        "ruta": "/42114/42115/38600"
     }
 },
 {
@@ -524,7 +536,7 @@
         "id_sirhus": 3306410,
         "categoria": "Organismo Autónomo",
         "depende_de": 42123,
-        "ruta": "/42123"
+        "ruta": "/42123/38691"
     }
 },
 {
@@ -536,7 +548,7 @@
         "id_sirhus": 359740,
         "categoria": "Viceconsejería",
         "depende_de": 42084,
-        "ruta": "/42084"
+        "ruta": "/42084/39053"
     }
 },
 {
@@ -548,7 +560,7 @@
         "id_sirhus": 358340,
         "categoria": "Dirección General",
         "depende_de": 39053,
-        "ruta": "/42084/39053"
+        "ruta": "/42084/39053/39060"
     }
 },
 {
@@ -560,7 +572,7 @@
         "id_sirhus": 360440,
         "categoria": "Dirección General",
         "depende_de": 39053,
-        "ruta": "/42084/39053"
+        "ruta": "/42084/39053/39073"
     }
 },
 {
@@ -572,7 +584,7 @@
         "id_sirhus": 3450910,
         "categoria": "Dirección General",
         "depende_de": 39053,
-        "ruta": "/42084/39053"
+        "ruta": "/42084/39053/39153"
     }
 },
 {
@@ -584,7 +596,7 @@
         "id_sirhus": 389240,
         "categoria": "Viceconsejería",
         "depende_de": 42143,
-        "ruta": "/42143"
+        "ruta": "/42143/39166"
     }
 },
 {
@@ -596,7 +608,7 @@
         "id_sirhus": 3277810,
         "categoria": "Viceconsejería",
         "depende_de": 42118,
-        "ruta": "/42118"
+        "ruta": "/42118/41518"
     }
 },
 {
@@ -608,7 +620,7 @@
         "id_sirhus": 330540,
         "categoria": "Viceconsejería",
         "depende_de": 42118,
-        "ruta": "/42118"
+        "ruta": "/42118/41545"
     }
 },
 {
@@ -620,7 +632,7 @@
         "id_sirhus": 333740,
         "categoria": "Dirección General",
         "depende_de": 41545,
-        "ruta": "/42118/41545"
+        "ruta": "/42118/41545/41567"
     }
 },
 {
@@ -632,7 +644,7 @@
         "id_sirhus": 3410810,
         "categoria": "Dirección General",
         "depende_de": 41545,
-        "ruta": "/42118/41545"
+        "ruta": "/42118/41545/41588"
     }
 },
 {
@@ -644,7 +656,7 @@
         "id_sirhus": 427140,
         "categoria": "Organismo Autónomo",
         "depende_de": 42136,
-        "ruta": "/42136"
+        "ruta": "/42136/41854"
     }
 },
 {
@@ -656,7 +668,7 @@
         "id_sirhus": 3498710,
         "categoria": "Viceconsejería",
         "depende_de": 42165,
-        "ruta": "/42165"
+        "ruta": "/42165/41970"
     }
 },
 {
@@ -668,7 +680,7 @@
         "id_sirhus": 3498910,
         "categoria": "Dirección General",
         "depende_de": 41970,
-        "ruta": "/42165/41970"
+        "ruta": "/42165/41970/41971"
     }
 },
 {
@@ -680,7 +692,7 @@
         "id_sirhus": 3540210,
         "categoria": "Dirección General",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/42082"
     }
 },
 {
@@ -692,7 +704,7 @@
         "id_sirhus": 3540410,
         "categoria": "Dirección General",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/42083"
     }
 },
 {
@@ -703,8 +715,8 @@
         "dir3": "A05033198",
         "id_sirhus": 357440,
         "categoria": "Consejería",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "/1/42084"
     }
 },
 {
@@ -716,7 +728,7 @@
         "id_sirhus": 357740,
         "categoria": "Secretaría General Técnica",
         "depende_de": 42084,
-        "ruta": "/42084"
+        "ruta": "/42084/42085"
     }
 },
 {
@@ -727,8 +739,8 @@
         "dir3": "A05032839",
         "id_sirhus": 464640,
         "categoria": "Consejería",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "//42086"
     }
 },
 {
@@ -740,7 +752,7 @@
         "id_sirhus": 347540,
         "categoria": "Viceconsejería",
         "depende_de": 42086,
-        "ruta": "/42086"
+        "ruta": "/42086/42087"
     }
 },
 {
@@ -752,7 +764,7 @@
         "id_sirhus": 336940,
         "categoria": "Secretaría General Técnica",
         "depende_de": 42086,
-        "ruta": "/42086"
+        "ruta": "/42086/42088"
     }
 },
 {
@@ -764,7 +776,7 @@
         "id_sirhus": 3535410,
         "categoria": "Comisionado",
         "depende_de": 42086,
-        "ruta": "/42086"
+        "ruta": "/42086/42089"
     }
 },
 {
@@ -776,7 +788,7 @@
         "id_sirhus": 3444010,
         "categoria": "Entidad Pública",
         "depende_de": 42091,
-        "ruta": "/42091"
+        "ruta": "/42091/42090"
     }
 },
 {
@@ -787,8 +799,8 @@
         "dir3": "A05002844",
         "id_sirhus": 319640,
         "categoria": "Presidencia",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "//42091"
     }
 },
 {
@@ -800,7 +812,7 @@
         "id_sirhus": 3534210,
         "categoria": "Dirección General",
         "depende_de": 7268,
-        "ruta": "/42091/7268"
+        "ruta": "/42091/7268/42092"
     }
 },
 {
@@ -812,7 +824,7 @@
         "id_sirhus": 459540,
         "categoria": "Dirección General",
         "depende_de": 7268,
-        "ruta": "/42091/7268"
+        "ruta": "/42091/7268/42093"
     }
 },
 {
@@ -824,7 +836,7 @@
         "id_sirhus": 3534410,
         "categoria": "Viceconsejería",
         "depende_de": 42091,
-        "ruta": "/42091"
+        "ruta": "/42091/42094"
     }
 },
 {
@@ -836,7 +848,7 @@
         "id_sirhus": 325240,
         "categoria": "Dirección General",
         "depende_de": 24414,
-        "ruta": "/42091/24414"
+        "ruta": "/42091/24414/42095"
     }
 },
 {
@@ -848,7 +860,7 @@
         "id_sirhus": 3449310,
         "categoria": "Viceconsejería",
         "depende_de": 42091,
-        "ruta": "/42091"
+        "ruta": "/42091/42096"
     }
 },
 {
@@ -860,7 +872,7 @@
         "id_sirhus": 3534510,
         "categoria": "Dirección General",
         "depende_de": 42096,
-        "ruta": "/42091/42096"
+        "ruta": "/42091/42096/42097"
     }
 },
 {
@@ -872,7 +884,7 @@
         "id_sirhus": 3533610,
         "categoria": "Viceconsejería",
         "depende_de": 7251,
-        "ruta": "/42091/7251"
+        "ruta": "/42091/7251/42098"
     }
 },
 {
@@ -884,7 +896,7 @@
         "id_sirhus": 3533710,
         "categoria": "Viceconsejería",
         "depende_de": 7251,
-        "ruta": "/42091/7251"
+        "ruta": "/42091/7251/42099"
     }
 },
 {
@@ -896,7 +908,7 @@
         "id_sirhus": 3533810,
         "categoria": "Dirección General",
         "depende_de": 42099,
-        "ruta": "/42091/7251/42099"
+        "ruta": "/42091/7251/42099/42100"
     }
 },
 {
@@ -908,7 +920,7 @@
         "id_sirhus": 3533910,
         "categoria": "Dirección General",
         "depende_de": 42099,
-        "ruta": "/42091/7251/42099"
+        "ruta": "/42091/7251/42099/42101"
     }
 },
 {
@@ -920,7 +932,7 @@
         "id_sirhus": 3534710,
         "categoria": "Viceconsejería",
         "depende_de": 42091,
-        "ruta": "/42091"
+        "ruta": "/42091/42102"
     }
 },
 {
@@ -932,7 +944,7 @@
         "id_sirhus": 425840,
         "categoria": "Entidad Pública",
         "depende_de": 42091,
-        "ruta": "/42091"
+        "ruta": "/42091/42103"
     }
 },
 {
@@ -943,8 +955,8 @@
         "dir3": "A05033180",
         "id_sirhus": 3277910,
         "categoria": "Consejería",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "/1/42104"
     }
 },
 {
@@ -956,7 +968,7 @@
         "id_sirhus": 346040,
         "categoria": "Dirección General",
         "depende_de": 37364,
-        "ruta": "/42104/37364"
+        "ruta": "/42104/37364/42106"
     }
 },
 {
@@ -968,7 +980,7 @@
         "id_sirhus": 3534910,
         "categoria": "Dirección General",
         "depende_de": 37364,
-        "ruta": "/42104/37364"
+        "ruta": "/42104/37364/42107"
     }
 },
 {
@@ -980,7 +992,7 @@
         "id_sirhus": 3450010,
         "categoria": "Viceconsejería",
         "depende_de": 42104,
-        "ruta": "/42104"
+        "ruta": "/42104/42108"
     }
 },
 {
@@ -992,7 +1004,7 @@
         "id_sirhus": 464040,
         "categoria": "Dirección General",
         "depende_de": 42108,
-        "ruta": "/42104/42108"
+        "ruta": "/42104/42108/42109"
     }
 },
 {
@@ -1004,7 +1016,7 @@
         "id_sirhus": 465240,
         "categoria": "Dirección General",
         "depende_de": 42108,
-        "ruta": "/42104/42108"
+        "ruta": "/42104/42108/42110"
     }
 },
 {
@@ -1016,7 +1028,7 @@
         "id_sirhus": 3278010,
         "categoria": "Secretaría General Técnica",
         "depende_de": 42104,
-        "ruta": "/42104"
+        "ruta": "/42104/42111"
     }
 },
 {
@@ -1028,7 +1040,7 @@
         "id_sirhus": 3541210,
         "categoria": "Dirección General",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/42112"
     }
 },
 {
@@ -1039,8 +1051,8 @@
         "dir3": "A05032833",
         "id_sirhus": 348340,
         "categoria": "Consejería",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "//42114"
     }
 },
 {
@@ -1052,7 +1064,7 @@
         "id_sirhus": 353240,
         "categoria": "Viceconsejería",
         "depende_de": 42114,
-        "ruta": "/42114"
+        "ruta": "/42114/42115"
     }
 },
 {
@@ -1064,7 +1076,7 @@
         "id_sirhus": 3535110,
         "categoria": "Dirección General",
         "depende_de": 42115,
-        "ruta": "/42114/42115"
+        "ruta": "/42114/42115/42116"
     }
 },
 {
@@ -1076,7 +1088,7 @@
         "id_sirhus": 348640,
         "categoria": "Secretaría General Técnica",
         "depende_de": 42114,
-        "ruta": "/42114"
+        "ruta": "/42114/42117"
     }
 },
 {
@@ -1087,8 +1099,8 @@
         "dir3": "A05033187",
         "id_sirhus": 459040,
         "categoria": "Consejería",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "//42118"
     }
 },
 {
@@ -1100,7 +1112,7 @@
         "id_sirhus": 329340,
         "categoria": "Dirección General",
         "depende_de": 41545,
-        "ruta": "/42118/41545"
+        "ruta": "/42118/41545/42119"
     }
 },
 {
@@ -1112,7 +1124,7 @@
         "id_sirhus": 3535610,
         "categoria": "Viceconsejería",
         "depende_de": 42118,
-        "ruta": "/42118"
+        "ruta": "/42118/42120"
     }
 },
 {
@@ -1124,7 +1136,7 @@
         "id_sirhus": 327540,
         "categoria": "Secretaría General Técnica",
         "depende_de": 42118,
-        "ruta": "/42118"
+        "ruta": "/42118/42121"
     }
 },
 {
@@ -1136,7 +1148,7 @@
         "id_sirhus": 335040,
         "categoria": "Dirección General",
         "depende_de": 25954,
-        "ruta": "/42118/25954"
+        "ruta": "/42118/25954/42122"
     }
 },
 {
@@ -1147,8 +1159,8 @@
         "dir3": "A05047932",
         "id_sirhus": 391140,
         "categoria": "Consejería",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "/1/42123"
     }
 },
 {
@@ -1160,7 +1172,7 @@
         "id_sirhus": 573140,
         "categoria": "Viceconsejería",
         "depende_de": 42123,
-        "ruta": "/42123"
+        "ruta": "/42123/42124"
     }
 },
 {
@@ -1172,7 +1184,7 @@
         "id_sirhus": 395440,
         "categoria": "Dirección General",
         "depende_de": 42124,
-        "ruta": "/42123/42124"
+        "ruta": "/42123/42124/42125"
     }
 },
 {
@@ -1184,7 +1196,7 @@
         "id_sirhus": 394640,
         "categoria": "Dirección General",
         "depende_de": 42124,
-        "ruta": "/42123/42124"
+        "ruta": "/42123/42124/42126"
     }
 },
 {
@@ -1196,7 +1208,7 @@
         "id_sirhus": 3535810,
         "categoria": "Dirección General",
         "depende_de": 42124,
-        "ruta": "/42123/42124"
+        "ruta": "/42123/42124/42127"
     }
 },
 {
@@ -1208,7 +1220,7 @@
         "id_sirhus": 395940,
         "categoria": "Dirección General",
         "depende_de": 42124,
-        "ruta": "/42123/42124"
+        "ruta": "/42123/42124/42128"
     }
 },
 {
@@ -1220,7 +1232,7 @@
         "id_sirhus": 3536010,
         "categoria": "Viceconsejería",
         "depende_de": 42123,
-        "ruta": "/42123"
+        "ruta": "/42123/42129"
     }
 },
 {
@@ -1232,7 +1244,7 @@
         "id_sirhus": 3281810,
         "categoria": "Dirección General",
         "depende_de": 42129,
-        "ruta": "/42123/42129"
+        "ruta": "/42123/42129/42130"
     }
 },
 {
@@ -1244,7 +1256,7 @@
         "id_sirhus": 3536210,
         "categoria": "Dirección General",
         "depende_de": 42129,
-        "ruta": "/42123/42129"
+        "ruta": "/42123/42129/42131"
     }
 },
 {
@@ -1256,7 +1268,7 @@
         "id_sirhus": 3536410,
         "categoria": "Viceconsejería",
         "depende_de": 42123,
-        "ruta": "/42123"
+        "ruta": "/42123/42132"
     }
 },
 {
@@ -1268,7 +1280,7 @@
         "id_sirhus": 399640,
         "categoria": "Dirección General",
         "depende_de": 42132,
-        "ruta": "/42123/42132"
+        "ruta": "/42123/42132/42133"
     }
 },
 {
@@ -1280,7 +1292,7 @@
         "id_sirhus": 3536710,
         "categoria": "Dirección General",
         "depende_de": 42132,
-        "ruta": "/42123/42132"
+        "ruta": "/42123/42132/42134"
     }
 },
 {
@@ -1292,7 +1304,7 @@
         "id_sirhus": 392140,
         "categoria": "Secretaría General Técnica",
         "depende_de": 42123,
-        "ruta": "/42123"
+        "ruta": "/42123/42135"
     }
 },
 {
@@ -1303,8 +1315,8 @@
         "dir3": "A05047663",
         "id_sirhus": 3450410,
         "categoria": "Consejería",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "//42136"
     }
 },
 {
@@ -1316,7 +1328,7 @@
         "id_sirhus": 3279110,
         "categoria": "Viceconsejería",
         "depende_de": 42136,
-        "ruta": "/42136"
+        "ruta": "/42136/42137"
     }
 },
 {
@@ -1328,7 +1340,7 @@
         "id_sirhus": 467640,
         "categoria": "Dirección General",
         "depende_de": 42137,
-        "ruta": "/42136/42137"
+        "ruta": "/42136/42137/42138"
     }
 },
 {
@@ -1340,7 +1352,7 @@
         "id_sirhus": 3536910,
         "categoria": "Viceconsejería",
         "depende_de": 42136,
-        "ruta": "/42136"
+        "ruta": "/42136/42139"
     }
 },
 {
@@ -1352,7 +1364,7 @@
         "id_sirhus": 3537110,
         "categoria": "Dirección General",
         "depende_de": 42139,
-        "ruta": "/42136/42139"
+        "ruta": "/42136/42139/42140"
     }
 },
 {
@@ -1364,7 +1376,7 @@
         "id_sirhus": 3537310,
         "categoria": "Dirección General",
         "depende_de": 42139,
-        "ruta": "/42136/42139"
+        "ruta": "/42136/42139/42141"
     }
 },
 {
@@ -1376,7 +1388,7 @@
         "id_sirhus": 3539410,
         "categoria": "Secretaría General Técnica",
         "depende_de": 42136,
-        "ruta": "/42136"
+        "ruta": "/42136/42142"
     }
 },
 {
@@ -1387,8 +1399,8 @@
         "dir3": "A05030988",
         "id_sirhus": 3451210,
         "categoria": "Consejería",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "//42143"
     }
 },
 {
@@ -1400,7 +1412,7 @@
         "id_sirhus": 387540,
         "categoria": "Dirección General",
         "depende_de": 39166,
-        "ruta": "/42143/39166"
+        "ruta": "/42143/39166/42144"
     }
 },
 {
@@ -1412,7 +1424,7 @@
         "id_sirhus": 386640,
         "categoria": "Dirección General",
         "depende_de": 39166,
-        "ruta": "/42143/39166"
+        "ruta": "/42143/39166/42145"
     }
 },
 {
@@ -1424,7 +1436,7 @@
         "id_sirhus": 3449810,
         "categoria": "Viceconsejería",
         "depende_de": 42143,
-        "ruta": "/42143"
+        "ruta": "/42143/42146"
     }
 },
 {
@@ -1436,7 +1448,7 @@
         "id_sirhus": 404840,
         "categoria": "Dirección General",
         "depende_de": 42146,
-        "ruta": "/42143/42146"
+        "ruta": "/42143/42146/42147"
     }
 },
 {
@@ -1448,7 +1460,7 @@
         "id_sirhus": 3451810,
         "categoria": "Secretaría General Técnica",
         "depende_de": 42143,
-        "ruta": "/42143"
+        "ruta": "/42143/42148"
     }
 },
 {
@@ -1460,7 +1472,7 @@
         "id_sirhus": 419840,
         "categoria": "Organismo Autónomo",
         "depende_de": 42143,
-        "ruta": "/42143"
+        "ruta": "/42143/42149"
     }
 },
 {
@@ -1471,8 +1483,8 @@
         "dir3": "A05046692",
         "id_sirhus": 3537510,
         "categoria": "Consejería",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "//42150"
     }
 },
 {
@@ -1484,7 +1496,7 @@
         "id_sirhus": 3537810,
         "categoria": "Viceconsejería",
         "depende_de": 42150,
-        "ruta": "/42150"
+        "ruta": "/42150/42151"
     }
 },
 {
@@ -1496,7 +1508,7 @@
         "id_sirhus": 397340,
         "categoria": "Dirección General",
         "depende_de": 42151,
-        "ruta": "/42150/42151"
+        "ruta": "/42150/42151/42152"
     }
 },
 {
@@ -1508,7 +1520,7 @@
         "id_sirhus": 3538010,
         "categoria": "Dirección General",
         "depende_de": 42151,
-        "ruta": "/42150/42151"
+        "ruta": "/42150/42151/42153"
     }
 },
 {
@@ -1520,7 +1532,7 @@
         "id_sirhus": 3451610,
         "categoria": "Viceconsejería",
         "depende_de": 42150,
-        "ruta": "/42150"
+        "ruta": "/42150/42154"
     }
 },
 {
@@ -1532,7 +1544,7 @@
         "id_sirhus": 399340,
         "categoria": "Dirección General",
         "depende_de": 42154,
-        "ruta": "/42150/42154"
+        "ruta": "/42150/42154/42155"
     }
 },
 {
@@ -1544,7 +1556,7 @@
         "id_sirhus": 3538210,
         "categoria": "Dirección General",
         "depende_de": 42154,
-        "ruta": "/42150/42154"
+        "ruta": "/42150/42154/42156"
     }
 },
 {
@@ -1556,7 +1568,7 @@
         "id_sirhus": 3538510,
         "categoria": "Secretaría General Técnica",
         "depende_de": 42150,
-        "ruta": "/42150"
+        "ruta": "/42150/42157"
     }
 },
 {
@@ -1568,7 +1580,7 @@
         "id_sirhus": 3308710,
         "categoria": "Dirección General",
         "depende_de": 42150,
-        "ruta": "/42150"
+        "ruta": "/42150/42158"
     }
 },
 {
@@ -1579,8 +1591,8 @@
         "dir3": "A05047664",
         "id_sirhus": 3538710,
         "categoria": "Consejería",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "//42159"
     }
 },
 {
@@ -1592,7 +1604,7 @@
         "id_sirhus": 467140,
         "categoria": "Viceconsejería",
         "depende_de": 42159,
-        "ruta": "/42159"
+        "ruta": "/42159/42160"
     }
 },
 {
@@ -1604,7 +1616,7 @@
         "id_sirhus": 3279310,
         "categoria": "Dirección General",
         "depende_de": 42160,
-        "ruta": "/42159/42160"
+        "ruta": "/42159/42160/42161"
     }
 },
 {
@@ -1616,7 +1628,7 @@
         "id_sirhus": 3539210,
         "categoria": "Dirección General",
         "depende_de": 42160,
-        "ruta": "/42159/42160"
+        "ruta": "/42159/42160/42162"
     }
 },
 {
@@ -1628,7 +1640,7 @@
         "id_sirhus": 3499110,
         "categoria": "Dirección General",
         "depende_de": 42160,
-        "ruta": "/42159/42160"
+        "ruta": "/42159/42160/42163"
     }
 },
 {
@@ -1640,7 +1652,7 @@
         "id_sirhus": 3450710,
         "categoria": "Secretaría General Técnica",
         "depende_de": 42159,
-        "ruta": "/42159"
+        "ruta": "/42159/42164"
     }
 },
 {
@@ -1651,8 +1663,8 @@
         "dir3": "A05045232",
         "id_sirhus": 472240,
         "categoria": "Consejería",
-        "depende_de": null,
-        "ruta": "/"
+        "depende_de": 1,
+        "ruta": "/1/42165"
     }
 },
 {
@@ -1664,7 +1676,7 @@
         "id_sirhus": 3445610,
         "categoria": "Viceconsejería",
         "depende_de": 42165,
-        "ruta": "/42165"
+        "ruta": "/42165/42166"
     }
 },
 {
@@ -1676,7 +1688,7 @@
         "id_sirhus": 409340,
         "categoria": "Dirección General",
         "depende_de": 42166,
-        "ruta": "/42165/42166"
+        "ruta": "/42165/42166/42167"
     }
 },
 {
@@ -1688,7 +1700,7 @@
         "id_sirhus": 3449410,
         "categoria": "Dirección General",
         "depende_de": 42166,
-        "ruta": "/42165/42166"
+        "ruta": "/42165/42166/42168"
     }
 },
 {
@@ -1700,7 +1712,7 @@
         "id_sirhus": 3449610,
         "categoria": "Dirección General",
         "depende_de": 42166,
-        "ruta": "/42165/42166"
+        "ruta": "/42165/42166/42169"
     }
 },
 {
@@ -1712,7 +1724,7 @@
         "id_sirhus": 3539810,
         "categoria": "Dirección General",
         "depende_de": 42166,
-        "ruta": "/42165/42166"
+        "ruta": "/42165/42166/42170"
     }
 },
 {
@@ -1724,7 +1736,7 @@
         "id_sirhus": 3539910,
         "categoria": "Dirección General",
         "depende_de": 41970,
-        "ruta": "/42165/41970"
+        "ruta": "/42165/41970/42171"
     }
 },
 {
@@ -1736,7 +1748,7 @@
         "id_sirhus": 401340,
         "categoria": "Secretaría General Técnica",
         "depende_de": 42165,
-        "ruta": "/42165"
+        "ruta": "/42165/42172"
     }
 },
 {
@@ -1748,7 +1760,7 @@
         "id_sirhus": 3541410,
         "categoria": "Dirección General",
         "depende_de": 25954,
-        "ruta": "/42118/25954"
+        "ruta": "/42118/25954/42173"
     }
 },
 {
@@ -1760,7 +1772,7 @@
         "id_sirhus": 426140,
         "categoria": "Secretaría General",
         "depende_de": 42103,
-        "ruta": "/42091/42103"
+        "ruta": "/42091/42103/42188"
     }
 },
 {
@@ -1772,7 +1784,31 @@
         "id_sirhus": 419340,
         "categoria": "Dirección General",
         "depende_de": 6594,
-        "ruta": "/6547/6594"
+        "ruta": "/6547/6594/42214"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "AGPA",
+    "fields": {
+        "organismo": 42084,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-agricultura"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "BSIJIF",
+    "fields": {
+        "organismo": 42165,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-bienestar-social"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "EFPAFD",
+    "fields": {
+        "organismo": 42123,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-educacion"
     }
 },
 {
@@ -1781,6 +1817,22 @@
     "fields": {
         "organismo": 42104,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-economia"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "HRUE",
+    "fields": {
+        "organismo": 42086,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-hacienda"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "ISTAC",
+    "fields": {
+        "organismo": 37829,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/istac"
     }
 },
 {
@@ -1809,6 +1861,22 @@
 },
 {
     "model": "directorio.ente",
+    "pk": "PTCTA",
+    "fields": {
+        "organismo": 42136,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-politica-territorial"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "SAN",
+    "fields": {
+        "organismo": 6547,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-sanidad"
+    }
+},
+{
+    "model": "directorio.ente",
     "pk": "TEE",
     "fields": {
         "organismo": 42159,
@@ -1821,6 +1889,14 @@
     "fields": {
         "organismo": 42143,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-turismo"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "UCIC",
+    "fields": {
+        "organismo": 42150,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-universidades-ciencia-innovacion-cultura"
     }
 }
 ]

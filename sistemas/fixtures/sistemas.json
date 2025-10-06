@@ -483,9 +483,9 @@
     "model": "sistemas.sistema",
     "pk": 1,
     "fields": {
+        "nombre": "Inventario de Sistemas de Información",
         "organismo": 42093,
         "codigo": "ISSI",
-        "nombre": "Inventario de Sistemas de Información",
         "url": null,
         "descripcion": "Inventario global de los sistemas de información de las administraciones publicas de la Comunidad Autónoma de Canarias",
         "proposito": "Gestionar y mantener un inventario de todos los sistemas de información utilizados en el Gobierno de Canarias y organismos relaciones.\r\n\r\nEn este sistema se considera un **sistema de información** como el conjunto organizado de elementos interrelacionados (personas, procesos, datos, tecnología y recursos) que trabajan juntos para recopilar, procesar, almacenar, distribuir y gestionar información con el fin de apoyar la toma de decisiones, la coordinación operativa y el control dentro de una organización\"",
@@ -501,9 +501,9 @@
     "model": "sistemas.sistema",
     "pk": 2,
     "fields": {
+        "nombre": "Registro General de Empresas, Actividades y Establecimientos Turísticos",
         "organismo": 42144,
         "codigo": "TURIDATA",
-        "nombre": "Registro General de Empresas, Actividades y Establecimientos Turísticos",
         "url": null,
         "descripcion": "Un sistema único completo y manejable, que sirva como herramienta de apoyo a la gestión administrativa del sector, y que proporciona información en tiempo real para la gestión estratégica del turismo canario",
         "proposito": "El funcionamiento de Turidata permite la introducción de datos por parte de los Cabildos, que se registren las resoluciones y que se emitan los certificados de inscripción de forma automática.",
@@ -519,9 +519,9 @@
     "model": "sistemas.sistema",
     "pk": 3,
     "fields": {
+        "nombre": "Juriscan",
         "organismo": 42097,
         "codigo": "JURISCAN",
-        "nombre": "Juriscan",
         "url": null,
         "descripcion": "Base de datos cuyo objetivo es difundir el conocimiento y facilitar la consulta del sistema jurídico de la Comunidad Autónoma",
         "proposito": "**JURISCAN** es una base de datos desarrollada por el Gobierno de Canarias con el objetivo de difundir el conocimiento y facilitar la consulta del sistema jurídico de la Comunidad Autónoma.\r\n\r\nEs una base de datos principalmente legislativa, en la que pueden encontrarse todas las disposiciones generales emanadas de las instituciones autonómicas; pero también es una base de datos limitadamente jurisprudencial, en la medida que incluye nota de las sentencias que afectan a las disposiciones autonómicas.\r\n\r\nLa presentación de los documentos se hace desde una perspectiva dinámica. Cada disposición tiene su ficha, que comprende detalladamente cuanto está relacionado con ella, antes y después de su vigencia, con la relación de las disposiciones a las que ha afectado y de las referencias, legislativas y jurisprudenciales, que de alguna manera tienen una incidencia posterior. La actualización permanente de estas fichas constituye una garantía de seguridad jurídica en la aplicación del Derecho de la Comunidad Autónoma.\r\n\r\nEl sistema de consultas permite desde la más simple, con un mínimo de argumentos de búsqueda relativos a la presentación formal de la disposición, hasta la más compleja, en la que pueden combinarse elementos relacionados con el título, el rango, las materias o la fecha de la disposición. La búsqueda por materias se facilita con un tesauro de unos 3.000 términos que sirve para uniformar la terminología y estructurar la recuperación de documentos.",
@@ -537,9 +537,9 @@
     "model": "sistemas.sistema",
     "pk": 4,
     "fields": {
+        "nombre": "Sistema de información de recursos humanos",
         "organismo": 41545,
         "codigo": "SIRhUS",
-        "nombre": "Sistema de información de recursos humanos",
         "url": null,
         "descripcion": "Sistema para la gestión de los procedimientos en materia de personal, así como para la gestión del registro general de personal",
         "proposito": "Con la implantación de la aplicación **SIRHUS** (Sistema de Información de Recursos Humanos), se persigue  que esta herramienta sirva de instrumento para:\r\n\r\n- La planificación, gestión y seguimiento en materia de personal.\r\n\r\n- Potenciar las tareas de gestión y seguimiento simplificando las tareas esencialmente burocráticas\r\n\r\n- Mejorar la calidad y oportunidad en la toma de decisiones \r\n\r\n- La implantación de un sistema de información único de recursos humanos para todos los colectivos de personal de la Comunidad Autónoma de Canarias en una una plataforma integrada y flexible que permita soportar todo tipo de esquemas competenciales y colectivos.",
@@ -555,9 +555,9 @@
     "model": "sistemas.sistema",
     "pk": 5,
     "fields": {
+        "nombre": "Gestor de Expedientes Corporativo",
         "organismo": 42093,
         "codigo": "PLATEA",
-        "nombre": "Gestor de Expedientes Corporativo",
         "url": null,
         "descripcion": "Facilitar a los departamentos una herramienta que posibilite la automatización y tramitación electrónica de los expedientes administrativos.",
         "proposito": "La Ley 11/2007 reconoce a los ciudadanos el derecho a conocer por medios electrónicos el estado de tramitación de los procedimientos en los que sean interesados. Dicho derecho, obliga a los departamentos disponer de uno o varios gestores de expedientes.\r\n\r\nEl Gobierno de Canarias, para cumplir con este derecho, puso en marcha el proyecto de un gestor de expedientes corporativo, ofreciendo con ello la posibilidad de implementar y utilizar PLATEA por los departamentos sin gasto ninguno.\r\n\r\n## Objetivos\r\n\r\n- Facilitar a los departamentos una herramienta que posibilite la automatización y tramitación electrónica de los expedientes administrativos.\r\n\r\n- Integrar la gestión electrónica de procedimientos con la plataforma PLATINO de interoperabilidad corporativa en el Gobierno de Canarias y otros sistemas de gestión de expedientes ya existentes en otros Departamentos (GexTur, MAyTe, etc.)\r\n\r\n- Consecución efectiva del derecho de los ciudadanos a conocer el estado de los expedientes por medios electrónicos, definido en el artículo 6 de la Ley 11/2007.\r\n\r\nPrincipales dificultades y aspectos clave para la implantación\r\n\r\n- Se recomienda utilizar un motor de workflow adecuado a las necesidades de la organización y que permita acciones complejas como deshacer fases, gestión de eventos y relacionar expedientes.\r\n\r\n- Simplificar previamente todos los procedimientos a modelar en la herramienta de gestión, para facilitar el proceso posterior de diseño y parametrización de expedientes.\r\n\r\n- Dificultad derivada de la adecuación a los requisitos funcionales y aspectos organizativos de cada departamento, de forma que sea válida para cualquier modelo de negocio.\r\n\r\n- Las líneas de evolución girarán entorno a modelar todas las sub/familias, soportar modelado de eventos configurables asociados a cada fase/trámite/procedimiento, funcionalidades avanzadas en la tramitación de expedientes e integración con nuevos servicios de PLATINO.",
@@ -573,9 +573,9 @@
     "model": "sistemas.sistema",
     "pk": 6,
     "fields": {
+        "nombre": "Sirvete",
         "organismo": 42093,
         "codigo": "SIRVETE",
-        "nombre": "Sirvete",
         "url": null,
         "descripcion": "Gestión de incidencias y solicitudes de los usuarios realizadas as CiberCentro",
         "proposito": "Facilitar la gestión de incidencias y solicitudes para los usuarios, especialmente para aquellos que necesiten interactuar con el CiberCentro, el centro de servicios telemáticos del gobierno. Es una herramienta que permite a los usuarios registrar sus peticiones, realizar trámites y dar seguimiento a sus incidencias de manera cómoda y eficiente.",
@@ -591,9 +591,9 @@
     "model": "sistemas.sistema",
     "pk": 7,
     "fields": {
+        "nombre": "Platino",
         "organismo": 42093,
         "codigo": "PLATINO",
-        "nombre": "Platino",
         "url": null,
         "descripcion": "Servicio de Interoperabilidad del Gobierno de Canarias",
         "proposito": "Una infraestructura tecnológica para facilitar la ejecución de trámites administrativos electrónicos, siguiendo estándares y directrices de la administración electrónica.",
@@ -609,9 +609,9 @@
     "model": "sistemas.sistema",
     "pk": 8,
     "fields": {
+        "nombre": "SEFLOGIC",
         "organismo": 42088,
         "codigo": "SEFLOGIC",
-        "nombre": "SEFLOGIC",
         "url": null,
         "descripcion": "Sistema de Información Económico-Financiera y Logística",
         "proposito": "Es el Sistema de Información Económico-Financiera y Logística de la Comunidad Autónoma. Este sistema registra todas las operaciones presupuestarias, económicas, financieras, patrimoniales y de tesorería de la administración pública canaria, sus organismos autónomos y entes con presupuesto.",
@@ -627,9 +627,9 @@
     "model": "sistemas.sistema",
     "pk": 9,
     "fields": {
+        "nombre": "Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias",
         "organismo": 42093,
         "codigo": "SICAC",
-        "nombre": "Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias",
         "url": null,
         "descripcion": "inventario de las actuaciones administrativas, tanto externas como internas, que gestiona la APCAC y sus organismos públicos dependientes",
         "proposito": "Gestión de un Inventario de todas las actuaciones administrativas, tanto externas como internas, que gestiona la Administración Pública de la Comunidad Autónoma de Canarias y sus organismos públicos dependientes.\r\n\r\n- La información relativa a las actuaciones administrativas externas estará disponible de forma pública\r\n \r\n- Incluirá información básica sobre la tramitación de cada actuación por parte de los interesados\r\n\r\n- A efectos de la interoperabilidad administrativa, las actuaciones administrativas incorporadas al SICAC se clasificarán en familias y subfamilias y en temas y subtema.",
@@ -645,9 +645,9 @@
     "model": "sistemas.sistema",
     "pk": 10,
     "fields": {
+        "nombre": "Registro de entrada  y salida",
         "organismo": 42119,
         "codigo": "HIPERREG",
-        "nombre": "Registro de entrada  y salida",
         "url": null,
         "descripcion": "Sistema Intercomunicado de Registros de Entrada y Salida de documentos de la Administración Pública de la Comunidad Autónoma de Canarias",
         "proposito": "HiperReg es el sistema corporativo que gestiona el registro de entradas y salidas de documentos en el que se anotan todos los escritos o comunicaciones que se han presentado o recibido en la organización, así como la salida de aquellos escritos o notificaciones oficiales dirigidas a particulares u otras administraciones. Además, también gestiona las comunicaciones internas que posibilitan la notificación de documentación entre unidades de la misma organización para su tramitación.",
@@ -663,9 +663,9 @@
     "model": "sistemas.sistema",
     "pk": 11,
     "fields": {
+        "nombre": "Sistema de Dirección por Objetivos",
         "organismo": 42119,
         "codigo": "TRISKELL",
-        "nombre": "Sistema de Dirección por Objetivos",
         "url": null,
         "descripcion": "Sistema de información del modelo de referencia de planificación y gestión estratégica y dirección por objetivos en la APCAC.",
         "proposito": "El Decreto 88/2023, establece la estructura que ha de regir el nuevo marco de programación de\r\nla Administración Pública de la Comunidad Autónoma de Canarias en el periodo 2024-2027. En\r\neste periodo, cada departamento debe elaborar su Plan Estratégico Departamental y aprobar\r\nsus Planes Operativos Anuales. La herramienta que contendrá toda esta información, Triskell, ha\r\nsido configurada para dar soporte a todo el sistema de información del Gobierno de Canarias.",
@@ -681,9 +681,9 @@
     "model": "sistemas.sistema",
     "pk": 12,
     "fields": {
+        "nombre": "Directorio de Unidades Administrativas y Oficinas de Registro y Atención a la Ciudadanía",
         "organismo": 42119,
         "codigo": "DIRCAC",
-        "nombre": "Directorio de Unidades Administrativas y Oficinas de Registro y Atención a la Ciudadanía",
         "url": null,
         "descripcion": "Inventario de información de las unidades administrativas, oficinas de registro y de atención a la ciudadanía que proporciona información centralizada y actualizada sobre las distintas unidades orgánicas y oficinas de atención al público, facilitando tanto la gestión interna de la administración como el acceso de la ciudadanía a sus servicios y la presentación de documentos.",
         "proposito": "Inventario de información de las unidades administrativas, oficinas de registro y de atención a la ciudadanía que proporciona información centralizada y actualizada sobre las distintas unidades orgánicas y oficinas de atención al público, facilitando tanto la gestión interna de la administración como el acceso de la ciudadanía a sus servicios y la presentación de documentos.",
@@ -733,14 +733,196 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "aberfer",
+    "fields": {
+        "email": "aberfer@gobiernodecanarias.org",
+        "nombre": "Alfredo Manuel",
+        "apellidos": "Bermudez Ferrer",
+        "organismo": 42159,
+        "f_alta": "2025-10-06T18:41:34.112Z",
+        "f_cambio": "2025-10-06T18:41:34.112Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "agilarm",
+    "fields": {
+        "email": "agilarm@gobiernodecanarias.org",
+        "nombre": "Antonia Rosa",
+        "apellidos": "Gil Armas",
+        "organismo": 42123,
+        "f_alta": "2025-10-06T18:41:33.412Z",
+        "f_cambio": "2025-10-06T18:41:33.412Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "almudena.alvarado",
+    "fields": {
+        "email": "almudena.alvarado@essscan.es",
+        "nombre": "Almudena",
+        "apellidos": "Alvarado Lozano",
+        "organismo": 6564,
+        "f_alta": "2025-10-06T18:41:33.948Z",
+        "f_cambio": "2025-10-06T18:41:33.948Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "aloppui",
+    "fields": {
+        "email": "aloppui@gobiernodecanarias.org",
+        "nombre": "Alexis Jorge",
+        "apellidos": "López Puig",
+        "organismo": 42123,
+        "f_alta": "2025-10-06T18:41:33.456Z",
+        "f_cambio": "2025-10-06T18:41:33.457Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "anhergue",
+    "fields": {
+        "email": "anhergue@gobiernodecanarias.org",
+        "nombre": "Aniano",
+        "apellidos": "Hernández Guerra",
+        "organismo": 42104,
+        "f_alta": "2025-10-06T18:41:33.494Z",
+        "f_cambio": "2025-10-06T18:41:33.494Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "apergarc",
+    "fields": {
+        "email": "apergarc@gobiernodecanarias.org",
+        "nombre": "Alicia",
+        "apellidos": "Perera García",
+        "organismo": 6547,
+        "f_alta": "2025-10-06T18:41:33.916Z",
+        "f_cambio": "2025-10-06T18:41:33.916Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "atrudel",
+    "fields": {
+        "email": "atrudel@gobiernodecanarias.org",
+        "nombre": "Alexander",
+        "apellidos": "Trujillo Delgado",
+        "organismo": 42136,
+        "f_alta": "2025-10-06T18:41:33.814Z",
+        "f_cambio": "2025-10-06T18:41:33.814Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "aumenperp",
+    "fields": {
+        "email": "aumenperp@gobiernodecanarias.org",
+        "nombre": "Agustina",
+        "apellidos": "Méndez Perera",
+        "organismo": 41854,
+        "f_alta": "2025-10-06T18:41:33.879Z",
+        "f_cambio": "2025-10-06T18:41:33.879Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "bherafor",
+    "fields": {
+        "email": "bherafor@gobiernodecanarias.org",
+        "nombre": "Beatriz Beata",
+        "apellidos": "Hernández Afonso",
+        "organismo": 42150,
+        "f_alta": "2025-10-06T18:41:34.274Z",
+        "f_cambio": "2025-10-06T18:41:34.274Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "crivlez",
     "fields": {
         "email": "crivlez@gobiernodecanarias.org",
-        "nombre": null,
-        "apellidos": null,
+        "nombre": "Claudio Alberto",
+        "apellidos": "Rivero Lezcano",
         "organismo": 42119,
         "f_alta": "2025-10-02T08:12:31Z",
-        "f_cambio": "2025-10-02T08:12:31Z",
+        "f_cambio": "2025-10-06T11:31:16.565Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "dmarsanl",
+    "fields": {
+        "email": "dmarsanl@gobiernodecanarias.org",
+        "nombre": "Daniel",
+        "apellidos": "Marrero Sánchez",
+        "organismo": 41854,
+        "f_alta": "2025-10-06T18:41:33.830Z",
+        "f_cambio": "2025-10-06T18:41:33.830Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "dnolsua",
+    "fields": {
+        "email": "dnolsua@gobiernodecanarias.org",
+        "nombre": "Dolores Isabel",
+        "apellidos": "Nolasco Suárez",
+        "organismo": 42086,
+        "f_alta": "2025-10-06T18:41:33.508Z",
+        "f_cambio": "2025-10-06T18:41:33.508Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "dsuapers",
+    "fields": {
+        "email": "dsuapers@gobiernodecanarias.org",
+        "nombre": "David",
+        "apellidos": "Suárez Perera",
+        "organismo": 42165,
+        "f_alta": "2025-10-06T12:58:36.190Z",
+        "f_cambio": "2025-10-06T12:58:36.190Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "eferagu",
+    "fields": {
+        "email": "eferagu@gobiernodecanarias.org",
+        "nombre": "María Elena",
+        "apellidos": "Fernández Aguirre",
+        "organismo": 42118,
+        "f_alta": "2025-10-06T18:41:33.631Z",
+        "f_cambio": "2025-10-06T18:41:33.631Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "fartjor",
+    "fields": {
+        "email": "fartjor@gobiernodecanarias.org",
+        "nombre": "Federico J.",
+        "apellidos": "Artiles Jorge",
+        "organismo": 42086,
+        "f_alta": "2025-10-06T18:41:33.525Z",
+        "f_cambio": "2025-10-06T18:41:33.525Z",
         "f_baja": null
     }
 },
@@ -749,11 +931,154 @@
     "pk": "fbezcar",
     "fields": {
         "email": "fbezcar@gobiernodecanarias.org",
-        "nombre": null,
-        "apellidos": null,
+        "nombre": "Fátima",
+        "apellidos": "Bezares Carretero",
         "organismo": 42119,
         "f_alta": "2025-10-02T08:12:31Z",
-        "f_cambio": "2025-10-02T08:12:31Z",
+        "f_cambio": "2025-10-06T11:29:07.166Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "feugbau",
+    "fields": {
+        "email": "feugbau@gobiernodecanarias.org",
+        "nombre": "Francisco José",
+        "apellidos": "Eugenio Baute",
+        "organismo": 42091,
+        "f_alta": "2025-10-06T18:41:33.701Z",
+        "f_cambio": "2025-10-06T18:41:33.701Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "ffermar",
+    "fields": {
+        "email": "ffermar@gobiernodecanarias.org",
+        "nombre": "Francisca",
+        "apellidos": "Fernández Martínez",
+        "organismo": 42123,
+        "f_alta": "2025-10-06T18:41:33.431Z",
+        "f_cambio": "2025-10-06T18:41:33.431Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "fojechi",
+    "fields": {
+        "email": "fojechi@gobiernodecanarias.org",
+        "nombre": "Fátima Mercedes",
+        "apellidos": "Ojeda Chirino",
+        "organismo": 42091,
+        "f_alta": "2025-10-06T18:41:33.718Z",
+        "f_cambio": "2025-10-06T18:41:33.718Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "gpalara",
+    "fields": {
+        "email": "gpalara@gobiernodecanarias.org",
+        "nombre": "Domingo Guzmán",
+        "apellidos": "Palacios Arazuri",
+        "organismo": 42136,
+        "f_alta": "2025-10-06T18:41:33.801Z",
+        "f_cambio": "2025-10-06T18:41:33.801Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "hgargarg",
+    "fields": {
+        "email": "hgargarg@gobiernodecanarias.org",
+        "nombre": "Héctor",
+        "apellidos": "García García",
+        "organismo": 41854,
+        "f_alta": "2025-10-06T18:41:33.860Z",
+        "f_cambio": "2025-10-06T18:41:33.860Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "itrubos",
+    "fields": {
+        "email": "itrubos@gobiernodecanarias.org",
+        "nombre": "Ildefonso Mauro",
+        "apellidos": "Trujillo Bosa",
+        "organismo": 37815,
+        "f_alta": "2025-10-06T18:41:33.539Z",
+        "f_cambio": "2025-10-06T18:41:33.539Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jfrosmar",
+    "fields": {
+        "email": "jfrosmar@gobiernodecanarias.org",
+        "nombre": "Juan Félix",
+        "apellidos": "Rosa Martín",
+        "organismo": 39166,
+        "f_alta": "2025-10-06T18:41:34.160Z",
+        "f_cambio": "2025-10-06T18:41:34.160Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jgarbeng",
+    "fields": {
+        "email": "jgarbeng@gobiernodecanarias.org",
+        "nombre": "Jesús Manuel",
+        "apellidos": "García Benítez",
+        "organismo": 42149,
+        "f_alta": "2025-10-06T18:41:34.014Z",
+        "f_cambio": "2025-10-06T18:41:34.014Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jgonyanp",
+    "fields": {
+        "email": "jgonyanp@gobiernodecanarias.org",
+        "nombre": "Jesús Alberto",
+        "apellidos": "González Yanes",
+        "organismo": 37829,
+        "f_alta": "2025-10-06T18:41:33.556Z",
+        "f_cambio": "2025-10-06T18:41:33.556Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jmorrom",
+    "fields": {
+        "email": "jmorrom@gobiernodecanarias.org",
+        "nombre": "José Ramón",
+        "apellidos": "Moreira Romero",
+        "organismo": 6547,
+        "f_alta": "2025-10-06T18:41:33.934Z",
+        "f_cambio": "2025-10-06T18:41:33.934Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jrobper",
+    "fields": {
+        "email": "jrobper@gobiernodecanarias.org",
+        "nombre": "Jesús Pedro",
+        "apellidos": "Robayna Perez",
+        "organismo": 42165,
+        "f_alta": "2025-10-06T13:06:19.213Z",
+        "f_cambio": "2025-10-06T13:06:19.213Z",
         "f_baja": null
     }
 },
@@ -772,6 +1097,45 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "jtresan",
+    "fields": {
+        "email": "jtresan@gobiernodecanarias.org",
+        "nombre": "José",
+        "apellidos": "Trejo Sánchez",
+        "organismo": 42149,
+        "f_alta": "2025-10-06T18:41:34.039Z",
+        "f_cambio": "2025-10-06T18:41:34.039Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "lgalrev",
+    "fields": {
+        "email": "lgalrev@gobiernodecanarias.org",
+        "nombre": "Fidelina",
+        "apellidos": "Galvez Revilla",
+        "organismo": 42091,
+        "f_alta": "2025-10-06T18:41:33.751Z",
+        "f_cambio": "2025-10-06T18:41:33.751Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "lrodfaln",
+    "fields": {
+        "email": "lrodfaln@gobiernodecanarias.org",
+        "nombre": "Lidia del Pino",
+        "apellidos": "Rodríguez Falcón",
+        "organismo": 42143,
+        "f_alta": "2025-10-06T18:41:34.227Z",
+        "f_cambio": "2025-10-06T18:41:34.227Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "malosua",
     "fields": {
         "email": "malosua@gobiernodecanarias.org",
@@ -785,14 +1149,261 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "malvmar",
+    "fields": {
+        "email": "malvmar@gobiernodecanarias.org",
+        "nombre": "María",
+        "apellidos": "Álvarez Martín",
+        "organismo": 6547,
+        "f_alta": "2025-10-06T18:41:33.899Z",
+        "f_cambio": "2025-10-06T18:41:33.899Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mgarrodx",
+    "fields": {
+        "email": "mgarrodx@gobiernodecanarias.org",
+        "nombre": "Miguel Agustín",
+        "apellidos": "García Rodríguez",
+        "organismo": 42084,
+        "f_alta": "2025-10-06T12:55:23.386Z",
+        "f_cambio": "2025-10-06T12:55:23.386Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mgonjorf",
+    "fields": {
+        "email": "mgonjorf@gobiernodecanarias.org",
+        "nombre": "Montserrat",
+        "apellidos": "González Jorge",
+        "organismo": 42143,
+        "f_alta": "2025-10-06T18:41:34.193Z",
+        "f_cambio": "2025-10-06T18:41:34.193Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mgonmar10",
+    "fields": {
+        "email": "mgonmar10@gobiernodecanarias.org",
+        "nombre": "Marta",
+        "apellidos": "González Martín",
+        "organismo": 6564,
+        "f_alta": "2025-10-06T18:41:33.964Z",
+        "f_cambio": "2025-10-06T18:41:33.964Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mhorama",
+    "fields": {
+        "email": "mhorama@gobiernodecanarias.org",
+        "nombre": "Miguel Ángel",
+        "apellidos": "Hormiga Amador",
+        "organismo": 42118,
+        "f_alta": "2025-10-06T18:41:33.684Z",
+        "f_cambio": "2025-10-06T18:41:33.684Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mjgarsan",
+    "fields": {
+        "email": "mjgarsan@gobiernodecanarias.org",
+        "nombre": "Mateo José",
+        "apellidos": "Garrido Sanahuja",
+        "organismo": 42159,
+        "f_alta": "2025-10-06T18:41:34.066Z",
+        "f_cambio": "2025-10-06T18:41:34.066Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mmarferc",
+    "fields": {
+        "email": "mmarferc@gobiernodecanarias.org",
+        "nombre": "Miguel Jesús Martínez",
+        "apellidos": "Carrasco Fernández",
+        "organismo": 42165,
+        "f_alta": "2025-10-06T12:56:11.542Z",
+        "f_cambio": "2025-10-06T12:56:11.542Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mnavherz",
+    "fields": {
+        "email": "mnavherz@gobiernodecanarias.org",
+        "nombre": "María Teresa",
+        "apellidos": "Navarro Hernández",
+        "organismo": 42159,
+        "f_alta": "2025-10-06T18:41:34.136Z",
+        "f_cambio": "2025-10-06T18:41:34.136Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mogarsan",
+    "fields": {
+        "email": "mogarsan@gobiernodecanarias.org",
+        "nombre": "Montserrat",
+        "apellidos": "García Santana",
+        "organismo": 42150,
+        "f_alta": "2025-10-06T18:41:34.247Z",
+        "f_cambio": "2025-10-06T18:41:34.247Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mrodbat",
+    "fields": {
+        "email": "mrodbat@gobiernodecanarias.org",
+        "nombre": "María del Carmen",
+        "apellidos": "Rodríguez Batista",
+        "organismo": 42114,
+        "f_alta": "2025-10-06T18:41:33.575Z",
+        "f_cambio": "2025-10-06T18:41:33.575Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mspergon",
+    "fields": {
+        "email": "mspergon@gobiernodecanarias.org",
+        "nombre": "María Sheila",
+        "apellidos": "Pérez González",
+        "organismo": 42123,
+        "f_alta": "2025-10-06T18:41:33.475Z",
+        "f_cambio": "2025-10-06T18:41:33.475Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "msuacol",
+    "fields": {
+        "email": "msuacol@gobiernodecanarias.org",
+        "nombre": "María Cristina",
+        "apellidos": "Suarez Colomer",
+        "organismo": 42114,
+        "f_alta": "2025-10-06T18:41:33.594Z",
+        "f_cambio": "2025-10-06T18:41:33.594Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mtruled",
+    "fields": {
+        "email": "mtruled@gobiernodecanarias.org",
+        "nombre": "Mária Ángles",
+        "apellidos": "Trujillo Ledesma",
+        "organismo": 42118,
+        "f_alta": "2025-10-06T18:41:33.649Z",
+        "f_cambio": "2025-10-06T18:41:33.649Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mvalher",
+    "fields": {
+        "email": "mvalher@gobiernodecanarias.org",
+        "nombre": "María Candelaria",
+        "apellidos": "Valido Hernández",
+        "organismo": 37152,
+        "f_alta": "2025-10-06T18:41:33.612Z",
+        "f_cambio": "2025-10-06T18:41:33.612Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "nferzam",
+    "fields": {
+        "email": "nferzam@gobiernodecanarias.org",
+        "nombre": "Nayra",
+        "apellidos": "Fernández Zamora",
+        "organismo": 39166,
+        "f_alta": "2025-10-06T18:41:34.180Z",
+        "f_cambio": "2025-10-06T18:41:34.180Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "nluiyan",
+    "fields": {
+        "email": "nluiyan@gobiernodecanarias.org",
+        "nombre": "Natalia E.",
+        "apellidos": "De Luis Yanes",
+        "organismo": 6594,
+        "f_alta": "2025-10-06T18:41:33.987Z",
+        "f_cambio": "2025-10-06T18:41:33.987Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "obetcur",
+    "fields": {
+        "email": "obetcur@gobiernodecanarias.org",
+        "nombre": "Ofelia",
+        "apellidos": "Betancourt Curbelo",
+        "organismo": 42118,
+        "f_alta": "2025-10-06T18:41:33.668Z",
+        "f_cambio": "2025-10-06T18:41:33.668Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "omarram",
+    "fields": {
+        "email": "omarram@gobiernodecanarias.org",
+        "nombre": "Óscar José",
+        "apellidos": "Marrero Ramírez",
+        "organismo": 42143,
+        "f_alta": "2025-10-06T18:41:34.207Z",
+        "f_cambio": "2025-10-06T18:41:34.207Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "pcanper",
     "fields": {
         "email": "pcanper@gobiernodecanarias.org",
-        "nombre": null,
-        "apellidos": null,
+        "nombre": "Pablo Antonio",
+        "apellidos": "Cano Pérez",
         "organismo": 42119,
         "f_alta": "2025-10-02T08:12:31Z",
-        "f_cambio": "2025-10-02T08:12:31Z",
+        "f_cambio": "2025-10-06T11:31:50.521Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "poragal",
+    "fields": {
+        "email": "poragal@gobiernodecanarias.org",
+        "nombre": "Patricia",
+        "apellidos": "Oramas Gallar",
+        "organismo": 41854,
+        "f_alta": "2025-10-06T18:41:33.843Z",
+        "f_cambio": "2025-10-06T18:41:33.843Z",
         "f_baja": null
     }
 },
@@ -801,11 +1412,646 @@
     "pk": "rmuncam",
     "fields": {
         "email": "rmuncam@gobiernodecanarias.org",
-        "nombre": null,
-        "apellidos": null,
-        "organismo": 42119,
+        "nombre": "Rosa Nieves",
+        "apellidos": "Muñoz Campos",
+        "organismo": 42093,
         "f_alta": "2025-10-02T08:12:31Z",
-        "f_cambio": "2025-10-02T08:12:31Z",
+        "f_cambio": "2025-10-06T11:33:35.470Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "rrosver",
+    "fields": {
+        "email": "rrosver@gobiernodecanarias.org",
+        "nombre": "Rafael",
+        "apellidos": "del Rosario Verdú",
+        "organismo": 7268,
+        "f_alta": "2025-10-06T18:41:33.780Z",
+        "f_cambio": "2025-10-06T18:41:33.780Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "rtejchi",
+    "fields": {
+        "email": "rtejchi@gobiernodecanarias.org",
+        "nombre": "Ruth Esther",
+        "apellidos": "Tejera Chico",
+        "organismo": 42165,
+        "f_alta": "2025-10-06T18:41:33.395Z",
+        "f_cambio": "2025-10-06T18:41:33.395Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "tlorare",
+    "fields": {
+        "email": "tlorare@gobiernodecanarias.org",
+        "nombre": "Tomás",
+        "apellidos": "Lorente Arencibia",
+        "organismo": 42159,
+        "f_alta": "2025-10-06T18:41:34.090Z",
+        "f_cambio": "2025-10-06T18:41:34.090Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "ysanalof",
+    "fields": {
+        "email": "ysanalof@gobiernodecanarias.org",
+        "nombre": "Yeray",
+        "apellidos": "Sánchez Alonso",
+        "organismo": 42084,
+        "f_alta": "2025-10-06T12:55:54.890Z",
+        "f_cambio": "2025-10-06T12:55:54.890Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 1,
+    "fields": {
+        "usuario": "mgarrodx",
+        "organismo": 42084,
+        "f_alta": "2025-10-06T18:41:33.347Z",
+        "f_cambio": "2025-10-06T18:41:33.347Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 2,
+    "fields": {
+        "usuario": "ysanalof",
+        "organismo": 42084,
+        "f_alta": "2025-10-06T18:41:33.355Z",
+        "f_cambio": "2025-10-06T18:41:33.355Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 3,
+    "fields": {
+        "usuario": "mmarferc",
+        "organismo": 42165,
+        "f_alta": "2025-10-06T18:41:33.364Z",
+        "f_cambio": "2025-10-06T18:41:33.364Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 4,
+    "fields": {
+        "usuario": "dsuapers",
+        "organismo": 42165,
+        "f_alta": "2025-10-06T18:41:33.373Z",
+        "f_cambio": "2025-10-06T18:41:33.373Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 5,
+    "fields": {
+        "usuario": "jrobper",
+        "organismo": 42165,
+        "f_alta": "2025-10-06T18:41:33.383Z",
+        "f_cambio": "2025-10-06T18:41:33.383Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 6,
+    "fields": {
+        "usuario": "rtejchi",
+        "organismo": 42165,
+        "f_alta": "2025-10-06T18:41:33.403Z",
+        "f_cambio": "2025-10-06T18:41:33.403Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 7,
+    "fields": {
+        "usuario": "agilarm",
+        "organismo": 42123,
+        "f_alta": "2025-10-06T18:41:33.421Z",
+        "f_cambio": "2025-10-06T18:41:33.421Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 8,
+    "fields": {
+        "usuario": "ffermar",
+        "organismo": 42123,
+        "f_alta": "2025-10-06T18:41:33.439Z",
+        "f_cambio": "2025-10-06T18:41:33.439Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 9,
+    "fields": {
+        "usuario": "aloppui",
+        "organismo": 42123,
+        "f_alta": "2025-10-06T18:41:33.463Z",
+        "f_cambio": "2025-10-06T18:41:33.463Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 10,
+    "fields": {
+        "usuario": "mspergon",
+        "organismo": 42123,
+        "f_alta": "2025-10-06T18:41:33.483Z",
+        "f_cambio": "2025-10-06T18:41:33.483Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 11,
+    "fields": {
+        "usuario": "anhergue",
+        "organismo": 42104,
+        "f_alta": "2025-10-06T18:41:33.500Z",
+        "f_cambio": "2025-10-06T18:41:33.500Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 12,
+    "fields": {
+        "usuario": "dnolsua",
+        "organismo": 42086,
+        "f_alta": "2025-10-06T18:41:33.514Z",
+        "f_cambio": "2025-10-06T18:41:33.514Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 13,
+    "fields": {
+        "usuario": "fartjor",
+        "organismo": 42086,
+        "f_alta": "2025-10-06T18:41:33.531Z",
+        "f_cambio": "2025-10-06T18:41:33.531Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 14,
+    "fields": {
+        "usuario": "itrubos",
+        "organismo": 37815,
+        "f_alta": "2025-10-06T18:41:33.547Z",
+        "f_cambio": "2025-10-06T18:41:33.547Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 15,
+    "fields": {
+        "usuario": "jgonyanp",
+        "organismo": 37829,
+        "f_alta": "2025-10-06T18:41:33.564Z",
+        "f_cambio": "2025-10-06T18:41:33.565Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 16,
+    "fields": {
+        "usuario": "mrodbat",
+        "organismo": 42114,
+        "f_alta": "2025-10-06T18:41:33.583Z",
+        "f_cambio": "2025-10-06T18:41:33.583Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 17,
+    "fields": {
+        "usuario": "msuacol",
+        "organismo": 42114,
+        "f_alta": "2025-10-06T18:41:33.602Z",
+        "f_cambio": "2025-10-06T18:41:33.602Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 18,
+    "fields": {
+        "usuario": "mvalher",
+        "organismo": 37152,
+        "f_alta": "2025-10-06T18:41:33.621Z",
+        "f_cambio": "2025-10-06T18:41:33.621Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 19,
+    "fields": {
+        "usuario": "eferagu",
+        "organismo": 42118,
+        "f_alta": "2025-10-06T18:41:33.640Z",
+        "f_cambio": "2025-10-06T18:41:33.640Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 20,
+    "fields": {
+        "usuario": "mtruled",
+        "organismo": 42118,
+        "f_alta": "2025-10-06T18:41:33.659Z",
+        "f_cambio": "2025-10-06T18:41:33.659Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 21,
+    "fields": {
+        "usuario": "obetcur",
+        "organismo": 42118,
+        "f_alta": "2025-10-06T18:41:33.677Z",
+        "f_cambio": "2025-10-06T18:41:33.677Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 22,
+    "fields": {
+        "usuario": "mhorama",
+        "organismo": 42118,
+        "f_alta": "2025-10-06T18:41:33.690Z",
+        "f_cambio": "2025-10-06T18:41:33.690Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 23,
+    "fields": {
+        "usuario": "feugbau",
+        "organismo": 42091,
+        "f_alta": "2025-10-06T18:41:33.709Z",
+        "f_cambio": "2025-10-06T18:41:33.709Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 24,
+    "fields": {
+        "usuario": "fojechi",
+        "organismo": 42091,
+        "f_alta": "2025-10-06T18:41:33.726Z",
+        "f_cambio": "2025-10-06T18:41:33.726Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 25,
+    "fields": {
+        "usuario": "malosua",
+        "organismo": 42091,
+        "f_alta": "2025-10-06T18:41:33.738Z",
+        "f_cambio": "2025-10-06T18:41:33.738Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 26,
+    "fields": {
+        "usuario": "lgalrev",
+        "organismo": 42091,
+        "f_alta": "2025-10-06T18:41:33.759Z",
+        "f_cambio": "2025-10-06T18:41:33.759Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 27,
+    "fields": {
+        "usuario": "jrodleo",
+        "organismo": 42091,
+        "f_alta": "2025-10-06T18:41:33.770Z",
+        "f_cambio": "2025-10-06T18:41:33.770Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 28,
+    "fields": {
+        "usuario": "rrosver",
+        "organismo": 7268,
+        "f_alta": "2025-10-06T18:41:33.791Z",
+        "f_cambio": "2025-10-06T18:41:33.791Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 29,
+    "fields": {
+        "usuario": "gpalara",
+        "organismo": 42136,
+        "f_alta": "2025-10-06T18:41:33.807Z",
+        "f_cambio": "2025-10-06T18:41:33.807Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 30,
+    "fields": {
+        "usuario": "atrudel",
+        "organismo": 42136,
+        "f_alta": "2025-10-06T18:41:33.820Z",
+        "f_cambio": "2025-10-06T18:41:33.820Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 31,
+    "fields": {
+        "usuario": "dmarsanl",
+        "organismo": 41854,
+        "f_alta": "2025-10-06T18:41:33.835Z",
+        "f_cambio": "2025-10-06T18:41:33.835Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 32,
+    "fields": {
+        "usuario": "poragal",
+        "organismo": 41854,
+        "f_alta": "2025-10-06T18:41:33.849Z",
+        "f_cambio": "2025-10-06T18:41:33.849Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 33,
+    "fields": {
+        "usuario": "hgargarg",
+        "organismo": 41854,
+        "f_alta": "2025-10-06T18:41:33.869Z",
+        "f_cambio": "2025-10-06T18:41:33.869Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 34,
+    "fields": {
+        "usuario": "aumenperp",
+        "organismo": 41854,
+        "f_alta": "2025-10-06T18:41:33.888Z",
+        "f_cambio": "2025-10-06T18:41:33.888Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 35,
+    "fields": {
+        "usuario": "malvmar",
+        "organismo": 6547,
+        "f_alta": "2025-10-06T18:41:33.907Z",
+        "f_cambio": "2025-10-06T18:41:33.908Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 36,
+    "fields": {
+        "usuario": "apergarc",
+        "organismo": 6547,
+        "f_alta": "2025-10-06T18:41:33.925Z",
+        "f_cambio": "2025-10-06T18:41:33.925Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 37,
+    "fields": {
+        "usuario": "jmorrom",
+        "organismo": 6547,
+        "f_alta": "2025-10-06T18:41:33.941Z",
+        "f_cambio": "2025-10-06T18:41:33.941Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 38,
+    "fields": {
+        "usuario": "almudena.alvarado",
+        "organismo": 6564,
+        "f_alta": "2025-10-06T18:41:33.954Z",
+        "f_cambio": "2025-10-06T18:41:33.954Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 39,
+    "fields": {
+        "usuario": "mgonmar10",
+        "organismo": 6564,
+        "f_alta": "2025-10-06T18:41:33.972Z",
+        "f_cambio": "2025-10-06T18:41:33.972Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 40,
+    "fields": {
+        "usuario": "nluiyan",
+        "organismo": 6594,
+        "f_alta": "2025-10-06T18:41:33.997Z",
+        "f_cambio": "2025-10-06T18:41:33.997Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 41,
+    "fields": {
+        "usuario": "jgarbeng",
+        "organismo": 42149,
+        "f_alta": "2025-10-06T18:41:34.023Z",
+        "f_cambio": "2025-10-06T18:41:34.023Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 42,
+    "fields": {
+        "usuario": "jtresan",
+        "organismo": 42149,
+        "f_alta": "2025-10-06T18:41:34.050Z",
+        "f_cambio": "2025-10-06T18:41:34.050Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 43,
+    "fields": {
+        "usuario": "mjgarsan",
+        "organismo": 42159,
+        "f_alta": "2025-10-06T18:41:34.076Z",
+        "f_cambio": "2025-10-06T18:41:34.076Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 44,
+    "fields": {
+        "usuario": "tlorare",
+        "organismo": 42159,
+        "f_alta": "2025-10-06T18:41:34.099Z",
+        "f_cambio": "2025-10-06T18:41:34.099Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 45,
+    "fields": {
+        "usuario": "aberfer",
+        "organismo": 42159,
+        "f_alta": "2025-10-06T18:41:34.121Z",
+        "f_cambio": "2025-10-06T18:41:34.122Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 46,
+    "fields": {
+        "usuario": "mnavherz",
+        "organismo": 42159,
+        "f_alta": "2025-10-06T18:41:34.145Z",
+        "f_cambio": "2025-10-06T18:41:34.145Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 47,
+    "fields": {
+        "usuario": "jfrosmar",
+        "organismo": 39166,
+        "f_alta": "2025-10-06T18:41:34.170Z",
+        "f_cambio": "2025-10-06T18:41:34.170Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 48,
+    "fields": {
+        "usuario": "nferzam",
+        "organismo": 39166,
+        "f_alta": "2025-10-06T18:41:34.186Z",
+        "f_cambio": "2025-10-06T18:41:34.186Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 49,
+    "fields": {
+        "usuario": "mgonjorf",
+        "organismo": 42143,
+        "f_alta": "2025-10-06T18:41:34.199Z",
+        "f_cambio": "2025-10-06T18:41:34.199Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 50,
+    "fields": {
+        "usuario": "omarram",
+        "organismo": 42143,
+        "f_alta": "2025-10-06T18:41:34.216Z",
+        "f_cambio": "2025-10-06T18:41:34.216Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 51,
+    "fields": {
+        "usuario": "lrodfaln",
+        "organismo": 42143,
+        "f_alta": "2025-10-06T18:41:34.233Z",
+        "f_cambio": "2025-10-06T18:41:34.234Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 52,
+    "fields": {
+        "usuario": "mogarsan",
+        "organismo": 42150,
+        "f_alta": "2025-10-06T18:41:34.258Z",
+        "f_cambio": "2025-10-06T18:41:34.258Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 53,
+    "fields": {
+        "usuario": "bherafor",
+        "organismo": 42150,
+        "f_alta": "2025-10-06T18:41:34.285Z",
+        "f_cambio": "2025-10-06T18:41:34.285Z",
         "f_baja": null
     }
 },
