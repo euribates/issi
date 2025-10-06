@@ -23,6 +23,11 @@ class Sistema(models.Model):
         ordering = ['nombre',]
 
     id_sistema = models.BigAutoField(primary_key=True)
+    nombre = models.CharField(
+        max_length=220,
+        unique=True,
+        help_text="Nombre del sistema",
+        )
     organismo = models.ForeignKey(
         Organismo,
         related_name='sistemas',
@@ -31,8 +36,11 @@ class Sistema(models.Model):
         null=True,
         default=None,
         )
-    codigo = models.CharField(max_length=32, unique=True)
-    nombre = models.CharField(max_length=220)
+    codigo = models.CharField(
+        max_length=32,
+        help_text="Código identificador del sistema (una sola palabra)",
+        unique=True,
+        )
     url = models.URLField(
         max_length=720,
         default=None,
@@ -166,7 +174,46 @@ class Usuario(models.Model):
         return self.nombre_completo()
 
 
+class Interlocutor(models.Model):
+
+    class Meta:
+        verbose_name = 'Interlocutor'
+        verbose_name_plural = 'Interlocutores'
+
+    id_interlocutor = models.BigAutoField(primary_key=True)
+    usuario = models.ForeignKey(
+        Usuario,
+        related_name='interlocutor_de',
+        on_delete=models.CASCADE,
+        )
+    organismo = models.ForeignKey(
+        Organismo,
+        related_name='interlocutores',
+        on_delete=models.PROTECT,
+        )
+    f_alta = models.DateTimeField(auto_now_add=True)
+    f_cambio = models.DateTimeField(auto_now=True)
+    f_baja = models.DateTimeField(
+        default=None,
+        blank=True,
+        null=True,
+        )
+
+    @classmethod
+    def upsert(cls, usuario, organismo):
+         interlocutor, created = cls.objects.update_or_create(
+            usuario=usuario,
+            organismo=organismo,
+            )
+         return interlocutor, created
+
+
 class Perfil(models.Model):
+
+    class Meta:
+        verbose_name = 'Perfil'
+        verbose_name_plural = 'Perfiles'
+
     COMETIDOS = [
         ('FUN', 'Responsable funcional'),
         ('TEC', 'Responsable técnico'),
@@ -192,3 +239,12 @@ class Perfil(models.Model):
         blank=True,
         null=True,
         )
+
+    @classmethod
+    def upsert(cls, usuario, organismo, cometido):
+         perfil, created = cls.objects.update_or_create(
+            usuario=usuario,
+            organismo=organismo,
+            cometido=cometido,
+            )
+         return perfil, created

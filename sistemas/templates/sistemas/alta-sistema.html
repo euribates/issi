@@ -1,0 +1,42 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+{% block content %}
+
+<div class="card">
+  <div class="card-header">
+    Añadir un nuevo sistema de información
+  </div>
+  <div class="card-body">
+
+
+   <form method="POST" action=".">
+
+   <fieldset>
+    <legend>Campos obligatorios</legend>
+
+   <div class="mb-3">
+    <label for="id_nombre" class="form-label">Nombre del sistema</label>
+    {{ form|as_text_control:"nombre" }}
+   </div>
+
+   <div class="mb-3">
+    <label for="id_codigo" class="form-label">Código</label>
+    {{ form|as_text_control:"codigo" }}
+   </div>
+
+   <div class="mb-3 form-check">
+    {{ form|as_checkbox:"es_transversal" }}   
+    <label class="form-check-label" for="id_es_transversal">
+      Este sistema es transversal a varios departamentos
+    </label>
+    </div>
+   </fieldset>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>  
+
+{{ from }}
+
+{% endblock content %}

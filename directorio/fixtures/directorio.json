@@ -1777,6 +1777,22 @@
 },
 {
     "model": "directorio.ente",
+    "pk": "EICA",
+    "fields": {
+        "organismo": 42104,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-economia"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "OPVM",
+    "fields": {
+        "organismo": 42114,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-obras-publicas"
+    }
+},
+{
+    "model": "directorio.ente",
     "pk": "PAPJS",
     "fields": {
         "organismo": 42118,
@@ -1789,6 +1805,22 @@
     "fields": {
         "organismo": 42091,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/presidencia-del-gobierno"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "TEE",
+    "fields": {
+        "organismo": 42159,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/dataset/?organization=consejeria-de-transicion-ecologica-y-energia"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "TUREMP",
+    "fields": {
+        "organismo": 42143,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-turismo"
     }
 }
 ]

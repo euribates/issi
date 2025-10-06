@@ -1,28 +1,43 @@
 {% load static %}<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ titulo }} - ISSI</title>
-    <link media="screen" href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
-    <link media="screen" href="{% static 'img/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
-    <link media="screen" href="{% static 'css/estilos.css' %}" rel="stylesheet">
-    <link media="all" href="{% static 'css/custom.css' %}" rel="stylesheet">
-    <link media="print" href="{% static 'css/print.css' %}" rel="stylesheet">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ titulo }} - ISSI</title>
+  <link media="screen" href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+  <link media="screen" href="{% static 'img/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link media="screen" href="{% static 'css/estilos.css' %}" rel="stylesheet">
+  <link media="all" href="{% static 'css/custom.css' %}" rel="stylesheet">
+  <link media="print" href="{% static 'css/print.css' %}" rel="stylesheet">
+ </head>
+ <body>
 
-  </head>
-  <body>
+  <div class="container">
+   {% include "comun/header.html" %}
 
-    <div class="container">
-      {% include "comun/header.html" %}
-      {% include "comun/breadcrumbs.html" %}
-      {% include "comun/navbar.html" %}
-      {% block content %}
+   {% if titulo %}
+    <div class="titulo-cabecera">{{ titulo }}</div>
+   {% else %}
+    <div class="titulo-cabecera text-danger">
+    No se ha definido el título de la página - ISSI
+    </div>     
+   {% endif %}
+   {% include "comun/breadcrumbs.html" %}
+   {% include "comun/navbar.html" %}
+
+   <main id="content">
+   {% block content %}
           
-      {% endblock content %}
-    </div>
+   {% endblock content %}
+   </main>
+   
+   {% if sidebar %}  
+     {% include "comun/sidebar.html" %}
+   {% endif %}
 
-  <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
-  </body>
+  </div>
+
+ <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+ <script src="{% static 'comun/js/sidebar.js' %}"></script>
+ </body>
 </html>
-

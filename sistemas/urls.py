@@ -9,6 +9,7 @@ app_name = 'sistemas'
 
 
 register_converter(converters.SistemaConverter, 'si')
+register_converter(converters.UserNameConverter, 'login')
 
 
 def tie(ruta, vista, name=None):
@@ -20,4 +21,5 @@ urlpatterns = [
     tie('alta/', views.alta_sistema),
     tie('sistema/<si:sistema>/', views.detalle_sistema),
     tie('usuario/', views.listado_usuarios),
+    tie('usuario/<login:usuario>/', views.detalle_usuario),
     ]

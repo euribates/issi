@@ -27,3 +27,10 @@ def detalle_sistema(sistema):
 
 def usuarios():
     return bc_issi().step('Usuarios', links.a_usuarios())
+
+
+def detalle_usuario(usuario):
+    return usuarios().step(
+        usuario.login,
+        links.a_detalle_usuario(usuario.login),
+        )

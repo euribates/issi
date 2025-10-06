@@ -1,0 +1,35 @@
+{% extends "comun/base.html" %}
+{% load comun_filters markdownify %}
+
+{% block content %}
+
+<div class="col col-5">
+  <div class="card">
+    <div class="card-header">
+        <h4 class="card-title">Detalles del usuario
+        </h4>
+    </div>
+    <div class="card-body">
+    <table class="table">
+        <tr>
+            <th>Username</th>
+            <td>{{ usuario.login }}</td>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>{{ usuario.nombre }}</td>
+        </tr>
+        <tr>
+            <th>Apellidos</th>
+            <td>{{ usuario.apellidos }}</td>
+        </tr>
+        <tr>
+            <th>Fecha de alta</th>
+            <td>{{ usuario.f_alta }}</td>
+        </tr>
+    </table>
+    </div>
+  </div>
+  <div>      
+  
+{% endblock content %}

@@ -494,9 +494,7 @@
         "es_subsistema_de": null,
         "icono_height": 531,
         "icono_width": 531,
-        "icono": "sistemas/iconos/2025/logo.issi.png",
-        "responsable_funcional": "malosua",
-        "responsable_tecnico": "jrodleo"
+        "icono": "sistemas/iconos/2025/logo.issi.png"
     }
 },
 {
@@ -514,9 +512,7 @@
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/turidata-logo.png",
-        "responsable_funcional": null,
-        "responsable_tecnico": null
+        "icono": "sistemas/iconos/2025/turidata-logo.png"
     }
 },
 {
@@ -534,9 +530,7 @@
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/juriscan-logo.png",
-        "responsable_funcional": null,
-        "responsable_tecnico": null
+        "icono": "sistemas/iconos/2025/juriscan-logo.png"
     }
 },
 {
@@ -554,9 +548,7 @@
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/sirhus-logo.png",
-        "responsable_funcional": null,
-        "responsable_tecnico": null
+        "icono": "sistemas/iconos/2025/sirhus-logo.png"
     }
 },
 {
@@ -574,9 +566,7 @@
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo_platea_8ugjV2e.png",
-        "responsable_funcional": null,
-        "responsable_tecnico": null
+        "icono": "sistemas/iconos/2025/logo_platea_8ugjV2e.png"
     }
 },
 {
@@ -594,9 +584,7 @@
         "es_subsistema_de": null,
         "icono_height": 0,
         "icono_width": 0,
-        "icono": "",
-        "responsable_funcional": null,
-        "responsable_tecnico": null
+        "icono": ""
     }
 },
 {
@@ -614,9 +602,7 @@
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-platino.png",
-        "responsable_funcional": null,
-        "responsable_tecnico": null
+        "icono": "sistemas/iconos/2025/logo-platino.png"
     }
 },
 {
@@ -634,9 +620,7 @@
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-seflogic.png",
-        "responsable_funcional": null,
-        "responsable_tecnico": null
+        "icono": "sistemas/iconos/2025/logo-seflogic.png"
     }
 },
 {
@@ -654,9 +638,7 @@
         "es_subsistema_de": 8,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/sicac-logo.png",
-        "responsable_funcional": null,
-        "responsable_tecnico": null
+        "icono": "sistemas/iconos/2025/sicac-logo.png"
     }
 },
 {
@@ -674,9 +656,7 @@
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-hiperreg_y6TMSbi.png",
-        "responsable_funcional": "fbezcar",
-        "responsable_tecnico": "pcanper"
+        "icono": "sistemas/iconos/2025/logo-hiperreg_y6TMSbi.png"
     }
 },
 {
@@ -694,9 +674,7 @@
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/triskell-logo.png",
-        "responsable_funcional": "crivlez",
-        "responsable_tecnico": null
+        "icono": "sistemas/iconos/2025/triskell-logo.png"
     }
 },
 {
@@ -714,9 +692,7 @@
         "es_subsistema_de": null,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-dircac.png",
-        "responsable_funcional": "crivlez",
-        "responsable_tecnico": "rmuncam"
+        "icono": "sistemas/iconos/2025/logo-dircac.png"
     }
 },
 {
@@ -753,6 +729,168 @@
         "es_prioritario": true,
         "esta_georeferenciado": false,
         "datos_personales": "NO"
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "crivlez",
+    "fields": {
+        "email": "crivlez@gobiernodecanarias.org",
+        "nombre": null,
+        "apellidos": null,
+        "organismo": 42119,
+        "f_alta": "2025-10-02T08:12:31Z",
+        "f_cambio": "2025-10-02T08:12:31Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "fbezcar",
+    "fields": {
+        "email": "fbezcar@gobiernodecanarias.org",
+        "nombre": null,
+        "apellidos": null,
+        "organismo": 42119,
+        "f_alta": "2025-10-02T08:12:31Z",
+        "f_cambio": "2025-10-02T08:12:31Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jrodleo",
+    "fields": {
+        "email": "jrodleo@gobiernodecanarias.org",
+        "nombre": "Juan Ignacio",
+        "apellidos": "Rodriguez de Leon",
+        "organismo": 42093,
+        "f_alta": "2025-10-02T08:12:31Z",
+        "f_cambio": "2025-10-02T12:11:25.559Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "malosua",
+    "fields": {
+        "email": "malosua@gobiernodecanarias.org",
+        "nombre": "María Candelaria",
+        "apellidos": "Alonso Suárez",
+        "organismo": 42093,
+        "f_alta": "2025-10-02T08:12:31Z",
+        "f_cambio": "2025-10-02T14:45:08.853Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "pcanper",
+    "fields": {
+        "email": "pcanper@gobiernodecanarias.org",
+        "nombre": null,
+        "apellidos": null,
+        "organismo": 42119,
+        "f_alta": "2025-10-02T08:12:31Z",
+        "f_cambio": "2025-10-02T08:12:31Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "rmuncam",
+    "fields": {
+        "email": "rmuncam@gobiernodecanarias.org",
+        "nombre": null,
+        "apellidos": null,
+        "organismo": 42119,
+        "f_alta": "2025-10-02T08:12:31Z",
+        "f_cambio": "2025-10-02T08:12:31Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1,
+    "fields": {
+        "usuario": "malosua",
+        "cometido": "FUN",
+        "sistema": 1,
+        "f_alta": "2025-10-02T08:36:57Z",
+        "f_cambio": "2025-10-02T08:36:57Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 2,
+    "fields": {
+        "usuario": "fbezcar",
+        "cometido": "FUN",
+        "sistema": 10,
+        "f_alta": "2025-10-02T08:36:57Z",
+        "f_cambio": "2025-10-02T08:36:57Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 3,
+    "fields": {
+        "usuario": "crivlez",
+        "cometido": "FUN",
+        "sistema": 11,
+        "f_alta": "2025-10-02T08:36:57Z",
+        "f_cambio": "2025-10-02T08:36:57Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 4,
+    "fields": {
+        "usuario": "crivlez",
+        "cometido": "FUN",
+        "sistema": 12,
+        "f_alta": "2025-10-02T08:36:57Z",
+        "f_cambio": "2025-10-02T08:36:57Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 5,
+    "fields": {
+        "usuario": "jrodleo",
+        "cometido": "TEC",
+        "sistema": 1,
+        "f_alta": "2025-10-02T08:36:57Z",
+        "f_cambio": "2025-10-02T08:36:57Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 6,
+    "fields": {
+        "usuario": "pcanper",
+        "cometido": "TEC",
+        "sistema": 10,
+        "f_alta": "2025-10-02T08:36:57Z",
+        "f_cambio": "2025-10-02T08:36:57Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 7,
+    "fields": {
+        "usuario": "rmuncam",
+        "cometido": "TEC",
+        "sistema": 12,
+        "f_alta": "2025-10-02T08:36:57Z",
+        "f_cambio": "2025-10-02T08:36:57Z",
+        "f_baja": null
     }
 }
 ]

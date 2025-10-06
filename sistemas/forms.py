@@ -5,8 +5,17 @@ from django import forms
 from . import models
 
 
-class SistemaForm(forms.ModelForm):
+class AltaSistemaForm(forms.ModelForm):
 
     class Meta:
         model = models.Sistema
-        fields = '__all__'
+        fields = [
+            'nombre',
+            'codigo',
+            'organismo',
+            'proposito',
+            'url',
+            'tema',
+            'es_transversal',
+            'es_subsistema_de',
+            ]

@@ -48,6 +48,11 @@ class TemaAdmin(admin.ModelAdmin):
 admin.site.register(models.Tema, TemaAdmin)
 
 
+class PerfilAdmin(admin.ModelAdmin):
+    list_display = ["id_perfil", "usuario", "cometido"]
+
+admin.site.register(models.Perfil, PerfilAdmin)
+
 class UsuarioAdmin(admin.ModelAdmin):
     list_display = ["login", "nombre_completo", "organismo"]
 

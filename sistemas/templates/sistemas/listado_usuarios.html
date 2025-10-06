@@ -2,8 +2,6 @@
 
 {% block content %}
 
-<h2 class="title">Listado de usuarios</h2>
-
 <table class="table table-striped">
   <thead>
     <tr>
@@ -14,7 +12,13 @@
   </thead> 
   <tbody>
     {% for usuario in usuarios.all %}<tr>
-      <td>{{ usuario.login }}</td>
+      <td>
+          <a href="{% url 'sistemas:detalle_usuario' usuario=usuario.login %}">  
+          <code>
+          {{ usuario.login }}
+          </code>    
+          </a>
+      </td>
       <td>{{ usuario.nombre_completo }}</td>
       <td>{{ usuario.organismo }}</td>
     </tr>{% endfor %}

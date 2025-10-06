@@ -18,11 +18,12 @@ def index(request, *args, **kwargs):
 
 
 def alta_sistema(request):
-    form = forms.SistemaForm()
-    return render(requst, 'sistemas/alta_sistema.html', {
+    form = forms.AltaSistemaForm()
+    return render(request, 'sistemas/alta-sistema.html', {
         'titulo': 'Alta de un nuevo sistemas de información',
         'breadcrumbs': bc.alta_sistema(),
         'tab': 'sistemas',
+        'form': form,
         })
 
 
@@ -41,4 +42,13 @@ def listado_usuarios(request, *args, **kwargs):
         'breadcrumbs': bc.usuarios(),
         'tab': 'usuarios',
         'usuarios': models.Usuario.objects.all(),
+        })
+
+
+def detalle_usuario(request, usuario, *args, **kwargs):
+    return render(request, 'sistemas/detalle_usuario.html', {
+        'titulo': f'Detalles usuario {usuario}',
+        'breadcrumbs': bc.detalle_usuario(usuario),
+        'tab': 'usuarios',
+        'usuario': usuario,
         })

@@ -19,3 +19,10 @@ def a_detalle_sistema(id_sistema):
 
 def a_usuarios():
     return reverse_lazy('sistemas:listado_usuarios')
+
+
+def a_detalle_usuario(login):
+    return reverse_lazy('sistemas:detale_usuario', kwargs={
+        'login': login,
+        })
+
