@@ -26,7 +26,7 @@ class SistemaConverter:
 
 class UserNameConverter:
 
-    regex = '[a-z][a-z0-9-]+'
+    regex = '[a-z][a-z0-9-.]+'
 
     def to_python(self, value):
         usuario = models.Usuario.load_usuario(value)

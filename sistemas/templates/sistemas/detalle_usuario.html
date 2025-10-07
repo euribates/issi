@@ -3,33 +3,75 @@
 
 {% block content %}
 
-<div class="col col-5">
-  <div class="card">
-    <div class="card-header">
-        <h4 class="card-title">Detalles del usuario
-        </h4>
+<p>Interlocutir de: {{ usuario.interlocutor_de.count }}</p>
+<p>Perfiles: {{ usuario.perfiles.count }}</p>
+
+<div class="row">
+  
+  <div class="col col-4">
+    <div class="card">
+      <div class="card-header">
+          <h4 class="card-title">Detalles del usuario
+          </h4>
+      </div>
+      <div class="card-body">
+      <table class="table">
+          <tr>
+              <th>Username</th>
+              <td>{{ usuario.login }}</td>
+          </tr>
+          <tr>
+              <th>Nombre</th>
+              <td>{{ usuario.nombre }}</td>
+          </tr>
+          <tr>
+              <th>Apellidos</th>
+              <td>{{ usuario.apellidos }}</td>
+          </tr>
+          <tr>
+              <th>En activo desde</th>
+              <td>{{ usuario.f_alta }}</td>
+          </tr>
+          <tr>
+              <th>Adscrito a</th>
+              <td>{{ usuario.organismo.nombre_organismo }}</td>
+      </table>
+      </div>
     </div>
-    <div class="card-body">
-    <table class="table">
-        <tr>
-            <th>Username</th>
-            <td>{{ usuario.login }}</td>
-        </tr>
-        <tr>
-            <th>Nombre</th>
-            <td>{{ usuario.nombre }}</td>
-        </tr>
-        <tr>
-            <th>Apellidos</th>
-            <td>{{ usuario.apellidos }}</td>
-        </tr>
-        <tr>
-            <th>Fecha de alta</th>
-            <td>{{ usuario.f_alta }}</td>
-        </tr>
-    </table>
+  </div>      
+  
+  <div class="col col-4">
+    <div class="card">
+      <div class="card-header">
+          <h4 class="card-title">Perfiles
+          </h4>
+      </div>
+      <div class="card-body">
+      </div>
+      <dl>
+      {% for perfil in usuario.perfiles.all %}
+      <dt class="m-2">{{ perfil }}</dt>
+        <dd class="m-2">{{ perfil.sistema.nombre }}</dd>
+      {% endfor %}  
+      </div>
     </div>
   </div>
-  <div>      
-  
+  <div class="col col-4">
+    <div class="card">
+      <div class="card-header">
+          <h4 class="card-title">Interlocutor de
+          </h4>
+      </div>
+      <div class="card-body">
+      </div>
+      {% for interlocutor in usuario.interlocutor_de.all %}
+      <p class="m-2">{{ interlocutor.organismo.nombre_organismo }}</p>
+      {% endfor %}  
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
 {% endblock content %}

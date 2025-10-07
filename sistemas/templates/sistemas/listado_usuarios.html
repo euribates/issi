@@ -1,17 +1,40 @@
 {% extends "comun/base.html" %}
+{% load comun_filters %}
 
 {% block content %}
+
+<form method="get">
 
 <table class="table table-striped">
   <thead>
     <tr>
       <th>Login</th>  
       <th>Nombre</th>
+      <th>Apellidos</th>
       <th>Organismo</th>
     </tr>  
+
+    <tr>
+      <th>
+        {{ filterset.form|as_text_control:"login__icontains" }}
+      </th>  
+      <th>
+        {{ filterset.form|as_text_control:"nombre__icontains" }}
+      </th>
+      <th>
+        {{ filterset.form|as_text_control:"apellidos__icontains" }}
+      </th>
+      <th>
+        {{ filterset.form|as_text_control:"organismo__nombre_organismo__icontains" }}
+      </th>
+      <th>
+        <input type="submit" value="🔍" />
+      </th>
+    </tr> 
+    
   </thead> 
   <tbody>
-    {% for usuario in usuarios.all %}<tr>
+    {% for usuario in filterset.qs.all %}<tr>
       <td>
           <a href="{% url 'sistemas:detalle_usuario' usuario=usuario.login %}">  
           <code>
@@ -19,10 +42,12 @@
           </code>    
           </a>
       </td>
-      <td>{{ usuario.nombre_completo }}</td>
-      <td>{{ usuario.organismo }}</td>
+      <td>{{ usuario.nombre }}</td>
+      <td>{{ usuario.apellidos }}</td>
+      <td colspan="2">{{ usuario.organismo }}</td>
     </tr>{% endfor %}
   
   </tbody>
 </table>  
+</form>
 {% endblock content %}

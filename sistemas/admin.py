@@ -55,5 +55,11 @@ admin.site.register(models.Perfil, PerfilAdmin)
 
 class UsuarioAdmin(admin.ModelAdmin):
     list_display = ["login", "nombre_completo", "organismo"]
+    search_fields = [
+        'login',
+        'nombre',
+        'apellidos',
+        'email',
+        ]
 
 admin.site.register(models.Usuario, UsuarioAdmin)

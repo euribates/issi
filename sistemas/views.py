@@ -5,6 +5,7 @@ from django.shortcuts import render
 from . import models
 from . import forms
 from . import breadcrumbs as bc
+from . import filtersets
 
 
 def index(request, *args, **kwargs):
@@ -36,12 +37,25 @@ def detalle_sistema(request, sistema):
         })
 
 
-def listado_usuarios(request, *args, **kwargs):
+def listado_usuarios(request):
+    filterset = filtersets.UsuarioFilter(
+        request.GET,
+        queryset=models.Usuario.objects.all(),
+        )
     return render(request, 'sistemas/listado_usuarios.html', {
         'titulo': 'Usuarios registrados en el sistema',
         'breadcrumbs': bc.usuarios(),
         'tab': 'usuarios',
-        'usuarios': models.Usuario.objects.all(),
+        "filterset": filterset,
+        })
+
+
+def buscar_usuarios(request):
+    return render(request, 'sistemas/buscar_usuarios.html', {
+        'titulo': 'Buscar usuarios en pginas blancas',
+        'subtitulo': 'Debe estar registrodo como usuario',
+        'breadcrumbs': bc.usuarios(),
+        'tab': 'usuarios',
         })
 
 

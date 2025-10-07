@@ -21,5 +21,6 @@ urlpatterns = [
     tie('alta/', views.alta_sistema),
     tie('sistema/<si:sistema>/', views.detalle_sistema),
     tie('usuario/', views.listado_usuarios),
+    tie('usuario/buscar/', views.buscar_usuarios),
     tie('usuario/<login:usuario>/', views.detalle_usuario),
     ]

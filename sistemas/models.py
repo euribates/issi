@@ -240,6 +240,9 @@ class Perfil(models.Model):
         null=True,
         )
 
+    def __str__(self):
+        return f"{self.get_cometido_display()} de {self.sistema.codigo}"
+
     @classmethod
     def upsert(cls, usuario, organismo, cometido):
          perfil, created = cls.objects.update_or_create(

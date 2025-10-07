@@ -1,0 +1,78 @@
+{% extends 'comun/base.html' %}
+
+{% block content %}
+
+<h4 align="center">Búsqueda de usuarios ver 1.0</h4>
+
+<div class="card">
+
+<form name="frmSearch"
+      method="POST"
+      action="https://www.gobiernodecanarias.net/paginasblancas/list.html">
+
+<input type="hidden" name="limit" value="500">
+<input type="hidden" name="search[]" value="uid">
+<input type="hidden" name="objTitle" value="Identificador (uid)">
+<input type="hidden" name="opt[uid]" value="2">       
+
+<p>Login: <input type="text" name="val[uid]" value="">
+<input type="submit" name="submit_search" value="Iniciar búsqueda">
+</p>
+
+{% comment %}<input type="hidden" name="search[]" value="mail">{% endcomment %}
+<input type="hidden" name="objTitle" value="Correo electrónico">
+<input type="hidden" name="opt[mail]" value="1">
+<input type="hidden" name="val[mail]" value="">
+
+{% comment %}<input type="hidden" name="search[]" value="givenName-es">{% endcomment %}
+<input type="hidden" name="objTitle" value="Nombre">
+<input type="hidden" name="opt[givenName-es]" value="1">
+<input type="hidden" name="val[givenName-es]" value="">
+
+{% comment %}<input type="hidden" name="search[]" value="sn-es">{% endcomment %}
+<input type="hidden" name="objTitle" value="Apellidos">
+<input type="hidden" name="opt[sn-es]" value="1">
+<input type="hidden" name="val[sn-es]" value="">
+
+{% comment %}<input type="hidden" name="search[]" value="gobCanUserTelefonoPrincipal">{% endcomment %}
+<input type="hidden" name="objTitle" value="Teléfono">
+<input type="hidden" name="opt[gobCanUserTelefonoPrincipal]" vñlue="1">
+
+{% comment %}<input type="hidden" name="search[]" value="physicalDeliveryOfficeName">{% endcomment %}
+<input type="hidden" name="val[gobCanUserTelefonoPrincipal]" value="">
+<input type="hidden" name="objTitle" value="Edificio">
+<input type="hidden" name="opt[physicalDeliveryOfficeName]" value="1">
+        
+{% comment %}<input type="hidden" name="search[]" value="gobCanUserCodigoOrganismoNivel1UF">{% endcomment %}
+<input type="hidden" name="val[physicalDeliveryOfficeName]" value="">
+<input type="hidden" name="objTitle" value="Departamento">
+<input type="hidden" name="opt[gobCanUserCodigoOrganismoNivel1UF]" value="0">
+<input type="hidden" name="val[gobCanUserCodigoOrganismoNivel1UF]" value=""> 
+
+{% comment %}<input type="hidden" name="search[]" value="gobCanUserCodigoOrganismoNivel2UF">{% endcomment %}
+<input type="hidden" name="objTitle" value="Centro Directivo">
+<input type="hidden" name="opt[gobCanUserCodigoOrganismoNivel2UF]" value="0">
+<input type="hidden" name="val[gobCanUserCodigoOrganismoNivel2UF]" value=""> 
+
+{% comment %}<input type="hidden" name="search[]" value="gobCanUserOrganismoNivel3UF">{% endcomment %}
+<input type="hidden" name="objTitle" value="Unidad">
+<input type="hidden" name="opt[gobCanUserOrganismoNivel3UF]" value="1">
+			
+<input type="hidden" name="val[gobCanUserOrganismoNivel3UF]" value="">
+
+{% comment %}<input type="hidden" name="search[]" value="employeeNumber">{% endcomment %}
+<input type="hidden" name="objTitle" value="NIF">
+<input type="hidden" name="opt[employeeNumber]" value="0">                   
+<input type="hidden" name="val[employeeNumber]" value="">
+
+<input type="hidden" name="opc_listado[]" value="isla">
+<input type="hidden" name="opc_listado[]" value="correo">
+<input type="hidden" name="opc_listado[]" value="puesto">
+<input type="hidden" name="opc_listado[]" value="edificio">
+
+
+
+</form>
+
+</div>
+{% endblock content %}
