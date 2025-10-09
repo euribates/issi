@@ -36,6 +36,12 @@ class Organismo(models.Model):
         max_length=128,
         default='',
         )
+    url = models.URLField(
+        max_length=384,
+        blank=True,
+        null=True,
+        default=None,
+        )
 
     @classmethod
     def load_organismo(cls, pk:int):

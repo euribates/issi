@@ -134,3 +134,35 @@ def slugify(texto: str) -> str:
     result = ''.join([_ for _ in result if ord(_) < 129])
     result = _SLUGIFY_PAT_MULTIPLE_HYPHENS.sub('-', result)
     return result
+
+
+def clean_url(url: str) -> str:
+    """Limpia el formato de texto de una url.
+
+    - Si `url` es nulo, vacio o el valor `_U` se devuelve None
+    - Verifica que empieza por http
+    - Realiza las mismas operaciones de limpieza que `clean_text`:
+        - Si hay espacios al principio o al final se eliminan
+        - Si tiene comillas dobles al principio y al final las elimina.
+        - Si tiene comillas simples al principio y al final las elimina.
+
+    >>> assert clean_url('http://www.python.org/') == 'http://www.python.org/'
+    >>> assert clean_url(None) == None
+    >>> assert clean_url('') == None
+    >>> assert clean_url('_U') == None
+
+    Params:
+        
+        - url (str): La cadena de texto con la URL a limpiar.
+
+    Returns:
+
+        Una cadena de texto con la URL limpia, o `None`.
+    """
+
+    if url in {'_U', '', None}:
+        return None
+    url = clean_text(url)
+    assert url.startswith('http')
+    return url
+

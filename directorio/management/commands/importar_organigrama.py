@@ -13,6 +13,7 @@ from django.db import transaction, IntegrityError
 from django.conf import settings
 from filters import clean_text
 from filters import clean_integer
+from filters import clean_url
 from directorio import models
 
 
@@ -35,6 +36,9 @@ RESET_ALL = colorama.Style.RESET_ALL
 
 VALID_DAYS = 15
 
+TEMP_DIR = settings.BASE_DIR / Path('temp')
+if not TEMP_DIR.is_dir():
+    TEMP_DIR.mkdir()
 
 
 class Command(BaseCommand):
@@ -60,7 +64,7 @@ class Command(BaseCommand):
             )
 
     def descargar_organigrama(self):
-        target_file = settings.BASE_DIR / Path(FILENAME)
+        target_file = TEMP_DIR / FILENAME
         if target_file.exists():
             stat = target_file.stat()
             mod_date = DateTime.fromtimestamp(stat.st_mtime)
@@ -88,14 +92,6 @@ class Command(BaseCommand):
             )
     
     def handle(self, *args, **options):
-        id_dir3 = options.get('dir3')
-        id_dircac = options.get('id')
-        if id_dir3:
-            print(f'Generar informe para DIR3 {id_dir3}')
-            self.warning('Aun por implementar')
-        elif id_dircac:
-            print(f'Generar informe para DIRCAC {id_dircac}')
-            self.warning('Aun por implementar')
         with open(self.descargar_organigrama(), 'r', encoding='utf-8') as source:
             reader = csv.reader(source, delimiter=';', quotechar='"')
             next(reader) # Ignorar primera fila de nombres
@@ -107,29 +103,26 @@ class Command(BaseCommand):
                 id_sirhus = clean_integer(row[2])
                 categoria = clean_text(row[4])
                 depende_de_id = clean_integer(row[7])
-                if depende_de_id == 1:
-                    depende_de_id = None
+                url = clean_url(row[35])
                 mapa[id_organismo] = {
                     'nombre_organismo': nombre_organismo,
                     'dir3': dir3,
                     'id_sirhus': id_sirhus,
                     'categoria': categoria,
                     'depende_de_id': depende_de_id,
+                    'url': url,
                     }
             for id_organismo in mapa:
                 row = mapa[id_organismo]
-                steps = []
+                steps = [str(id_organismo)]
                 id_parent = row.get('depende_de_id', None)
                 while id_parent:
-                    steps.insert(0, str(id_parent))
+                    steps.append(str(id_parent))
                     id_parent = mapa.get(id_parent, {}).get('depende_de_id', None)
-                row['ruta'] = ruta = SEP + SEP.join(steps)
+                row['ruta'] = SEP + SEP.join(reversed(steps))
                 try:
                     with transaction.atomic():
-                        organismo, created = models.Organismo.upsert(
-                            id_organismo,
-                            **row,
-                            )
+                        organismo, created = models.Organismo.upsert(id_organismo, **row)
                     if created:
                         self.success(f'Organismo {organismo} {RED}creado{RESET_ALL}')
                     else:
