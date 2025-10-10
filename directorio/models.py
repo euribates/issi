@@ -25,6 +25,11 @@ class Organismo(models.Model):
     dir3 = models.CharField(max_length=9, unique=True)
     id_sirhus = models.IntegerField(unique=True)
     categoria = models.CharField(max_length=40)
+    competencias = models.TextField(
+        blank=True,
+        null=True,
+        default=None,
+        )
     depende_de = models.ForeignKey(
         'Organismo',
         related_name='organismos_dependientes',

@@ -95,6 +95,7 @@ class Command(BaseCommand):
                 id_organismo = clean_integer(row[0])
                 dir3 = clean_text(row[1])
                 nombre_organismo = clean_text(row[3])
+                competencias = clean_text(row[12])
                 id_sirhus = clean_integer(row[2])
                 categoria = clean_text(row[4])
                 depende_de_id = clean_integer(row[7])
@@ -104,6 +105,7 @@ class Command(BaseCommand):
                     'dir3': dir3,
                     'id_sirhus': id_sirhus,
                     'categoria': categoria,
+                    'competencias': competencias,
                     'depende_de_id': depende_de_id,
                     'url': url,
                     }

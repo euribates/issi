@@ -1,10 +1,89 @@
 #!/usr/bin/env python
 
+import sys
+from inspect import isclass
+
 import pytest
 
 import filters
 
-# Tests for slugify
+# ----------------------------------------------------[ Tests for clean_text ]--
+
+CLEAN_TEXT_SAMPLES = {
+    "none_value": (None, None),
+    "empty_value": ("", None),
+    "_u_value": ("_U", None),
+    "sanity_check": ("hola", "hola"),
+    "singled_quoted": ("'hola'", 'hola'),
+    "doubled_quoted": ('"hola"', 'hola'),
+    "triple_singled_quoted": ("'''hola'''", 'hola'),
+    "triple_doubled_quoted": ('"""hola"""', 'hola'),
+    }
+
+
+@pytest.fixture(params=CLEAN_TEXT_SAMPLES.values(), ids=CLEAN_TEXT_SAMPLES.keys())
+def clean_text_sample(request):
+    return request.param
+
+
+def test_clean_text(clean_text_sample):
+    input_value, expected_outcome = clean_text_sample
+    assert filters.clean_text(input_value) == expected_outcome
+
+
+# -------------------------------------------------[ Tests for clean_integer ]--
+
+
+CLEAN_INTEGER_SAMPLES = {
+    "none_value": (None, None),
+    "empty_value": ("", None),
+    "_u_value": ("_U", None),
+    "sanity_check": ("3143", 3143),
+    "singled_quoted": ("'3144'", 3144),
+    "doubled_quoted": ('"3145"', 3145),
+    "not_integer": ('hola, mundo', ValueError),
+    }
+
+
+@pytest.fixture(params=CLEAN_INTEGER_SAMPLES.values(), ids=CLEAN_INTEGER_SAMPLES.keys())
+def clean_integer_sample(request):
+    return request.param
+
+
+def test_clean_integer(clean_integer_sample):
+    input_value, expected_outcome = clean_integer_sample
+    if isclass(expected_outcome) and issubclass(expected_outcome, Exception):
+        with pytest.raises(expected_outcome):
+            filters.clean_integer(input_value)
+    else:
+        assert filters.clean_integer(input_value) == expected_outcome
+
+# ----------------------------------------------------------[ Test clean URL ]--
+
+CLEAN_URL_SAMPLES = {
+    'sanity': ('http://www.python.org/', 'http://www.python.org/'),
+    'none_value': (None, None),
+    'empty_value': ('', None),
+    '_u_value': ('_U', None),
+    'invalid_url': ('María tenia un corderito', ValueError),
+    }
+
+
+@pytest.fixture(params=CLEAN_URL_SAMPLES.values(), ids=CLEAN_URL_SAMPLES.keys())
+def clean_url_sample(request):
+    return request.param
+
+
+def test_clean_url(clean_url_sample):
+    input_value, expected_outcome = clean_url_sample
+    if isclass(expected_outcome) and issubclass(expected_outcome, Exception):
+        with pytest.raises(expected_outcome):
+            filters.clean_url(input_value)
+    else:
+        assert filters.clean_url(input_value) == expected_outcome
+
+
+# ------------------------------------------------------[ Tests for slugify ]--
 
 def test_slugify_simple():
     assert filters.slugify("Hola, mundo árbol") == "hola-mundo-arbol"

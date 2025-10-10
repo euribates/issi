@@ -36,7 +36,7 @@ class Sistema(models.Model):
         null=True,
         default=None,
         )
-    codigo = models.CharField(
+    codigo = models.SlugField(
         max_length=32,
         help_text="Código identificador del sistema (una sola palabra)",
         unique=True,
@@ -47,7 +47,12 @@ class Sistema(models.Model):
         blank=True,
         null=True,
         )
-    descripcion = models.TextField(max_length=512)
+    descripcion = models.TextField(
+        max_length=512,
+        blank=True,
+        default='',
+        verbose_name="Descripción del sistema",
+        )
     proposito = models.TextField(
         blank=True,
         default='',

@@ -1,13 +1,17 @@
 #!/usr/bin/env python
 
 import re
+from urllib.parse import urlparse
+from html import escape
 
 from typing import Optional
 
-def clean_text(text: str) -> str:
+def clean_text(text: str) -> str|None:
     """Limpia el formato de texto.
 
     - Si hay espacios al principio o al final se eliminan
+    - Si tiene triples comillas dobles al principio y al final las elimina.
+    - Si tiene triples comillas simples al principio y al final las elimina.
     - Si tiene comillas dobles al principio y al final las elimina.
     - Si tiene comillas simples al principio y al final las elimina.
 
@@ -21,7 +25,17 @@ def clean_text(text: str) -> str:
 
         Una cadena de texto limpia.
     """
+    if text is None:
+        return None
     text = text.strip()
+    if text in {'', '_U'}:
+        return None
+        text = str(text)
+    if len(text) > 5:
+        if text[:3] == text[-3:] == '"""':
+            return text[3:-3]
+        if text[:3] == text[-3:] == "'''":
+            return text[3:-3]
     if text[0] == text[-1] == '"':
         return text[1:-1]
     if text[0] == text[-1] == "'":
@@ -29,7 +43,7 @@ def clean_text(text: str) -> str:
     return text
 
 
-def clean_integer(text: str) -> Optional[int]:
+def clean_integer(text: str) -> int|None:
     """Interpreta una cadena de texto como un número entero.
 
     Los valores especiales '' (cadena vacia) o `'_U'` se 
@@ -47,9 +61,50 @@ def clean_integer(text: str) -> Optional[int]:
 
         Un entero, o `None`.
     """
-    if text in {'_U', '', None}:
+    text = clean_text(text)
+    if text is None:
+        return text
+    if not text.isdigit():
+        raise ValueError(
+            f"El valor indicado: {escape(text)}"
+            " no parece un número entero."
+            )
+    return int(text) if text else None
+
+
+def clean_url(url: str) -> str:
+    """Limpia el formato de texto de una url.
+
+    - Si `url` es nulo, vacio o el valor `_U` se devuelve None
+    - Verifica que empieza por http
+    - Realiza las mismas operaciones de limpieza que `clean_text`:
+
+    >>> assert clean_url('http://www.python.org/') == 'http://www.python.org/'
+    >>> assert clean_url(None) == None
+    >>> assert clean_url('') == None
+    >>> assert clean_url('_U') == None
+
+    Params:
+        
+        - url (str): La cadena de texto con la URL a limpiar.
+
+    Returns:
+
+        Una cadena de texto con la URL limpia, o `None`. Si la entrada
+        no es vacia paro no tiene el formato de una URL se eleva la
+        excepcion `ValueError`.
+    """
+
+    if url in {'_U', '', None}:
         return None
-    return int(text)
+    url = clean_text(url)
+    parts = urlparse(url)
+    if parts.scheme not in {'http', 'https'}:
+        raise ValueError(
+            f"El valor indicado: {escape(url)}"
+            " no parece tener el formato correcto."
+            )
+    return url
 
 
 _SLUGIFY_MAP = {
@@ -134,35 +189,4 @@ def slugify(texto: str) -> str:
     result = ''.join([_ for _ in result if ord(_) < 129])
     result = _SLUGIFY_PAT_MULTIPLE_HYPHENS.sub('-', result)
     return result
-
-
-def clean_url(url: str) -> str:
-    """Limpia el formato de texto de una url.
-
-    - Si `url` es nulo, vacio o el valor `_U` se devuelve None
-    - Verifica que empieza por http
-    - Realiza las mismas operaciones de limpieza que `clean_text`:
-        - Si hay espacios al principio o al final se eliminan
-        - Si tiene comillas dobles al principio y al final las elimina.
-        - Si tiene comillas simples al principio y al final las elimina.
-
-    >>> assert clean_url('http://www.python.org/') == 'http://www.python.org/'
-    >>> assert clean_url(None) == None
-    >>> assert clean_url('') == None
-    >>> assert clean_url('_U') == None
-
-    Params:
-        
-        - url (str): La cadena de texto con la URL a limpiar.
-
-    Returns:
-
-        Una cadena de texto con la URL limpia, o `None`.
-    """
-
-    if url in {'_U', '', None}:
-        return None
-    url = clean_text(url)
-    assert url.startswith('http')
-    return url
 
