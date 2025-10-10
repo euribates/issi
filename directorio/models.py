@@ -65,7 +65,21 @@ class Organismo(models.Model):
             )
          return organismo, created
 
-    def url_detalle_organismo(self):
+    @classmethod
+    def needs_update(cls, id_organismo: int, payload: dict) -> bool:
+        '''Devuelve verdadero si la instancia necesita ser actualizada.
+        '''
+        org = cls.load_organismo(id_organismo)
+        if org is None:
+            return True
+        for name in payload:
+            new_value = payload[name]
+            old_value = getattr(org, name)
+            if  new_value != old_value:
+                return True
+        return False
+
+    def url_detalle_organismo(self) -> str:
         return links.a_detalle_organismo(self.pk)
 
     def url_organigrama(self):

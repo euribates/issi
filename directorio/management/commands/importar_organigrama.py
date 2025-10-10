@@ -6,7 +6,7 @@ from pathlib import Path
 import csv
 from urllib.request import urlretrieve
 
-import colorama
+from rich.console import Console
 from django.core.management.base import BaseCommand
 from django.db import transaction, IntegrityError
 
@@ -28,12 +28,6 @@ FILENAME = 'organigrama.csv'
 
 SEP = '/'
 
-RED       = colorama.Fore.RED
-YELLOW    = colorama.Fore.YELLOW
-BRIGHT    = colorama.Style.BRIGHT
-GREEN     = colorama.Fore.GREEN
-RESET_ALL = colorama.Style.RESET_ALL
-
 VALID_DAYS = 15
 
 TEMP_DIR = settings.BASE_DIR / Path('temp')
@@ -45,39 +39,8 @@ class Command(BaseCommand):
     help = ABOUT
 
     def __init__(self, *args, **kwargs):
-        colorama.just_fix_windows_console()
+        self.console = Console()
         super().__init__(*args, **kwargs)
-
-    def warning(self, msg: str):
-        self.stdout.write(
-            f'{YELLOW}Atención{RESET_ALL} {BRIGHT}{msg}{RESET_ALL}'
-            )
-        
-    def success(self, msg: str):
-        self.stdout.write(
-            f'{GREEN}OK{RESET_ALL}: {BRIGHT}{msg}{RESET_ALL}'
-            )
-
-    def panic(self, msg: str):
-        self.stderr.write(
-            f'{RED}Error{RESET_ALL}: {BRIGHT}{msg}{RESET_ALL}'
-            )
-
-    def descargar_organigrama(self):
-        target_file = TEMP_DIR / FILENAME
-        if target_file.exists():
-            stat = target_file.stat()
-            mod_date = DateTime.fromtimestamp(stat.st_mtime)
-            delta = DateTime.now() - mod_date
-            if delta.days <= VALID_DAYS:  # Local file is still valid
-                return target_file
-        self.warning(f'El fichero local {target_file} no existe o está desfasado')
-        url = f'{CATALOG}/{DATASET}/{RESOURCE}/download/{FILENAME}'
-        urlretrieve(url, target_file)
-        self.success('Fichero {target_file} descargado')
-        return target_file
-
-
 
     def create_parser(self, prog_name, subcommand, **kwargs):
         kwargs['epilog'] = EPILOG
@@ -90,7 +53,39 @@ class Command(BaseCommand):
             help='Forzar la descarga',
             default=False,
             )
-    
+
+    def warning(self, msg: str):
+        self.console.print(f'[yellow]Atención[/] [bols]{msg}[/]')
+        
+    def success(self, msg: str):
+        self.console.print(f'[green]OK[/]: [bold]{msg}[/]')
+
+    def panic(self, msg: str):
+        self.console.print(f'[red]Error[/]: [bold]{msg}[/]')
+
+    def descargar_organigrama(self) -> Path:
+        '''Descarga el organigrama desde el espacio de datos abiertos.
+
+        Solo lo descarga si la copia local no existe o, aun
+        existitendo, ha sido creada hace más de `VALID_DAYS`.
+
+        Returns:
+
+            La ruta del ficnero
+        '''
+        target_file = TEMP_DIR / FILENAME
+        if target_file.exists():
+            stat = target_file.stat()
+            mod_date = DateTime.fromtimestamp(stat.st_mtime)
+            delta = DateTime.now() - mod_date
+            if delta.days <= VALID_DAYS:  # Local file is still valid
+                return target_file
+        self.warning(f'El fichero local [bold]{target_file}[/] no existe o está desfasado')
+        url = f'{CATALOG}/{DATASET}/{RESOURCE}/download/{FILENAME}'
+        urlretrieve(url, target_file)
+        self.success('Fichero [bold]{target_file}[/] descargado')
+        return target_file
+
     def handle(self, *args, **options):
         with open(self.descargar_organigrama(), 'r', encoding='utf-8') as source:
             reader = csv.reader(source, delimiter=';', quotechar='"')
@@ -114,6 +109,7 @@ class Command(BaseCommand):
                     }
             for id_organismo in mapa:
                 row = mapa[id_organismo]
+                nombre_organismo = row['nombre_organismo']
                 steps = [str(id_organismo)]
                 id_parent = row.get('depende_de_id', None)
                 while id_parent:
@@ -121,12 +117,15 @@ class Command(BaseCommand):
                     id_parent = mapa.get(id_parent, {}).get('depende_de_id', None)
                 row['ruta'] = SEP + SEP.join(reversed(steps))
                 try:
-                    with transaction.atomic():
-                        organismo, created = models.Organismo.upsert(id_organismo, **row)
-                    if created:
-                        self.success(f'Organismo {organismo} {RED}creado{RESET_ALL}')
+                    if models.Organismo.needs_update(id_organismo, row):
+                        with transaction.atomic():
+                            organismo, created = models.Organismo.upsert(id_organismo, **row)
+                        if created:
+                            self.success(f'Organismo {nombre_organismo} [red]creado[/]')
+                        else:
+                            self.success(f'Organismo {nombre_organismo} [yellow]actualizado[/]')
                     else:
-                        self.success(f'Organismo {organismo} {YELLOW}actualizado{RESET_ALL}')
+                        self.success(f'Organismo {nombre_organismo} [green]sin cambios[/]')
                 except IntegrityError as err:
                     self.panic(
                         f'{err}: saving/updating {id_organismo}'
