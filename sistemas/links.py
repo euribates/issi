@@ -3,26 +3,36 @@
 from django.urls import reverse_lazy
 
 
-def a_sistemas():
-    return reverse_lazy('sistemas:index')
+def a_sistemas() -> str:
+    return str(reverse_lazy('sistemas:index'))
 
 
-def a_alta_sistema():
-    return reverse_lazy('sistemas:alta_sistema')
+def a_alta_sistema() -> str:
+    return str(reverse_lazy('sistemas:alta_sistema'))
 
 
-def a_detalle_sistema(id_sistema):
-    return reverse_lazy('sistemas:detalle_sistema', kwargs={
+def a_detalle_sistema(id_sistema) -> str:
+    return str(reverse_lazy('sistemas:detalle_sistema', kwargs={
         'sistema': id_sistema,
-        })
+        }))
 
 
-def a_usuarios():
-    return reverse_lazy('sistemas:listado_usuarios')
+def a_usuarios() -> str:
+    return str(reverse_lazy('sistemas:listado_usuarios'))
 
 
-def a_detalle_usuario(login):
-    return reverse_lazy('sistemas:detale_usuario', kwargs={
+def a_detalle_usuario(login) -> str:
+    return str(reverse_lazy('sistemas:detale_usuario', kwargs={
         'login': login,
-        })
+        }))
+
+
+def a_organismos() -> str:
+    return str(reverse_lazy('sistemas:listado_organismos'))
+    
+
+def a_detalle_organismo(id_organismo) -> str:
+    return str(reverse_lazy('sistemas:detalle_organismo', kwargs={
+        'organismo': id_organismo,
+        }))
 

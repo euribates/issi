@@ -5,7 +5,8 @@ from django.shortcuts import render
 from . import models
 from . import forms
 from . import breadcrumbs as bc
-from . import filtersets
+from sistemas.filtersets import UsuarioFilter
+from directorio.filtersets import OrganismoFilter
 
 
 def index(request, *args, **kwargs):
@@ -38,7 +39,7 @@ def detalle_sistema(request, sistema):
 
 
 def listado_usuarios(request):
-    filterset = filtersets.UsuarioFilter(
+    filterset = UsuarioFilter(
         request.GET,
         queryset=models.Usuario.objects.all(),
         )
@@ -66,3 +67,26 @@ def detalle_usuario(request, usuario, *args, **kwargs):
         'tab': 'usuarios',
         'usuario': usuario,
         })
+
+
+def listado_organismos(request):
+    filterset = OrganismoFilter(
+        request.GET,
+        queryset=models.Organismo.objects.all(),
+        )
+    return render(request, 'sistemas/listado_organismos.html', {
+        'titulo': 'Organismos',
+        'breadcrumbs': bc.organismos(),
+        'tab': 'organismos',
+        "filterset": filterset,
+        })
+
+
+def detalle_organismo(request, organismo):
+    return render(request, 'sistemas/detalle_organismo.html', {
+        'titulo': f'Detalles organismo {organismo}',
+        'breadcrumbs': bc.detalle_organismo(organismo),
+        'tab': 'organismos',
+        'organismo': organismo,
+        })
+    

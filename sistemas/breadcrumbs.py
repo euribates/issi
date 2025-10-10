@@ -34,3 +34,14 @@ def detalle_usuario(usuario):
         usuario.login,
         links.a_detalle_usuario(usuario.login),
         )
+
+
+def organismos():
+    return bc_issi().step('Organismos', links.a_organismos())
+
+
+def detalle_organismo(organismo):
+    return organismos().step(
+        organismo.nombre_organismo,
+        links.a_detalle_organismo(organismo.pk),
+        )

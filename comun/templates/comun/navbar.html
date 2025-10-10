@@ -34,6 +34,20 @@
     </li>
   
     <li class="nav-item">
+      {% if tab == 'organismos' %}
+        <a class="nav-link active"
+           aria-current="ORganismos" 
+           href="#">
+        Organismos
+        </a>
+      {% else %}
+        <a class="nav-link" href="{% url 'sistemas:listado_organismos' %}">
+        Organismos
+        </a>
+        {% endif %}  
+    </li>
+  
+    <li class="nav-item">
       {% if tab == 'glosario' %}
         <a class="nav-link active"
            aria-current="Glosario" 

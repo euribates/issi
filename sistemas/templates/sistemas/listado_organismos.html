@@ -1,0 +1,53 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+
+{% block content %}
+
+<form method="get">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Código DIR3</th>
+      <th colspan="2">Categoría</th>
+    </tr>  
+
+    <tr>
+      <th>
+        {{ filterset.form|as_text_control:"nombre_organismo__icontains" }}
+      </th>  
+      <th>
+        {{ filterset.form|as_text_control:"dir3__icontains" }}
+      </th>
+      <th>
+        {{ filterset.form|as_text_control:"categoria__icontains" }}
+      </th>
+      <th>
+        <input type="submit" value="🔍" />
+      </th>
+    </tr> 
+    
+  </thead> 
+  <tbody>
+    {% for organismo in filterset.qs.all %}<tr>
+      <td>
+          <a href="{% url 'sistemas:detalle_organismo' organismo=organismo %}">
+          <b>
+          {{ organismo.nombre_organismo }}
+          </b>
+          </a>
+      </td>
+      <td>
+          <code>
+            {{ organismo.dir3 }}
+          </code>    
+      </td>
+      <td colspan="2">
+        {{ organismo.categoria }}
+      </td>
+    </tr>{% endfor %}
+  </tbody>
+</table>  
+</form>
+{% endblock content %}
