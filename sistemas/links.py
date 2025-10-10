@@ -21,9 +21,9 @@ def a_usuarios() -> str:
     return str(reverse_lazy('sistemas:listado_usuarios'))
 
 
-def a_detalle_usuario(login) -> str:
-    return str(reverse_lazy('sistemas:detale_usuario', kwargs={
-        'login': login,
+def a_detalle_usuario(usuario) -> str:
+    return str(reverse_lazy('sistemas:detalle_usuario', kwargs={
+        'usuario': usuario,
         }))
 
 

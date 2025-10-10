@@ -50,6 +50,21 @@
   <div class="col col-4">
     <div class="card">
       <div class="card-header">
+          <h4 class="card-title">Interlocutores
+          </h4>
+      </div>
+      <div class="card-body">
+      </div>
+      {% for interlocutor in organismo.interlocutores.all %}
+      <p class="m-2">{{ interlocutor.usuario }}</p>
+      {% endfor %}  
+      </div>
+    </div>
+  </div>
+
+  <div class="col col-12">
+    <div class="card">
+      <div class="card-header">
           <h4 class="card-title">Competencias
           </h4>
       </div>
@@ -59,20 +74,6 @@
     </div>
   </div>
 
-  <div class="col col-4">
-    <div class="card">
-      <div class="card-header">
-          <h4 class="card-title">Interlocutores
-          </h4>
-      </div>
-      <div class="card-body">
-      </div>
-      {% for interlocutor in organismo.interlocutor_de.all %}
-      <p class="m-2">{{ interlocutor }}</p>
-      {% endfor %}  
-      </div>
-    </div>
-  </div>
 
 
 </div>
