@@ -20,6 +20,10 @@
   padding: 2.5px;
   }
 
+#pie {
+  line-height: 22px;
+}
+
 .titulo-cabecera {
   text-align: right;
   font-size: 90%;
