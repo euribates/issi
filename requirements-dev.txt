@@ -1,3 +1,5 @@
 watchdog==6.0.0
 ruff
 icecream
+django-debug-toolbar==6.0.0
+django-extensions==4.1

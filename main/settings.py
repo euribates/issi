@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-&psyk$2du$m(cp64y_!2)%vpf_!5ru8apzt$5(avt@sx36^34='
 
-DEBUG = config('DEBUG', default=False)  # SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = config('DEBUG', cast=config.boolean, default=False)
 
 ALLOWED_HOSTS = [
     '0.0.0.0',
@@ -51,11 +51,11 @@ INSTALLED_APPS = [
     'glosario',
     ]
 
-EXTENDED = False
-if EXTENDED:
-    INSTALLED_APPS.extend([
+if DEBUG:
+    INSTALLED_APPS += [
         'django_extensions',
-        ])
+        'debug_toolbar',
+    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -66,6 +66,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+if DEBUG:
+    MIDDLEWARE.insert(5, 'debug_toolbar.middleware.DebugToolbarMiddleware')
 
 ROOT_URLCONF = 'main.urls'
 
@@ -120,7 +123,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ES'
 
 TIME_ZONE = 'UTC'
 
@@ -144,3 +147,63 @@ MEDIA_ROOT = BASE_DIR / 'uploads'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGS_DIR = BASE_DIR / 'logs'
+if not LOGS_DIR.exists:
+    LOGS_DIR.mkdir()
+LOGFILE_NAME = LOGS_DIR / 'web.log'
+LOGFILE_SIZE = 1 * 1024 * 1024
+LOGFILE_COUNT = 3
+
+LOG_LEVEL = 'DEBUG' if DEBUG else 'INFO'
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': (
+                '%(levelname)s %(asctime)s %(module)s '
+                '%(process)d %(thread)d %(message)s'
+            ),
+            'datefmt': '%d/%b/%Y %H:%M:%S',
+        },
+    },
+    'handlers': {
+        # Log to console
+        'console': {
+            'level': LOG_LEVEL,
+            'class': 'logging.StreamHandler',
+        },
+        # Log to a text file that can be rotated by logrotate
+        'logfile': {
+            'level': 'ERROR',
+            'formatter': 'verbose',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': LOGFILE_NAME,
+            'maxBytes': LOGFILE_SIZE,
+            'backupCount': LOGFILE_COUNT,
+        },
+    },
+    'loggers': {
+        'root': {
+            'handlers': ['console'],
+            'level': LOG_LEVEL,
+            'propagate': True,
+        },
+        'django': {
+            'handlers': ['logfile', 'console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+    },
+}
+
+if DEBUG:
+    LOGGING['loggers']['werkzeug'] = {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+        'propagate': True,
+    }
+
+
+LC_TIME_SPANISH_LOCALE = config('LC_TIME_SPANISH_LOCALE', default='es_ES.utf8')

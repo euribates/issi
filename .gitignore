@@ -18,3 +18,4 @@ extra/*
 uploads/**
 reportes/
 temp/
+logs/
