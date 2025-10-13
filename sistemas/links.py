@@ -36,3 +36,6 @@ def a_detalle_organismo(id_organismo) -> str:
         'organismo': id_organismo,
         }))
 
+
+def a_temas() -> str:
+    return str(reverse_lazy('sistemas:listado_temas'))

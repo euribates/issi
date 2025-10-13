@@ -6,16 +6,21 @@ from . import models
 from . import forms
 from . import breadcrumbs as bc
 from sistemas.filtersets import UsuarioFilter
+from sistemas.filtersets import SistemaFilter
 from directorio.filtersets import OrganismoFilter
 
 
 def index(request, *args, **kwargs):
     sistemas = models.Sistema.objects.all()
+    filterset = SistemaFilter(
+        request.GET,
+        queryset=sistemas,
+        )
     return render(request, 'sistemas/index.html', {
         'titulo': 'Sistemas de información',
         'breadcrumbs': bc.sistemas(),
         'tab': 'sistemas',
-        'sistemas': sistemas,
+        "filterset": filterset,
         })
 
 
@@ -89,4 +94,11 @@ def detalle_organismo(request, organismo):
         'tab': 'organismos',
         'organismo': organismo,
         })
-    
+
+
+def listado_temas(request):
+    return render(request, 'sistemas/listado_temas.html', {
+        'titulo': 'Listado de temas (Áreas temáticas)',
+        'breadcrumbs': bc.temas(),
+        'temas': models.Tema.objects.all(),
+        })

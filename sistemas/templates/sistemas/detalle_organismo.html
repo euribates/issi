@@ -1,5 +1,5 @@
 {% extends "comun/base.html" %}
-{% load comun_filters markdownify %}
+{% load comun_filters %}
 
 {% block content %}
 
@@ -39,7 +39,11 @@
           </tr>
           <tr>
               <th>URL</th>
-              <td>{{ organismo.url }}</td>
+              <td>
+                  <a href="{{ organismo.url }}" class="enlace-externo">
+                  {{ organismo.url }}
+                  </a>  
+              </td>
           </tr>
           <tr>
       </table>
@@ -62,6 +66,19 @@
     </div>
   </div>
 
+
+  <div class="col col-12">
+    <div class="card">
+      <div class="card-header">
+          <h4 class="card-title">Sistemas de información
+          </h4>
+      </div>
+      <div class="card-body">
+        {% include "sistemas/includes/listado-sistemas.html" with sistemas=organismo.sistemas.all %}  
+      </div>
+    </div>
+  </div>
+
   <div class="col col-12">
     <div class="card">
       <div class="card-header">
@@ -69,11 +86,10 @@
           </h4>
       </div>
       <div class="card-body">
-          {{ organismo.competencias|markdownify }}
+          {{ organismo.competencias|as_markdown }}
       </div>
     </div>
   </div>
-
 
 
 </div>

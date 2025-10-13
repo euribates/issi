@@ -6,6 +6,10 @@ DATABASE := "default"
 shell:
     python ./manage.py shell_plus
 
+# Buscar en el código usando
+search *args: 
+    pss --py --html --css --txt {{ args }} --ignore-dir=.venv
+    
 
 # Ejecutar test (Omitiendo los lentos)
 test *args='.': clean check

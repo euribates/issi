@@ -12,3 +12,14 @@ class UsuarioFilter(django_filters.FilterSet):
             'apellidos': ['icontains'],
             'organismo__nombre_organismo': ['icontains'],
             }
+
+
+class SistemaFilter(django_filters.FilterSet):
+
+    class Meta:
+        model = models.Sistema
+        fields = {
+            'nombre': ['icontains'],
+            'codigo': ['icontains'],
+            'organismo__nombre_organismo': ['icontains'],
+            }

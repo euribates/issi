@@ -71,9 +71,14 @@ img.card-top-logo {
   display: None;
 }
 
+#navbar {
+  background-color: white;
+  margin-bottom: 1ex;
+}
+
 #content {
   /*background-color: #C0C0C0;*/
-  padding-top: 20px;
+  padding-top: 20pxsistema.;
 }
 
 .right-float-menu {
@@ -99,4 +104,29 @@ img.card-top-logo {
   margin-left: 0;
   padding-right: 1em;
   text-indent: -1em;
+}
+
+.dir3 {
+  font-family: monospace,courier;
+  background-color: white;
+  padding: 4px;
+  border-radius: 0.4em;
+  font-size: 90%;
+}
+
+.dir3::before {
+  content: "DIR3 ";
+  color: gray;
+}
+
+.enlace-externo {
+  text-decoration: none;
+}
+
+.enlace-externo:hover {
+  text-decoration: underline;
+}
+
+.enlace-externo::before {
+  content: "➚"
 }

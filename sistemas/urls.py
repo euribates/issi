@@ -26,4 +26,5 @@ urlpatterns = [
     tie('usuario/', views.listado_usuarios),
     tie('usuario/buscar/', views.buscar_usuarios),
     tie('usuario/<login:usuario>/', views.detalle_usuario),
+    tie('temas/', views.listado_temas),
     ]

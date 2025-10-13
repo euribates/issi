@@ -1,5 +1,5 @@
 {% extends "comun/base.html" %}
-{% load comun_filters markdownify %}
+{% load comun_filters %}
 
 {% block content %}
 
@@ -15,7 +15,7 @@
         </div>
         <div class="card-body">
             <p class="card-text">
-            {{ sistema.descripcion|markdownify }}
+            {{ sistema.descripcion|as_markdown }}
             </p>
 
             <span class="badge text-bg-primary">
@@ -43,7 +43,7 @@
         </div>
         <div class="card-body">
             <p class="card-text">
-              {{ sistema.proposito|markdownify }}    
+              {{ sistema.proposito|as_markdown }}    
             </p>
         </div>
       </div>
@@ -61,9 +61,13 @@
             </tr>
             <tr>
                 <th>Organismo</th>
-                <td>{{ sistema.organismo }}
+                <td>
+                    <a href="{% url 'sistemas:detalle_organismo' organismo=sistema.organismo %}">
+                    {{ sistema.organismo }}
+                    </a>
+
                     <br>
-                    <div class="dir3">{{ sistema.organismo.dir3 }}</div>
+                    <span class="dir3">{{ sistema.organismo.dir3 }}</span>
                 </td>
             </tr>
             <tr>

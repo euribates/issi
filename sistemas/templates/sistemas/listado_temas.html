@@ -1,0 +1,14 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+
+{% block content %}
+
+<ul>
+    
+
+{% for tema in temas.all %}
+<li>{{ tema }}</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}

@@ -1,11 +1,40 @@
 {% extends "comun/base.html" %}
-{% load markdownify %}
+{% load comun_filters %}
 
 {% block content %}
 
+<form method="get">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Código</th>
+      <th colspan="2">Organismo</th>
+    </tr>  
+
+    <tr>
+      <th>
+        {{ filterset.form|as_text_control:"nombre__icontains" }}
+      </th>
+      <th>
+        {{ filterset.form|as_text_control:"codigo__icontains" }}
+      </th>
+      <th>
+        {{ filterset.form|as_text_control:"organismo__nombre_organismo__icontains" }}
+      </th>
+      <th>
+        <input type="submit" value="🔍" />
+      </th>
+    </tr> 
+    
+  </thead> 
+</table>
+
+
   <div class="row">
   
-{% for sistema in sistemas.all %}
+{% for sistema in filterset.qs.all %}
 <div class="col-4">
 <div class="card">
 
@@ -22,11 +51,16 @@
       <h4 class="card-title">{{ sistema.codigo }}
           <br><small>{{ sistema.nombre }}</small>
       </h4>
+      <h5>
+          <a href="{% url 'sistemas:detalle_organismo' organismo=sistema.organismo %}">
+      {{ sistema.organismo }}
+      </a>    
+      </h5>  
   </div>
   <div class="card-body">
-    {% comment %}<p class="card-text">{% endcomment %}
-      {% comment %}{{ sistema.descripcion|markdownify }}{% endcomment %}
-    {% comment %}</p>{% endcomment %}
+    <p class="card-text">
+      {{ sistema.descripcion|as_markdown }}
+    </p>
     <span class="badge text-bg-primary">
         {{ sistema.tema }}
     </span>

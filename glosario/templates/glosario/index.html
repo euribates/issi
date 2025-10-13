@@ -1,5 +1,5 @@
 {% extends "comun/base.html" %}
-{% load markdownify %}
+{% load comun_filters %}
 
 {% block content %}
 
@@ -18,7 +18,7 @@
       <th>
         <b>{{ termino.entrada }}</b>
       </th>
-      <td>{{ termino.descripcion|markdownify }}</td>
+      <td>{{ termino.descripcion|as_markdown }}</td>
       <td>
         <code>
           {{ termino.fuente }}

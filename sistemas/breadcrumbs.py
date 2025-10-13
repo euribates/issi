@@ -45,3 +45,7 @@ def detalle_organismo(organismo):
         organismo.nombre_organismo,
         links.a_detalle_organismo(organismo.pk),
         )
+
+
+def temas():
+    return bc_issi().step('Temas', links.a_temas())

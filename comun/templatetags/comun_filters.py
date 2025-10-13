@@ -3,6 +3,9 @@
 from django import template
 from django.utils.safestring import mark_safe
 
+import markdown
+
+
 register = template.Library()
 
 
@@ -44,3 +47,18 @@ def as_checkbox(form, name):
     _widget.attrs['class'] = 'form-check-input'
     _widget.attrs['id'] = f'id_{name}'
     return _widget.render(name, value)
+
+
+@register.filter
+def as_markdown(text):
+    text = text.strip()
+    text = text.replace(':\n', ':\n\n')
+    text = text.replace('.\n', '.\n\n')
+    if not hasattr(as_markdown, 'md_processor'):
+        as_markdown.md_processor = markdown.Markdown(
+            extras=['tables', 'footnotes']
+        )
+    result = as_markdown.md_processor.convert(text)
+    if '<table' in result:
+        result = result.replace('<table', '<table class="table"')
+    return mark_safe(result)
