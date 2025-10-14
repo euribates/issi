@@ -3,6 +3,7 @@
 from sistemas.models import Sistema
 from sistemas.models import Usuario
 from sistemas.models import Sistema
+from sistemas.models import Tema
 from directorio.models import Organismo
 
 
@@ -87,5 +88,27 @@ class OrganismoConverter:
             return str(value.id_organismo)
         raise ValueError(
             "Se necesita una instancia de la clase Organismo, pero"
+            " me pasan una instancia de {value.__class__.__name__}."
+            )
+
+
+
+class TemaConverter:
+
+    regex = '[A-Za-z]{3}'
+
+    def to_python(self, value):
+        tema = Tema.load_tema(value)
+        if not tema:
+            raise ValueError("El tema especificado es incorrecto")
+        return tema
+
+    def to_url(self, value):
+        if isinstance(value, str) and len(value) == 3:
+            return value
+        if isinstance(value, Tema):
+            return str(value.id_tema)
+        raise ValueError(
+            "Se necesita una instancia de la clase Tema, pero"
             " me pasan una instancia de {value.__class__.__name__}."
             )

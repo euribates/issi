@@ -100,5 +100,16 @@ def listado_temas(request):
     return render(request, 'sistemas/listado_temas.html', {
         'titulo': 'Listado de temas (Áreas temáticas)',
         'breadcrumbs': bc.temas(),
+        'tab': 'temas',
         'temas': models.Tema.objects.all(),
         })
+
+
+def detalle_tema(request, tema):
+    return render(request, 'sistemas/detalle_tema.html', {
+        'titulo': str(tema),
+        'breadcrumbs': bc.tema(tema),
+        'tab': 'temas',
+        'tema': tema,
+        })
+

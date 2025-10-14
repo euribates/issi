@@ -1,0 +1,28 @@
+
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+{% block content %}
+
+<p>Tema: {{ tema }}</p>
+
+<table class="table table-striped">
+{% for s in tema.sistemas.all %}<tr>
+    <th>
+        <a href="{% url 'sistemas:detalle_sistema' sistema=s %}">
+        {{ s.codigo }}
+        </a>
+    </th>   
+    <td>
+        {{ s.nombre }}
+    </td>
+    <td>
+        <a href="{% url 'sistemas:detalle_organismo' organismo=s.organismo.pk %}">
+        {{ s.organismo.nombre_organismo }}
+        </a>
+    </td>
+</tr>{% endfor %}
+</table>
+
+
+
+{% endblock content %}

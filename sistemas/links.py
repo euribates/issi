@@ -39,3 +39,9 @@ def a_detalle_organismo(id_organismo) -> str:
 
 def a_temas() -> str:
     return str(reverse_lazy('sistemas:listado_temas'))
+
+
+def a_tema(id_tema:str) -> str:
+    return str(reverse_lazy('sistemas:detalle_tema', kwargs={
+        'tema': id_tema,
+        }))

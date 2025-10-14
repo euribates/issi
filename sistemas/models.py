@@ -16,6 +16,13 @@ class Tema(models.Model):
     def __str__(self):
         return self.nombre_tema
 
+    @classmethod
+    def load_tema(cls, pk:str):
+        try:
+            return cls.objects.get(id_tema=pk)
+        except cls.DoesNotExist:
+            return None
+
 
 class Sistema(models.Model):
 

@@ -49,3 +49,7 @@ def detalle_organismo(organismo):
 
 def temas():
     return bc_issi().step('Temas', links.a_temas())
+
+
+def tema(t):
+    return temas().step(str(t), links.a_tema(t.id_tema))

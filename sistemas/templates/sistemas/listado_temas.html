@@ -7,7 +7,11 @@
     
 
 {% for tema in temas.all %}
-<li>{{ tema }}</li>
+<li>
+    <a href="{% url 'sistemas:detalle_tema' tema=tema.pk %}">
+    {{ tema }}
+    </a>
+</li>
 {% endfor %}
 </ul>
 
