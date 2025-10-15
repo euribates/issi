@@ -1,13 +1,22 @@
 from django.db import models
+from django.db.models.functions import Coalesce
 
 from directorio.models import Organismo
 from . import links
+
+
+class TemaManager(models.Manager):
+
+    def with_counts(self):
+        return self.annotate(num_sistemas=Coalesce(models.Count("sistemas"), 0))
 
 
 class Tema(models.Model):
 
     class Meta:
         ordering = ['nombre_tema',]
+
+    objects = TemaManager()
 
     id_tema = models.CharField(max_length=3, primary_key=True)
     nombre_tema = models.CharField(max_length=32)
@@ -22,6 +31,9 @@ class Tema(models.Model):
             return cls.objects.get(id_tema=pk)
         except cls.DoesNotExist:
             return None
+
+    def inicial(self):
+        return self.nombre_tema[0].upper()
 
 
 class Sistema(models.Model):
@@ -86,6 +98,11 @@ class Sistema(models.Model):
         related_name='subsistemas',
         on_delete=models.PROTECT,
         )
+    tiene_especial_importancia = models.BooleanField(
+        default=False,
+        help_text="Este S.I. contiene activos de datos de especial importancia",
+        )
+
     icono_height = models.PositiveIntegerField(default=0)
     icono_width = models.PositiveIntegerField(default=0)
     icono = models.ImageField(
