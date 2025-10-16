@@ -2,6 +2,19 @@
 {% load comun_filters %}
 {% block content %}
 
+<button data-on-click="alert('I’m sorry, Dave. I’m afraid I can’t do that.')">
+
+    Open the pod bay doors, HAL.
+
+</button>
+
+
+o
+
+<input data-bind-title />
+<div data-text="$title.toUpperCase()"></div>
+<button data-on-click="@post('/endpoint')">Save</button>
+
 <div class="card">
   <div class="card-header">
     Añadir un nuevo sistema de información
@@ -24,12 +37,13 @@
     {{ form|as_text_control:"codigo" }}
    </div>
 
-   <div class="mb-3 form-check">
-    {{ form|as_checkbox:"es_transversal" }}   
-    <label class="form-check-label" for="id_es_transversal">
-      Este sistema es transversal a varios departamentos
-    </label>
-    </div>
+   <div class="mb-3">
+    <label for="id_codigo" class="form-label">Organismo</label>
+    {{ form|as_text_control:"organismo" }}
+   </div>
+
+
+
    </fieldset>
 
     <button type="submit" class="btn btn-primary">Submit</button>

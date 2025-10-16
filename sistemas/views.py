@@ -101,7 +101,7 @@ def listado_temas(request):
         'titulo': 'Listado de temas (Áreas temáticas)',
         'breadcrumbs': bc.temas(),
         'tab': 'temas',
-        'temas': models.Tema.objects.all(),
+        'temas': models.Tema.objects.with_counts().all(),
         })
 
 

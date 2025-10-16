@@ -3,14 +3,18 @@
 
 {% block content %}
 
-<ul>
-    
+<table>
+{% for tema in temas.all %}<tr
+<table>
+    {{ tema.inicial }}
 
-{% for tema in temas.all %}
-<li>
     <a href="{% url 'sistemas:detalle_tema' tema=tema.pk %}">
     {{ tema }}
     </a>
+    {% if tema.num_sistemas > 0 %}
+      &nbsp;
+      <span class="badge bg-secondary">{{ tema.num_sistemas }}</span>    
+    {% endif %}
 </li>
 {% endfor %}
 </ul>
