@@ -2087,6 +2087,14 @@
 },
 {
     "model": "directorio.ente",
+    "pk": "ACIISI",
+    "fields": {
+        "organismo": 42158,
+        "url_open_data": null
+    }
+},
+{
+    "model": "directorio.ente",
     "pk": "AGPA",
     "fields": {
         "organismo": 42084,

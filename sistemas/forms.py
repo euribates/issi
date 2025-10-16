@@ -18,10 +18,4 @@ class AltaSistemaForm(forms.ModelForm):
             ]
 
     def organismos_filtrados(self, query: str):
-        return (
-            models.Organismo.objects.filter(
-                Q(nombre_organismo__icontains=query) |
-                Q(categoria__icontains=query) |
-                Q(dir3__icontains=query)
-                )
-            )
+        return models.Organismo.search(query)

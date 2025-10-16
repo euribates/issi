@@ -2,18 +2,9 @@
 {% load comun_filters %}
 {% block content %}
 
-<button data-on-click="alert('I’m sorry, Dave. I’m afraid I can’t do that.')">
-
-    Open the pod bay doors, HAL.
-
-</button>
 
 
-o
 
-<input data-bind-title />
-<div data-text="$title.toUpperCase()"></div>
-<button data-on-click="@post('/endpoint')">Save</button>
 
 <div class="card">
   <div class="card-header">
@@ -24,6 +15,8 @@ o
 
    <form method="POST" action=".">
 
+  {{ form.errors }}  
+    {% csrf_token %}
    <fieldset>
     <legend>Campos obligatorios</legend>
 
@@ -39,7 +32,16 @@ o
 
    <div class="mb-3">
     <label for="id_codigo" class="form-label">Organismo</label>
-    {{ form|as_text_control:"organismo" }}
+        <button 
+            type="button"
+            data-on-load="@get('/sistemas/patch/organismos/')"
+            data-on-click="@get('/sistemas/patch/organismos/')">
+        filtrar por
+        </button>
+        <input type="text" name="query" data-bind="query">
+        <div id="control_organismos">
+        </div>
+
    </div>
 
 

@@ -11,7 +11,7 @@ def a_alta_sistema() -> str:
     return str(reverse_lazy('sistemas:alta_sistema'))
 
 
-def a_detalle_sistema(id_sistema) -> str:
+def a_detalle_sistema(id_sistema: int) -> str:
     return str(reverse_lazy('sistemas:detalle_sistema', kwargs={
         'sistema': id_sistema,
         }))

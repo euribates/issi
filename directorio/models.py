@@ -7,6 +7,7 @@ from urllib.request import urlretrieve
 from bs4 import BeautifulSoup
 
 from django.db import models
+from django.db.models import Q
 from django.conf import settings
 
 from . import links
@@ -84,6 +85,16 @@ class Organismo(models.Model):
                 return True
         return False
 
+    @classmethod
+    def search(cls, query):
+        return (
+            cls.objects.filter(
+                Q(nombre_organismo__icontains=query) |
+                Q(categoria__icontains=query) |
+                Q(dir3__icontains=query)
+                )
+            )
+
     def url_detalle_organismo(self) -> str:
         return links.a_detalle_organismo(self.pk)
 
@@ -149,6 +160,8 @@ class Ente(models.Model):
 
     def get_open_data(self):
         url = self.url_open_data
+        if not url:
+            return
         with open(self.descargar_datos(url), 'r', encoding='utf-8') as source:
             soup = BeautifulSoup(source, 'html.parser')
             for item in soup.find_all('li', 'dataset-item'):

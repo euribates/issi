@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 
+import json
+from html import escape
+
 from django.shortcuts import render
+from django.shortcuts import redirect
+from django.http import HttpResponse
 
 from . import models
 from . import forms
+from . import links
 from . import breadcrumbs as bc
 from sistemas.filtersets import UsuarioFilter
 from sistemas.filtersets import SistemaFilter
 from directorio.filtersets import OrganismoFilter
+from directorio.models import Organismo
 
 
 def index(request, *args, **kwargs):
@@ -25,7 +32,13 @@ def index(request, *args, **kwargs):
 
 
 def alta_sistema(request):
-    form = forms.AltaSistemaForm()
+    if request.method == 'POST':
+        form = forms.AltaSistemaForm(request.POST)
+        if form.is_valid():
+            sistema = form.save()
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.AltaSistemaForm()
     return render(request, 'sistemas/alta-sistema.html', {
         'titulo': 'Alta de un nuevo sistemas de información',
         'breadcrumbs': bc.alta_sistema(),
@@ -77,7 +90,7 @@ def detalle_usuario(request, usuario, *args, **kwargs):
 def listado_organismos(request):
     filterset = OrganismoFilter(
         request.GET,
-        queryset=models.Organismo.objects.all(),
+        queryset=Organismo.objects.all(),
         )
     return render(request, 'sistemas/listado_organismos.html', {
         'titulo': 'Organismos',
@@ -87,7 +100,7 @@ def listado_organismos(request):
         })
 
 
-def detalle_organismo(request, organismo):
+def detalle_organismo(request, organismo: Organismo):
     return render(request, 'sistemas/detalle_organismo.html', {
         'titulo': f'Detalles organismo {organismo}',
         'breadcrumbs': bc.detalle_organismo(organismo),
@@ -112,4 +125,34 @@ def detalle_tema(request, tema):
         'tab': 'temas',
         'tema': tema,
         })
+
+
+def patch_organismos(request):
+    datastar = request.GET.get('datastar')
+    try:
+        params = json.loads(datastar)
+    except Exception as err:
+        params = {
+            'error': escape(repr(err)),
+            }
+    from icecream import ic; ic(params)
+    query = params.get("query")
+    buff = [
+        '<select name="id_organismo"'
+        ' size="12"'
+        ' class="form-control">'
+        ]
+    if query:
+        organismos = Organismo.search(query)
+    else:
+        organismos = Organismo.objects.all()
+    for org in organismos:
+        buff.append(
+            f'<option value="{org.pk}">'
+            f'{org.nombre_organismo} {org.dir3}'
+            '</option>'
+            )
+    buff.append('</select>')
+    result = '\n'.join(buff)
+    return HttpResponse(f'<div id="control_organismos">{result}</div>')
 

@@ -80,6 +80,7 @@ class Sistema(models.Model):
     tema = models.ForeignKey(
         Tema,
         related_name='sistemas',
+        default='_U',
         on_delete=models.PROTECT,
         )
     es_transversal = models.BooleanField(
