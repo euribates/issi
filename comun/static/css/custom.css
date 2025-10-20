@@ -130,3 +130,18 @@ img.card-top-logo {
 .enlace-externo::before {
   content: "➚"
 }
+
+.commands {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: right;
+  text-align: right;
+  /*border: 1px dotted red;*/
+  /*background-color: pink;*/
+}
+
+.commands > button {
+
+}

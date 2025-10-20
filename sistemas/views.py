@@ -2,19 +2,33 @@
 
 import json
 from html import escape
+from functools import cache
 
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.http import HttpResponse
 
-from . import models
+from . import breadcrumbs as bc
 from . import forms
 from . import links
-from . import breadcrumbs as bc
+from . import models
+from comun.commands import Command
+
 from sistemas.filtersets import UsuarioFilter
 from sistemas.filtersets import SistemaFilter
 from directorio.filtersets import OrganismoFilter
 from directorio.models import Organismo
+
+
+@cache
+def cmd_sistemas():
+    return [
+        Command(
+            links.a_alta_sistema(),
+            '⊞ Alta sistema',
+            klass='warning',
+            ),
+        ]
 
 
 def index(request, *args, **kwargs):
@@ -26,6 +40,7 @@ def index(request, *args, **kwargs):
     return render(request, 'sistemas/index.html', {
         'titulo': 'Sistemas de información',
         'breadcrumbs': bc.sistemas(),
+        'commands': cmd_sistemas(),
         'tab': 'sistemas',
         "filterset": filterset,
         })

@@ -1,0 +1,7 @@
+{% if commands %}
+<div class="commands" role="group" aria-label="Operaciones disponibles">
+  {% for cmd in commands %}  
+    {{ cmd }}
+  {% endfor %}
+</div>
+{% endif %}
