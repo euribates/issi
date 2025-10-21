@@ -16,7 +16,7 @@ from comun.funcop import agrupa
 from comun.opendata import procedimientos
 from comun.opendata import servicios
 from directorio.models import Ente
-
+import filters
 
 OUTPUT_DIR = settings.BASE_DIR / 'reportes'
 
@@ -24,6 +24,14 @@ CMD_NAME = 'crea_reporte'
 ABOUT    = 'Crea un informe indivizualizado por organismo'
 EPILOG   = 'ISSI - Inventario de sistemas de información'
 
+
+@dataclasses.dataclass(order=True, frozen=True)
+class Procedimiento:
+    dir3: str
+    nombre: str
+    codigo: int
+    tipologia: str
+            
 
 class REPORTE_GOBCAN(FPDF):
 
@@ -157,20 +165,17 @@ class Command(BaseCommand):
     def add_procedimientos(self, all_dir3, pdf):
         pdf.seccion('Procedimientos')
         items = []
-        Procedimiento = collections.namedtuple(
-            'Procedimiento',
-            ['dir3', 'nombre', 'codigo'],
-            )
         with open(procedimientos.descargar_datos(), 'r', encoding='utf-8') as f:
             reader = csv.reader(f, delimiter=';')
             next(reader)  # Ignorar cabecera
             for line in reader:
                 dir3 = line[10]
                 if dir3 in all_dir3:
-                    codigo = line[0]
+                    codigo = filters.clean_integer(line[0])
                     org = all_dir3[dir3]
-                    nombre = line[1]
-                    items.append(Procedimiento(dir3, nombre, codigo))
+                    nombre = filters.clean_text(line[2]) or filters.clean_text(line[1])
+                    tipologia = filters.clean_text(line[20])
+                    items.append(Procedimiento(dir3, nombre, codigo, tipologia))
         items.sort()
         agrupado = agrupa(items)
         for dir3 in agrupado:
@@ -182,9 +187,14 @@ class Command(BaseCommand):
             for row in rows:
                 pdf.set_font('dejavu-sans', size=12, style='')
                 pdf.multi_cell(w=0, text=row.nombre, padding=(1, 1, 1, 4))
-                pdf.ln(2)
+                if row.tipologia:
+                    pdf.set_font('dejavu-sans', size=10, style='')
+                    pdf.ln(1)
+                    pdf.multi_cell(w=0, text=row.tipologia, padding=(2, 1, 1, 4))
+                pdf.ln(1)
                 url = f'https://sede.gobiernodecanarias.org/sede/tramites/{row.codigo}'
                 pdf.as_url(url)
+                pdf.ln(0.4)
 
     def add_servicios(self, all_dir3, pdf):
         pdf.seccion('Carta de servicios')
