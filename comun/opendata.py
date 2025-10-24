@@ -7,6 +7,7 @@ from urllib.request import urlretrieve
 
 from django.conf import settings
 
+TEMP_DIR = settings.BASE_DIR / Path('temp')
 
 DIAS_VIGENTE = 15
 DATOS_CANARIAS = 'https://datos.canarias.es/catalogos/general'
@@ -58,7 +59,7 @@ class OpenData:
         Returns: Un objeto de tipo `Path` con la ruta del fichero
                  local.
         '''
-        target_file = settings.BASE_DIR / Path(self.filename)
+        target_file = TEMP_DIR / Path(self.filename)
         if target_file.exists():
             stat = target_file.stat()
             mod_date = DateTime.fromtimestamp(stat.st_mtime)
