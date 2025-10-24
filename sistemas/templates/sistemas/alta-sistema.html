@@ -29,20 +29,21 @@
 
 
    <div class="mb-3">
-    <label for="id_codigo" class="form-label">Organismo</label>
+    <label for="id_codigo" class="form-label">Organismo
+        <span class="badge rounded-pill bg-info">
+        <div id="contador">0</div>
+        <span>
+    </label>
         <button 
             type="button"
             data-on-load="@get('/sistemas/patch/organismos/')"
             data-on-click="@get('/sistemas/patch/organismos/')">
         filtrar por
         </button>
+
         <input type="text" name="query" value="" data-bind="query">
         <div id="control_organismos">
         </div>
-
-        <input type="text" name="dos" value="matraka" data-bind="dos">
-        <div id="contador">0</div>
-
    </div>
 
 
