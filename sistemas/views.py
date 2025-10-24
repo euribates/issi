@@ -161,12 +161,18 @@ def patch_organismos(request):
         organismos = Organismo.search(query)
     else:
         organismos = Organismo.objects.all()
+    selected = ' selected'
+    contador = organismos.count()
     for org in organismos:
         buff.append(
-            f'<option value="{org.pk}">'
+            f'<option value="{org.pk}"{selected}>'
             f'{org.nombre_organismo} {org.dir3}'
             '</option>'
             )
+        selected = ''
     buff.append('</select>')
     result = '\n'.join(buff)
-    return HttpResponse(f'<div id="control_organismos">{result}</div>')
+    return HttpResponse(
+        f'<div id="control_organismos">{result}</div>'
+        f'<div id="contador">{contador}<div>'
+        )

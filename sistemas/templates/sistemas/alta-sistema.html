@@ -2,11 +2,8 @@
 {% load comun_filters %}
 {% block content %}
 
-
-
-
-
 <div class="card">
+
   <div class="card-header">
     Añadir un nuevo sistema de información
   </div>
@@ -30,6 +27,7 @@
     {{ form|as_text_control:"codigo" }}
    </div>
 
+
    <div class="mb-3">
     <label for="id_codigo" class="form-label">Organismo</label>
         <button 
@@ -38,9 +36,12 @@
             data-on-click="@get('/sistemas/patch/organismos/')">
         filtrar por
         </button>
-        <input type="text" name="query" data-bind="query">
+        <input type="text" name="query" value="" data-bind="query">
         <div id="control_organismos">
         </div>
+
+        <input type="text" name="dos" value="matraka" data-bind="dos">
+        <div id="contador">0</div>
 
    </div>
 
