@@ -170,4 +170,3 @@ def patch_organismos(request):
     buff.append('</select>')
     result = '\n'.join(buff)
     return HttpResponse(f'<div id="control_organismos">{result}</div>')
-
