@@ -51,18 +51,23 @@
       </div>
     </div>
 
+  </section>  
+  <section class="col col-4">
 
-    <div class="card mt-3">
+    <div class="card">
       <div class="card-header bg-info bg-gradient">
         Depende de
       </div>
       <div class="card-body">
       <ul class="list-group list-group-flush">
         {% if organismo.es_primer_nivel %}
-          <li class="list-group-item">Gobierno de Canarias</li>
+        <li class="list-group-item">
+          <b>Gobierno de Canarias</b>
+        </li>
+
         {% else %}      
           <li class="list-group-item">
-              <a href="{{ organismo.depende_de.url_detalle_organismo }}">
+              <a href="{% url 'sistemas:detalle_organismo' organismo=organismo.depende_de %}">
               {{ organismo.depende_de.nombre_organismo }}
               </a>
           </li>
@@ -71,7 +76,7 @@
       </div>
     </div>  
 
-    <div class="card mt-3">
+    <div class="card mt-2">
       <div class="card-header bg-info bg-gradient">
         Organismos Dependientes
         <span class="badge">{{ organismo.organismos_dependientes.count }}<span>
@@ -80,7 +85,7 @@
       <ul class="list-group list-group-flush">
         {% for org in organismo.organismos_dependientes.all %}
           <li class="list-group-item">
-              <a href="{{ org.url_detalle_organismo }}">  
+              <a href="{% url 'sistemas:detalle_organismo' organismo=org %}">  
               {{ org.nombre_organismo }}
               </a>
           </li>
@@ -93,49 +98,75 @@
 
   </section>
 
-  
-  <section class="col col-4">
-    <div class="card">
-      <div class="card-header">
+  <div class="row">
+
+    <section class="col col-12">
+      <div class="card mt-2">
+        <div class="card-header">
           <h4 class="card-title">Interlocutores
+            <span class="badge rounded-pill bg-secondary">
+            {{ organismo.interlocutores.count }}
+            </span>
           </h4>
+        </div>
+        <div class="card-body">
+        <table class="table m-2">
+          <thead>
+            <tr>
+              <th>
+              Nombre y apellidos
+              </th>
+              <th>
+              Identificador
+              </th>
+              <th>
+              Correo electrónico
+              </th>
+            </tr>
+          </thead>
+        {% for interlocutor in organismo.interlocutores.all %}
+          <tr>
+              <td>{{ interlocutor.usuario }}</td>
+              <td>
+                <pre>{{ interlocutor.usuario.pk }}</pre>
+              </td>
+              <td>
+                  <a href="mailto:{{ interlocutor.usuario.email }}">
+                      {{ interlocutor.usuario.email }}
+                  </a>    
+              </td>
+          </tr>  
+        {% endfor %}  
+        </table>
+        </div>
       </div>
-      <div class="card-body">
+    </section>
+
+    <section class="col col-12">
+      <div class="card mt-2">
+        <div class="card-header">
+            <h4 class="card-title">Sistemas de información
+            </h4>
+        </div>
+        <div class="card-body">
+          {% include "sistemas/includes/listado-sistemas.html" with sistemas=organismo.sistemas.all %}  
+        </div>
       </div>
-      {% for interlocutor in organismo.interlocutores.all %}
-      <p class="m-2">{{ interlocutor.usuario }}</p>
-      {% endfor %}  
+    </section>
+
+    <section class="col col-12">
+      <div class="card mt-2">
+        <div class="card-header">
+            <h4 class="card-title">Competencias
+            </h4>
+        </div>
+        <div class="card-body">
+            {{ organismo.competencias|as_markdown }}
+        </div>
       </div>
-    </div>
+    </section>
+
   </div>
-
-
-      
-
-  <div class="col col-12">
-    <div class="card">
-      <div class="card-header">
-          <h4 class="card-title">Sistemas de información
-          </h4>
-      </div>
-      <div class="card-body">
-        {% include "sistemas/includes/listado-sistemas.html" with sistemas=organismo.sistemas.all %}  
-      </div>
-    </div>
-  </div>
-
-  <div class="col col-12">
-    <div class="card">
-      <div class="card-header">
-          <h4 class="card-title">Competencias
-          </h4>
-      </div>
-      <div class="card-body">
-          {{ organismo.competencias|as_markdown }}
-      </div>
-    </div>
-  </div>
-
 
 </div>
 

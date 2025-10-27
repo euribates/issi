@@ -473,18 +473,18 @@
 },
 {
     "model": "sistemas.tema",
-    "pk": "VIV",
+    "pk": "UNK",
     "fields": {
-        "nombre_tema": "Vivienda",
+        "nombre_tema": "Desconocido / Pendiente",
         "transversal": false
     }
 },
 {
     "model": "sistemas.tema",
-    "pk": "_U",
+    "pk": "VIV",
     "fields": {
-        "nombre_tema": "Desconocido / Pendiente",
-        "transversal": true
+        "nombre_tema": "Vivienda",
+        "transversal": false
     }
 },
 {
@@ -2208,6 +2208,39 @@
         "organismo": 42150,
         "f_alta": "2025-10-06T18:41:34.285Z",
         "f_cambio": "2025-10-06T18:41:34.285Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 54,
+    "fields": {
+        "usuario": "ffermar",
+        "organismo": 38691,
+        "f_alta": "2025-10-22T10:59:19.571Z",
+        "f_cambio": "2025-10-22T10:59:19.571Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 55,
+    "fields": {
+        "usuario": "aloppui",
+        "organismo": 38691,
+        "f_alta": "2025-10-22T11:00:02.741Z",
+        "f_cambio": "2025-10-22T11:00:02.741Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 56,
+    "fields": {
+        "usuario": "mspergon",
+        "organismo": 38691,
+        "f_alta": "2025-10-22T11:00:18.703Z",
+        "f_cambio": "2025-10-22T11:00:18.703Z",
         "f_baja": null
     }
 },

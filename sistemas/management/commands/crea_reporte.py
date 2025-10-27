@@ -62,14 +62,14 @@ class REPORTE_GOBCAN(FPDF):
 
     def h2(self, titulo):
         self.set_font('dejavu-sans', size=14, style='B')
-        self.cell(w=0, text=titulo)
+        self.multi_cell(w=0, text=titulo)
         self.ln(20)
         self.set_font('dejavu-sans', size=12)
 
     def as_url(self, url):
         self.set_font('courier', size=10)
         self.set_text_color(r=33, g=33, b=128)
-        self.set_x(15)
+        self.set_x(17)
         self.cell(text=url, link=url)
         self.set_font('dejavu-sans', size=12)
         self.set_text_color(r=0, g=0, b=0)
@@ -139,7 +139,7 @@ class Command(BaseCommand):
         table_properties = {
             'col_widths': (80, 20),
             'text_align': ("LEFT", "RIGHT"),
-            'padding': 2,
+            'padding': 1,
             'v_align': 'TOP',
             'borders_layout': 'INTERNAL',
             'headings_style': FontFace(color=white, fill_color=grey),
@@ -151,20 +151,30 @@ class Command(BaseCommand):
             for org, level in organismo.iter_jerarquia():
                 row = table.row()
                 if level == 0:
-                    pdf.set_font('dejavu-sans', size=13, style='B')
-                elif level == 1:
                     pdf.set_font('dejavu-sans', size=12, style='B')
+                elif level == 1:
+                    pdf.set_font('dejavu-sans', size=11, style='B')
                 else:
-                    pdf.set_font('dejavu-sans', size=12, style='')
+                    pdf.set_font('dejavu-sans', size=11, style='')
                 row.cell(f'{org}', padding=(2, 2, 2, 2 + 3 * level))
-                pdf.set_font('courier', size=12, style='B')
+                pdf.set_font('courier', size=11, style='B')
                 row.cell(org.dir3)
                 result[org.dir3] = org
         return result
 
+    def add_interlocutores(self, pdf, organismo):
+        pdf.seccion('Interlocutores')
+        for interlocutor in organismo.interlocutores.all():
+            pdf.set_font('dejavu-sans', size=14, style='B')
+            pdf.cell(w=0, text=str(interlocutor.usuario))
+            pdf.ln(6)
+            pdf.set_font('courier', size=12, style='')
+            pdf.cell(w=0, text=str(interlocutor.usuario.email))
+            pdf.ln(14)
+
     def add_procedimientos(self, all_dir3, pdf):
         pdf.seccion('Procedimientos')
-        items = []
+        items = set([])
         with open(procedimientos.descargar_datos(), 'r', encoding='utf-8') as f:
             reader = csv.reader(f, delimiter=';')
             next(reader)  # Ignorar cabecera
@@ -175,9 +185,8 @@ class Command(BaseCommand):
                     org = all_dir3[dir3]
                     nombre = filters.clean_text(line[2]) or filters.clean_text(line[1])
                     tipologia = filters.clean_text(line[20])
-                    items.append(Procedimiento(dir3, nombre, codigo, tipologia))
-        items.sort()
-        agrupado = agrupa(items)
+                    items.add(Procedimiento(dir3, nombre, codigo, tipologia))
+        agrupado = agrupa(sorted(items), lambda _:_.dir3)
         for dir3 in agrupado:
             rows = agrupado[dir3]
             pdf.set_font('dejavu-sans', size=14, style='B')
@@ -186,12 +195,22 @@ class Command(BaseCommand):
             pdf.ln(11)
             for row in rows:
                 pdf.set_font('dejavu-sans', size=12, style='')
-                pdf.multi_cell(w=0, text=row.nombre, padding=(1, 1, 1, 4))
+                pdf.multi_cell(
+                    w=0,
+                    text=row.nombre,
+                    padding=(1, 1, 1, 2),
+                    border=0,
+                    )
                 if row.tipologia:
                     pdf.set_font('dejavu-sans', size=10, style='')
-                    pdf.ln(1)
-                    pdf.multi_cell(w=0, text=row.tipologia, padding=(2, 1, 1, 4))
-                pdf.ln(1)
+                    pdf.ln(0.2)
+                    pdf.multi_cell(
+                        w=0,
+                        text=row.tipologia,
+                        padding=(1, 1, 1, 8),
+                        border=0,
+                        )
+                pdf.ln(0.5)
                 url = f'https://sede.gobiernodecanarias.org/sede/tramites/{row.codigo}'
                 pdf.as_url(url)
                 pdf.ln(0.4)
@@ -209,20 +228,17 @@ class Command(BaseCommand):
             'headings_style': FontFace(color=white, fill_color=grey),
             }
         Servicio = collections.namedtuple('Servicio', ['dir3', 'nombre', 'codigo'])
-        items = []
+        items = set([])
         with open(servicios.descargar_datos(), 'r', encoding='utf-8') as f:
             reader = csv.reader(f, delimiter=';')
             next(reader)  # Ignorar cabecera
             for line in reader:
-                dir3 = line[7]
+                dir3 = filters.clean_text(line[7])
+                nombre = filters.clean_text(line[1])
+                codigo = filters.clean_integer(line[0])
                 if dir3 in all_dir3:
-                    items.append(Servicio(
-                        dir3=dir3,
-                        nombre=line[1],
-                        codigo=int(line[0]),
-                        ))
-        items.sort()
-        agrupado = agrupa(items)
+                    items.add(Servicio(dir3, nombre, codigo))
+        agrupado = agrupa(sorted(items), lambda _:_.dir3)
         for dir3 in agrupado:
             nombre_organismo = all_dir3[dir3].nombre_organismo
             pdf.h2(nombre_organismo)
@@ -260,9 +276,10 @@ class Command(BaseCommand):
         pdf = REPORTE_GOBCAN(filename)
         pdf.add_page()
         pdf.set_font('dejavu-sans', size=24)
-        pdf.cell(text=organismo.nombre_organismo)
+        pdf.multi_cell(w=0, text=organismo.nombre_organismo)
         pdf.ln(14)
         all_dir3 = self.add_jerarquia(pdf, organismo)
+        self.add_interlocutores(pdf, organismo)
         self.add_procedimientos(all_dir3, pdf)
         self.add_servicios(all_dir3, pdf)
         self.add_catalogo_datos_abiertos(pdf, ente)

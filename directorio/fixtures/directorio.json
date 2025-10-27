@@ -2087,9 +2087,25 @@
 },
 {
     "model": "directorio.ente",
+    "pk": "ACCUEE",
+    "fields": {
+        "organismo": 38691,
+        "url_open_data": null
+    }
+},
+{
+    "model": "directorio.ente",
     "pk": "ACIISI",
     "fields": {
         "organismo": 42158,
+        "url_open_data": null
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "ACMUN",
+    "fields": {
+        "organismo": 41854,
         "url_open_data": null
     }
 },
@@ -2099,6 +2115,14 @@
     "fields": {
         "organismo": 42084,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-agricultura"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "ATC",
+    "fields": {
+        "organismo": 37815,
+        "url_open_data": null
     }
 },
 {
@@ -2127,10 +2151,50 @@
 },
 {
     "model": "directorio.ente",
+    "pk": "ESSSCAN",
+    "fields": {
+        "organismo": 6564,
+        "url_open_data": null
+    }
+},
+{
+    "model": "directorio.ente",
     "pk": "HRUE",
     "fields": {
         "organismo": 42086,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-hacienda"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "ICAP",
+    "fields": {
+        "organismo": 25972,
+        "url_open_data": null
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "ICAVI",
+    "fields": {
+        "organismo": 37152,
+        "url_open_data": null
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "ICI",
+    "fields": {
+        "organismo": 25999,
+        "url_open_data": null
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "ICIA",
+    "fields": {
+        "organismo": 32766,
+        "url_open_data": null
     }
 },
 {
@@ -2179,6 +2243,22 @@
     "fields": {
         "organismo": 6547,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-sanidad"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "SCE",
+    "fields": {
+        "organismo": 42149,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/servicio-canario-de-empleo"
+    }
+},
+{
+    "model": "directorio.ente",
+    "pk": "SCS",
+    "fields": {
+        "organismo": 6594,
+        "url_open_data": null
     }
 },
 {

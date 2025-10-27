@@ -8,6 +8,7 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.http import HttpResponse
 
+from comun.funcop import agrupa
 from . import breadcrumbs as bc
 from . import forms
 from . import links
@@ -125,11 +126,12 @@ def detalle_organismo(request, organismo: Organismo):
 
 
 def listado_temas(request):
+    temas = models.Tema.objects.with_counts().all()
     return render(request, 'sistemas/listado_temas.html', {
         'titulo': 'Listado de temas (Áreas temáticas)',
         'breadcrumbs': bc.temas(),
         'tab': 'temas',
-        'temas': models.Tema.objects.with_counts().all(),
+        'agrupado': agrupa(temas, lambda _:_.inicial()),
         })
 
 

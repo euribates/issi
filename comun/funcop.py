@@ -5,13 +5,43 @@
 
 """
 
+from typing import Callable
+from html import escape
 import itertools
 
 
-def agrupa(rows) -> dict:
+def agrupa(rows: list, selector: Callable=None) -> dict:
+    '''Agrupa una lista de elementos compuestos.
+
+    Los elementos pueden ser tuplas, diccionarios, registros de la base
+    de datos, objetos, etc.  Hay que definir mediante el parámetro
+    `selector` un _callable_ que, a partir del elemento, devuelva la
+    clave por la que se quiere agrupar. Si no se indica selector,
+    entonces el selector por defecto espera que los elementos sean
+    tuplas, listas, o alguna estructura de datos que se pueda acceder
+    por un índice, y utiliza el primer valor, es decir el valor
+    en el índice $0$ para agrupar.
+
+    Ejemplo de uso:
+
+        >>> datos = [('a', 1), ('b', 2), ('a', 3)]
+        >>> agrupado = agrupa(datos)
+        >>> assert agrupado['a'] == [('a', 1), ('a', 3)]
+        >>> assert agrupado['b'] == [('b', 2)]
+        >>> assert len(agrupado) == 2
+    '''
     result = {}
+    if selector is None:
+        selector = lambda _row: _row[0]
+    if not callable(selector):
+        raise TypeError(
+            'El parámetro selector debe ser un invocable:'
+            ' una función, en método, una instancia de una'
+            ' clase con un metodo `__call__`, etc.'
+            f' pero es un {escape(repr(type(selector)))}'
+            )
     for row in rows:
-        key = row[0]
+        key = selector(row)
         if key in result:
             result[key].append(row)
         else:

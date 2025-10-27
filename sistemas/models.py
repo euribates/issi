@@ -159,6 +159,10 @@ class Activo(models.Model):
 
 
 class Usuario(models.Model):
+
+    class Meta:
+        ordering = ['nombre', 'apellidos']
+
     login = models.CharField(max_length=32, primary_key=True)
     email = models.CharField(max_length=384, unique=True)
     nombre = models.CharField(

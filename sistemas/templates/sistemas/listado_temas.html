@@ -3,20 +3,31 @@
 
 {% block content %}
 
-<table>
-{% for tema in temas.all %}<tr
-<table>
-    {{ tema.inicial }}
+<table class="table table-striped">
+  <thead>
+      <th>Inicial</th>
+      <th>Temas</th>
+  </thead>    
+  <tbody>
+  {% for inicial,temas in agrupado.items %}<tr>
+    <th><big>{{ inicial }}</th>
+    <td>
+    {% for tema in temas %}
 
-    <a href="{% url 'sistemas:detalle_tema' tema=tema.pk %}">
-    {{ tema }}
-    </a>
-    {% if tema.num_sistemas > 0 %}
-      &nbsp;
-      <span class="badge bg-secondary">{{ tema.num_sistemas }}</span>    
-    {% endif %}
-</li>
-{% endfor %}
-</ul>
+      <a
+        class="btn btn-link text-decoration-none badge bg-primary position-relative me-2"
+        href="{% url 'sistemas:detalle_tema' tema=tema.pk %}">
+      {{ tema }}
+      {% if tema.num_sistemas > 0 %}
+        <span class="position-absolute top-0 start-100 badge bg-danger translate-middle rounded-pil">{{ tema.num_sistemas }}</span>
+      {% endif %}
+      </a>
+
+    {% endfor %}
+    </td>
+  
+  {% endfor %}
+  </tbody>
+</table>
 
 {% endblock content %}

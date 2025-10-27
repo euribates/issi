@@ -1,4 +1,5 @@
 ACCUEE   Agencia Canaria de Calidad Universitaria y Evaluación Educativa
+ACIISI   Agencia Canaria de Investigación, Innovación y Sociedad de la Información
 ACMUN    Agencia Canaria de Protección del Medio Natural
 AGPA     Consejería de Agricultura, Ganadería, Pesca y Soberanía Alimentaria
 ATC      Agencia Tributaria Canaria
@@ -9,8 +10,8 @@ ESSSCAN  Escuela de Servicios Sanitarios y Sociales de Canarias
 HRUE     Consejería de Hacienda y Relaciones con la Unión Europea
 ICAP     Instituto Canario de Administración Pública
 ICAVI    Instituto Canario de la Vivienda
-ICAVI    Instituto Canario de la Vivienda
 ICCA     Instituto Canario de Calidad Agroalimentaria
+ICI      Instituto Canario de Igualdad
 ICIA     Instituto Canario de Investigaciones Agrarias
 ISTAC    Instituto Canario de Estadística
 OPVM     Consejería de Obras Públicas, Vivienda y Movilidad
@@ -20,7 +21,6 @@ PTCTA    Consejería de Política Territorial, Cohesión Territorial y Aguas
 SAN      Consejería de Sanidad
 SCE      Servicio Canario de Empleo
 SCS      Servicio Canario de la Salud
-TEEN     Consejería de Transición Ecológica y Energía
+TEE      Consejería de Transición Ecológica y Energía
 TUREMP   Consejería de Turismo y Empleo
 UCIC     Consejería de Universidades, Ciencia e Innovación y Cultura
-ICI     Instituto Canario de Igualdad

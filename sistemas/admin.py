@@ -63,3 +63,20 @@ class UsuarioAdmin(admin.ModelAdmin):
         ]
 
 admin.site.register(models.Usuario, UsuarioAdmin)
+
+
+class InterlocutorAdmin(admin.ModelAdmin):
+    list_display = [
+        "id_interlocutor",
+        "usuario",
+        "organismo",
+        ]
+    search_fields = [
+        'usuario__login',
+        'usuario__nombre',
+        'usuario__apellidos',
+        'usuario__email',
+        'organismo__nombre_organismo',
+        ]
+
+admin.site.register(models.Interlocutor, InterlocutorAdmin)
