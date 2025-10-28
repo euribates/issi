@@ -1,9 +1,59 @@
 {% extends "comun/base.html" %}
 
+{% block script %}
+<script>
+  const ctx = document.getElementById('myChart');
+  const config = {
+    type: 'doughnut',
+    data: {
+      labels: ['Completos', 'Parciales', 'Solo identificados'],
+      datasets: [{
+        data: [12, 19, 16],
+        borderWidth: 1
+      }],
+    options: {
+        label: 'Sistemas de información',
+        animations: {
+            animateRotate: true,
+            duration: 5000,
+            delay: 1500,
+            loop: true,
+            },
+        },
+    },
+  }
+  new Chart(ctx, config);
+
+
+const ctx2 = document.getElementById('Chart2');
+var myDoughnutChart = new Chart(ctx2, {
+    type: 'doughnut',
+    data: {
+      labels: ['Completos', 'Parciales', 'Solo identificados'],
+      datasets: [{
+        data: [12, 19, 16],
+        borderWidth: 1
+        }],
+    },
+  options: {
+    cutoutPercentage: 75,
+    animations: {
+        tension: {
+            animateRotate: true,
+            duration: 5000,
+            easing: 'linear',
+            render: false,
+        },
+    },
+  }
+});
+
+
+  console.log('hasta aquí llega');
+</script>
+{% endblock script %}
+
 {% block content %}
-
-
-
 
 
 
@@ -21,6 +71,11 @@
         </h3>
        </div>
        <div class="card-body">
+
+        <div>
+          <canvas id="myChart" width="400" height="210"></canvas>
+        </div>
+
          <p class="card-text">
 
         Conjunto organizado de elementos interrelacionados (personas,
@@ -52,6 +107,10 @@
          </p>
          <a href="{% url 'sistemas:index' %}" class="btn
              btn-primary">Ver activos de datos</a>
+
+          <div>
+          <canvas id="Chart2" width="400" height="210"></canvas>
+          </div>
 
         </div>
       </div>
