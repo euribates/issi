@@ -96,3 +96,7 @@ watch: static
 # Genera el fichero de tags
 tags:
     cd {{justfile_directory()}} && ctags -R  --exclude=media/*  --exclude=*/static/* --exclude=static/* .
+
+# Buscar con pss pero omitiendo directorios .venv y migrations
+pss  *args='':
+    pss {{args}} --ignore-dir .venv --ignore-dir migrations
