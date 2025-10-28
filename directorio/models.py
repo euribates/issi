@@ -12,6 +12,10 @@ from django.conf import settings
 
 from . import links
 
+TEMP_DIR = settings.BASE_DIR / Path('temp')
+if not TEMP_DIR.is_dir():
+    TEMP_DIR.mkdir()
+
 
 class Organismo(models.Model):
 
@@ -147,7 +151,7 @@ class Ente(models.Model):
     def descargar_datos(self, url, force=False):
         slug = url.rsplit('/', 1)[1]
         filename = Path(f'{slug}.html')
-        target_file = settings.BASE_DIR / Path(filename)
+        target_file = TEMP_DIR / Path(filename)
         if target_file.exists():
             stat = target_file.stat()
             mod_date = DateTime.fromtimestamp(stat.st_mtime)
