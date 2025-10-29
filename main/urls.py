@@ -21,7 +21,7 @@ from django.contrib import admin
 from django.urls import include
 from django.urls import path
 
-from comun.views import homepage
+from comun.views import homepage, labo
 
 
 def tie(ruta, vista, name=None):
@@ -30,6 +30,8 @@ def tie(ruta, vista, name=None):
 
 urlpatterns = [
     tie("", homepage),
+    path('labo/', labo),
+    path("comun/", include('comun.urls')),
     path("glosario/", include('glosario.urls')),
     path("normativa/", include('normativa.urls')),
     path("sistemas/", include('sistemas.urls')),

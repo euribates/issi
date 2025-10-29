@@ -1,62 +1,11 @@
 {% extends "comun/base.html" %}
+{% load static %}
 
-{% block script %}
-<script>
-  const ctx = document.getElementById('myChart');
-  const config = {
-    type: 'doughnut',
-    data: {
-      labels: ['Completos', 'Parciales', 'Solo identificados'],
-      datasets: [{
-        data: [12, 19, 16],
-        borderWidth: 1
-      }],
-    options: {
-        label: 'Sistemas de información',
-        animations: {
-            animateRotate: true,
-            duration: 5000,
-            delay: 1500,
-            loop: true,
-            },
-        },
-    },
-  }
-  new Chart(ctx, config);
-
-
-const ctx2 = document.getElementById('Chart2');
-var myDoughnutChart = new Chart(ctx2, {
-    type: 'doughnut',
-    data: {
-      labels: ['Completos', 'Parciales', 'Solo identificados'],
-      datasets: [{
-        data: [12, 19, 16],
-        borderWidth: 1
-        }],
-    },
-  options: {
-    cutoutPercentage: 75,
-    animations: {
-        tension: {
-            animateRotate: true,
-            duration: 5000,
-            easing: 'linear',
-            render: false,
-        },
-    },
-  }
-});
-
-
-  console.log('hasta aquí llega');
-</script>
-{% endblock script %}
+{% block scripts %}
+<script src="{% static 'js/homepage.js' %}"></script>
+{% endblock scripts %}
 
 {% block content %}
-
-
-
 
 <div class="container text-center">
 
@@ -65,27 +14,28 @@ var myDoughnutChart = new Chart(ctx2, {
     <div class="col">
   
       <div class="card">
-       <div class="card-header">
+        <div class="card-header">
         <h3 class="card-title">
         Sistemas de información
         </h3>
        </div>
        <div class="card-body">
 
-        <div>
-          <canvas id="myChart" width="400" height="210"></canvas>
-        </div>
+         <div>
+         
+         <canvas id="myChart" width="300">
+         </canvas>
+         </div>
 
-         <p class="card-text">
-
+       <p class="card-text">
         Conjunto organizado de elementos interrelacionados (personas,
         procesos, datos, tecnología y recursos) que trabajan juntos para
         recopilar, procesar, almacenar, distribuir y gestionar
         información con el fin de apoyar la toma de decisiones, la
         coordinación operativa y el control dentro de una organización.
-         </p>
+        </p>
     
-         <a href="{% url 'sistemas:index' %}" class="btn btn-primary">Ver sistemas</a>
+        <a href="{% url 'sistemas:index' %}" class="btn btn-primary">Ver sistemas</a>
         </div>
       </div>
     </div>
@@ -99,6 +49,10 @@ var myDoughnutChart = new Chart(ctx2, {
        </div>
        <div class="card-body">
          <p class="card-text">
+    
+         <img width="256" height="256"
+         src="/comun/charts/doughnut/">
+
 
          Es cualquier recurso de datos con valor para el desarrollo de
          las funciones de una organización, que puede ser comprendido y
@@ -107,10 +61,6 @@ var myDoughnutChart = new Chart(ctx2, {
          </p>
          <a href="{% url 'sistemas:index' %}" class="btn
              btn-primary">Ver activos de datos</a>
-
-          <div>
-          <canvas id="Chart2" width="400" height="210"></canvas>
-          </div>
 
         </div>
       </div>
@@ -139,14 +89,20 @@ var myDoughnutChart = new Chart(ctx2, {
               Organigrama y directorio
             </a>  
           </li>
+
+          <li class="list-group-item">
+              <a href="{% url 'sistemas:listado_temas' %}">
+              Áreas temáticas
+            </a>  
+          </li>
+
         </ul>
+        </div>
 
 
-       </div>
+      </div>
     </div>
-
   </div><!-- de row -->
-
 </div>
 
 
