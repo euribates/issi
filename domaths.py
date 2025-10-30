@@ -17,6 +17,11 @@ print(' '.join(buff))
 
 '''
 
+
+    <path d="M 0 -40 A 40 40 0.0 0 1 36.54 16.27" stroke="green" strokeWidth="2" ></path>
+    <path d="M 0 -40 A 40 40 0.0 0 1 23.51 -32.36" stroke="navy" strokeWidth="2" ></path>
+    <path d="M 0 -40 A 40 40 0.0 0 1 12.36 -38.043" stroke="red" strokeWidth="2" ></path>
+
     <path d=" M 50 0 A 40 40 0 {{ long_path }} 1 {{ x }} {{ y }}" stroke="#CC6666" stroke-width="9" fill="none">
     <animate
       attributeName="stroke-width"
