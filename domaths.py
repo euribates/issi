@@ -3,17 +3,15 @@ import math
 
 angles = [i for i in range(0, 361, 6)]
 rads = [i * math.pi * 2.0 / 360. for i in angles]
-X = [int(round(math.sin(a)*40)) for a in rads]
-Y = [-int(round(math.cos(a)*40)) for a in rads]
+X = [round(math.sin(a)*40.0, 2) for a in rads]
+Y = [-round(math.cos(a)*40, 2) for a in rads]
 command = 'M'
 buff = []
 for _x, _y in zip(X, Y):
     print(f'<circle cx="{_x}" cy="{_y}" r="3" fill="grey" />')
-    buff.append(command)
-    buff.append(str(_x))
-    buff.append(str(_y))
+    buff.append(f'{command} {_x:.2f} {_y:.2f}')
     command = 'L'
-# print(' '.join(buff))
+print(' '.join(buff))
 
 
 

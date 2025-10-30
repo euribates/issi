@@ -23,14 +23,14 @@ def doughnut(request, value=76, top=100):
     long_path = 1 if value > 50 else 0
     angle = (value * 360 / 100.)
     rads = angle * math.pi / 180.
-    x = int(round(50 + 28 * math.sin(rads)))
-    y = int(round(50 - 28 * math.cos(rads)))
+    x = int(round(40 + 28 * math.sin(rads)))
+    y = int(round(40 - 28 * math.cos(rads)))
 
 
     angles = [i for i in range(0, 361, 6)]
     rads = [i * math.pi * 2.0 / 360. for i in angles]
-    X = [int(round(math.sin(a)*40)) for a in rads]
-    Y = [-int(round(math.cos(a)*40)) for a in rads]
+    X = [round(math.sin(a)*40, 2) for a in rads]
+    Y = [-round(math.cos(a)*40, 2) for a in rads]
 
     response = render(request, 'comun/charts/doughnut.svg', {
         'value': value,
