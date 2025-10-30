@@ -3,6 +3,86 @@
 
 {% block scripts %}
 <script src="{% static 'js/homepage.js' %}"></script>
+<script src="https://code.highcharts.com/12/highcharts.js"></script>
+<script>
+Highcharts.chart('container', {
+    chart: {
+        type: 'pie',
+        custom: {},
+        events: {
+            render() {
+                const chart = this,
+                    series = chart.series[0];
+                let customLabel = chart.options.chart.custom.label;
+
+                if (!customLabel) {
+                    customLabel = chart.options.chart.custom.label =
+                        chart.renderer.label('<strong>2 877 820</strong>')
+                            .css({
+                                color:
+                                    'var(--highcharts-neutral-color-100, #000)',
+                                textAnchor: 'middle'
+                            })
+                                .add();
+                }
+
+                const x = series.center[0] + chart.plotLeft,
+                    y = series.center[1] + chart.plotTop -
+                    (customLabel.attr('height') / 2);
+
+                customLabel.attr({
+                    'x': x,
+                    'y': y,
+                });
+                // Set font size based on chart diameter
+                customLabel.css({
+                    fontSize: `${series.center[2] / 12}px`
+                });
+            }
+        }
+    },
+    accessibility: {
+        point: {
+            valueSuffix: '%'
+        }
+    },
+    title: {
+        text: '2023 Norway car registrations'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.0f}%</b>'
+    },
+    legend: {
+        enabled: false
+    },
+    plotOptions: {
+        series: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            borderRadius: 4,
+            showInLegend: !true
+        }
+    },
+    series: [{
+        name: 'Registrations',
+        colorByPoint: true,
+        innerSize: '60%',
+        data: [{
+            name: 'EV',
+            y: 23.9
+        }, {
+            name: 'Hybrids',
+            y: 12.6
+        }, {
+            name: 'Diesel',
+            y: 37.0
+        }, {
+            name: 'Petrol',
+            y: 26.4
+        }]
+    }]
+});
+</script>
 {% endblock scripts %}
 
 {% block content %}
@@ -72,6 +152,9 @@
        Más informacióm
        </div>
        <div class="card-body">
+           
+        <div id="container" style="width:100%; height:400px;"></div>
+
         <ul class="list-group">
           <li class="list-group-item">
               <a href="{% url 'normativa:index' %}">

@@ -8,11 +8,24 @@ Y = [-round(math.cos(a)*40, 2) for a in rads]
 command = 'M'
 buff = []
 for _x, _y in zip(X, Y):
-    print(f'<circle cx="{_x}" cy="{_y}" r="3" fill="grey" />')
+    # print(f'<circle cx="{_x}" cy="{_y}" r="3" fill="grey" />')
     buff.append(f'{command} {_x:.2f} {_y:.2f}')
     command = 'L'
-print(' '.join(buff))
+# print(' '.join(buff))
 
+print('<path stroke="lime" stroke-width="12"> fill="none"')
+print(' <animate attributeName="d" calcMode="spline" values="', end='')
+counter = 0
+short_path_flag = 0
+for x, y in zip(X, Y):
+    print(f'M 0,-40 A 40,40 0 {short_path_flag} 1 {x:.2f},{y:.2f};', end='')
+    counter += 1
+    if counter > 28:
+        short_path_flag = 1
+
+print('"')
+print(' dur="2.5s" repeatCount="5" fill="freeze" />')
+print('</path>')
 
 
 '''
