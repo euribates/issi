@@ -19,7 +19,7 @@ from sistemas.filtersets import UsuarioFilter
 from sistemas.filtersets import SistemaFilter
 from directorio.filtersets import OrganismoFilter
 from directorio.models import Organismo
-
+from sistemas.models import Sistema
 
 @cache
 def cmd_sistemas():
@@ -51,8 +51,15 @@ def alta_sistema(request):
     if request.method == 'POST':
         form = forms.AltaSistemaForm(request.POST)
         if form.is_valid():
-            sistema = form.save()
-            return redirect(links.a_detalle_sistema(sistema.pk))
+            data = form.as_dict()
+            from icecream import ic; ic(data)
+            sistema = Sistema.alta_sistema(
+                nombre=data['nombre'],
+                codigo=data['codigo'],
+                proposito=data['proposito'],
+                organismo=data['organismo'],
+                )
+            return redirect(sistema.url_detalle_sistema())
     else:
         form = forms.AltaSistemaForm()
     return render(request, 'sistemas/alta-sistema.html', {
@@ -156,7 +163,7 @@ def patch_organismos(request):
     query = params.get("query")
     buff = [
         '<select name="id_organismo"'
-        ' size="12"'
+        ' size="17"'
         ' class="form-control">'
         ]
     if query:

@@ -1,5 +1,5 @@
 {% extends "comun/base.html" %}
-{% load comun_filters %}
+{% load comun_filters estados static %}
 
 {% block content %}
 
@@ -9,7 +9,11 @@
 
         <div class="card">
         <div class="card-header">
-            <h4 class="card-title">{{ sistema.codigo }}
+            <div class="position-absolute top-0 end-0 p-2">
+                <img src="{% static sistema.get_estado|as_status_icon %}"
+                   width="32" height="32">
+            </div>    
+            <h4 class="card-title"><b>{{ sistema.codigo }}</b>
                 <br><small>{{ sistema.nombre }}</small>
             </h4>
         </div>
@@ -46,88 +50,94 @@
               {{ sistema.proposito|as_markdown }}    
             </p>
         </div>
+        <div class="card-footer">
+            [FALTA] Botón editar proposito
+        </div>
       </div>
     </div>
     
     <div class="col col-7">
-        <table class="table table-hover">
-            <tr>
-                <th>Área temática</th>
-                <td>{{ sistema.tema }}</td>
-            </tr>
-            <tr>
-                <th>URL principal</th>
-                <td>{{ sistema.url|default:"No disponible" }}</td>
-            </tr>
-            <tr>
-                <th>Organismo</th>
-                <td>
-                    <a href="{% url 'sistemas:detalle_organismo' organismo=sistema.organismo %}">
-                    {{ sistema.organismo }}
-                    </a>
-
-                    <br>
-                    <span class="dir3">{{ sistema.organismo.dir3 }}</span>
-                </td>
-            </tr>
-            <tr>
-                <th>Es transversal</th>
-                <td>{{ sistema.es_transversal|as_boolean }}</td>
-            </tr>
-            <tr>
-                <td>Logotipo</td>
-                <td>
-                  {% if sistema.icono %}
-                    <img width="64" height="64"
-                         src="{{ sistema.icono.url }}"
-                         alt="{{ sistema }}">
-                  {% else %}
-                    [FALTA] Botón para dar de alta el icono
-                  {% endif %}  
-                </td>
-            </tr>
-            
-            {% if sistema.es_subsistema_de %}
-            <tr>
-                <th>Es subsistema de</th>
-                <td>
-                    <a href="{{ sistema.es_subsistema_de.url_detalle_sistema}}">
-                    {{ sistema.es_subsistema_de.codigo }}
-                    </a>  
-                </td>
-            </tr>
+      <table class="table table-hover">
+        <tr>
+          <th>Área temática</th>
+          <td>{{ sistema.tema }}</td>
+        </tr>
+        <tr>
+          <th>URL principal</th>
+          <td>{{ sistema.url|default:"No disponible" }}</td>
+        </tr>
+        <tr>
+          <th>Organismo</th>
+          <td>
+            {% if sistema.organismo %}
+            <a href="{% url 'sistemas:detalle_organismo' organismo=sistema.organismo %}">
+            {{ sistema.organismo }}
+            </a>
+            <span class="dir3">{{ sistema.organismo.dir3 }}</span>
+            {% else %}
+              [FALTA] Botón para asignar sistema a organismo
             {% endif %}
-            
-            {% if sistema.subsistemas.exists %}
-              {% for subsistema in sistema.subsistemas.all %}
-              <tr>
-                <th>
-                    {% if forloop.first %}Subsistemas{% endif %}
-                </th>    
-                <td>
-                    <a href="{{ subsistema.url_detalle_sistema }}">
-                    {{ subsistema.codigo }}
-                    </a>
-                </td>
-              </tr>  
-              {% endfor %}  
-            {% endif %}
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <th>Es transversal</th>
+          <td>{{ sistema.es_transversal|as_boolean }}</td>
+        </tr>
+        <tr>
+          <td>Logotipo</td>
+          <td>
+            {% if sistema.icono %}
+              <img width="64" height="64"
+                   src="{{ sistema.icono.url }}"
+                   alt="{{ sistema }}">
+            {% else %}
+              [FALTA] Botón para dar de alta el icono
+            {% endif %}  
+          </td>
+        </tr>
+        
+        {% if sistema.es_subsistema_de %}
+        <tr>
+            <th>Es subsistema de</th>
+            <td>
+                <a href="{{ sistema.es_subsistema_de.url_detalle_sistema}}">
+                {{ sistema.es_subsistema_de.codigo }}
+                </a>  
+            </td>
+        </tr>
+        {% endif %}
+        
+        {% if sistema.subsistemas.exists %}
+          {% for subsistema in sistema.subsistemas.all %}
+          <tr>
+            <th>
+                {% if forloop.first %}Subsistemas{% endif %}
+            </th>    
+            <td>
+                <a href="{{ subsistema.url_detalle_sistema }}">
+                {{ subsistema.codigo }}
+                </a>
+            </td>
+          </tr>  
+          {% endfor %}  
+        {% endif %}
 
-            <tr>
-                <th>Responsable funcional</th>
-                <td>
-                    {{ sistema.responsable_funcional|default:"No definido" }}
-                </td>
-            </tr>
-            
-            <tr>
-                <th>Responsable técnico</th>
-                <td>
-                    {{ sistema.responsable_tecnico|default:"No definido" }}
-                </td>
-            </tr>
+        <tr>
+            <th>Responsable funcional</th>
+            <td>
+                {{ sistema.responsable_funcional|default:"No definido" }}
+            </td>
+        </tr>
+        
+        <tr>
+            <th>Responsable técnico</th>
+            <td>
+                {{ sistema.responsable_tecnico|default:"No definido" }}
+            </td>
+        </tr>
 
-        </table>
+      </table>
     </div>
   </div>
 </div>  

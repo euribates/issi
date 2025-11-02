@@ -52,9 +52,11 @@
           <br><small>{{ sistema.nombre }}</small>
       </h4>
       <h5>
-          <a href="{% url 'sistemas:detalle_organismo' organismo=sistema.organismo %}">
-      {{ sistema.organismo }}
-      </a>    
+        {% if sistema.organismo %}
+        <a href="{% url 'sistemas:detalle_organismo' organismo=sistema.organismo %}">
+          {{ sistema.organismo }}
+        </a>    
+        {% endif %}
       </h5>  
   </div>
   <div class="card-body">

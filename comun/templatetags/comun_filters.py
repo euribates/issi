@@ -39,6 +39,18 @@ def as_text_control(form, name):
 
 
 @register.filter
+def as_textarea_control(form, name):
+    _field = form.fields[name]
+    initial = _field.initial
+    value = form.data.get(name, initial)
+    _widget = _field.widget
+    _widget.attrs['class'] = 'form-control'
+    _widget.attrs['id'] = f'id_{name}'
+    _widget.attrs['title'] = _field.help_text
+    return _widget.render(name, value)
+
+
+@register.filter
 def as_checkbox(form, name):
     _field = form.fields[name]
     initial = _field.initial

@@ -35,30 +35,23 @@
     <circle cx="0" cy="0" r="50" fill="silver" />
     <circle cx="0" cy="0" r="30" fill="white" />
     
-    {{ chart|safe }}
-
-    {{ chart2|safe }}
+    {{ green_chart|safe }}
+    {{ yellow_chart|safe }}
+    {{ red_chart|safe }}
 
     <text x="0" y="0"
           dominant-baseline="middle"
           text-anchor="middle"
           class="value"
           fill="#333333">
-    {{ value|stringformat:"d" }}
+    {{ total|stringformat:"d" }}
     </text>
-
 
     {% if trace == 'on' %}
     <path d="M 0 -50 v 100" stroke="silver" strokeWidth="1" />
     <path d="M -50 0 h 100" stroke="silver" strokeWidth="1" />
     <circle cx="0" cy="0" r="2" fill="navy" />
-    <text x="-45" y="-40" class="trace">y : {{ y }}</text>
-    <text x="-45" y="-30" class="trace">x : {{ x }}</text>
-    <text x="-45" y="-20" class="trace">long_path : {{ long_path }}</text>
-    <circle cx="{{ x }}" cy="{{ y }}" r="2" fill="coral" />
     {% endif %}
-
-
 
   </g>
 </svg>

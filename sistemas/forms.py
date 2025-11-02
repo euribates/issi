@@ -19,3 +19,12 @@ class AltaSistemaForm(forms.ModelForm):
 
     def organismos_filtrados(self, query: str):
         return models.Organismo.search(query)
+
+    def as_dict(self) -> dict:
+        if self.is_valid():
+            return {
+                name: self.cleaned_data[name]
+                for name in self.Meta.fields
+                }
+        return {}
+

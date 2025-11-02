@@ -7,50 +7,59 @@
   <div class="card-header">
     Añadir un nuevo sistema de información
   </div>
+
   <div class="card-body">
 
-
-   <form method="POST" action=".">
-
+  <form method="POST" action=".">
+  {% csrf_token %}
   {{ form.errors }}  
-    {% csrf_token %}
-   <fieldset>
-    <legend>Campos obligatorios</legend>
 
-   <div class="mb-3">
-    <label for="id_nombre" class="form-label">Nombre del sistema</label>
-    {{ form|as_text_control:"nombre" }}
-   </div>
-
-   <div class="mb-3">
-    <label for="id_codigo" class="form-label">Código</label>
-    {{ form|as_text_control:"codigo" }}
-   </div>
+  <div class="d-flex p-2 bd-highlight">
+    <fieldset class="flex-fill">
+      <legend>Identificación del sistema</legend>
 
 
-   <div class="mb-3">
-    <label for="id_codigo" class="form-label">Organismo
-        <span class="badge rounded-pill bg-info">
-        <div id="contador">0</div>
-        <span>
-    </label>
-        <button 
-            type="button"
-            data-on-load="@get('/sistemas/patch/organismos/')"
-            data-on-click="@get('/sistemas/patch/organismos/')">
-        filtrar por
-        </button>
-
-        <input type="text" name="query" value="" data-bind="query">
-        <div id="control_organismos">
+        <div class="m-2">
+         <label for="id_nombre" class="form-label">Nombre del sistema</label>
+         {{ form|as_text_control:"nombre" }}
         </div>
-   </div>
+
+        <div class="m-2">
+         <label for="id_codigo" class="form-label">Código</label>
+         {{ form|as_text_control:"codigo" }}
+        </div>
+
+        <div class="m-2">
+         <label for="id_proposito" class="form-label">Propósito</label>
+         {{ form|as_textarea_control:"proposito" }}
+        </div>
+    </fieldset class="flex-fill">     
+  
+    <fieldset style="max-width: 50%;">
+      <legend>Estructura administrativa</legend>
+
+      <div class="m-2">
+       <label for="id_codigo" class="form-label">Organismo
+           <span class="badge rounded-pill bg-info">
+           <div id="contador">0</div>
+           <span>
+       </label>
+           <button 
+               type="button"
+               data-on-load="@get('/sistemas/patch/organismos/')"
+               data-on-click="@get('/sistemas/patch/organismos/')">
+           filtrar por
+           </button>
+
+           <input type="text" name="query" value="" data-bind="query">
+           <div id="control_organismos">
+           </div>
+      </div>
+    </fieldset>    
+  </div>
 
 
-
-   </fieldset>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Añadir sistema</button>
     </form>
   </div>
 </div>  

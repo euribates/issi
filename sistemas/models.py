@@ -117,7 +117,51 @@ class Sistema(models.Model):
         )
 
     @classmethod
+    def alta_sistema(
+            cls,
+            nombre: str,
+            codigo: str,
+            proposito: str,
+            organismo: int,
+            ):
+        """Dar de alta un nuevo sistema.
+
+        Parameters:
+
+            - nombre (str): Nombre del sistema
+            - codigo (str): Código identificador del sistema
+            - proposito (str): Propósito
+            - organismo (int): Clave primaria del organismo al que
+                está asociado el sistema.
+
+        Returns:
+
+            La instancia de Sistema, ya alamacenada
+            en la base de datos.
+        """
+        sistema = Sistema(
+            nombre=nombre,
+            codigo=codigo,
+            proposito=proposito,
+            organismo=Organismo.load_organismo(organismo),
+            )
+        sistema.save()
+        return sistema
+
+    @classmethod
     def load_sistema(cls, pk:int):
+        """Obtener un sistema a partir de su clave primaria.
+
+        Parameters:
+
+            pk (int): Clave primaria del sistema
+
+        Returns:
+
+            La instancia, si exciste el registro correspondiente
+            en la base de datos, o `None` en caso contrario.
+
+        """
         try:
             return cls.objects.get(id_sistema=pk)
         except cls.DoesNotExist:
@@ -127,8 +171,27 @@ class Sistema(models.Model):
         return self.nombre
 
     def url_detalle_sistema(self):
+        """URL de detalle del sistema.
+        """
         return links.a_detalle_sistema(self.pk)
 
+    def get_estado(self):
+        tiene_proposito = bool(self.proposito)
+        tiene_organismo = bool(self.organismo)
+        tiene_tema = (self.tema == 'UNK')
+        tiene_algun_representante = self.perfiles.count() > 0
+        flags = [
+            tiene_proposito,
+            tiene_organismo,
+            tiene_tema,
+            tiene_algun_representante,
+            ]
+        if all(flags):
+            return 'green'
+        if any(flags):
+            return 'yellow'
+        return 'red'
+        
 
 class Activo(models.Model):
 
