@@ -246,6 +246,18 @@ class Usuario(models.Model):
         on_delete=models.PROTECT,
         )
     f_alta = models.DateTimeField(auto_now_add=True)
+
+    def organismos_filtrados(self, query: str):
+        return models.Organismo.search(query)
+
+    def as_dict(self) -> dict:
+        if self.is_valid():
+            return {
+                name: self.cleaned_data[name]
+                for name in self.Meta.fields
+                }
+        return {}
+
     f_cambio = models.DateTimeField(auto_now=True)
     f_baja = models.DateTimeField(
         default=None,

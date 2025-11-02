@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from functools import lru_cache
+
 from django import forms
 from django.db.models import Q
 
@@ -28,3 +30,16 @@ class AltaSistemaForm(forms.ModelForm):
                 }
         return {}
 
+
+@lru_cache
+def get_choice_temas() -> list[tuple[str, str]]:
+    '''Devuelve la lista de temas como tupla código/valor.
+    '''
+    return [
+        (_.id_tema, _.nombre_tema)
+        for _ in models.Tema.objects.all()
+        ]
+
+
+class AsignarTemaForm(forms.Form):
+    tema = forms.ChoiceField(choices=get_choice_temas)

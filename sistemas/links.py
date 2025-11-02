@@ -17,6 +17,12 @@ def a_detalle_sistema(id_sistema: int) -> str:
         }))
 
 
+def a_asignar_tema(id_sistema: int) -> str:
+    return str(reverse_lazy('sistemas:asignar_tema', kwargs={
+        'sistema': id_sistema,
+        }))
+
+
 def a_usuarios() -> str:
     return str(reverse_lazy('sistemas:listado_usuarios'))
 

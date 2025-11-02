@@ -70,6 +70,17 @@ def alta_sistema(request):
         })
 
 
+def asignar_tema(request, sistema):
+    form = forms.AsignarTemaForm()
+    return render(request, 'sistemas/asignar-tema.html', {
+        'titulo': f'Asignar tema a {sistema}',
+        'breadcrumbs': bc.asignar_tema(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
+
 def detalle_sistema(request, sistema):
     return render(request, 'sistemas/detalle_sistema.html', {
         'titulo': f'Detalles {sistema}',

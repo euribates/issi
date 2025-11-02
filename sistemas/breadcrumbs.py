@@ -24,6 +24,12 @@ def detalle_sistema(sistema):
         links.a_detalle_sistema(sistema.pk),
         )
 
+def asignar_tema(sistema):
+    return detalle_sistema(sistema).step(
+        "Asignar tema",
+        links.a_asignar_tema(sistema.pk),
+        )
+
 
 def usuarios():
     return bc_issi().step('Usuarios', links.a_usuarios())
