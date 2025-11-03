@@ -1,53 +1,76 @@
 #!/usr/bin/env python3
 
+"""
+Fichero para la creación de enlaces.
+
+Todas las funciones públicas en este fichero deberían empezar por a_. Deden
+devolver una string con la url relativa tal y como estén definidas 
+en el fichero `urls.py`.
+
+La función privada _a es una ayuda para escribir las funciones.
+
+"""
+
 from django.urls import reverse_lazy
 
 
+def _a(name: str, **kwargs) -> str:
+    '''Azucar sintactico para definir funciones a_*.
+    '''
+    return str(reverse_lazy(name, kwargs=kwargs))
+
+
 def a_sistemas() -> str:
-    return str(reverse_lazy('sistemas:index'))
+    return _a('sistemas:index')
 
 
 def a_alta_sistema() -> str:
-    return str(reverse_lazy('sistemas:alta_sistema'))
+    return _a('sistemas:alta_sistema')
 
 
 def a_detalle_sistema(id_sistema: int) -> str:
-    return str(reverse_lazy('sistemas:detalle_sistema', kwargs={
-        'sistema': id_sistema,
-        }))
+    return _a('sistemas:detalle_sistema', sistema=id_sistema)
 
 
 def a_asignar_tema(id_sistema: int) -> str:
-    return str(reverse_lazy('sistemas:asignar_tema', kwargs={
-        'sistema': id_sistema,
-        }))
+    return _a('sistemas:asignar_tema', sistema=id_sistema)
+
+
+def a_editar_proposito(id_sistema: int) -> str:
+    return _a('sistemas:editar_proposito', sistema=id_sistema)
+
+
+def a_asignar_organismo(id_sistema: int) -> str:
+    return _a('sistemas:asignar_organismo', sistema=id_sistema)
 
 
 def a_usuarios() -> str:
-    return str(reverse_lazy('sistemas:listado_usuarios'))
+    return _a('sistemas:listado_usuarios')
 
 
 def a_detalle_usuario(usuario) -> str:
-    return str(reverse_lazy('sistemas:detalle_usuario', kwargs={
-        'usuario': usuario,
-        }))
+    return _a('sistemas:detalle_usuario', usuario=usuario)
 
 
 def a_organismos() -> str:
-    return str(reverse_lazy('sistemas:listado_organismos'))
+    return _a('sistemas:listado_organismos')
     
 
+def a_entes() -> str:
+    return _a('sistemas:listado_entes')
+    
+
+def a_detalle_ente(id_ente) -> str:
+    return _a('sistemas:detalle_ente', ente=id_ente)
+
+
 def a_detalle_organismo(id_organismo) -> str:
-    return str(reverse_lazy('sistemas:detalle_organismo', kwargs={
-        'organismo': id_organismo,
-        }))
+    return _a('sistemas:detalle_organismo', organismo=id_organismo)
 
 
 def a_temas() -> str:
-    return str(reverse_lazy('sistemas:listado_temas'))
+    return _a('sistemas:listado_temas')
 
 
 def a_tema(id_tema:str) -> str:
-    return str(reverse_lazy('sistemas:detalle_tema', kwargs={
-        'tema': id_tema,
-        }))
+    return _a('sistemas:detalle_tema', tema=id_tema)

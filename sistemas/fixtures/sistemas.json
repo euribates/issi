@@ -121,6 +121,14 @@
 },
 {
     "model": "sistemas.tema",
+    "pk": "DEP",
+    "fields": {
+        "nombre_tema": "Deportes",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
     "pk": "DSS",
     "fields": {
         "nombre_tema": "Desarrollo Sostenible",
@@ -265,14 +273,6 @@
 },
 {
     "model": "sistemas.tema",
-    "pk": "GRH",
-    "fields": {
-        "nombre_tema": "Gestión RRHH",
-        "transversal": true
-    }
-},
-{
-    "model": "sistemas.tema",
     "pk": "HAC",
     "fields": {
         "nombre_tema": "Hacienda",
@@ -409,6 +409,14 @@
 },
 {
     "model": "sistemas.tema",
+    "pk": "RHU",
+    "fields": {
+        "nombre_tema": "Recursos Humanos",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
     "pk": "SAN",
     "fields": {
         "nombre_tema": "Sanidad",
@@ -491,6 +499,7 @@
     "model": "sistemas.sistema",
     "pk": 1,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Inventario de Sistemas de Información",
         "organismo": 42093,
         "codigo": "ISSI",
@@ -510,6 +519,7 @@
     "model": "sistemas.sistema",
     "pk": 2,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Registro General de Empresas, Actividades y Establecimientos Turísticos",
         "organismo": 42144,
         "codigo": "TURIDATA",
@@ -529,6 +539,7 @@
     "model": "sistemas.sistema",
     "pk": 3,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Juriscan",
         "organismo": 42097,
         "codigo": "JURISCAN",
@@ -548,13 +559,14 @@
     "model": "sistemas.sistema",
     "pk": 4,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Sistema de información de recursos humanos",
         "organismo": 41545,
         "codigo": "SIRhUS",
         "url": null,
         "descripcion": "Sistema para la gestión de los procedimientos en materia de personal, así como para la gestión del registro general de personal",
         "proposito": "Con la implantación de la aplicación **SIRHUS** (Sistema de Información de Recursos Humanos), se persigue  que esta herramienta sirva de instrumento para:\r\n\r\n- La planificación, gestión y seguimiento en materia de personal.\r\n\r\n- Potenciar las tareas de gestión y seguimiento simplificando las tareas esencialmente burocráticas\r\n\r\n- Mejorar la calidad y oportunidad en la toma de decisiones \r\n\r\n- La implantación de un sistema de información único de recursos humanos para todos los colectivos de personal de la Comunidad Autónoma de Canarias en una una plataforma integrada y flexible que permita soportar todo tipo de esquemas competenciales y colectivos.",
-        "tema": "GRH",
+        "tema": "RHU",
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
@@ -567,6 +579,7 @@
     "model": "sistemas.sistema",
     "pk": 5,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Gestor de Expedientes Corporativo",
         "organismo": 42093,
         "codigo": "PLATEA",
@@ -586,6 +599,7 @@
     "model": "sistemas.sistema",
     "pk": 6,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Sirvete",
         "organismo": 42093,
         "codigo": "SIRVETE",
@@ -605,6 +619,7 @@
     "model": "sistemas.sistema",
     "pk": 7,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Platino",
         "organismo": 42093,
         "codigo": "PLATINO",
@@ -624,6 +639,7 @@
     "model": "sistemas.sistema",
     "pk": 8,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "SEFLOGIC",
         "organismo": 42088,
         "codigo": "SEFLOGIC",
@@ -643,6 +659,7 @@
     "model": "sistemas.sistema",
     "pk": 9,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias",
         "organismo": 42093,
         "codigo": "SICAC",
@@ -662,6 +679,7 @@
     "model": "sistemas.sistema",
     "pk": 10,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Registro de entrada  y salida",
         "organismo": 42119,
         "codigo": "HIPERREG",
@@ -681,6 +699,7 @@
     "model": "sistemas.sistema",
     "pk": 11,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Sistema de Dirección por Objetivos",
         "organismo": 42119,
         "codigo": "TRISKELL",
@@ -700,6 +719,7 @@
     "model": "sistemas.sistema",
     "pk": 12,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Directorio de Unidades Administrativas y Oficinas de Registro y Atención a la Ciudadanía",
         "organismo": 42119,
         "codigo": "DIRCAC",
@@ -719,6 +739,7 @@
     "model": "sistemas.sistema",
     "pk": 13,
     "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Sistema de tramitación electrónica de procedimientos de Ganadería",
         "organismo": 39073,
         "codigo": "SIRBA",
@@ -732,6 +753,206 @@
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 14,
+    "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "nombre": "Pruebas",
+        "organismo": 42166,
+        "codigo": "borrame",
+        "url": null,
+        "descripcion": "",
+        "proposito": "",
+        "tema": "UNK",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 15,
+    "fields": {
+        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "nombre": "Gestión de expedientes de Dependencia",
+        "organismo": 42168,
+        "codigo": "Sidecan",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión de expedientes de Dependencia",
+        "tema": "BIS",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 16,
+    "fields": {
+        "uuid": "f07d154d-e601-4f2f-90e5-8f3599d16da8",
+        "nombre": "Renta Canaria Ciudadana",
+        "organismo": 42167,
+        "codigo": "RCC",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión de expedientes de Renta Canaria Ciudadana",
+        "tema": "BIS",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/RCC-logo.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 17,
+    "fields": {
+        "uuid": "17aefe7c-f6b3-4f2b-b73a-f5047525704a",
+        "nombre": "Adopciones",
+        "organismo": 42169,
+        "codigo": "Adopciones",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión de expediente de adopciones",
+        "tema": "BIS",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 18,
+    "fields": {
+        "uuid": "4c5456c0-e2f8-4ae4-a24f-542b93ad3ccb",
+        "nombre": "Ingreo Mínimo Vital",
+        "organismo": null,
+        "codigo": "IMV",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión de Ingreso Mínimo Vital",
+        "tema": "UNK",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 19,
+    "fields": {
+        "uuid": "35ffe319-a950-4a1f-be0f-8a8aec306555",
+        "nombre": "Registro perros guía",
+        "organismo": null,
+        "codigo": "RPG",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Registro perros guía",
+        "tema": "UNK",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 20,
+    "fields": {
+        "uuid": "5d93fbb4-18a1-4957-adbb-bc924db66f6a",
+        "nombre": "Justicia Juvenil",
+        "organismo": 42169,
+        "codigo": "JusticiaJuvenil",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión de las Medidas Judiciales de Menores",
+        "tema": "BIS",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 21,
+    "fields": {
+        "uuid": "52c98152-f54e-41f2-8d80-4d1923f7f577",
+        "nombre": "Sigestein",
+        "organismo": 41854,
+        "codigo": "Sigestein",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión de expedientes",
+        "tema": "OTE",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 22,
+    "fields": {
+        "uuid": "61a978c6-58cb-45e3-9657-a5e7977d0a82",
+        "nombre": "Programa de gestión de cursos",
+        "organismo": 6564,
+        "codigo": "PGC",
+        "url": null,
+        "descripcion": "",
+        "proposito": "En este sistema se gestiona actualmente todo el proceso de realización y seguimiento de los cursos desde que se crean a partir de un código hasta que finalizan con la entrega al alumno de la correspondiente certificación.",
+        "tema": "EDU",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 23,
+    "fields": {
+        "uuid": "d9fded6d-cd3f-4306-885f-b96f28336c65",
+        "nombre": "SISTEMA DE FICHAJES ESSSCAN",
+        "organismo": 6564,
+        "codigo": "TIMEVIEW",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Sistema de control de fichajes, ausencias y vacaciones,  gestión de incidencias y expediente del empleado.",
+        "tema": "RHU",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/TimeView-logo.png"
     }
 },
 {

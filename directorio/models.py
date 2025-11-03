@@ -121,8 +121,15 @@ class Organismo(models.Model):
 
 
 class Ente(models.Model):
+
     DATOS = 'datos.canarias.es'
     VALID_DAYS = 14
+
+    class Meta:
+        ordering = [
+            'peso',
+            'organismo__nombre_organismo',
+            ]
 
     id_ente = models.SlugField(
         max_length=12,
@@ -133,6 +140,7 @@ class Ente(models.Model):
         related_name='ente',
         on_delete=models.PROTECT,
         )
+    peso = models.IntegerField(default=100)
     url_open_data = models.URLField(
         max_length=384,
         unique=True,

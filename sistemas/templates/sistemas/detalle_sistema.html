@@ -1,5 +1,5 @@
 {% extends "comun/base.html" %}
-{% load comun_filters estados static %}
+{% load comun_filters sistemas static %}
 
 {% block content %}
 
@@ -11,13 +11,29 @@
         <div class="card-header">
             <div class="position-absolute top-0 end-0 p-2">
                 <img src="{% static sistema.get_estado|as_status_icon %}"
-                   width="32" height="32">
+                   width="48" height="48">
             </div>    
             <h4 class="card-title"><b>{{ sistema.codigo }}</b>
                 <br><small>{{ sistema.nombre }}</small>
             </h4>
         </div>
         <div class="card-body">
+            <dl>
+                <dt>Clave primaria interna</dt>
+                <dd>
+                  <code class="clave-primaria">
+                    {{ sistema.pk }}
+                  </code>  
+                </dd>
+
+                <dt>Clave externa</dt>
+                <dd>
+                  <code class="clave-externa">
+                    {{ sistema.uuid }}
+                  </code>  
+                </dd>
+            </dl>
+                          
             <p class="card-text">
             {{ sistema.descripcion|as_markdown }}
             </p>
@@ -31,6 +47,7 @@
             {% if sistema.es_subsistema_de %}
             <span class="badge text-bg-warning" title="de {{ sistema.es_subsistema_de }}">
                 Subsistema
+            
             </span>
             {% endif %}
         </div>
@@ -50,8 +67,12 @@
               {{ sistema.proposito|as_markdown }}    
             </p>
         </div>
-        <div class="card-footer">
-            [FALTA] Botón editar proposito
+        <div class="card-footer d-flex flex-row-reverse">
+            <a class="btn btn-warning"
+               href="{% url 'sistemas:editar_proposito' sistema=sistema.pk %}">
+            <i class="bi bi-pencil"></i>
+            Editar propósito
+            </a>
         </div>
       </div>
     </div>
@@ -60,12 +81,24 @@
       <table class="table table-hover">
         <tr>
           <th>Área temática</th>
-          <td>{{ sistema.tema }}</td>
+          <td>
+              <span class="tema">  
+              {{ sistema.tema }}
+              </span>
+
+              <a class="btn btn-warning"
+                 href="{% url 'sistemas:asignar_tema' sistema=sistema %}">
+                 <i class="bi bi-bookmark"></i>
+                 Asignar tema
+              </a>
+          </td>
         </tr>
-        <tr>
-          <th>URL principal</th>
-          <td>{{ sistema.url|default:"No disponible" }}</td>
-        </tr>
+        {% if sistema.url %}
+          <tr>
+            <th>URL principal</th>
+            <td>{{ sistema.url }}</td>
+          </tr>
+        {% endif %}
         <tr>
           <th>Organismo</th>
           <td>
@@ -75,8 +108,14 @@
             </a>
             <span class="dir3">{{ sistema.organismo.dir3 }}</span>
             {% else %}
-              [FALTA] Botón para asignar sistema a organismo
+              <i class="pendiente">Sin asignar</a>
             {% endif %}
+
+              <a class="btn btn-warning"
+                 href="{% url 'sistemas:asignar_organismo' sistema=sistema %}">
+                 <i class="bi bi-diagram-3-fill"></i>
+                 Asignar a organismo
+              </a>
             <br>
           </td>
         </tr>

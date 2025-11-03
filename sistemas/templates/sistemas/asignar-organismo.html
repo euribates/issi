@@ -5,7 +5,7 @@
 <div class="card">
 
   <div class="card-header">
-    Añadir un nuevo sistema de información
+    Asignar organismo
   </div>
 
   <div class="card-body">
@@ -14,34 +14,8 @@
   {% csrf_token %}
   {{ form.errors }}  
 
-  <div class="d-flex p-2 bd-highlight">
-    <fieldset class="flex-fill">
-      <legend>Identificación del sistema</legend>
+  <p>Asignar S.I. {{ sistema }} a un organismo.</p>
 
-
-        <div class="m-2">
-         <label for="id_nombre" class="form-label">Nombre del sistema</label>
-         {{ form|as_text_control:"nombre" }}
-        </div>
-
-        <div class="m-2">
-         <label for="id_codigo" class="form-label">Código</label>
-         {{ form|as_text_control:"codigo" }}
-        </div>
-
-        <div class="m-2">
-         <label for="id_proposito" class="form-label">Propósito</label>
-         {{ form.proposito }}
-        </div>
-
-        <div class="m-2">
-         <label for="id_tema" class="form-label">Tema</label>
-         {{ form.tema }}
-        </div>
-
-
-    </fieldset class="flex-fill">     
-  
     <fieldset style="max-width: 50%;">
       <legend>Estructura administrativa</legend>
 
@@ -63,14 +37,10 @@
            </div>
       </div>
     </fieldset>    
-  </div>
 
-
-    <button type="submit" class="btn btn-primary">Añadir sistema</button>
-    </form>
+  <button type="submit" class="btn btn-primary">Asignar a organismo</button>
+  </form>
   </div>
 </div>  
-
-{{ from }}
 
 {% endblock content %}

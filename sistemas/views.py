@@ -19,6 +19,7 @@ from sistemas.filtersets import UsuarioFilter
 from sistemas.filtersets import SistemaFilter
 from directorio.filtersets import OrganismoFilter
 from directorio.models import Organismo
+from directorio.models import Ente
 from sistemas.models import Sistema
 
 @cache
@@ -52,12 +53,12 @@ def alta_sistema(request):
         form = forms.AltaSistemaForm(request.POST)
         if form.is_valid():
             data = form.as_dict()
-            from icecream import ic; ic(data)
             sistema = Sistema.alta_sistema(
                 nombre=data['nombre'],
                 codigo=data['codigo'],
                 proposito=data['proposito'],
                 organismo=data['organismo'],
+                tema=data['tema'],
                 )
             return redirect(sistema.url_detalle_sistema())
     else:
@@ -70,11 +71,55 @@ def alta_sistema(request):
         })
 
 
+def asignar_organismo(request, sistema):
+    if request.method == "POST":
+        form = forms.AsignarOrganismoForm(request.POST, instance=sistema)
+        if form.is_valid():
+            organismo = form.cleaned_data['organismo']
+            from icecream import ic; ic(request.POST)
+            from icecream import ic; ic(organismo)
+            sistema.asignar_organismo(organismo)
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.AsignarOrganismoForm(instance=sistema)
+    return render(request, 'sistemas/asignar-organismo.html', {
+        'titulo': f'Asignar {sistema} a organismo',
+        'breadcrumbs': bc.asignar_organismo(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
+
 def asignar_tema(request, sistema):
-    form = forms.AsignarTemaForm()
+    if request.method == "POST":
+        form = forms.AsignarTemaForm(request.POST, instance=sistema)
+        if form.is_valid():
+            sistema.asignar_tema(form.cleaned_data['tema'])
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.AsignarTemaForm(instance=sistema)
     return render(request, 'sistemas/asignar-tema.html', {
         'titulo': f'Asignar tema a {sistema}',
         'breadcrumbs': bc.asignar_tema(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
+
+def editar_proposito(request, sistema):
+    if request.method == "POST":
+        form = forms.EditarPropositoForm(request.POST)
+        if form.is_valid():
+            sistema.proposito = form.cleaned_data['proposito']
+            sistema.save()
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.EditarPropositoForm(instance=sistema)
+    return render(request, 'sistemas/editar-proposito.html', {
+        'titulo': f'Editar proposito de {sistema}',
+        'breadcrumbs': bc.editar_proposito(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,
@@ -87,6 +132,7 @@ def detalle_sistema(request, sistema):
         'breadcrumbs': bc.detalle_sistema(sistema),
         'tab': 'sistemas',
         'sistema': sistema,
+        'commands': cmd_sistemas(),
         })
 
 
@@ -119,6 +165,31 @@ def detalle_usuario(request, usuario, *args, **kwargs):
         'tab': 'usuarios',
         'usuario': usuario,
         })
+
+
+def listado_entes(request):
+    return render(request, 'sistemas/listado_entes.html', {
+        'titulo': 'Entes',
+        'breadcrumbs': bc.entes(),
+        'tab': 'organismos',
+        'entes': Ente.objects.all(),
+        })
+
+
+def detalle_ente(request, ente):
+    return render(request, 'sistemas/detalle_ente.html', {
+        'titulo': f'Detalles {ente}',
+        'breadcrumbs': bc.detalle_ente(ente),
+        'tab': 'organismos',
+        'ente': ente,
+        'sistemas': (
+            Sistema.objects
+            .select_related('organismo')
+            .filter(organismo__ruta__startswith=ente.organismo.ruta)
+            .all()
+            ),
+        })
+
 
 
 def listado_organismos(request):
@@ -170,12 +241,12 @@ def patch_organismos(request):
         params = {
             'error': escape(repr(err)),
             }
-    from icecream import ic; ic(params)
     query = params.get("query")
     buff = [
-        '<select name="id_organismo"'
+        '<select name="organismo"'
         ' size="17"'
-        ' class="form-control">'
+        ' class="form-control">',
+        '<option value="">Sin asignar</option>'
         ]
     if query:
         organismos = Organismo.search(query)

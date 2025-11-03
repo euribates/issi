@@ -1,0 +1,173 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+
+{% block content %}
+
+<div class="row">
+  
+  <section class="col col-8">
+
+    <div class="card">
+      <div class="card-header bg-info bg-gradient">
+          <h4 class="card-title">Detalles del ente/organismo
+          </h4>
+      </div>
+      <div class="card-body">
+      <table class="table">
+          <tr>
+              <th>Nombre</th>
+              <td>{{ ente.organismo.nombre_organismo }}</td>
+          </tr>
+          <tr>
+              <th>Categoría</th>
+              <td>{{ ente.organismo.categoria }}</td>
+          </tr>
+          <tr>
+              <th>Código DIRCAC</th>
+              <td>{{ ente.organismo.pk }}</td>
+          </tr>
+          <tr>
+          <tr>
+              <th>Código SirHUS</th>
+              <td>{{ ente.organismo.id_sirhus }}</td>
+          </tr>
+              <th>DIR3</th>
+              <td>{{ ente.organismo.dir3 }}</td>
+          </tr>
+          <tr>
+              <th>Ruta</th>
+              <td>{{ ente.organismo.ruta }}</td>
+          </tr>
+          <tr>
+              <th>URL</th>
+              <td>
+                  <a href="{{ ente.organismo.url }}" class="enlace-externo">
+                  {{ ente.organismo.url }}
+                  </a>  
+              </td>
+          </tr>
+          <tr>
+      </table>
+      </div>
+    </div>
+
+  </section>  
+  <section class="col col-4">
+
+    <div class="card">
+      <div class="card-header bg-info bg-gradient">
+        Depende de
+      </div>
+      <div class="card-body">
+      <ul class="list-group list-group-flush">
+        {% if ente.organismo.es_primer_nivel %}
+        <li class="list-group-item">
+          <b>Gobierno de Canarias</b>
+        </li>
+
+        {% else %}      
+          <li class="list-group-item">
+              <a href="{% url 'sistemas:detalle_organismo' organismo=ente.organismo.depende_de %}">
+              {{ ente.organismo.depende_de.nombre_organismo }}
+              </a>
+          </li>
+        {% endif %}  
+      </ul>
+      </div>
+    </div>  
+
+    <div class="card mt-2">
+      <div class="card-header bg-info bg-gradient">
+        Organismos Dependientes
+        <span class="badge">{{ ente.organismo.organismos_dependientes.count }}<span>
+      </div>
+      <div class="card-body">
+      <ul class="list-group list-group-flush">
+        {% for org in ente.organismo.organismos_dependientes.all %}
+          <li class="list-group-item">
+              <a href="{% url 'sistemas:detalle_organismo' organismo=org %}">  
+              {{ org.nombre_organismo }}
+              </a>
+          </li>
+        {% endfor %}  
+      </ul>
+
+      </div>
+    </div>
+  </div>
+
+  </section>
+
+  <div class="row">
+
+    <section class="col col-12">
+      <div class="card mt-2">
+        <div class="card-header">
+          <h4 class="card-title">Interlocutores
+            <span class="badge rounded-pill bg-secondary">
+            {{ ente.organismo.interlocutores.count }}
+            </span>
+          </h4>
+        </div>
+        <div class="card-body">
+        <table class="table m-2">
+          <thead>
+            <tr>
+              <th>
+              Nombre y apellidos
+              </th>
+              <th>
+              Identificador
+              </th>
+              <th>
+              Correo electrónico
+              </th>
+            </tr>
+          </thead>
+        {% for interlocutor in ente.organismo.interlocutores.all %}
+          <tr>
+              <td>{{ interlocutor.usuario }}</td>
+              <td>
+                <pre>{{ interlocutor.usuario.pk }}</pre>
+              </td>
+              <td>
+                  <a href="mailto:{{ interlocutor.usuario.email }}">
+                      {{ interlocutor.usuario.email }}
+                  </a>    
+              </td>
+          </tr>  
+        {% endfor %}  
+        </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="col col-12">
+      <div class="card mt-2">
+        <div class="card-header">
+            <h4 class="card-title">Sistemas de información
+            </h4>
+        </div>
+        <div class="card-body">
+          {% include "sistemas/includes/listado-sistemas-full.html" with sistemas=sistemas %}  
+        </div>
+      </div>
+    </section>
+
+    <section class="col col-12">
+      <div class="card mt-2">
+        <div class="card-header">
+            <h4 class="card-title">Competencias
+            </h4>
+        </div>
+        <div class="card-body">
+            {{ ente.organismo.competencias|as_markdown }}
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</div>
+
+{% endblock content %}

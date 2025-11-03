@@ -1,8 +1,14 @@
+#!/usr/bin/env python3
+
+import uuid
+from html import escape
+
 from django.db import models
 from django.db.models.functions import Coalesce
 
 from directorio.models import Organismo
 from . import links
+
 
 
 class TemaManager(models.Manager):
@@ -42,6 +48,11 @@ class Sistema(models.Model):
         ordering = ['nombre',]
 
     id_sistema = models.BigAutoField(primary_key=True)
+    uuid = models.UUIDField(
+        default=uuid.uuid4,
+        editable=False,
+        help_text="Identificador público del sistema (UUID4)",
+        )
     nombre = models.CharField(
         max_length=220,
         unique=True,
@@ -122,7 +133,8 @@ class Sistema(models.Model):
             nombre: str,
             codigo: str,
             proposito: str,
-            organismo: int,
+            organismo: Organismo,
+            tema=None,
             ):
         """Dar de alta un nuevo sistema.
 
@@ -131,8 +143,9 @@ class Sistema(models.Model):
             - nombre (str): Nombre del sistema
             - codigo (str): Código identificador del sistema
             - proposito (str): Propósito
-            - organismo (int): Clave primaria del organismo al que
+            - organismo (Organismo): Instancia del organismo al que
                 está asociado el sistema.
+            - tema (Tema|None): Instacia del tema, o `None`
 
         Returns:
 
@@ -143,7 +156,8 @@ class Sistema(models.Model):
             nombre=nombre,
             codigo=codigo,
             proposito=proposito,
-            organismo=Organismo.load_organismo(organismo),
+            organismo=organismo,
+            tema=tema,
             )
         sistema.save()
         return sistema
@@ -188,10 +202,67 @@ class Sistema(models.Model):
             ]
         if all(flags):
             return 'green'
-        if any(flags):
+        from icecream import ic; ic(flags)
+        from icecream import ic; ic(sum(flags))
+        if sum(flags) > 1:
             return 'yellow'
         return 'red'
         
+    def asignar_tema(self, tema: Tema|str) -> Tema:
+        '''Asignar un tema a un S.I. usando el código.
+
+        El cambio se registra inmediatamente en la base de datos.
+
+        Parameters:
+
+            id_tema (str): Una instancioa de tema, o La clave 
+                primaria del tema
+
+        Returns:
+            
+            La instancia del tema.
+
+        Exceptions:
+
+            Eleva una excepción de tipo `ValueError` si el código
+            de tema no existe en la base de datos.
+        '''
+        if not isinstance(tema, Tema):
+            tema = Tema.load_tema(tema)
+            if not tema:
+                raise ValueError(
+                    'El código de tema indicado:'
+                    f' {escape(repr(tema))} no es válido'
+                    )
+        self.tema = tema
+        self.save(update_fields=['tema'])
+        return tema
+        
+    def asignar_organismo(self, organismo: Organismo|int) -> Organismo:
+        '''Asignar un S.I. a un organismo.
+
+        El cambio se registra inmediatamente en la base de datos.
+
+        Parameters:
+
+            organismo (Organismo|int): Una instancioa de tema, o La clave 
+                primaria del tema
+
+        Returns:
+            
+            La instancia del organismo.
+
+        Exceptions:
+
+            Eleva una excepción de tipo `ValueError` si el código
+            del organismo no existe en la base de datos.
+        '''
+        if not isinstance(organismo, Organismo):
+            organismo = Organismo.load_organismo(organismo)
+        self.organismo = organismo
+        self.save(update_fields=['organismo'])
+        return organismo
+
 
 class Activo(models.Model):
 

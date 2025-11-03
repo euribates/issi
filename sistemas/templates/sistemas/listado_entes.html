@@ -1,0 +1,41 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+
+{% block content %}
+
+<form method="get">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Nombre</th
+      <th>Cód. DIR3</th>
+      <th colspan="2">Peso</th>
+    </tr>  
+  </thead> 
+  <tbody>
+    {% for ente in entes.all %}<tr>
+      <td>
+          <code class="id-ente">{{ ente.id_ente }}</code>
+      </td>
+      <td>
+          <a href="{% url 'sistemas:detalle_ente' ente=ente %}">
+          <b>
+          {{ ente.organismo.nombre_organismo }}
+          </b>
+          </a>
+      </td>
+      <td>
+          <code class="dir3">
+            {{ ente.organismo.dir3 }}
+          </code>    
+      </td>
+      <td colspan="2">
+        {{ ente.peso }}
+      </td>
+    </tr>{% endfor %}
+  </tbody>
+</table>  
+</form>
+{% endblock content %}

@@ -145,3 +145,25 @@ img.card-top-logo {
 .commands > button {
 
 }
+
+.tema {
+  background-color: #0d6efd;
+  color: #fff !important;
+  padding-top: 0.35em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.35em;
+  font-size: 0.75em;
+  font-weight: 700;
+  border-radius: 1em;
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.tema a {
+  color: #fff !important;
+  text-decoration: none!important;
+}

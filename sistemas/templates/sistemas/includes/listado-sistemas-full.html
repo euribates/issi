@@ -1,0 +1,39 @@
+{% load static sistemas %}
+
+<table class="table table-striped table-hover">
+  <thead>
+  <tr>
+  <th>Organismo</th>
+  <th>Código / Nombre</th>
+  <th>Descripción</th>
+  <th>Tema</th>
+  <th>Estado</th>
+  </tr>
+  </thead>
+  <tbody>
+    {% for sistema in sistemas %}
+    <tr>
+      <td>
+          {{ sistema.organismo }}  
+      </td>  
+      <td>
+        <a href="{% url 'sistemas:detalle_sistema' sistema=sistema %}">
+        {{ sistema.codigo }}
+        </a>
+      
+      </td>
+      <td>
+          <b>{{ sistema.nombre }}</b><br>
+        <small>{{ sistema.descripcion }}</small>
+      </td>
+      <td>
+        {{ sistema.tema|as_tema }}
+      </td>
+      <td>
+          <img src="{% static sistema.get_estado|as_status_icon %}"
+               width="48" height="48" alt="{{ sistema.get_estado }}">
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

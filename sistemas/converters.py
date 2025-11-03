@@ -5,6 +5,7 @@ from sistemas.models import Usuario
 from sistemas.models import Sistema
 from sistemas.models import Tema
 from directorio.models import Organismo
+from directorio.models import Ente
 
 
 class SistemaConverter:
@@ -110,5 +111,26 @@ class TemaConverter:
             return str(value.id_tema)
         raise ValueError(
             "Se necesita una instancia de la clase Tema, pero"
+            " me pasan una instancia de {value.__class__.__name__}."
+            )
+
+
+class EnteConverter:
+
+    regex = '[A-Za-z][A-Za-z0-9_]+'
+
+    def to_python(self, value):
+        ente = Ente.load_ente(value)
+        if not ente:
+            raise ValueError("El ente especificado es incorrecto")
+        return ente
+
+    def to_url(self, value):
+        if isinstance(value, str):
+            return value
+        if isinstance(value, Ente):
+            return str(value.id_ente)
+        raise ValueError(
+            "Se necesita una instancia de la clase Ente, pero"
             " me pasan una instancia de {value.__class__.__name__}."
             )

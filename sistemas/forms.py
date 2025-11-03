@@ -3,9 +3,18 @@
 from functools import lru_cache
 
 from django import forms
+from django.forms import widgets
+
 from django.db.models import Q
 
 from . import models
+
+class BaseForm(forms.ModelForm):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
 
 
 class AltaSistemaForm(forms.ModelForm):
@@ -17,6 +26,7 @@ class AltaSistemaForm(forms.ModelForm):
             'codigo',
             'organismo',
             'proposito',
+            'tema',
             ]
 
     def organismos_filtrados(self, query: str):
@@ -31,15 +41,28 @@ class AltaSistemaForm(forms.ModelForm):
         return {}
 
 
-@lru_cache
-def get_choice_temas() -> list[tuple[str, str]]:
-    '''Devuelve la lista de temas como tupla código/valor.
-    '''
-    return [
-        (_.id_tema, _.nombre_tema)
-        for _ in models.Tema.objects.all()
-        ]
+class AsignarOrganismoForm(BaseForm):
+
+    class Meta:
+        model = models.Sistema
+        fields = ['organismo']
+
+    def organismos_filtrados(self, query: str):
+        return models.Organismo.search(query)
 
 
-class AsignarTemaForm(forms.Form):
-    tema = forms.ChoiceField(choices=get_choice_temas)
+class AsignarTemaForm(BaseForm):
+    class Meta:
+        model = models.Sistema
+        fields = ['tema']
+
+
+class EditarPropositoForm(BaseForm):
+    class Meta:
+        model = models.Sistema
+        fields = ['proposito']
+
+    proposito = forms.CharField(
+        widget=widgets.Textarea(attrs={"cols": "40", "rows": 12}),
+        required=False,
+        )

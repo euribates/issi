@@ -14,7 +14,6 @@ node_modules/
 db.sqlite3
 static/*
 .env
-extra/*
 uploads/**
 reportes/
 temp/

@@ -24,10 +24,25 @@ def detalle_sistema(sistema):
         links.a_detalle_sistema(sistema.pk),
         )
 
+
 def asignar_tema(sistema):
     return detalle_sistema(sistema).step(
         "Asignar tema",
         links.a_asignar_tema(sistema.pk),
+        )
+
+
+def editar_proposito(sistema):
+    return detalle_sistema(sistema).step(
+        "Editar propósito",
+        links.a_editar_proposito(sistema.pk),
+        )
+
+
+def asignar_organismo(sistema):
+    return detalle_sistema(sistema).step(
+        "Asignar organismo",
+        links.a_asignar_organismo(sistema.pk),
         )
 
 
@@ -45,6 +60,16 @@ def detalle_usuario(usuario):
 def organismos():
     return bc_issi().step('Organismos', links.a_organismos())
 
+
+def entes():
+    return bc_issi().step('Entes', links.a_entes())
+
+
+def detalle_ente(ente):
+    return entes().step(
+        str(ente.id_ente),
+        links.a_detalle_ente(ente.pk),
+        )
 
 def detalle_organismo(organismo):
     return organismos().step(

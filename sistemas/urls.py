@@ -11,6 +11,7 @@ app_name = 'sistemas'
 register_converter(converters.SistemaConverter, 'si')
 register_converter(converters.UserNameConverter, 'login')
 register_converter(converters.OrganismoConverter, 'org')
+register_converter(converters.EnteConverter, 'ent')
 register_converter(converters.TemaConverter, 'tema')
 
 
@@ -22,7 +23,11 @@ urlpatterns = [
     tie('', views.index),
     tie('alta/', views.alta_sistema),
     tie('sistema/<si:sistema>/', views.detalle_sistema),
-    tie('sistema/<si:sistema>/tema/', views.asignar_tema),
+    tie('sistema/<si:sistema>/editar/tema/', views.asignar_tema),
+    tie('sistema/<si:sistema>/editar/proposito/', views.editar_proposito),
+    tie('sistema/<si:sistema>/editar/organismo/', views.asignar_organismo),
+    tie('entes/', views.listado_entes),
+    tie('entes/<ent:ente>/', views.detalle_ente),
     tie('organismo/', views.listado_organismos),
     tie('organismo/<org:organismo>/', views.detalle_organismo),
     tie('usuario/', views.listado_usuarios),

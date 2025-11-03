@@ -5,7 +5,7 @@
 <div class="card">
 
   <div class="card-header">
-    Asignar tema
+      Editar proposito del sistema {{ sistema }}
   </div>
 
   <div class="card-body">
@@ -14,11 +14,9 @@
   {% csrf_token %}
   {{ form.errors }}  
 
-  <p>Asignar tema al S.I. {{ sistema }}.</p>
+  {{ form.tema }}
 
-  {{ form }}
-
-  <button type="submit" class="btn btn-primary">Asignar tema</button>
+  <button type="submit" class="btn btn-primary">Editar propósito</button>
   </form>
   </div>
 </div>  

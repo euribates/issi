@@ -3,3 +3,4 @@ ruff
 icecream
 django-debug-toolbar==6.0.0
 django-extensions==4.1
+pytest-django==4.11.1

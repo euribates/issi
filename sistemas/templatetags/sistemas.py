@@ -12,10 +12,12 @@ register = template.Library()
 def as_tema(tema):
     '''Representación textual, con HTML, del tema.
     '''
-    return mark_safe(
-        # '<span class="badge bg-primary text-bg-primary tema">'
-        f'<a href="{links.a_tema(tema.pk)}">'
-        f'{tema.nombre_tema}'
-        '</a>'
-        # '</span>'
-        )
+    url = links.a_tema(tema.pk)
+    txt = tema.nombre_tema
+    return mark_safe(f'<span class="tema"><a href="{url}">{txt}</a></span>')
+
+
+
+@register.filter
+def as_status_icon(estado):
+    return mark_safe(f'img/status/{estado}.svg')

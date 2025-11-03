@@ -1,0 +1,9 @@
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "main.settings"
+
+
+python_files = [
+    "test_*.py",
+    "*_test.py",
+    "testing/python/*.py",
+    ]
