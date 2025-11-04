@@ -15,5 +15,10 @@ def test_link_a_detalle_sistema():
     assert links.a_detalle_sistema(12) == expected
 
 
+def test_link_a_activos():
+    expected = '/sistemas/activos/'
+    assert links.a_activos() == expected
+
+
 if __name__ == "__main__":
     pytest.main()

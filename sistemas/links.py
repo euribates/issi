@@ -74,3 +74,7 @@ def a_temas() -> str:
 
 def a_tema(id_tema:str) -> str:
     return _a('sistemas:detalle_tema', tema=id_tema)
+
+
+def a_activos() -> str:
+    return _a('sistemas:listado_activos')

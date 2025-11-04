@@ -15,9 +15,7 @@ from . import links
 from . import models
 from comun.commands import Command
 
-from sistemas.filtersets import UsuarioFilter
-from sistemas.filtersets import SistemaFilter
-from directorio.filtersets import OrganismoFilter
+from sistemas import filtersets
 from directorio.models import Organismo
 from directorio.models import Ente
 from sistemas.models import Sistema
@@ -35,7 +33,7 @@ def cmd_sistemas():
 
 def index(request, *args, **kwargs):
     sistemas = models.Sistema.objects.all()
-    filterset = SistemaFilter(
+    filterset = filtersets.SistemaFilter(
         request.GET,
         queryset=sistemas,
         )
@@ -137,7 +135,7 @@ def detalle_sistema(request, sistema):
 
 
 def listado_usuarios(request):
-    filterset = UsuarioFilter(
+    filterset = filtersets.UsuarioFilter(
         request.GET,
         queryset=models.Usuario.objects.all(),
         )
@@ -171,7 +169,7 @@ def listado_entes(request):
     return render(request, 'sistemas/listado_entes.html', {
         'titulo': 'Entes',
         'breadcrumbs': bc.entes(),
-        'tab': 'organismos',
+        'tab': 'entes',
         'entes': Ente.objects.all(),
         })
 
@@ -180,7 +178,7 @@ def detalle_ente(request, ente):
     return render(request, 'sistemas/detalle_ente.html', {
         'titulo': f'Detalles {ente}',
         'breadcrumbs': bc.detalle_ente(ente),
-        'tab': 'organismos',
+        'tab': 'entes',
         'ente': ente,
         'sistemas': (
             Sistema.objects
@@ -193,7 +191,7 @@ def detalle_ente(request, ente):
 
 
 def listado_organismos(request):
-    filterset = OrganismoFilter(
+    filterset = filtersets.OrganismoFilter(
         request.GET,
         queryset=Organismo.objects.all(),
         )
@@ -230,6 +228,19 @@ def detalle_tema(request, tema):
         'breadcrumbs': bc.tema(tema),
         'tab': 'temas',
         'tema': tema,
+        })
+
+
+def listado_activos(request):
+    filterset = filtersets.ActivoFilter(
+        request.GET,
+        queryset=models.Activo.objects.all(),
+        )
+    return render(request, 'sistemas/listado-activos.html', {
+        'titulo': "Listado de activos",
+        'breadcrumbs': bc.activos(),
+        'tab': 'activos',
+        "filterset": filterset,
         })
 
 

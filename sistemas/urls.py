@@ -35,5 +35,6 @@ urlpatterns = [
     tie('usuario/<login:usuario>/', views.detalle_usuario),
     tie('temas/', views.listado_temas),
     tie('temas/<tema:tema>/', views.detalle_tema),
+    tie('activos/', views.listado_activos),
     tie("patch/organismos/", views.patch_organismos),
     ]

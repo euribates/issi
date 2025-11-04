@@ -1,0 +1,59 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+
+{% block content %}
+
+<form method="get">
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Prioritario</th>
+      <th>Georeferenciado</th>
+      <th></th>
+    </tr>  
+
+    <tr>
+      <th>
+        {{ filterset.form.nombre_activo }}
+      </th>  
+      <th>
+        {{ filterset.form.descripcion }}
+      </th>
+      <th>
+        {{ filterset.form.es_prioritario }}
+      </th>
+      <th>
+        {{ filterset.form.esta_georeferenciado }}
+      </th>
+      <th>
+        <input type="submit" value="🔍" />
+      </th>
+    </tr> 
+    
+  </thead> 
+  <tbody>
+    {% for activo in filterset.qs.all %}<tr>
+      <td>
+          <b>{{ activo.nombre_activo }}</b>
+      </td>
+      <td>
+          {{ activo.descripcion }}<br>
+          <small>
+              <a href="{% url 'sistemas:detalle_sistema' sistema=activo.sistema %}">
+              <b>{{ activo.sistema.codigo }}</b>
+              </a>
+              {{ activo.sistema }}
+          </small>
+      </td>
+      <td>{{ activo.es_prioritario|as_boolean }}</td>
+      <td>{{ activo.esta_georeferenciado|as_boolean }}</td>
+      <td></td>
+    </tr>{% endfor %}
+  
+  </tbody>
+</table>  
+</form>
+{% endblock content %}

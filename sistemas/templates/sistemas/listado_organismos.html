@@ -15,13 +15,13 @@
 
     <tr>
       <th>
-        {{ filterset.form|as_text_control:"nombre_organismo__icontains" }}
+        {{ filterset.form.nombre_organismo }}
       </th>  
       <th>
-        {{ filterset.form|as_text_control:"dir3__icontains" }}
+        {{ filterset.form.dir3 }}
       </th>
       <th>
-        {{ filterset.form|as_text_control:"categoria__icontains" }}
+        {{ filterset.form.categoria }}
       </th>
       <th>
         <input type="submit" value="🔍" />

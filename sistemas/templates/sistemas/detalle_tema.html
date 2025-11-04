@@ -7,16 +7,17 @@
 
 <table class="table table-striped">
 {% for s in tema.sistemas.all %}<tr>
-    <th>
-        <a href="{% url 'sistemas:detalle_sistema' sistema=s %}">
-        {{ s.codigo }}
-        </a>
-    </th>   
     <td>
+        <b>
+        <a href="{% url 'sistemas:detalle_sistema' sistema=s %}">{{ s.codigo }}</a>
+        </b>
         {{ s.nombre }}
+    </td>   
+    <td>
+      {{ s.descripcion }}    
     </td>
     <td>
-        <a href="{% url 'sistemas:detalle_organismo' organismo=s.organismo.pk %}">
+        {% comment %}<a href="{% url 'sistemas:detalle_organismo' organismo=s.organismo %}">{% endcomment %}
         {{ s.organismo.nombre_organismo }}
         </a>
     </td>

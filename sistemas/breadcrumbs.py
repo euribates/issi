@@ -84,3 +84,7 @@ def temas():
 
 def tema(t):
     return temas().step(str(t), links.a_tema(t.id_tema))
+
+
+def activos():
+    return sistemas().step('Activos', links.a_activos())
