@@ -1,5 +1,5 @@
 {% load static %}<!doctype html>
-<html lang="en">
+<html lang="es">
  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,9 +9,12 @@
   <link media="screen" href="{% static 'img/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
   <link media="screen" href="{% static 'css/estilos.css' %}" rel="stylesheet">
   <link media="all" href="{% static 'css/custom.css' %}" rel="stylesheet">
+  <link media="all" href="{% static 'css/toasts.css' %}" rel="stylesheet">
   <link media="print" href="{% static 'css/print.css' %}" rel="stylesheet">
  </head>
  <body>
+
+ {% include "comun/includes/toasts.html" %}
 
   <div class="container">
    {% include "comun/header.html" %}
@@ -43,13 +46,33 @@
 
  {% block libs %}
  <script src="{% static 'js/datastar.js' %}" type="module"></script>
- <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+ <script src="{% static 'js/bootstrap.js' %}"></script>
  <script src="{% static 'js/chart.js' %}"></script>
  <script src="{% static 'js/sidebar.js' %}"></script>
  {% endblock libs %}
 
  {% block scripts %}
  {% endblock scripts %}
+
+<script type="text/javascript">
+
+function prepare_toasts() {
+    console.log('Preparando las tostadas...');
+    var option = {
+        'animation': true,
+        'autohide': true,
+        'delay': 5000,
+        };
+    document.querySelectorAll('.toast').forEach(function (elem) {
+         const toast = new bootstrap.Toast(elem, option);
+        toast.show();
+        });
+    console.log('... Las tostadas están listas.');
+}
+
+document.addEventListener("DOMContentLoaded", prepare_toasts);
+
+</script> 
 
  </body>
 </html>

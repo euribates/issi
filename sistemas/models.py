@@ -4,9 +4,11 @@ import uuid
 from html import escape
 
 from django.db import models
+from django.db.models import Q
 from django.db.models.functions import Coalesce
 
 from directorio.models import Organismo
+from . import diagnosis
 from . import links
 
 
@@ -189,25 +191,22 @@ class Sistema(models.Model):
         """
         return links.a_detalle_sistema(self.pk)
 
-    def get_estado(self):
-        tiene_proposito = bool(self.proposito)
-        tiene_organismo = bool(self.organismo)
-        tiene_tema = (self.tema == 'UNK')
-        tiene_algun_representante = self.perfiles.count() > 0
-        flags = [
-            tiene_proposito,
-            tiene_organismo,
-            tiene_tema,
-            tiene_algun_representante,
-            ]
+    def get_estado(self) -> str:
+        '''Calcula y devuelve el estado de madurez del sistema.
+
+        Returns:
+
+            str: Una cadena de texto con uno de los 
+            siguiente posibles valores: `'green'`, `'yellow'` o
+            `'red'`.
+        '''
+        flags = diagnosis.DiagnosticoSistema(self).flags()
         if all(flags):
             return 'green'
-        from icecream import ic; ic(flags)
-        from icecream import ic; ic(sum(flags))
         if sum(flags) > 1:
             return 'yellow'
         return 'red'
-        
+
     def asignar_tema(self, tema: Tema|str) -> Tema:
         '''Asignar un tema a un S.I. usando el código.
 
@@ -262,6 +261,21 @@ class Sistema(models.Model):
         self.organismo = organismo
         self.save(update_fields=['organismo'])
         return organismo
+
+    def asignar_responsable(self, cometido, usuario):
+        '''Asigna a un sistema un responsable
+
+        Un responsable es una persona con un cometido determinado.
+
+        Es idempotente, si el resposable ya estaba
+        creado, no hace nada.
+        '''
+        perfil, _created= Perfil.upsert(
+            sistema=self,
+            cometido=cometido,
+            usuario=usuario,
+            )
+        return perfil
 
 
 class Activo(models.Model):
@@ -343,6 +357,17 @@ class Usuario(models.Model):
         except cls.DoesNotExist:
             return None
 
+    @classmethod
+    def search_usuarios(cls, query):
+        return (
+            cls.objects.filter(
+                Q(login__icontains=query) |
+                Q(email__icontains=query) |
+                Q(nombre__icontains=query) |
+                Q(apellidos__icontains=query)
+                )
+            )
+
     def nombre_completo(self):
         if self.nombre:
             if self.apellidos:
@@ -420,14 +445,26 @@ class Perfil(models.Model):
         null=True,
         )
 
-    def __str__(self):
-        return f"{self.get_cometido_display()} de {self.sistema.codigo}"
+    @classmethod
+    def load_perfil(cls, pk:int):
+        '''Devuelve la instancia del perfil por clave primaria.
+
+        O `None` si no existe perfil con esa clave.
+        '''
+        try:
+            return cls.objects.get(id_perfil=pk)
+        except cls.DoesNotExist:
+            return None
 
     @classmethod
-    def upsert(cls, usuario, organismo, cometido):
+    def upsert(cls, sistema, usuario, cometido):
          perfil, created = cls.objects.update_or_create(
+            sistema=sistema,
             usuario=usuario,
-            organismo=organismo,
             cometido=cometido,
             )
          return perfil, created
+
+    def __str__(self):
+        return f"{self.get_cometido_display()} de {self.sistema.codigo}"
+

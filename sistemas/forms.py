@@ -48,7 +48,7 @@ class AsignarOrganismoForm(BaseForm):
         fields = ['organismo']
 
     def organismos_filtrados(self, query: str):
-        return models.Organismo.search(query)
+        return models.Organismo.search_organismos(query)
 
 
 class AsignarTemaForm(BaseForm):
@@ -66,3 +66,13 @@ class EditarPropositoForm(BaseForm):
         widget=widgets.Textarea(attrs={"cols": "40", "rows": 12}),
         required=False,
         )
+
+
+class AsignarResponsableForm(BaseForm):
+
+    class Meta:
+        model = models.Perfil
+        fields = ['cometido', 'usuario']
+
+    def organismos_filtrados(self, query: str):
+        return models.Organismo.search_organismo(query)

@@ -44,6 +44,10 @@ def a_asignar_organismo(id_sistema: int) -> str:
     return _a('sistemas:asignar_organismo', sistema=id_sistema)
 
 
+def a_asignar_responsable(id_sistema: int) -> str:
+    return _a('sistemas:asignar_responsable', sistema=id_sistema)
+
+
 def a_usuarios() -> str:
     return _a('sistemas:listado_usuarios')
 

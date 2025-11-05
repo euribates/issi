@@ -4,21 +4,25 @@ import json
 from html import escape
 from functools import cache
 
-from django.shortcuts import render
-from django.shortcuts import redirect
+from django.contrib import messages
 from django.http import HttpResponse
+from django.shortcuts import redirect
+from django.shortcuts import render
 
 from comun.funcop import agrupa
+from comun.bus import Bus
 from . import breadcrumbs as bc
 from . import forms
 from . import links
 from . import models
+from . import diagnosis
 from comun.commands import Command
 
 from sistemas import filtersets
 from directorio.models import Organismo
 from directorio.models import Ente
 from sistemas.models import Sistema
+from sistemas.models import Usuario
 
 @cache
 def cmd_sistemas():
@@ -51,13 +55,14 @@ def alta_sistema(request):
         form = forms.AltaSistemaForm(request.POST)
         if form.is_valid():
             data = form.as_dict()
-            sistema = Sistema.alta_sistema(
+            sistema = models.Sistema.alta_sistema(
                 nombre=data['nombre'],
                 codigo=data['codigo'],
                 proposito=data['proposito'],
                 organismo=data['organismo'],
                 tema=data['tema'],
                 )
+            Bus(request).success(f'Añadido el sistema {sistema}')
             return redirect(sistema.url_detalle_sistema())
     else:
         form = forms.AltaSistemaForm()
@@ -74,9 +79,11 @@ def asignar_organismo(request, sistema):
         form = forms.AsignarOrganismoForm(request.POST, instance=sistema)
         if form.is_valid():
             organismo = form.cleaned_data['organismo']
-            from icecream import ic; ic(request.POST)
-            from icecream import ic; ic(organismo)
             sistema.asignar_organismo(organismo)
+            Bus(request).success(
+                f"El sistema de información {sistema}"
+                f" ha sido asignado a {organismo}"
+                )
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.AsignarOrganismoForm(instance=sistema)
@@ -93,7 +100,11 @@ def asignar_tema(request, sistema):
     if request.method == "POST":
         form = forms.AsignarTemaForm(request.POST, instance=sistema)
         if form.is_valid():
-            sistema.asignar_tema(form.cleaned_data['tema'])
+            tema = sistema.asignar_tema(form.cleaned_data['tema'])
+            Bus(request).success(
+                f"El S.I. {sistema}"
+                f" ha sido asignado al tema {tema}"
+                )
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.AsignarTemaForm(instance=sistema)
@@ -112,6 +123,10 @@ def editar_proposito(request, sistema):
         if form.is_valid():
             sistema.proposito = form.cleaned_data['proposito']
             sistema.save()
+            Bus(request).success(
+                f"El propósito del S.I. {sistema}"
+                " ha sido actualizado"
+                )
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.EditarPropositoForm(instance=sistema)
@@ -124,22 +139,59 @@ def editar_proposito(request, sistema):
         })
 
 
+def asignar_responsable(request, sistema):
+    if request.method == "POST":
+        form = forms.AsignarResponsableForm(request.POST)
+        if form.is_valid():
+            cometido = form.cleaned_data['cometido']
+            usuario = form.cleaned_data['usuario']
+            perfil = sistema.asignar_responsable(cometido, usuario)
+            Bus(request).success(
+                f"El usuario {perfil.usuario}"    
+                f" a sido asignado como {perfil.get_cometido_display()}"
+                f" del S.I. {perfil.sistema}"
+                )
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.AsignarResponsableForm()
+    return render(request, 'sistemas/asignar-responsable.html', {
+        'titulo': f'Asignar responsable a {sistema}',
+        'breadcrumbs': bc.asignar_responsable(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
+
+def borrar_perfil(request, perfil):
+    id_sistema = perfil.sistema.pk
+    perfil.delete()
+    Bus(request).success(
+        f"El usuario {perfil.usuario}"    
+        f" ha dejado de ser {perfil.get_cometido_display()}"
+        f" del S.I. {perfil.sistema}"
+        )
+    return redirect(links.a_detalle_sistema(id_sistema))
+
+    
 def detalle_sistema(request, sistema):
-    return render(request, 'sistemas/detalle_sistema.html', {
+    return render(request, 'sistemas/detalle-sistema.html', {
         'titulo': f'Detalles {sistema}',
         'breadcrumbs': bc.detalle_sistema(sistema),
         'tab': 'sistemas',
         'sistema': sistema,
+        'diagnostico': diagnosis.DiagnosticoSistema(sistema),
         'commands': cmd_sistemas(),
         })
 
 
 def listado_usuarios(request):
+    messages.add_message(request, messages.INFO, "Hello world.")
     filterset = filtersets.UsuarioFilter(
         request.GET,
         queryset=models.Usuario.objects.all(),
         )
-    return render(request, 'sistemas/listado_usuarios.html', {
+    return render(request, 'sistemas/listado-usuarios.html', {
         'titulo': 'Usuarios registrados en el sistema',
         'breadcrumbs': bc.usuarios(),
         'tab': 'usuarios',
@@ -148,7 +200,7 @@ def listado_usuarios(request):
 
 
 def buscar_usuarios(request):
-    return render(request, 'sistemas/buscar_usuarios.html', {
+    return render(request, 'sistemas/buscar-usuarios.html', {
         'titulo': 'Buscar usuarios en pginas blancas',
         'subtitulo': 'Debe estar registrodo como usuario',
         'breadcrumbs': bc.usuarios(),
@@ -157,7 +209,7 @@ def buscar_usuarios(request):
 
 
 def detalle_usuario(request, usuario, *args, **kwargs):
-    return render(request, 'sistemas/detalle_usuario.html', {
+    return render(request, 'sistemas/detalle-usuario.html', {
         'titulo': f'Detalles usuario {usuario}',
         'breadcrumbs': bc.detalle_usuario(usuario),
         'tab': 'usuarios',
@@ -166,7 +218,7 @@ def detalle_usuario(request, usuario, *args, **kwargs):
 
 
 def listado_entes(request):
-    return render(request, 'sistemas/listado_entes.html', {
+    return render(request, 'sistemas/listado-entes.html', {
         'titulo': 'Entes',
         'breadcrumbs': bc.entes(),
         'tab': 'entes',
@@ -175,7 +227,7 @@ def listado_entes(request):
 
 
 def detalle_ente(request, ente):
-    return render(request, 'sistemas/detalle_ente.html', {
+    return render(request, 'sistemas/detalle-ente.html', {
         'titulo': f'Detalles {ente}',
         'breadcrumbs': bc.detalle_ente(ente),
         'tab': 'entes',
@@ -195,7 +247,7 @@ def listado_organismos(request):
         request.GET,
         queryset=Organismo.objects.all(),
         )
-    return render(request, 'sistemas/listado_organismos.html', {
+    return render(request, 'sistemas/listado-organismos.html', {
         'titulo': 'Organismos',
         'breadcrumbs': bc.organismos(),
         'tab': 'organismos',
@@ -204,7 +256,7 @@ def listado_organismos(request):
 
 
 def detalle_organismo(request, organismo: Organismo):
-    return render(request, 'sistemas/detalle_organismo.html', {
+    return render(request, 'sistemas/detalle-organismo.html', {
         'titulo': f'Detalles organismo {organismo}',
         'breadcrumbs': bc.detalle_organismo(organismo),
         'tab': 'organismos',
@@ -214,7 +266,7 @@ def detalle_organismo(request, organismo: Organismo):
 
 def listado_temas(request):
     temas = models.Tema.objects.with_counts().all()
-    return render(request, 'sistemas/listado_temas.html', {
+    return render(request, 'sistemas/listado-temas.html', {
         'titulo': 'Listado de temas (Áreas temáticas)',
         'breadcrumbs': bc.temas(),
         'tab': 'temas',
@@ -223,7 +275,7 @@ def listado_temas(request):
 
 
 def detalle_tema(request, tema):
-    return render(request, 'sistemas/detalle_tema.html', {
+    return render(request, 'sistemas/detalle-tema.html', {
         'titulo': str(tema),
         'breadcrumbs': bc.tema(tema),
         'tab': 'temas',
@@ -260,7 +312,7 @@ def patch_organismos(request):
         '<option value="">Sin asignar</option>'
         ]
     if query:
-        organismos = Organismo.search(query)
+        organismos = Organismo.search_organismos(query)
     else:
         organismos = Organismo.objects.all()
     selected = ' selected'
@@ -276,5 +328,41 @@ def patch_organismos(request):
     result = '\n'.join(buff)
     return HttpResponse(
         f'<div id="control_organismos">{result}</div>'
+        f'<div id="contador">{contador}<div>'
+        )
+
+
+def patch_usuarios(request):
+    datastar = request.GET.get('datastar')
+    try:
+        params = json.loads(datastar)
+    except Exception as err:
+        params = {
+            'error': escape(repr(err)),
+            }
+    query = params.get("query")
+    buff = [
+        '<select name="usuario"'
+        ' size="17"'
+        ' class="form-control">',
+        '<option value="">Sin asignar</option>'
+        ]
+    if query:
+        usuarios = Usuario.search_usuarios(query)
+    else:
+        usuarios = Usuario.objects.all()[0:100]
+    selected = ' selected'
+    contador = usuarios.count()
+    for usr in usuarios:
+        buff.append(
+            f'<option value="{usr.pk}"{selected}>'
+            f'{usr}'
+            '</option>'
+            )
+        selected = ''
+    buff.append('</select>')
+    result = '\n'.join(buff)
+    return HttpResponse(
+        f'<div id="control_usuarios">{result}</div>'
         f'<div id="contador">{contador}<div>'
         )

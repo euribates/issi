@@ -4,6 +4,7 @@ import math
 
 from django.shortcuts import render
 
+from comun.bus import Bus
 from sistemas import breadcrumbs
 
 
@@ -44,7 +45,16 @@ def homepage(request):
         })
 
 def labo(request):
-    return render(request, "comun/labo.html")
+    from django.contrib import messages
+    Bus(request).debug("This is a debug message")
+    Bus(request).info("This is a info message")
+    Bus(request).success("This is a success message")
+    Bus(request).warning("This is a warning message")
+    Bus(request).error("This is a error message")
+    return render(request, "comun/labo.html", {
+        'titulo': 'Esto es una página de pruebas',
+        'subtitulo': 'Si ves cosas raras, es normal',
+        })
 
 
 def make_chart(percent, color='Lime'):

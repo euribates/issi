@@ -90,7 +90,7 @@ class Organismo(models.Model):
         return False
 
     @classmethod
-    def search(cls, query):
+    def search_organismos(cls, query):
         return (
             cls.objects.filter(
                 Q(nombre_organismo__icontains=query) |

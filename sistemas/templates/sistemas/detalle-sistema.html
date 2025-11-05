@@ -1,0 +1,214 @@
+{% extends "comun/base.html" %}
+{% load comun_filters sistemas static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row align-items-start">
+
+    <div class="col col-5" style="border: 1px dotted red;">
+
+        <div class="card">
+          <div class="position-absolute top-0 end-0 p-2">
+                <img src="{% static sistema.get_estado|as_status_icon %}"
+                   width="48" height="48">
+            </div>    
+          <div class="card-header">
+            <h3 class="card-title">Identificación</h3>
+          </div>  
+          <div class="card-body">
+              <h3>{{ sistema.codigo }}</h3>
+              <h4>{{ sistema.nombre }}</h4>
+            <dl>
+              <dt>Clave interna</dt>
+              <dd>
+                <code class="clave-primaria">
+                {{ sistema.pk }}
+                </code>  
+              </dd>
+
+              <dt>Clave externa</dt>
+              <dd>
+                <code class="clave-externa">
+                {{ sistema.uuid }}
+                </code>  
+              </dd>
+            </dl>
+                          
+            <dt>Descripción</dt>
+            <dd>
+              {% if sistema.descripcion %}
+                {{ sistema.descripcion|as_markdown }}
+              {% else %}
+                <i class="bi bi-exclamation-diamond"></i>
+                <i>Falta la descripción</i>
+                <br>
+                [TODO] Boton para modificar descripción
+                    
+              {% endif %}
+            </dd>
+
+            <dt>Logotipo</dt>
+            <dd>
+                {% if sistema.icono %}
+                <img width="64" height="64"
+                    src="{{ sistema.icono.url }}"
+                    alt="{{ sistema }}">
+                {% else %}
+                <i class="bi bi-exclamation-diamond"></i>
+                [FALTA] Botón para dar de alta el icono
+                {% endif %}  
+            </dd>
+
+
+            {% if sistema.es_transversal %}
+            <span class="badge text-bg-info">Transversal</span>
+            {% endif %}
+            {% if sistema.es_subsistema_de %}
+            <span class="badge text-bg-warning" title="de {{ sistema.es_subsistema_de }}">
+                Subsistema
+            
+            </span>
+            {% endif %}
+        </div>
+
+      </div>
+      
+      <br>
+
+      <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">
+              Propósito
+            </h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">
+              {{ sistema.proposito|as_markdown }}    
+            </p>
+        </div>
+        <div class="card-footer d-flex flex-row-reverse">
+            <a class="btn btn-warning"
+               href="{% url 'sistemas:editar_proposito' sistema=sistema.pk %}">
+            <i class="bi bi-pencil"></i>
+            Editar propósito
+            </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col col-7" style="border: 1px dashed navy">
+
+      <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">
+              Clasificación
+            </h4>
+        </div>
+        <div class="card-body">
+        <table class="table table-hover">
+          <tr>
+
+            <td>
+                Área temática
+            </td>
+
+            <td>
+                {% if sistema.tema.pk == 'UNK' %}
+                <i class="bi bi-exclamation-diamond"></i>
+                {% endif %}
+                {{ sistema.tema|as_tema }}
+            </td>
+
+            <td>
+                <a class="btn btn-warning"
+                    href="{% url 'sistemas:asignar_tema' sistema=sistema %}"
+                    title="Asignar tema"
+                    >
+                    <i class="bi bi-bookmark"></i>
+                </a>
+            </td>
+          </tr>
+
+          <tr>
+              <th>URL principal</th>
+              <td>
+                {% if sistema.url %}
+                  <a href="{{ sistema.url }}">{{ sistema.url }}</a>  
+                {% else %}
+                  No definido / No aplica  
+                {% endif %}  
+              </td>
+              <td>[TODO]</td>
+          </tr>
+
+          <tr>
+            <th>Organismo</th>
+            <td>
+              {% if sistema.organismo %}
+                <a href="{% url 'sistemas:detalle_organismo' organismo=sistema.organismo %}">
+                {{ sistema.organismo }}
+                </a>
+              {% else %}  
+                <i class="bi bi-exclamation-diamond"></i>
+                <i class="pendiente">Sin asignar</a>
+              {% endif %}
+            </td>
+            <td>
+                <a class="btn btn-warning"
+                    href="{% url 'sistemas:asignar_organismo' sistema=sistema %}"
+                    title="Asignar a organismo"
+                    >
+                    <i class="bi bi-diagram-3-fill"></i>
+                </a>
+            </td>
+
+            </tr>
+            <tr>
+            <th>Es transversal</th>
+            <td>{{ sistema.es_transversal|as_boolean }}</td>
+            </tr>
+            
+            {% if sistema.es_subsistema_de %}
+            <tr>
+                <th>Es subsistema de</th>
+                <td>
+                    <a href="{{ sistema.es_subsistema_de.url_detalle_sistema}}">
+                    {{ sistema.es_subsistema_de.codigo }}
+                    </a>  
+                </td>
+                <td></td>
+            </tr>
+            {% endif %}
+            
+            {% if sistema.subsistemas.exists %}
+            {% for subsistema in sistema.subsistemas.all %}
+            <tr>
+                <th>
+                    {% if forloop.first %}Subsistemas{% endif %}
+                </th>    
+                <td>
+                    <a href="{{ subsistema.url_detalle_sistema }}">
+                    {{ subsistema.codigo }}
+                    </a>
+                </td>
+                <td></td>
+            </tr>  
+            {% endfor %}  
+            {% endif %}
+
+        </table>
+        </div>
+      </div>  
+    
+    {% include "sistemas/includes/responsables.html" %}
+    {% include "sistemas/includes/diagnostico.html" %}
+    </div>
+
+  </div>
+</div>
+
+  </div>
+</div>  
+  
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% if diagnostico %}
+  
+<div class="card mt-3">
+  <div class="card-header">  
+    <h5 class="card-title">Diagnostico</h5>
+  </div>  
+  <div class="card-body">
+    <table class="table">
+    {% for sintoma in diagnostico.evaluaciones %}
+      <tr>
+          <td class="sintoma">{{ sintoma }}</td>  
+      </tr>        
+    {% endfor %}
+    <tr>
+    </table>  
+  </div><!-- de card-body -->
+  <div class="card-footer d-flex flex-row-reverse">
+    <a href="#"
+       class="btn btn-warning"
+       title="Reevaluar diagnóstico">
+       <i class="bi bi-person-plus-fill"></i>
+       Reevaluar diagnóstico
+    </a>
+  </div>
+
+  </div> 
+</div>  
+{% endif %}

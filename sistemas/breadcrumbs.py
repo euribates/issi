@@ -46,6 +46,13 @@ def asignar_organismo(sistema):
         )
 
 
+def asignar_responsable(sistema):
+    return detalle_sistema(sistema).step(
+        "Asignar responsable",
+        links.a_asignar_responsable(sistema.pk),
+        )
+
+
 def usuarios():
     return bc_issi().step('Usuarios', links.a_usuarios())
 

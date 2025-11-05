@@ -1,0 +1,33 @@
+<div class="card mt-3">
+  <div class="card-header">  
+    <h5 class="card-title">Responsables</h5>
+  </div>  
+  <div class="card-body">
+    <table class="table">
+    {% for perfil in sistema.perfiles.all %}
+      <tr>
+          <td>{{ perfil.usuario }}</td>  
+          <td>{{ perfil.get_cometido_display }}</td>  
+          <td>
+           <a class="btn btn-danger" 
+              href="{% url 'sistemas:borrar_perfil' perfil=perfil %}"
+              title="Borrar perfil">
+              <i class="bi bi-person-dash-fill"></i>
+           </a>   
+          </td>
+      </tr>        
+    {% endfor      %}
+    <tr>
+    </table>  
+  </div><!-- de card-body -->
+  <div class="card-footer d-flex flex-row-reverse">
+    <a href="{% url 'sistemas:asignar_responsable' sistema=sistema %}"
+       class="btn btn-warning"
+       title="Añadir responsable">
+       <i class="bi bi-person-plus-fill"></i>
+       Añadir responsable
+    </a>
+  </div>
+
+  </div> 
+</div>  

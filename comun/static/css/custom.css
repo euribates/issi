@@ -167,3 +167,22 @@ img.card-top-logo {
   color: #fff !important;
   text-decoration: none!important;
 }
+
+.sistema-codigo {
+  text-align: right;
+  font-size: 130%;
+  font-weight: bolder;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid #303030;
+}
+
+.sistema-nombre {
+  text-align: right;
+  font-size: 90%;
+  color: #303030;
+  font-weight: normal;
+  margin-top: 0;
+  padding-top: 0;
+  border: 0px dashed green;
+}

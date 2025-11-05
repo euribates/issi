@@ -1,5 +1,5 @@
 {% extends "comun/base.html" %}
-{% load comun_filters %}
+{% load static comun_filters %}
 
 {% block content %}
 
@@ -32,34 +32,44 @@
 </table>
 
 
-  <div class="row">
+<div class="row px-4">
   
 {% for sistema in filterset.qs.all %}
-<div class="col-4">
+<div class="col-sm-12 col-md-4 col-lg-3">
+
 <div class="card">
 
-  <a href="{{ sistema.url_detalle_sistema }}" alt="Ver detalles del S.I. {sistema}">
-  {% if sistema.icono %}
-    <img width="128" height="128"
-         src="{{ sistema.icono.url }}" class="card-top-logo" alt="{{ sistema }}">
-  {% else %}
-    <img src="https://placehold.co/128x128" class="card-top-logo" alt="{{ sistema }}">
-  {% endif %}  
-  </a>  
 
-  <div class="card-header">
-      <h4 class="card-title">{{ sistema.codigo }}
-          <br><small>{{ sistema.nombre }}</small>
-      </h4>
-      <h5>
+   <div class="row g-2 card-header">
+     <div class="col-md-4">
+       <a href="{{ sistema.url_detalle_sistema }}" alt="Ver detalles del S.I. {sistema}">
+       <img
+       {% if sistema.icono %}
+            src="{{ sistema.icono.url }}" 
+       {% else %}
+            src="{% static 'sistemas/no-logo.png' %}"
+       {% endif %}
+            class="img-fluid mr-1"
+            alt="Logo {{ sistema }}"
+            title="Logo {{ sistema }}"
+            >
+       </a>
+    </div>
+    <div class="col-md-8">
+        <h2 class="sistema-codigo">{{ sistema.codigo }}</h2>
+        <h3 class="sistema-nombre">{{ sistema.nombre }}</h3>
+      </h2>
+    </div>
+  </div>
+
+  <div class="card-body">
+      <p>
         {% if sistema.organismo %}
         <a href="{% url 'sistemas:detalle_organismo' organismo=sistema.organismo %}">
           {{ sistema.organismo }}
         </a>    
         {% endif %}
-      </h5>  
-  </div>
-  <div class="card-body">
+      </p>  
     <p class="card-text">
       {{ sistema.descripcion|as_markdown }}
     </p>
@@ -76,11 +86,12 @@
     {% endif %}
   </div>
   <footer class="card-footer">
-    <div class="btn-group" role="group" aria-label="Acciones">
+    <div class="commands">
     <a class="btn bg-info"
        href="{{ sistema.url_detalle_sistema }}"
        alt="Ver detalles del S.I. {sistema}">
         <i class="bi bi-pencil"></i>
+        Ver detalles
     </a>
     </div>
     </footer>

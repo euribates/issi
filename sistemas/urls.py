@@ -13,6 +13,8 @@ register_converter(converters.UserNameConverter, 'login')
 register_converter(converters.OrganismoConverter, 'org')
 register_converter(converters.EnteConverter, 'ent')
 register_converter(converters.TemaConverter, 'tema')
+register_converter(converters.PerfilConverter, 'perfil')
+
 
 
 def tie(ruta, vista, name=None):
@@ -26,6 +28,8 @@ urlpatterns = [
     tie('sistema/<si:sistema>/editar/tema/', views.asignar_tema),
     tie('sistema/<si:sistema>/editar/proposito/', views.editar_proposito),
     tie('sistema/<si:sistema>/editar/organismo/', views.asignar_organismo),
+    tie('sistema/<si:sistema>/asignar/responsable/', views.asignar_responsable),
+    tie('perfil/<perfil:perfil>/borrar/', views.borrar_perfil),
     tie('entes/', views.listado_entes),
     tie('entes/<ent:ente>/', views.detalle_ente),
     tie('organismo/', views.listado_organismos),
@@ -37,4 +41,5 @@ urlpatterns = [
     tie('temas/<tema:tema>/', views.detalle_tema),
     tie('activos/', views.listado_activos),
     tie("patch/organismos/", views.patch_organismos),
+    tie("patch/usuarios/", views.patch_usuarios),
     ]

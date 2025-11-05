@@ -4,6 +4,7 @@ from sistemas.models import Sistema
 from sistemas.models import Usuario
 from sistemas.models import Sistema
 from sistemas.models import Tema
+from sistemas.models import Perfil
 from directorio.models import Organismo
 from directorio.models import Ente
 
@@ -134,3 +135,33 @@ class EnteConverter:
             "Se necesita una instancia de la clase Ente, pero"
             " me pasan una instancia de {value.__class__.__name__}."
             )
+
+
+class PerfilConverter:
+
+    regex = '[0-9]+'
+
+    def __init__(self, *args, **kwargs):
+        from icecream import ic; ic()
+        super().__init__(*args, **kwargs)
+
+
+    def to_python(self, value):
+        from icecream import ic; ic()
+        perfil = Perfil.load_perfil(int(value))
+        if not perfil:
+            raise ValueError("El perfil especificado es incorrecto")
+        return perfil
+
+    def to_url(self, value):
+        from icecream import ic; ic()
+        if isinstance(value, int):
+            return str(value)
+        if isinstance(value, Perfil):
+            return str(value.id_perfil)
+        raise ValueError(
+            "Se necesita una instancia de la clase Perfil, pero"
+            " me pasan una instancia de {value.__class__.__name__}."
+            )
+
+
