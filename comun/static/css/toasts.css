@@ -1,0 +1,16 @@
+.toast-container > .toast > .toast-debug {
+  background-color: #cff4fc;
+}
+
+.toast-container > .toast > .toast-success {
+  background-color: #d1e7dd;
+}
+
+.toast-container > .toast > .toast-warning {
+  background-color: #fff3cd;
+}
+
+.toast-container > .toast > .toast-error {
+  background-color: #f8d7da;
+}
+
