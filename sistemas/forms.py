@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 
-from functools import lru_cache
-
 from django import forms
 from django.forms import widgets
-
-from django.db.models import Q
 
 from . import models
 
@@ -58,6 +54,7 @@ class AsignarTemaForm(BaseForm):
 
 
 class EditarPropositoForm(BaseForm):
+
     class Meta:
         model = models.Sistema
         fields = ['proposito']

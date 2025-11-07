@@ -87,6 +87,7 @@ class Command(BaseCommand):
 
     def create_parser(self, prog_name, subcommand, **kwargs):
         kwargs['epilog'] = EPILOG
+        kwargs['add_help'] = False
         return super().create_parser(prog_name, subcommand, **kwargs)
 
     def warning(self, msg: str):
@@ -103,7 +104,7 @@ class Command(BaseCommand):
             self.panic(f'El identificador del ente «{tag}» es incorrecto')
         else:
             self.panic('No se ha especificado el ente')
-        self.console.print(f'Los valores aceptados son:')
+        self.console.print('Los valores aceptados son:')
         table = Table(title="Entes")
         table.add_column("Código", justify="right", style="bold")
         table.add_column("Nombre")
@@ -111,11 +112,6 @@ class Command(BaseCommand):
             table.add_row(ente.pk, ente.organismo.nombre_organismo)
         self.console.print(table)
         return None
-
-    def create_parser(self, prog_name, subcommand, **kwargs):
-        kwargs['add_help'] = False
-        result = super().create_parser(prog_name, subcommand, **kwargs)
-        return result
 
     def add_arguments(self, parser):
         parser.add_argument(
@@ -182,7 +178,6 @@ class Command(BaseCommand):
                 dir3 = line[10]
                 if dir3 in all_dir3:
                     codigo = filters.clean_integer(line[0])
-                    org = all_dir3[dir3]
                     nombre = filters.clean_text(line[2]) or filters.clean_text(line[1])
                     tipologia = filters.clean_text(line[20])
                     items.add(Procedimiento(dir3, nombre, codigo, tipologia))

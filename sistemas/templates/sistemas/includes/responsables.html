@@ -10,7 +10,7 @@
           <td>{{ perfil.get_cometido_display }}</td>  
           <td>
            <a class="btn btn-danger" 
-              href="{% url 'sistemas:borrar_perfil' perfil=perfil %}"
+              href="{% url 'sistemas:borrar_perfil' id_perfil=perfil.pk %}"
               title="Borrar perfil">
               <i class="bi bi-person-dash-fill"></i>
            </a>   

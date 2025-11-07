@@ -1,16 +1,10 @@
 #!/usr/bin/env python3
 
-import argparse
-import collections
 import csv
-import dataclasses
 
-from django.conf import settings
 from django.core.management.base import BaseCommand
 
-from fpdf.fonts import FontFace
 from rich.console import Console
-from rich.table import Table
 
 from sistemas.models import Usuario, Interlocutor
 from directorio.models import Organismo
@@ -107,5 +101,5 @@ class Command(BaseCommand):
                         organismo=organismo,
                         )
                     if created:
-                        self.console.print(f"[green]Creado[/] como interlocutor")
+                        self.console.print("[green]Creado[/] como interlocutor")
         return

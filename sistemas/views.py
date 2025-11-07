@@ -163,15 +163,18 @@ def asignar_responsable(request, sistema):
         })
 
 
-def borrar_perfil(request, perfil):
-    id_sistema = perfil.sistema.pk
-    perfil.delete()
-    Bus(request).success(
-        f"El usuario {perfil.usuario}"    
-        f" ha dejado de ser {perfil.get_cometido_display()}"
-        f" del S.I. {perfil.sistema}"
-        )
-    return redirect(links.a_detalle_sistema(id_sistema))
+def borrar_perfil(request, id_perfil: int):
+    perfil = models.Perfil.load_perfil(id_perfil)
+    if perfil:
+        id_sistema = perfil.sistema.pk
+        perfil.delete()
+        Bus(request).success(
+            f"El usuario {perfil.usuario}"    
+            f" ha dejado de ser {perfil.get_cometido_display()}"
+            f" del S.I. {perfil.sistema}"
+            )
+        return redirect(links.a_detalle_sistema(id_sistema))
+    return redirect(links.a_sistemas())
 
     
 def detalle_sistema(request, sistema):

@@ -13,7 +13,6 @@ register_converter(converters.UserNameConverter, 'login')
 register_converter(converters.OrganismoConverter, 'org')
 register_converter(converters.EnteConverter, 'ent')
 register_converter(converters.TemaConverter, 'tema')
-register_converter(converters.PerfilConverter, 'perfil')
 
 
 
@@ -29,7 +28,7 @@ urlpatterns = [
     tie('sistema/<si:sistema>/editar/proposito/', views.editar_proposito),
     tie('sistema/<si:sistema>/editar/organismo/', views.asignar_organismo),
     tie('sistema/<si:sistema>/asignar/responsable/', views.asignar_responsable),
-    tie('perfil/<perfil:perfil>/borrar/', views.borrar_perfil),
+    tie('perfil/<int:id_perfil>/borrar/', views.borrar_perfil),
     tie('entes/', views.listado_entes),
     tie('entes/<ent:ente>/', views.detalle_ente),
     tie('organismo/', views.listado_organismos),

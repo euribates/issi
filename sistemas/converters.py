@@ -1,25 +1,23 @@
 #!/usr/bin/env python3
 
-from sistemas.models import Sistema
-from sistemas.models import Usuario
+from directorio.models import Ente
+from directorio.models import Organismo
 from sistemas.models import Sistema
 from sistemas.models import Tema
-from sistemas.models import Perfil
-from directorio.models import Organismo
-from directorio.models import Ente
+from sistemas.models import Usuario
 
 
 class SistemaConverter:
 
     regex = '[0-9]+'
 
-    def to_python(self, value):
+    def to_python(self, value) -> Sistema:
         sistema = Sistema.load_sistema(int(value))
         if not sistema:
             raise ValueError("El sistema especificado es incorrecto")
         return sistema
 
-    def to_url(self, value):
+    def to_url(self, value) -> str:
         if isinstance(value, int):
             return str(value)
         if isinstance(value, Sistema):
@@ -47,27 +45,6 @@ class UserNameConverter:
             return str(value.login)
         raise ValueError(
             "Se necesita una instancia de la clase Usuario, pero"
-            " me pasan una instancia de {value.__class__.__name__}."
-            )
-
-
-class SistemaConverter:
-
-    regex = '[0-9]+'
-
-    def to_python(self, value):
-        sistema = Sistema.load_sistema(int(value))
-        if not sistema:
-            raise ValueError("El sistema especificado es incorrecto")
-        return sistema
-
-    def to_url(self, value):
-        if isinstance(value, int):
-            return str(value)
-        if isinstance(value, Sistema):
-            return str(value.id_sistema)
-        raise ValueError(
-            "Se necesita una instancia de la clase Sistema, pero"
             " me pasan una instancia de {value.__class__.__name__}."
             )
 
@@ -135,33 +112,3 @@ class EnteConverter:
             "Se necesita una instancia de la clase Ente, pero"
             " me pasan una instancia de {value.__class__.__name__}."
             )
-
-
-class PerfilConverter:
-
-    regex = '[0-9]+'
-
-    def __init__(self, *args, **kwargs):
-        from icecream import ic; ic()
-        super().__init__(*args, **kwargs)
-
-
-    def to_python(self, value):
-        from icecream import ic; ic()
-        perfil = Perfil.load_perfil(int(value))
-        if not perfil:
-            raise ValueError("El perfil especificado es incorrecto")
-        return perfil
-
-    def to_url(self, value):
-        from icecream import ic; ic()
-        if isinstance(value, int):
-            return str(value)
-        if isinstance(value, Perfil):
-            return str(value.id_perfil)
-        raise ValueError(
-            "Se necesita una instancia de la clase Perfil, pero"
-            " me pasan una instancia de {value.__class__.__name__}."
-            )
-
-
