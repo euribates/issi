@@ -510,9 +510,9 @@
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
-        "icono_height": 531,
-        "icono_width": 531,
-        "icono": "sistemas/iconos/2025/logo.issi.png"
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/logo-issi_GKKmb4J.png"
     }
 },
 {
@@ -724,12 +724,12 @@
         "organismo": 42119,
         "codigo": "DIRCAC",
         "url": null,
-        "descripcion": "Inventario de información de las unidades administrativas, oficinas de registro y de atención a la ciudadanía que proporciona información centralizada y actualizada sobre las distintas unidades orgánicas y oficinas de atención al público, facilitando tanto la gestión interna de la administración como el acceso de la ciudadanía a sus servicios y la presentación de documentos.",
-        "proposito": "Inventario de información de las unidades administrativas, oficinas de registro y de atención a la ciudadanía que proporciona información centralizada y actualizada sobre las distintas unidades orgánicas y oficinas de atención al público, facilitando tanto la gestión interna de la administración como el acceso de la ciudadanía a sus servicios y la presentación de documentos.",
+        "descripcion": "Gestión centralizada de la estructura jerárquica, organización e  información de las unidades administrativa.",
+        "proposito": "Gestionar la estructura jerárquica, organización e  información de las unidades administrativas, oficinas de registro y de atención a la ciudadanía, facilitando la gestión interna de la administración y el acceso de la ciudadanía a sus servicios y la presentación de documentos.",
         "tema": "TEC",
-        "es_transversal": false,
+        "es_transversal": true,
         "es_subsistema_de": null,
-        "tiene_especial_importancia": false,
+        "tiene_especial_importancia": true,
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo-dircac.png"
@@ -761,12 +761,12 @@
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
         "nombre": "Pruebas",
-        "organismo": 42166,
+        "organismo": 42093,
         "codigo": "borrame",
         "url": null,
         "descripcion": "",
-        "proposito": "",
-        "tema": "UNK",
+        "proposito": "Este sistema es de **pruebas**.",
+        "tema": "COM",
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
@@ -790,9 +790,9 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": ""
+        "icono_height": 464,
+        "icono_width": 464,
+        "icono": "sistemas/iconos/2025/sidecan-logo.png"
     }
 },
 {
@@ -822,7 +822,7 @@
         "uuid": "17aefe7c-f6b3-4f2b-b73a-f5047525704a",
         "nombre": "Adopciones",
         "organismo": 42169,
-        "codigo": "Adopciones",
+        "codigo": "Adopta",
         "url": null,
         "descripcion": "",
         "proposito": "Gestión de expediente de adopciones",
@@ -830,9 +830,9 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": ""
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/rpg-adopciones_Y5i95aY.png"
     }
 },
 {
@@ -840,7 +840,7 @@
     "pk": 18,
     "fields": {
         "uuid": "4c5456c0-e2f8-4ae4-a24f-542b93ad3ccb",
-        "nombre": "Ingreo Mínimo Vital",
+        "nombre": "Ingreso Mínimo Vital",
         "organismo": null,
         "codigo": "IMV",
         "url": null,
@@ -870,9 +870,9 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": ""
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/rpg-logo.png"
     }
 },
 {
@@ -953,6 +953,246 @@
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/TimeView-logo.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 24,
+    "fields": {
+        "uuid": "1483d3ec-b8bd-43fb-b482-a66e19f4c21e",
+        "nombre": "Gestión de personal docente",
+        "organismo": 42125,
+        "codigo": "GPD",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión del personal docente de centros públicos o sostenidos con fondos públicos",
+        "tema": "EDU",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/gpd-logo.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 25,
+    "fields": {
+        "uuid": "2b77c42f-6c59-405b-bd89-dd122b2219a0",
+        "nombre": "Gestión de personal no docente",
+        "organismo": 42135,
+        "codigo": "GPND",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión del personal no docente",
+        "tema": "EDU",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/gpnd-logo.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 26,
+    "fields": {
+        "uuid": "fdc08ab4-5b82-4e45-b0d3-120c3a843344",
+        "nombre": "Gestión académica",
+        "organismo": 42126,
+        "codigo": "GESTACAD",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Planificación educativa y gestiones académicas",
+        "tema": "EDU",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/gestacad-logo.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 27,
+    "fields": {
+        "uuid": "4c022016-ba96-491f-be6e-01f44aa19409",
+        "nombre": "Registro de comerciantes y comercios",
+        "organismo": 42110,
+        "codigo": "REGCOMERCIA",
+        "url": null,
+        "descripcion": "",
+        "proposito": "a) Permitir la elaboración y permanente actualización de un censo comercial en Canarias.\r\n\r\nb) Disponer de los datos precisos para el general y común conocimiento de las estructuras comerciales en el ámbito territorial de Canarias, así como garantizar los derechos de los consumidores y usuarios.\r\n\r\nc) Contribuir a definir las políticas públicas llevadas a cabo en el sector comercial canario.\r\n\r\nd) Facilitar el ejercicio de las funciones de control y tutela de los intereses públicos en el ámbito de la actividad comercial.\r\n\r\ne) Promover la necesaria transparencia y la defensa del principio de leal competencia en el ejercicio de la actividad comercial, así como la defensa de los derechos de los consumidores.",
+        "tema": "COM",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 28,
+    "fields": {
+        "uuid": "bf5d01a7-a93c-49a8-b1b6-26099c486f5b",
+        "nombre": "Gestión y control de denuncias y reclamaciones",
+        "organismo": 42110,
+        "codigo": "SIGLO",
+        "url": "https://www.gobiernodecanarias.net/aplicaciones/regcomercia",
+        "descripcion": "Registro de comerciantes y comercios de Canarias",
+        "proposito": "Gestión y control de denuncias y reclamaciones. Actuaciones inspectoras y espedientes sancionadores.",
+        "tema": "COM",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/siglo-logo.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 29,
+    "fields": {
+        "uuid": "ac8f614b-1188-4798-ba7e-5e36046bfd6c",
+        "nombre": "Sistemas de Atención al Usuario Centralizado en el ámbito sanitario",
+        "organismo": 6583,
+        "codigo": "SAUCE",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Plataforma que permite el registro, gestión y tramitación de los expedientes de reclamaciones, solicitudes de información, sugerencias y disconformidades en el ámbito sanitario. Estas reclamaciones o solicitudes, pueden llegar tanto electrónicamente desde [HiperReg](/sistemas/sistema/10/), Sede Electrónica o Comunicaciones Internas como presencialmente.\r\n\r\nEstá construida sobre una Base de Datos unificada y centralizada de los expedientes tramitados por toda la red asistencial (entre las Direcciones de Área, Gerencias de Servicios Sanitarios, Centros de Salud, Caes y Hospitales), las personas interesadas, los pacientes y los profesionales implicados.   \r\n\r\nPermite:\r\n\r\n - Control en cada momento del estado del expediente y su seguimiento.\r\n\r\n- Control del Personal Sanitario Reclamado así como de los Servicios.\r\n\r\n- Explotación de datos mediante Módulos de listados y estadísticas según diferentes distribuciones de la población.",
+        "tema": "SAN",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 30,
+    "fields": {
+        "uuid": "ea669766-ea05-453b-bce1-177e1ad5460d",
+        "nombre": "Registro de Manifestaciones Anticipadas de Voluntad",
+        "organismo": 6583,
+        "codigo": "REMAV",
+        "url": null,
+        "descripcion": "Registro de Manifestaciones Anticipadas de Voluntad",
+        "proposito": "Registro que depende de la Consejería de Sanidad, de las **Manifestaciones Anticipadas de Voluntad** (MAV) relativas a las intervenciones médicas sobre personas que no puedan expresar su deseo mediante el consentimiento informado.\r\n\r\nPermite al otorgante inscribir su otorgamiento, sustitución, modificación o revocación en sus tres modalidades: presencial ante un funcionario encargado del registro de Manifestaciones Anticipadas de Voluntad, ante un Notario o por correo ante tres testigos.\r\n\r\nUna vez inscrita la MAV, el sistema comunica automáticamente a TSI, Historia Clínica que el otorgante tiene MAV. Además lo inscribe en el Registro Nacional de Instrucciones Previas.\r\n\r\nPermite la Explotación de datos mediante Módulos de listados y estadísticas según diferentes distribuciones de la población.",
+        "tema": "SAN",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 31,
+    "fields": {
+        "uuid": "215a2c7c-182a-4ae7-83e8-e2a32cc1c598",
+        "nombre": "Visualización por parte de los Profesionales Sanitarios de MAV en el Registro Autonómico (ReMav) y en el Registro Nacional de Instrucciones Previas (RNIP)",
+        "organismo": 6583,
+        "codigo": "VIPROF",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Aplicación Web para el acceso a Profesionales Sanitarios del SCS para consultar los documentos relativos a las MAV en el Registro Autonómico y en el RNIP para conocer si tiene una Instrucción Previa (IP) en alguna otra otra comunidad de pacientes que no puedan expresar su deseo mediante el consentimiento informado, previa solicitud de las credenciales de acceso (usuario y contraseña).\r\n\r\nAdemás contiene Servicios Web de consultas para ser consumidos por las aplicaciones del SCS (Drago AE, Drago AP, SAP, Historias Clínicas) o desde cualquier otra aplicación que lo precise, previa solicitud de las credenciales de acceso.",
+        "tema": "SAN",
+        "es_transversal": false,
+        "es_subsistema_de": 30,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 32,
+    "fields": {
+        "uuid": "7a9c1392-a298-4a11-9ffd-9d16260f359a",
+        "nombre": "Visualización de la Manifestación Anticipada de Voluntad a través de medios telemáticos",
+        "organismo": 6583,
+        "codigo": "VIMAV",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Aplicación web para la visualización de los documentos relativos a las manifestaciones anticipadas de voluntad (MAV) por parte del otorgante y/o su representante a través de certificado digital. Se encuentra publicado en la SEDE de la Consejería y en el Portal Web.\r\n\r\nAsí mismo permite imprimir dichos documentos: documento MAV, documento de Lectura Rápida, documento de aceptación de uno o varios representantes.",
+        "tema": "SAN",
+        "es_transversal": false,
+        "es_subsistema_de": 30,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 33,
+    "fields": {
+        "uuid": "442fa3ab-ef74-4bd2-8b94-af9093c106c0",
+        "nombre": "Repositorio y Archivos Multimedia",
+        "organismo": 6583,
+        "codigo": "RETAMA",
+        "url": null,
+        "descripcion": "Gestor de tareas, noticias, documentos y ficheros en entorno web usado por Sanidad",
+        "proposito": "Gestión de Repositorio de tareas, noticias, documentos y ficheros en entorno web para poder compartir entre los distintos departamentos y servicios y según sus niveles de acceso, llegando a constituir una Base de Datos de conocimiento compartida.  \r\n\r\nContiene un módulo que gestiona las noticias a publicar en Intranet o en el Portal Web (con fechas publicación y de caducidad) con posibilidad de marcar como “destacado”. Contiene otro módulo que gestiona las INTRANET departamentales.",
+        "tema": "SAN",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 34,
+    "fields": {
+        "uuid": "5f1f53ea-4071-45e0-b153-96479cb7f0d6",
+        "nombre": "Subsistema de RETAMA de  Iniciativas Parlamentarias",
+        "organismo": 6583,
+        "codigo": "RETAMA-IP",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Módulo que tiene como base el Sistema de Información de RETAMA que gestiona los expedientes de Iniciativas Parlamentarias recibidos desde la aplicación HIPATIA.\r\n\r\nPermite el control en cada momento del estado del expediente y su seguimiento así como consultas y listados según diferentes parámetros.",
+        "tema": "SAN",
+        "es_transversal": false,
+        "es_subsistema_de": 33,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 35,
+    "fields": {
+        "uuid": "ebf07680-ef34-4a88-88fe-87bf938e329d",
+        "nombre": "Recursos de Estudios",
+        "organismo": 6583,
+        "codigo": "EST-RECU",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión de los Expedientes de Recursos que se presentan en el Servicio de Estudios y Normativa con Mantenimiento de la información, Consultas y Listados por varios parámetros. \r\n\r\nEl proyecto se encuentra en explotación, aunque, al estar obsoleto por su lenguaje de programación (Access), no tiene ningún tipo de mantenimiento evolutivo. Se está pendiente de su migración.",
+        "tema": "SAN",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
     }
 },
 {
@@ -1058,6 +1298,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "amarbri",
+    "fields": {
+        "email": "amarbri@gobiernodecanarias.org",
+        "nombre": "Agustín",
+        "apellidos": "Martín Brito",
+        "organismo": 6583,
+        "f_alta": "2025-11-07T15:33:45.060Z",
+        "f_cambio": "2025-11-07T15:33:45.060Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "anhergue",
     "fields": {
         "email": "anhergue@gobiernodecanarias.org",
@@ -1157,6 +1410,19 @@
         "organismo": 41567,
         "f_alta": "2025-10-07T10:33:21.971Z",
         "f_cambio": "2025-10-07T10:33:21.971Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "cpergarm",
+    "fields": {
+        "email": "cpergarm@gobiernodecanarias.org",
+        "nombre": "María Carolina",
+        "apellidos": "Perera García",
+        "organismo": 6583,
+        "f_alta": "2025-11-07T15:36:38.661Z",
+        "f_cambio": "2025-11-07T15:36:38.661Z",
         "f_baja": null
     }
 },
@@ -1331,6 +1597,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "gojezam",
+    "fields": {
+        "email": "gojezam@gobiernodecanarias.org",
+        "nombre": "Gustavo",
+        "apellidos": "Ojeda Zamora",
+        "organismo": 42124,
+        "f_alta": "2025-11-05T20:17:11.181Z",
+        "f_cambio": "2025-11-05T20:17:11.181Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "gpalara",
     "fields": {
         "email": "gpalara@gobiernodecanarias.org",
@@ -1396,6 +1675,32 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "jgommar",
+    "fields": {
+        "email": "jgommar@gobiernodecanarias.org",
+        "nombre": "Juan Pedro",
+        "apellidos": "Gómez Marrero",
+        "organismo": 42123,
+        "f_alta": "2025-11-05T19:50:46.856Z",
+        "f_cambio": "2025-11-05T19:50:46.856Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jgonperk",
+    "fields": {
+        "email": "jgonperk@gobiernodecanarias.org",
+        "nombre": "Jorge Luis",
+        "apellidos": "González Pérez",
+        "organismo": 6583,
+        "f_alta": "2025-11-07T15:24:50.171Z",
+        "f_cambio": "2025-11-07T15:24:50.171Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "jgonyanp",
     "fields": {
         "email": "jgonyanp@gobiernodecanarias.org",
@@ -1456,6 +1761,19 @@
         "organismo": 42093,
         "f_alta": "2025-10-07T12:08:59.011Z",
         "f_cambio": "2025-10-07T12:08:59.011Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jtardel",
+    "fields": {
+        "email": "jtardel@gobiernodecanarias.org",
+        "nombre": "José Alfonso",
+        "apellidos": "Tarife Delgado",
+        "organismo": 42135,
+        "f_alta": "2025-11-05T19:59:45.597Z",
+        "f_cambio": "2025-11-05T19:59:45.597Z",
         "f_baja": null
     }
 },
@@ -1604,6 +1922,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "mmaycac",
+    "fields": {
+        "email": "mmaycac@gobiernodecanarias.org",
+        "nombre": "María Cristina",
+        "apellidos": "Mayor Cáceres",
+        "organismo": 42125,
+        "f_alta": "2025-11-05T20:20:46.868Z",
+        "f_cambio": "2025-11-05T20:21:10.259Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "mnavherz",
     "fields": {
         "email": "mnavherz@gobiernodecanarias.org",
@@ -1630,6 +1961,32 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "mpeibos",
+    "fields": {
+        "email": "mpeibos@gobiernodecanarias.org",
+        "nombre": "Manuel",
+        "apellidos": "Peinado Bosch",
+        "organismo": 42123,
+        "f_alta": "2025-11-05T19:52:47.102Z",
+        "f_cambio": "2025-11-05T19:52:47.102Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mperbej",
+    "fields": {
+        "email": "mperbej@gobiernodecanarias.org",
+        "nombre": "María Antonia",
+        "apellidos": "Pérez Bejarano",
+        "organismo": 42129,
+        "f_alta": "2025-11-05T20:14:25.730Z",
+        "f_cambio": "2025-11-05T20:14:25.730Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "mrodbat",
     "fields": {
         "email": "mrodbat@gobiernodecanarias.org",
@@ -1638,6 +1995,32 @@
         "organismo": 42114,
         "f_alta": "2025-10-06T18:41:33.575Z",
         "f_cambio": "2025-10-06T18:41:33.575Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mrodbraz",
+    "fields": {
+        "email": "mrodbraz@gobiernodecanarias.org",
+        "nombre": "Marcos Francisco",
+        "apellidos": "Rodríguez Bravo",
+        "organismo": 42124,
+        "f_alta": "2025-11-05T20:23:55.873Z",
+        "f_cambio": "2025-11-05T20:23:55.873Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "msoslac",
+    "fields": {
+        "email": "msoslac@gobiernodecanarias.org",
+        "nombre": "Miguel José",
+        "apellidos": "Sosa Lacruz",
+        "organismo": 6583,
+        "f_alta": "2025-11-07T15:28:31.259Z",
+        "f_cambio": "2025-11-07T15:28:57.516Z",
         "f_baja": null
     }
 },
@@ -1760,6 +2143,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "pbetort",
+    "fields": {
+        "email": "pbetort@gobiernodecanarias.org",
+        "nombre": "Pablo",
+        "apellidos": "Betancor Ortiz",
+        "organismo": 37829,
+        "f_alta": "2025-11-07T08:49:52.445Z",
+        "f_cambio": "2025-11-07T08:49:52.445Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "pcanper",
     "fields": {
         "email": "pcanper@gobiernodecanarias.org",
@@ -1833,6 +2229,19 @@
         "organismo": 42159,
         "f_alta": "2025-10-06T18:41:34.090Z",
         "f_cambio": "2025-10-06T18:41:34.090Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "vferlop",
+    "fields": {
+        "email": "vferlop@gobiernodecanarias.org",
+        "nombre": "Vita Concepción",
+        "apellidos": "Fernández López",
+        "organismo": 42124,
+        "f_alta": "2025-11-05T20:12:09.547Z",
+        "f_cambio": "2025-11-05T20:12:09.547Z",
         "f_baja": null
     }
 },
@@ -2546,6 +2955,330 @@
         "sistema": 12,
         "f_alta": "2025-10-02T08:36:57Z",
         "f_cambio": "2025-10-02T08:36:57Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 13,
+    "fields": {
+        "usuario": "jrodleo",
+        "cometido": "TEC",
+        "sistema": 14,
+        "f_alta": "2025-11-05T15:18:55.090Z",
+        "f_cambio": "2025-11-05T15:18:55.090Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 14,
+    "fields": {
+        "usuario": "malosua",
+        "cometido": "FUN",
+        "sistema": 14,
+        "f_alta": "2025-11-05T15:19:31.506Z",
+        "f_cambio": "2025-11-05T15:19:31.506Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 17,
+    "fields": {
+        "usuario": "jgommar",
+        "cometido": "TEC",
+        "sistema": 24,
+        "f_alta": "2025-11-05T19:51:11.765Z",
+        "f_cambio": "2025-11-05T19:51:11.765Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 18,
+    "fields": {
+        "usuario": "mpeibos",
+        "cometido": "FUN",
+        "sistema": 24,
+        "f_alta": "2025-11-05T19:52:56.913Z",
+        "f_cambio": "2025-11-05T19:52:56.913Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 19,
+    "fields": {
+        "usuario": "jtardel",
+        "cometido": "TEC",
+        "sistema": 26,
+        "f_alta": "2025-11-05T20:00:01.984Z",
+        "f_cambio": "2025-11-05T20:00:01.984Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 20,
+    "fields": {
+        "usuario": "vferlop",
+        "cometido": "FUN",
+        "sistema": 26,
+        "f_alta": "2025-11-05T20:12:17.336Z",
+        "f_cambio": "2025-11-05T20:12:17.336Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 21,
+    "fields": {
+        "usuario": "mperbej",
+        "cometido": "FUN",
+        "sistema": 26,
+        "f_alta": "2025-11-05T20:14:40.565Z",
+        "f_cambio": "2025-11-05T20:14:40.565Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 22,
+    "fields": {
+        "usuario": "gojezam",
+        "cometido": "FUN",
+        "sistema": 26,
+        "f_alta": "2025-11-05T20:17:17.193Z",
+        "f_cambio": "2025-11-05T20:17:17.193Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 23,
+    "fields": {
+        "usuario": "mmaycac",
+        "cometido": "FUN",
+        "sistema": 24,
+        "f_alta": "2025-11-05T20:20:55.203Z",
+        "f_cambio": "2025-11-05T20:20:55.203Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 24,
+    "fields": {
+        "usuario": "mrodbraz",
+        "cometido": "FUN",
+        "sistema": 24,
+        "f_alta": "2025-11-05T20:24:04.118Z",
+        "f_cambio": "2025-11-05T20:24:04.118Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 26,
+    "fields": {
+        "usuario": "malvmar",
+        "cometido": "TEC",
+        "sistema": 29,
+        "f_alta": "2025-11-07T15:21:41.498Z",
+        "f_cambio": "2025-11-07T15:21:41.498Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 27,
+    "fields": {
+        "usuario": "jgonperk",
+        "cometido": "TEC",
+        "sistema": 29,
+        "f_alta": "2025-11-07T15:25:12.478Z",
+        "f_cambio": "2025-11-07T15:25:12.478Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 28,
+    "fields": {
+        "usuario": "msoslac",
+        "cometido": "FUN",
+        "sistema": 29,
+        "f_alta": "2025-11-07T15:28:38.646Z",
+        "f_cambio": "2025-11-07T15:28:38.646Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 30,
+    "fields": {
+        "usuario": "malvmar",
+        "cometido": "TEC",
+        "sistema": 30,
+        "f_alta": "2025-11-07T15:31:30.295Z",
+        "f_cambio": "2025-11-07T15:31:30.296Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 31,
+    "fields": {
+        "usuario": "amarbri",
+        "cometido": "TEC",
+        "sistema": 30,
+        "f_alta": "2025-11-07T15:33:57.436Z",
+        "f_cambio": "2025-11-07T15:33:57.436Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 33,
+    "fields": {
+        "usuario": "cpergarm",
+        "cometido": "FUN",
+        "sistema": 30,
+        "f_alta": "2025-11-07T15:38:08.117Z",
+        "f_cambio": "2025-11-07T15:38:08.117Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 34,
+    "fields": {
+        "usuario": "malvmar",
+        "cometido": "TEC",
+        "sistema": 31,
+        "f_alta": "2025-11-07T15:41:23.520Z",
+        "f_cambio": "2025-11-07T15:41:23.520Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 35,
+    "fields": {
+        "usuario": "amarbri",
+        "cometido": "TEC",
+        "sistema": 31,
+        "f_alta": "2025-11-07T15:41:50.280Z",
+        "f_cambio": "2025-11-07T15:41:50.280Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 36,
+    "fields": {
+        "usuario": "cpergarm",
+        "cometido": "FUN",
+        "sistema": 31,
+        "f_alta": "2025-11-07T15:42:11.222Z",
+        "f_cambio": "2025-11-07T15:42:11.222Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 37,
+    "fields": {
+        "usuario": "malvmar",
+        "cometido": "TEC",
+        "sistema": 32,
+        "f_alta": "2025-11-07T15:46:45.916Z",
+        "f_cambio": "2025-11-07T15:46:45.916Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 38,
+    "fields": {
+        "usuario": "amarbri",
+        "cometido": "TEC",
+        "sistema": 32,
+        "f_alta": "2025-11-07T15:47:10.801Z",
+        "f_cambio": "2025-11-07T15:47:10.801Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 39,
+    "fields": {
+        "usuario": "cpergarm",
+        "cometido": "FUN",
+        "sistema": 32,
+        "f_alta": "2025-11-07T15:47:27.823Z",
+        "f_cambio": "2025-11-07T15:47:27.824Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 40,
+    "fields": {
+        "usuario": "malvmar",
+        "cometido": "TEC",
+        "sistema": 33,
+        "f_alta": "2025-11-07T15:50:11.904Z",
+        "f_cambio": "2025-11-07T15:50:11.904Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 41,
+    "fields": {
+        "usuario": "amarbri",
+        "cometido": "TEC",
+        "sistema": 33,
+        "f_alta": "2025-11-07T15:50:25.487Z",
+        "f_cambio": "2025-11-07T15:50:25.487Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 42,
+    "fields": {
+        "usuario": "cpergarm",
+        "cometido": "FUN",
+        "sistema": 33,
+        "f_alta": "2025-11-07T15:50:36.360Z",
+        "f_cambio": "2025-11-07T15:50:36.360Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 44,
+    "fields": {
+        "usuario": "malvmar",
+        "cometido": "TEC",
+        "sistema": 35,
+        "f_alta": "2025-11-07T16:05:58.117Z",
+        "f_cambio": "2025-11-07T16:05:58.117Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 45,
+    "fields": {
+        "usuario": "cpergarm",
+        "cometido": "FUN",
+        "sistema": 35,
+        "f_alta": "2025-11-07T16:08:01.552Z",
+        "f_cambio": "2025-11-07T16:08:01.552Z",
         "f_baja": null
     }
 }

@@ -10,9 +10,18 @@
 
         <div class="card">
           <div class="position-absolute top-0 end-0 p-2">
-                <img src="{% static sistema.get_estado|as_status_icon %}"
-                   width="48" height="48">
+
+             {% if sistema.icono %}
+               <img width="64" height="64"
+                    src="{{ sistema.icono.url }}"
+                    alt="{{ sistema }}">
+             {% else %}
+                <img src="{% static 'sistemas/no-logo.png' %}"
+                   width="64" height="64">
+             {% endif %}
+
             </div>    
+
           <div class="card-header">
             <h3 class="card-title">Identificación</h3>
           </div>  
@@ -48,6 +57,15 @@
               {% endif %}
             </dd>
 
+            <dt>URL principal</th>
+              <dd>
+                {% if sistema.url %}
+                  <a href="{{ sistema.url }}">{{ sistema.url }}</a>  
+                {% else %}
+                  No definido / No aplica  
+                {% endif %}  
+              </dd>
+
             <dt>Logotipo</dt>
             <dd>
                 {% if sistema.icono %}
@@ -56,8 +74,14 @@
                     alt="{{ sistema }}">
                 {% else %}
                 <i class="bi bi-exclamation-diamond"></i>
-                [FALTA] Botón para dar de alta el icono
+                Pendiente de asignar icono
                 {% endif %}  
+                <a href="{% url 'sistemas:asignar_icono' sistema=sistema %}"
+                   class="btn btn-{% if sistema.icono %}danger{% else %}warning{% endif %}"
+                   title="Asignar icono"
+                   >
+                   <i class="bi bi-image"></i>
+                </a>   
             </dd>
 
 
@@ -70,6 +94,15 @@
             
             </span>
             {% endif %}
+        </div>
+        <div class="card-footer d-flex flex-row-reverse">
+            <a href="{% url 'sistemas:editar_sistema' sistema=sistema %}"
+               class="btn btn-warning"
+               title="Editar sistema"
+               >
+               <i class="bi bi-pencil-fill"></i>
+            </a>   
+            
         </div>
 
       </div>
@@ -131,16 +164,13 @@
           </tr>
 
           <tr>
-              <th>URL principal</th>
-              <td>
-                {% if sistema.url %}
-                  <a href="{{ sistema.url }}">{{ sistema.url }}</a>  
-                {% else %}
-                  No definido / No aplica  
-                {% endif %}  
-              </td>
-              <td>[TODO]</td>
-          </tr>
+            <th>Estado</th>
+            <td>{{ sistema.get_estado|as_status_desc }}</td>
+            <td>
+              <img src="{% static sistema.get_estado|as_status_icon %}"
+                   width="48" height="48">
+            </td>
+          </tr>  
 
           <tr>
             <th>Organismo</th>

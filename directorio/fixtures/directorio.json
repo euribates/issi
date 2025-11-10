@@ -2090,7 +2090,7 @@
     "pk": "ACCUEE",
     "fields": {
         "organismo": 38691,
-        "peso": 100,
+        "peso": 550,
         "url_open_data": null
     }
 },
@@ -2099,7 +2099,7 @@
     "pk": "ACIISI",
     "fields": {
         "organismo": 42158,
-        "peso": 100,
+        "peso": 850,
         "url_open_data": null
     }
 },
@@ -2108,7 +2108,7 @@
     "pk": "ACMUN",
     "fields": {
         "organismo": 41854,
-        "peso": 100,
+        "peso": 650,
         "url_open_data": null
     }
 },
@@ -2117,7 +2117,7 @@
     "pk": "AGPA",
     "fields": {
         "organismo": 42084,
-        "peso": 100,
+        "peso": 1200,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-agricultura"
     }
 },
@@ -2126,7 +2126,7 @@
     "pk": "ATC",
     "fields": {
         "organismo": 37815,
-        "peso": 100,
+        "peso": 350,
         "url_open_data": null
     }
 },
@@ -2135,7 +2135,7 @@
     "pk": "BSIJIF",
     "fields": {
         "organismo": 42165,
-        "peso": 100,
+        "peso": 1000,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-bienestar-social"
     }
 },
@@ -2144,7 +2144,7 @@
     "pk": "EFPAFD",
     "fields": {
         "organismo": 42123,
-        "peso": 100,
+        "peso": 500,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-educacion"
     }
 },
@@ -2162,7 +2162,7 @@
     "pk": "ESSSCAN",
     "fields": {
         "organismo": 6564,
-        "peso": 100,
+        "peso": 1150,
         "url_open_data": null
     }
 },
@@ -2171,7 +2171,7 @@
     "pk": "HRUE",
     "fields": {
         "organismo": 42086,
-        "peso": 100,
+        "peso": 300,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-hacienda"
     }
 },
@@ -2180,7 +2180,7 @@
     "pk": "ICAP",
     "fields": {
         "organismo": 25972,
-        "peso": 100,
+        "peso": 450,
         "url_open_data": null
     }
 },
@@ -2189,7 +2189,7 @@
     "pk": "ICAVI",
     "fields": {
         "organismo": 37152,
-        "peso": 100,
+        "peso": 250,
         "url_open_data": null
     }
 },
@@ -2198,7 +2198,7 @@
     "pk": "ICI",
     "fields": {
         "organismo": 25999,
-        "peso": 100,
+        "peso": 1050,
         "url_open_data": null
     }
 },
@@ -2207,7 +2207,7 @@
     "pk": "ICIA",
     "fields": {
         "organismo": 32766,
-        "peso": 100,
+        "peso": 1250,
         "url_open_data": null
     }
 },
@@ -2216,7 +2216,7 @@
     "pk": "ISTAC",
     "fields": {
         "organismo": 37829,
-        "peso": 100,
+        "peso": 350,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/istac"
     }
 },
@@ -2225,7 +2225,7 @@
     "pk": "OPVM",
     "fields": {
         "organismo": 42114,
-        "peso": 100,
+        "peso": 200,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-obras-publicas"
     }
 },
@@ -2234,7 +2234,7 @@
     "pk": "PAPJS",
     "fields": {
         "organismo": 42118,
-        "peso": 100,
+        "peso": 400,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-administraciones-publicas"
     }
 },
@@ -2243,7 +2243,7 @@
     "pk": "PREGOB",
     "fields": {
         "organismo": 42091,
-        "peso": 50,
+        "peso": 0,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/presidencia-del-gobierno"
     }
 },
@@ -2252,7 +2252,7 @@
     "pk": "PTCTA",
     "fields": {
         "organismo": 42136,
-        "peso": 100,
+        "peso": 600,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-politica-territorial"
     }
 },
@@ -2261,7 +2261,7 @@
     "pk": "SAN",
     "fields": {
         "organismo": 6547,
-        "peso": 100,
+        "peso": 1100,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-sanidad"
     }
 },
@@ -2270,7 +2270,7 @@
     "pk": "SCE",
     "fields": {
         "organismo": 42149,
-        "peso": 100,
+        "peso": 750,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/servicio-canario-de-empleo"
     }
 },
@@ -2279,7 +2279,7 @@
     "pk": "SCS",
     "fields": {
         "organismo": 6594,
-        "peso": 100,
+        "peso": 1150,
         "url_open_data": null
     }
 },
@@ -2288,7 +2288,7 @@
     "pk": "TEE",
     "fields": {
         "organismo": 42159,
-        "peso": 100,
+        "peso": 900,
         "url_open_data": "https://datos.canarias.es/catalogos/general/dataset/?organization=consejeria-de-transicion-ecologica-y-energia"
     }
 },
@@ -2297,7 +2297,7 @@
     "pk": "TUREMP",
     "fields": {
         "organismo": 42143,
-        "peso": 100,
+        "peso": 700,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-turismo"
     }
 },
@@ -2306,7 +2306,7 @@
     "pk": "UCIC",
     "fields": {
         "organismo": 42150,
-        "peso": 100,
+        "peso": 800,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-universidades-ciencia-innovacion-cultura"
     }
 }

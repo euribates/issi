@@ -120,6 +120,9 @@ class Organismo(models.Model):
             yield from hijo.iter_jerarquia(nivel+1)
 
 
+
+
+
 class Ente(models.Model):
 
     DATOS = 'datos.canarias.es'
@@ -155,6 +158,22 @@ class Ente(models.Model):
             return cls.objects.get(id_ente=pk)
         except cls.DoesNotExist:
             return None
+
+    def es_de_primer_nivel(self) -> bool:
+        result = self.organismo.categoria in {
+            'Presidencia',
+            'Consejería',
+            'Viceconsejería',
+            }
+        return result
+
+    def sistemas_del_ente(self):
+        from sistemas.models import Sistema
+        return (
+            Sistema.objects
+            .select_related('organismo')
+            .filter(organismo__ruta__startswith=self.organismo.ruta)
+            )
 
     def descargar_datos(self, url, force=False):
         slug = url.rsplit('/', 1)[1]

@@ -18,10 +18,18 @@ def alta_sistema():
         links.a_alta_sistema(),
         )
 
+
 def detalle_sistema(sistema):
     return sistemas().step(
         str(sistema.codigo),
         links.a_detalle_sistema(sistema.pk),
+        )
+
+
+def editar_sistema(sistema):
+    return sistemas().step(
+        str(sistema.codigo),
+        links.a_editar_sistema(sistema.pk),
         )
 
 
@@ -43,6 +51,13 @@ def asignar_organismo(sistema):
     return detalle_sistema(sistema).step(
         "Asignar organismo",
         links.a_asignar_organismo(sistema.pk),
+        )
+
+
+def asignar_icono(sistema):
+    return detalle_sistema(sistema).step(
+        "Asignar icono",
+        links.a_asignar_icono(sistema.pk),
         )
 
 

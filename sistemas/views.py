@@ -74,6 +74,26 @@ def alta_sistema(request):
         })
 
 
+def editar_sistema(request, sistema):
+    if request.method == "POST":
+        form = forms.EditarSistemaForm(request.POST, instance=sistema)
+        if form.is_valid():
+            form.save()
+            Bus(request).success(
+                f"El sistema de información {sistema}"
+                f" ha sido modificado"
+                )
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.EditarSistemaForm(instance=sistema)
+    return render(request, 'sistemas/editar-sistema.html', {
+        'titulo': f'Editar {sistema}',
+        'breadcrumbs': bc.editar_sistema(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
 def asignar_organismo(request, sistema):
     if request.method == "POST":
         form = forms.AsignarOrganismoForm(request.POST, instance=sistema)
@@ -163,7 +183,62 @@ def asignar_responsable(request, sistema):
         })
 
 
+def asignar_tema(request, sistema):
+    if request.method == "POST":
+        form = forms.AsignarTemaForm(request.POST, instance=sistema)
+        if form.is_valid():
+            tema = sistema.asignar_tema(form.cleaned_data['tema'])
+            Bus(request).success(
+                f"El S.I. {sistema}"
+                f" ha sido asignado al tema {tema}"
+                )
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.AsignarTemaForm(instance=sistema)
+    return render(request, 'sistemas/asignar-tema.html', {
+        'titulo': f'Asignar tema a {sistema}',
+        'breadcrumbs': bc.asignar_tema(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
+
+def asignar_icono(request, sistema):
+    if request.method == "POST":
+        form = forms.AsignarIconoForm(request.POST, request.FILES, instance=sistema)
+        if form.is_valid():
+            from icecream import ic; ic("form is valid")
+            form.save()
+            Bus(request).success(
+                f"Se ha asignado un icono al S.I. {sistema}"
+                )
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.AsignarIconoForm(instance=sistema)
+    return render(request, 'sistemas/asignar-icono.html', {
+        'titulo': f'Asignar icono a {sistema}',
+        'breadcrumbs': bc.asignar_icono(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
+
 def borrar_perfil(request, id_perfil: int):
+    """Borrar un perfil.
+
+    Después de ejecutar esta operación, el perfil
+    indicado ya no existirá.
+
+    No usamos conversores en este caso, porque queremos
+    que la operación sea idempotente.
+
+    Params:
+
+        id_perfil (int): Clave primaria del perfil a borrar.
+            Si no existe el perfil, no hace nada.
+    """
     perfil = models.Perfil.load_perfil(id_perfil)
     if perfil:
         id_sistema = perfil.sistema.pk

@@ -21,3 +21,17 @@ def as_tema(tema):
 @register.filter
 def as_status_icon(estado):
     return mark_safe(f'img/status/{estado}.svg')
+
+
+@register.filter
+def as_status_desc(estado):
+    match estado:
+        case 'green': 
+            return 'Completo'
+        case 'yellow':
+            return 'Pendiente de algunos datos'
+        case 'red':
+            return 'Pendiente de algunos datos críticos'
+        case _:
+            return _
+

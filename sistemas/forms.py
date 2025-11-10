@@ -37,6 +37,17 @@ class AltaSistemaForm(forms.ModelForm):
         return {}
 
 
+class EditarSistemaForm(BaseForm):
+
+    class Meta:
+        model = models.Sistema
+        fields = [
+            'nombre',
+            'codigo',
+            'descripcion',
+            'url',
+            ]
+
 class AsignarOrganismoForm(BaseForm):
 
     class Meta:
@@ -51,6 +62,12 @@ class AsignarTemaForm(BaseForm):
     class Meta:
         model = models.Sistema
         fields = ['tema']
+
+
+class AsignarIconoForm(BaseForm):
+    class Meta:
+        model = models.Sistema
+        fields = ['icono']
 
 
 class EditarPropositoForm(BaseForm):

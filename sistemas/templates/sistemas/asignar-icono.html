@@ -1,0 +1,34 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+{% block content %}
+
+<div class="row"><div class="offset-sm-0 col-sm-12 offset-md-2 col-md-8">
+        
+  <div class="card">
+  
+    <div class="card-header">
+        Asignar icono a {{ sistema }}
+    </div>
+  
+    <div class="card-body">
+  
+    <form method="POST" action="." enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.errors }}  
+  
+      <div class="mb-3">
+        <label for="id_icono" class="form-label">
+            Seleccione fichero imagen
+        </label>
+        {{ form.icono }}
+      </div>
+  
+  
+    <button type="submit" class="btn btn-primary">Asignar icono</button>
+    </form>
+    </div>
+  </div>  
+
+</div>
+
+{% endblock content %}

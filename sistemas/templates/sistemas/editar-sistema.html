@@ -1,0 +1,59 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+{% block content %}
+
+<div class="row"><div class="offset-sm-0 col-sm-12 offset-md-2 col-md-8">
+
+  <form method="POST" action=".">
+  {% csrf_token %}
+  {{ form.errors }}  
+  <div class="card">
+  
+    <div class="card-header">
+      <h2 class="card-title">
+      Editar S.I. {{ sistema }}
+      </h2>
+    </div>
+  
+    <div class="card-body">
+
+        <div class="mb-3">
+          <label for="id_codigo" class="form-label">
+              {{ form.codigo.label }}
+          </label>
+          {{ form.codigo }}
+        </div>
+
+        <div class="mb-3">
+          <label for="id_nombre" class="form-label">
+              {{ form.nombre.label }}
+          </label>
+          {{ form.nombre }}
+        </div>
+
+        <div class="mb-3">
+          <label for="id_url" class="form-label">
+              {{ form.url.label }}
+          </label>
+          {{ form.url }}
+        </div>
+
+        <div class="mb-3">
+          <label for="id_descripcion" class="form-label">
+              {{ form.descripcion.label }}
+          </label>
+          {{ form.descripcion }}
+        </div>
+
+    </div><!-- de card-body -->
+
+    <div class="card-footer d-flex flex-row-reverse">
+      <button type="submit" class="btn btn-primary">Actualizar sistema</button>
+    </div>
+  
+  </div>  
+  </form>
+
+</div>  
+
+{% endblock content %}

@@ -3,18 +3,17 @@
 {% block content %}
 
 <div class="card">
+  <form method="POST" action=".">
+  {% csrf_token %}
 
   <div class="card-header">
-    Asignar organismo
+    Asignar S.I. {{ sistema }} a un organismo
   </div>
 
   <div class="card-body">
 
-  <form method="POST" action=".">
-  {% csrf_token %}
   {{ form.errors }}  
 
-  <p>Asignar S.I. {{ sistema }} a un organismo.</p>
 
     <fieldset style="max-width: 50%;">
       <legend>Estructura administrativa</legend>
@@ -39,8 +38,8 @@
     </fieldset>    
 
   <button type="submit" class="btn btn-primary">Asignar a organismo</button>
-  </form>
   </div>
+  </form>
 </div>  
 
 {% endblock content %}

@@ -32,8 +32,16 @@ def a_detalle_sistema(id_sistema: int) -> str:
     return _a('sistemas:detalle_sistema', sistema=id_sistema)
 
 
+def a_editar_sistema(id_sistema: int) -> str:
+    return _a('sistemas:editar_sistema', sistema=id_sistema)
+
+
 def a_asignar_tema(id_sistema: int) -> str:
     return _a('sistemas:asignar_tema', sistema=id_sistema)
+
+
+def a_asignar_icono(id_sistema: int) -> str:
+    return _a('sistemas:asignar_icono', sistema=id_sistema)
 
 
 def a_editar_proposito(id_sistema: int) -> str:

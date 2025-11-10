@@ -9,32 +9,44 @@
   <thead>
     <tr>
       <th>Código</th>
-      <th>Nombre</th
-      <th>Cód. DIR3</th>
-      <th colspan="2">Peso</th>
+      <th>Nombre</th>
+      <th>
+        <span title="Directa o indirectamente asociados al ente">
+        Nº de Sistemas
+        </span>
     </tr>  
   </thead> 
   <tbody>
-    {% for ente in entes.all %}<tr>
+      {% for ente in entes.all %}
+      {% with ente.sistemas_del_ente.count as num_sistemas %}
+          
+      <tr {% if num.sistemas == 0 %} class="table-danger"{% endif %}>
       <td>
-          <code class="id-ente">{{ ente.id_ente }}</code>
+          <code class="id-sistema">
+              {{ ente.id_ente }}
+          </code>
       </td>
       <td>
+        {% if ente.es_de_primer_nivel %}<b>{% else %}&nbsp;{% endif %}
           <a href="{% url 'sistemas:detalle_ente' ente=ente %}">
-          <b>
           {{ ente.organismo.nombre_organismo }}
-          </b>
           </a>
+        {% if ente.es_de_primer_nivel %}</b>{% endif %}
       </td>
       <td>
-          <code class="dir3">
-            {{ ente.organismo.dir3 }}
-          </code>    
+          {% if num_sistemas == 0 %}
+          <span class="badge bg-danger">
+          {% elif num_sistemas < 3 %}
+            <span class="badge bg-warning">
+          {% else %}
+            <span class="badge bg-success">
+          {% endif %}
+          {{ num_sistemas }}
+            </span>
       </td>
-      <td colspan="2">
-        {{ ente.peso }}
-      </td>
-    </tr>{% endfor %}
+    </tr>
+    {% endwith %}
+    {% endfor %}
   </tbody>
 </table>  
 </form>
