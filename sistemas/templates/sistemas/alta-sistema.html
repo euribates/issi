@@ -32,18 +32,22 @@
         <div class="m-2">
          <label for="id_proposito" class="form-label">Propósito</label>
          {{ form.proposito }}
+         <p class="atenuado">Admite <a href="https://www.markdownlang.com/">formato 
+             MarkDown</a>.
+         </p>
         </div>
 
-        <div class="m-2">
-         <label for="id_tema" class="form-label">Tema</label>
-         {{ form.tema }}
-        </div>
 
 
     </fieldset class="flex-fill">     
   
     <fieldset style="max-width: 50%;">
       <legend>Estructura administrativa</legend>
+
+      <div class="m-2">
+       <label for="id_tema" class="form-label">Tema</label>
+       {{ form.tema }}
+      </div>
 
       <div class="m-2">
        <label for="id_codigo" class="form-label">Organismo
@@ -65,8 +69,12 @@
     </fieldset>    
   </div>
 
+  <div class="commands">
+    <button type="submit" class="btn btn-primary">
+        Añadir sistema
+    </button>
+  </div>
 
-    <button type="submit" class="btn btn-primary">Añadir sistema</button>
     </form>
   </div>
 </div>  

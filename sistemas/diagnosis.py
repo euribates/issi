@@ -18,7 +18,7 @@ class DiagnosticoSistema:
         self.tiene_proposito = bool(self._sistema.proposito)
         self.tiene_organismo = bool(self._sistema.organismo)
         self.tiene_descripcion = bool(self._sistema.descripcion)
-        self.tiene_tema = bool(self._sistema.tema != 'UNK')
+        self.tiene_tema = bool(self._sistema.tema.pk != 'UNK')
         self.tiene_algun_responsable = self._sistema.perfiles.count() > 0
 
     def flags(self) -> list[bool]:

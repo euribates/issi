@@ -744,8 +744,8 @@
         "organismo": 39073,
         "codigo": "SIRBA",
         "url": null,
-        "descripcion": "",
-        "proposito": "",
+        "descripcion": "Sistema de tramitación electrónica de los procedimientos de Ganadería",
+        "proposito": "Sistema de tramitación electrónica de los procedimientos de Ganadería",
         "tema": "GAN",
         "es_transversal": false,
         "es_subsistema_de": null,
@@ -1196,6 +1196,606 @@
     }
 },
 {
+    "model": "sistemas.sistema",
+    "pk": 36,
+    "fields": {
+        "uuid": "b2196593-1ac1-4e3c-b6da-df218230a876",
+        "nombre": "Registro de Plantaciones de Viñedo",
+        "organismo": 39060,
+        "codigo": "REGVIN",
+        "url": null,
+        "descripcion": "",
+        "proposito": "mantener el censo de todas las parcelas con viñedo.",
+        "tema": "AGR",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 37,
+    "fields": {
+        "uuid": "12c75d10-c8cc-4630-9814-a93fdfb0a4f8",
+        "nombre": "Registro de Sociedades Agrarias de Transformación de Canarias",
+        "organismo": 39053,
+        "codigo": "REGSAT",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Registro administrativo en el que serán inscritas las Sociedades Agrarias de Transformación que operen exclusivamente en el territorio de la Comunidad Autónoma de Canarias y que reúnan los requisitos establecidos en la normativa que las regula.",
+        "tema": "AGR",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 38,
+    "fields": {
+        "uuid": "9f1b9417-5ef8-4e30-b255-c98f8b0c9911",
+        "nombre": "Registro de Explotaciones Agrarias Prioritarias de Canarias",
+        "organismo": 39060,
+        "codigo": "REGEAP",
+        "url": null,
+        "descripcion": "Registro de naturaleza administrativa, que se configura como un instrumento que permite el seguimiento y supervisión por la Administración de la Comunidad Autónoma de Canarias de las explotaciones agrarias prioritarias.",
+        "proposito": "Seguimiento y supervisión por la Administración de la Comunidad Autónoma de Canarias de las explotaciones agrarias prioritarias.",
+        "tema": "AGR",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 39,
+    "fields": {
+        "uuid": "e3494df6-a0df-4b49-b72b-14c4fa1f17be",
+        "nombre": "Sistema de gestión del PEPAC",
+        "organismo": 39053,
+        "codigo": "TITAN",
+        "url": null,
+        "descripcion": "Sistema de Gestión de las ayudas del PEPAC 2023-2027",
+        "proposito": "Gestión de las ayudas del PEPAC 2023-2027",
+        "tema": "AGR",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 40,
+    "fields": {
+        "uuid": "9f421da9-fa51-461d-ac5a-a1c49ac88e71",
+        "nombre": "Sistema de Gestión de las ayudas del Programa de opciones específicas por la lejanía y la insularidad (POSEI).",
+        "organismo": 39053,
+        "codigo": "SAGA",
+        "url": null,
+        "descripcion": "Sistema de Gestión de las ayudas del Programa de opciones específicas por la lejanía y la insularidad (POSEI).",
+        "proposito": "Gestión de las ayudas del Programa de opciones específicas por la lejanía y la insularidad (POSEI).",
+        "tema": "AGR",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 41,
+    "fields": {
+        "uuid": "a777ded4-0538-4121-88bb-adfc987ce259",
+        "nombre": "Sistema de gestión de las ayudas del POSEICAN",
+        "organismo": 39153,
+        "codigo": "POSEICAN",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión de las ayudas del POSEICAN",
+        "tema": "PES",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 42,
+    "fields": {
+        "uuid": "c145ade6-0199-4860-994f-74f8ce75ff37",
+        "nombre": "Gestión de parcelas agrícolas",
+        "organismo": 39060,
+        "codigo": "SIGPAC",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión de las parcelas agrícolas",
+        "tema": "AGR",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 43,
+    "fields": {
+        "uuid": "3c0ae5d6-be42-4f1b-936e-c491c73bbafe",
+        "nombre": "Sistema de gestión del registro de animales",
+        "organismo": 39073,
+        "codigo": "BADACANA",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Sistema de gestión del registro de animales, identificadores, movimientos, etc.",
+        "tema": "GAN",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 44,
+    "fields": {
+        "uuid": "32d1ddaa-7798-44e4-b1af-66e3b7f4b55c",
+        "nombre": "Centros de Día",
+        "organismo": 42170,
+        "codigo": "CENTROS-DIA",
+        "url": null,
+        "descripcion": "Solicitudes de mayores para centros de día",
+        "proposito": "Solicitudes de mayores para centros de día",
+        "tema": "BIS",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/centros-dia-logo.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 45,
+    "fields": {
+        "uuid": "43c13957-cb8a-484f-803a-a258446a2010",
+        "nombre": "Centros de menores",
+        "organismo": 42169,
+        "codigo": "CENTROS-MENORES",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Mantenimiento de centros de menores y habilitación de entidades colaboradoras",
+        "tema": "BIS",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/centros-menores-logo.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 46,
+    "fields": {
+        "uuid": "5e7234ee-4ed0-4269-8762-b2273bf4a6ec",
+        "nombre": "Familias Numerosas",
+        "organismo": 42169,
+        "codigo": "FAMNUM",
+        "url": null,
+        "descripcion": "Gestión de expedientes de Familia Numerosa",
+        "proposito": "Gestión de expedientes de Familia Numerosa",
+        "tema": "BIS",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 47,
+    "fields": {
+        "uuid": "227ef728-bb0d-4c70-a87e-5009b05131a5",
+        "nombre": "GPorta",
+        "organismo": null,
+        "codigo": "GPorta",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Circuito de firma para procedimientos y comunicaciones internas.",
+        "tema": "UNK",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 48,
+    "fields": {
+        "uuid": "21ab2f7e-803e-47e9-bf02-6570c6f41db5",
+        "nombre": "Discapacidad",
+        "organismo": 42171,
+        "codigo": "Discapacidad",
+        "url": null,
+        "descripcion": "Gestión de expedientes de valoración de grado de discapacidad y emisión de tarjetas de estacionamiento",
+        "proposito": "Valoración de grado de discapacidad y emisión de tarjetas de estacionamiento",
+        "tema": "BIS",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 49,
+    "fields": {
+        "uuid": "6a8516c0-8fa8-4606-969a-e616ac3244ea",
+        "nombre": "Inmigración",
+        "organismo": 42167,
+        "codigo": "INMIGRACION",
+        "url": null,
+        "descripcion": "",
+        "proposito": "",
+        "tema": "BIS",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 50,
+    "fields": {
+        "uuid": "0aa531f4-a65b-4492-9aec-d05c6b12a1f7",
+        "nombre": "Entidades",
+        "organismo": null,
+        "codigo": "ENTIDADES",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Registro de Entidades",
+        "tema": "UNK",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 51,
+    "fields": {
+        "uuid": "b549a5cb-0d24-4085-bca7-b10f8c585ab0",
+        "nombre": "Escuelas Infantiles",
+        "organismo": 42169,
+        "codigo": "ESC-INFANTIL",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión de plazas en centros infantiles",
+        "tema": "BIS",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 52,
+    "fields": {
+        "uuid": "40421b48-ec74-4068-8ecf-b67f7283a3de",
+        "nombre": "Expedientes de Asesoría Jurídica",
+        "organismo": 42172,
+        "codigo": "EXP-JUR",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Expedientes de Asesoría Jurídica",
+        "tema": "BIS",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 53,
+    "fields": {
+        "uuid": "d8b5dfda-755d-491c-9c00-fa5d73895948",
+        "nombre": "Intercambio de Ficheros Ministerios",
+        "organismo": 38691,
+        "codigo": "INTEROP-FM",
+        "url": null,
+        "descripcion": "Intercambio de Ficheros Ministerios. Incluye el 990, el TSD, estadísticas de prestaciones, etc.\r\n\r\nTSD Puede ser la [Tarjeta Social Digital](https://www.tarjetasocialdigital.es)?",
+        "proposito": "Envío de datos al Ministerio",
+        "tema": "BIS",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 54,
+    "fields": {
+        "uuid": "251203de-397a-44ea-9a1a-4f5cd5c57cdb",
+        "nombre": "Subvención ITC",
+        "organismo": null,
+        "codigo": "SUB-ITC",
+        "url": null,
+        "descripcion": "Subvención ITC",
+        "proposito": "",
+        "tema": "UNK",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 55,
+    "fields": {
+        "uuid": "f011cf03-dd14-4506-a529-5a69c1366d02",
+        "nombre": "Gestión administrativa y académica en los centros educativos",
+        "organismo": 42126,
+        "codigo": "PINCEL-EKADE",
+        "url": null,
+        "descripcion": "",
+        "proposito": "",
+        "tema": "UNK",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 56,
+    "fields": {
+        "uuid": "123a3d90-a6a6-411c-89eb-30b45458f1c0",
+        "nombre": "Gestión de centros e infraestructuras",
+        "organismo": 42128,
+        "codigo": "GESTCEN",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión de centros e infrastestructuras educativas",
+        "tema": "EDU",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 57,
+    "fields": {
+        "uuid": "889805b6-4eae-448e-aefc-085b029ff1d7",
+        "nombre": "Programa Económico Actividad ESSSCAN",
+        "organismo": 6564,
+        "codigo": "ESSSCAN-ECO",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestión del registro contable, la gestión financiera-económica, el control de costes y los datos vinculados con las nóminas de los trabajadores de la Escuela.",
+        "tema": "CTB",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 58,
+    "fields": {
+        "uuid": "11f66c9f-fb9b-4dcd-8908-7fdef108180d",
+        "nombre": "Share ESSSCAN",
+        "organismo": 6564,
+        "codigo": "ESSSCAN-SHARE",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Sistema que administra todo el contenido relacionado con los proyectos formativos gestionados por la Entidad, al que tiene acceso toda la organización al constituir un almacenamiento compartido en la nube.",
+        "tema": "SAN",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 59,
+    "fields": {
+        "uuid": "44a2ad30-9073-4eef-b0a8-42b1f597ec37",
+        "nombre": "Precio máximo de privada - Servicio de promoción privada",
+        "organismo": 37152,
+        "codigo": "PMPRIV",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Precio de venta de una vivienda privada protegida",
+        "tema": "VIV",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 60,
+    "fields": {
+        "uuid": "20181c5f-fb56-4a3b-93cc-bdf9fee5d6d4",
+        "nombre": "Adquisición de Vivienda Joven",
+        "organismo": 37152,
+        "codigo": "AVJ",
+        "url": null,
+        "descripcion": "Gestión de las ayudas económicas a la adquisición de vivienda para jovenes",
+        "proposito": "Ayudas económicas a la adquisición de vivienda para jovenes",
+        "tema": "VIV",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/avj-logo.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 61,
+    "fields": {
+        "uuid": "1878a1da-562a-489c-8b81-f6190ebb57b6",
+        "nombre": "Justiniano",
+        "organismo": 37152,
+        "codigo": "JUSTINIANO",
+        "url": null,
+        "descripcion": "Gestión de recursos judiciales del Instituto Canario de la Vivienda",
+        "proposito": "Gestión de recursos judiciales",
+        "tema": "VIV",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/justiniano-logo_fkL3ZjJ.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 62,
+    "fields": {
+        "uuid": "c41f49f3-9092-469c-b3ff-8be853504dd4",
+        "nombre": "Registro de Planeamiento de Canarias",
+        "organismo": 42138,
+        "codigo": "RPC",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Sistema para el registro de la información del planeamiento en los municipios de Canarias",
+        "tema": "OTE",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 63,
+    "fields": {
+        "uuid": "efd586a6-9aac-4292-adbd-24f2bd4de8cd",
+        "nombre": "Aplicación de Consulta del Archivo de Planeamiento",
+        "organismo": 42138,
+        "codigo": "ACAP",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Aplicación que permite la consulta y gestión sobre la información recogida en el RPC y el seguimiento de las actuaciones relativas a esto",
+        "tema": "OTE",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 64,
+    "fields": {
+        "uuid": "6ff70bc7-1d5d-40eb-bbaa-ff363caa79f9",
+        "nombre": "Sistema Información Transversal de Áreas",
+        "organismo": 42142,
+        "codigo": "SITA-TERRITORIO",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Plataforma de almacenamiento de documentación, gestor documental y soporte para otros aplicativos (backoffice)",
+        "tema": "OTE",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 65,
+    "fields": {
+        "uuid": "9e8ea2e4-7cce-4113-8c7a-5e9817d92818",
+        "nombre": "Proyectos PTCTA",
+        "organismo": 42138,
+        "codigo": "PROYECTOS-PTCTA",
+        "url": null,
+        "descripcion": "Redmine PTCTA",
+        "proposito": "Control de proyectos de soporte o gestión con empresas proveedoras",
+        "tema": "OTE",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
     "model": "sistemas.activo",
     "pk": 1,
     "fields": {
@@ -1532,6 +2132,32 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "esgonnun",
+    "fields": {
+        "email": "esgonnun@gobiernodecanarias.org",
+        "nombre": "Estefanía Margarita",
+        "apellidos": "González Nuñez",
+        "organismo": 42085,
+        "f_alta": "2025-11-10T10:16:12.820Z",
+        "f_cambio": "2025-11-10T10:16:12.820Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "esosperm",
+    "fields": {
+        "email": "esosperm@gobiernodecanarias.org",
+        "nombre": "Ehedey",
+        "apellidos": "Sosa Pérez",
+        "organismo": 42128,
+        "f_alta": "2025-11-10T12:39:29.409Z",
+        "f_cambio": "2025-11-10T12:39:29.409Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "fartjor",
     "fields": {
         "email": "fartjor@gobiernodecanarias.org",
@@ -1553,6 +2179,19 @@
         "organismo": 42119,
         "f_alta": "2025-10-02T08:12:31Z",
         "f_cambio": "2025-10-06T11:29:07.166Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "fcabherl",
+    "fields": {
+        "email": "fcabherl@gobiernodecanarias.org",
+        "nombre": "Francisca Teresa",
+        "apellidos": "Caballero Hernández",
+        "organismo": 42135,
+        "f_alta": "2025-11-10T12:33:47.243Z",
+        "f_cambio": "2025-11-10T12:33:47.243Z",
         "f_baja": null
     }
 },
@@ -1636,6 +2275,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "igoncar",
+    "fields": {
+        "email": "igoncar@gobiernodecanarias.org",
+        "nombre": "Iván",
+        "apellidos": "González Carro",
+        "organismo": 42128,
+        "f_alta": "2025-11-10T13:35:54.803Z",
+        "f_cambio": "2025-11-10T13:35:54.803Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "itrubos",
     "fields": {
         "email": "itrubos@gobiernodecanarias.org",
@@ -1714,6 +2366,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "jhercrum",
+    "fields": {
+        "email": "jhercrum@gobiernodecanarias.org",
+        "nombre": "Juan José",
+        "apellidos": "Hernández Cruz",
+        "organismo": 42085,
+        "f_alta": "2025-11-10T10:24:00.103Z",
+        "f_cambio": "2025-11-10T10:24:00.103Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "jmorrom",
     "fields": {
         "email": "jmorrom@gobiernodecanarias.org",
@@ -1748,6 +2413,19 @@
         "organismo": 42093,
         "f_alta": "2025-10-02T08:12:31Z",
         "f_cambio": "2025-10-07T09:24:50.928Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jrosperf",
+    "fields": {
+        "email": "jrosperf@gobiernodecanarias.org",
+        "nombre": "Juan Carlos",
+        "apellidos": "Del Rosario Pérez",
+        "organismo": 42127,
+        "f_alta": "2025-11-10T12:35:18.029Z",
+        "f_cambio": "2025-11-10T12:35:18.030Z",
         "f_baja": null
     }
 },
@@ -1839,6 +2517,19 @@
         "organismo": 6547,
         "f_alta": "2025-10-06T18:41:33.899Z",
         "f_cambio": "2025-10-06T18:41:33.899Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mblabau",
+    "fields": {
+        "email": "mblabau@gobiernodecanarias.org",
+        "nombre": "Manuel",
+        "apellidos": "Blanco Bautista",
+        "organismo": 42138,
+        "f_alta": "2025-11-10T14:30:24.693Z",
+        "f_cambio": "2025-11-10T14:30:24.693Z",
         "f_baja": null
     }
 },
@@ -2013,6 +2704,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "mrodlav",
+    "fields": {
+        "email": "mrodlav@gobiernodecanarias.org",
+        "nombre": "María Pilar",
+        "apellidos": "Rodrigo Lavandera",
+        "organismo": 42085,
+        "f_alta": "2025-11-10T10:20:29.416Z",
+        "f_cambio": "2025-11-10T10:20:29.416Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "msoslac",
     "fields": {
         "email": "msoslac@gobiernodecanarias.org",
@@ -2169,6 +2873,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "pcovfue",
+    "fields": {
+        "email": "pcovfue@gobiernodecanarias.org",
+        "nombre": "Pedro Wladimir",
+        "apellidos": "Cova Fuentes",
+        "organismo": 37152,
+        "f_alta": "2025-11-10T13:04:54.659Z",
+        "f_cambio": "2025-11-10T13:08:43.041Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "poragal",
     "fields": {
         "email": "poragal@gobiernodecanarias.org",
@@ -2177,6 +2894,19 @@
         "organismo": 41854,
         "f_alta": "2025-10-06T18:41:33.843Z",
         "f_cambio": "2025-10-06T18:41:33.843Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "rgongon",
+    "fields": {
+        "email": "rgongon@gobiernodecanarias.org",
+        "nombre": "Ricardo",
+        "apellidos": "González González",
+        "organismo": 39060,
+        "f_alta": "2025-11-10T09:54:17.765Z",
+        "f_cambio": "2025-11-10T09:54:17.765Z",
         "f_baja": null
     }
 },
@@ -3279,6 +4009,342 @@
         "sistema": 35,
         "f_alta": "2025-11-07T16:08:01.552Z",
         "f_cambio": "2025-11-07T16:08:01.552Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 46,
+    "fields": {
+        "usuario": "mgarrodx",
+        "cometido": "TEC",
+        "sistema": 39,
+        "f_alta": "2025-11-10T09:46:50.192Z",
+        "f_cambio": "2025-11-10T09:46:50.193Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 47,
+    "fields": {
+        "usuario": "rgongon",
+        "cometido": "FUN",
+        "sistema": 39,
+        "f_alta": "2025-11-10T09:54:23.918Z",
+        "f_cambio": "2025-11-10T09:54:23.918Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 48,
+    "fields": {
+        "usuario": "mgarrodx",
+        "cometido": "TEC",
+        "sistema": 40,
+        "f_alta": "2025-11-10T10:12:01.939Z",
+        "f_cambio": "2025-11-10T10:12:01.939Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 49,
+    "fields": {
+        "usuario": "esgonnun",
+        "cometido": "FUN",
+        "sistema": 40,
+        "f_alta": "2025-11-10T10:16:19.571Z",
+        "f_cambio": "2025-11-10T10:16:19.571Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 50,
+    "fields": {
+        "usuario": "mrodlav",
+        "cometido": "TEC",
+        "sistema": 41,
+        "f_alta": "2025-11-10T10:20:36.029Z",
+        "f_cambio": "2025-11-10T10:20:36.029Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 51,
+    "fields": {
+        "usuario": "mgarrodx",
+        "cometido": "TEC",
+        "sistema": 42,
+        "f_alta": "2025-11-10T10:22:02.307Z",
+        "f_cambio": "2025-11-10T10:22:02.307Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 52,
+    "fields": {
+        "usuario": "jhercrum",
+        "cometido": "FUN",
+        "sistema": 42,
+        "f_alta": "2025-11-10T10:24:05.387Z",
+        "f_cambio": "2025-11-10T10:24:05.387Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 53,
+    "fields": {
+        "usuario": "mgarrodx",
+        "cometido": "TEC",
+        "sistema": 43,
+        "f_alta": "2025-11-10T10:26:14.377Z",
+        "f_cambio": "2025-11-10T10:26:14.377Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 54,
+    "fields": {
+        "usuario": "acarromb",
+        "cometido": "FUN",
+        "sistema": 43,
+        "f_alta": "2025-11-10T10:26:32.717Z",
+        "f_cambio": "2025-11-10T10:26:32.717Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 55,
+    "fields": {
+        "usuario": "mgarrodx",
+        "cometido": "TEC",
+        "sistema": 13,
+        "f_alta": "2025-11-10T10:28:21.809Z",
+        "f_cambio": "2025-11-10T10:28:21.809Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 56,
+    "fields": {
+        "usuario": "acarromb",
+        "cometido": "FUN",
+        "sistema": 13,
+        "f_alta": "2025-11-10T10:28:36.153Z",
+        "f_cambio": "2025-11-10T10:28:36.153Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 57,
+    "fields": {
+        "usuario": "jtardel",
+        "cometido": "TEC",
+        "sistema": 55,
+        "f_alta": "2025-11-10T11:31:10.098Z",
+        "f_cambio": "2025-11-10T11:31:10.098Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 58,
+    "fields": {
+        "usuario": "gojezam",
+        "cometido": "FUN",
+        "sistema": 55,
+        "f_alta": "2025-11-10T11:31:34.614Z",
+        "f_cambio": "2025-11-10T11:31:34.614Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 59,
+    "fields": {
+        "usuario": "vferlop",
+        "cometido": "FUN",
+        "sistema": 55,
+        "f_alta": "2025-11-10T11:33:09.071Z",
+        "f_cambio": "2025-11-10T11:33:09.071Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 60,
+    "fields": {
+        "usuario": "fcabherl",
+        "cometido": "TEC",
+        "sistema": 56,
+        "f_alta": "2025-11-10T12:33:55.196Z",
+        "f_cambio": "2025-11-10T12:33:55.196Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 61,
+    "fields": {
+        "usuario": "jrosperf",
+        "cometido": "FUN",
+        "sistema": 56,
+        "f_alta": "2025-11-10T12:35:28.293Z",
+        "f_cambio": "2025-11-10T12:35:28.293Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 62,
+    "fields": {
+        "usuario": "igoncar",
+        "cometido": "FUN",
+        "sistema": 56,
+        "f_alta": "2025-11-10T12:37:02.532Z",
+        "f_cambio": "2025-11-10T12:37:26.017Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 63,
+    "fields": {
+        "usuario": "esosperm",
+        "cometido": "FUN",
+        "sistema": 56,
+        "f_alta": "2025-11-10T12:39:37.154Z",
+        "f_cambio": "2025-11-10T12:39:37.154Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 64,
+    "fields": {
+        "usuario": "pcovfue",
+        "cometido": "TEC",
+        "sistema": 59,
+        "f_alta": "2025-11-10T13:05:01.024Z",
+        "f_cambio": "2025-11-10T13:05:01.024Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 65,
+    "fields": {
+        "usuario": "pcovfue",
+        "cometido": "TEC",
+        "sistema": 60,
+        "f_alta": "2025-11-10T13:09:11.992Z",
+        "f_cambio": "2025-11-10T13:09:11.992Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 66,
+    "fields": {
+        "usuario": "gpalara",
+        "cometido": "TEC",
+        "sistema": 62,
+        "f_alta": "2025-11-10T14:26:30.627Z",
+        "f_cambio": "2025-11-10T14:26:30.627Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 67,
+    "fields": {
+        "usuario": "gpalara",
+        "cometido": "TEC",
+        "sistema": 63,
+        "f_alta": "2025-11-10T14:28:27.107Z",
+        "f_cambio": "2025-11-10T14:28:27.107Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 68,
+    "fields": {
+        "usuario": "mblabau",
+        "cometido": "FUN",
+        "sistema": 63,
+        "f_alta": "2025-11-10T14:30:30.913Z",
+        "f_cambio": "2025-11-10T14:30:30.913Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 69,
+    "fields": {
+        "usuario": "mblabau",
+        "cometido": "FUN",
+        "sistema": 62,
+        "f_alta": "2025-11-10T14:30:43.796Z",
+        "f_cambio": "2025-11-10T14:30:43.796Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 70,
+    "fields": {
+        "usuario": "gpalara",
+        "cometido": "TEC",
+        "sistema": 64,
+        "f_alta": "2025-11-10T14:33:05.365Z",
+        "f_cambio": "2025-11-10T14:33:05.365Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 71,
+    "fields": {
+        "usuario": "atrudel",
+        "cometido": "FUN",
+        "sistema": 64,
+        "f_alta": "2025-11-10T14:33:22.103Z",
+        "f_cambio": "2025-11-10T14:33:22.103Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 72,
+    "fields": {
+        "usuario": "gpalara",
+        "cometido": "TEC",
+        "sistema": 65,
+        "f_alta": "2025-11-10T14:35:29.779Z",
+        "f_cambio": "2025-11-10T14:35:29.779Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 73,
+    "fields": {
+        "usuario": "atrudel",
+        "cometido": "FUN",
+        "sistema": 65,
+        "f_alta": "2025-11-10T14:35:44.530Z",
+        "f_cambio": "2025-11-10T14:35:44.530Z",
         "f_baja": null
     }
 }

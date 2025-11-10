@@ -33,28 +33,22 @@
               <dd>
                 <code class="clave-primaria">
                 {{ sistema.pk }}
-                </code>  
+                </code>
               </dd>
 
               <dt>Clave externa</dt>
               <dd>
                 <code class="clave-externa">
-                {{ sistema.uuid }}
+                <span id="clave-externa">{{ sistema.uuid }}</span>
                 </code>  
+                <button class="btn" onclick="copyClaveExterna()">
+                    <i class="bi bi-clipboard-plus"></i>    
+                </button>
               </dd>
             </dl>
                           
             <dt>Descripción</dt>
-            <dd>
-              {% if sistema.descripcion %}
-                {{ sistema.descripcion|as_markdown }}
-              {% else %}
-                <i class="bi bi-exclamation-diamond"></i>
-                <i>Falta la descripción</i>
-                <br>
-                [TODO] Boton para modificar descripción
-                    
-              {% endif %}
+            <dd>{{ sistema.descripcion|as_descripcion }}</dd>
             </dd>
 
             <dt>URL principal</th>
@@ -117,7 +111,7 @@
         </div>
         <div class="card-body">
             <p class="card-text">
-              {{ sistema.proposito|as_markdown }}    
+              {{ sistema.proposito|as_proposito }}    
             </p>
         </div>
         <div class="card-footer d-flex flex-row-reverse">
@@ -242,3 +236,15 @@
 </div>  
   
 {% endblock content %}
+
+{% block scripts %}
+  {{ block.super }}
+
+<script>
+async function copyClaveExterna() {
+    let text = document.getElementById('clave-externa').innerHTML;
+    await navigator.clipboard.writeText(text);
+    }
+</script>
+    
+{% endblock scripts %}

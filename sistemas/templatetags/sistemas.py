@@ -4,8 +4,33 @@ from django import template
 from django.utils.safestring import mark_safe
 
 from sistemas import links
+from comun.templatetags.comun_filters import as_markdown
+
 
 register = template.Library()
+
+
+@register.filter
+def as_descripcion(descripcion):
+    if not descripcion:
+        return mark_safe(
+            '<i class="bi bi-exclamation-diamond"></i>'
+            '&nbsp;'
+            '<i>Falta la descripción</i>'
+            )
+    return as_markdown(descripcion)
+
+
+@register.filter
+def as_proposito(proposito):
+    if not proposito:
+        return mark_safe(
+            '<i class="bi bi-exclamation-diamond"></i>'
+            '&nbsp;'
+            '<i>Falta definir el propósito del S.I.</i>'
+            )
+    return as_markdown(proposito)
+
 
 
 @register.filter

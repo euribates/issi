@@ -37,6 +37,7 @@ def cmd_sistemas():
 
 def index(request, *args, **kwargs):
     sistemas = models.Sistema.objects.all()
+    num_sistemas = sistemas.count()
     filterset = filtersets.SistemaFilter(
         request.GET,
         queryset=sistemas,
@@ -46,6 +47,7 @@ def index(request, *args, **kwargs):
         'breadcrumbs': bc.sistemas(),
         'commands': cmd_sistemas(),
         'tab': 'sistemas',
+        'num_sistemas': num_sistemas,
         "filterset": filterset,
         })
 
@@ -371,6 +373,33 @@ def listado_activos(request):
         'breadcrumbs': bc.activos(),
         'tab': 'activos',
         "filterset": filterset,
+        })
+
+
+def pendientes(request):
+    '''Dashboard de control de información ausente o incompleta.
+    '''
+    sin_tema = Sistema.objects.filter(tema='UNK').count()
+    con_tema = Sistema.objects.exclude(tema='UNK').count()
+
+    return render(request, 'sistemas/pendientes.html', {
+        'titulo': "Listado de S.I. pendientes / incompletos",
+        'breadcrumbs': bc.pendientes(),
+        'sin_tema': sin_tema,
+        'con_tema': con_tema,
+        'tab': 'sistemas',
+        })
+
+
+def sistemas_sin_tema(request):
+    '''Listado de sistemas que no tienen tema asignado.
+    '''
+    sistemas = Sistema.objects.filter(tema='UNK')
+    return render(request, 'sistemas/sistemas-sin-tema.html', {
+        'titulo': "Listado de S.I. pendientes de asignar tema",
+        'breadcrumbs': bc.sistemas_sin_tema(),
+        'tab': 'sistemas',
+        'sistemas': sistemas,
         })
 
 

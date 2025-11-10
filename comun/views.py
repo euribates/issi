@@ -74,9 +74,9 @@ def make_chart(percent, color='Lime'):
 
 def doughnut(request):
 
-    good = int(request.GET.get('g', 19))
-    regular = int(request.GET.get('r', 12))
-    bad = int(request.GET.get('b', 7))
+    good = int(request.GET.get('g', 33))
+    regular = int(request.GET.get('r', 33))
+    bad = int(request.GET.get('b', 33))
     total = bad + regular + good
 
     red_percent = int(round(bad * 100.0 / total))

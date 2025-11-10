@@ -1,0 +1,11 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+
+{% block content %}
+
+<p> Hay <span class="badge">{{ sistemas.count }} sistemas de información que no han sido
+    asignados a un área temática.</p>
+
+{% include "sistemas/includes/listado-sistemas-full.html" %}
+
+{% endblock content %}

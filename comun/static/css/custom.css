@@ -6,9 +6,13 @@
 
 
 .atenuado {
-  color: silver;
+  color: #666666;
+  font-size: 95%;
 }
 
+.bi-exclamation-diamond {
+  color: red;
+  }
 
 #header {
   display: flex;

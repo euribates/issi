@@ -90,3 +90,12 @@ def a_tema(id_tema:str) -> str:
 
 def a_activos() -> str:
     return _a('sistemas:listado_activos')
+
+
+def a_pendientes() -> str:
+    return _a('sistemas:pendientes')
+
+
+def a_sistemas_sin_tema() -> str:
+    return _a('sistemas:sistemas_sin_tema')
+

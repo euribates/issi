@@ -13,7 +13,7 @@ class BaseForm(forms.ModelForm):
             visible.field.widget.attrs['class'] = 'form-control'
 
 
-class AltaSistemaForm(forms.ModelForm):
+class AltaSistemaForm(BaseForm):
 
     class Meta:
         model = models.Sistema

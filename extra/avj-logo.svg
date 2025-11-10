@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46666 135.46667"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="avj-logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="true"
+     inkscape:zoom="0.74653479"
+     inkscape:cx="-36.836863"
+     inkscape:cy="64.29707"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
+     inkscape:window-x="0"
+     inkscape:window-y="96"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="92.224271,90.356969"
+       orientation="1,0"
+       id="guide2162"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="102.60322,89.215475"
+       orientation="1,0"
+       id="guide2164"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="97.154082,114.86628"
+       orientation="0,-1"
+       id="guide2166"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:7.99999;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stop-color:#000000"
+       d="M 30.792869,47.162788 103.41272,48.193232 66.664926,9.9718129 Z"
+       id="path1326" />
+    <path
+       id="rect234"
+       style="color:#000000;opacity:1;fill:#00b500;fill-opacity:1;stroke-width:1.16476;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
+       d="M 68.12908,5.8139661 C 66.872539,5.7971202 65.662465,6.2885298 64.773444,7.1766863 L 10.912315,61.037814 c -1.8192001,1.819426 -1.8192001,4.769059 0,6.588485 1.819701,1.820805 4.77119,1.820805 6.590891,0 l 8.089643,-8.089643 v 61.687134 c -2.96e-4,2.40627 1.949738,4.35738 4.356008,4.35842 h 73.018653 c 2.40721,3e-4 4.35872,-1.95121 4.35842,-4.35842 V 58.544711 l 8.99792,9.468614 c 1.77237,1.864405 4.72037,1.93958 6.58547,0.167932 1.86498,-1.772267 1.94043,-4.72074 0.16854,-6.586076 L 102.64224,40.090845 102.65261,20.465373 92.260241,20.44636 92.184121,29.085808 71.446195,7.263361 C 70.58102,6.352914 69.384937,5.8302921 68.12908,5.8139661 Z M 67.983419,17.145484 93.359857,43.848528 H 41.280977 Z M 34.305466,52.564155 H 98.610902 V 116.86719 H 34.305466 Z"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:34.3206px;line-height:0px;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans';text-align:center;text-anchor:middle;opacity:1;fill:#217821;fill-opacity:1;stroke:#666666;stroke-width:21.6192;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stop-color:#000000"
+       x="66.470062"
+       y="78.963913"
+       id="text1114"><tspan
+         sodipodi:role="line"
+         id="tspan1112"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans Bold';fill:#217821;fill-opacity:1;stroke:none;stroke-width:21.6192"
+         x="66.470062"
+         y="78.963913">AVJ</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.7092px;line-height:0;font-family:'IBM Plex Sans';-inkscape-font-specification:'IBM Plex Sans Bold';text-align:center;text-anchor:middle;opacity:1;fill:#217821;fill-opacity:1;stroke:none;stroke-width:7.37586;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stop-color:#000000"
+       x="66.605904"
+       y="91.530167"
+       id="text2222"><tspan
+         sodipodi:role="line"
+         id="tspan2220"
+         style="line-height:11.7092px;fill:#217821;stroke-width:7.37587"
+         x="66.605904"
+         y="91.530167">AYUDA</tspan><tspan
+         sodipodi:role="line"
+         style="line-height:11.7092px;fill:#217821;stroke-width:7.37587"
+         x="66.605904"
+         y="103.23935"
+         id="tspan2224">VIVIENDA</tspan><tspan
+         sodipodi:role="line"
+         style="line-height:11.7092px;fill:#217821;stroke-width:7.37587"
+         x="66.605904"
+         y="114.94854"
+         id="tspan2226">JOVEN</tspan></text>
+  </g>
+</svg>

@@ -6,7 +6,11 @@
     <table class="table">
     {% for perfil in sistema.perfiles.all %}
       <tr>
-          <td>{{ perfil.usuario }}</td>  
+          <td>
+            <span class="title" title="{{ perfil.usuario.email }}">
+            {{ perfil.usuario }}
+            </span>
+          </td>  
           <td>{{ perfil.get_cometido_display }}</td>  
           <td>
            <a class="btn btn-danger" 
