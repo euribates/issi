@@ -161,6 +161,26 @@ def editar_proposito(request, sistema):
         })
 
 
+def editar_descripcion(request, sistema):
+    if request.method == "POST":
+        form = forms.EditarDescripcionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            Bus(request).success(
+                f"La descripción del S.I. {sistema}"
+                " ha sido actualizada"
+                )
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.EditarDescripcionForm(instance=sistema)
+    return render(request, 'sistemas/editar-descripcion.html', {
+        'titulo': f'Editar proposito de {sistema}',
+        'breadcrumbs': bc.editar_proposito(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
 def asignar_responsable(request, sistema):
     if request.method == "POST":
         form = forms.AsignarResponsableForm(request.POST)
@@ -450,7 +470,7 @@ def patch_usuarios(request):
     query = params.get("query")
     buff = [
         '<select name="usuario"'
-        ' size="17"'
+        ' size="7"'
         ' class="form-control">',
         '<option value="">Sin asignar</option>'
         ]

@@ -48,6 +48,10 @@ def a_editar_proposito(id_sistema: int) -> str:
     return _a('sistemas:editar_proposito', sistema=id_sistema)
 
 
+def a_editar_descripcion(id_sistema: int) -> str:
+    return _a('sistemas:editar_descripcion', sistema=id_sistema)
+
+
 def a_asignar_organismo(id_sistema: int) -> str:
     return _a('sistemas:asignar_organismo', sistema=id_sistema)
 

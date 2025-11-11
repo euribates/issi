@@ -47,6 +47,13 @@ def editar_proposito(sistema) -> BreadCrumb:
         )
 
 
+def editar_descripcion(sistema) -> BreadCrumb:
+    return detalle_sistema(sistema).step(
+        "Editar descripcion",
+        links.a_editar_descripcion(sistema.pk),
+        )
+
+
 def asignar_organismo(sistema) -> BreadCrumb:
     return detalle_sistema(sistema).step(
         "Asignar organismo",

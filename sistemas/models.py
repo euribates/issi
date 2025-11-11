@@ -80,7 +80,6 @@ class Sistema(models.Model):
         null=True,
         )
     descripcion = models.TextField(
-        max_length=512,
         blank=True,
         default='',
         verbose_name="Descripción del sistema",

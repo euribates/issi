@@ -159,6 +159,9 @@ class Ente(models.Model):
         except cls.DoesNotExist:
             return None
 
+    def __str__(self) -> str:
+        return f'{self.organismo.nombre_organismo} ({self.pk})'
+
     def es_de_primer_nivel(self) -> bool:
         result = self.organismo.categoria in {
             'Presidencia',

@@ -1,0 +1,24 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+{% block content %}
+
+<div class="card">
+
+  <div class="card-header">
+      Editar descripción del sistema {{ sistema }}
+  </div>
+
+  <div class="card-body">
+
+  <form method="POST" action=".">
+  {% csrf_token %}
+  {{ form.errors }}  
+
+  {{ form }}
+
+  <button type="submit" class="btn btn-primary">Editar descripción</button>
+  </form>
+  </div>
+</div>  
+
+{% endblock content %}

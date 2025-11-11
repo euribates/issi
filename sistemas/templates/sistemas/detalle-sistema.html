@@ -49,6 +49,15 @@
                           
             <dt>Descripción</dt>
             <dd>{{ sistema.descripcion|as_descripcion }}</dd>
+
+            <dd>
+                <a class="btn btn-warning"
+                   href="{% url 'sistemas:editar_descripcion' sistema=sistema %}"
+                   title="Editar descripción">
+                Editar descripción
+                </a>
+            </dd>
+
             </dd>
 
             <dt>URL principal</th>

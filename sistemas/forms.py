@@ -10,7 +10,14 @@ class BaseForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for visible in self.visible_fields():
-            visible.field.widget.attrs['class'] = 'form-control'
+            widget = visible.field.widget
+            match widget.__class__:
+                case widgets.RadioSelect:
+                    widget.attrs['class'] = 'form-check-input'
+                case widgets.CheckboxInput:
+                    widget.attrs['class'] = 'form-check-input'
+                case _:
+                    widget.attrs['class'] = 'form-control'
 
 
 class AltaSistemaForm(BaseForm):
@@ -82,11 +89,26 @@ class EditarPropositoForm(BaseForm):
         )
 
 
+class EditarDescripcionForm(BaseForm):
+
+    class Meta:
+        model = models.Sistema
+        fields = ['descripcion']
+
+    descripcion = forms.CharField(
+        widget=widgets.Textarea(attrs={"cols": "40", "rows": 12}),
+        required=False,
+        )
+
+
 class AsignarResponsableForm(BaseForm):
 
     class Meta:
         model = models.Perfil
         fields = ['cometido', 'usuario']
+        widgets = {
+            'cometido': forms.RadioSelect(),
+            }
 
-    def organismos_filtrados(self, query: str):
-        return models.Organismo.search_organismo(query)
+    # def organismos_filtrados(self, query: str):
+        # return models.Organismo.search_organismo(query)
