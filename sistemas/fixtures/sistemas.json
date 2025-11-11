@@ -273,6 +273,14 @@
 },
 {
     "model": "sistemas.tema",
+    "pk": "GRH",
+    "fields": {
+        "nombre_tema": "Gestión RRHH",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
     "pk": "HAC",
     "fields": {
         "nombre_tema": "Hacienda",
@@ -427,7 +435,7 @@
     "model": "sistemas.tema",
     "pk": "TEC",
     "fields": {
-        "nombre_tema": "Organización administrativa",
+        "nombre_tema": "Tecnología",
         "transversal": true
     }
 },
@@ -584,8 +592,8 @@
         "organismo": 42093,
         "codigo": "PLATEA",
         "url": null,
-        "descripcion": "Facilitar a los departamentos una herramienta que posibilite la automatización y tramitación electrónica de los expedientes administrativos.",
-        "proposito": "La Ley 11/2007 reconoce a los ciudadanos el derecho a conocer por medios electrónicos el estado de tramitación de los procedimientos en los que sean interesados. Dicho derecho, obliga a los departamentos disponer de uno o varios gestores de expedientes.\r\n\r\nEl Gobierno de Canarias, para cumplir con este derecho, puso en marcha el proyecto de un gestor de expedientes corporativo, ofreciendo con ello la posibilidad de implementar y utilizar PLATEA por los departamentos sin gasto ninguno.\r\n\r\n## Objetivos\r\n\r\n- Facilitar a los departamentos una herramienta que posibilite la automatización y tramitación electrónica de los expedientes administrativos.\r\n\r\n- Integrar la gestión electrónica de procedimientos con la plataforma PLATINO de interoperabilidad corporativa en el Gobierno de Canarias y otros sistemas de gestión de expedientes ya existentes en otros Departamentos (GexTur, MAyTe, etc.)\r\n\r\n- Consecución efectiva del derecho de los ciudadanos a conocer el estado de los expedientes por medios electrónicos, definido en el artículo 6 de la Ley 11/2007.\r\n\r\nPrincipales dificultades y aspectos clave para la implantación\r\n\r\n- Se recomienda utilizar un motor de workflow adecuado a las necesidades de la organización y que permita acciones complejas como deshacer fases, gestión de eventos y relacionar expedientes.\r\n\r\n- Simplificar previamente todos los procedimientos a modelar en la herramienta de gestión, para facilitar el proceso posterior de diseño y parametrización de expedientes.\r\n\r\n- Dificultad derivada de la adecuación a los requisitos funcionales y aspectos organizativos de cada departamento, de forma que sea válida para cualquier modelo de negocio.\r\n\r\n- Las líneas de evolución girarán entorno a modelar todas las sub/familias, soportar modelado de eventos configurables asociados a cada fase/trámite/procedimiento, funcionalidades avanzadas en la tramitación de expedientes e integración con nuevos servicios de PLATINO.",
+        "descripcion": "La [Ley 11/2007](https://www.boe.es/eli/es/l/2007/06/22/11/con) reconoce\r\na los ciudadanos el derecho a conocer por medios electrónicos el estado\r\nde tramitación de los procedimientos en los que sean interesados. Dicho\r\nderecho, obliga a los departamentos disponer de uno o varios gestores de\r\nexpedientes.\r\n\r\nEl Gobierno de Canarias, para cumplir con este derecho, puso en marcha\r\nel proyecto de un gestor de expedientes corporativo, ofreciendo con ello\r\nla posibilidad de implementar y utilizar **PLATEA** por los\r\ndepartamentos sin gasto ninguno.\r\n\r\n## Objetivos\r\n\r\n- Facilitar a los departamentos una herramienta que posibilite la\r\n  automatización y tramitación electrónica de los expedientes\r\n  administrativos.\r\n\r\n- Integrar la gestión electrónica de procedimientos con la plataforma\r\n  PLATINO de interoperabilidad corporativa en el Gobierno de Canarias y\r\n  otros sistemas de gestión de expedientes ya existentes en otros\r\n  Departamentos (GexTur, MAyTe, etc.).\r\n\r\n- Consecución efectiva del derecho de los ciudadanos a conocer el estado\r\n  de los expedientes por medios electrónicos, definido en el artículo 6\r\n  de la Ley 11/2007.\r\n\r\n### Principales dificultades y aspectos clave para la implantación\r\n\r\n- Se recomienda utilizar un motor de _workflow_ adecuado a las\r\n  necesidades de la organización y que permita acciones complejas como\r\n  deshacer fases, gestión de eventos y relacionar expedientes.\r\n\r\n- Simplificar previamente todos los procedimientos a modelar en la\r\n  herramienta de gestión, para facilitar el proceso posterior de diseño\r\n  y parametrización de expedientes.\r\n\r\n- Dificultad derivada de la adecuación a los requisitos funcionales y\r\n  aspectos organizativos de cada departamento, de forma que sea válida\r\n  para cualquier modelo de negocio.\r\n\r\n- Las líneas de evolución girarán entorno a modelar todas las familias y\r\n  subfamilias, soportar modelado de eventos configurables asociados a\r\n  cada fase/trámite/procedimiento, funcionalidades avanzadas en la\r\n  tramitación de expedientes e integración con nuevos servicios de\r\n  PLATINO.",
+        "proposito": "Facilitar a los departamentos una herramienta que posibilite la automatización y tramitación electrónica de los expedientes administrativos.",
         "tema": "TEC",
         "es_transversal": true,
         "es_subsistema_de": null,
@@ -625,7 +633,7 @@
         "codigo": "PLATINO",
         "url": null,
         "descripcion": "Servicio de Interoperabilidad del Gobierno de Canarias",
-        "proposito": "Una infraestructura tecnológica para facilitar la ejecución de trámites administrativos electrónicos, siguiendo estándares y directrices de la administración electrónica.",
+        "proposito": "Facilitar la ejecución de trámites administrativos electrónicos, siguiendo estándares y directrices de la administración electrónica.",
         "tema": "TEC",
         "es_transversal": true,
         "es_subsistema_de": null,
@@ -732,7 +740,7 @@
         "tiene_especial_importancia": true,
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-dircac.png"
+        "icono": "sistemas/iconos/2025/dircac-logo.png"
     }
 },
 {
@@ -1744,8 +1752,8 @@
         "organismo": 42138,
         "codigo": "ACAP",
         "url": null,
-        "descripcion": "",
-        "proposito": "Aplicación que permite la consulta y gestión sobre la información recogida en el RPC y el seguimiento de las actuaciones relativas a esto",
+        "descripcion": "Aplicación que permite la consulta y gestión sobre la información recogida en el RPC y el seguimiento de las actuaciones relativas a esto",
+        "proposito": "Permitir la consulta y gestión de la información recogida en el RPC",
         "tema": "OTE",
         "es_transversal": false,
         "es_subsistema_de": null,
@@ -1787,6 +1795,246 @@
         "descripcion": "Redmine PTCTA",
         "proposito": "Control de proyectos de soporte o gestión con empresas proveedoras",
         "tema": "OTE",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 66,
+    "fields": {
+        "uuid": "982d1820-e0e2-4f03-bbb8-225bb1ab7417",
+        "nombre": "Catálogo de Aplicaciones, Servidores, Portales, Empresas y  Responsable de la CTEEN",
+        "organismo": 42164,
+        "codigo": "CASPER",
+        "url": null,
+        "descripcion": "Aplicación encargada de gestionar todas las entidades que figuran en su nombre además de los distintos conjuntos de tipos de certificados asociados a las aplicaciones y sus servidores.",
+        "proposito": "Aplicación encargada de gestionar todas las entidades que figuran en su nombre además de los distintos conjuntos de tipos de certificados asociados a las aplicaciones y sus servidores.",
+        "tema": "TEC",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 67,
+    "fields": {
+        "uuid": "e02dd18d-a05e-47a4-930f-ef3eee411bef",
+        "nombre": "Redmine de gestión de proyectos de la consejería",
+        "organismo": 42164,
+        "codigo": "GESVER",
+        "url": null,
+        "descripcion": "Aplicación encargada de gestionar todas las entidades que figuran en su nombre además de los distintos conjuntos de tipos de certificados asociados a las aplicaciones y sus servidores.",
+        "proposito": "Realizar el seguimiento y control de  proyectos de la Consejería",
+        "tema": "TEC",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 68,
+    "fields": {
+        "uuid": "34fc2ef7-78f9-4a36-ae0c-673aaef70967",
+        "nombre": "Gestión de activos de Microinformática",
+        "organismo": 42164,
+        "codigo": "GAMI",
+        "url": null,
+        "descripcion": "GAMi da respuesta a las necesidades de gestión de PCs, portátiles, monitores, impresoras, etc. asignados al personal de la Consejería.",
+        "proposito": "Gestión de PCs, portátiles, monitores, impresoras, etc. asignados al personal",
+        "tema": "TEC",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 69,
+    "fields": {
+        "uuid": "0fa07cb1-70db-4d6b-a6d6-82cd03fc5aa1",
+        "nombre": "Central de usuarios",
+        "organismo": 42164,
+        "codigo": "CEUS",
+        "url": null,
+        "descripcion": "Consola web para la gestión centralizada de usuarios y aplicaciones de la Consejería.",
+        "proposito": "Gestión centralizada de usuarios y aplicaciones de la Consejería",
+        "tema": "TEC",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 70,
+    "fields": {
+        "uuid": "b431def1-6184-4ad6-bc9e-9927b9caaa3e",
+        "nombre": "BackOffice de gestión de expedientes de la D.G. Energía (1)",
+        "organismo": 42163,
+        "codigo": "CANDELA",
+        "url": null,
+        "descripcion": "Gestión de expedientes electrónicos de distintos servicios de la D.G. Energía.\r\n\r\nSubvenciones: MOVES III y Fondos FEDER\r\n\r\nSe encuentra dentro del ecosistema de SITA.",
+        "proposito": "Gestión de expedientes electrónicos de distintos servicios de la D.G. Energía",
+        "tema": "ENG",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 71,
+    "fields": {
+        "uuid": "6e28f140-c141-4f6b-b08d-c12173094bc8",
+        "nombre": "BackOffice de gestión de expedientes de la D.G. Energía (2)",
+        "organismo": 42163,
+        "codigo": "SINERGIA",
+        "url": null,
+        "descripcion": "Gestión de expedientes electrónicos de distintos servicios de la D.G. Energía.\r\n\r\nLey 6/2022, de 27 de diciembre, de cambio climático y transición energética de Canarias.",
+        "proposito": "Gestión de expedientes electrónicos de distintos servicios de la D.G. Energía",
+        "tema": "ENG",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 72,
+    "fields": {
+        "uuid": "0962ac86-c276-4725-9b44-d85e609c2fbe",
+        "nombre": "Observatorio de la Energía de Canarias",
+        "organismo": 42163,
+        "codigo": "OECAN",
+        "url": null,
+        "descripcion": "Página Web del Observatorio de la Energía de Canarias.\r\n\r\n Reglamento Orgánico de la Consejería de Transición Ecológica y Energía",
+        "proposito": "Gestión de la página Web del Observatorio de la Energía de Canarias.",
+        "tema": "ENG",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 73,
+    "fields": {
+        "uuid": "ab611ec5-44e4-456c-84d0-f1565c4196bf",
+        "nombre": "Registro Canario de Infractores de Caza",
+        "organismo": 42162,
+        "codigo": "RICAZA",
+        "url": null,
+        "descripcion": "Aplicación que da soporte de forma electrónica a la normativa sobre registro de datos de cazadores que comenten infracciones en sus actividades, por tanto es un registro que contiene datos de carácter personal.\r\n\r\nOrden de 17 de agosto de 2009",
+        "proposito": "Registro de cazadores que comenten infracciones en sus actividades",
+        "tema": "FYF",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": ""
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 74,
+    "fields": {
+        "uuid": "7e69aa8f-5a97-4347-8897-8f88de8a5817",
+        "nombre": "Red Canaria de Alerta Temprana de Especies Exóticas Invasoras",
+        "organismo": 42162,
+        "codigo": "RedEXOS",
+        "url": null,
+        "descripcion": "Aplicación que almacena datos y fotografías de avistamientos de fauna y flora no autóctona. Incluye mecanismo de notificación de avistamientos.\r\n\r\n Decreto 117/2020, de 19 de noviembre",
+        "proposito": "Almacenar datos y fotografías de avistamientos de fauna y flora no autóctona. Notificación de avistamientos.",
+        "tema": "FYF",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/redexos-logo.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 75,
+    "fields": {
+        "uuid": "04668f8f-ceea-4dfa-bec1-629071ff7f3e",
+        "nombre": "Boletín Oficial de Canarias",
+        "organismo": 42121,
+        "codigo": "BOC",
+        "url": null,
+        "descripcion": "",
+        "proposito": "Gestionar el Boletín Oficial de Canarias",
+        "tema": "UNK",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/geboc-logo.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 76,
+    "fields": {
+        "uuid": "1658f6e4-5676-4453-9233-3106e5d4515a",
+        "nombre": "Red de Observadores del Medio Marino en Canarias",
+        "organismo": 42162,
+        "codigo": "RedPromar",
+        "url": null,
+        "descripcion": "Sistema de vigilancia y registro de información de todos los organismos marinos de Canarias utilizando el concepto de “Ciencia ciudadana”.\r\n\r\nResolución nº 320 de 22 de junio de 2015 \r\n\r\n- Serv.J De Instalaciones energéticas\r\n- Serv. De Eficiencia Energética - UNIDAD ADMINISTRATIVA\r\n- Serv. De Eficiencia Energética",
+        "proposito": "Vigilancia y registro de información de los organismos marinos de Canarias",
+        "tema": "FYF",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/redpromar-logo.png"
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 77,
+    "fields": {
+        "uuid": "16e042fb-6e40-4541-97ce-0e28b3290fff",
+        "nombre": "",
+        "organismo": null,
+        "codigo": "",
+        "url": null,
+        "descripcion": "La [Ley 11/2007](https://www.boe.es/eli/es/l/2007/06/22/11/con) reconoce\r\na los ciudadanos el derecho a conocer por medios electrónicos el estado\r\nde tramitación de los procedimientos en los que sean interesados. Dicho\r\nderecho, obliga a los departamentos disponer de uno o varios gestores de\r\nexpedientes.\r\n\r\nEl Gobierno de Canarias, para cumplir con este derecho, puso en marcha\r\nel proyecto de un gestor de expedientes corporativo, ofreciendo con ello\r\nla posibilidad de implementar y utilizar **PLATEA** por los\r\ndepartamentos sin gasto ninguno.\r\n\r\n## Objetivos\r\n\r\n- Facilitar a los departamentos una herramienta que posibilite la\r\n  automatización y tramitación electrónica de los expedientes\r\n  administrativos.\r\n\r\n- Integrar la gestión electrónica de procedimientos con la plataforma\r\n  PLATINO de interoperabilidad corporativa en el Gobierno de Canarias y\r\n  otros sistemas de gestión de expedientes ya existentes en otros\r\n  Departamentos (GexTur, MAyTe, etc.).\r\n\r\n- Consecución efectiva del derecho de los ciudadanos a conocer el estado\r\n  de los expedientes por medios electrónicos, definido en el artículo 6\r\n  de la Ley 11/2007.\r\n\r\n### Principales dificultades y aspectos clave para la implantación\r\n\r\n- Se recomienda utilizar un motor de _workflow_ adecuado a las\r\n  necesidades de la organización y que permita acciones complejas como\r\n  deshacer fases, gestión de eventos y relacionar expedientes.\r\n\r\n- Simplificar previamente todos los procedimientos a modelar en la\r\n  herramienta de gestión, para facilitar el proceso posterior de diseño\r\n  y parametrización de expedientes.\r\n\r\n- Dificultad derivada de la adecuación a los requisitos funcionales y\r\n  aspectos organizativos de cada departamento, de forma que sea válida\r\n  para cualquier modelo de negocio.\r\n\r\n- Las líneas de evolución girarán entorno a modelar todas las familias y\r\n  subfamilias, soportar modelado de eventos configurables asociados a\r\n  cada fase/trámite/procedimiento, funcionalidades avanzadas en la\r\n  tramitación de expedientes e integración con nuevos servicios de\r\n  PLATINO.",
+        "proposito": "",
+        "tema": "UNK",
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
@@ -1937,6 +2185,32 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "arodall",
+    "fields": {
+        "email": "arodall@gobiernodecanarias.org",
+        "nombre": "Alejandra",
+        "apellidos": "Rodríguez Alloza",
+        "organismo": 42163,
+        "f_alta": "2025-11-11T08:27:32.715Z",
+        "f_cambio": "2025-11-11T08:27:32.715Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "asanmonx",
+    "fields": {
+        "email": "asanmonx@gobiernodecanarias.org",
+        "nombre": "Alberto",
+        "apellidos": "Santana Monagas",
+        "organismo": 42163,
+        "f_alta": "2025-11-11T08:14:20.576Z",
+        "f_cambio": "2025-11-11T08:14:20.576Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "atrudel",
     "fields": {
         "email": "atrudel@gobiernodecanarias.org",
@@ -1958,6 +2232,19 @@
         "organismo": 41854,
         "f_alta": "2025-10-06T18:41:33.879Z",
         "f_cambio": "2025-10-06T18:41:33.879Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "avelram",
+    "fields": {
+        "email": "avelram@gobiernodecanarias.org",
+        "nombre": "Alicia",
+        "apellidos": "Velduque Ramos",
+        "organismo": 42163,
+        "f_alta": "2025-11-11T08:34:03.100Z",
+        "f_cambio": "2025-11-11T08:34:03.100Z",
         "f_baja": null
     }
 },
@@ -2223,6 +2510,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "fmerboa",
+    "fields": {
+        "email": "fmerboa@gobiernodecanarias.org",
+        "nombre": "Francisco Miguel",
+        "apellidos": "Merino Boada",
+        "organismo": 42093,
+        "f_alta": "2025-11-11T11:23:41.000Z",
+        "f_cambio": "2025-11-11T11:23:41.000Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "fojechi",
     "fields": {
         "email": "fojechi@gobiernodecanarias.org",
@@ -2379,6 +2679,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "jjgarcar",
+    "fields": {
+        "email": "jjgarcar@gobiernodecanarias.org",
+        "nombre": "Javier josé",
+        "apellidos": "García Carballo",
+        "organismo": 42163,
+        "f_alta": "2025-11-11T08:16:32.125Z",
+        "f_cambio": "2025-11-11T08:16:32.125Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "jmorrom",
     "fields": {
         "email": "jmorrom@gobiernodecanarias.org",
@@ -2530,6 +2843,32 @@
         "organismo": 42138,
         "f_alta": "2025-11-10T14:30:24.693Z",
         "f_cambio": "2025-11-10T14:30:24.693Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mcabperd",
+    "fields": {
+        "email": "mcabperd@gobiernodecanarias.org",
+        "nombre": "Miguel Ángel",
+        "apellidos": "Cabrera Pérez",
+        "organismo": 42162,
+        "f_alta": "2025-11-11T14:16:08.181Z",
+        "f_cambio": "2025-11-11T14:16:08.181Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mdelluz",
+    "fields": {
+        "email": "mdelluz@gobiernodecanarias.org",
+        "nombre": "María Asunción",
+        "apellidos": "Delgado Luzardo",
+        "organismo": 42162,
+        "f_alta": "2025-11-11T09:23:18.591Z",
+        "f_cambio": "2025-11-11T09:23:18.591Z",
         "f_baja": null
     }
 },
@@ -2951,6 +3290,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "smarabr",
+    "fields": {
+        "email": "smarabr@gobiernodecanarias.org",
+        "nombre": "Sonia",
+        "apellidos": "Martín de Abreu",
+        "organismo": 42162,
+        "f_alta": "2025-11-11T09:28:27.025Z",
+        "f_cambio": "2025-11-11T09:28:27.025Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "tlorare",
     "fields": {
         "email": "tlorare@gobiernodecanarias.org",
@@ -2964,6 +3316,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "valmmar",
+    "fields": {
+        "email": "valmmar@gobiernodecanarias.org",
+        "nombre": "Victor Manuel",
+        "apellidos": "Almeida Martín",
+        "organismo": 42163,
+        "f_alta": "2025-11-11T08:29:14.987Z",
+        "f_cambio": "2025-11-11T08:29:14.987Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "vferlop",
     "fields": {
         "email": "vferlop@gobiernodecanarias.org",
@@ -2972,6 +3337,19 @@
         "organismo": 42124,
         "f_alta": "2025-11-05T20:12:09.547Z",
         "f_cambio": "2025-11-05T20:12:09.547Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "vrevbar",
+    "fields": {
+        "email": "vrevbar@gobiernodecanarias.org",
+        "nombre": "Victor Manuel",
+        "apellidos": "Reverón Barroso",
+        "organismo": 42162,
+        "f_alta": "2025-11-11T09:24:36.608Z",
+        "f_cambio": "2025-11-11T09:24:36.608Z",
         "f_baja": null
     }
 },
@@ -4345,6 +4723,462 @@
         "sistema": 65,
         "f_alta": "2025-11-10T14:35:44.530Z",
         "f_cambio": "2025-11-10T14:35:44.530Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 74,
+    "fields": {
+        "usuario": "mnavherz",
+        "cometido": "TEC",
+        "sistema": 66,
+        "f_alta": "2025-11-11T07:58:20.037Z",
+        "f_cambio": "2025-11-11T07:58:20.037Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 75,
+    "fields": {
+        "usuario": "mjgarsan",
+        "cometido": "TEC",
+        "sistema": 66,
+        "f_alta": "2025-11-11T07:58:38.117Z",
+        "f_cambio": "2025-11-11T07:58:38.117Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 76,
+    "fields": {
+        "usuario": "tlorare",
+        "cometido": "TEC",
+        "sistema": 66,
+        "f_alta": "2025-11-11T07:58:53.510Z",
+        "f_cambio": "2025-11-11T07:58:53.510Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 77,
+    "fields": {
+        "usuario": "mnavherz",
+        "cometido": "FUN",
+        "sistema": 66,
+        "f_alta": "2025-11-11T07:59:10.419Z",
+        "f_cambio": "2025-11-11T07:59:10.419Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 78,
+    "fields": {
+        "usuario": "mnavherz",
+        "cometido": "TEC",
+        "sistema": 67,
+        "f_alta": "2025-11-11T08:03:08.787Z",
+        "f_cambio": "2025-11-11T08:03:23.644Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 79,
+    "fields": {
+        "usuario": "mnavherz",
+        "cometido": "FUN",
+        "sistema": 67,
+        "f_alta": "2025-11-11T08:03:35.781Z",
+        "f_cambio": "2025-11-11T08:03:35.781Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 80,
+    "fields": {
+        "usuario": "mjgarsan",
+        "cometido": "TEC",
+        "sistema": 67,
+        "f_alta": "2025-11-11T08:03:50.923Z",
+        "f_cambio": "2025-11-11T08:03:50.923Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 81,
+    "fields": {
+        "usuario": "tlorare",
+        "cometido": "TEC",
+        "sistema": 67,
+        "f_alta": "2025-11-11T08:04:02.099Z",
+        "f_cambio": "2025-11-11T08:04:02.099Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 82,
+    "fields": {
+        "usuario": "mnavherz",
+        "cometido": "FUN",
+        "sistema": 68,
+        "f_alta": "2025-11-11T08:05:56.883Z",
+        "f_cambio": "2025-11-11T08:05:56.883Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 83,
+    "fields": {
+        "usuario": "mnavherz",
+        "cometido": "TEC",
+        "sistema": 68,
+        "f_alta": "2025-11-11T08:06:04.321Z",
+        "f_cambio": "2025-11-11T08:06:04.321Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 84,
+    "fields": {
+        "usuario": "mjgarsan",
+        "cometido": "TEC",
+        "sistema": 68,
+        "f_alta": "2025-11-11T08:06:15.196Z",
+        "f_cambio": "2025-11-11T08:06:15.196Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 85,
+    "fields": {
+        "usuario": "tlorare",
+        "cometido": "TEC",
+        "sistema": 68,
+        "f_alta": "2025-11-11T08:06:30.197Z",
+        "f_cambio": "2025-11-11T08:06:30.197Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 86,
+    "fields": {
+        "usuario": "mnavherz",
+        "cometido": "FUN",
+        "sistema": 69,
+        "f_alta": "2025-11-11T08:08:53.353Z",
+        "f_cambio": "2025-11-11T08:08:53.353Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 87,
+    "fields": {
+        "usuario": "mnavherz",
+        "cometido": "TEC",
+        "sistema": 69,
+        "f_alta": "2025-11-11T08:09:01.035Z",
+        "f_cambio": "2025-11-11T08:09:01.035Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 88,
+    "fields": {
+        "usuario": "mjgarsan",
+        "cometido": "TEC",
+        "sistema": 69,
+        "f_alta": "2025-11-11T08:09:14.727Z",
+        "f_cambio": "2025-11-11T08:09:14.727Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 89,
+    "fields": {
+        "usuario": "tlorare",
+        "cometido": "TEC",
+        "sistema": 69,
+        "f_alta": "2025-11-11T08:09:26.114Z",
+        "f_cambio": "2025-11-11T08:09:26.114Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 93,
+    "fields": {
+        "usuario": "jjgarcar",
+        "cometido": "TEC",
+        "sistema": 70,
+        "f_alta": "2025-11-11T08:18:08.159Z",
+        "f_cambio": "2025-11-11T08:18:08.159Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 94,
+    "fields": {
+        "usuario": "asanmonx",
+        "cometido": "TEC",
+        "sistema": 70,
+        "f_alta": "2025-11-11T08:18:23.156Z",
+        "f_cambio": "2025-11-11T08:18:23.156Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 95,
+    "fields": {
+        "usuario": "asanmonx",
+        "cometido": "FUN",
+        "sistema": 70,
+        "f_alta": "2025-11-11T08:18:50.575Z",
+        "f_cambio": "2025-11-11T08:18:50.575Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 96,
+    "fields": {
+        "usuario": "jjgarcar",
+        "cometido": "FUN",
+        "sistema": 70,
+        "f_alta": "2025-11-11T08:19:06.306Z",
+        "f_cambio": "2025-11-11T08:19:06.306Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 98,
+    "fields": {
+        "usuario": "mjgarsan",
+        "cometido": "TEC",
+        "sistema": 71,
+        "f_alta": "2025-11-11T08:25:55.387Z",
+        "f_cambio": "2025-11-11T08:25:55.387Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 99,
+    "fields": {
+        "usuario": "tlorare",
+        "cometido": "TEC",
+        "sistema": 71,
+        "f_alta": "2025-11-11T08:26:21.540Z",
+        "f_cambio": "2025-11-11T08:26:21.540Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 100,
+    "fields": {
+        "usuario": "arodall",
+        "cometido": "FUN",
+        "sistema": 71,
+        "f_alta": "2025-11-11T08:27:41.126Z",
+        "f_cambio": "2025-11-11T08:27:41.126Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 101,
+    "fields": {
+        "usuario": "asanmonx",
+        "cometido": "FUN",
+        "sistema": 71,
+        "f_alta": "2025-11-11T08:27:57.080Z",
+        "f_cambio": "2025-11-11T08:27:57.080Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 102,
+    "fields": {
+        "usuario": "jjgarcar",
+        "cometido": "FUN",
+        "sistema": 71,
+        "f_alta": "2025-11-11T08:28:09.937Z",
+        "f_cambio": "2025-11-11T08:28:09.937Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 103,
+    "fields": {
+        "usuario": "valmmar",
+        "cometido": "FUN",
+        "sistema": 71,
+        "f_alta": "2025-11-11T08:29:20.188Z",
+        "f_cambio": "2025-11-11T08:29:20.188Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 105,
+    "fields": {
+        "usuario": "avelram",
+        "cometido": "TEC",
+        "sistema": 72,
+        "f_alta": "2025-11-11T08:34:10.199Z",
+        "f_cambio": "2025-11-11T08:34:22.539Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 106,
+    "fields": {
+        "usuario": "avelram",
+        "cometido": "FUN",
+        "sistema": 72,
+        "f_alta": "2025-11-11T08:34:32.551Z",
+        "f_cambio": "2025-11-11T08:34:32.551Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 107,
+    "fields": {
+        "usuario": "mjgarsan",
+        "cometido": "TEC",
+        "sistema": 73,
+        "f_alta": "2025-11-11T08:40:22.597Z",
+        "f_cambio": "2025-11-11T09:21:38.385Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 108,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "FUN",
+        "sistema": 73,
+        "f_alta": "2025-11-11T09:23:30.454Z",
+        "f_cambio": "2025-11-11T09:23:30.454Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 109,
+    "fields": {
+        "usuario": "vrevbar",
+        "cometido": "FUN",
+        "sistema": 73,
+        "f_alta": "2025-11-11T09:24:46.123Z",
+        "f_cambio": "2025-11-11T09:24:46.123Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 110,
+    "fields": {
+        "usuario": "mjgarsan",
+        "cometido": "TEC",
+        "sistema": 74,
+        "f_alta": "2025-11-11T09:27:11.135Z",
+        "f_cambio": "2025-11-11T09:27:11.135Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 111,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "TEC",
+        "sistema": 74,
+        "f_alta": "2025-11-11T09:27:25.274Z",
+        "f_cambio": "2025-11-11T09:27:25.274Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 112,
+    "fields": {
+        "usuario": "smarabr",
+        "cometido": "TEC",
+        "sistema": 74,
+        "f_alta": "2025-11-11T09:28:32.971Z",
+        "f_cambio": "2025-11-11T09:28:32.971Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 113,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "TEC",
+        "sistema": 76,
+        "f_alta": "2025-11-11T14:14:32.230Z",
+        "f_cambio": "2025-11-11T14:14:32.230Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 114,
+    "fields": {
+        "usuario": "mcabperd",
+        "cometido": "FUN",
+        "sistema": 76,
+        "f_alta": "2025-11-11T14:16:19.939Z",
+        "f_cambio": "2025-11-11T14:16:19.939Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 115,
+    "fields": {
+        "usuario": "mcabperd",
+        "cometido": "TEC",
+        "sistema": 76,
+        "f_alta": "2025-11-11T14:16:37.892Z",
+        "f_cambio": "2025-11-11T14:16:37.892Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 116,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "FUN",
+        "sistema": 76,
+        "f_alta": "2025-11-11T14:16:55.601Z",
+        "f_cambio": "2025-11-11T14:16:55.601Z",
         "f_baja": null
     }
 }
