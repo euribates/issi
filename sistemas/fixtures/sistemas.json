@@ -2025,22 +2025,22 @@
 },
 {
     "model": "sistemas.sistema",
-    "pk": 77,
+    "pk": 78,
     "fields": {
-        "uuid": "16e042fb-6e40-4541-97ce-0e28b3290fff",
-        "nombre": "",
-        "organismo": null,
-        "codigo": "",
+        "uuid": "95b9e6cf-72ec-4ac1-9d06-9429e8f297cf",
+        "nombre": "Sinca",
+        "organismo": 42093,
+        "codigo": "SINCA",
         "url": null,
-        "descripcion": "La [Ley 11/2007](https://www.boe.es/eli/es/l/2007/06/22/11/con) reconoce\r\na los ciudadanos el derecho a conocer por medios electrónicos el estado\r\nde tramitación de los procedimientos en los que sean interesados. Dicho\r\nderecho, obliga a los departamentos disponer de uno o varios gestores de\r\nexpedientes.\r\n\r\nEl Gobierno de Canarias, para cumplir con este derecho, puso en marcha\r\nel proyecto de un gestor de expedientes corporativo, ofreciendo con ello\r\nla posibilidad de implementar y utilizar **PLATEA** por los\r\ndepartamentos sin gasto ninguno.\r\n\r\n## Objetivos\r\n\r\n- Facilitar a los departamentos una herramienta que posibilite la\r\n  automatización y tramitación electrónica de los expedientes\r\n  administrativos.\r\n\r\n- Integrar la gestión electrónica de procedimientos con la plataforma\r\n  PLATINO de interoperabilidad corporativa en el Gobierno de Canarias y\r\n  otros sistemas de gestión de expedientes ya existentes en otros\r\n  Departamentos (GexTur, MAyTe, etc.).\r\n\r\n- Consecución efectiva del derecho de los ciudadanos a conocer el estado\r\n  de los expedientes por medios electrónicos, definido en el artículo 6\r\n  de la Ley 11/2007.\r\n\r\n### Principales dificultades y aspectos clave para la implantación\r\n\r\n- Se recomienda utilizar un motor de _workflow_ adecuado a las\r\n  necesidades de la organización y que permita acciones complejas como\r\n  deshacer fases, gestión de eventos y relacionar expedientes.\r\n\r\n- Simplificar previamente todos los procedimientos a modelar en la\r\n  herramienta de gestión, para facilitar el proceso posterior de diseño\r\n  y parametrización de expedientes.\r\n\r\n- Dificultad derivada de la adecuación a los requisitos funcionales y\r\n  aspectos organizativos de cada departamento, de forma que sea válida\r\n  para cualquier modelo de negocio.\r\n\r\n- Las líneas de evolución girarán entorno a modelar todas las familias y\r\n  subfamilias, soportar modelado de eventos configurables asociados a\r\n  cada fase/trámite/procedimiento, funcionalidades avanzadas en la\r\n  tramitación de expedientes e integración con nuevos servicios de\r\n  PLATINO.",
-        "proposito": "",
-        "tema": "UNK",
-        "es_transversal": false,
+        "descripcion": "**Sinca** (Sistema de Intermediación de Datos de Canarias) es la nueva plataforma del Gobierno de Canarias, diseñada para centralizar y facilitar el acceso a los servicios de intermediación de datos. Esta aplicación constituye una evolución del sistema anterior, integrando los datos proporcionados por la Plataforma de Intermediación de Datos (PID) de la Administración Central, así como otros datos gestionados exclusivamente por entidades del Gobierno de Canarias u otras entidades locales.\r\n\r\nEl objetivo de Sinca es mejorar el intercambio de información entre las administraciones públicas, tanto a nivel autonómico como estatal, asegurando un acceso eficiente y seguro a los datos necesarios para la gestión de trámites. \r\n\r\nEsta plataforma permite la consulta de información clave como datos de identidad, residencia, vehículos, títulos educativos, entre otros, optimizando los procedimientos administrativos y reduciendo los tiempos de respuesta.",
+        "proposito": "Facillitar el intercambio de información entre las administraciones públicas, tanto a nivel autonómico como estatal",
+        "tema": "TRD",
+        "es_transversal": true,
         "es_subsistema_de": null,
-        "tiene_especial_importancia": false,
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": ""
+        "tiene_especial_importancia": true,
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/sinca-logo.png"
     }
 },
 {
@@ -2516,8 +2516,8 @@
         "nombre": "Francisco Miguel",
         "apellidos": "Merino Boada",
         "organismo": 42093,
-        "f_alta": "2025-11-11T11:23:41.000Z",
-        "f_cambio": "2025-11-11T11:23:41.000Z",
+        "f_alta": "2025-11-11T11:23:41Z",
+        "f_cambio": "2025-11-11T11:23:41Z",
         "f_baja": null
     }
 },
@@ -3090,6 +3090,19 @@
         "organismo": 42114,
         "f_alta": "2025-10-06T18:41:33.594Z",
         "f_cambio": "2025-10-06T18:41:33.594Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mtorher1",
+    "fields": {
+        "email": "mtorherl@gobiernodecanarias.org",
+        "nombre": "María Victoria",
+        "apellidos": "Toral Hernández",
+        "organismo": 42093,
+        "f_alta": "2025-11-12T13:28:01.483Z",
+        "f_cambio": "2025-11-12T13:28:01.483Z",
         "f_baja": null
     }
 },
@@ -5179,6 +5192,18 @@
         "sistema": 76,
         "f_alta": "2025-11-11T14:16:55.601Z",
         "f_cambio": "2025-11-11T14:16:55.601Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 117,
+    "fields": {
+        "usuario": "mtorher1",
+        "cometido": "FUN",
+        "sistema": 78,
+        "f_alta": "2025-11-12T13:28:11.752Z",
+        "f_cambio": "2025-11-12T13:28:11.753Z",
         "f_baja": null
     }
 }

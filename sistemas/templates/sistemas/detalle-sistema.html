@@ -48,7 +48,7 @@
             </dl>
                           
             <dt>Descripción</dt>
-            <dd>{{ sistema.descripcion|as_descripcion }}</dd>
+            <dd><br>{{ sistema.descripcion|as_descripcion }}</dd>
 
             <dd>
                 <a class="btn btn-warning"
@@ -197,9 +197,15 @@
             </td>
 
             </tr>
+
             <tr>
             <th>Es transversal</th>
             <td>{{ sistema.es_transversal|as_boolean }}</td>
+            </tr>
+            
+            <tr>
+            <th>Es de especial importancia</th>
+            <td>{{ sistema.tiene_especial_importancia|as_boolean }}</td>
             </tr>
             
             {% if sistema.es_subsistema_de %}

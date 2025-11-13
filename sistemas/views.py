@@ -163,7 +163,7 @@ def editar_proposito(request, sistema):
 
 def editar_descripcion(request, sistema):
     if request.method == "POST":
-        form = forms.EditarDescripcionForm(request.POST)
+        form = forms.EditarDescripcionForm(request.POST, instance=sistema)
         if form.is_valid():
             form.save()
             Bus(request).success(
