@@ -39,7 +39,17 @@ def as_tema(tema):
     '''
     url = links.a_tema(tema.pk)
     txt = tema.nombre_tema
-    return mark_safe(f'<span class="tema"><a href="{url}">{txt}</a></span>')
+    if tema.no_definido():
+        icon = '<i class="bi bi-exclamation-diamond"></i> '
+        klass = 'badge bg-danger text-white'
+    else:
+        icon = ''
+        klass = 'badge bg-info text-white'
+    return mark_safe(
+        f'{icon}<span class="{klass}">'
+        f'<a class="link-light text-decoration-none"'
+        f' href="{url}">{txt}</a>'
+        '</span>')
 
 
 

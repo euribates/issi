@@ -1,5 +1,5 @@
 {% extends "comun/base.html" %}
-{% load static comun_filters %}
+{% load static comun_filters sistemas %}
 
 {% block content %}
 
@@ -40,12 +40,9 @@
 {% for sistema in filterset.qs.all %}
 <div class="col-sm-12 col-md-4 col-lg-3">
 
-<div class="card">
-
-
-   <div class="row g-2 card-header">
-     <div class="col-md-4">
-       <a href="{{ sistema.url_detalle_sistema }}" alt="Ver detalles del S.I. {sistema}">
+<div class="card text-center border-0 shadow mt-5">
+   <div class="card-icon position-absolute start-50 translate-middle text-light rounded-circle p-3">
+     <a href="{{ sistema.url_detalle_sistema }}" alt="Ver detalles del S.I. {sistema}">
        <img
        {% if sistema.icono %}
             src="{{ sistema.icono.url }}" 
@@ -56,29 +53,29 @@
             alt="Logo {{ sistema }}"
             title="Logo {{ sistema }}"
             >
-       </a>
-    </div>
-    <div class="col-md-8">
-        <h2 class="sistema-codigo">{{ sistema.codigo }}</h2>
-        <h3 class="sistema-nombre">{{ sistema.nombre }}</h3>
-      </h2>
-    </div>
-  </div>
+     </a>
+   </div>
 
-  <div class="card-body">
-      <p>
+
+
+  <div class="card-body mt-5">
+     <h2 class="sistema-codigo">{{ sistema.codigo }}</h2>
+     <h3 class="sistema-nombre">{{ sistema.nombre }}</h3>
+     <p class="card-text">
+       {{ sistema.proposito|as_markdown }}
+     </p>
+
+     <p class="card-organismo">
         {% if sistema.organismo %}
         <a href="{% url 'sistemas:detalle_organismo' organismo=sistema.organismo %}">
           {{ sistema.organismo }}
         </a>    
+        {% else %}
+          <i class="bi bi-exclamation-diamond"></i>
+          Pendiente de asignar
         {% endif %}
       </p>  
-    <p class="card-text">
-      {{ sistema.proposito|as_markdown }}
-    </p>
-    <span class="badge text-bg-primary">
-        {{ sistema.tema }}
-    </span>
+    {{ sistema.tema|as_tema }}
     {% if sistema.es_transversal %}
       <span class="badge text-bg-info">Transversal</span>
     {% endif %}

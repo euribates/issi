@@ -206,3 +206,18 @@ img.card-top-logo {
   color: #303030;
   border: 1px solid silver;
 }
+
+.card-organismo {
+  font-size: 80%;
+  color: #606060;
+}
+
+.card-organismo a {
+  text-decoration: none;
+  color: #606060;
+}
+
+.card-organismo a:hover {
+  text-decoration: underline;
+  color: #6060A0;
+}

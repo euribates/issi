@@ -40,8 +40,11 @@ class Tema(models.Model):
         except cls.DoesNotExist:
             return None
 
-    def inicial(self):
+    def inicial(self) -> str:
         return self.nombre_tema[0].upper()
+
+    def no_definido(self) -> bool:
+        return self.pk == 'UNK'
 
 
 class Sistema(models.Model):

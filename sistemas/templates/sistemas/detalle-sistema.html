@@ -6,22 +6,9 @@
 <div class="container">
   <div class="row align-items-start">
 
-    <div class="col col-5" style="border: 1px dotted red;">
+    <div class="col col-5">
 
         <div class="card">
-          <div class="position-absolute top-0 end-0 p-2">
-
-             {% if sistema.icono %}
-               <img width="64" height="64"
-                    src="{{ sistema.icono.url }}"
-                    alt="{{ sistema }}">
-             {% else %}
-                <img src="{% static 'sistemas/no-logo.png' %}"
-                   width="64" height="64">
-             {% endif %}
-
-            </div>    
-
           <div class="card-header">
             <h3 class="card-title">Identificación</h3>
           </div>  
@@ -72,19 +59,21 @@
             <dt>Logotipo</dt>
             <dd>
                 {% if sistema.icono %}
-                <img width="64" height="64"
+                <img width="256" height="256"
                     src="{{ sistema.icono.url }}"
                     alt="{{ sistema }}">
                 {% else %}
                 <i class="bi bi-exclamation-diamond"></i>
                 Pendiente de asignar icono
-                {% endif %}  
+                {% endif %} 
+                <p>
                 <a href="{% url 'sistemas:asignar_icono' sistema=sistema %}"
                    class="btn btn-{% if sistema.icono %}danger{% else %}warning{% endif %}"
                    title="Asignar icono"
                    >
                    <i class="bi bi-image"></i>
-                </a>   
+                </a>
+                </p>
             </dd>
 
 
@@ -133,7 +122,7 @@
       </div>
     </div>
     
-    <div class="col col-7" style="border: 1px dashed navy">
+    <div class="col col-7">
 
       <div class="card">
         <div class="card-header">
@@ -150,9 +139,6 @@
             </td>
 
             <td>
-                {% if sistema.tema.pk == 'UNK' %}
-                <i class="bi bi-exclamation-diamond"></i>
-                {% endif %}
                 {{ sistema.tema|as_tema }}
             </td>
 
