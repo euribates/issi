@@ -80,3 +80,15 @@ class InterlocutorAdmin(admin.ModelAdmin):
         ]
 
 admin.site.register(models.Interlocutor, InterlocutorAdmin)
+
+
+class FamiliaAdmin(admin.ModelAdmin):
+    list_display = [
+        "pk",
+        "nombre_familia",
+        ]
+    search_fields = [
+        'nombre_familia',
+        ]
+
+admin.site.register(models.Familia, FamiliaAdmin)

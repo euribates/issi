@@ -12,6 +12,13 @@ from . import diagnosis
 from . import links
 
 
+class Familia(models.Model):
+    id_familia = models.CharField(max_length=3, primary_key=True)
+    nombre_familia = models.CharField(max_length=128)
+
+    def __str__(self):
+        return self.nombre_familia
+
 
 class TemaManager(models.Manager):
 
