@@ -8,6 +8,7 @@ class DiagnosticoSistema:
     tiene_descripcion: bool
     tiene_organismo: bool
     tiene_tema: bool
+    tiene_familia: bool
     tiene_algun_responsable: bool
 
     def __init__(self, sistema):
@@ -19,6 +20,7 @@ class DiagnosticoSistema:
         self.tiene_organismo = bool(self._sistema.organismo)
         self.tiene_descripcion = bool(self._sistema.descripcion)
         self.tiene_tema = bool(self._sistema.tema.pk != 'UNK')
+        self.tiene_familia = bool(self._sistema.familia.pk != 'UNK')
         self.tiene_algun_responsable = self._sistema.perfiles.count() > 0
 
     def flags(self) -> list[bool]:
@@ -27,6 +29,7 @@ class DiagnosticoSistema:
             self.tiene_descripcion,
             self.tiene_organismo,
             self.tiene_tema,
+            self.tiene_familia,
             self.tiene_algun_responsable,
             ]
 
@@ -44,6 +47,8 @@ class DiagnosticoSistema:
                 )
         if not self.tiene_tema:
             result.append('Pendiente de asignar tema')
+        if not self.tiene_familia:
+            result.append('Pendiente de asignar familia')
         if not self.tiene_algun_responsable:
             result.append('No se ha definido ningún responsable para este sistema')
         return result

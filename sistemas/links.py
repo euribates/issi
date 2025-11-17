@@ -36,6 +36,10 @@ def a_editar_sistema(id_sistema: int) -> str:
     return _a('sistemas:editar_sistema', sistema=id_sistema)
 
 
+def a_asignar_familia(id_sistema: int) -> str:
+    return _a('sistemas:asignar_familia', sistema=id_sistema)
+
+
 def a_asignar_tema(id_sistema: int) -> str:
     return _a('sistemas:asignar_tema', sistema=id_sistema)
 
@@ -87,6 +91,10 @@ def a_detalle_ente(id_ente) -> str:
     return _a('sistemas:detalle_ente', ente=id_ente)
 
 
+def a_asignar_interlocutor(id_ente) -> str:
+    return _a('sistemas:asignar_interlocutor', ente=id_ente)
+
+
 def a_detalle_organismo(id_organismo) -> str:
     return _a('sistemas:detalle_organismo', organismo=id_organismo)
 
@@ -99,6 +107,14 @@ def a_tema(id_tema:str) -> str:
     return _a('sistemas:detalle_tema', tema=id_tema)
 
 
+def a_familias() -> str:
+    return _a('sistemas:listado_familias')
+
+
+def a_detalle_familia(familia: str) -> str:
+    return _a('sistemas:detalle_familia', familia=familia)
+
+
 def a_activos() -> str:
     return _a('sistemas:listado_activos')
 
@@ -109,4 +125,3 @@ def a_pendientes() -> str:
 
 def a_sistemas_sin_tema() -> str:
     return _a('sistemas:sistemas_sin_tema')
-

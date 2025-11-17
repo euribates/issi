@@ -1,0 +1,25 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+
+{% block content %}
+
+<table class="table table-striped">
+  <thead>
+      <th>Familias</th>
+      <th>Nº sistemas asociados</th>
+  </thead>    
+  <tbody>
+  {% for fam in familias.all %}<tr>
+    <th>
+        <a href="{% url 'sistemas:detalle_familia' familia=fam.pk %}">
+        {{ fam }}
+        </a>
+    </th>
+    <td>
+        {{ fam.num_sistemas }}
+    </td>
+  </tr>{% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}

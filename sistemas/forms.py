@@ -90,6 +90,12 @@ class AsignarTemaForm(BaseForm):
         fields = ['tema']
 
 
+class AsignarFamiliaForm(BaseForm):
+    class Meta:
+        model = models.Sistema
+        fields = ['familia']
+
+
 class AsignarIconoForm(BaseForm):
     class Meta:
         model = models.Sistema
@@ -129,5 +135,9 @@ class AsignarResponsableForm(BaseForm):
             'cometido': forms.RadioSelect(),
             }
 
-    # def organismos_filtrados(self, query: str):
-        # return models.Organismo.search_organismo(query)
+
+class AsignarInterlocutorForm(BaseForm):
+
+    class Meta:
+        model = models.Interlocutor
+        fields = ['usuario']

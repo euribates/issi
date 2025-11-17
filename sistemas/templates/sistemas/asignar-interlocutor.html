@@ -1,0 +1,43 @@
+{% extends "comun/base-form.html" %}
+{% load comun_filters %}
+
+{% block form %}
+
+
+<form method="POST" action=".">
+{% csrf_token %}
+<div class="card m-4">
+
+<div class="card-header">
+
+  <h2 class="card-title">Asignar interlocutor al ente {{ ente }}.</h2>
+
+  <div class="card-body">
+
+  {{ form.errors }}  
+
+    <div class="m-2">
+    <label for="id_usuario" class="form-label">Usuarios
+        <span class="badge rounded-pill bg-info">
+        <div id="contador">0</div>
+        </span>
+    </label>
+        <button 
+            type="button"
+            data-on-click="@get('/sistemas/patch/usuarios/')">
+        filtrar por
+        </button>
+
+        <input type="text" name="query" value="" data-bind="query">
+        <div id="control_usuarios">
+        </div>
+    </div>
+  </div><!-- de card-body -->
+
+  <div class="card-footer d-flex flex-row-reverse">
+  <button type="submit" class="btn btn-primary">Asignar responsable</button>
+  </div>
+</div>  
+</form>
+
+{% endblock form %}

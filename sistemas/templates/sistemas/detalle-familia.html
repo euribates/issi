@@ -1,0 +1,43 @@
+
+{% extends "comun/base.html" %}
+{% load static comun_filters %}
+{% block content %}
+
+
+<table class="table table-striped">
+    <caption>{{ familia }}</caption>  
+{% for s in familia.sistemas.all %}<tr>
+    <td>
+     <a href="{{ s.url_detalle_sistema }}" alt="Ver detalles del S.I. {sistema}">
+       <img width="64" height="64"
+       {% if s.icono %}
+            src="{{ s.icono.url }}" 
+       {% else %}
+            src="{% static 'sistemas/no-logo.png' %}"
+       {% endif %}
+            class="img-fluid mr-1"
+            alt="Logo {{ s }}"
+            title="Logo {{ s }}"
+            >
+     </a>
+    </td>
+    <td>
+        <big>
+        <b><a href="{% url 'sistemas:detalle_sistema' sistema=s %}">{{ s.codigo }}</a></b>
+        {{ s.nombre }}
+        </big><br>
+        <small>
+        {{ s.proposito }}
+        </small>
+    </td>   
+    <td>
+        {% comment %}<a href="{% url 'sistemas:detalle_organismo' organismo=s.organismo %}">{% endcomment %}
+        {{ s.organismo.nombre_organismo }}
+        </a>
+    </td>
+</tr>{% endfor %}
+</table>
+
+
+
+{% endblock content %}

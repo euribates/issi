@@ -137,6 +137,17 @@
               </td>
           </tr>  
         {% endfor %}  
+        <tr>
+            <th colspan="2"></th>
+            <td>
+                <a class="btn btn-warning"
+                   href="{% url 'sistemas:asignar_interlocutor' ente=ente %}"
+                >
+                <i class="bi bi-person-fill-add"></i>
+                Asignar interlocutor
+                </a>
+            </td>
+        </tr>
         </table>
         </div>
       </div>

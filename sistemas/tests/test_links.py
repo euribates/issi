@@ -25,5 +25,15 @@ def test_link_a_conmutar_campo():
     assert links.a_conmutar_campo(1832, 'es_prioritario') == expected
 
 
+def test_link_a_familias():
+    expected = '/sistemas/familias/'
+    assert links.a_familias() == expected
+
+
+def test_link_a_detalle_familia():
+    expected = '/sistemas/familias/F01/'
+    assert links.a_detalle_familia('F01') == expected
+
+
 if __name__ == "__main__":
     pytest.main()

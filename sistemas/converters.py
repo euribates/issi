@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 
+from django.urls import register_converter
+
 from directorio.models import Ente
 from directorio.models import Organismo
 from sistemas.models import Sistema
 from sistemas.models import Tema
 from sistemas.models import Usuario
+from sistemas.models import Familia
 
 
 class SistemaConverter:
@@ -28,6 +31,9 @@ class SistemaConverter:
             )
 
 
+register_converter(SistemaConverter, 'si')
+
+
 class UserNameConverter:
 
     regex = '[a-z][a-z0-9-.]+'
@@ -48,6 +54,8 @@ class UserNameConverter:
             " me pasan una instancia de {value.__class__.__name__}."
             )
 
+
+register_converter(UserNameConverter, 'usr')
 
 
 class OrganismoConverter:
@@ -71,6 +79,8 @@ class OrganismoConverter:
             )
 
 
+register_converter(OrganismoConverter, 'org')
+
 
 class TemaConverter:
 
@@ -93,6 +103,9 @@ class TemaConverter:
             )
 
 
+register_converter(TemaConverter, 'tema')
+
+
 class EnteConverter:
 
     regex = '[A-Za-z][A-Za-z0-9_]+'
@@ -112,3 +125,30 @@ class EnteConverter:
             "Se necesita una instancia de la clase Ente, pero"
             " me pasan una instancia de {value.__class__.__name__}."
             )
+
+
+register_converter(EnteConverter, 'ent')
+
+
+class FamiliaConverter:
+
+    regex = '[A-Za-z0-9_]{3}'
+
+    def to_python(self, value):
+        familia = Familia.load_familia(value)
+        if not familia:
+            raise ValueError("La familia especificada es incorrecta")
+        return familia
+
+    def to_url(self, value):
+        if isinstance(value, str) and len(value) == 3:
+            return value
+        if isinstance(value, Familia):
+            return str(value.id_familia)
+        raise ValueError(
+            "Se necesita una instancia de la clase Familia, pero"
+            " me pasan una instancia de {value.__class__.__name__}."
+            )
+
+
+register_converter(FamiliaConverter, 'fam')

@@ -12,15 +12,38 @@ from . import diagnosis
 from . import links
 
 
+class FamiliaManager(models.Manager):
+
+    def with_counts(self):
+        return self.annotate(num_sistemas=Coalesce(models.Count("sistemas"), 0))
+
+
 class Familia(models.Model):
+
+    class Meta:
+        ordering = ['id_familia',]
+
     id_familia = models.CharField(max_length=3, primary_key=True)
     nombre_familia = models.CharField(max_length=128)
 
-    def __str__(self):
+    objects = FamiliaManager()
+
+    @classmethod
+    def load_familia(cls, pk:str):
+        try:
+            return cls.objects.get(id_familia=pk)
+        except cls.DoesNotExist:
+            return None
+
+    def __str__(self) -> str:
         return self.nombre_familia
+
+    def no_definida(self) -> bool:
+        return self.pk == 'UNK'
 
 
 class TemaManager(models.Manager):
+
 
     def with_counts(self):
         return self.annotate(num_sistemas=Coalesce(models.Count("sistemas"), 0))
@@ -125,7 +148,13 @@ class Sistema(models.Model):
         default=False,
         help_text="Este S.I. contiene activos de datos de especial importancia",
         )
-
+    familia = models.ForeignKey(
+        Familia,
+        default='UNK',
+        help_text="Indica la familia, si procede",
+        related_name='sistemas',
+        on_delete=models.PROTECT,
+        )
     icono_height = models.PositiveIntegerField(default=0)
     icono_width = models.PositiveIntegerField(default=0)
     icono = models.ImageField(
@@ -223,8 +252,8 @@ class Sistema(models.Model):
 
         Parameters:
 
-            id_tema (str): Una instancioa de tema, o La clave 
-                primaria del tema
+            tema (Tema|str): Una instancia de tema, o la clave 
+                primaria del tema.
 
         Returns:
             
@@ -245,7 +274,37 @@ class Sistema(models.Model):
         self.tema = tema
         self.save(update_fields=['tema'])
         return tema
-        
+
+    def asignar_familia(self, familia: Familia|str) -> Familia:
+        '''Asignar una familia a un S.I. usando el código o la familia.
+
+        El cambio se registra inmediatamente en la base de datos.
+
+        Parameters:
+
+            `familia` (str|Familia): Una instancia de la familia, o la
+            clave primaria de la familia.
+
+        Returns:
+            
+            La instancia de la familia.
+
+        Exceptions:
+
+            Eleva una excepción de tipo `ValueError` si el código
+            de familia no existe en la base de datos.
+        '''
+        if not isinstance(familia, Familia):
+            familia = Familia.load_familia(familia)
+            if not familia:
+                raise ValueError(
+                    'El código de familia indicado:'
+                    f' {escape(repr(familia))} no es válido'
+                    )
+        self.familia = familia
+        self.save(update_fields=['familia'])
+        return familia
+
     def asignar_organismo(self, organismo: Organismo|int) -> Organismo:
         '''Asignar un S.I. a un organismo.
 

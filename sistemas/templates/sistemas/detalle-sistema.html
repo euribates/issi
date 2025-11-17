@@ -146,17 +146,32 @@
             <td>
                 Área temática
             </td>
-
             <td>
                 {{ sistema.tema|as_tema }}
             </td>
-
             <td>
                 <a class="btn btn-warning"
                     href="{% url 'sistemas:asignar_tema' sistema=sistema %}"
                     title="Asignar tema"
                     >
                     <i class="bi bi-bookmark"></i>
+                </a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+                Familia
+            </td>
+            <td>
+                {{ sistema.familia|as_familia }}
+            </td>
+            <td>
+                <a class="btn btn-warning"
+                    href="{% url 'sistemas:asignar_familia' sistema=sistema %}"
+                    title="Asignar familia"
+                    >
+                    <i class="bi bi-folder"></i>
                 </a>
             </td>
           </tr>

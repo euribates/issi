@@ -203,3 +203,18 @@ class Ente(models.Model):
                 url = f'https://{self.DATOS}/{href}'
                 desc = ''.join(item.a.contents)
                 yield(url, desc)
+
+
+    def asignar_interlocutor(self, usuario):
+        '''Asigna un interlocutor al ente
+
+        Es idempotente, si el interlocutor ya estaba
+        asignado, no hace nada.
+        '''
+        from sistemas.models import Interlocutor
+        interlocutor, _created = Interlocutor.upsert(
+            organismo=self.organismo,
+            usuario=usuario,
+            )
+        return interlocutor
+

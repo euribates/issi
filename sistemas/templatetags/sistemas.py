@@ -52,6 +52,24 @@ def as_tema(tema):
         '</span>')
 
 
+@register.filter
+def as_familia(familia):
+    '''Representación textual, con HTML, de la familia.
+    '''
+    url = links.a_detalle_familia(familia.pk)
+    txt = familia.nombre_familia
+    if familia.no_definida():
+        icon = '<i class="bi bi-exclamation-diamond"></i> '
+        klass = 'familia badge bg-danger text-white'
+    else:
+        icon = ''
+        klass = 'familia badge bg-info text-white'
+    return mark_safe(
+        f'{icon}<span class="{klass}">'
+        f'<a class="link-light text-decoration-none"'
+        f' href="{url}">{txt}</a>'
+        '</span>')
+
 
 @register.filter
 def as_status_icon(estado):

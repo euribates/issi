@@ -139,6 +139,27 @@ def asignar_tema(request, sistema):
         })
 
 
+def asignar_familia(request, sistema):
+    if request.method == "POST":
+        form = forms.AsignarFamiliaForm(request.POST, instance=sistema)
+        if form.is_valid():
+            familia = sistema.asignar_familia(form.cleaned_data['familia'])
+            Bus(request).success(
+                f"El S.I. {sistema}"
+                f" ha sido asignado a la familia {familia}"
+                )
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.AsignarFamiliaForm(instance=sistema)
+    return render(request, 'sistemas/asignar-familia.html', {
+        'titulo': f'Asignar familia a {sistema}',
+        'breadcrumbs': bc.asignar_familia(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
+
 def editar_proposito(request, sistema):
     if request.method == "POST":
         form = forms.EditarPropositoForm(request.POST)
@@ -191,7 +212,7 @@ def asignar_responsable(request, sistema):
             perfil = sistema.asignar_responsable(cometido, usuario)
             Bus(request).success(
                 f"El usuario {perfil.usuario}"    
-                f" a sido asignado como {perfil.get_cometido_display()}"
+                f" ha sido asignado como {perfil.get_cometido_display()}"
                 f" del S.I. {perfil.sistema}"
                 )
             return redirect(links.a_detalle_sistema(sistema.pk))
@@ -370,6 +391,30 @@ def detalle_ente(request, ente):
         })
 
 
+def asignar_interlocutor(request, ente):
+    if request.method == "POST":
+        form = forms.AsignarInterlocutorForm(request.POST)
+        if form.is_valid():
+            import icecream; icecream.ic(request.POST)
+            import icecream; icecream.ic(form.cleaned_data)
+            usuario = form.cleaned_data['usuario']
+            interlocutor = ente.asignar_interlocutor(usuario)
+            Bus(request).success(
+                f"El usuario {interlocutor.usuario}"    
+                " ha sido asignado como interlocutor"
+                f" del ente {ente}"
+                )
+            return redirect(links.a_detalle_ente(ente.pk))
+    else:
+        form = forms.AsignarInterlocutorForm()
+    return render(request, 'sistemas/asignar-interlocutor.html', {
+        'titulo': f'Asignar interlocutor a {ente}',
+        'breadcrumbs': bc.asignar_interlocutor(ente),
+        'tab': 'entes',
+        'form': form,
+        'ente': ente,
+        })
+
 
 def listado_organismos(request):
     filterset = filtersets.OrganismoFilter(
@@ -409,6 +454,25 @@ def detalle_tema(request, tema):
         'breadcrumbs': bc.tema(tema),
         'tab': 'temas',
         'tema': tema,
+        })
+
+
+def listado_familias(request):
+    familias = models.Familia.objects.with_counts().all()
+    return render(request, 'sistemas/listado-familias.html', {
+        'titulo': 'Listado de familias (Áreas temáticas)',
+        'breadcrumbs': bc.familias(),
+        'tab': 'familias',
+        'familias': familias,
+        })
+
+
+def detalle_familia(request, familia):
+    return render(request, 'sistemas/detalle-familia.html', {
+        'titulo': str(familia),
+        'breadcrumbs': bc.detalle_familia(familia),
+        'tab': 'familias',
+        'familia': familia,
         })
 
 

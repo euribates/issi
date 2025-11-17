@@ -1,0 +1,28 @@
+{% extends "comun/base-form.html" %}
+{% load comun_filters %}
+
+{% block form %}
+  <form method="POST" action=".">
+  {% csrf_token %}
+  {{ form.errors }}  
+  <div class="card">
+  
+    <div class="card-header">
+      <h2 class="card tittle">
+      Asignar familia al S.I. {{ sistema }}
+      </h2>
+    </div>
+  
+    <div class="card-body">
+    {{ form }}
+    </div><!-- de card-body -->
+
+    <div class="card-footer d-flex flex-row-reverse">
+      <button type="submit" class="btn btn-primary">Asignar familia</button>
+    </div>
+  
+  </div>  
+  </form>
+
+</div>  
+{% endblock form %}

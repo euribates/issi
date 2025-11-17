@@ -623,6 +623,7 @@
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo-issi_GKKmb4J.png"
@@ -643,6 +644,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/turidata-logo.png"
@@ -663,6 +665,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/juriscan-logo.png"
@@ -683,6 +686,7 @@
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/sirhus-logo.png"
@@ -703,6 +707,7 @@
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo_platea_8ugjV2e.png"
@@ -723,6 +728,7 @@
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -743,6 +749,7 @@
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo-platino.png"
@@ -763,6 +770,7 @@
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo-seflogic.png"
@@ -783,6 +791,7 @@
         "es_transversal": true,
         "es_subsistema_de": 8,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/sicac-logo.png"
@@ -803,6 +812,7 @@
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo-hiperreg_y6TMSbi.png"
@@ -823,6 +833,7 @@
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/triskell-logo.png"
@@ -843,6 +854,7 @@
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": true,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/dircac-logo.png"
@@ -863,6 +875,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -883,6 +896,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -903,6 +917,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 464,
         "icono_width": 464,
         "icono": "sistemas/iconos/2025/sidecan-logo.png"
@@ -923,6 +938,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/RCC-logo.png"
@@ -938,11 +954,12 @@
         "codigo": "Adopta",
         "url": null,
         "descripcion": "",
-        "proposito": "Gestión de expediente de adopciones",
+        "proposito": "Gestión de expediente de adopciones.",
         "tema": "BIS",
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/rpg-adopciones_Y5i95aY.png"
@@ -963,6 +980,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -983,6 +1001,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/rpg-logo.png"
@@ -1003,6 +1022,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1023,6 +1043,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1043,6 +1064,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1063,6 +1085,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/TimeView-logo.png"
@@ -1083,6 +1106,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/gpd-logo.png"
@@ -1103,6 +1127,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/gpnd-logo.png"
@@ -1123,6 +1148,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/gestacad-logo.png"
@@ -1143,6 +1169,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1163,6 +1190,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/siglo-logo.png"
@@ -1183,6 +1211,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1203,6 +1232,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1223,6 +1253,7 @@
         "es_transversal": false,
         "es_subsistema_de": 30,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1243,6 +1274,7 @@
         "es_transversal": false,
         "es_subsistema_de": 30,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1263,6 +1295,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1283,6 +1316,7 @@
         "es_transversal": false,
         "es_subsistema_de": 33,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1303,6 +1337,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1323,6 +1358,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1343,6 +1379,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1363,6 +1400,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1383,6 +1421,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1403,6 +1442,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1423,6 +1463,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1443,6 +1484,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1463,6 +1505,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1483,6 +1526,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/centros-dia-logo.png"
@@ -1503,6 +1547,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/centros-menores-logo.png"
@@ -1523,6 +1568,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1543,6 +1589,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1563,6 +1610,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1583,6 +1631,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1603,6 +1652,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1623,6 +1673,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1643,6 +1694,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1663,6 +1715,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1683,6 +1736,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1703,6 +1757,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1723,6 +1778,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1743,6 +1799,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1763,6 +1820,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1783,6 +1841,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1803,6 +1862,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "F05",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/avj-logo.png"
@@ -1823,6 +1883,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/justiniano-logo_fkL3ZjJ.png"
@@ -1843,6 +1904,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1863,6 +1925,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1883,6 +1946,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1903,6 +1967,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1918,14 +1983,15 @@
         "codigo": "CASPER",
         "url": null,
         "descripcion": "Aplicación encargada de gestionar todas las entidades que figuran en su nombre además de los distintos conjuntos de tipos de certificados asociados a las aplicaciones y sus servidores.",
-        "proposito": "Aplicación encargada de gestionar todas las entidades que figuran en su nombre además de los distintos conjuntos de tipos de certificados asociados a las aplicaciones y sus servidores.",
+        "proposito": "Gestionar todas las entidades que figuran en su nombre además de los distintos conjuntos de tipos de certificados asociados a las aplicaciones y sus servidores.",
         "tema": "TEC",
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": ""
+        "familia": "F13",
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2025/casper-logo.png"
     }
 },
 {
@@ -1943,6 +2009,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1963,6 +2030,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -1983,6 +2051,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -2003,6 +2072,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "F13",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -2023,6 +2093,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -2043,6 +2114,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -2063,6 +2135,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
         "icono": ""
@@ -2083,6 +2156,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/redexos-logo.png"
@@ -2103,6 +2177,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/geboc-logo.png"
@@ -2123,6 +2198,7 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/redpromar-logo.png"
@@ -2143,6 +2219,7 @@
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": true,
+        "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/sinca-logo.png"
@@ -2701,6 +2778,19 @@
         "organismo": 37815,
         "f_alta": "2025-10-06T18:41:33.539Z",
         "f_cambio": "2025-10-06T18:41:33.539Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jbejgar",
+    "fields": {
+        "email": "jbejgar@gobierniodecanarias.org",
+        "nombre": "Jenaro",
+        "apellidos": "Bejarano García",
+        "organismo": 6594,
+        "f_alta": "2025-11-17T13:13:46.022Z",
+        "f_cambio": "2025-11-17T13:13:46.022Z",
         "f_baja": null
     }
 },
@@ -4097,6 +4187,17 @@
         "organismo": 38691,
         "f_alta": "2025-10-22T11:00:18.703Z",
         "f_cambio": "2025-10-22T11:00:18.703Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.interlocutor",
+    "pk": 57,
+    "fields": {
+        "usuario": "jbejgar",
+        "organismo": 42149,
+        "f_alta": "2025-11-17T14:40:48.726Z",
+        "f_cambio": "2025-11-17T14:40:48.726Z",
         "f_baja": null
     }
 },
