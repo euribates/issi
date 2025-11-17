@@ -111,13 +111,12 @@ img.card-top-logo {
 }
 
 .bool-on {
-  color: red;
   font-weight: bolder;
   }
 
 .bool-off {
-  color: green;
-  font-weight: bolder;
+  color: #A0A0A0;
+  font-weight: normal;
   }
 
 

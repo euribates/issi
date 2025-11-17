@@ -1,6 +1,10 @@
-{% extends "comun/base.html" %}
+{% extends "comun/base-form.html" %}
 {% load comun_filters %}
-{% block content %}
+
+{% block form %}
+
+<form method="POST" action=".">
+{% csrf_token %}
 
 <div class="card">
 
@@ -11,13 +15,13 @@
 
   <div class="card-body">
 
-  <form method="POST" action=".">
-  {% csrf_token %}
+  <p>El valor actual es {{ valor|as_boolean }}</p>
 
   {{ form.seguro }}
   <label for="id_seguro">
-  {{ form.seguro.label }}
+      {{ form.seguro.label }}  
   </label>
+
 
   {% if form.seguro.errors %}<ul class="form-errors">
     {% for error in form.seguro.errors %}
@@ -26,9 +30,17 @@
   </ul>    
   {% endif %}
 
+  <br></br>
+  {% if url_cancel %}
+    <a href="{{ url_cancel }}"
+       class="btn btn-info">
+        Cancelar
+    </a>    
+  {% endif %}
+
   <button type="submit" class="btn btn-primary">Cambiar valor</button>
   </form>
   </div>
 </div>  
 
-{% endblock content %}
+{% endblock form %}

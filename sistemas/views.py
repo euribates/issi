@@ -269,8 +269,10 @@ def conmutar_campo(request, sistema, campo: str):
         'form': form,
         'sistema': sistema,
         'campo': 'campo',
+        'valor': getattr(sistema, campo),
         'verbose_name': verbose_name,
         'help_text': help_text,
+        'url_cancel': links.a_detalle_sistema(sistema),
         })
 
 

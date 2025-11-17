@@ -132,8 +132,17 @@
         </div>
         <div class="card-body">
         <table class="table table-hover">
-          <tr>
 
+          <tr>
+            <th>Estado</th>
+            <td>{{ sistema.get_estado|as_status_desc }}</td>
+            <td>
+              <img src="{% static sistema.get_estado|as_status_icon %}"
+                   width="48" height="48">
+            </td>
+          </tr>  
+
+          <tr>
             <td>
                 Área temática
             </td>
@@ -151,15 +160,6 @@
                 </a>
             </td>
           </tr>
-
-          <tr>
-            <th>Estado</th>
-            <td>{{ sistema.get_estado|as_status_desc }}</td>
-            <td>
-              <img src="{% static sistema.get_estado|as_status_icon %}"
-                   width="48" height="48">
-            </td>
-          </tr>  
 
           <tr>
             <th>Organismo</th>
