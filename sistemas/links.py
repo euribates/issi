@@ -60,6 +60,13 @@ def a_asignar_responsable(id_sistema: int) -> str:
     return _a('sistemas:asignar_responsable', sistema=id_sistema)
 
 
+def a_conmutar_campo(id_sistema: int, campo: str) -> str:
+    return _a('sistemas:conmutar_campo',
+        sistema=id_sistema,
+        campo=campo,
+        )
+
+
 def a_usuarios() -> str:
     return _a('sistemas:listado_usuarios')
 

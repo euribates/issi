@@ -20,5 +20,10 @@ def test_link_a_activos():
     assert links.a_activos() == expected
 
 
+def test_link_a_conmutar_campo():
+    expected = '/sistemas/sistema/1832/conmutar/es_prioritario/'
+    assert links.a_conmutar_campo(1832, 'es_prioritario') == expected
+
+
 if __name__ == "__main__":
     pytest.main()

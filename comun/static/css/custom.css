@@ -110,6 +110,18 @@ img.card-top-logo {
   text-indent: -1em;
 }
 
+.bool-on {
+  color: red;
+  font-weight: bolder;
+  }
+
+.bool-off {
+  color: green;
+  font-weight: bolder;
+  }
+
+
+
 .dir3 {
   font-family: monospace,courier;
   background-color: white;

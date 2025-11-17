@@ -31,6 +31,8 @@ urlpatterns = [
     tie('sistema/<si:sistema>/editar/organismo/', views.asignar_organismo),
     tie('sistema/<si:sistema>/asignar/responsable/', views.asignar_responsable),
     tie('sistema/<si:sistema>/asignar/icono/', views.asignar_icono),
+    tie('sistema/<si:sistema>/asignar/icono/', views.asignar_icono),
+    tie('sistema/<si:sistema>/conmutar/<str:campo>/', views.conmutar_campo),
     tie('perfil/<int:id_perfil>/borrar/', views.borrar_perfil),
     tie('entes/', views.listado_entes),
     tie('entes/<ent:ente>/', views.detalle_ente),

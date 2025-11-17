@@ -21,9 +21,9 @@ def iff(entrada, opciones):
 @register.filter
 def as_boolean(value):
     if value:
-        return mark_safe('<strong class="green">☑ Si</strong>')
+        return mark_safe('<strong class="bool-on">☑ Si</strong>')
     else:
-        return mark_safe('<strong class="red">☒ No</strong>')
+        return mark_safe('<strong class="bool-off">☐ No</strong>')
 
 
 @register.filter

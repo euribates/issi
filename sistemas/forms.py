@@ -5,6 +5,25 @@ from django.forms import widgets
 
 from . import models
 
+
+# ------------------------------------------[ Formularios genéricos ]--
+
+
+class EstaSeguroForm(forms.Form):
+    """Formulario para autorizar operaciones críticas.
+
+    Solo será válido si se ha marcado el checkbox.
+    """
+    seguro = forms.BooleanField(
+        required=True,
+        initial=False,
+        label="Confirme la operación",
+        )
+
+
+# ---------------------------------------[ Formularios para modelos ]--
+
+
 class BaseForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):

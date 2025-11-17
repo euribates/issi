@@ -186,12 +186,37 @@
 
             <tr>
             <th>Es transversal</th>
-            <td>{{ sistema.es_transversal|as_boolean }}</td>
+            <td>{{ sistema.es_transversal|as_boolean }} </td>
+            <td>
+              <a class="btn btn-warning"
+                  href="{% url 'sistemas:conmutar_campo' sistema=sistema campo='es_transversal' %}"
+                  title="Conmutar valor"
+                  >
+              {% if sistema.es_transversal %}
+                <i class="bi bi-toggle-on"></i>
+              {% else %}
+                <i class="bi bi-toggle-off"></i>
+              {% endif %}
+              </a>
+            </td>
+
             </tr>
             
             <tr>
             <th>Es de especial importancia</th>
             <td>{{ sistema.tiene_especial_importancia|as_boolean }}</td>
+            <td>
+              <a class="btn btn-warning"
+                  href="{% url 'sistemas:conmutar_campo' sistema=sistema campo='tiene_especial_importancia' %}"
+                  title="Conmutar valor"
+                  >
+              {% if sistema.tiene_especial_importancia %}
+                <i class="bi bi-toggle-on"></i>
+              {% else %}
+                <i class="bi bi-toggle-off"></i>
+              {% endif %}
+              </a>
+            </td>
             </tr>
             
             {% if sistema.es_subsistema_de %}

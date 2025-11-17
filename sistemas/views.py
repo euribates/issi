@@ -181,6 +181,7 @@ def editar_descripcion(request, sistema):
         'sistema': sistema,
         })
 
+
 def asignar_responsable(request, sistema):
     if request.method == "POST":
         form = forms.AsignarResponsableForm(request.POST)
@@ -244,6 +245,32 @@ def asignar_icono(request, sistema):
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,
+        })
+
+
+def conmutar_campo(request, sistema, campo: str):
+    """Conmutar el estado de un campo lógico.
+    """
+    if request.method == 'POST':
+        form = forms.EstaSeguroForm(request.POST)
+        if form.is_valid():
+            setattr(sistema, campo, not getattr(sistema, campo))
+            sistema.save()
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.EstaSeguroForm()
+    _field = Sistema._meta.get_field(campo)
+    verbose_name = _field.verbose_name
+    help_text = _field.help_text
+    return render(request, 'sistemas/conmutar-campo.html', {
+        'titulo': f'Cambiar el valor de {verbose_name}',
+        'breadcrumbs': bc.conmutar_campo(sistema, campo, verbose_name),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        'campo': 'campo',
+        'verbose_name': verbose_name,
+        'help_text': help_text,
         })
 
 

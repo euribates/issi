@@ -74,6 +74,13 @@ def asignar_responsable(sistema) -> BreadCrumb:
         links.a_asignar_responsable(sistema.pk),
         )
 
+def conmutar_campo(sistema, field_name, verbose_name=''):
+    if not verbose_name:
+        verbose_name = field_name
+    return detalle_sistema(sistema).step(
+        verbose_name,
+        links.a_conmutar_campo(sistema.pk, field_name),
+        )
 
 def usuarios() -> BreadCrumb:
     return bc_issi().step('Usuarios', links.a_usuarios())
