@@ -4,20 +4,21 @@
 {% block scripts %}
 {{ block.super }}
 
-<script>
-    var data = {{ chart | safe }};
-    var canvas = document.getElementById("Chart")
-    canvas.width  = 800;
-    canvas.height = 200;
-    var ctx = canvas.getContext('2d');
-    var myChart = new Chart(ctx, data);
+-<script>
+   var data = {{ chart | safe }};
+   var canvas = document.getElementById("Chart")
+   var ctx = canvas.getContext('2d');
+   setTimeout(() => { new Chart(ctx, data) }, 500);
+   console.log('OK');
 </script>
 
 {% endblock %}
 
 {% block content %}
 
-<canvas id="Chart" width="100" height="200"></canvas>
+<div class="chart-marco">
+<canvas id="Chart"></canvas>
+</div>
 
 
 <form method="get">

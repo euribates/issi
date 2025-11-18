@@ -23,7 +23,19 @@ class BarChart:
         self.colors = list()
         self.options = {
             'responsive': True,
-            'amimation': True,
+            'maintainAspectRatio': False,
+            'animation': {
+                'duration': 1500,
+                'easing': 'easeOutQuart',
+                'loop': False,
+                },
+            'plugins': {
+                'legend': False,
+                'title': {
+                    'display': True,
+                    'text': 'Sistemas de información identificados por ente',
+                    },
+                }    
             }
 
     def add_value(self, value, label='', color=''):
@@ -36,15 +48,16 @@ class BarChart:
     def as_json(self):
         result = {
             'type': 'bar',
+            'options': self.options,
             'data': {
                 'datasets': self.datasets,
-                }
+                },
             }
         if self.labels:
             result['data']['labels'] = self.labels
         if self.colors:
             result['data']['backgroundColors'] = self.colors
-        return json.dumps(result)
+        return json.dumps(result, indent=4)
     
 
 def main():

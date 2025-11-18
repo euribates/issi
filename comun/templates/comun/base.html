@@ -26,6 +26,7 @@
     No se ha definido el título de la página - ISSI
     </div>     
    {% endif %}
+   
    {% include "comun/breadcrumbs.html" %}
    {% include "comun/navbar.html" %}
    {% include "comun/includes/commands.html" %}
@@ -57,7 +58,7 @@
 <script type="text/javascript">
 
 function prepare_toasts() {
-    console.log('Preparando las tostadas...');
+    /* console.log('Preparando las tostadas...'); */
     var option = {
         'animation': true,
         'autohide': true,
@@ -67,7 +68,7 @@ function prepare_toasts() {
          const toast = new bootstrap.Toast(elem, option);
         toast.show();
         });
-    console.log('... Las tostadas están listas.');
+    /* console.log('... Las tostadas están listas.'); */
 }
 
 document.addEventListener("DOMContentLoaded", prepare_toasts);

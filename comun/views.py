@@ -45,7 +45,13 @@ def homepage(request):
         })
 
 def labo(request):
-    from django.contrib import messages
+    from comun.charts import BarChart
+
+    chart = BarChart()
+    chart.add_value(37, 'rojo', '#F23A20')
+    chart.add_value(137, 'verde', '#3AF220')
+    chart.add_value(37, 'verde', '#3F22FA')
+    
     Bus(request).debug("This is a debug message")
     Bus(request).info("This is a info message")
     Bus(request).success("This is a success message")
@@ -54,6 +60,7 @@ def labo(request):
     return render(request, "comun/labo.html", {
         'titulo': 'Esto es una página de pruebas',
         'subtitulo': 'Si ves cosas raras, es normal',
+        'chart': chart.as_json(),
         })
 
 

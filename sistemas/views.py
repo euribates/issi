@@ -378,7 +378,7 @@ def bar_sistemas2():
                 color = '#FFA600'
             case _:
                 color = '#87AB69'
-        result.add_value(value or -1, ente.pk, color)
+        result.add_value(value or -0.5, ente.pk, color)
     return result
 
 # def bar_sistemas2():

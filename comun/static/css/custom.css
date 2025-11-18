@@ -232,3 +232,21 @@ img.card-top-logo {
   text-decoration: underline;
   color: #6060A0;
 }
+
+.chart-marco {
+  width: 100%;
+  min-height: 340px;
+  max-height: 540px;
+  padding-right: 8%;
+  padding-left: 8%;
+  border: 1px dotted silver;
+}
+
+a.email {
+  font-family: monospace;
+  text-decoration: none;
+}
+
+a.email:hover {
+  text-decoration: underline;
+}
