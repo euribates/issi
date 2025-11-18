@@ -366,13 +366,63 @@ def detalle_usuario(request, usuario, *args, **kwargs):
         'usuario': usuario,
         })
 
+def bar_sistemas2():
+    from comun.charts import BarChart
+    result = BarChart()
+    for ente in Ente.objects.all():
+        value = ente.sistemas_del_ente().count()
+        match value:
+            case _ if value == 0:
+                color = '#CC3333'
+            case _ if value < 3:
+                color = '#FFA600'
+            case _:
+                color = '#87AB69'
+        result.add_value(value or -1, ente.pk, color)
+    return result
+
+# def bar_sistemas2():
+    # from pychartjs import BaseChart, ChartType, Color 
+
+    # class MyBarGraph(BaseChart):
+
+        # type = ChartType.Bar
+
+        # class data:
+            # label = "S.I."
+            # data = [12, 19, 3, 17, 10]
+            # backgroundColor = [
+                # Color.Green,
+                # Color.Red,
+                # Color.Green,
+                # Color.Green,
+                # Color.Red,
+                # ]
+
+    # new_chart = BaseChart('bar')
+    # new_chart.data.label = "Sistemas de información identificados"
+    # items = [
+        # (_e.pk, _e.sistemas_del_ente().count())
+        # for _e in Ente.objects.all()
+        # ]
+        
+    # new_chart.data.data = [_t[1] for _t in items]
+    # new_chart.labels.vars = [_t[0] for _t in items]
+    # new_chart.data.backgroundColor = [
+        # Color.Orange if _t[1] <= 3 else Color.Green 
+        # for _t in items
+        # ]
+    # return new_chart
+
 
 def listado_entes(request):
+    chart = bar_sistemas2()
     return render(request, 'sistemas/listado-entes.html', {
         'titulo': 'Entes',
         'breadcrumbs': bc.entes(),
         'tab': 'entes',
         'entes': Ente.objects.all(),
+        'chart': chart.as_json(),
         })
 
 
