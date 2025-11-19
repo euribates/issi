@@ -167,3 +167,10 @@ def sistemas_sin_tema() -> BreadCrumb:
         'Sin tema asignado',
         links.a_sistemas_sin_tema(),
         )
+
+
+def exportar_sistemas() -> str:
+    return sistemas().step(
+        'Exportar',
+        links.a_exportar_sistemas()
+        )

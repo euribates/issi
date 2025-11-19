@@ -138,6 +138,14 @@
 },
 {
     "model": "sistemas.tema",
+    "pk": "ALT",
+    "fields": {
+        "nombre_tema": "Altos cargos",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
     "pk": "ART",
     "fields": {
         "nombre_tema": "Artesanía",
@@ -148,7 +156,7 @@
     "model": "sistemas.tema",
     "pk": "ASO",
     "fields": {
-        "nombre_tema": "Asociaciones",
+        "nombre_tema": "Acción social",
         "transversal": false
     }
 },
@@ -226,14 +234,6 @@
 },
 {
     "model": "sistemas.tema",
-    "pk": "DEP",
-    "fields": {
-        "nombre_tema": "Deportes",
-        "transversal": false
-    }
-},
-{
-    "model": "sistemas.tema",
     "pk": "DSS",
     "fields": {
         "nombre_tema": "Desarrollo Sostenible",
@@ -306,6 +306,14 @@
 },
 {
     "model": "sistemas.tema",
+    "pk": "EOA",
+    "fields": {
+        "nombre_tema": "Estrategia y organización administrativa",
+        "transversal": true
+    }
+},
+{
+    "model": "sistemas.tema",
     "pk": "EPR",
     "fields": {
         "nombre_tema": "Elaboración presupuestaria",
@@ -362,6 +370,14 @@
 },
 {
     "model": "sistemas.tema",
+    "pk": "GDI",
+    "fields": {
+        "nombre_tema": "Gestión documental integral",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
     "pk": "GGA",
     "fields": {
         "nombre_tema": "Gestión de gastos",
@@ -396,7 +412,7 @@
     "model": "sistemas.tema",
     "pk": "IDI",
     "fields": {
-        "nombre_tema": "I+D+i",
+        "nombre_tema": "Investigación, Desarrollo e Innovación tecnológica",
         "transversal": false
     }
 },
@@ -450,14 +466,6 @@
 },
 {
     "model": "sistemas.tema",
-    "pk": "LEG",
-    "fields": {
-        "nombre_tema": "Legislación",
-        "transversal": true
-    }
-},
-{
-    "model": "sistemas.tema",
     "pk": "MAB",
     "fields": {
         "nombre_tema": "Medio Ambiente",
@@ -506,10 +514,26 @@
 },
 {
     "model": "sistemas.tema",
+    "pk": "PDH",
+    "fields": {
+        "nombre_tema": "Parejas de hecho",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
     "pk": "PES",
     "fields": {
         "nombre_tema": "Pesca",
         "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "PPE",
+    "fields": {
+        "nombre_tema": "Planificación y política económica",
+        "transversal": true
     }
 },
 {
@@ -526,6 +550,14 @@
     "fields": {
         "nombre_tema": "Recursos Humanos",
         "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
+    "pk": "RSD",
+    "fields": {
+        "nombre_tema": "Recepción y salida de documentos",
+        "transversal": true
     }
 },
 {
@@ -661,7 +693,7 @@
         "url": null,
         "descripcion": "Base de datos cuyo objetivo es difundir el conocimiento y facilitar la consulta del sistema jurídico de la Comunidad Autónoma",
         "proposito": "**JURISCAN** es una base de datos desarrollada por el Gobierno de Canarias con el objetivo de difundir el conocimiento y facilitar la consulta del sistema jurídico de la Comunidad Autónoma.\r\n\r\nEs una base de datos principalmente legislativa, en la que pueden encontrarse todas las disposiciones generales emanadas de las instituciones autonómicas; pero también es una base de datos limitadamente jurisprudencial, en la medida que incluye nota de las sentencias que afectan a las disposiciones autonómicas.\r\n\r\nLa presentación de los documentos se hace desde una perspectiva dinámica. Cada disposición tiene su ficha, que comprende detalladamente cuanto está relacionado con ella, antes y después de su vigencia, con la relación de las disposiciones a las que ha afectado y de las referencias, legislativas y jurisprudenciales, que de alguna manera tienen una incidencia posterior. La actualización permanente de estas fichas constituye una garantía de seguridad jurídica en la aplicación del Derecho de la Comunidad Autónoma.\r\n\r\nEl sistema de consultas permite desde la más simple, con un mínimo de argumentos de búsqueda relativos a la presentación formal de la disposición, hasta la más compleja, en la que pueden combinarse elementos relacionados con el título, el rango, las materias o la fecha de la disposición. La búsqueda por materias se facilita con un tesauro de unos 3.000 términos que sirve para uniformar la terminología y estructurar la recuperación de documentos.",
-        "tema": "LEG",
+        "tema": "UNK",
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,

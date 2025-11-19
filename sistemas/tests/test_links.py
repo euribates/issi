@@ -35,5 +35,10 @@ def test_link_a_detalle_familia():
     assert links.a_detalle_familia('F01') == expected
 
 
+def test_link_a_exportar_sistemas():
+    expected = '/sistemas/exportar/'
+    assert links.a_exportar_sistemas() == expected
+
+
 if __name__ == "__main__":
     pytest.main()
