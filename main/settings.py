@@ -143,6 +143,7 @@ STATICFILES_DIRS = [BASE_DIR / "main" / "static"]
 MEDIA_URL = 'files/'
 MEDIA_ROOT = BASE_DIR / 'uploads'
 
+FORMS_URLFIELD_ASSUME_HTTPS = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

@@ -75,6 +75,10 @@ def a_usuarios() -> str:
     return _a('sistemas:listado_usuarios')
 
 
+def a_alta_usuario() -> str:
+    return _a('sistemas:alta_usuario')
+
+
 def a_detalle_usuario(usuario) -> str:
     return _a('sistemas:detalle_usuario', usuario=usuario)
 

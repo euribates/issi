@@ -15,6 +15,7 @@ from . import breadcrumbs as bc
 from . import forms
 from . import links
 from . import models
+from . import serializers
 from . import diagnosis
 from comun.commands import Command
 
@@ -117,26 +118,6 @@ def asignar_organismo(request, sistema):
         'sistema': sistema,
         })
 
-
-def asignar_tema(request, sistema):
-    if request.method == "POST":
-        form = forms.AsignarTemaForm(request.POST, instance=sistema)
-        if form.is_valid():
-            tema = sistema.asignar_tema(form.cleaned_data['tema'])
-            Bus(request).success(
-                f"El S.I. {sistema}"
-                f" ha sido asignado al tema {tema}"
-                )
-            return redirect(links.a_detalle_sistema(sistema.pk))
-    else:
-        form = forms.AsignarTemaForm(instance=sistema)
-    return render(request, 'sistemas/asignar-tema.html', {
-        'titulo': f'Asignar tema a {sistema}',
-        'breadcrumbs': bc.asignar_tema(sistema),
-        'tab': 'sistemas',
-        'form': form,
-        'sistema': sistema,
-        })
 
 
 def asignar_familia(request, sistema):
@@ -252,7 +233,6 @@ def asignar_icono(request, sistema):
     if request.method == "POST":
         form = forms.AsignarIconoForm(request.POST, request.FILES, instance=sistema)
         if form.is_valid():
-            from icecream import ic; ic("form is valid")
             form.save()
             Bus(request).success(
                 f"Se ha asignado un icono al S.I. {sistema}"
@@ -358,6 +338,24 @@ def buscar_usuarios(request):
         })
 
 
+def alta_usuario(request, *args, **kwargs):
+    if request.method == 'POST':
+        form = forms.AltaUsuarioForm(request.POST)
+        if form.is_valid():
+            usuario = form.save()
+            Bus(request).success(
+                f"Se ha dado de alta al usuario {usuario}"
+                )
+            return redirect(links.a_detalle_usuario(usuario.pk))
+    else:
+        form = forms.AltaUsuarioForm()
+    return render(request, 'sistemas/alta-usuario.html', {
+        'titulo': 'Dar de alta un nuevo usuario',
+        'breadcrumbs': bc.usuarios(),
+        'tab': 'usuarios',
+        })
+
+
 def detalle_usuario(request, usuario, *args, **kwargs):
     return render(request, 'sistemas/detalle-usuario.html', {
         'titulo': f'Detalles usuario {usuario}',
@@ -445,8 +443,6 @@ def asignar_interlocutor(request, ente):
     if request.method == "POST":
         form = forms.AsignarInterlocutorForm(request.POST)
         if form.is_valid():
-            import icecream; icecream.ic(request.POST)
-            import icecream; icecream.ic(form.cleaned_data)
             usuario = form.cleaned_data['usuario']
             interlocutor = ente.asignar_interlocutor(usuario)
             Bus(request).success(
@@ -636,3 +632,23 @@ def patch_usuarios(request):
         f'<div id="control_usuarios">{result}</div>'
         f'<div id="contador">{contador}<div>'
         )
+
+def importar_sistemas(request, *args, **kwargs):
+    from django.http import HttpResponse
+    return HttpResponse("importar_sistemas no implementado", content_type="text/plain")
+
+
+def exportar_sistemas(request):
+    return render(request, 'sistemas/exportar-sistemas.html', {
+        'titulo': 'Exportar sistemas',
+        'breadcrumbs': bc.exportar_sistemas(),
+        'entes': Ente.objects.all(),
+        })
+
+
+def exportar_sistemas_todos(request):
+    sistemas = Sistema.objects.all()
+    result = HttpResponse(content_type='text/csv')
+    result.headers['Content-Disposition'] ='attachment; filename="sistemas-de-informacion-CAC.cvs'
+    serializers.sistemas_a_csv(sistemas, result)
+    return result

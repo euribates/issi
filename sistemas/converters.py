@@ -31,9 +31,6 @@ class SistemaConverter:
             )
 
 
-register_converter(SistemaConverter, 'si')
-
-
 class UserNameConverter:
 
     regex = '[a-z][a-z0-9-.]+'
@@ -53,9 +50,6 @@ class UserNameConverter:
             "Se necesita una instancia de la clase Usuario, pero"
             " me pasan una instancia de {value.__class__.__name__}."
             )
-
-
-register_converter(UserNameConverter, 'usr')
 
 
 class OrganismoConverter:
@@ -79,9 +73,6 @@ class OrganismoConverter:
             )
 
 
-register_converter(OrganismoConverter, 'org')
-
-
 class TemaConverter:
 
     regex = '[A-Za-z]{3}'
@@ -103,9 +94,6 @@ class TemaConverter:
             )
 
 
-register_converter(TemaConverter, 'tema')
-
-
 class EnteConverter:
 
     regex = '[A-Za-z][A-Za-z0-9_]+'
@@ -125,9 +113,6 @@ class EnteConverter:
             "Se necesita una instancia de la clase Ente, pero"
             " me pasan una instancia de {value.__class__.__name__}."
             )
-
-
-register_converter(EnteConverter, 'ent')
 
 
 class FamiliaConverter:
@@ -152,3 +137,8 @@ class FamiliaConverter:
 
 
 register_converter(FamiliaConverter, 'fam')
+register_converter(OrganismoConverter, 'org')
+register_converter(SistemaConverter, 'si')
+register_converter(TemaConverter, 'tema')
+register_converter(UserNameConverter, 'usr')
+register_converter(EnteConverter, 'ent')

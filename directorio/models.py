@@ -12,6 +12,8 @@ from django.conf import settings
 
 from . import links
 
+SEP = '/'
+
 TEMP_DIR = settings.BASE_DIR / Path('temp')
 if not TEMP_DIR.is_dir():
     TEMP_DIR.mkdir()

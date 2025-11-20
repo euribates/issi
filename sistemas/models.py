@@ -57,7 +57,7 @@ class Tema(models.Model):
     objects = TemaManager()
 
     id_tema = models.CharField(max_length=3, primary_key=True)
-    nombre_tema = models.CharField(max_length=32)
+    nombre_tema = models.CharField(max_length=96)
     transversal = models.BooleanField(default=False)
 
     def __str__(self):
@@ -122,6 +122,11 @@ class Sistema(models.Model):
         default='',
         verbose_name="Propósito",
         )
+    observaciones = models.TextField(
+        blank=True,
+        default='',
+        verbose_name="Observaciones",
+        )
     tema = models.ForeignKey(
         Tema,
         related_name='sistemas',
@@ -166,6 +171,7 @@ class Sistema(models.Model):
         width_field='icono_width',
         max_length=512,
         )
+
 
     @classmethod
     def alta_sistema(
@@ -399,24 +405,15 @@ class Usuario(models.Model):
         on_delete=models.PROTECT,
         )
     f_alta = models.DateTimeField(auto_now_add=True)
-
-    def organismos_filtrados(self, query: str):
-        return models.Organismo.search(query)
-
-    def as_dict(self) -> dict:
-        if self.is_valid():
-            return {
-                name: self.cleaned_data[name]
-                for name in self.Meta.fields
-                }
-        return {}
-
     f_cambio = models.DateTimeField(auto_now=True)
     f_baja = models.DateTimeField(
         default=None,
         blank=True,
         null=True,
         )
+
+    def organismos_filtrados(self, query: str):
+        return models.Organismo.search(query)
 
     @classmethod
     def load_usuario(cls, pk:str):
@@ -426,6 +423,7 @@ class Usuario(models.Model):
             return None
 
     @classmethod
+
     def search_usuarios(cls, query):
         return (
             cls.objects.filter(
@@ -436,12 +434,25 @@ class Usuario(models.Model):
                 )
             )
 
+    def as_dict(self) -> dict:
+        if self.is_valid():
+            return {
+                name: self.cleaned_data[name]
+                for name in self.Meta.fields
+                }
+        return {}
+
     def nombre_completo(self):
         if self.nombre:
             if self.apellidos:
                 return f'{self.nombre} {self.apellidos}'
             return self.nombre
         return self.login
+
+    def abreviado(self):
+        if self.email.lower().endswith('gobiernodecanarias.org'):
+            return self.login
+        return self.email
 
     def __str__(self):
         return self.nombre_completo()
@@ -536,3 +547,54 @@ class Perfil(models.Model):
     def __str__(self):
         return f"{self.get_cometido_display()} de {self.sistema.codigo}"
 
+
+class NormativaSistemaManager(models.Manager):
+
+    def get_by_natural_key(self, id_sistema, num_juriscan):
+        return self.get(id_sistema, num_juriscan)
+
+
+class NormaSistema(models.Model):
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["sistema", "num_juriscan"],
+                name="unique_sistema_juriscan",
+                ),
+            ]
+
+    id_normativa = models.BigAutoField(primary_key=True)
+    sistema = models.ForeignKey(
+        Sistema,
+        related_name='normativa',
+        on_delete=models.CASCADE,
+        )
+    num_juriscan = models.PositiveIntegerField()
+    resumen = models.CharField(
+        max_length=2048,
+        null=True,
+        default=None,
+        blank=True,
+        )
+    f_alta = models.DateTimeField(auto_now_add=True)
+    f_cambio = models.DateTimeField(auto_now=True)
+    f_baja = models.DateTimeField(
+        default=None,
+        blank=True,
+        null=True,
+        )
+
+    def natural_key(self):
+        return (self.sistema.pk, self.num_juriscan)
+
+    def __str__(self):
+        return 'Juriscan/{self.num_juriscan}'
+
+    @classmethod
+    def upsert(cls, sistema, num_juriscan):
+         norma_sistema, created = cls.objects.update_or_create(
+            sistema=sistema,
+            num_juriscan=num_juriscan,
+            )
+         return norma_sistema, created

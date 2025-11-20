@@ -1,7 +1,5 @@
 from django.shortcuts import render
 
-import dataclasses
-
 from . import models
 from . import breadcrumbs as bc
 

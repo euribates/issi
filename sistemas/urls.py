@@ -34,6 +34,7 @@ urlpatterns = [
     tie('organismo/<org:organismo>/', views.detalle_organismo),
     tie('usuario/', views.listado_usuarios),
     tie('usuario/buscar/', views.buscar_usuarios),
+    tie('usuario/alta/', views.alta_usuario),
     tie('usuario/<usr:usuario>/', views.detalle_usuario),
     tie('temas/', views.listado_temas),
     tie('temas/<tema:tema>/', views.detalle_tema),
@@ -42,6 +43,9 @@ urlpatterns = [
     tie('activos/', views.listado_activos),
     tie('pendientes/', views.pendientes),
     tie('pendientes/temas/', views.sistemas_sin_tema),
+    tie('exportar/', views.exportar_sistemas),
+    tie('exportar/todos/', views.exportar_sistemas_todos),
+    tie('importar/', views.importar_sistemas),
     tie("patch/organismos/", views.patch_organismos),
     tie("patch/usuarios/", views.patch_usuarios),
     ]

@@ -3,7 +3,6 @@
 from django.urls import path
 
 from . import views
-from . import converters
 
 app_name = 'directorio'
 
