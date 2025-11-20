@@ -55,15 +55,16 @@ exportación de datos. Veremos a continuación el resto de columnas:
   existente, se producirá un error y no se producirá ningún efecto
   en la base de datos.
 
-- **Codigo identificativo interno**: Aunque se usa la palabra código,
-  se espera aquí una expresión legible, consistente normalmente en el
+- **Codigo identificativo interno**: Aunque se usa la palabra código, se
+  espera aquí una expresión legible, consistente normalmente en el
   nombre, oficial o no, del sistema (por ejemplo, ``PLATINO``. No se
-  admiten espacios, ni caracteres especiales, no vocales acentuadas, ni
-  ningún otro símbolo aparte de las letras (excluyendo la eñe). Los
-  dígitos del ``1`` al ``9`` y el carácter subrayado, ``_``. Es un **valor
-  único** en la base de datos, así que si se intenta dar de alta un
-  sistema con el mismo nombre que otro ya existente, se producirá un
-  error y no se producirá ningún efecto en la base de datos.
+  admiten espacios, ni caracteres especiales, ni vocales acentuadas, ni
+  ningún otro símbolo aparte de las letras de la `A` a la `Z`
+  (excluyendo la eñe), los dígitos del ``1`` al ``9`` y el carácter
+  subrayado, ``_``. Es un **valor único** en la base de datos, así que
+  si se intenta dar de alta un sistema con el mismo nombre que otro ya
+  existente, se producirá un error y no se producirá ningún efecto en la
+  base de datos.
 
 - **Finalidad**: Es un texto breve, de un párrafo, en el que se explica
   la finalidad o propósito del sistema de información. Se admiten varios
@@ -114,7 +115,9 @@ exportación de datos. Veremos a continuación el resto de columnas:
 
 - **Normativa**: Código o códigos Juriscán de la normativa aplicable
   **de forma específica** a este sistema de información. Si no aplica
-  o no se conoce, dejarlo en blanco.
+  o no se conoce, dejarlo en blanco. Si son varios, separarlos por coma; esto obliga a
+  entrecomillar todos los valores. Ejemplso válidos: ``74222`` o
+  ``"74222, 6732"``.
 
 - **Comentarios**: Campo de texto opcional y libre para comentarios,
   aportaciones, notas de interés, etc. Si contiene más de un párrafo,
