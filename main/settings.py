@@ -150,6 +150,9 @@ FORMS_URLFIELD_ASSUME_HTTPS = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+SILENCED_SYSTEM_CHECKS = [
+    ]
+
 LOGS_DIR = BASE_DIR / 'logs'
 if not LOGS_DIR.exists:
     LOGS_DIR.mkdir()
@@ -173,12 +176,12 @@ LOGGING = {
     'handlers': {
         # Log to console
         'console': {
-            'level': LOG_LEVEL,
+            'level': 'ERROR',
             'class': 'logging.StreamHandler',
         },
         # Log to a text file that can be rotated by logrotate
         'logfile': {
-            'level': 'ERROR',
+            'level': 'INFO',
             'formatter': 'verbose',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': LOGFILE_NAME,

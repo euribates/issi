@@ -19,4 +19,6 @@ reportes/
 temp/
 logs/
 tags
-docs/html/*
+docs/html/
+docs/doctrees/
+docs/latex/

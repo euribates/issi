@@ -1,67 +1,71 @@
 ======= =========================================
-C骴igo  Materia competencial
+C贸digo  Materia competencial
 ======= =========================================
-``AEX`` Acci髇 Exterior
+``AEX`` Acci贸n Exterior
+``ASO`` Acci贸n social
 ``AGR`` Agricultura
 ``AGU`` Aguas
-``ALI`` Alimentaci髇
-``ART`` Artesan韆
-``ASO`` Asociaciones
+``ALI`` Alimentaci贸n
+``ALT`` Altos cargos
+``ART`` Artesan铆a
 ``BIS`` Bienestar Social
 ``CPR`` Colegios profesionales
 ``COM`` Comercio
 ``CON`` Consumo
 ``CTB`` Contabilidad
-``CNT`` Contrataci髇
-``CDE`` Cooperaci髇 al desarrollo
+``CNT`` Contrataci贸n
+``CDE`` Cooperaci贸n al desarrollo
 ``COP`` Cooperativas
 ``CUL`` Cultura
-``DEP`` Deportes
 ``DSS`` Desarrollo Sostenible
 ``UNK`` Desconocido / Pendiente
-``ECO`` Econom韆
-``ECS`` Econom韆 Social
-``EDU`` Educaci髇
-``EPR`` Elaboraci髇 presupuestaria
+``ECO`` Econom铆a
+``ECS`` Econom铆a Social
+``EDU`` Educaci贸n
+``EPR`` Elaboraci贸n presupuestaria
 ``EMG`` Emergencias
-``EMI`` Emigraci髇
+``EMI`` Emigraci贸n
 ``EMP`` Empleo
-``ENG`` Energ韆
+``ENG`` Energ铆a
 ``ECE`` Entidades Canarias Exterior
-``EST`` Estad韘ticas
-``FIS`` Fiscalizaci髇
+``EST`` Estad铆sticas
+``EOA`` Estrategia y organizaci贸n administrativa
+``FIS`` Fiscalizaci贸n
 ``FYF`` Flora y Fauna
-``FEM`` Formaci髇 para el empleo
+``FEM`` Formaci贸n para el empleo
 ``FUN`` Fundaciones
-``GAN`` Ganader韆
-``GRH`` Gesti髇 RRHH
-``GGA`` Gesti髇 de gastos
-``GIN`` Gesti髇 de ingresos
+``GAN`` Ganader铆a
+``GRH`` Gesti贸n RRHH
+``GGA`` Gesti贸n de gastos
+``GIN`` Gesti贸n de ingresos
+``GDI`` Gesti贸n documental integral
 ``HAC`` Hacienda
-``IDI`` I+D+i
-``IGE`` Igualdad de g閚ero
+``IGE`` Igualdad de g茅nero
 ``IND`` Industria
-``INM`` Inmigraci髇
+``INM`` Inmigraci贸n
+``IDI`` Investigaci贸n, Desarrollo e Innovaci贸n tecnol贸gica
 ``JUE`` Juego
 ``JUS`` Justicia
 ``JUV`` Juventud
-``LEG`` Legislaci髇
 ``MAB`` Medio Ambiente
-``MCO`` Medios de Comunicaci髇 Social
-``OPB`` Obras P鷅licas
-``OTE`` Ordenaci髇 Territorial
-``PAC`` Participaci髇 Ciudadana
+``MCO`` Medios de Comunicaci贸n Social
+``OPB`` Obras P煤blicas
+``OTE`` Ordenaci贸n Territorial
+``PDH`` Parejas de hecho
+``PAC`` Participaci贸n Ciudadana
 ``PAT`` Patrimonio
 ``PES`` Pesca
+``PPE`` Planificaci贸n y pol铆tica econ贸mica
 ``PTO`` Puertos
+``RSD`` Recepci贸n y salida de documentos
 ``RHU`` Recursos Humanos
 ``SAN`` Sanidad
-``TEC`` Tecnolog韆
-``TPF`` Tesoro y pol韙ica financiera
-``TRD`` Transformaci髇 digital
+``TEC`` Tecnolog铆a
+``TPF`` Tesoro y pol铆tica financiera
+``TRD`` Transformaci贸n digital
 ``TRP`` Transportes
 ``TRI`` Tributos
-``TRF`` Tr醘ico
+``TRF`` Tr谩fico
 ``TUR`` Turismo
 ``VIV`` Vivienda
 ======= =========================================

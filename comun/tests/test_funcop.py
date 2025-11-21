@@ -4,7 +4,8 @@ import pytest
 
 # Tests para la función agrupa
 
-from funcop import agrupa
+from comun.funcop import agrupa
+
 
 def test_simple():
     datos = [('a', 1), ('b', 2), ('a', 3)]

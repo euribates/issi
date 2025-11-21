@@ -12,9 +12,9 @@ search *args:
     
 
 # Ejecutar test (Omitiendo los lentos)
-test *args='.': clean check
-    python smoke_test.py
-    python -m pytest -m "not slow" -x --reuse-db --no-migrations --failed-first {{ args }}
+test *args='.':
+    python -m pytest -x --reuse-db --no-migrations --failed-first {{ args }}
+
 
 # Tests rápidos
 quicktest:
@@ -85,12 +85,11 @@ migrate $APP='': check
     sphinx-build -M html .  .
 
 # Generar imágenes para la documentación de los modelos
-docs:
+docs *args='.':
     python ./manage.py graph_models -g -o docs/sistemas.png sistemas
     python ./manage.py update_docs materias > docs/includes/materias.rst
     python ./manage.py update_docs entes > docs/includes/entes.rst
-    sphinx-build -M html docs/ docs/
-
+    sphinx-build -M html docs/ docs/ {{ args }}
 
 # Actualiza en caliente contenidos estaticos js/css/png/svg
 [unix]

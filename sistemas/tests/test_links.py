@@ -2,7 +2,7 @@
 
 import pytest
 
-import links
+from sistemas import links
 
 
 def test_link_a_sistemas():
@@ -42,7 +42,7 @@ def test_link_a_exportar_sistemas():
 
 def test_link_a_usuarios():
     expected = '/sistemas/usuario/'
-    assert links.a_usuario() == expected
+    assert links.a_usuarios() == expected
 
 
 def test_link_a_alta_usuario():
