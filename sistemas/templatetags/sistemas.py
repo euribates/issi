@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from html import escape
+
 from django import template
 from django.utils.safestring import mark_safe
 
@@ -72,19 +74,18 @@ def as_familia(familia):
 
 
 @register.filter
-def as_status_icon(estado):
+def as_status_icon(estado: str) -> str:
     return mark_safe(f'img/status/{estado}.svg')
 
 
 @register.filter
-def as_status_desc(estado):
+def as_status_desc(estado: str) -> str:
     match estado:
         case 'green': 
             return 'Completo'
         case 'yellow':
             return 'Pendiente de algunos datos'
         case 'red':
-            return 'Pendiente de algunos datos críticos'
-        case _:
-            return _
+            return 'Pendiente de algunos datos críticos'    
+    return f'Error: estado {escape(estado)} desconocido'
 

@@ -35,5 +35,20 @@ def test_link_a_detalle_familia():
     assert links.a_detalle_familia('F01') == expected
 
 
+def test_link_a_exportar_sistemas():
+    expected = '/sistemas/exportar/'
+    assert links.a_exportar_sistemas() == expected
+
+
+def test_link_a_usuarios():
+    expected = '/sistemas/usuario/'
+    assert links.a_usuario() == expected
+
+
+def test_link_a_alta_usuario():
+    expected = '/sistemas/usuario/alta/'
+    assert links.a_alta_usuario() == expected
+
+
 if __name__ == "__main__":
     pytest.main()

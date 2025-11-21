@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 
+from csv import reader as csv_reader
 from datetime import datetime as DateTime
-from datetime import timedelta as TimeDelta
 from pathlib import Path
-import csv
 from urllib.request import urlretrieve
 
 from rich.console import Console
@@ -88,7 +87,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         with open(self.descargar_organigrama(), 'r', encoding='utf-8') as source:
-            reader = csv.reader(source, delimiter=';', quotechar='"')
+            reader = csv_reader(source, delimiter=';', quotechar='"')
             next(reader) # Ignorar primera fila de nombres
             mapa = dict()
             for row in reader:

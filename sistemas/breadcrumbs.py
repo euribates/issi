@@ -95,6 +95,13 @@ def usuarios() -> BreadCrumb:
     return bc_issi().step('Usuarios', links.a_usuarios())
 
 
+def alta_usuario() -> BreadCrumb:
+    return usuarios().step(
+        'Alta',
+        links.a_alta_usuario(),
+        )
+
+
 def detalle_usuario(usuario: models.Usuario) -> BreadCrumb:
     return usuarios().step(
         usuario.login,
@@ -166,4 +173,11 @@ def sistemas_sin_tema() -> BreadCrumb:
     return pendientes().step(
         'Sin tema asignado',
         links.a_sistemas_sin_tema(),
+        )
+
+
+def exportar_sistemas() -> str:
+    return sistemas().step(
+        'Exportar',
+        links.a_exportar_sistemas(),
         )

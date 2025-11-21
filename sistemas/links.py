@@ -75,6 +75,10 @@ def a_usuarios() -> str:
     return _a('sistemas:listado_usuarios')
 
 
+def a_alta_usuario() -> str:
+    return _a('sistemas:alta_usuario')
+
+
 def a_detalle_usuario(usuario) -> str:
     return _a('sistemas:detalle_usuario', usuario=usuario)
 
@@ -125,3 +129,7 @@ def a_pendientes() -> str:
 
 def a_sistemas_sin_tema() -> str:
     return _a('sistemas:sistemas_sin_tema')
+
+
+def a_exportar_sistemas() -> str:
+    return _a('sistemas:exportar_sistemas')

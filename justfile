@@ -45,7 +45,8 @@ dbshell:
 # Ejecutar django check
 check:
     python ./manage.py check
-
+    bandit .
+    ruff check .
 
 # Ejecutar django collectstatic
 static:
@@ -81,10 +82,15 @@ alias mm := makemigrations
 # Ejecutar migraciones Django
 migrate $APP='': check
     python manage.py migrate {{APP}} --database $DATABASE
+    sphinx-build -M html .  .
 
 # Generar imágenes para la documentación de los modelos
 docs:
-    python ./manage.py graph_models -g -o docs/dc2_models.png
+    python ./manage.py graph_models -g -o docs/sistemas.png sistemas
+    python ./manage.py update_docs materias > docs/includes/materias.rst
+    python ./manage.py update_docs entes > docs/includes/entes.rst
+    sphinx-build -M html docs/ docs/
+
 
 # Actualiza en caliente contenidos estaticos js/css/png/svg
 [unix]
@@ -100,3 +106,5 @@ tags:
 # Buscar con pss pero omitiendo directorios .venv y migrations
 pss  *args='':
     pss {{args}} --ignore-dir .venv --ignore-dir migrations
+
+

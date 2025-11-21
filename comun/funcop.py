@@ -31,8 +31,12 @@ def agrupa(rows: list, selector: Callable=None) -> dict:
         >>> assert len(agrupado) == 2
     '''
     result = {}
+    
     if selector is None:
-        selector = lambda _row: _row[0]
+
+        def selector(row):
+            return _row[0]
+
     if not callable(selector):
         raise TypeError(
             'El parámetro selector debe ser un invocable:'
