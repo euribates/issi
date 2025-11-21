@@ -1,29 +1,29 @@
 ============= =========================================
-C贸d. Ente     Nombre del organismo o direcci贸n general
+C骴. Ente     Nombre del organismo o direcci髇 general
 ============= =========================================
 ``PREGOB``    Presidencia del Gobierno
-``EICA``      Consejer铆a de Econom铆a, Industria, Comercio y Aut贸nomos
-``OPVM``      Consejer铆a de Obras P煤blicas, Vivienda y Movilidad
+``EICA``      Consejer韆 de Econom韆, Industria, Comercio y Aut髇omos
+``OPVM``      Consejer韆 de Obras P鷅licas, Vivienda y Movilidad
 ``ICAVI``     Instituto Canario de la Vivienda
-``HRUE``      Consejer铆a de Hacienda y Relaciones con la Uni贸n Europea
+``HRUE``      Consejer韆 de Hacienda y Relaciones con la Uni髇 Europea
 ``ATC``       Agencia Tributaria Canaria
-``ISTAC``     Instituto Canario de Estad铆stica
-``PAPJS``     Consejer铆a de Presidencia, Administraciones P煤blicas, Justicia y Seguridad
-``ICAP``      Instituto Canario de Administraci贸n P煤blica
-``EFPAFD``    Consejer铆a de Educaci贸n, Formaci贸n Profesional, Actividad F铆sica y Deportes
-``ACCUEE``    Agencia Canaria de Calidad Universitaria y Evaluaci贸n Educativa
-``PTCTA``     Consejer铆a de Pol铆tica Territorial, Cohesi贸n Territorial y Aguas
-``ACMUN``     Agencia Canaria de Protecci贸n del Medio Natural
-``TUREMP``    Consejer铆a de Turismo y Empleo
+``ISTAC``     Instituto Canario de Estad韘tica
+``PAPJS``     Consejer韆 de Presidencia, Administraciones P鷅licas, Justicia y Seguridad
+``ICAP``      Instituto Canario de Administraci髇 P鷅lica
+``EFPAFD``    Consejer韆 de Educaci髇, Formaci髇 Profesional, Actividad F韘ica y Deportes
+``ACCUEE``    Agencia Canaria de Calidad Universitaria y Evaluaci髇 Educativa
+``PTCTA``     Consejer韆 de Pol韙ica Territorial, Cohesi髇 Territorial y Aguas
+``ACMUN``     Agencia Canaria de Protecci髇 del Medio Natural
+``TUREMP``    Consejer韆 de Turismo y Empleo
 ``SCE``       Servicio Canario de Empleo
-``UCIC``      Consejer铆a de Universidades, Ciencia e Innovaci贸n y Cultura
-``ACIISI``    Agencia Canaria de Investigaci贸n, Innovaci贸n y Sociedad de la Informaci贸n
-``TEE``       Consejer铆a de Transici贸n Ecol贸gica y Energ铆a
-``BSIJIF``    Consejer铆a de Bienestar Social, Igualdad, Juventud, Infancia y Familias
+``UCIC``      Consejer韆 de Universidades, Ciencia e Innovaci髇 y Cultura
+``ACIISI``    Agencia Canaria de Investigaci髇, Innovaci髇 y Sociedad de la Informaci髇
+``TEE``       Consejer韆 de Transici髇 Ecol骻ica y Energ韆
+``BSIJIF``    Consejer韆 de Bienestar Social, Igualdad, Juventud, Infancia y Familias
 ``ICI``       Instituto Canario de Igualdad
-``SAN``       Consejer铆a de Sanidad
+``SAN``       Consejer韆 de Sanidad
 ``ESSSCAN``   Escuela de Servicios Sanitarios y Sociales de Canarias
 ``SCS``       Servicio Canario de la Salud
-``AGPA``      Consejer铆a de Agricultura, Ganader铆a, Pesca y Soberan铆a Alimentaria
+``AGPA``      Consejer韆 de Agricultura, Ganader韆, Pesca y Soberan韆 Alimentaria
 ``ICIA``      Instituto Canario de Investigaciones Agrarias
 ============= =========================================

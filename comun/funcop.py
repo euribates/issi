@@ -35,7 +35,7 @@ def agrupa(rows: list, selector: Callable=None) -> dict:
     if selector is None:
 
         def selector(row):
-            return _row[0]
+            return row[0]
 
     if not callable(selector):
         raise TypeError(

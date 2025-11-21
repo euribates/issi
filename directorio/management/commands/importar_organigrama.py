@@ -10,9 +10,9 @@ from django.core.management.base import BaseCommand
 from django.db import transaction, IntegrityError
 
 from django.conf import settings
-from filters import clean_text
-from filters import clean_integer
-from filters import clean_url
+from comun.filters import clean_text
+from comun.filters import clean_integer
+from comun.filters import clean_url
 from directorio import models
 
 
@@ -82,7 +82,7 @@ class Command(BaseCommand):
         self.warning(f'El fichero local [bold]{target_file}[/] no existe o está desfasado')
         url = f'{CATALOG}/{DATASET}/{RESOURCE}/download/{FILENAME}'
         urlretrieve(url, target_file)
-        self.success('Fichero [bold]{target_file}[/] descargado')
+        self.success(f'Fichero [bold]{target_file}[/] descargado')
         return target_file
 
     def handle(self, *args, **options):

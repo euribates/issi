@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-import math
-
 from django.shortcuts import render
 
 from comun.bus import Bus

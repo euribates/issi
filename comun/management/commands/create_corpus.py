@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-import argparse
-
 from django.core.management.base import BaseCommand
 
 ABOUT    = 'Crea la tabla de frecuencias a partir del fichero spanish.txt'

@@ -3,7 +3,7 @@
 from django.urls import path
 
 from . import views
-from . import converters
+from . import converters  # noqa: F401
 
 app_name = 'sistemas'
 

@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import argparse
 import random
 
 from django.core.management.base import BaseCommand
@@ -163,6 +162,6 @@ class Command(BaseCommand):
                 troff('No more symbols needed', buffer)
         buffer = [alter_case(c) for c in buffer]
         if verbosity > 1:
-            tron(f'Swap case', buffer)
+            tron('Swap case', buffer)
         password = ''.join(buffer)
         return password

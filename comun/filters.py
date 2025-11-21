@@ -4,7 +4,6 @@ import re
 from urllib.parse import urlparse
 from html import escape
 
-from typing import Optional
 
 def clean_text(text: str) -> str|None:
     """Limpia el formato de texto.
