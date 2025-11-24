@@ -3,6 +3,7 @@
 import uuid
 from html import escape
 
+from django.utils.timezone import localtime
 from django.db import models
 from django.db.models import Q
 from django.db.models.functions import Coalesce
@@ -171,7 +172,13 @@ class Sistema(models.Model):
         width_field='icono_width',
         max_length=512,
         )
-
+    f_alta = models.DateTimeField(auto_now_add=True)
+    f_cambio = models.DateTimeField(auto_now=True)
+    f_baja = models.DateTimeField(
+        default=None,
+        blank=True,
+        null=True,
+        )
 
     @classmethod
     def alta_sistema(
@@ -229,6 +236,10 @@ class Sistema(models.Model):
 
     def __str__(self):
         return self.nombre
+
+    def touch(self):
+        self.f_baja = localtime()
+        self.save()
 
     def url_detalle_sistema(self):
         """URL de detalle del sistema.
@@ -375,9 +386,23 @@ class Activo(models.Model):
         choices=NIVELES_DATOS_PERSONALES,
         default='NO',
         )
+    f_alta = models.DateTimeField(auto_now_add=True)
+    f_cambio = models.DateTimeField(auto_now=True)
+    f_baja = models.DateTimeField(
+        default=None,
+        blank=True,
+        null=True,
+        )
+
 
     def __str__(self):
         return self.nombre_activo
+
+    def touch(self):
+        self.f_baja = localtime()
+        self.save()
+        self.sistema.touch()
+
 
 
 class Usuario(models.Model):

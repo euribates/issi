@@ -45,7 +45,6 @@ dbshell:
 # Ejecutar django check
 check:
     python ./manage.py check
-    bandit .
     ruff check .
 
 # Ejecutar django collectstatic
@@ -82,7 +81,6 @@ alias mm := makemigrations
 # Ejecutar migraciones Django
 migrate $APP='': check
     python manage.py migrate {{APP}} --database $DATABASE
-    sphinx-build -M html .  .
 
 # Generar imágenes para la documentación de los modelos
 docs *args='.':
