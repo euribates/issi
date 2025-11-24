@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 
+from collections import Counter
+
+from django.utils.safestring import mark_safe
 from django.shortcuts import render
 
 from comun.bus import Bus
 from sistemas import breadcrumbs
+from sistemas.models import Sistema
 
 
 PIE_COORDS = [
@@ -36,11 +40,50 @@ PIE_COORDS = [
     ]
 
 
+class Doughnut:
+
+    def __init__(self, good=33, regular=33, bad=33, width=256, height=256):
+        self.good = good
+        self.regular = regular
+        self.bad = bad
+        self.width = width
+        self.height = height
+
+    def url(self):
+        return "/comun/charts/doughnut/?g={g}&r={r}&b={b}".format(
+            g=self.good,
+            r=self.regular,
+            b=self.bad,
+            )
+
+    def as_html(self):
+        return mark_safe(
+            '<img'
+            f' width="{self.width}" height="self.height"'
+            f' src="{self.url()}">'
+            )
+
+
+
+def get_stats_sistemas() -> dict:
+    stats = Counter()
+    for s in Sistema.objects.all():
+        stats[s.get_estado()] += 1
+    return stats
+
+
 def homepage(request):
+    stats = get_stats_sistemas()
     return render(request, "comun/homepage.html", {
         "titulo": "Inventario de sistemas de información",
         'breadcrumbs': breadcrumbs.bc_issi(),
+        "sistemas_chart": Doughnut(
+            good=stats['green'],
+            regular=stats['yellow'],
+            bad=stats['red'],
+            ),
         })
+
 
 def labo(request):
     from comun.charts import BarChart

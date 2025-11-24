@@ -8,6 +8,8 @@
 
 {% block content %}
 
+    
+
 <div class="container text-center">
 
   <div class="row">
@@ -22,10 +24,7 @@
        </div>
        <div class="card-body">
 
-         <div>
-         <img width="256" height="256"
-         src="/comun/charts/doughnut/">
-         </div>
+         <div> {{ sistemas_chart.as_html }} </div>
 
        <p class="card-text">
         Conjunto organizado de elementos interrelacionados (personas,

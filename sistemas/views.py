@@ -36,8 +36,9 @@ def cmd_sistemas():
         ]
 
 
+
 def index(request, *args, **kwargs):
-    sistemas = models.Sistema.objects.all()
+    sistemas = models.Sistema.objects.order_by('-f_cambio')
     num_sistemas = sistemas.count()
     filterset = filtersets.SistemaFilter(
         request.GET,

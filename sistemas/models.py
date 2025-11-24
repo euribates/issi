@@ -238,7 +238,7 @@ class Sistema(models.Model):
         return self.nombre
 
     def touch(self):
-        self.f_baja = localtime()
+        self.f_cambio = localtime()
         self.save()
 
     def url_detalle_sistema(self):
@@ -399,7 +399,7 @@ class Activo(models.Model):
         return self.nombre_activo
 
     def touch(self):
-        self.f_baja = localtime()
+        self.f_cambio = localtime()
         self.save()
         self.sistema.touch()
 
