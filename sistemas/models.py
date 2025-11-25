@@ -71,6 +71,13 @@ class Tema(models.Model):
         except cls.DoesNotExist:
             return None
 
+    @classmethod
+    def load_tema_por_nombre(cls, nombre:str):
+        try:
+            return cls.objects.get(nombre_tema=nombre)
+        except cls.DoesNotExist:
+            return None
+
     def inicial(self) -> str:
         return self.nombre_tema[0].upper()
 
@@ -225,12 +232,31 @@ class Sistema(models.Model):
 
         Returns:
 
-            La instancia, si exciste el registro correspondiente
+            La instancia, si existe el registro correspondiente
             en la base de datos, o `None` en caso contrario.
 
         """
         try:
             return cls.objects.get(id_sistema=pk)
+        except cls.DoesNotExist:
+            return None
+
+    @classmethod
+    def load_sistema_por_uuid(cls, uuid:str):
+        """Obtener un sistema a partir de su clave secundaria UUID
+
+        Parameters:
+
+            uuid (str|UUID): Clave secundaria del sistema
+
+        Returns:
+
+            La instancia, si existe el registro correspondiente
+            en la base de datos, o `None` en caso contrario.
+
+        """
+        try:
+            return cls.objects.get(uuid=uuid)
         except cls.DoesNotExist:
             return None
 
