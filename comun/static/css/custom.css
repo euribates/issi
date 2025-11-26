@@ -250,3 +250,10 @@ a.email {
 a.email:hover {
   text-decoration: underline;
 }
+
+
+.form-errors {
+  color: #aa4400;
+  font-weight: bolder;
+  font-size: 110%;
+}

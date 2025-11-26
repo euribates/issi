@@ -659,7 +659,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-issi_GKKmb4J.png"
+        "icono": "sistemas/iconos/2025/logo-issi_GKKmb4J.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -681,7 +684,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/turidata-logo.png"
+        "icono": "sistemas/iconos/2025/turidata-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -703,7 +709,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/juriscan-logo.png"
+        "icono": "sistemas/iconos/2025/juriscan-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -725,7 +734,10 @@
         "familia": "F06",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/sirhus-logo.png"
+        "icono": "sistemas/iconos/2025/sirhus-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -747,7 +759,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo_platea_8ugjV2e.png"
+        "icono": "sistemas/iconos/2025/logo_platea_8ugjV2e.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -769,7 +784,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -791,7 +809,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-platino.png"
+        "icono": "sistemas/iconos/2025/logo-platino.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -813,7 +834,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-seflogic.png"
+        "icono": "sistemas/iconos/2025/logo-seflogic.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -835,7 +859,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/sicac-logo.png"
+        "icono": "sistemas/iconos/2025/sicac-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -857,7 +884,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-hiperreg_y6TMSbi.png"
+        "icono": "sistemas/iconos/2025/logo-hiperreg_y6TMSbi.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -879,7 +909,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/triskell-logo.png"
+        "icono": "sistemas/iconos/2025/triskell-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -901,7 +934,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/dircac-logo.png"
+        "icono": "sistemas/iconos/2025/dircac-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -923,7 +959,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -945,7 +984,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -967,7 +1009,10 @@
         "familia": "UNK",
         "icono_height": 464,
         "icono_width": 464,
-        "icono": "sistemas/iconos/2025/sidecan-logo.png"
+        "icono": "sistemas/iconos/2025/sidecan-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -989,7 +1034,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/RCC-logo.png"
+        "icono": "sistemas/iconos/2025/RCC-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1011,7 +1059,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/rpg-adopciones_Y5i95aY.png"
+        "icono": "sistemas/iconos/2025/rpg-adopciones_Y5i95aY.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1033,7 +1084,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1055,7 +1109,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/rpg-logo.png"
+        "icono": "sistemas/iconos/2025/rpg-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1077,7 +1134,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1099,7 +1159,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1121,7 +1184,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1143,7 +1209,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/TimeView-logo.png"
+        "icono": "sistemas/iconos/2025/TimeView-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1165,7 +1234,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/gpd-logo.png"
+        "icono": "sistemas/iconos/2025/gpd-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1187,7 +1259,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/gpnd-logo.png"
+        "icono": "sistemas/iconos/2025/gpnd-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1209,7 +1284,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/gestacad-logo.png"
+        "icono": "sistemas/iconos/2025/gestacad-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1231,7 +1309,10 @@
         "familia": "F11",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1253,7 +1334,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/siglo-logo.png"
+        "icono": "sistemas/iconos/2025/siglo-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1275,7 +1359,10 @@
         "familia": "F17",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1297,7 +1384,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1319,7 +1409,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1341,7 +1434,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1363,7 +1459,10 @@
         "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1385,7 +1484,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1407,7 +1509,10 @@
         "familia": "F03",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1429,7 +1534,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1451,7 +1559,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1473,7 +1584,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1495,7 +1609,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1517,7 +1634,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1539,7 +1659,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1561,7 +1684,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1583,7 +1709,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1605,7 +1734,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/centros-dia-logo.png"
+        "icono": "sistemas/iconos/2025/centros-dia-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1627,7 +1759,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/centros-menores-logo.png"
+        "icono": "sistemas/iconos/2025/centros-menores-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1649,7 +1784,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1671,7 +1809,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1693,7 +1834,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1715,7 +1859,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1737,7 +1884,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1759,7 +1909,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1781,7 +1934,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1803,7 +1959,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1825,7 +1984,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1847,7 +2009,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1869,7 +2034,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1891,7 +2059,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1913,7 +2084,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1935,7 +2109,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1957,7 +2134,10 @@
         "familia": "F05",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/avj-logo.png"
+        "icono": "sistemas/iconos/2025/avj-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -1979,7 +2159,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/justiniano-logo_fkL3ZjJ.png"
+        "icono": "sistemas/iconos/2025/justiniano-logo_fkL3ZjJ.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2001,7 +2184,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2023,7 +2209,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2045,7 +2234,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2067,7 +2259,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2089,7 +2284,10 @@
         "familia": "F13",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/casper-logo.png"
+        "icono": "sistemas/iconos/2025/casper-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2111,7 +2309,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2133,7 +2334,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2155,7 +2359,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2177,7 +2384,10 @@
         "familia": "F13",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2199,7 +2409,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2221,7 +2434,10 @@
         "familia": "UNK",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2243,7 +2459,10 @@
         "familia": "F11",
         "icono_height": 0,
         "icono_width": 0,
-        "icono": ""
+        "icono": "",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2265,7 +2484,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/redexos-logo.png"
+        "icono": "sistemas/iconos/2025/redexos-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2287,7 +2509,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/geboc-logo.png"
+        "icono": "sistemas/iconos/2025/geboc-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2309,7 +2534,10 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/redpromar-logo.png"
+        "icono": "sistemas/iconos/2025/redpromar-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
     }
 },
 {
@@ -2331,7 +2559,85 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/sinca-logo.png"
+        "icono": "sistemas/iconos/2025/sinca-logo.png",
+        "f_alta": "2025-11-24T10:20:18.231Z",
+        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 79,
+    "fields": {
+        "uuid": "ec6e56af-b597-4188-97ea-38baddb3b464",
+        "nombre": "Control horario",
+        "organismo": 41567,
+        "codigo": "SICHO",
+        "url": null,
+        "descripcion": "Sistema informático corporativo que soporte la gestión del sistema de control de acceso, permanencia y salida del personal al servicio de la APCAC",
+        "proposito": "Gestión de las vacaciones, permisos, licencias y control de la jornada y horario de trabajo, incluida la prestación de servicios en la modalidad de teletrabajo, del personal al servicio de la Administración Pública de la Comunidad Autónoma de Canarias.",
+        "observaciones": "",
+        "tema": "RHU",
+        "es_transversal": true,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": true,
+        "familia": "F06",
+        "icono_height": 225,
+        "icono_width": 225,
+        "icono": "sistemas/iconos/2025/sicho-logo.png",
+        "f_alta": "2025-11-24T10:32:54.772Z",
+        "f_cambio": "2025-11-24T10:45:10.739Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 80,
+    "fields": {
+        "uuid": "0ca60d06-9c5b-4b2c-a91a-e8cc52ef62b7",
+        "nombre": "Gestión de nóminas M4",
+        "organismo": 41567,
+        "codigo": "NOMINA",
+        "url": null,
+        "descripcion": "Meta 4?",
+        "proposito": "Cálculo de la nómina del personal al servicio de la Administración Pública de la Comunidad Autónoma de Canarias",
+        "observaciones": "",
+        "tema": "RHU",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "F06",
+        "icono_height": 512,
+        "icono_width": 513,
+        "icono": "sistemas/iconos/2025/nomina-logo.png",
+        "f_alta": "2025-11-24T11:11:23.399Z",
+        "f_cambio": "2025-11-24T11:27:06.784Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 81,
+    "fields": {
+        "uuid": "637e11d3-8a8b-4b6a-a784-698f53435ad6",
+        "nombre": "Sistema de gestión integral de seguridad canaria",
+        "organismo": 42122,
+        "codigo": "SIGESCA",
+        "url": null,
+        "descripcion": "Establecer los criterios y medios que hagan posible un sistema de información recíproco, en el marco de la coordinación de las Policías Locales. Proporcionar a los Cuerpos de Policía Local la información necesaria para la prestación de los servicios así como ponerla a disposición de las Fuerzas y Cuerpos de Seguridad del Estado. Promover un sistema estadístico y de información y análisis que puedan interesar para las actuaciones de las Administraciones y de las policías relativas a la seguridad ciudadana, su agrupación común para que resulten comparables, y el intercambio de la información con la Administración General del Estado. Promover la planificación de los servicios, el empleo eficiente de los recursos, la integración de las bases de datos policiales y la homogenización de organizaciones, métodos y procedimientos de actuación.",
+        "proposito": "Mejorar la operatividad, gestión y coordinación del trabajo policial a través del acceso a una base de datos común entre la Policía Local y el Cuerpo General de la Policía Canaria.",
+        "observaciones": "",
+        "tema": "TRD",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 512,
+        "icono_width": 513,
+        "icono": "sistemas/iconos/2025/sigesca-logo.png",
+        "f_alta": "2025-11-24T12:50:17.865Z",
+        "f_cambio": "2025-11-24T13:01:49.369Z",
+        "f_baja": null
     }
 },
 {
@@ -2343,7 +2649,10 @@
         "descripcion": "Relación de los sistemas de información utilizados en la AP del Gobierno de Canarias y organismos dependientes.",
         "es_prioritario": false,
         "esta_georeferenciado": false,
-        "datos_personales": "NO"
+        "datos_personales": "NO",
+        "f_alta": "2025-11-24T07:50:48.774Z",
+        "f_cambio": "2025-11-24T07:50:48.792Z",
+        "f_baja": null
     }
 },
 {
@@ -2355,7 +2664,10 @@
         "descripcion": "Los activos de datos más relevantes utilizados por cada sistema de información",
         "es_prioritario": false,
         "esta_georeferenciado": false,
-        "datos_personales": "NO"
+        "datos_personales": "NO",
+        "f_alta": "2025-11-24T07:50:48.774Z",
+        "f_cambio": "2025-11-24T07:50:48.792Z",
+        "f_baja": null
     }
 },
 {
@@ -2367,7 +2679,10 @@
         "descripcion": "Indicadores comunes",
         "es_prioritario": true,
         "esta_georeferenciado": false,
-        "datos_personales": "NO"
+        "datos_personales": "NO",
+        "f_alta": "2025-11-24T07:50:48.774Z",
+        "f_cambio": "2025-11-24T07:50:48.792Z",
+        "f_baja": null
     }
 },
 {
@@ -2393,6 +2708,19 @@
         "organismo": 39073,
         "f_alta": "2025-10-16T11:23:53.255Z",
         "f_cambio": "2025-10-16T11:23:53.255Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "adiaraml",
+    "fields": {
+        "email": "adiaraml@gobiernodecanarias.org",
+        "nombre": "María Amparo",
+        "apellidos": "Díaz Ramírez",
+        "organismo": 42119,
+        "f_alta": "2025-11-26T19:25:19.529Z",
+        "f_cambio": "2025-11-26T19:25:19.529Z",
         "f_baja": null
     }
 },
@@ -2775,6 +3103,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "fespsos",
+    "fields": {
+        "email": "fespsos@gobiernodecanarias.org",
+        "nombre": "Francisco José",
+        "apellidos": "Espino Sosa",
+        "organismo": 42122,
+        "f_alta": "2025-11-24T12:55:02.533Z",
+        "f_cambio": "2025-11-24T12:55:02.534Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "feugbau",
     "fields": {
         "email": "feugbau@gobiernodecanarias.org",
@@ -2996,6 +3337,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "jmarcast",
+    "fields": {
+        "email": "jmarcast@goniernodecanarias.org",
+        "nombre": "José Javier",
+        "apellidos": "Martín del Castillo",
+        "organismo": 41567,
+        "f_alta": "2025-11-24T11:17:18.508Z",
+        "f_cambio": "2025-11-24T11:17:18.509Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "jmorrom",
     "fields": {
         "email": "jmorrom@gobiernodecanarias.org",
@@ -3004,6 +3358,32 @@
         "organismo": 6547,
         "f_alta": "2025-10-06T18:41:33.934Z",
         "f_cambio": "2025-10-06T18:41:33.934Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jpaclar",
+    "fields": {
+        "email": "jpaclar@gobiernodecanarias.org",
+        "nombre": "Juan José",
+        "apellidos": "Pacheco Lara",
+        "organismo": 42122,
+        "f_alta": "2025-11-26T10:31:30.588Z",
+        "f_cambio": "2025-11-26T10:31:30.588Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jreyalmx",
+    "fields": {
+        "email": "jreyalmx@gobiernodecanarias.org",
+        "nombre": "José Luis",
+        "apellidos": "De los Reyes Almeida",
+        "organismo": 42122,
+        "f_alta": "2025-11-24T12:56:30.625Z",
+        "f_cambio": "2025-11-24T12:56:30.625Z",
         "f_baja": null
     }
 },
@@ -3165,6 +3545,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "mcabpen",
+    "fields": {
+        "email": "mcabpen@gobiernodecanarias.org",
+        "nombre": "Mercedes",
+        "apellidos": "Cabrera Peña",
+        "organismo": 41567,
+        "f_alta": "2025-11-26T10:23:53.555Z",
+        "f_cambio": "2025-11-26T10:23:53.555Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "mcabperd",
     "fields": {
         "email": "mcabperd@gobiernodecanarias.org",
@@ -3186,6 +3579,19 @@
         "organismo": 42162,
         "f_alta": "2025-11-11T09:23:18.591Z",
         "f_cambio": "2025-11-11T09:23:18.591Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mdiaasct",
+    "fields": {
+        "email": "mdiaasct@gobiernodecanarias.org",
+        "nombre": "Marta",
+        "apellidos": "Diaz Ascanio",
+        "organismo": 42119,
+        "f_alta": "2025-11-26T13:04:02.183Z",
+        "f_cambio": "2025-11-26T13:04:02.183Z",
         "f_baja": null
     }
 },
@@ -3563,6 +3969,19 @@
         "organismo": 41854,
         "f_alta": "2025-10-06T18:41:33.843Z",
         "f_cambio": "2025-10-06T18:41:33.843Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "pruitov",
+    "fields": {
+        "email": "pruitov@gobiernodecanarias.org",
+        "nombre": "Patricia",
+        "apellidos": "Ruiz de Galarreta Tovar",
+        "organismo": 42119,
+        "f_alta": "2025-11-26T13:01:44.529Z",
+        "f_cambio": "2025-11-26T13:01:44.529Z",
         "f_baja": null
     }
 },
@@ -5532,6 +5951,78 @@
         "sistema": 78,
         "f_alta": "2025-11-12T13:28:11.752Z",
         "f_cambio": "2025-11-12T13:28:11.753Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 118,
+    "fields": {
+        "usuario": "cherramq",
+        "cometido": "FUN",
+        "sistema": 79,
+        "f_alta": "2025-11-24T10:36:40.363Z",
+        "f_cambio": "2025-11-24T10:36:40.363Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 119,
+    "fields": {
+        "usuario": "cherramq",
+        "cometido": "TEC",
+        "sistema": 79,
+        "f_alta": "2025-11-24T10:37:06.383Z",
+        "f_cambio": "2025-11-24T10:37:06.383Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 120,
+    "fields": {
+        "usuario": "jmarcast",
+        "cometido": "FUN",
+        "sistema": 80,
+        "f_alta": "2025-11-24T11:17:34.086Z",
+        "f_cambio": "2025-11-24T11:17:34.086Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 121,
+    "fields": {
+        "usuario": "jmarcast",
+        "cometido": "TEC",
+        "sistema": 80,
+        "f_alta": "2025-11-24T11:17:45.891Z",
+        "f_cambio": "2025-11-24T11:17:45.892Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 122,
+    "fields": {
+        "usuario": "fespsos",
+        "cometido": "TEC",
+        "sistema": 81,
+        "f_alta": "2025-11-24T12:55:14.597Z",
+        "f_cambio": "2025-11-24T12:55:14.597Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 123,
+    "fields": {
+        "usuario": "jreyalmx",
+        "cometido": "FUN",
+        "sistema": 81,
+        "f_alta": "2025-11-24T12:56:37.672Z",
+        "f_cambio": "2025-11-24T12:56:37.673Z",
         "f_baja": null
     }
 }

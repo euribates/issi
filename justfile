@@ -53,7 +53,7 @@ static:
 
 
 # Ejecutar un run server en modo desarrollo
-rundev: check static 
+rundev: static 
     python ./manage.py runserver 0.0.0.0:8800 
 
 

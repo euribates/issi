@@ -13,6 +13,9 @@ from . import diagnosis
 from . import links
 
 
+EMAIL_DOMAIN = 'gobiernodecanarias.org'
+
+
 class FamiliaManager(models.Manager):
 
     def with_counts(self):
@@ -474,7 +477,6 @@ class Usuario(models.Model):
             return None
 
     @classmethod
-
     def search_usuarios(cls, query):
         return (
             cls.objects.filter(
@@ -484,6 +486,12 @@ class Usuario(models.Model):
                 Q(apellidos__icontains=query)
                 )
             )
+
+    def save(self, *args, **kwargs):
+        if not self.email:
+            self.email = f'{self.login}@{EMAIL_DOMAIN}'
+        super().save(*args, **kwargs)
+
 
     def as_dict(self) -> dict:
         if self.is_valid():
@@ -643,9 +651,24 @@ class NormaSistema(models.Model):
         return 'Juriscan/{self.num_juriscan}'
 
     @classmethod
-    def upsert(cls, sistema, num_juriscan):
-         norma_sistema, created = cls.objects.update_or_create(
+    def upsert(cls, sistema, num_juriscan: int) -> tuple:
+        """Actualiza o inserta la norma del sistema, según proceda.
+
+        Patrameters:
+
+            sistema: Sistema - El sistema al que se le va a asignar la norma.
+
+            num_juriscan: int - El código o número Juriscan de la norma.
+
+        Returns:
+            
+            Una dupla, en la que el primer elemento
+            es la instancia recién creada o actualizada
+            y el segundo un booleano indicando si ha
+            sido creado (`True`) o modificado (`False`).
+        """
+        norma_sistema, created = cls.objects.update_or_create(
             sistema=sistema,
             num_juriscan=num_juriscan,
             )
-         return norma_sistema, created
+        return norma_sistema, created

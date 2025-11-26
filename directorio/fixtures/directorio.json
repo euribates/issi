@@ -2105,7 +2105,7 @@
 },
 {
     "model": "directorio.ente",
-    "pk": "ACMUN",
+    "pk": "ACPMN",
     "fields": {
         "organismo": 41854,
         "peso": 650,
@@ -2173,15 +2173,6 @@
         "organismo": 42086,
         "peso": 300,
         "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-hacienda"
-    }
-},
-{
-    "model": "directorio.ente",
-    "pk": "ICAP",
-    "fields": {
-        "organismo": 25972,
-        "peso": 450,
-        "url_open_data": null
     }
 },
 {

@@ -29,8 +29,24 @@ from sistemas.models import Usuario
 def cmd_sistemas():
     return [
         Command(
+            links.a_exportar_sistemas(),
+            '<i class="bi bi-filetype-css"></i>'
+            'Exportar',
+            klass='info',
+            ),
+        Command(
             links.a_alta_sistema(),
             '⊞ Alta sistema',
+            klass='warning',
+            ),
+        ]
+
+@cache
+def cmd_usuarios():
+    return [
+        Command(
+            links.a_alta_usuario(),
+            '⊞ Alta usuario',
             klass='warning',
             ),
         ]
@@ -326,6 +342,7 @@ def listado_usuarios(request):
         'titulo': 'Usuarios registrados en el sistema',
         'breadcrumbs': bc.usuarios(),
         'tab': 'usuarios',
+        'commands': cmd_usuarios(),
         "filterset": filterset,
         })
 
@@ -343,6 +360,8 @@ def alta_usuario(request, *args, **kwargs):
     if request.method == 'POST':
         form = forms.AltaUsuarioForm(request.POST)
         if form.is_valid():
+            data = form.cleaned_data
+            from icecream import ic; ic(data)
             usuario = form.save()
             Bus(request).success(
                 f"Se ha dado de alta al usuario {usuario}"
@@ -354,6 +373,7 @@ def alta_usuario(request, *args, **kwargs):
         'titulo': 'Dar de alta un nuevo usuario',
         'breadcrumbs': bc.usuarios(),
         'tab': 'usuarios',
+        'form': form,
         })
 
 

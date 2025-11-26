@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import sys
-import json
 import uuid
 import argparse
 import csv
@@ -258,7 +257,7 @@ class Command(BaseCommand):
                 if uuid:
                     updates.append(payload)
                 else:
-                    insert.append(payload)
+                    inserts.append(payload)
                 if verbose:
                     print()
                 else:

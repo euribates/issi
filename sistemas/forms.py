@@ -141,3 +141,15 @@ class AsignarInterlocutorForm(BaseForm):
     class Meta:
         model = models.Interlocutor
         fields = ['usuario']
+
+
+class AltaUsuarioForm(BaseForm):
+
+    class Meta:
+        model = models.Usuario
+        fields = [
+            'login',
+            'nombre',
+            'apellidos',
+            'organismo',
+            ]
