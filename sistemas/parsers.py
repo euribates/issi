@@ -50,10 +50,10 @@ def parse_users(txt: str) -> set[dict]:
         f'No puedo interpretar "{escape(txt)}" como un usuario válido.'
         )
 
-pat_integer = re.compile('\d+$')
-pat_comma = re.compile('\s*,\s*')
+pat_integer = re.compile(r'\d+$')
+pat_comma = re.compile(r'\s*,\s*')
 pat_url_juriscan = re.compile(
-    'https?://www\d?\.gobiernodecanarias\.org/juriscan/ficha\.jsp\?id=(\d+)'
+    r'https?://www\d?\.gobiernodecanarias\.org/juriscan/ficha\.jsp\?id=(\d+)'
     )
 
 def parse_juriscan(txt: str) -> list[int]:

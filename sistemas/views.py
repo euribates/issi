@@ -360,8 +360,6 @@ def alta_usuario(request, *args, **kwargs):
     if request.method == 'POST':
         form = forms.AltaUsuarioForm(request.POST)
         if form.is_valid():
-            data = form.cleaned_data
-            from icecream import ic; ic(data)
             usuario = form.save()
             Bus(request).success(
                 f"Se ha dado de alta al usuario {usuario}"

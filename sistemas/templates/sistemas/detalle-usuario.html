@@ -59,7 +59,7 @@
       <dt class="m-2">{{ perfil }}</dt>
         <dd class="m-2">
             <a href="{% url 'sistemas:detalle_sistema' sistema=perfil.sistema.pk %}">
-            {{ perfil.sistema.nombre }}
+            {{ perfil.sistema.nombre_sistema }}
             </a>
         </dd>
       {% endfor %}  
