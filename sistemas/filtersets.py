@@ -19,7 +19,7 @@ class SistemaFilter(django_filters.FilterSet):
     class Meta:
         model = models.Sistema
         fields = {
-            'nombre': ['icontains'],
+            'nombre_sistema': ['icontains'],
             'codigo': ['icontains'],
             'organismo__nombre_organismo': ['icontains'],
             }

@@ -91,7 +91,7 @@ class Tema(models.Model):
 class Sistema(models.Model):
 
     class Meta:
-        ordering = ['nombre',]
+        ordering = ['nombre_sistema',]
 
     id_sistema = models.BigAutoField(primary_key=True)
     uuid = models.UUIDField(
@@ -99,7 +99,7 @@ class Sistema(models.Model):
         editable=False,
         help_text="Identificador público del sistema (UUID4)",
         )
-    nombre = models.CharField(
+    nombre_sistema = models.CharField(
         max_length=220,
         unique=True,
         help_text="Nombre del sistema",
@@ -193,7 +193,7 @@ class Sistema(models.Model):
     @classmethod
     def alta_sistema(
             cls,
-            nombre: str,
+            nombre_sistema: str,
             codigo: str,
             proposito: str,
             organismo: Organismo,
@@ -203,7 +203,7 @@ class Sistema(models.Model):
 
         Parameters:
 
-            - nombre (str): Nombre del sistema
+            - nombre_sistema (str): Nombre del sistema
             - codigo (str): Código identificador del sistema
             - proposito (str): Propósito
             - organismo (Organismo): Instancia del organismo al que
@@ -216,7 +216,7 @@ class Sistema(models.Model):
             en la base de datos.
         """
         sistema = Sistema(
-            nombre=nombre,
+            nombre_sistema=nombre_sistema,
             codigo=codigo,
             proposito=proposito,
             organismo=organismo,
@@ -264,7 +264,7 @@ class Sistema(models.Model):
             return None
 
     def __str__(self):
-        return self.nombre
+        return self.nombre_sistema
 
     def touch(self):
         self.f_cambio = localtime()

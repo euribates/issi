@@ -44,7 +44,7 @@ class AltaSistemaForm(BaseForm):
     class Meta:
         model = models.Sistema
         fields = [
-            'nombre',
+            'nombre_sistema',
             'codigo',
             'organismo',
             'proposito',
@@ -68,7 +68,7 @@ class EditarSistemaForm(BaseForm):
     class Meta:
         model = models.Sistema
         fields = [
-            'nombre',
+            'nombre_sistema',
             'codigo',
             'descripcion',
             'url',

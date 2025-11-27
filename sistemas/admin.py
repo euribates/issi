@@ -6,7 +6,7 @@ from sistemas import models
 class SistemaAdmin(admin.ModelAdmin):
     list_display = [
         "codigo",
-        "nombre",
+        "nombre_sistema",
         "descripcion",
         "tema",
         "es_transversal",
