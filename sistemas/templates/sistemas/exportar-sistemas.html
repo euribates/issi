@@ -3,9 +3,19 @@
 
 {% block content %}
 
+<h3>Todo</h3>
 <ul>
-    <li>Exportar todos los sistemas de información</li>
+    <li>
+      <a href="{% url 'sistemas:exportar_sistemas_todos' %}">
+      Exportar todos los sistemas de información
+      </a>
+    </li>
+</ul>
 
+<h3>Por entidad</h3>
+
+<ul>
+  
 {% for ente in entes.all %}
    {% with ente.sistemas_del_ente.count as num_sistemas %}
           

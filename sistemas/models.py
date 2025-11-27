@@ -89,8 +89,12 @@ class Tema(models.Model):
 
 
 class Sistema(models.Model):
+    """Modelo Sistemas de Información.
+    """
 
     class Meta:
+        """Opciones para modelo Sistema.
+        """
         ordering = ['nombre_sistema',]
 
     id_sistema = models.BigAutoField(primary_key=True)
@@ -482,7 +486,7 @@ class Usuario(models.Model):
             cls.objects.filter(
                 Q(login__icontains=query) |
                 Q(email__icontains=query) |
-                Q(nombre__icontains=query) |
+                Q(nombre_sistema__icontains=query) |
                 Q(apellidos__icontains=query)
                 )
             )

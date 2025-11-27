@@ -18,7 +18,7 @@ def sistemas_a_csv(sistemas, stream):
         ])
     for sistema in sistemas:
         _cvs.writerow([
-            sistema.nombre,
+            sistema.nombre_sistema,
             sistema.codigo,
             sistema.proposito,
             sistema.tema.pk,

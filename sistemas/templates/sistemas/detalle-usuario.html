@@ -3,16 +3,17 @@
 
 {% block content %}
 
+<div class="container p-4">
 <div class="row">
-  
-  <div class="col">
-    <div class="card">
+  <div class="col-sm-12 col-md-6">
+
+    <div class="card m-1">
       <div class="card-header">
           <h4 class="card-title">Detalles del usuario
           </h4>
       </div>
       <div class="card-body">
-      <table class="table">
+        <table class="table">
           <tr>
               <th>Nombre</th>
               <td>{{ usuario.nombre }}</td>
@@ -37,36 +38,35 @@
           <tr>
               <th>Adscrito a</th>
               <td>{{ usuario.organismo.nombre_organismo }}</td>
-      </table>
+        </table>
       </div>
-    </div>
-  </div>      
+    </div><!-- de card -->
   
-  <div class="col">
-    <div class="card">
+  </div><div class="col-sm-12 col-md-6">
+
+    <div class="card m-1">
       <div class="card-header">
           <h4 class="card-title">Perfiles
           </h4>
       </div>
       <div class="card-body">
+        <dl>{% for interlocutor in usuario.interlocutor_de.all %}
+            <dt class="m-2">Interlocutor/a de</dt>
+            <dd class="m-2">{{ interlocutor.organismo.nombre_organismo }}</dd>
+        {% endfor %}  
+        {% for perfil in usuario.perfiles.all %}
+        <dt class="m-2">{{ perfil }}</dt>
+            <dd class="m-2">
+                <a href="{% url 'sistemas:detalle_sistema' sistema=perfil.sistema.pk %}">
+                {{ perfil.sistema.nombre_sistema }}
+                </a>
+            </dd>
+        {% endfor %}</dl>  
       </div>
-      <dl>
-      {% for interlocutor in usuario.interlocutor_de.all %}
-        <dt class="m-2">Interlocutor/a de</dt>
-        <dd class="m-2">{{ interlocutor.organismo.nombre_organismo }}</dd>
-      {% endfor %}  
-      {% for perfil in usuario.perfiles.all %}
-      <dt class="m-2">{{ perfil }}</dt>
-        <dd class="m-2">
-            <a href="{% url 'sistemas:detalle_sistema' sistema=perfil.sistema.pk %}">
-            {{ perfil.sistema.nombre_sistema }}
-            </a>
-        </dd>
-      {% endfor %}  
-      </div>
-    </div>
-  </div>
+    </div><!-- de card -->
 
-</div>
+  </div><!-- de col -->
+</div><!-- de row -->
+</div><!-- de container -->
 
 {% endblock content %}
