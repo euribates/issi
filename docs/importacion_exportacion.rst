@@ -76,6 +76,8 @@ exportación de datos. Veremos a continuación el resto de columnas:
   continuación de: ``"El propósito de este sistema de
   información es ..."``.
 
+.. _materias_competenciales:
+
 - **Materia competencial**: Es un código de tres letras, indicando la
   materia competencial a la que está asociado el sistema. Si se
   ignora, dejarlo vacío o con el código especial ``UNK``. La tabla
@@ -227,7 +229,13 @@ Los posibles errores que impiden la carga de datos son los siguientes:
 - **Codigo UUID incorrecto**: El valor indicado como código UUID no sigue
   las reglas de formato esperadas. Ver :ref:`Formato UUID <formato_uuid>`.
 
-- **El código o nombre del tema es incorrecto**: Los valores 
+- **El código o nombre del tema es incorrecto**: Los valores esperados
+  están en la tabla de
+  :ref:`materias competenciales <materias_competenciales>`.
+
+- **Código identificativo interno duplicado**: Se está intentado dar de
+  alta un sistema de información cuyo código identificativo interno
+  coincide con el de otro ya creado. 
 
 .. _CSV: https://es.wikipedia.org/wiki/Valores_separados_por_comas
 .. _UUID: https://es.wikipedia.org/wiki/Identificador_%C3%BAnico_universal

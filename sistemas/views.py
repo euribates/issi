@@ -114,6 +114,12 @@ def editar_sistema(request, sistema):
         'sistema': sistema,
         })
 
+
+def asignar_normativa(request, sistema):
+    from django.http import HttpResponse
+    return HttpResponse(" no implementado", content_type="text/plain")
+
+
 def asignar_organismo(request, sistema):
     if request.method == "POST":
         form = forms.AsignarOrganismoForm(request.POST, instance=sistema)

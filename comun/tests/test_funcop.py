@@ -5,6 +5,7 @@ import pytest
 # Tests para la función agrupa
 
 from comun.funcop import agrupa
+from comun.funcop import static
 
 
 def test_simple():
@@ -33,6 +34,16 @@ def test_with_dataclasses():
     assert agrupado['b'] == [Dato(2, 'b')]
     assert len(agrupado) == 2
 
+
+def test_static_decorator():
+
+    @static(base=12)
+    def suma(offset: int) -> int:
+        return suma.base + offset
+
+    assert suma(3) == 15
+    assert suma(-5) == 7
+    assert suma(0) == 12
 
 
 if __name__ == "__main__":

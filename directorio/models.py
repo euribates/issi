@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 from django.db import models
 from django.db.models import Q
 from django.conf import settings
+from django.utils import timezone
 
 from . import links
 
@@ -53,6 +54,19 @@ class Organismo(models.Model):
         blank=True,
         null=True,
         default=None,
+        )
+    f_alta = models.DateTimeField(
+        auto_now_add=True,
+        help_text="Fecha en la que el organismo se dio de alta",
+        )
+    f_cambio = models.DateTimeField(
+        auto_now=True,
+        help_text="Fecha de la última modificación del organismo",
+        )
+    f_baja = models.DateTimeField(
+        default=None,
+        blank=True,
+        null=True,
         )
 
     @classmethod
@@ -121,6 +135,16 @@ class Organismo(models.Model):
         for hijo in self.organismos_dependientes.all():
             yield from hijo.iter_jerarquia(nivel+1)
 
+    def touch(self):
+        '''Marcar el sistema como modificado.
+
+        Todos los sistemas jerarquicamenete superiores
+        son marcados también como modificados.
+        '''
+        self.f_cambio = timezone.now()
+        self.save(update_fields=['f_cambio'])
+        if self.depende_de.exists():
+            self.depende_de.touch()
 
 
 

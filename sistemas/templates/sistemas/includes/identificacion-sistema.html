@@ -1,0 +1,89 @@
+{% load sistemas %} 
+
+<div class="card m-1">
+  <div class="card-header">
+    <h3 class="card-title">Identificación</h3>
+  </div>  
+  <div class="card-body">
+      <h3>{{ sistema.codigo }}</h3>
+      <h4>{{ sistema.nombre_sistema }}</h4>
+    <dl>
+      <dt>Clave interna</dt>
+      <dd>
+        <code class="clave-primaria">
+        {{ sistema.pk }}
+        </code>
+      </dd>
+
+      <dt>Clave externa</dt>
+      <dd>
+        <code class="clave-externa">
+        <span id="clave-externa">{{ sistema.uuid }}</span>
+        </code>  
+        <button class="btn" onclick="copyClaveExterna()">
+            <i class="bi bi-clipboard-plus"></i>    
+        </button>
+      </dd>
+    </dl>
+                  
+    <dt>Descripción</dt>
+    <dd><br>{{ sistema.descripcion|as_descripcion }}</dd>
+
+    <dd>
+        <a class="btn btn-warning"
+           href="{% url 'sistemas:editar_descripcion' sistema=sistema %}"
+           title="Editar descripción">
+        Editar descripción
+        </a>
+    </dd>
+
+    </dd>
+
+    <dt>URL principal</th>
+      <dd>
+        {% if sistema.url %}
+          <a href="{{ sistema.url }}">{{ sistema.url }}</a>  
+        {% else %}
+          No definido / No aplica  
+        {% endif %}  
+      </dd>
+
+    <dt>Logotipo</dt>
+    <dd>
+        {% if sistema.icono %}
+        <img width="256" height="256"
+            src="{{ sistema.icono.url }}"
+            alt="{{ sistema }}">
+        {% else %}
+        <i class="bi bi-exclamation-diamond"></i>
+        Pendiente de asignar icono
+        {% endif %} 
+        <p>
+        <a href="{% url 'sistemas:asignar_icono' sistema=sistema %}"
+           class="btn btn-{% if sistema.icono %}danger{% else %}warning{% endif %}"
+           title="Asignar icono"
+           >
+           <i class="bi bi-image"></i>
+        </a>
+        </p>
+    </dd>
+
+
+    {% if sistema.es_transversal %}
+    <span class="badge text-bg-info">Transversal</span>
+    {% endif %}
+    {% if sistema.es_subsistema_de %}
+    <span class="badge text-bg-warning" title="de {{ sistema.es_subsistema_de }}">
+        Subsistema
+    
+    </span>
+    {% endif %}
+  </div>
+  <div class="card-footer d-flex flex-row-reverse">
+    <a href="{% url 'sistemas:editar_sistema' sistema=sistema %}"
+       class="btn btn-warning"
+       title="Editar sistema">
+       <i class="bi bi-pencil-fill"></i>
+    </a>     
+  </div>
+</div>

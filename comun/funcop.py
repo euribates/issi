@@ -163,3 +163,32 @@ def batch(iterable, size=2):
                 return
         if chunk:
             yield tuple(chunk)
+
+
+def static(**kwargs):
+    '''
+    Decorador para añadir variables estáticas a una función.
+
+    Todos los parámetros por nombre que se indiquen, con el valor
+    correspondiente, se crean como atributos de la propia función.
+
+    El decorador no modifica en ningún otro aspecto a la función.
+
+    Ejemplo de uso:
+
+        >>> @static(base=12)
+        ... def suma(offset: int) -> int:
+        ...     return suma.base + offset
+        ...
+        >>> assert suma(3) == 15
+
+    Returns:
+
+        La misma función sobre la que se aplica, pero con
+        atributos adicionales.
+    '''
+    def _wraped(functor: Callable) -> Callable:
+        for key, value in kwargs.items():
+            setattr(functor, key, value)
+        return functor
+    return _wraped

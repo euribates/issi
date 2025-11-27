@@ -1,0 +1,22 @@
+{% load sistemas %}
+
+<div class="card m-2">
+  <div class="card-header">
+      <h4 class="card-title">
+        Propósito
+      </h4>
+  </div>
+  <div class="card-body">
+      <p class="card-text">
+        {{ sistema.proposito|as_proposito }}    
+      </p>
+  </div>
+  <div class="card-footer d-flex flex-row-reverse">
+      <a class="btn btn-warning"
+         href="{% url 'sistemas:editar_proposito' sistema=sistema.pk %}">
+      <i class="bi bi-pencil"></i>
+      Editar propósito
+      </a>
+  </div>
+</div>
+

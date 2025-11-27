@@ -1,0 +1,45 @@
+<div class="card mt-1">
+  <div class="card-header">  
+    <h5 class="card-title">Normativa (Juriscán)</h5>
+  </div>  
+  <div class="card-body">
+
+    {% if sistema.normativa.all.count == 0 %}
+    <p>
+      <i class="bi bi-exclamation-diamond"></i>
+      No hay normativa específica definida.
+    </p>
+    {% else %}
+    <table class="table">
+    {% for norma in sistema.normativa.all %}
+      <tr>
+          <th>
+            {{ norma.num_juriscan }}
+          </th>
+          <td>
+            {{ norma.resumen }}
+          </td>
+          <td>
+           <a class="btn btn-danger" 
+              href="{% url 'sistemas:borrar_normativa' id_normativa=norma.pk %}"
+              title="Borrar enlace a Juriscán">
+              <i class="bi bi-person-dash-fill"></i>
+           </a>   
+          </td>
+      </tr>   
+      {% endfor %}
+    <tr>
+    </table>  
+    {% endif %}
+  </div><!-- de card-body -->
+  <div class="card-footer d-flex flex-row-reverse">
+    <a href="{% url 'sistemas:asignar_normativa' sistema=sistema %}"
+       class="btn btn-warning"
+       title="Asignar normativa">
+       <i class="bi bi-patch-plus"></i>
+       Añadir normativa
+    </a>
+  </div>
+
+  </div> 
+</div>  

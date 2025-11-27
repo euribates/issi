@@ -272,7 +272,8 @@ class Sistema(models.Model):
 
     def touch(self):
         self.f_cambio = localtime()
-        self.save()
+        self.save(update_fields=['f_cambio'])
+        self.organismo.touch()
 
     def url_detalle_sistema(self):
         """URL de detalle del sistema.
@@ -372,7 +373,6 @@ class Sistema(models.Model):
         Exceptions:
 
             Eleva una excepción de tipo `ValueError` si el código
-            del organismo no existe en la base de datos.
         '''
         if not isinstance(organismo, Organismo):
             organismo = Organismo.load_organismo(organismo)
@@ -648,7 +648,9 @@ class NormaSistema(models.Model):
         null=True,
         )
 
-    def natural_key(self):
+    def natural_key(self) -> tuple[int, int]:
+        '''Devuelve una tupla con los valores de la clave natural.
+        '''
         return (self.sistema.pk, self.num_juriscan)
 
     def __str__(self):
@@ -657,6 +659,9 @@ class NormaSistema(models.Model):
     @classmethod
     def upsert(cls, sistema, num_juriscan: int) -> tuple:
         """Actualiza o inserta la norma del sistema, según proceda.
+
+        Es idempotente; si el sistema ya está vinculado a ese
+        código de Juriscán, no hace nada.
 
         Patrameters:
 

@@ -13,20 +13,12 @@
     <tr>
       <th>Nombre</th>
       <th>Código</th>
-      <th colspan="2">Organismo</th>
+      <th>Organismo</th>
     </tr>  
 
     <tr>
-      <th>
-        {{ filterset.form|as_text_control:"nombre_sistema__icontains" }}
-      </th>
-      <th>
-        {{ filterset.form|as_text_control:"codigo__icontains" }}
-      </th>
-      <th>
-        {{ filterset.form|as_text_control:"organismo__nombre_organismo__icontains" }}
-      </th>
-      <th>
+      <th colspan="3">
+        {{ filterset.form }}
         <input type="submit" value="🔍" />
       </th>
     </tr> 

@@ -1,15 +1,15 @@
-<div class="card mt-3">
+<div class="card m-1">
   <div class="card-header">  
     <h5 class="card-title">Responsables</h5>
   </div>  
   <div class="card-body">
 
-    {% if sistema.perfiles.all.count == 0 %}
+{% if sistema.perfiles.all.count == 0 %}
     <p>
       <i class="bi bi-exclamation-diamond"></i>
       No se ha designado a ningún responsable.
     </p>
-    {% else %}
+{% else %}
     <table class="table">
     {% for perfil in sistema.perfiles.all %}
       <tr>
@@ -30,7 +30,7 @@
       {% endfor %}
     <tr>
     </table>  
-    {% endif %}
+{% endif %}
   </div><!-- de card-body -->
   <div class="card-footer d-flex flex-row-reverse">
     <a href="{% url 'sistemas:asignar_responsable' sistema=sistema %}"
@@ -39,7 +39,5 @@
        <i class="bi bi-person-plus-fill"></i>
        Añadir responsable
     </a>
-  </div>
-
-  </div> 
-</div>  
+  </div><!-- de card-footer -->
+</div><!-- de card -->

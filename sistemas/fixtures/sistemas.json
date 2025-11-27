@@ -645,7 +645,7 @@
     "pk": 1,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Inventario de Sistemas de Información",
+        "nombre_sistema": "Inventario de Sistemas de Información",
         "organismo": 42093,
         "codigo": "ISSI",
         "url": null,
@@ -670,7 +670,7 @@
     "pk": 2,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Registro General de Empresas, Actividades y Establecimientos Turísticos",
+        "nombre_sistema": "Registro General de Empresas, Actividades y Establecimientos Turísticos",
         "organismo": 42144,
         "codigo": "TURIDATA",
         "url": null,
@@ -695,7 +695,7 @@
     "pk": 3,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Juriscan",
+        "nombre_sistema": "Juriscan",
         "organismo": 42097,
         "codigo": "JURISCAN",
         "url": "https://www3.gobiernodecanarias.org/juriscan/",
@@ -720,7 +720,7 @@
     "pk": 4,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Sistema de información de recursos humanos",
+        "nombre_sistema": "Sistema de información de recursos humanos",
         "organismo": 41545,
         "codigo": "SIRhUS",
         "url": "https://www.gobiernodecanarias.net/aplicaciones/sirhus/",
@@ -745,7 +745,7 @@
     "pk": 5,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Gestor de Expedientes Corporativo",
+        "nombre_sistema": "Gestor de Expedientes Corporativo",
         "organismo": 42093,
         "codigo": "PLATEA",
         "url": null,
@@ -770,7 +770,7 @@
     "pk": 6,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Sirvete",
+        "nombre_sistema": "Sirvete",
         "organismo": 42093,
         "codigo": "SIRVETE",
         "url": null,
@@ -795,7 +795,7 @@
     "pk": 7,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Platino",
+        "nombre_sistema": "Platino",
         "organismo": 42093,
         "codigo": "PLATINO",
         "url": null,
@@ -820,7 +820,7 @@
     "pk": 8,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "SEFLOGIC",
+        "nombre_sistema": "SEFLOGIC",
         "organismo": 42088,
         "codigo": "SEFLOGIC",
         "url": null,
@@ -845,7 +845,7 @@
     "pk": 9,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias",
+        "nombre_sistema": "Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias",
         "organismo": 42093,
         "codigo": "SICAC",
         "url": "http://www.gobiernodecanarias.net/uweb/proyectos/sicac/",
@@ -870,7 +870,7 @@
     "pk": 10,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Registro de entrada  y salida",
+        "nombre_sistema": "Registro de entrada  y salida",
         "organismo": 42119,
         "codigo": "HIPERREG",
         "url": null,
@@ -895,7 +895,7 @@
     "pk": 11,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Sistema de Dirección por Objetivos",
+        "nombre_sistema": "Sistema de Dirección por Objetivos",
         "organismo": 42119,
         "codigo": "TRISKELL",
         "url": "https://ondemand.triskellsoftware.com/sso47/",
@@ -920,7 +920,7 @@
     "pk": 12,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Directorio de Unidades Administrativas y Oficinas de Registro y Atención a la Ciudadanía",
+        "nombre_sistema": "Directorio de Unidades Administrativas y Oficinas de Registro y Atención a la Ciudadanía",
         "organismo": 42119,
         "codigo": "DIRCAC",
         "url": null,
@@ -945,7 +945,7 @@
     "pk": 13,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Sistema de tramitación electrónica de procedimientos de Ganadería",
+        "nombre_sistema": "Sistema de tramitación electrónica de procedimientos de Ganadería",
         "organismo": 39073,
         "codigo": "SIRBA",
         "url": null,
@@ -970,7 +970,7 @@
     "pk": 14,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Pruebas",
+        "nombre_sistema": "Pruebas",
         "organismo": 42093,
         "codigo": "borrame",
         "url": null,
@@ -995,7 +995,7 @@
     "pk": 15,
     "fields": {
         "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre": "Gestión de expedientes de Dependencia",
+        "nombre_sistema": "Gestión de expedientes de Dependencia",
         "organismo": 42168,
         "codigo": "Sidecan",
         "url": null,
@@ -1020,7 +1020,7 @@
     "pk": 16,
     "fields": {
         "uuid": "f07d154d-e601-4f2f-90e5-8f3599d16da8",
-        "nombre": "Renta Canaria Ciudadana",
+        "nombre_sistema": "Renta Canaria Ciudadana",
         "organismo": 42167,
         "codigo": "RCC",
         "url": null,
@@ -1045,7 +1045,7 @@
     "pk": 17,
     "fields": {
         "uuid": "17aefe7c-f6b3-4f2b-b73a-f5047525704a",
-        "nombre": "Adopciones",
+        "nombre_sistema": "Adopciones",
         "organismo": 42169,
         "codigo": "Adopta",
         "url": null,
@@ -1070,7 +1070,7 @@
     "pk": 18,
     "fields": {
         "uuid": "4c5456c0-e2f8-4ae4-a24f-542b93ad3ccb",
-        "nombre": "Ingreso Mínimo Vital",
+        "nombre_sistema": "Ingreso Mínimo Vital",
         "organismo": null,
         "codigo": "IMV",
         "url": null,
@@ -1095,7 +1095,7 @@
     "pk": 19,
     "fields": {
         "uuid": "35ffe319-a950-4a1f-be0f-8a8aec306555",
-        "nombre": "Registro perros guía",
+        "nombre_sistema": "Registro perros guía",
         "organismo": null,
         "codigo": "RPG",
         "url": null,
@@ -1120,7 +1120,7 @@
     "pk": 20,
     "fields": {
         "uuid": "5d93fbb4-18a1-4957-adbb-bc924db66f6a",
-        "nombre": "Justicia Juvenil",
+        "nombre_sistema": "Justicia Juvenil",
         "organismo": 42169,
         "codigo": "JusticiaJuvenil",
         "url": null,
@@ -1145,7 +1145,7 @@
     "pk": 21,
     "fields": {
         "uuid": "52c98152-f54e-41f2-8d80-4d1923f7f577",
-        "nombre": "Sigestein",
+        "nombre_sistema": "Sigestein",
         "organismo": 41854,
         "codigo": "Sigestein",
         "url": null,
@@ -1170,7 +1170,7 @@
     "pk": 22,
     "fields": {
         "uuid": "61a978c6-58cb-45e3-9657-a5e7977d0a82",
-        "nombre": "Programa de gestión de cursos",
+        "nombre_sistema": "Programa de gestión de cursos",
         "organismo": 6564,
         "codigo": "PGC",
         "url": null,
@@ -1195,7 +1195,7 @@
     "pk": 23,
     "fields": {
         "uuid": "d9fded6d-cd3f-4306-885f-b96f28336c65",
-        "nombre": "SISTEMA DE FICHAJES ESSSCAN",
+        "nombre_sistema": "SISTEMA DE FICHAJES ESSSCAN",
         "organismo": 6564,
         "codigo": "TIMEVIEW",
         "url": null,
@@ -1220,7 +1220,7 @@
     "pk": 24,
     "fields": {
         "uuid": "1483d3ec-b8bd-43fb-b482-a66e19f4c21e",
-        "nombre": "Gestión de personal docente",
+        "nombre_sistema": "Gestión de personal docente",
         "organismo": 42125,
         "codigo": "GPD",
         "url": null,
@@ -1245,7 +1245,7 @@
     "pk": 25,
     "fields": {
         "uuid": "2b77c42f-6c59-405b-bd89-dd122b2219a0",
-        "nombre": "Gestión de personal no docente",
+        "nombre_sistema": "Gestión de personal no docente",
         "organismo": 42135,
         "codigo": "GPND",
         "url": null,
@@ -1270,7 +1270,7 @@
     "pk": 26,
     "fields": {
         "uuid": "fdc08ab4-5b82-4e45-b0d3-120c3a843344",
-        "nombre": "Gestión académica",
+        "nombre_sistema": "Gestión académica",
         "organismo": 42126,
         "codigo": "GESTACAD",
         "url": null,
@@ -1295,7 +1295,7 @@
     "pk": 27,
     "fields": {
         "uuid": "4c022016-ba96-491f-be6e-01f44aa19409",
-        "nombre": "Registro de comerciantes y comercios",
+        "nombre_sistema": "Registro de comerciantes y comercios",
         "organismo": 42110,
         "codigo": "REGCOMERCIA",
         "url": null,
@@ -1320,7 +1320,7 @@
     "pk": 28,
     "fields": {
         "uuid": "bf5d01a7-a93c-49a8-b1b6-26099c486f5b",
-        "nombre": "Gestión y control de denuncias y reclamaciones",
+        "nombre_sistema": "Gestión y control de denuncias y reclamaciones",
         "organismo": 42110,
         "codigo": "SIGLO",
         "url": "https://www.gobiernodecanarias.net/aplicaciones/regcomercia",
@@ -1345,7 +1345,7 @@
     "pk": 29,
     "fields": {
         "uuid": "ac8f614b-1188-4798-ba7e-5e36046bfd6c",
-        "nombre": "Sistemas de Atención al Usuario Centralizado en el ámbito sanitario",
+        "nombre_sistema": "Sistemas de Atención al Usuario Centralizado en el ámbito sanitario",
         "organismo": 6583,
         "codigo": "SAUCE",
         "url": null,
@@ -1370,7 +1370,7 @@
     "pk": 30,
     "fields": {
         "uuid": "ea669766-ea05-453b-bce1-177e1ad5460d",
-        "nombre": "Registro de Manifestaciones Anticipadas de Voluntad",
+        "nombre_sistema": "Registro de Manifestaciones Anticipadas de Voluntad",
         "organismo": 6583,
         "codigo": "REMAV",
         "url": null,
@@ -1395,7 +1395,7 @@
     "pk": 31,
     "fields": {
         "uuid": "215a2c7c-182a-4ae7-83e8-e2a32cc1c598",
-        "nombre": "Visualización por parte de los Profesionales Sanitarios de MAV en el Registro Autonómico (ReMav) y en el Registro Nacional de Instrucciones Previas (RNIP)",
+        "nombre_sistema": "Visualización por parte de los Profesionales Sanitarios de MAV en el Registro Autonómico (ReMav) y en el Registro Nacional de Instrucciones Previas (RNIP)",
         "organismo": 6583,
         "codigo": "VIPROF",
         "url": null,
@@ -1420,7 +1420,7 @@
     "pk": 32,
     "fields": {
         "uuid": "7a9c1392-a298-4a11-9ffd-9d16260f359a",
-        "nombre": "Visualización de la Manifestación Anticipada de Voluntad a través de medios telemáticos",
+        "nombre_sistema": "Visualización de la Manifestación Anticipada de Voluntad a través de medios telemáticos",
         "organismo": 6583,
         "codigo": "VIMAV",
         "url": null,
@@ -1445,7 +1445,7 @@
     "pk": 33,
     "fields": {
         "uuid": "442fa3ab-ef74-4bd2-8b94-af9093c106c0",
-        "nombre": "Repositorio y Archivos Multimedia",
+        "nombre_sistema": "Repositorio y Archivos Multimedia",
         "organismo": 6583,
         "codigo": "RETAMA",
         "url": null,
@@ -1470,7 +1470,7 @@
     "pk": 34,
     "fields": {
         "uuid": "5f1f53ea-4071-45e0-b153-96479cb7f0d6",
-        "nombre": "Subsistema de RETAMA de  Iniciativas Parlamentarias",
+        "nombre_sistema": "Subsistema de RETAMA de  Iniciativas Parlamentarias",
         "organismo": 6583,
         "codigo": "RETAMA-IP",
         "url": null,
@@ -1495,7 +1495,7 @@
     "pk": 35,
     "fields": {
         "uuid": "ebf07680-ef34-4a88-88fe-87bf938e329d",
-        "nombre": "Recursos de Estudios",
+        "nombre_sistema": "Recursos de Estudios",
         "organismo": 6583,
         "codigo": "EST-RECU",
         "url": null,
@@ -1520,7 +1520,7 @@
     "pk": 36,
     "fields": {
         "uuid": "b2196593-1ac1-4e3c-b6da-df218230a876",
-        "nombre": "Registro de Plantaciones de Viñedo",
+        "nombre_sistema": "Registro de Plantaciones de Viñedo",
         "organismo": 39060,
         "codigo": "REGVIN",
         "url": null,
@@ -1545,7 +1545,7 @@
     "pk": 37,
     "fields": {
         "uuid": "12c75d10-c8cc-4630-9814-a93fdfb0a4f8",
-        "nombre": "Registro de Sociedades Agrarias de Transformación de Canarias",
+        "nombre_sistema": "Registro de Sociedades Agrarias de Transformación de Canarias",
         "organismo": 39053,
         "codigo": "REGSAT",
         "url": null,
@@ -1570,7 +1570,7 @@
     "pk": 38,
     "fields": {
         "uuid": "9f1b9417-5ef8-4e30-b255-c98f8b0c9911",
-        "nombre": "Registro de Explotaciones Agrarias Prioritarias de Canarias",
+        "nombre_sistema": "Registro de Explotaciones Agrarias Prioritarias de Canarias",
         "organismo": 39060,
         "codigo": "REGEAP",
         "url": null,
@@ -1595,7 +1595,7 @@
     "pk": 39,
     "fields": {
         "uuid": "e3494df6-a0df-4b49-b72b-14c4fa1f17be",
-        "nombre": "Sistema de gestión del PEPAC",
+        "nombre_sistema": "Sistema de gestión del PEPAC",
         "organismo": 39053,
         "codigo": "TITAN",
         "url": null,
@@ -1620,7 +1620,7 @@
     "pk": 40,
     "fields": {
         "uuid": "9f421da9-fa51-461d-ac5a-a1c49ac88e71",
-        "nombre": "Sistema de Gestión de las ayudas del Programa de opciones específicas por la lejanía y la insularidad (POSEI).",
+        "nombre_sistema": "Sistema de Gestión de las ayudas del Programa de opciones específicas por la lejanía y la insularidad (POSEI).",
         "organismo": 39053,
         "codigo": "SAGA",
         "url": null,
@@ -1645,7 +1645,7 @@
     "pk": 41,
     "fields": {
         "uuid": "a777ded4-0538-4121-88bb-adfc987ce259",
-        "nombre": "Sistema de gestión de las ayudas del POSEICAN",
+        "nombre_sistema": "Sistema de gestión de las ayudas del POSEICAN",
         "organismo": 39153,
         "codigo": "POSEICAN",
         "url": null,
@@ -1670,7 +1670,7 @@
     "pk": 42,
     "fields": {
         "uuid": "c145ade6-0199-4860-994f-74f8ce75ff37",
-        "nombre": "Gestión de parcelas agrícolas",
+        "nombre_sistema": "Gestión de parcelas agrícolas",
         "organismo": 39060,
         "codigo": "SIGPAC",
         "url": null,
@@ -1695,7 +1695,7 @@
     "pk": 43,
     "fields": {
         "uuid": "3c0ae5d6-be42-4f1b-936e-c491c73bbafe",
-        "nombre": "Sistema de gestión del registro de animales",
+        "nombre_sistema": "Sistema de gestión del registro de animales",
         "organismo": 39073,
         "codigo": "BADACANA",
         "url": null,
@@ -1720,7 +1720,7 @@
     "pk": 44,
     "fields": {
         "uuid": "32d1ddaa-7798-44e4-b1af-66e3b7f4b55c",
-        "nombre": "Centros de Día",
+        "nombre_sistema": "Centros de Día",
         "organismo": 42170,
         "codigo": "CENTROS-DIA",
         "url": null,
@@ -1745,7 +1745,7 @@
     "pk": 45,
     "fields": {
         "uuid": "43c13957-cb8a-484f-803a-a258446a2010",
-        "nombre": "Centros de menores",
+        "nombre_sistema": "Centros de menores",
         "organismo": 42169,
         "codigo": "CENTROS-MENORES",
         "url": null,
@@ -1770,7 +1770,7 @@
     "pk": 46,
     "fields": {
         "uuid": "5e7234ee-4ed0-4269-8762-b2273bf4a6ec",
-        "nombre": "Familias Numerosas",
+        "nombre_sistema": "Familias Numerosas",
         "organismo": 42169,
         "codigo": "FAMNUM",
         "url": null,
@@ -1795,7 +1795,7 @@
     "pk": 47,
     "fields": {
         "uuid": "227ef728-bb0d-4c70-a87e-5009b05131a5",
-        "nombre": "GPorta",
+        "nombre_sistema": "GPorta",
         "organismo": null,
         "codigo": "GPorta",
         "url": null,
@@ -1820,7 +1820,7 @@
     "pk": 48,
     "fields": {
         "uuid": "21ab2f7e-803e-47e9-bf02-6570c6f41db5",
-        "nombre": "Discapacidad",
+        "nombre_sistema": "Discapacidad",
         "organismo": 42171,
         "codigo": "Discapacidad",
         "url": null,
@@ -1845,7 +1845,7 @@
     "pk": 49,
     "fields": {
         "uuid": "6a8516c0-8fa8-4606-969a-e616ac3244ea",
-        "nombre": "Inmigración",
+        "nombre_sistema": "Inmigración",
         "organismo": 42167,
         "codigo": "INMIGRACION",
         "url": null,
@@ -1870,7 +1870,7 @@
     "pk": 50,
     "fields": {
         "uuid": "0aa531f4-a65b-4492-9aec-d05c6b12a1f7",
-        "nombre": "Entidades",
+        "nombre_sistema": "Entidades",
         "organismo": null,
         "codigo": "ENTIDADES",
         "url": null,
@@ -1895,7 +1895,7 @@
     "pk": 51,
     "fields": {
         "uuid": "b549a5cb-0d24-4085-bca7-b10f8c585ab0",
-        "nombre": "Escuelas Infantiles",
+        "nombre_sistema": "Escuelas Infantiles",
         "organismo": 42169,
         "codigo": "ESC-INFANTIL",
         "url": null,
@@ -1920,7 +1920,7 @@
     "pk": 52,
     "fields": {
         "uuid": "40421b48-ec74-4068-8ecf-b67f7283a3de",
-        "nombre": "Expedientes de Asesoría Jurídica",
+        "nombre_sistema": "Expedientes de Asesoría Jurídica",
         "organismo": 42172,
         "codigo": "EXP-JUR",
         "url": null,
@@ -1945,7 +1945,7 @@
     "pk": 53,
     "fields": {
         "uuid": "d8b5dfda-755d-491c-9c00-fa5d73895948",
-        "nombre": "Intercambio de Ficheros Ministerios",
+        "nombre_sistema": "Intercambio de Ficheros Ministerios",
         "organismo": 38691,
         "codigo": "INTEROP-FM",
         "url": null,
@@ -1970,7 +1970,7 @@
     "pk": 54,
     "fields": {
         "uuid": "251203de-397a-44ea-9a1a-4f5cd5c57cdb",
-        "nombre": "Subvención ITC",
+        "nombre_sistema": "Subvención ITC",
         "organismo": null,
         "codigo": "SUB-ITC",
         "url": null,
@@ -1995,7 +1995,7 @@
     "pk": 55,
     "fields": {
         "uuid": "f011cf03-dd14-4506-a529-5a69c1366d02",
-        "nombre": "Gestión administrativa y académica en los centros educativos",
+        "nombre_sistema": "Gestión administrativa y académica en los centros educativos",
         "organismo": 42126,
         "codigo": "PINCEL-EKADE",
         "url": null,
@@ -2020,7 +2020,7 @@
     "pk": 56,
     "fields": {
         "uuid": "123a3d90-a6a6-411c-89eb-30b45458f1c0",
-        "nombre": "Gestión de centros e infraestructuras",
+        "nombre_sistema": "Gestión de centros e infraestructuras",
         "organismo": 42128,
         "codigo": "GESTCEN",
         "url": null,
@@ -2045,7 +2045,7 @@
     "pk": 57,
     "fields": {
         "uuid": "889805b6-4eae-448e-aefc-085b029ff1d7",
-        "nombre": "Programa Económico Actividad ESSSCAN",
+        "nombre_sistema": "Programa Económico Actividad ESSSCAN",
         "organismo": 6564,
         "codigo": "ESSSCAN-ECO",
         "url": null,
@@ -2070,7 +2070,7 @@
     "pk": 58,
     "fields": {
         "uuid": "11f66c9f-fb9b-4dcd-8908-7fdef108180d",
-        "nombre": "Share ESSSCAN",
+        "nombre_sistema": "Share ESSSCAN",
         "organismo": 6564,
         "codigo": "ESSSCAN-SHARE",
         "url": null,
@@ -2095,7 +2095,7 @@
     "pk": 59,
     "fields": {
         "uuid": "44a2ad30-9073-4eef-b0a8-42b1f597ec37",
-        "nombre": "Precio máximo de privada - Servicio de promoción privada",
+        "nombre_sistema": "Precio máximo de privada - Servicio de promoción privada",
         "organismo": 37152,
         "codigo": "PMPRIV",
         "url": null,
@@ -2120,7 +2120,7 @@
     "pk": 60,
     "fields": {
         "uuid": "20181c5f-fb56-4a3b-93cc-bdf9fee5d6d4",
-        "nombre": "Adquisición de Vivienda Joven",
+        "nombre_sistema": "Adquisición de Vivienda Joven",
         "organismo": 37152,
         "codigo": "AVJ",
         "url": null,
@@ -2145,7 +2145,7 @@
     "pk": 61,
     "fields": {
         "uuid": "1878a1da-562a-489c-8b81-f6190ebb57b6",
-        "nombre": "Justiniano",
+        "nombre_sistema": "Justiniano",
         "organismo": 37152,
         "codigo": "JUSTINIANO",
         "url": null,
@@ -2170,7 +2170,7 @@
     "pk": 62,
     "fields": {
         "uuid": "c41f49f3-9092-469c-b3ff-8be853504dd4",
-        "nombre": "Registro de Planeamiento de Canarias",
+        "nombre_sistema": "Registro de Planeamiento de Canarias",
         "organismo": 42138,
         "codigo": "RPC",
         "url": null,
@@ -2195,7 +2195,7 @@
     "pk": 63,
     "fields": {
         "uuid": "efd586a6-9aac-4292-adbd-24f2bd4de8cd",
-        "nombre": "Aplicación de Consulta del Archivo de Planeamiento",
+        "nombre_sistema": "Aplicación de Consulta del Archivo de Planeamiento",
         "organismo": 42138,
         "codigo": "ACAP",
         "url": null,
@@ -2220,7 +2220,7 @@
     "pk": 64,
     "fields": {
         "uuid": "6ff70bc7-1d5d-40eb-bbaa-ff363caa79f9",
-        "nombre": "Sistema Información Transversal de Áreas",
+        "nombre_sistema": "Sistema Información Transversal de Áreas",
         "organismo": 42142,
         "codigo": "SITA-TERRITORIO",
         "url": null,
@@ -2245,7 +2245,7 @@
     "pk": 65,
     "fields": {
         "uuid": "9e8ea2e4-7cce-4113-8c7a-5e9817d92818",
-        "nombre": "Proyectos PTCTA",
+        "nombre_sistema": "Proyectos PTCTA",
         "organismo": 42138,
         "codigo": "PROYECTOS-PTCTA",
         "url": null,
@@ -2270,7 +2270,7 @@
     "pk": 66,
     "fields": {
         "uuid": "982d1820-e0e2-4f03-bbb8-225bb1ab7417",
-        "nombre": "Catálogo de Aplicaciones, Servidores, Portales, Empresas y  Responsable de la CTEEN",
+        "nombre_sistema": "Catálogo de Aplicaciones, Servidores, Portales, Empresas y  Responsable de la CTEEN",
         "organismo": 42164,
         "codigo": "CASPER",
         "url": null,
@@ -2295,7 +2295,7 @@
     "pk": 67,
     "fields": {
         "uuid": "e02dd18d-a05e-47a4-930f-ef3eee411bef",
-        "nombre": "Redmine de gestión de proyectos de la consejería",
+        "nombre_sistema": "Redmine de gestión de proyectos de la consejería",
         "organismo": 42164,
         "codigo": "GESVER",
         "url": null,
@@ -2320,7 +2320,7 @@
     "pk": 68,
     "fields": {
         "uuid": "34fc2ef7-78f9-4a36-ae0c-673aaef70967",
-        "nombre": "Gestión de activos de Microinformática",
+        "nombre_sistema": "Gestión de activos de Microinformática",
         "organismo": 42164,
         "codigo": "GAMI",
         "url": null,
@@ -2345,7 +2345,7 @@
     "pk": 69,
     "fields": {
         "uuid": "0fa07cb1-70db-4d6b-a6d6-82cd03fc5aa1",
-        "nombre": "Central de usuarios",
+        "nombre_sistema": "Central de usuarios",
         "organismo": 42164,
         "codigo": "CEUS",
         "url": null,
@@ -2370,7 +2370,7 @@
     "pk": 70,
     "fields": {
         "uuid": "b431def1-6184-4ad6-bc9e-9927b9caaa3e",
-        "nombre": "BackOffice de gestión de expedientes de la D.G. Energía (1)",
+        "nombre_sistema": "BackOffice de gestión de expedientes de la D.G. Energía (1)",
         "organismo": 42163,
         "codigo": "CANDELA",
         "url": null,
@@ -2395,7 +2395,7 @@
     "pk": 71,
     "fields": {
         "uuid": "6e28f140-c141-4f6b-b08d-c12173094bc8",
-        "nombre": "BackOffice de gestión de expedientes de la D.G. Energía (2)",
+        "nombre_sistema": "BackOffice de gestión de expedientes de la D.G. Energía (2)",
         "organismo": 42163,
         "codigo": "SINERGIA",
         "url": null,
@@ -2420,7 +2420,7 @@
     "pk": 72,
     "fields": {
         "uuid": "0962ac86-c276-4725-9b44-d85e609c2fbe",
-        "nombre": "Observatorio de la Energía de Canarias",
+        "nombre_sistema": "Observatorio de la Energía de Canarias",
         "organismo": 42163,
         "codigo": "OECAN",
         "url": null,
@@ -2445,7 +2445,7 @@
     "pk": 73,
     "fields": {
         "uuid": "ab611ec5-44e4-456c-84d0-f1565c4196bf",
-        "nombre": "Registro Canario de Infractores de Caza",
+        "nombre_sistema": "Registro Canario de Infractores de Caza",
         "organismo": 42162,
         "codigo": "RICAZA",
         "url": null,
@@ -2470,7 +2470,7 @@
     "pk": 74,
     "fields": {
         "uuid": "7e69aa8f-5a97-4347-8897-8f88de8a5817",
-        "nombre": "Red Canaria de Alerta Temprana de Especies Exóticas Invasoras",
+        "nombre_sistema": "Red Canaria de Alerta Temprana de Especies Exóticas Invasoras",
         "organismo": 42162,
         "codigo": "RedEXOS",
         "url": null,
@@ -2495,7 +2495,7 @@
     "pk": 75,
     "fields": {
         "uuid": "04668f8f-ceea-4dfa-bec1-629071ff7f3e",
-        "nombre": "Boletín Oficial de Canarias",
+        "nombre_sistema": "Boletín Oficial de Canarias",
         "organismo": 42121,
         "codigo": "BOC",
         "url": null,
@@ -2520,7 +2520,7 @@
     "pk": 76,
     "fields": {
         "uuid": "1658f6e4-5676-4453-9233-3106e5d4515a",
-        "nombre": "Red de Observadores del Medio Marino en Canarias",
+        "nombre_sistema": "Red de Observadores del Medio Marino en Canarias",
         "organismo": 42162,
         "codigo": "RedPromar",
         "url": null,
@@ -2545,7 +2545,7 @@
     "pk": 78,
     "fields": {
         "uuid": "95b9e6cf-72ec-4ac1-9d06-9429e8f297cf",
-        "nombre": "Sinca",
+        "nombre_sistema": "Sinca",
         "organismo": 42093,
         "codigo": "SINCA",
         "url": null,
@@ -2570,7 +2570,7 @@
     "pk": 79,
     "fields": {
         "uuid": "ec6e56af-b597-4188-97ea-38baddb3b464",
-        "nombre": "Control horario",
+        "nombre_sistema": "Control horario",
         "organismo": 41567,
         "codigo": "SICHO",
         "url": null,
@@ -2595,7 +2595,7 @@
     "pk": 80,
     "fields": {
         "uuid": "0ca60d06-9c5b-4b2c-a91a-e8cc52ef62b7",
-        "nombre": "Gestión de nóminas M4",
+        "nombre_sistema": "Gestión de nóminas M4",
         "organismo": 41567,
         "codigo": "NOMINA",
         "url": null,
@@ -2620,7 +2620,7 @@
     "pk": 81,
     "fields": {
         "uuid": "637e11d3-8a8b-4b6a-a784-698f53435ad6",
-        "nombre": "Sistema de gestión integral de seguridad canaria",
+        "nombre_sistema": "Sistema de gestión integral de seguridad canaria",
         "organismo": 42122,
         "codigo": "SIGESCA",
         "url": null,
@@ -3891,6 +3891,19 @@
         "organismo": 42118,
         "f_alta": "2025-10-06T18:41:33.668Z",
         "f_cambio": "2025-10-06T18:41:33.668Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "ocarleo",
+    "fields": {
+        "email": "ocarleo@gobiernodecanarias.org",
+        "nombre": "Octavio Jesús",
+        "apellidos": "Caraballo de León",
+        "organismo": 42094,
+        "f_alta": "2025-11-27T10:50:27.086Z",
+        "f_cambio": "2025-11-27T10:50:27.086Z",
         "f_baja": null
     }
 },
