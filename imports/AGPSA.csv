@@ -1,0 +1,57 @@
+Nombre ,Código identificativo interno (CI),Finalidad,Materia competencial ,DIR3 (centro directivo),UID de la persona responsable tecnológica,UID de la persona responsable funcional,"Normativa 
+(Juriscan)",¿Nombre disponible en el listado original?,Observaciones
+Registro vitícola comunitario,Registro de Plantaciones de Viñedo,El Registro de Plantaciones de Viñedo es el censo de todas las parcelas con viñedo.,Agricultura,A05017082,mgarrodx,alopperj,"Decreto 139/1986, 29 septiembre, por el que se dictan normas para la elaboración del Registro de Plantaciones de Viñedo y el Registro Especial de Parcelas con derecho a Replantacion
+https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=8597",,Gestionada por GRAFCAN
+Registro de Sociedades Agrarias de Transformación de Canarias,Registro de Sociedades Agrarias de Transformación de Canarias,Registro administrativo en el que serán inscritas las Sociedades Agrarias de Transformación que operen exclusivamente en el territorio de la Comunidad Autónoma de Canarias y que reúnan los requisitos establecidos en la normativa que las regula.,Viceconsejería de Sector Primario,A05017081,lbarqui,mfuedia,"Decreto 73/1995, de 7 de abril.Decreto 73/1995, 7 abril, por el que se crea el Registro de Sociedades Agrarias de Transformación de Canarias
+https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=22137",,
+Sistema de gestión del PEPAC,TITAN,Sistema de Gestión de las ayudas del PEPAC 2023-2027 ,"Agricultura, Ganadería",A05017081,mgarrodx,rgongon,,,
+Sistema de gestión del POSEI,SAGA,Sistema de Gestión de las ayudas del Programa de opciones específicas por la lejanía y la insularidad (POSEI).,"Agricultura, Ganadería",A05017081,mgarrodx,esgonnun,,SÍ,
+Sistema de gestión del POSEICAN,POSEICAN,Sistema de gestión de las ayudas del POSEICAN,Pesca,A05017084,mrodlav,iboscan,,SÍ,
+Sistema de gestión de Ganadería,BADACANA,"Sistema de gestión del registro de animales, identificadores, movimientos, etc.",Ganadería,A05003564,mgarrodx,acarromb,,SÍ,
+Sistema de tramitación electrónica de procedimientos de Ganadería,SIRBA,Sistema de tramitación electrónica de los procedimientos de Ganadería,Ganadería,A05003564,mgarrodx,acarromb,,SÍ,
+Sistema de gestión de parcelas agrícolas de Canarias,SIGPAC,Sistema para la gestión de parcelas agrícolas,Viceconsejería de Sector Primario,A05017081,mgarrodx,jhercrum,,,Gestionada por GRAFCAN
+Sistema de información para la gestión de las alegaciones al SIGPAC ,Alsigpac,Sistema de información para la gestión de las alegaciones al SIGPAC ,Viceconsejería de Sector Primario,A05017081,lbarqui,jhercrum,,SÍ,
+APP Móvil,APP Móvil,Aplicación para dispositivos móviles de la CAGPA,"Secretaría General Técnica de Agricultura, Ganadería, Pesca y Soberanía Alimentaria",A05033199,mgarrodx,abarcab,,NO,
+Programa de Gestión de Obras del Servicio de Planificación de Obras y Ordenación Rural ,CELSO,"Certificaciones, Ejecuciones, Licitaciones del Servicio de Planificación de Obras y Ordenación Rural. ",Agricultura,A05017082,rpesper,fsanriv,,SÍ,
+Declaración adicional de productos fitosanitarios,DeclaFito,Declaraciones adicionales de fitosanitarios ,Agricultura,A05017082,rpesper,agonherp,,SÍ,
+Registro de explotaciones agrarias prioritarias,Diamante,Registro de explotaciones prioritarias,Agricultura,A05017082,mgarrodx,alopperj,,SÍ,
+Obtención del carnet usuario profesional de productos fitosanitarios,Fito,Gestión de carnets de productos fitosanitarios,Agricultura,A05017082,rpesper,agonherp,,SÍ,
+Gestión de Pesca ,GESNOVA,Sistema de gestión central de productos de primera venta,Pesca,A05017084,mrodlav,jreyoje,,SÍ,
+Gestión de Laboratorios,GESLAB,Gestión del laboratorio de Sanidad Animal,Ganadería,A05003564,mgarrodx,ppelpue,,SÍ,
+Tramitación de licencias de pesca ,LicenciasPesca,Tramitación/ renovación de la licencia para el marisqueo recreativo a pie,Pesca,A05017084,lbarqui,mlomaras,,NO,En desarrollo una nueva aplicación
+Gestión de pesca ,NOVAPES,Sistema de gestión en lonjas de primera venta,Pesca,A05017084,mrodlav,jreyoje,,SÍ,
+sistema de seguimiento de embarcaciones y artes de pesca ,OCTOPUS,Sistema para el seguimiento de embarcaciones de pesca y artes de pesca,Pesca,A05017084,mgarrodx,marrlop,,SÍ,En PRE preparando el pase a PRO
+Plan Estratégico de la Política Agraria Común 2023-2027,"PANDORA, PROMETEO. TITAN, PLANES, KRONOS",Sistemas de gestión de la PEPAC,Viceconsejería de Sector Primario,A05017081,mgarrodx,rgongon,,SÍ,Programas anteriores del PEPAC y auxiliares
+Plataforma de Interoperabildad CAGPA,Plataforma de Interoperabildad CAGPA,Interoperabilidad de la CAGPSA,"Secretaría General Técnica de Agricultura, Ganadería, Pesca y Soberanía Alimentaria",A05033199,mgarrodx,abarcab,,SÍ,
+Registro General de la Producción Agrícola,RegistroProductores,registro de productores ,Viceconsejería de Sector Primario,A05017081,rpesper,mfuedia,,SÍ,Pendiente de licitar una nueva aplicación
+Sistema de Gestión de los Expedientes de Reintegros de Subvenciones ,Reintegros,Reintegros de Subvenciones / ayudas,"Secretaría General Técnica de Agricultura, Ganadería, Pesca y Soberanía Alimentaria",A05033199,mgarrodx,ivgardia,,NO,
+Registro de organizaciones de productores de frutas y hortalizas,ROPAS,Registro de productores de frutas y hortalizas,Viceconsejería de Sector Primario,A05017081,mgarrodx,mgonmarg,,SÍ,Se va a unificar con Registro de Productores en una nueva aplicación
+Sistema de Gestión del Registro Oficial de Productores y Operadores de medios de defensa fitosanitarios (ROPO) ,ROPO,Registro Oficial de Operadores y Medios de Defensa Fitosanitaria ,Agricultura,A05017082,mgarrodx,agonherp,,SÍ,
+Sistema de Gestión del Registro de Operadores Vegetales ,ROPVEG,Registro de operadores profesionales de vegetales Canarias,Agricultura,A05017082,lbarqui,alopperj,,NO,
+Sistema de Información Agroclimática para el Regadío ,SIAR,Plataforma digital de recomendaciones de riego de la red SIAR ,Agricultura,A05017082,rpesper,jevobro,,SÍ,Actualmente se está terminado una nueva aplicación
+Sistema de información para la gestión de inspecciones de pesca de la Comunidad Autónoma de Canarias ,PARGO,Inspección Pesquera,Pesca,A05017084,mgarrodx,mlomaras,,SÍ,En PRE preparando el pase a PRO
+Registro de Operadores de Productos de Agricultura Ecológica de Canarias,TECYC,Obtención de los certificados de Operadores Ecológicos ,ICCA,A05003567,lbarqui,dafomar,,,En el proceso de pase a producción de la nueva aplicación
+Aplicación Titulaciones Náuticas ,Titulaciones Náuticas,Sistemas de gestión de las titulaciones de patrón de embarcación,Pesca,A05017084,lbarqui,rgongonj,,SÍ,En el proceso de pase a producción de la nueva aplicación
+Acreditación para efectuar podas y otras prácticas culturales en palmeras en el ámbito de la CAC,TrabajoPalmeras,Sistema de gestión de las solicitudes de poda de palmeras,Agricultura,A05017082,mgarrodx,agonherp,,SÍ,
+Sistema de Información de Agricultor Activo ,AGRIA ,Sistema de gestión de verificación de Agricultor Activo ,Viceconsejería de Sector Primario,A05017081,mgarrodx,jhercrum,,NO,
+Sistema de Gestión de Ayudas,SGA,Sistema de gestión de explotaciones de Canarias,Agricultura,A05017082,jgonramp,alopperj,,NO,"Programa del Ministerio implantado el Canarias sólo para la gestión de las explotaciones, registro y cuadernos de campo"
+Sistema Integral de Contabilidad de Organismos Pagadores,SICOP,Sistema para la gestión de la contabilidad del Organismo Pagador de Fondos Agrícolas Europeos,Viceconsejería de Sector Primario,A05017081,mgarrodx,esgonnun,,NO,Programa del Ministerio implantado el Canarias
+,,,,,,,,SÍ,
+,,,,,,,,SÍ,
+,,,,,,,,SÍ,
+,,,,,,,,NO,
+,,,,,,,,NO,
+,,,,,,,,SÍ,
+,,,,,,,,SÍ,
+,,,,,,,,SÍ,
+,,,,,,,,SÍ,
+,,,,,,,,SÍ,
+,,,,,,,,SÍ,
+,,,,,,,,SÍ,
+,,,,,,,,SÍ,
+,,,,,,,,NO,
+,,,,,,,,SÍ,
+,,,,,,,,SÍ,
+,,,,,,,,SÍ,
+,,,,,,,,NO,
+,,,,,,,,SÍ,

@@ -30,11 +30,16 @@ EPILOG   = 'ISSI - Inventario de sistemas de información'
 
 
 def static(**kwargs):
-  def wrap(f):
-    for key, value in kwargs.items():
-      setattr(f, key, value)
-    return f
-  return wrap
+    '''
+    Decorador para añadir variables estáticas a una función.
+
+    TODO: Pasar a comun.funcop.
+    '''
+    def _wraped(functor):
+        for key, value in kwargs.items():
+            setattr(functor, key, value)
+        return functor
+    return _wraped
 
 
 @static(codigos=set([]))
@@ -76,11 +81,12 @@ def add_sistema(payload):
         Perfil.upsert(sistema, usr.login, 'FUN')
     return sistema
 
+
 def update_sistema(payload):
     sistema = Sistema.load_sistema_por_uuid(payload['uuid'])
     num_cambios = 0
-    if sistema.nombre != payload['nombre_sistema']:
-        sistema.nombre = payload['nombre_sistema']
+    if sistema.nombre_sistema != payload['nombre_sistema']:
+        sistema.nombre_sistema = payload['nombre_sistema']
         num_cambios += 1
     if sistema.organismo != payload['organismo']:
         sistema.organismo = payload['organismo']

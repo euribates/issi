@@ -34,7 +34,7 @@ Las columnas del fichero CSV se describen en la siguiente tabla:
 Ord. Campo (En Fila 1)    Explicación
 ==== ==================== ====================================
 1    Nombre               El nombre del sistema
-2    Código Id. Int.      Código identificativo
+2    Código Id. Int.      Código identificativo interno
 3    Finalidad            Finalidad o propósito del S.I.
 4    Materia competencial Código de materia
 5    DIR3                 DIR3 Dirección general / organismo
@@ -126,10 +126,13 @@ exportación de datos. Veremos a continuación el resto de columnas:
 
 - **UUID**: Este es un identificados Universal ``UUID``, que se asigna al
   sistema la primera vez que este entra en el inventario. Es opcional en
-  la carga inicial de datos ya que, como se explica más adelante, el
-  sistema lo asignará automáticamente. Si se incluye, es una cadena de
-  texto de 36 caracteres. Ejemplo:
+  la carga inicial de datos ya que, como se explica más adelante, en ese
+  caso el sistema lo asigna automáticamente. Si se incluye, es una cadena
+  de texto de 36 caracteres. Ejemplo:
   ``29564c1a-4894-473e-85d1-c4c8c60a2333``.
+
+
+.. _formato_uuid:
 
 .. sidebar:: Formato de un UUID
 
@@ -152,6 +155,7 @@ Si el fichero consta de 9 columnas, se considera una **importación
 inicial**, mientras que si usa 10 columnas, se considera una
 **importación adicional**.
 
+.. _importacion_inicial:
 
 Importación Inicial
 ------------------------------------------------------------------------
@@ -168,6 +172,8 @@ sistemas incluidos en el fichero:
 
 Este ``UUID`` será el identificador único asociado ya de forma
 permanente con ese sistema.
+
+.. _importacion_adicional:
 
 Importaciones adicionales.
 ------------------------------------------------------------------------
@@ -189,19 +195,39 @@ fichero:
   **actualizará** con los valores indicados: Nombre, finalidad, DIR3,
   etc.
 
-Esto permite que las operaciones de importación adicionales sean
-idempotententes, es decir, podemos importar de forma adicional varias
-veces el mismo fichero de importación y el resultado final en la base de
-datos será siempre el mismo, ya que no se crean duplicados.
+Esto permite que las **operaciones de importación adicionales sean
+idempotententes**, es decir, podemos importar de forma adicional
+varias veces el mismo fichero de importación y el resultado final en la
+base de datos será siempre el mismo que si se hubiera subido una sola,
+ya que no se crean duplicados.
 
 Obviamente, para que el sistema funcione **nunca debe cambiarse el
 código UUID asociado a un sistema de información**, a no ser que sepas
 muy bien lo que estás haciendo. Y eso casi nunca pasa. Y lo sabes.
 
+
 Exportación de datos
 ========================================================================
 
 La exportación **siempre será de 10 columnas**.
+
+
+Posibles errores en la importación de datos
+========================================================================
+
+Los posibles errores que impiden la carga de datos son los siguientes:
+
+- **Numero incorrecto de columnas**: El fichero CSV solo puede tener
+  9 columnas (ver :ref:`importacion_inicial`) o 10 columnas (ver
+  :ref:`importacion_adicional`).
+
+- **Código identificativo interno incorrecto**. El valor indicado en el
+  CVS no sigue las reglas de formato esperadas.
+
+- **Codigo UUID incorrecto**: El valor indicado como código UUID no sigue
+  las reglas de formato esperadas. Ver :ref:`Formato UUID <formato_uuid>`.
+
+- **El código o nombre del tema es incorrecto**: Los valores 
 
 .. _CSV: https://es.wikipedia.org/wiki/Valores_separados_por_comas
 .. _UUID: https://es.wikipedia.org/wiki/Identificador_%C3%BAnico_universal

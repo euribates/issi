@@ -9,11 +9,10 @@ Cód. Ente     Nombre del organismo o dirección general
 ``ATC``       Agencia Tributaria Canaria
 ``ISTAC``     Instituto Canario de Estadística
 ``PAPJS``     Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad
-``ICAP``      Instituto Canario de Administración Pública
 ``EFPAFD``    Consejería de Educación, Formación Profesional, Actividad Física y Deportes
 ``ACCUEE``    Agencia Canaria de Calidad Universitaria y Evaluación Educativa
 ``PTCTA``     Consejería de Política Territorial, Cohesión Territorial y Aguas
-``ACMUN``     Agencia Canaria de Protección del Medio Natural
+``ACPMN``     Agencia Canaria de Protección del Medio Natural
 ``TUREMP``    Consejería de Turismo y Empleo
 ``SCE``       Servicio Canario de Empleo
 ``UCIC``      Consejería de Universidades, Ciencia e Innovación y Cultura
@@ -24,6 +23,6 @@ Cód. Ente     Nombre del organismo o dirección general
 ``SAN``       Consejería de Sanidad
 ``ESSSCAN``   Escuela de Servicios Sanitarios y Sociales de Canarias
 ``SCS``       Servicio Canario de la Salud
-``AGPA``      Consejería de Agricultura, Ganadería, Pesca y Soberanía Alimentaria
+``AGPSA``     Consejería de Agricultura, Ganadería, Pesca y Soberanía Alimentaria
 ``ICIA``      Instituto Canario de Investigaciones Agrarias
 ============= =========================================
