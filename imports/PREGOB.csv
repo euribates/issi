@@ -1,0 +1,84 @@
+ Nombre,Código identificativo interno (CI),Finalidad,Materia competencial ,DIR3 (centro directivo),"UID de la persona responsable tecnológica
+rrosver +",UID de la persona responsable funcional,"Normativa 
+(Juriscan)",¿Nombre disponible en el listado original?,I1,I2,I3,I4,Pd1,Pd2,Pd3,Pd4,S1,S2,S3,S4,S5,R1,R2,R3,R4,C1,C2,C3,C4,Pe1,Pe2
+Plataforma de interoperabilidad ,PLATINO,"Proporcionar servicios comunes para la implantación de la Administración Electrónica, entre otros:
+- Firma electrónica y portafirmas
+- Notificaciones electrónicas
+- ...
+- Repositorio de documentos electrónicos",Transformación digital,A05003248,"ecasala
+pcanper
+mrodrio",DGMCSP,"DECRETO 19/2011, 10 febrero, por el que se regula la utilización de los medios electrónicos en la Administración Pública de la Comunidad Autónoma de Canarias
+https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=64767
+Resolución de 10.02.2025 de la Dirección General de Transformación Digital de los Servicios Públicos por la que se registra la actividad de tratamiento de datos personales : Identificación de usuarios para la prestación de servicios tecnológicos.
+Orden de 30 de abril de 2015Open this document with ReadSpeaker docReader, por la que se aprueba la política de identificación y autenticación en el ámbito de la administración electrónica de la Administración Pública de la Comunidad Autónoma de Canarias. (BOC núm. 88, de 11 de mayo de 2015).
+Orden de 9 de mayo de 2016, por la que se regula el sistema de notificación electrónica mediante comparecencia en sedes electrónicas en el ámbito de la Administración Pública de la Comunidad Autónoma de Canarias y sus organismos públicos dependientes. (BOC núm. 95, de 18 de mayo de 2016).",,3,3,1,2,2,2,3,3,3,1,2,2,2,1,1,1,2,2,1,1,2,2,2
+SEDE electrónica / SEDE presencial / SEDE empleado público,SEDEe / SEDEp / SEDEep,"Proporcionar a la ciudadanía y los empleados públicos un portal para que pueda acceder a información, servicios y trámites electrónicos que le competen.",Transformación digital,A05003248,"jgaralb
+mtorher1","DGMCSP:
+Carolina Hernández Roig","ORDEN de 25 de febrero de 2021, por la que se aprueba la puesta en funcionamiento de la sede electrónica de la Administración Pública de la Comunidad Autónoma de Canarias, bajo el dominio https://sede.gobcan.es.
+Orden de 9 de mayo de 2016, por la que se regula el sistema de notificación electrónica mediante comparecencia en sedes electrónicas en el ámbito de la Administración Pública de la Comunidad Autónoma de Canarias y sus organismos públicos dependientes. (BOC núm. 95, de 18 de mayo de 2016).
+https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=78761",,3,3,1,2,2,2,3,3,3,1,2,2,2,1,1,1,2,2,1,1,2,2,2
+Sistema de registro de entrada y salida de documentos,HIPERREG,Sistema de registro de entrada y salidad de documentos de la APCAC,Transformación digital,,"pcanper
+rmedsos","DGMCSP:
+Fátima Bezares","ORDEN de 25 de junio de 2002, por la que se aprueba la aplicación informática del sistema intercomunicado de registro de entrada y salida de documentos de la Administración Pública de la Comunidad Autónoma de Canarias.",,3,3,1,2,2,2,3,3,3,1,2,2,2,1,1,1,2,2,1,1,2,2,2
+Tramitador de expedientes,PLATEA / MAYTE,Proporcionar a los Departamentos una herramienta para la gestión automatizada de los procedimientos de su competencia,Transformación digital,A05003248,"rgalrod
+","DGMCSP:
+Ana Aznar","DECRETO 108/2024, de 31 de julio, por el que se aprueba el Reglamento Orgánico de la Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (art. 84)
+https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=79417",,3,3,1,2,2,2,3,3,3,1,2,2,2,1,1,1,2,2,1,1,2,2,2
+Plataforma de intermediación de datos,SINCA / CLIENTE LIGERO,"Plataforma para compartir datos entre la APCAC y el resto de Administraciones, necesarios para la tramitación de los procedimientos administrativos y para que no los tenga que aportar la ciudadanía",Transformación digital,A05003248,"jsersanp
+jgonaviw","DGMCSP:
+Ana Aznar","Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía
+de los derechos digitales
+• https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673",,3,3,1,2,2,2,3,3,3,1,2,2,2,1,1,1,2,2,1,1,2,2,2
+Archivo electrónico,eSPERIA,Archivo y custodia de los expedientes finalizados,Transformación digital,,"rgalrod
+llanram
+","DGMCSP:
+Patricia Ruiz ","Decreto 160/2006, de 8 de noviembre, por el que se aprueba el Reglamento del Sistema de gestión documental y organización de los archivos dependientes de la Administración Pública de la Comunidad Autónoma de Canarias.",,3,3,2,2,2,2,3,3,3,2,2,2,2,1,1,1,2,2,1,1,2,2,2
+Portales web,PORTAL WEB,Facilitar a los Departamentos de la APCAC la publicación en Internet de los contenidos de su competencia,Transformación digital,,"jgaralb
+mtorher1
+emorfar","DGMCSP:
+Marta Díaz Ascanio",,,,,,,,,,,,,,,,,,,,,,,,,
+Sistema de Información de Actuaciones Administrativas,SICAC,"Recopilar y mantener el inventario de actuaciones administrativas de la APCAC .
+El SICAC es el inventario de las actuaciones administrativas, tanto externas como internas, que gestiona la Administración Pública de nuestra Comunidad Autónoma y tiene como soporte una aplicación informática única para su gestión.
+Esta recopila la información básica de cada actuación administrativa (plazo de presentación, documentación a presentar, órgano de resolución, normativa aplicable, recursos...) a fin de facilitar su conocimiento por la ciudadanía y contribuyendo al mismo tiempo a la simplificación y modernización de nuestra Administración Pública.
+",Transformación digital,A05003248,"mtorher1
+rmuncam","DGMCSP:
+Patricia Ruiz ","DECRETO 37/2015, 27 marzo, por el que se aprueba y regula el Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias
+https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=72421",,,,,,,,,,,,,,,,,,,,,,,,
+Directorio de Unidades Administrativas y Oficinas de Registro de la APCAC,DIRCAC,Directorio de Unidades Administrativas y Oficinas de Registro de la APCAC,Transformación digital,,"mtorher1
+rmuncam","DGMCSP:
+Patricia Ruiz",,,,,,,,,,,,,,,,,,,,,,,,,
+Formularios electrónicos,WEBFORMS,Facilitar a los Departamentos la creación y normalización de los formularios correspondiente a los procedimientos de su competencia,Transformación digital,A05003248,"jgaralb
+mtorher1
+pferher","DGMCSP:
+Carolina Hernández Roig",,,,,,,,,,,,,,,,,,,,,,,,,
+Sugerencias y Reclamaciones,SUGREC,Sugerenciasy reclamaciones ,Transformación digital,,jsersanp,"DGMCSP:
+Fátima Bezares",,,,,,,,,,,,,,,,,,,,,,,,,
+Plataforma App Móviles,LANZADERA / IDENTIFICA,Catálogo de servicios móviles de la APCAC e identificacion de empleados públicos,Transformación digital,A05003248,ecasala,"DGMCSP:
+Marta Díaz Ascanio",,,,,,,,,,,,,,,,,,,,,,,,,
+"LIBROS de registro de la actividad administrativa (Certificados, Resoluciones y Órdenes)",LIBROS,"Aplicación para el registro de la actividad administrativa (Certificados, Resoluciones y Órdenes)",Transformación digital,,jsersanp,CPAPJS-DGMCSP,,,,,,,,,,,,,,,,,,,,,,,,,
+Sistema de licitación y compras electrónicas de la DGTDSP,PLYCA / Perfil del contratante,Gestionar los expedientes de contratación administrativa usando medios telemáticos.,Transformación digital,A05003248,jsersanp,HACIENDA: IG,"ORDEN, 23 jun 2003, de la Consejería de Economía y Hacienda, por la que se aprueba el procedimiento «PLYCA» de gestión de contratación administrativa utilizando medios electrónicos, informáticos y telemáticos y se establecen los requerimientos técnicos necesarios para la utilización de la firma electrónica en dicho procedimiento
+https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=44216",,,,,,,,,,,,,,,,,,,,,,,,
+Gestión Formación,GESFORCOR,Gestión Formación,Transformación digital,,jsersanp,CPAPJS-ICAP,,,,,,,,,,,,,,,,,,,,,,,,,
+Registro de aplicaciones y sistemas del Gobierno de Canarias,RASGO,Disponer de un censo de aplicaciones de la APCAC.,Transformación digital,A05003248,jsersanp,,,,,,,,,,,,,,,,,,,,,,,,,,
+BBDD de legislación y jurisprudencia relativa a la APCAC,JURISCAN,BBDD de legislación y jurisprudencia relativa a la APCAC,Transformación digital,,jsersanp,PG-SG,,,,,,,,,,,,,,,,,,,,,,,,,
+"Normas institucionales, de organización y sectoriales de la Comunidad Autónoma de Canarias",LIBRO AZUL,"Normas institucionales, de organización y sectoriales de la Comunidad Autónoma de Canarias",Transformación digital,,jsersanp,CPAPJS,,,,,,,,,,,,,,,,,,,,,,,,,
+Gestión Inspección Médica,SIMED,Gestión Inspección Médica,Transformación digital,,"jsersanp
+rmuncam",DGMCSP: IM,,,,,,,,,,,,,,,,,,,,,,,,,
+Ayudas de acción social,AYASOC / CENDIR,Gestión de las ayudas de acción social de los empleados públicos,Transformación digital,,"ecasala
+jsersanp",DGFP,,,,,,,,,,,,,,,,,,,,,,,,,
+Gestión Servicios Jurídicos,SERVJURI,Gestión de los expedientes de los Servicios Jurídicos,Transformación digital,,jsersanp,PG-VSSJJ,,,,,,,,,,,,,,,,,,,,,,,,,
+Entidades Locales,ENTILEGA,Registro de entidades locales,Transformación digital,,jsersanp,CPAPJS-VAT,,,,,,,,,,,,,,,,,,,,,,,,,
+Facturación BOC,BOCFACT,Facturación BOC,Transformación digital,,jsersanp,CPAPJS,,,,,,,,,,,,,,,,,,,,,,,,,
+Gestión de las indemnizaciones por comisiones de servicio,SICOMS-PG,Gestión de las indemnizaciones por comisiones de servicio,Transformación digital,,jsersanp,,,,,,,,,,,,,,,,,,,,,,,,,,
+Gestión del Juego,JUEGO,Gestión del Juego,Transformación digital,,jsersanp,CPAPJS-VAT,,,,,,,,,,,,,,,,,,,,,,,,,
+Registro de Convenios,REGECON,Registro de Convenios,Transformación digital,,jsersanp,PG-SG,,,,,,,,,,,,,,,,,,,,,,,,,
+Registro de Convenios Departamentales,REDECON,Registro de Convenios Departamentales,Transformación digital,,jsersanp,,,,,,,,,,,,,,,,,,,,,,,,,,
+Registro Asociaciones,REGASOC,Registro Asociaciones,Transformación digital,,jsersanp,CAPJS-DGTPC,,,,,,,,,,,,,,,,,,,,,,,,,
+Registro Colegios Profesionales y Consejos Colegiados,,Registro Colegios Profesionales y Consejos Colegiados,Transformación digital,,jsersanp,CAPJS-DGTPC,,,,,,,,,,,,,,,,,,,,,,,,,
+Registro de Parejas de hecho,,Registro de Parejas de hecho,Transformación digital,,jsersanp,CAPJS-DGTPC,,,,,,,,,,,,,,,,,,,,,,,,,
+Registro comerciantes,RECOMERCIA,Registro comerciantes,Transformación digital,,jsersanp,CEICA-DGCC,,,,,,,,,,,,,,,,,,,,,,,,,
+Registro de Fundaciones,,Registro de Fundaciones,Transformación digital,,jsersanp,CPAPJS,,,,,,,,,,,,,,,,,,,,,,,,,
+Registro de Perros de Asistencia,REPACAN,Registro de Perros de Asistencia,Transformación digital,,jsersanp,CBSIJIF,,,,,,,,,,,,,,,,,,,,,,,,,
+Registro habilitados servicios jurídicos,,Registro habilitados servicios jurídicos,Transformación digital,,jsersanp,PG-VSSJJ,,,,,,,,,,,,,,,,,,,,,,,,,
+Registro de animales,,Registro de animales,Transformación digital,,jsersanp,CPAPJS,,,,,,,,,,,,,,,,,,,,,,,,,
+Registro de mediadores familiares,,Registro de mediadores familiares,Transformación digital,,jsersanp,CPAPJS-DGRAJ,,,,,,,,,,,,,,,,,,,,,,,,,

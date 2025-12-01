@@ -19,10 +19,14 @@
 {% for ente in entes.all %}
    {% with ente.sistemas_del_ente.count as num_sistemas %}
           
-   {% if num.sistemas > 0 %}
+   {% if num_sistemas == 0 %}
    <li class="atenuado">{{ ente }} no tiene sistemas identificados</li>
     {% else %}
-   <li>Exportar Sistemas de {{ ente }}</li>
+   <li>
+       <a href="{% url 'sistemas:exportar_sistemas_por_ente' ente=ente%}">
+           Exportar {{ num_sistemas }} sistemas de {{ ente }}
+       </a>  
+   </li>
    {% endif %}
    {% endwith %}
 {% endfor %}

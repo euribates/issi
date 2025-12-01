@@ -45,6 +45,7 @@ urlpatterns = [
     tie('pendientes/', views.pendientes),
     tie('pendientes/temas/', views.sistemas_sin_tema),
     tie('exportar/', views.exportar_sistemas),
+    tie('exportar/<ent:ente>/', views.exportar_sistemas_por_ente),
     tie('exportar/todos/', views.exportar_sistemas_todos),
     tie('importar/', views.importar_sistemas),
     tie("patch/organismos/", views.patch_organismos),

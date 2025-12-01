@@ -28,8 +28,6 @@ class SistemaFilter(django_filters.FilterSet):
     query = django_filters.CharFilter(method='full_text', label="Search")
     
     def full_text(self, queryset, name, value):
-        from icecream import ic; ic(name)
-        from icecream import ic; ic(value)
         return queryset.filter(
             Q(nombre_sistema__icontains=value) |
             Q(codigo__icontains=value) |

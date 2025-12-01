@@ -45,6 +45,7 @@ dbshell:
 # Ejecutar django check
 check:
     python ./manage.py check
+    python ./manage.py validate_templates
     ruff check .
 
 # Ejecutar django collectstatic

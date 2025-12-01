@@ -29,14 +29,21 @@ from sistemas.models import Usuario
 def cmd_sistemas():
     return [
         Command(
+            links.a_importar_sistemas(),
+            '<i class="bi bi-file-arrow-up"></i>'
+            '&nbsp;Importar',
+            klass='info',
+            ),
+        Command(
             links.a_exportar_sistemas(),
-            '<i class="bi bi-filetype-css"></i>'
-            'Exportar',
+            '<i class="bi bi-file-arrow-down"></i>'
+            '&nbsp;Exportar',
             klass='info',
             ),
         Command(
             links.a_alta_sistema(),
-            '⊞ Alta sistema',
+            '<i class="bi bi-plus-circle-fill"></i>'
+            '&nbsp;Alta sistema',
             klass='warning',
             ),
         ]
@@ -54,7 +61,12 @@ def cmd_usuarios():
 
 
 def index(request, *args, **kwargs):
-    sistemas = models.Sistema.objects.order_by('-f_cambio')
+    sistemas = (
+        models.Sistema.objects
+        .select_related('tema')
+        .select_related('organismo')
+        .order_by('-f_cambio')
+        )
     num_sistemas = sistemas.count()
     filterset = filtersets.SistemaFilter(
         request.GET,
@@ -666,9 +678,20 @@ def importar_sistemas(request, *args, **kwargs):
 def exportar_sistemas(request):
     return render(request, 'sistemas/exportar-sistemas.html', {
         'titulo': 'Exportar sistemas',
+        'commands': cmd_sistemas(),
+        'tab': 'sistemas',
         'breadcrumbs': bc.exportar_sistemas(),
         'entes': Ente.objects.all(),
         })
+
+
+def exportar_sistemas_por_ente(request, ente: Ente):
+    sistemas = ente.sistemas_del_ente()
+    result = HttpResponse(content_type='text/csv')
+    filename = f'sistemas-de-informacion-{ente.pk}.cvs'
+    result.headers['Content-Disposition'] = f'attachment; filename="{filename}"'
+    serializers.sistemas_a_csv(sistemas, result)
+    return result
 
 
 def exportar_sistemas_todos(request):

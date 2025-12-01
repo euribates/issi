@@ -3,6 +3,22 @@
 import csv
 
 
+def _responsables(sistema, cometido):
+    return ', '.join([
+        _perfil.usuario.abreviado() 
+        for _perfil in sistema.perfiles.filter(cometido=cometido)
+        ])
+
+def _normativa(sistema):
+    result = ''
+    if sistema.normativa.exists():
+        result = ', '.join([
+            str(_.num_juriscan)
+            for _ in sistema.normativa.all()
+            ])
+    return result
+
+
 def sistemas_a_csv(sistemas, stream):
     _cvs = csv.writer(stream, delimiter=',', quotechar='"')
     _cvs.writerow([
@@ -17,20 +33,21 @@ def sistemas_a_csv(sistemas, stream):
         'Observaciones',
         ])
     for sistema in sistemas:
+        if sistema.normativa.exists():
+            normativa = ', '.join([
+                str(_.num_juriscan)
+                for _ in sistema.normativa.all()
+                ])
+        else:
+            normativa = ''
         _cvs.writerow([
             sistema.nombre_sistema,
             sistema.codigo,
             sistema.proposito,
             sistema.tema.pk,
             sistema.organismo.dir3 if sistema.organismo else '',
-            ', '.join([
-                _perfil.usuario.abreviado() 
-                for _perfil in sistema.perfiles.filter(cometido='TEC')
-                ]),
-            ', '.join([
-                _perfil.usuario.abreviado() 
-                for _perfil in sistema.perfiles.filter(cometido='FUN')
-                ]),
-            '[Falta Normativa]',
+            _responsables(sistema, 'TEC'),
+            _responsables(sistema, 'FUN'),
+            _normativa(sistema),
             sistema.observaciones,
             ])

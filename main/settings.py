@@ -65,10 +65,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+]   
 
 if DEBUG:
     MIDDLEWARE.insert(5, 'debug_toolbar.middleware.DebugToolbarMiddleware')
+
+INTERNAL_IPS = [
+    "nova",
+    "localhost",
+    "127.0.0.1",
+    ]
 
 ROOT_URLCONF = 'main.urls'
 

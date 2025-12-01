@@ -131,5 +131,9 @@ def a_sistemas_sin_tema() -> str:
     return _a('sistemas:sistemas_sin_tema')
 
 
+def a_importar_sistemas() -> str:
+    return _a('sistemas:importar_sistemas')
+
+
 def a_exportar_sistemas() -> str:
     return _a('sistemas:exportar_sistemas')

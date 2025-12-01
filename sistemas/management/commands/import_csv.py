@@ -20,6 +20,7 @@ from sistemas.models import Sistema
 from sistemas.models import Perfil
 from sistemas.models import NormaSistema
 from sistemas import parsers
+from comun.funcop import static
 
 
 INPUT_DIR = settings.BASE_DIR / 'imports'
@@ -27,19 +28,6 @@ INPUT_DIR = settings.BASE_DIR / 'imports'
 CMD_NAME = 'import_csv'
 ABOUT    = 'Importa la hoja de datos de un ente'
 EPILOG   = 'ISSI - Inventario de sistemas de información'
-
-
-def static(**kwargs):
-    '''
-    Decorador para añadir variables estáticas a una función.
-
-    TODO: Pasar a comun.funcop.
-    '''
-    def _wraped(functor):
-        for key, value in kwargs.items():
-            setattr(functor, key, value)
-        return functor
-    return _wraped
 
 
 @static(codigos=set([]))
@@ -53,8 +41,6 @@ def codigo_no_repetido(linea, codigo):
     return None
 
 
-
-
 def msg_falta_tema(materia):
     return (
         'No entiendo la materia referencial'
@@ -63,26 +49,24 @@ def msg_falta_tema(materia):
 
 
 def add_sistema(payload):
-    sistema = Sistema(
-        nombre=payload['nombre_sistema'],
-        organismo=payload['organismo'],
-        codigo=payload['codigo'],
-        proposito=payload['proposito'],
-        descripcion=payload['descripcion'],
-        observaciones=payload['observaciones'],
-        tema=payload['tema'],
-        )
+    jursican = payload.pop('juriscan', [])
+    responsables_tecnologicos = payload.pop('responsables_tecnologicos', [])
+    responsables_funcionales = payload.pop('responsables_funcionales', [])
+    sistema = Sistema(**payload)
     sistema.save()
-    for codigo_juriscan in payload['juriscan']:
+    for codigo_juriscan in juriscan:
         NormaSistema.upsert(sistema, codigo_juriscan)
-    for usr in payload['responsables_tecnologicos']:
+    for usr in responsables_tecnologicos:
         Perfil.upsert(sistema, usr.login, 'TEC')
-    for usr in payload['responsables_funcionales']:
+    for usr in responsables_funcionales:
         Perfil.upsert(sistema, usr.login, 'FUN')
     return sistema
 
 
 def update_sistema(payload):
+    jursican = payload.pop('juriscan', [])
+    responsables_tecnologicos = payload.pop('responsables_tecnologicos', [])
+    responsables_funcionales = payload.pop('responsables_funcionales', [])
     sistema = Sistema.load_sistema_por_uuid(payload['uuid'])
     num_cambios = 0
     if sistema.nombre_sistema != payload['nombre_sistema']:
@@ -105,13 +89,17 @@ def update_sistema(payload):
         num_cambios += 1
     if num_cambios > 0:
         sistema.save()
-    for codigo_juriscan in payload['juriscan']:
-        _, juriscan_created = NormaSistema.upsert(sistema, codigo_juriscan)
-    for usr in payload['responsables_tecnologicos']:
-        _, tec_created = Perfil.upsert(sistema, usr.login, 'TEC')
-    for usr in payload['responsables_funcionales']:
-        _, fun_created = Perfil.upsert(sistema, usr.login, 'FUN')
-    if (juriscan_created or tec_created or fun_created):
+    needs_touch = False
+    for codigo_juriscan in juriscan:
+        _, created = NormaSistema.upsert(sistema, codigo_juriscan)
+        needs_touch = needs_touch or _created
+    for usr in responsables_tecnologicos:
+        _, created = Perfil.upsert(sistema, usr.login, 'TEC')
+        needs_touch = needs_touch or _created
+    for usr in responsables_funcionales:
+        _, created = Perfil.upsert(sistema, usr.login, 'FUN')
+        needs_touch = needs_touch or _created
+    if needs_touch:
         sistema.touch()
     return sistema
 
