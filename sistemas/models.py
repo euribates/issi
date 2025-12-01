@@ -1,19 +1,30 @@
 #!/usr/bin/env python3
 
-import uuid
+from datetime import datetime as DateTime
 from html import escape
+from pathlib import Path
+from urllib.request import urlretrieve
+import uuid
 
+from bs4 import BeautifulSoup
 from django.utils.timezone import localtime
 from django.db import models
 from django.db.models import Q
 from django.db.models.functions import Coalesce
+from django.conf import settings
 
 from directorio.models import Organismo
 from . import diagnosis
 from . import links
 
 
+#~ Dominio para correo electrónico
 EMAIL_DOMAIN = 'gobiernodecanarias.org'
+
+#~ Directorio temporal
+TEMP_DIR = settings.BASE_DIR / Path('temp')
+if not TEMP_DIR.is_dir():
+    TEMP_DIR.mkdir()
 
 
 class FamiliaManager(models.Manager):
@@ -681,3 +692,100 @@ class NormaSistema(models.Model):
             num_juriscan=num_juriscan,
             )
         return norma_sistema, created
+
+
+class Ente(models.Model):
+
+    DATOS = 'datos.canarias.es'
+    VALID_DAYS = 14
+
+    class Meta:
+        ordering = [
+            'peso',
+            'organismo__nombre_organismo',
+            ]
+
+    id_ente = models.SlugField(
+        max_length=12,
+        primary_key=True,
+        )
+    organismo = models.OneToOneField(
+        Organismo,
+        related_name='ente',
+        on_delete=models.PROTECT,
+        )
+    peso = models.IntegerField(default=100)
+    url_open_data = models.URLField(
+        max_length=384,
+        unique=True,
+        blank=True,
+        null=True,
+        default=None,
+        )
+
+    @classmethod
+    def load_ente(cls, pk:str):
+        try:
+            return cls.objects.get(id_ente=pk)
+        except cls.DoesNotExist:
+            return None
+
+    def __str__(self) -> str:
+        return f'{self.organismo.nombre_organismo} ({self.pk})'
+
+    def es_de_primer_nivel(self) -> bool:
+        result = self.organismo.categoria in {
+            'Presidencia',
+            'Consejería',
+            'Viceconsejería',
+            }
+        return result
+
+    def sistemas_del_ente(self):
+        from sistemas.models import Sistema
+        return (
+            Sistema.objects
+            .select_related('organismo')
+            .filter(organismo__ruta__startswith=self.organismo.ruta)
+            )
+
+    def descargar_datos(self, url, force=False):
+        slug = url.rsplit('/', 1)[1]
+        filename = Path(f'{slug}.html')
+        target_file = TEMP_DIR / Path(filename)
+        if target_file.exists():
+            stat = target_file.stat()
+            mod_date = DateTime.fromtimestamp(stat.st_mtime)
+            delta = DateTime.now() - mod_date
+            is_still_valid = bool(delta.days <= self.VALID_DAYS)
+            if is_still_valid and not force:  # El fichero local aun es válido
+                return target_file
+        urlretrieve(url, target_file)
+        return target_file
+
+    def get_open_data(self):
+        url = self.url_open_data
+        if not url:
+            return
+        with open(self.descargar_datos(url), 'r', encoding='utf-8') as source:
+            soup = BeautifulSoup(source, 'html.parser')
+            for item in soup.find_all('li', 'dataset-item'):
+                href = item.a.attrs['href']
+                url = f'https://{self.DATOS}/{href}'
+                desc = ''.join(item.a.contents)
+                yield(url, desc)
+
+
+    def asignar_interlocutor(self, usuario):
+        '''Asigna un interlocutor al ente
+
+        Es idempotente, si el interlocutor ya estaba
+        asignado, no hace nada.
+        '''
+        from sistemas.models import Interlocutor
+        interlocutor, _created = Interlocutor.upsert(
+            organismo=self.organismo,
+            usuario=usuario,
+            )
+        return interlocutor
+

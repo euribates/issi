@@ -21,19 +21,3 @@ class OrganismoAdmin(admin.ModelAdmin):
         ]
 
 admin.site.register(models.Organismo, OrganismoAdmin)
-
-
-class EnteAdmin(admin.ModelAdmin):
-    list_display = [
-        "id_ente",
-        "organismo__nombre_organismo",
-        ]
-    search_fields = [
-        'id_ente',
-        'organismo__nombre_organismo',
-        ]
-
-admin.site.register(models.Ente, EnteAdmin)
-
-
-

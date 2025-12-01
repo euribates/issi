@@ -21,7 +21,7 @@ from comun.commands import Command
 
 from sistemas import filtersets
 from directorio.models import Organismo
-from directorio.models import Ente
+from sistemas.models import Ente
 from sistemas.models import Sistema
 from sistemas.models import Usuario
 

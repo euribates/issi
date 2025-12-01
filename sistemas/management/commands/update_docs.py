@@ -4,7 +4,7 @@ from django.core.management.base import BaseCommand
 from django.core.management import CommandError
 
 from sistemas.models import Tema
-from directorio.models import Ente
+from sistemas.models import Ente
 
 
 CMD_NAME = 'update_docs'

@@ -2,12 +2,12 @@
 
 from django.urls import register_converter
 
-from directorio.models import Ente
 from directorio.models import Organismo
+from sistemas.models import Ente
+from sistemas.models import Familia
 from sistemas.models import Sistema
 from sistemas.models import Tema
 from sistemas.models import Usuario
-from sistemas.models import Familia
 
 
 class SistemaConverter:

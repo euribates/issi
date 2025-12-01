@@ -92,3 +92,16 @@ class FamiliaAdmin(admin.ModelAdmin):
         ]
 
 admin.site.register(models.Familia, FamiliaAdmin)
+
+
+class EnteAdmin(admin.ModelAdmin):
+    list_display = [
+        "id_ente",
+        "organismo__nombre_organismo",
+        ]
+    search_fields = [
+        'id_ente',
+        'organismo__nombre_organismo',
+        ]
+
+admin.site.register(models.Ente, EnteAdmin)

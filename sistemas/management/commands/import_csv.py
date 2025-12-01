@@ -13,14 +13,14 @@ from rich.console import Console
 from rich.table import Table
 
 from comun.filters import slugify
-from directorio.models import Ente
-from directorio.models import Organismo
-from sistemas.models import Tema
-from sistemas.models import Sistema
-from sistemas.models import Perfil
-from sistemas.models import NormaSistema
-from sistemas import parsers
 from comun.funcop import static
+from directorio.models import Organismo
+from sistemas import parsers
+from sistemas.models import Ente
+from sistemas.models import NormaSistema
+from sistemas.models import Perfil
+from sistemas.models import Sistema
+from sistemas.models import Tema
 
 
 INPUT_DIR = settings.BASE_DIR / 'imports'
@@ -49,7 +49,7 @@ def msg_falta_tema(materia):
 
 
 def add_sistema(payload):
-    jursican = payload.pop('juriscan', [])
+    juriscan = payload.pop('juriscan', [])
     responsables_tecnologicos = payload.pop('responsables_tecnologicos', [])
     responsables_funcionales = payload.pop('responsables_funcionales', [])
     sistema = Sistema(**payload)
@@ -64,7 +64,7 @@ def add_sistema(payload):
 
 
 def update_sistema(payload):
-    jursican = payload.pop('juriscan', [])
+    juriscan = payload.pop('juriscan', [])
     responsables_tecnologicos = payload.pop('responsables_tecnologicos', [])
     responsables_funcionales = payload.pop('responsables_funcionales', [])
     sistema = Sistema.load_sistema_por_uuid(payload['uuid'])
@@ -92,13 +92,13 @@ def update_sistema(payload):
     needs_touch = False
     for codigo_juriscan in juriscan:
         _, created = NormaSistema.upsert(sistema, codigo_juriscan)
-        needs_touch = needs_touch or _created
+        needs_touch = needs_touch or created
     for usr in responsables_tecnologicos:
         _, created = Perfil.upsert(sistema, usr.login, 'TEC')
-        needs_touch = needs_touch or _created
+        needs_touch = needs_touch or created
     for usr in responsables_funcionales:
         _, created = Perfil.upsert(sistema, usr.login, 'FUN')
-        needs_touch = needs_touch or _created
+        needs_touch = needs_touch or created
     if needs_touch:
         sistema.touch()
     return sistema

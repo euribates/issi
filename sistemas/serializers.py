@@ -33,13 +33,6 @@ def sistemas_a_csv(sistemas, stream):
         'Observaciones',
         ])
     for sistema in sistemas:
-        if sistema.normativa.exists():
-            normativa = ', '.join([
-                str(_.num_juriscan)
-                for _ in sistema.normativa.all()
-                ])
-        else:
-            normativa = ''
         _cvs.writerow([
             sistema.nombre_sistema,
             sistema.codigo,
