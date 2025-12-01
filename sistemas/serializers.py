@@ -31,6 +31,7 @@ def sistemas_a_csv(sistemas, stream):
         'UID de la persona responsable funcional',
         'Normativa (Juriscan)',
         'Observaciones',
+        'UUID',
         ])
     for sistema in sistemas:
         _cvs.writerow([
@@ -43,4 +44,5 @@ def sistemas_a_csv(sistemas, stream):
             _responsables(sistema, 'FUN'),
             _normativa(sistema),
             sistema.observaciones,
+            sistema.uuid,
             ])

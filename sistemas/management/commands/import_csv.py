@@ -30,78 +30,102 @@ ABOUT    = 'Importa la hoja de datos de un ente'
 EPILOG   = 'ISSI - Inventario de sistemas de información'
 
 
-@static(codigos=set([]))
-def codigo_no_repetido(linea, codigo):
-    if codigo in codigo_no_repetido.codigos:
-        return (
-            f'En la línea {linea} aparece un codigo interno {escape(codigo)}'
-            ' que ya había sido utilizado'
-            )
-    codigo_no_repetido.codigos.add(codigo)
-    return None
+class BaseOpCommand:
+
+    def __init__(self, op_code: str, payload: dict):
+        self.op_code = op_code
+        self.payload = payload.copy()
+
+    def __str__(self):
+        return f'{self.op_code}: {self.payload!r}'
 
 
-def msg_falta_tema(materia):
-    return (
-        'No entiendo la materia referencial'
-        f' indicada: {escape(materia)}.'
-        )
+class UpdateSistema(BaseOpCommand):
+
+    def __init__(self, payload):
+        super().__init__('UPDATE', payload)
+        id_sistema = self.payload['id_sistema']
+        self.sistema = Sistema.load_sistema(id_sistema)
+        self.juriscan = self.payload.pop('juriscan', [])
+        self.responsables_tecnologicos = self.payload.pop('responsables_tecnologicos', [])
+        self.responsables_funcionales = self.payload.pop('responsables_funcionales', [])
+
+    def f_update(self, field_name):
+        old_value = getattr(self.sistema, field_name)
+        new_value = self.payload[field_name]
+        if old_value != new_value:
+            setattr(self.sistema, field_name, new_value)
+            return 1
+        return 0
+
+    def __call__(self):
+        n_cambios = 0
+        n_cambios += self.f_update('nombre_sistema')
+        n_cambios += self.f_update('organismo')
+        n_cambios += self.f_update('proposito')
+        n_cambios += self.f_update('descripcion')
+        n_cambios += self.f_update('observaciones')
+        n_cambios += self.f_update('tema')
+        if n_cambios > 0:
+            self.sistema.save()
+        for codigo_juriscan in self.juriscan:
+            _, created = NormaSistema.upsert(self.sistema, codigo_juriscan)
+            needs_touch = needs_touch or created
+        for usr in self.responsables_tecnologicos:
+            _, created = Perfil.upsert(self.sistema, usr.login, 'TEC')
+            needs_touch = needs_touch or created
+        for usr in self.responsables_funcionales:
+            _, created = Perfil.upsert(self.sistema, usr.login, 'FUN')
+            needs_touch = needs_touch or created
+        if needs_touch:
+            self.sistema.touch()
+        return self.sistema
 
 
-def add_sistema(payload):
-    juriscan = payload.pop('juriscan', [])
-    responsables_tecnologicos = payload.pop('responsables_tecnologicos', [])
-    responsables_funcionales = payload.pop('responsables_funcionales', [])
-    sistema = Sistema(**payload)
-    sistema.save()
-    for codigo_juriscan in juriscan:
-        NormaSistema.upsert(sistema, codigo_juriscan)
-    for usr in responsables_tecnologicos:
-        Perfil.upsert(sistema, usr.login, 'TEC')
-    for usr in responsables_funcionales:
-        Perfil.upsert(sistema, usr.login, 'FUN')
-    return sistema
+class InsertSistema(BaseOpCommand):
 
-
-def update_sistema(payload):
-    juriscan = payload.pop('juriscan', [])
-    responsables_tecnologicos = payload.pop('responsables_tecnologicos', [])
-    responsables_funcionales = payload.pop('responsables_funcionales', [])
-    sistema = Sistema.load_sistema_por_uuid(payload['uuid'])
-    num_cambios = 0
-    if sistema.nombre_sistema != payload['nombre_sistema']:
-        sistema.nombre_sistema = payload['nombre_sistema']
-        num_cambios += 1
-    if sistema.organismo != payload['organismo']:
-        sistema.organismo = payload['organismo']
-        num_cambios += 1
-    if sistema.proposito != payload['proposito']:
-        sistema.proposito = payload['proposito']
-        num_cambios += 1
-    if sistema.descripcion != payload['descripcion']:
-        sistema.descripcion = payload['descripcion']
-        num_cambios += 1
-    if sistema.observaciones != payload['observaciones']:
-        sistema.observaciones = payload['observaciones']
-        num_cambios += 1
-    if sistema.tema != payload['tema']:
-        sistema.tema = payload['tema']
-        num_cambios += 1
-    if num_cambios > 0:
+    def __init__(self, payload):
+        super().__init__('INSERT', payload)
+        self.juriscan = self.payload.pop('juriscan', [])
+        self.responsables_tecnologicos = self.payload.pop('responsables_tecnologicos', [])
+        self.responsables_funcionales = self.payload.pop('responsables_funcionales', [])
+        
+    def __call__(self):
+        if not self.payload['uuid']:
+            self.payload['uuid'] = uuid.uuid1()
+        sistema = Sistema(**self.payload)
         sistema.save()
-    needs_touch = False
-    for codigo_juriscan in juriscan:
-        _, created = NormaSistema.upsert(sistema, codigo_juriscan)
-        needs_touch = needs_touch or created
-    for usr in responsables_tecnologicos:
-        _, created = Perfil.upsert(sistema, usr.login, 'TEC')
-        needs_touch = needs_touch or created
-    for usr in responsables_funcionales:
-        _, created = Perfil.upsert(sistema, usr.login, 'FUN')
-        needs_touch = needs_touch or created
-    if needs_touch:
-        sistema.touch()
-    return sistema
+        for codigo_juriscan in self.juriscan:
+            NormaSistema.upsert(sistema, codigo_juriscan)
+        for usr in self.responsables_tecnologicos:
+            Perfil.upsert(sistema, usr.login, 'TEC')
+        for usr in self.responsables_funcionales:
+            Perfil.upsert(sistema, usr.login, 'FUN')
+        return sistema
+
+
+@static(ya_vistos=set([]))
+def chk_codigo_no_repetido(n_linea, codigo):
+    if codigo in chk_codigo_no_repetido.ya_vistos:
+        raise ValueError(
+            f'En la línea {n_linea},'
+            ' aparece un codigo interno {escape(codigo)}'
+            ' que ya había sido utilizado.'
+            )
+    chk_codigo_no_repetido.ya_vistos.add(codigo)
+    return codigo
+
+
+def chk_columnas(n_linea, row, min_cols=9, max_cols=10):
+    n_cols = len(row)
+    if n_cols < min_cols  or n_cols > max_cols:
+        raise ValueError(
+            f"En la linea {n_linea}, "
+            "el número de columnas debe estar comprendido"
+            f" entre {min_cols} y {max_cols}, ambas inclusive,"
+            f" pero vale {n_cols}."
+            )
+    return n_cols
 
 
 class Command(BaseCommand):
@@ -153,7 +177,6 @@ class Command(BaseCommand):
         self.console.print(table)
         return None
 
-
     def handle(self, *args, **options):
         tag = options.get('tag')
         if not tag:
@@ -163,117 +186,42 @@ class Command(BaseCommand):
             return self.error_falta_ente(tag)
 
         input_filename = INPUT_DIR / Path(f"{tag}.csv")
+        commands = []
         errors = []
-        warnings = []
-        inserts = []
-        updates = []
         with open(input_filename, 'r', encoding="utf-8") as input_file:
             reader = csv.reader(input_file, delimiter=',', quotechar='"')
-            first_line = next(reader) # Ignoramos la primera línea
-            num_cols = len(first_line) # excepto para saber cuantas columnas hay
-            print(f'Detectadas {num_cols} columnas')
-            assert 9 <= num_cols < 11, f"El Número de columnas debe ser 9 o 10, no {num_cols}"
-            for linea, tupla in enumerate(reader, start=1):
-                assert len(tupla) == num_cols 
-                nombre_sistema = tupla[0]
-                cii = slugify(tupla[1]).strip().upper()
-                if not cii:
-                    errors.append(f'En línea {linea}, no se ha definido un código interno')
-                error = codigo_no_repetido(linea, cii)
-                if error:
-                    errors.append(error)
-                finalidad = tupla[2]
-                materia_competencial = tupla[3].strip()
-                if not materia_competencial:
-                    warnings.append(f'En la fila {linea}, el S.I. No tiene tema asignado')
-                else:
-                    tema = Tema.load_tema(materia_competencial)
-                    if not tema:
-                        tema = Tema.load_tema_por_nombre(materia_competencial)
-                    if not tema:
-                        errors.append(
-                            f'En la fila {linea}:'
-                            f' El tema {materia_competencial}'
-                            ' no existe'
-                            )
-                        tema = Tema.load_tema('UNK')
-                dir3 = tupla[4]
-                organismo = Organismo.load_organismo_using_dir3(dir3)
-                responsables_tecnologicos =  parsers.parse_users(tupla[5])
-                responsables_funcionales =  parsers.parse_users(tupla[6])
-                juriscan = parsers.parse_juriscan(tupla[7])
-                comentarios = tupla[8]
-                verbose = not False
-                if verbose:
-                    print(f'Nombre del sistema: {nombre_sistema}')
-                    print(f'Código interno: {cii}')
-                    print(f'Finalidad: {finalidad}')
-                    print(f'Materia conpetencial:: {materia_competencial}')
-                    print(f'DIR3: {dir3}')
-                    print(f'Organismo: {organismo}')
-                    print(f'Responsables tecnologicos: {responsables_tecnologicos}')
-                    print(f'Responsables funcionales: {responsables_funcionales}')
-                    print(f'Juriscan: {juriscan!r}')
-                    print(f'Comentarios: {comentarios!r}')
+            first_line = next(reader)      # Ignoramos la primera fila, excepto
+            n_cols = chk_columnas(0, first_line)  # para saber cuantas columnas hay
+            for n_linea, tupla in enumerate(reader, start=1):
+                if len(tupla) != n_cols:
+                    raise ValueError(
+                        f'En la linea {n_linea},'
+                        f' no coinciden el número de filas ({len(tupla)})'
+                        f' con el esperado: {n_cols}.'
+                        )
+                row_errors, payload = parsers.parse_row(n_linea, tupla)
+                errors.extend(row_errors)
+                # chk_codigo_no_repetido(n_linea, payload['codigo'])
 
-                if num_cols == 10:
-                    uuid_sistema = tupla[9]
-                    if verbose:
-                        print(f'UUID: {uuid_sistema!r}')
-                    if not Sistema.load_sistema_por_uuid(uuid_sistema):
-                        errors.append(
-                            f'No existe ningún sistema con UUID {escape(uuid_sistema)}'
-                            )
-                else:
-                    uuid_sistema = None
+                print('█', end='')
 
-                sublines = finalidad.splitlines()
-                if len(sublines) == 1:
-                    proposito = sublines[0]
-                    descripcion = ''
+                if payload['id_sistema']:
+                    cmd = UpdateSistema(payload)
+                    commands.append(cmd)
                 else:
-                    proposito = sublines[0]
-                    descripcion = '\n\n'.join(sublines[1:])
-
-                payload = {
-                    'uuid': uuid_sistema,
-                    'nombre_sistema': nombre_sistema,
-                    'organismo': organismo,
-                    'codigo': cii,
-                    'proposito': proposito,
-                    'descripcion': descripcion,
-                    'observaciones': comentarios,
-                    'tema': tema,
-                    'juriscan': juriscan,
-                    'responsables_tecnologicos': responsables_tecnologicos,
-                    'responsables_funcionales': responsables_funcionales,
-                    }
-                if uuid:
-                    updates.append(payload)
-                else:
-                    inserts.append(payload)
-                if verbose:
-                    print()
-                else:
-                    print('█', end='')
-                # if linea > 3:
+                    commands.append(InsertSistema(payload))
+                # if n_linea > 3:
                     # break
             print()
-        if errors or warnings:
-            sys.stdout.flush()
-            sys.stderr.flush()
-            for msg in warnings:
-                sys.stderr.write(f'Warning: {msg}\n')
-            for err in errors:
-                sys.stderr.write(f'Error: {err}\n')
-        else:
+        if not errors:
             print('Todo OK')
-            print(f'A punto de añadir {len(inserts)} sistemas nuevos')
-            for payload in inserts:
-                sistema = add_sistema(payload)
-                print(f'- Creado {sistema} [OK]')
-            print(f'A punto de actualizar {len(updates)} sistemas ya existentes')
-            for payload in inserts:
-                sistema = update_sistema(payload)
-                print(f'- Actualizado {sistema} [OK]')
-
+            print(f'A punto de realizar {len(commands)} operaciones en la BD')
+            for _cmd in commands:
+                print('call', end=' ')
+                print(_cmd)
+                _cmd()
+                print('[OK]')
+        else:
+            print('Errores')
+            for err in errors:
+                print(str(err))

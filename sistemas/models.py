@@ -7,11 +7,11 @@ from urllib.request import urlretrieve
 import uuid
 
 from bs4 import BeautifulSoup
-from django.utils.timezone import localtime
+from django.conf import settings
 from django.db import models
 from django.db.models import Q
 from django.db.models.functions import Coalesce
-from django.conf import settings
+from django.utils.timezone import localtime
 
 from directorio.models import Organismo
 from . import diagnosis
@@ -227,7 +227,7 @@ class Sistema(models.Model):
 
         Returns:
 
-            La instancia de Sistema, ya alamacenada
+            La instancia de Sistema, ya almacenada
             en la base de datos.
         """
         sistema = Sistema(

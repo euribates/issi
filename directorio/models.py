@@ -6,7 +6,6 @@ from django.utils import timezone
 
 from . import links
 
-SEP = '/'
 
 
 
@@ -114,8 +113,8 @@ class Organismo(models.Model):
     def __str__(self):
         return self.nombre_organismo
 
-    def calcula_ruta(self):
-        self.ruta = f'{self.depende.ruta}{SEP}{self.depende_de.pk}'
+    def calcula_ruta(self, sep='/'):
+        self.ruta = f'{self.depende.ruta}{sep}{self.depende_de.pk}'
 
     def es_primer_nivel(self) -> bool:
         return self.depende_de.pk == 1
