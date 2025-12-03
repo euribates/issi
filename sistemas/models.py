@@ -113,6 +113,7 @@ class Sistema(models.Model):
         default=uuid4,
         editable=False,
         help_text="Identificador público del sistema (UUID4)",
+        unique=True,
         )
     nombre_sistema = models.CharField(
         max_length=220,

@@ -1,26 +1,21 @@
 #!/usr/bin/env python3
 
-import sys
 import uuid
 import argparse
 import csv
 from pathlib import Path
-from html import escape
 
 from django.conf import settings
 from django.core.management.base import BaseCommand
 from rich.console import Console
 from rich.table import Table
 
-from comun.filters import slugify
 from comun.funcop import static
-from directorio.models import Organismo
 from sistemas import parsers
 from sistemas.models import Ente
 from sistemas.models import NormaSistema
 from sistemas.models import Perfil
 from sistemas.models import Sistema
-from sistemas.models import Tema
 
 
 INPUT_DIR = settings.BASE_DIR / 'imports'
@@ -68,6 +63,7 @@ class UpdateSistema(BaseOpCommand):
         n_cambios += self.f_update('tema')
         if n_cambios > 0:
             self.sistema.save()
+        needs_touch = False
         for codigo_juriscan in self.juriscan:
             _, created = NormaSistema.upsert(self.sistema, codigo_juriscan)
             needs_touch = needs_touch or created
