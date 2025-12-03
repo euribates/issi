@@ -644,7 +644,7 @@
     "model": "sistemas.sistema",
     "pk": 1,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "c704670c-cf07-11f0-88aa-38d5470ea667",
         "nombre_sistema": "Inventario de Sistemas de Información",
         "organismo": 42093,
         "codigo": "ISSI",
@@ -669,7 +669,7 @@
     "model": "sistemas.sistema",
     "pk": 2,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "1ef52ee1-cf08-11f0-8b01-38d5470ea667",
         "nombre_sistema": "Registro General de Empresas, Actividades y Establecimientos Turísticos",
         "organismo": 42144,
         "codigo": "TURIDATA",
@@ -694,15 +694,15 @@
     "model": "sistemas.sistema",
     "pk": 3,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
-        "nombre_sistema": "Juriscan",
-        "organismo": 42097,
+        "uuid": "2b4c67ad-cf08-11f0-bdf7-38d5470ea667",
+        "nombre_sistema": "BBDD de legislación y jurisprudencia relativa a la APCAC",
+        "organismo": null,
         "codigo": "JURISCAN",
         "url": "https://www3.gobiernodecanarias.org/juriscan/",
-        "descripcion": "**[JURISCAN](https://www3.gobiernodecanarias.org/juriscan/)** es una base de datos desarrollada por el Gobierno de Canarias con el objetivo de difundir el conocimiento y facilitar la consulta del sistema jurídico de la Comunidad Autónoma.\r\n\r\nEs una base de datos principalmente legislativa, en la que pueden encontrarse todas las disposiciones generales emanadas de las instituciones autonómicas; pero también es una base de datos limitadamente jurisprudencial, en la medida que incluye nota de las sentencias que afectan a las disposiciones autonómicas.\r\n\r\nLa presentación de los documentos se hace desde una perspectiva dinámica. Cada disposición tiene su ficha, que comprende detalladamente cuanto está relacionado con ella, antes y después de su vigencia, con la relación de las disposiciones a las que ha afectado y de las referencias, legislativas y jurisprudenciales, que de alguna manera tienen una incidencia posterior. La actualización permanente de estas fichas constituye una garantía de seguridad jurídica en la aplicación del Derecho de la Comunidad Autónoma.\r\n\r\nEl sistema de consultas permite desde la más simple, con un mínimo de argumentos de búsqueda relativos a la presentación formal de la disposición, hasta la más compleja, en la que pueden combinarse elementos relacionados con el título, el rango, las materias o la fecha de la disposición. La búsqueda por materias se facilita con un tesauro de unos 3.000 términos que sirve para uniformar la terminología y estructurar la recuperación de documentos.",
-        "proposito": "Difundir el conocimiento y facilitar la consulta del sistema jurídico de la Comunidad Autónoma",
-        "observaciones": "",
-        "tema": "UNK",
+        "descripcion": "",
+        "proposito": "BBDD de legislación y jurisprudencia relativa a la APCAC",
+        "observaciones": "\n\n",
+        "tema": "TRD",
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
@@ -711,7 +711,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/juriscan-logo.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T23:44:56.382Z",
         "f_baja": null
     }
 },
@@ -719,10 +719,10 @@
     "model": "sistemas.sistema",
     "pk": 4,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "18b07fb7-cf09-11f0-ab71-38d5470ea667",
         "nombre_sistema": "Sistema de información de recursos humanos",
         "organismo": 41545,
-        "codigo": "SIRhUS",
+        "codigo": "SIRHUS",
         "url": "https://www.gobiernodecanarias.net/aplicaciones/sirhus/",
         "descripcion": "Con la implantación de la aplicación **SIRHUS** (Sistema de Información de Recursos Humanos), se persigue  que esta herramienta sirva de instrumento para:\r\n\r\n- La planificación, gestión y seguimiento en materia de personal.\r\n\r\n- Potenciar las tareas de gestión y seguimiento simplificando las tareas esencialmente burocráticas\r\n\r\n- Mejorar la calidad y oportunidad en la toma de decisiones \r\n\r\n- La implantación de un sistema de información único de recursos humanos para todos los colectivos de personal de la Comunidad Autónoma de Canarias en una una plataforma integrada y flexible que permita soportar todo tipo de esquemas competenciales y colectivos.",
         "proposito": "Sistema para la gestión de los procedimientos en materia de personal, así como para la gestión del registro general de personal.",
@@ -736,7 +736,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/sirhus-logo.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T22:57:22.436Z",
         "f_baja": null
     }
 },
@@ -744,7 +744,7 @@
     "model": "sistemas.sistema",
     "pk": 5,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "18a72010-cf09-11f0-a413-38d5470ea667",
         "nombre_sistema": "Gestor de Expedientes Corporativo",
         "organismo": 42093,
         "codigo": "PLATEA",
@@ -761,7 +761,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo_platea_8ugjV2e.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T22:57:22.375Z",
         "f_baja": null
     }
 },
@@ -769,7 +769,7 @@
     "model": "sistemas.sistema",
     "pk": 6,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "18acd5e3-cf09-11f0-b6ea-38d5470ea667",
         "nombre_sistema": "Sirvete",
         "organismo": 42093,
         "codigo": "SIRVETE",
@@ -786,7 +786,7 @@
         "icono_width": 0,
         "icono": "",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T22:57:22.412Z",
         "f_baja": null
     }
 },
@@ -794,7 +794,7 @@
     "model": "sistemas.sistema",
     "pk": 7,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "18a83c79-cf09-11f0-be8f-38d5470ea667",
         "nombre_sistema": "Platino",
         "organismo": 42093,
         "codigo": "PLATINO",
@@ -811,7 +811,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo-platino.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T22:57:22.382Z",
         "f_baja": null
     }
 },
@@ -819,7 +819,7 @@
     "model": "sistemas.sistema",
     "pk": 8,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "18aba9c2-cf09-11f0-99e5-38d5470ea667",
         "nombre_sistema": "SEFLOGIC",
         "organismo": 42088,
         "codigo": "SEFLOGIC",
@@ -836,7 +836,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo-seflogic.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T22:57:22.404Z",
         "f_baja": null
     }
 },
@@ -844,7 +844,7 @@
     "model": "sistemas.sistema",
     "pk": 9,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "18af4805-cf09-11f0-9198-38d5470ea667",
         "nombre_sistema": "Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias",
         "organismo": 42093,
         "codigo": "SICAC",
@@ -861,7 +861,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/sicac-logo.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T22:57:22.428Z",
         "f_baja": null
     }
 },
@@ -869,7 +869,7 @@
     "model": "sistemas.sistema",
     "pk": 10,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "18aa7fc7-cf09-11f0-ab4e-38d5470ea667",
         "nombre_sistema": "Registro de entrada  y salida",
         "organismo": 42119,
         "codigo": "HIPERREG",
@@ -886,7 +886,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo-hiperreg_y6TMSbi.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T22:57:22.397Z",
         "f_baja": null
     }
 },
@@ -894,7 +894,7 @@
     "model": "sistemas.sistema",
     "pk": 11,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "18adfb3f-cf09-11f0-b191-38d5470ea667",
         "nombre_sistema": "Sistema de Dirección por Objetivos",
         "organismo": 42119,
         "codigo": "TRISKELL",
@@ -911,7 +911,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/triskell-logo.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T22:57:22.419Z",
         "f_baja": null
     }
 },
@@ -919,7 +919,7 @@
     "model": "sistemas.sistema",
     "pk": 12,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "8a5edb70-cf0c-11f0-895f-38d5470ea667",
         "nombre_sistema": "Directorio de Unidades Administrativas y Oficinas de Registro y Atención a la Ciudadanía",
         "organismo": 42119,
         "codigo": "DIRCAC",
@@ -936,7 +936,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/dircac-logo.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T22:57:22.357Z",
         "f_baja": null
     }
 },
@@ -944,7 +944,7 @@
     "model": "sistemas.sistema",
     "pk": 13,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "18b1b0e4-cf09-11f0-b781-38d5470ea667",
         "nombre_sistema": "Sistema de tramitación electrónica de procedimientos de Ganadería",
         "organismo": 39073,
         "codigo": "SIRBA",
@@ -961,7 +961,7 @@
         "icono_width": 0,
         "icono": "",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T22:57:22.444Z",
         "f_baja": null
     }
 },
@@ -969,10 +969,10 @@
     "model": "sistemas.sistema",
     "pk": 14,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "18a9417b-cf09-11f0-97ca-38d5470ea667",
         "nombre_sistema": "Pruebas",
         "organismo": 42093,
-        "codigo": "borrame",
+        "codigo": "BORRAME",
         "url": null,
         "descripcion": "",
         "proposito": "Este sistema es de **pruebas**.",
@@ -986,7 +986,7 @@
         "icono_width": 0,
         "icono": "",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T22:57:22.388Z",
         "f_baja": null
     }
 },
@@ -994,10 +994,10 @@
     "model": "sistemas.sistema",
     "pk": 15,
     "fields": {
-        "uuid": "ecaeae1a-e6a8-4c49-965a-20c360ffa9fa",
+        "uuid": "18a5c990-cf09-11f0-9553-38d5470ea667",
         "nombre_sistema": "Gestión de expedientes de Dependencia",
         "organismo": 42168,
-        "codigo": "Sidecan",
+        "codigo": "SIDECAN",
         "url": null,
         "descripcion": "",
         "proposito": "Gestión de expedientes de Dependencia",
@@ -1011,7 +1011,7 @@
         "icono_width": 464,
         "icono": "sistemas/iconos/2025/sidecan-logo.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2025-12-01T22:57:22.366Z",
         "f_baja": null
     }
 },
@@ -1047,7 +1047,7 @@
         "uuid": "17aefe7c-f6b3-4f2b-b73a-f5047525704a",
         "nombre_sistema": "Adopciones",
         "organismo": 42169,
-        "codigo": "Adopta",
+        "codigo": "ADOPTA",
         "url": null,
         "descripcion": "",
         "proposito": "Gestión de expediente de adopciones.",
@@ -1122,7 +1122,7 @@
         "uuid": "5d93fbb4-18a1-4957-adbb-bc924db66f6a",
         "nombre_sistema": "Justicia Juvenil",
         "organismo": 42169,
-        "codigo": "JusticiaJuvenil",
+        "codigo": "JUSTICIAJUVENIL",
         "url": null,
         "descripcion": "",
         "proposito": "Gestión de las Medidas Judiciales de Menores",
@@ -1147,7 +1147,7 @@
         "uuid": "52c98152-f54e-41f2-8d80-4d1923f7f577",
         "nombre_sistema": "Sigestein",
         "organismo": 41854,
-        "codigo": "Sigestein",
+        "codigo": "SIGESTEIN",
         "url": null,
         "descripcion": "",
         "proposito": "Gestión de expedientes",
@@ -1472,7 +1472,7 @@
         "uuid": "5f1f53ea-4071-45e0-b153-96479cb7f0d6",
         "nombre_sistema": "Subsistema de RETAMA de  Iniciativas Parlamentarias",
         "organismo": 6583,
-        "codigo": "RETAMA-IP",
+        "codigo": "RETAMA_IP",
         "url": null,
         "descripcion": "Módulo que tiene como base el Sistema de Información de RETAMA que gestiona los expedientes de Iniciativas Parlamentarias recibidos desde la aplicación HIPATIA.\r\n\r\nPermite el control en cada momento del estado del expediente y su seguimiento así como consultas y listados según diferentes parámetros.",
         "proposito": "Gestionar expedientes de Iniciativas Parlamentarias recibidos desde la aplicación HIPATIA",
@@ -1497,7 +1497,7 @@
         "uuid": "ebf07680-ef34-4a88-88fe-87bf938e329d",
         "nombre_sistema": "Recursos de Estudios",
         "organismo": 6583,
-        "codigo": "EST-RECU",
+        "codigo": "EST_RECU",
         "url": null,
         "descripcion": "Gestión de los Expedientes de Recursos que se presentan \r\nen el Servicio de Estudios y Normativa con mantenimiento\r\nde la información, consultas y listados por varios parámetros. \r\n\r\nEl proyecto se encuentra en explotación, aunque, al estar \r\nobsoleto por su lenguaje de programación (Access), no tiene\r\nningún tipo de mantenimiento evolutivo. Se está pendiente\r\nde su migración.",
         "proposito": "Gestionar los recursos que se presentan en el Servicio de Estudios y Normativa.",
@@ -1722,7 +1722,7 @@
         "uuid": "32d1ddaa-7798-44e4-b1af-66e3b7f4b55c",
         "nombre_sistema": "Centros de Día",
         "organismo": 42170,
-        "codigo": "CENTROS-DIA",
+        "codigo": "CENTROS_DIA",
         "url": null,
         "descripcion": "Solicitudes de mayores para centros de día",
         "proposito": "Solicitudes de mayores para centros de día",
@@ -1747,7 +1747,7 @@
         "uuid": "43c13957-cb8a-484f-803a-a258446a2010",
         "nombre_sistema": "Centros de menores",
         "organismo": 42169,
-        "codigo": "CENTROS-MENORES",
+        "codigo": "CENTROS_MENORES",
         "url": null,
         "descripcion": "",
         "proposito": "Mantenimiento de centros de menores y habilitación de entidades colaboradoras",
@@ -1897,7 +1897,7 @@
         "uuid": "b549a5cb-0d24-4085-bca7-b10f8c585ab0",
         "nombre_sistema": "Escuelas Infantiles",
         "organismo": 42169,
-        "codigo": "ESC-INFANTIL",
+        "codigo": "ESC_INFANTIL",
         "url": null,
         "descripcion": "",
         "proposito": "Gestión de plazas en centros infantiles",
@@ -1922,7 +1922,7 @@
         "uuid": "40421b48-ec74-4068-8ecf-b67f7283a3de",
         "nombre_sistema": "Expedientes de Asesoría Jurídica",
         "organismo": 42172,
-        "codigo": "EXP-JUR",
+        "codigo": "EXP_JUR",
         "url": null,
         "descripcion": "",
         "proposito": "Expedientes de Asesoría Jurídica",
@@ -1947,7 +1947,7 @@
         "uuid": "d8b5dfda-755d-491c-9c00-fa5d73895948",
         "nombre_sistema": "Intercambio de Ficheros Ministerios",
         "organismo": 38691,
-        "codigo": "INTEROP-FM",
+        "codigo": "INTEROP_FM",
         "url": null,
         "descripcion": "Intercambio de Ficheros Ministerios. Incluye el 990, el TSD, estadísticas de prestaciones, etc.\r\n\r\nTSD Puede ser la [Tarjeta Social Digital](https://www.tarjetasocialdigital.es)?",
         "proposito": "Envío de datos al Ministerio",
@@ -1972,7 +1972,7 @@
         "uuid": "251203de-397a-44ea-9a1a-4f5cd5c57cdb",
         "nombre_sistema": "Subvención ITC",
         "organismo": null,
-        "codigo": "SUB-ITC",
+        "codigo": "SUB_ITC",
         "url": null,
         "descripcion": "Subvención ITC",
         "proposito": "",
@@ -1997,7 +1997,7 @@
         "uuid": "f011cf03-dd14-4506-a529-5a69c1366d02",
         "nombre_sistema": "Gestión administrativa y académica en los centros educativos",
         "organismo": 42126,
-        "codigo": "PINCEL-EKADE",
+        "codigo": "PINCEL_EKADE",
         "url": null,
         "descripcion": "",
         "proposito": "",
@@ -2047,7 +2047,7 @@
         "uuid": "889805b6-4eae-448e-aefc-085b029ff1d7",
         "nombre_sistema": "Programa Económico Actividad ESSSCAN",
         "organismo": 6564,
-        "codigo": "ESSSCAN-ECO",
+        "codigo": "ESSSCAN_ECO",
         "url": null,
         "descripcion": "",
         "proposito": "Gestión del registro contable, la gestión financiera-económica, el control de costes y los datos vinculados con las nóminas de los trabajadores de la Escuela.",
@@ -2072,7 +2072,7 @@
         "uuid": "11f66c9f-fb9b-4dcd-8908-7fdef108180d",
         "nombre_sistema": "Share ESSSCAN",
         "organismo": 6564,
-        "codigo": "ESSSCAN-SHARE",
+        "codigo": "ESSSCAN_SHARE",
         "url": null,
         "descripcion": "",
         "proposito": "Sistema que administra todo el contenido relacionado con los proyectos formativos gestionados por la Entidad, al que tiene acceso toda la organización al constituir un almacenamiento compartido en la nube.",
@@ -2222,7 +2222,7 @@
         "uuid": "6ff70bc7-1d5d-40eb-bbaa-ff363caa79f9",
         "nombre_sistema": "Sistema Información Transversal de Áreas",
         "organismo": 42142,
-        "codigo": "SITA-TERRITORIO",
+        "codigo": "SITA_TERRITORIO",
         "url": null,
         "descripcion": "",
         "proposito": "Plataforma de almacenamiento de documentación, gestor documental y soporte para otros aplicativos (backoffice)",
@@ -2247,7 +2247,7 @@
         "uuid": "9e8ea2e4-7cce-4113-8c7a-5e9817d92818",
         "nombre_sistema": "Proyectos PTCTA",
         "organismo": 42138,
-        "codigo": "PROYECTOS-PTCTA",
+        "codigo": "PROYECTOS_PTCTA",
         "url": null,
         "descripcion": "Redmine PTCTA",
         "proposito": "Control de proyectos de soporte o gestión con empresas proveedoras",
@@ -2472,7 +2472,7 @@
         "uuid": "7e69aa8f-5a97-4347-8897-8f88de8a5817",
         "nombre_sistema": "Red Canaria de Alerta Temprana de Especies Exóticas Invasoras",
         "organismo": 42162,
-        "codigo": "RedEXOS",
+        "codigo": "REDEXOS",
         "url": null,
         "descripcion": "Aplicación que almacena datos y fotografías de avistamientos de fauna y flora no autóctona. Incluye mecanismo de notificación de avistamientos.\r\n\r\n Decreto 117/2020, de 19 de noviembre",
         "proposito": "Almacenar datos y fotografías de avistamientos de fauna y flora no autóctona. Notificación de avistamientos.",
@@ -2522,7 +2522,7 @@
         "uuid": "1658f6e4-5676-4453-9233-3106e5d4515a",
         "nombre_sistema": "Red de Observadores del Medio Marino en Canarias",
         "organismo": 42162,
-        "codigo": "RedPromar",
+        "codigo": "REDPROMAR",
         "url": null,
         "descripcion": "Sistema de vigilancia y registro de información de todos los organismos marinos de Canarias utilizando el concepto de “Ciencia ciudadana”.\r\n\r\nResolución nº 320 de 22 de junio de 2015 \r\n\r\n- Serv.J De Instalaciones energéticas\r\n- Serv. De Eficiencia Energética - UNIDAD ADMINISTRATIVA\r\n- Serv. De Eficiencia Energética",
         "proposito": "Vigilancia y registro de información de los organismos marinos de Canarias",
@@ -6037,6 +6037,222 @@
         "f_alta": "2025-11-24T12:56:37.672Z",
         "f_cambio": "2025-11-24T12:56:37.673Z",
         "f_baja": null
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "ACCUEE",
+    "fields": {
+        "organismo": 38691,
+        "peso": 550,
+        "url_open_data": null
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "ACIISI",
+    "fields": {
+        "organismo": 42158,
+        "peso": 850,
+        "url_open_data": null
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "ACPMN",
+    "fields": {
+        "organismo": 41854,
+        "peso": 650,
+        "url_open_data": null
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "AGPSA",
+    "fields": {
+        "organismo": 42084,
+        "peso": 1200,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-agricultura"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "ATC",
+    "fields": {
+        "organismo": 37815,
+        "peso": 350,
+        "url_open_data": null
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "BSIJIF",
+    "fields": {
+        "organismo": 42165,
+        "peso": 1000,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-bienestar-social"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "EFPAFD",
+    "fields": {
+        "organismo": 42123,
+        "peso": 500,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-educacion"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "EICA",
+    "fields": {
+        "organismo": 42104,
+        "peso": 100,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-economia"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "ESSSCAN",
+    "fields": {
+        "organismo": 6564,
+        "peso": 1150,
+        "url_open_data": null
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "HRUE",
+    "fields": {
+        "organismo": 42086,
+        "peso": 300,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-hacienda"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "ICAVI",
+    "fields": {
+        "organismo": 37152,
+        "peso": 250,
+        "url_open_data": null
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "ICI",
+    "fields": {
+        "organismo": 25999,
+        "peso": 1050,
+        "url_open_data": null
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "ICIA",
+    "fields": {
+        "organismo": 32766,
+        "peso": 1250,
+        "url_open_data": null
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "ISTAC",
+    "fields": {
+        "organismo": 37829,
+        "peso": 350,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/istac"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "OPVM",
+    "fields": {
+        "organismo": 42114,
+        "peso": 200,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-obras-publicas"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "PAPJS",
+    "fields": {
+        "organismo": 42118,
+        "peso": 400,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-administraciones-publicas"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "PREGOB",
+    "fields": {
+        "organismo": 42091,
+        "peso": 0,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/presidencia-del-gobierno"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "PTCTA",
+    "fields": {
+        "organismo": 42136,
+        "peso": 600,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-politica-territorial"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "SAN",
+    "fields": {
+        "organismo": 6547,
+        "peso": 1100,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-sanidad"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "SCE",
+    "fields": {
+        "organismo": 42149,
+        "peso": 750,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/servicio-canario-de-empleo"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "SCS",
+    "fields": {
+        "organismo": 6594,
+        "peso": 1150,
+        "url_open_data": null
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "TEE",
+    "fields": {
+        "organismo": 42159,
+        "peso": 900,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/dataset/?organization=consejeria-de-transicion-ecologica-y-energia"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "TUREMP",
+    "fields": {
+        "organismo": 42143,
+        "peso": 700,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-de-turismo"
+    }
+},
+{
+    "model": "sistemas.ente",
+    "pk": "UCIC",
+    "fields": {
+        "organismo": 42150,
+        "peso": 800,
+        "url_open_data": "https://datos.canarias.es/catalogos/general/organization/consejeria-universidades-ciencia-innovacion-cultura"
     }
 }
 ]

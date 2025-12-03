@@ -4,7 +4,7 @@ from datetime import datetime as DateTime
 from html import escape
 from pathlib import Path
 from urllib.request import urlretrieve
-import uuid
+from uuid import uuid4
 
 from bs4 import BeautifulSoup
 from django.conf import settings
@@ -110,7 +110,7 @@ class Sistema(models.Model):
 
     id_sistema = models.BigAutoField(primary_key=True)
     uuid = models.UUIDField(
-        default=uuid.uuid4,
+        default=uuid4,
         editable=False,
         help_text="Identificador público del sistema (UUID4)",
         )
