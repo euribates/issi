@@ -1,10 +1,15 @@
+#!/usr/bin/env python3
+# pylint: disable=no-member
+
 from html import escape
 import re
-import uuid
+from uuid import UUID
 
+from comun.funcop import static
 from directorio.models import Organismo
 from sistemas.models import Tema
 from sistemas.models import Sistema
+from sistemas.error import errors
 
 
 DEFAULT_DOMAIN = 'gobiernodecanarias.org'
@@ -14,45 +19,46 @@ pat_email = re.compile(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
 pat_full = re.compile(r"(.+)\s+<(.+)>$")
 
 
-def parse_codigo_interno(n_linea: int, codigo: str):
+@static(ya_vistos=set([]))
+def parse_codigo_interno(codigo: str, n_linea=None):
     codigo = codigo.strip()
     if not codigo:
-        raise ValueError(
-            f"En la linea {n_linea},"
-            ' no se ha definido el código interno'
-            )
+        raise errors.EI0003(n_linea=n_linea)
     pat_codigo_interno = re.compile(r'[A-Z_][0-9A-Z_][0-9A-Z_]+$')
     _match = pat_codigo_interno.match(codigo)
     if not _match:
-        raise ValueError(
-            f"En la linea {n_linea},"
-            ' el formato del código interno no es válido.'
-            ' Solo son válidos los caracteres desde la A'
-            ' hasta la Z, sin minúsculas, los dígitos desde'
-            ' el cero hasta el nueve, y el caracter subrayado.'
-            ' Además, no puede empezar por un dígito, y debe'
-            ' tener tres o más caracteres. El valor suministrado'
-            f' {escape(codigo)} no sigue el formato.'
-            )
+        raise errors.EI0002(codigo, n_linea=n_linea)
+    if codigo in parse_codigo_interno.ya_vistos:
+        raise errors.EI0001(codigo, n_linea=n_linea)
+    parse_codigo_interno.ya_vistos.add(codigo)
     return codigo
 
 
+def parse_proposito(texto, n_linea) -> str:
+    sublines = texto.splitlines()
+    if len(sublines) > 0:
+        return sublines[0]
+    return ''
 
-def parse_dir3(n_linea, dir3):
+
+def parse_descripcion(text, n_linea) -> str:
+    sublines = texto.splitlines()
+    if len(sublines) > 1:
+        return '\n\n'.join(sublines[1:])
+    return ''
+
+
+def parse_dir3(dir3, n_linea=None):
     dir3 = dir3.strip()
     if not dir3:
         return None
     organismo = Organismo.load_organismo_using_dir3(dir3)
     if not organismo:
-        raise ValueError(
-            f'En la fila {n_linea},'
-            f' el DIR3 indicado: {escape(dir3)}'
-            ' no parece correcto.'
-            )
+        raise errors.EI0007(dir3, n_linea=n_linea)
     return organismo
 
 
-def parse_materia_competencial(n_linea: int, materia: str) -> Tema|None:
+def parse_materia_competencial(materia: str, n_linea=None) -> Tema|None:
     materia = materia.strip()
     if not materia:
         return Tema.load_tema('UNK')
@@ -60,22 +66,18 @@ def parse_materia_competencial(n_linea: int, materia: str) -> Tema|None:
     if not tema:
         tema = Tema.load_tema_por_nombre(materia)
         if not tema:
-            raise ValueError(
-                f'En la fila {n_linea},'
-                f' el tema indicado: {escape(materia)}'
-                ' no existe.'
-                )
+            raise errors.EI0008(materia, n_linea=n_linea)
     return tema
 
 
-def parse_users(n_linea: int, txt: str) -> set[dict]:
+def parse_users(txt: str, n_linea=None) -> set[dict]:
     result = []
     txt = txt.strip()
     if not txt:
         return result
     if ',' in txt:
         for item in pat_comma.split(txt):
-            values = parse_users(item)
+            values = parse_users(item, n_linea=n_linea)
             if values:
                 result.extend(values)
         return result
@@ -105,11 +107,8 @@ def parse_users(n_linea: int, txt: str) -> set[dict]:
             'login': txt,
             'email': f'{txt}@{DEFAULT_DOMAIN}'
             }]
-    raise ValueError(
-        f'En la linea {n_linea},'    
-        f' no puedo interpretar "{escape(txt)}"'
-        ' como un usuario válido.'
-        )
+    raise errors.EI0009(txt, n_linea=n_linea)
+
 
 pat_integer = re.compile(r'\d+$')
 pat_comma = re.compile(r'\s*,\s*')
@@ -118,20 +117,22 @@ pat_url_juriscan = re.compile(
     )
 
 
-def parse_juriscan(n_linea: int, txt: str) -> list[int]:
+def parse_juriscan(text: str|None, n_linea=None) -> list[int]:
     result = []
-    txt = txt.strip()
-    match = pat_integer.match(txt)
+    if not bool(text):
+        return result
+    text = text.strip()
+    match = pat_integer.match(text)
     if match:
         result.append(int(match.group(0)))
         return result
-    if ',' in txt:
-        for item in pat_comma.split(txt):
-            values = parse_juriscan(n_linea, item)
+    if ',' in text:
+        for item in pat_comma.split(text):
+            values = parse_juriscan(item, n_linea=n_linea)
             if values:
                 result.extend(values)
         return result
-    for match in pat_url_juriscan.finditer(txt):
+    for match in pat_url_juriscan.finditer(text):
         result.append(int(match.group(1)))
     return result
 
@@ -139,74 +140,51 @@ def parse_juriscan(n_linea: int, txt: str) -> list[int]:
 PAT_UUID = re.compile(r'[\da-f]{8}-([\da-f]{4}-){3}[\da-f]{12}$', re.IGNORECASE)
 
 
-def parse_uuid(n_linea: int, txt: str) -> uuid.UUID|None:
-    txt = txt.strip()
-    if txt == '':
+def parse_uuid(value: str, n_linea=None) -> UUID|None:
+    if value is None:
         return None
-    match = PAT_UUID.match(txt)
+    value = value.strip()
+    if value == '':
+        return None
+    match = PAT_UUID.match(value)
     if match:
-        return uuid.UUID(txt)
-    raise ValueError(
-        f'En la línea {n_linea},'
-        f' esperaba un UUID, pero el dato {escape(txt)}'
-        ' no tiene el formato adecuado.'
-        )
+        return UUID(value)
+    raise errors.EI0005(value)
 
 
-def parse_row(n_linea, tupla):
+CHECKS = [
+    # (columna, field_name, parser_function),
+    (0, 'nombre_sistema', None),
+    (1, 'codigo', parse_codigo_interno),
+    (2, 'proposito', parse_proposito),
+    (2, 'descripcion', parse_descripcion),
+    (3, 'tema', parse_materia_competencial),
+    (4, 'organismo', parse_dir3),
+    (5, 'responsables_tecnologicos', parse_users),
+    (6, 'responsables_funcionales', parse_users),
+    (7, 'juriscan', parse_juriscan),
+    (9, 'comentarios', None),
+    (10, 'uuid_sistema', parse_uuid),
+    (
+
+def parse_row(tupla, n_linea=None):
     n_cols = len(tupla)
     errors = []
-    nombre_sistema = tupla[0]
-    codigo = None
-    try:
-        codigo = parse_codigo_interno(n_linea, tupla[1])
-    except ValueError as err:
-        errors.append(err)
-    finalidad = tupla[2]
-    proposito = finalidad
-    descripcion = ''
-    if finalidad:
-        sublines = finalidad.splitlines()
-        if len(sublines) == 0:
-            proposito = ''
-        if len(sublines) == 1:
-            proposito = sublines[0]
-        else:
-            proposito = sublines[0]
-            descripcion = '\n\n'.join(sublines[1:])
-    try:
-        tema = parse_materia_competencial(n_linea, tupla[3])
-    except ValueError as err:
-        errors.append(err)
+    payload = {}
+    for num_col, field_name, parser_function in CHECKS:
+        try:
+            value = tupla[num_col]
+        except IndexError:
+            value = None
+        if parser_function:
+            try:
+                value = parser_function(value, n_linea=n_linea)
+            except ValueError as err:
+                errors.append(str(err))
+        payload[field_name] = value
+    
 
-    organismo = None
-    try:
-        organismo = parse_dir3(n_linea, tupla[4])
-    except ValueError as err:
-        errors.append(err)
-
-    try:
-        responsables_tecnologicos = parse_users(n_linea, tupla[5])
-    except ValueError as err:
-        errors.append(err)
-
-    try:
-        responsables_funcionales =  parse_users(n_linea, tupla[6])
-    except ValueError as err:
-        errors.append(err)
-
-    try:
-        juriscan = parse_juriscan(n_linea, tupla[7])
-    except ValueError as err:
-        errors.append(err)
-
-    comentarios = f'{tupla[8]}\n\n{tupla[7]}'
-
-    id_sistema = None
-    uuid_sistema = None
-    if n_cols == 10:
-        uuid_sistema = parse_uuid(n_linea, tupla[9])
-        if uuid_sistema:
+    if uuid_sistema:
             sistema = Sistema.load_sistema_por_uuid(uuid_sistema)
             if sistema:
                 id_sistema = sistema.pk

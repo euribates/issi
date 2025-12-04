@@ -34,7 +34,7 @@ Las columnas del fichero CSV se describen en la siguiente tabla:
 Ord. Campo (En Fila 1)    Explicación
 ==== ==================== ====================================
 1    Nombre               El nombre del sistema
-2    Código Id. Int.      Código identificativo interno
+2    Código Id. Int.      Código identificador interno
 3    Finalidad            Finalidad o propósito del S.I.
 4    Materia competencial Código de materia
 5    DIR3                 DIR3 Dirección general / organismo
@@ -55,11 +55,13 @@ exportación de datos. Veremos a continuación el resto de columnas:
   existente, se producirá un error y no se producirá ningún efecto
   en la base de datos.
 
-- **Codigo identificativo interno**: Aunque se usa la palabra código, se
-  espera aquí una expresión legible, consistente normalmente en el
-  nombre, oficial o no, del sistema (por ejemplo, ``PLATINO``. No se
-  admiten espacios, ni caracteres especiales, ni vocales acentuadas, ni
-  ningún otro símbolo aparte de las letras de la `A` a la `Z`
+.. _CII:
+
+- **Codigo Identificador Interno** (CII): Aunque se usa la palabra
+  código, se espera aquí una expresión legible, consistente normalmente
+  en el nombre, oficial o no, del sistema (por ejemplo, ``PLATINO``. No
+  se admiten espacios, ni caracteres especiales, ni vocales acentuadas,
+  ni ningún otro símbolo aparte de las letras de la ``A`` a la ``Z``
   (excluyendo la eñe), los dígitos del ``1`` al ``9`` y el carácter
   subrayado, ``_``. Es un **valor único** en la base de datos, así que
   si se intenta dar de alta un sistema con el mismo nombre que otro ya
@@ -73,7 +75,7 @@ exportación de datos. Veremos a continuación el resto de columnas:
   párrafo, **solo el primero** se almacenará en la base de datos en el
   campo ``finalidad``, el resto del texto se almacenará en el campo
   ``descripcion``. La redacción del texto debería poder leerse como la
-  continuación de: ``"El propósito de este sistema de
+  continuación de la frase: ``"El propósito de este sistema de
   información es ..."``.
 
 .. _materias_competenciales:
@@ -219,23 +221,7 @@ Posibles errores en la importación de datos
 
 Los posibles errores que impiden la carga de datos son los siguientes:
 
-- **Numero incorrecto de columnas**: El fichero CSV solo puede tener
-  9 columnas (ver :ref:`importacion_inicial`) o 10 columnas (ver
-  :ref:`importacion_adicional`).
-
-- **Código identificativo interno incorrecto**. El valor indicado en el
-  CVS no sigue las reglas de formato esperadas.
-
-- **Codigo UUID incorrecto**: El valor indicado como código UUID no sigue
-  las reglas de formato esperadas. Ver :ref:`Formato UUID <formato_uuid>`.
-
-- **El código o nombre del tema es incorrecto**: Los valores esperados
-  están en la tabla de
-  :ref:`materias competenciales <materias_competenciales>`.
-
-- **Código identificativo interno duplicado**: Se está intentado dar de
-  alta un sistema de información cuyo código identificativo interno
-  coincide con el de otro ya creado. 
+.. include:: includes/errores.rst
 
 .. _CSV: https://es.wikipedia.org/wiki/Valores_separados_por_comas
 .. _UUID: https://es.wikipedia.org/wiki/Identificador_%C3%BAnico_universal

@@ -14,6 +14,7 @@ EPILOG   = 'ISSI - Inventario de sistemas de información'
 PARTES = [
     'materias',
     'entes',
+    'errores'
     ]
 
 class Command(BaseCommand):
@@ -46,6 +47,11 @@ class Command(BaseCommand):
                     codigo = f'``{ente.pk}``' 
                     print(f'{codigo:13} {ente.organismo.nombre_organismo}')
                 print('============= =========================================')
+            case 'errores':
+                from sistemas.error import errors
+                for _code, err in errors:
+                    print(err.as_resumen_rest())
+                    print()
             case _:
                 raise CommandError(
                     f'No se como generar el fragmento {parte}'

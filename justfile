@@ -88,6 +88,8 @@ docs *args='.':
     python ./manage.py graph_models -g -o docs/sistemas.png sistemas
     python ./manage.py update_docs materias > docs/includes/materias.rst
     python ./manage.py update_docs entes > docs/includes/entes.rst
+    python ./manage.py update_docs errores > docs/includes/errores.rst
+
     sphinx-build -M html docs/ docs/ {{ args }}
 
 # Actualiza en caliente contenidos estaticos js/css/png/svg
@@ -103,6 +105,4 @@ tags:
 
 # Buscar con pss pero omitiendo directorios .venv y migrations
 pss  *args='':
-    pss {{args}} --ignore-dir .venv --ignore-dir migrations
-
-
+    pss --ignore-dir=".venv,migrations" {{args}} 

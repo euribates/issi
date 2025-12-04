@@ -4,7 +4,7 @@ import pytest
 from uuid import UUID
 
 from sistemas import parsers
-
+from sistemas import models
 
 def test_parse_users_single_username():
     expected = [{
@@ -94,6 +94,20 @@ def test_parse_uuid_empty():
 def test_parse_uuid_bad():
     with pytest.raises(ValueError):
         parsers.parse_uuid('María tenía un corderito')
+
+
+@pytest.mark.django_db
+def test_parse_materia_compentecial():
+    expected = models.Tema.load_tema('HAC')
+    assert expected is not None
+    assert parsers.parse_materia_competencial('HAC') == expected
+
+
+
+@pytest.mark.django_db
+def test_parse_materia_compentecial_failure():
+    with pytest.raises(ValueError):
+        parsers.parse_materia_competencial('¯\_(ツ)_/¯')
 
 
 if __name__ == '__main__':

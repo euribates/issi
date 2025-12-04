@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import uuid
+from uuid import uuid4
 import argparse
 import csv
 from pathlib import Path
@@ -10,13 +10,8 @@ from django.core.management.base import BaseCommand
 from rich.console import Console
 from rich.table import Table
 
-from comun.funcop import static
 from sistemas import parsers
-from sistemas.models import Ente
-from sistemas.models import NormaSistema
-from sistemas.models import Perfil
-from sistemas.models import Sistema
-
+from sistemas import models
 
 INPUT_DIR = settings.BASE_DIR / 'imports'
 
@@ -40,7 +35,7 @@ class UpdateSistema(BaseOpCommand):
     def __init__(self, payload):
         super().__init__('UPDATE', payload)
         id_sistema = self.payload['id_sistema']
-        self.sistema = Sistema.load_sistema(id_sistema)
+        self.sistema = models.Sistema.load_sistema(id_sistema)
         self.juriscan = self.payload.pop('juriscan', [])
         self.responsables_tecnologicos = self.payload.pop('responsables_tecnologicos', [])
         self.responsables_funcionales = self.payload.pop('responsables_funcionales', [])
@@ -65,13 +60,21 @@ class UpdateSistema(BaseOpCommand):
             self.sistema.save()
         needs_touch = False
         for codigo_juriscan in self.juriscan:
-            _, created = NormaSistema.upsert(self.sistema, codigo_juriscan)
+            _, created = models.NormaSistema.upsert(self.sistema, codigo_juriscan)
             needs_touch = needs_touch or created
         for usr in self.responsables_tecnologicos:
-            _, created = Perfil.upsert(self.sistema, usr.login, 'TEC')
+            usuario = models.Usuario.load_usuario(usr['login'])
+            if not usuario:
+                usuario = models.Usuario(**usr)
+                usuario.save()
+            _, created = models.Perfil.upsert(self.sistema, usuario, 'TEC')
             needs_touch = needs_touch or created
         for usr in self.responsables_funcionales:
-            _, created = Perfil.upsert(self.sistema, usr.login, 'FUN')
+            usuario = models.Usuario.load_usuario(usr['login'])
+            if not usuario:
+                usuario = models.Usuario(**usr)
+                usuario.save()
+            _, created = models.Perfil.upsert(self.sistema, usuario, 'FUN')
             needs_touch = needs_touch or created
         if needs_touch:
             self.sistema.touch()
@@ -87,29 +90,17 @@ class InsertSistema(BaseOpCommand):
         self.responsables_funcionales = self.payload.pop('responsables_funcionales', [])
         
     def __call__(self):
-        if not self.payload['uuid']:
-            self.payload['uuid'] = uuid.uuid1()
-        sistema = Sistema(**self.payload)
+        if not self.payload['uuid_sistema']:
+            self.payload['uuid_sistema'] = uuid4()
+        sistema = models.Sistema(**self.payload)
         sistema.save()
         for codigo_juriscan in self.juriscan:
-            NormaSistema.upsert(sistema, codigo_juriscan)
+            models.NormaSistema.upsert(sistema, codigo_juriscan)
         for usr in self.responsables_tecnologicos:
-            Perfil.upsert(sistema, usr.login, 'TEC')
+            models.Perfil.upsert(sistema, usr.login, 'TEC')
         for usr in self.responsables_funcionales:
-            Perfil.upsert(sistema, usr.login, 'FUN')
+            models.Perfil.upsert(sistema, usr.login, 'FUN')
         return sistema
-
-
-@static(ya_vistos=set([]))
-def chk_codigo_no_repetido(n_linea, codigo):
-    if codigo in chk_codigo_no_repetido.ya_vistos:
-        raise ValueError(
-            f'En la línea {n_linea},'
-            ' aparece un codigo interno {escape(codigo)}'
-            ' que ya había sido utilizado.'
-            )
-    chk_codigo_no_repetido.ya_vistos.add(codigo)
-    return codigo
 
 
 def chk_columnas(n_linea, row, min_cols=9, max_cols=10):
@@ -168,16 +159,16 @@ class Command(BaseCommand):
         table = Table(title="Entes")
         table.add_column("Código", justify="right", style="bold")
         table.add_column("Nombre")
-        for ente in Ente.objects.all():
+        for ente in models.Ente.objects.all():
             table.add_row(ente.pk, ente.organismo.nombre_organismo)
         self.console.print(table)
         return None
 
     def handle(self, *args, **options):
-        tag = options.get('tag')
+        tag = options.get('tag').upper()
         if not tag:
             return self.error_falta_ente()
-        ente = Ente.load_ente(tag)
+        ente = models.Ente.load_ente(tag)
         if not ente:
             return self.error_falta_ente(tag)
 
@@ -195,9 +186,9 @@ class Command(BaseCommand):
                         f' no coinciden el número de filas ({len(tupla)})'
                         f' con el esperado: {n_cols}.'
                         )
-                row_errors, payload = parsers.parse_row(n_linea, tupla)
+                row_errors, payload = parsers.parse_row(tupla, n_linea=n_linea)
                 errors.extend(row_errors)
-                # chk_codigo_no_repetido(n_linea, payload['codigo'])
+                # chk_codigo_no_repetido(payload['codigo'], n_linea=n_linea)
 
                 print('█', end='')
 

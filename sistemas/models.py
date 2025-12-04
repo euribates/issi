@@ -4,7 +4,7 @@ from datetime import datetime as DateTime
 from html import escape
 from pathlib import Path
 from urllib.request import urlretrieve
-from uuid import uuid4
+from uuid import uuid4, UUID
 
 from bs4 import BeautifulSoup
 from django.conf import settings
@@ -109,10 +109,10 @@ class Sistema(models.Model):
         ordering = ['nombre_sistema',]
 
     id_sistema = models.BigAutoField(primary_key=True)
-    uuid = models.UUIDField(
+    uuid_sistema = models.UUIDField(
         default=uuid4,
         editable=False,
-        help_text="Identificador público del sistema (UUID4)",
+        help_text="Identificador público del sistema (UUID)",
         unique=True,
         )
     nombre_sistema = models.CharField(
@@ -261,7 +261,7 @@ class Sistema(models.Model):
             return None
 
     @classmethod
-    def load_sistema_por_uuid(cls, uuid:str):
+    def load_sistema_por_uuid(cls, uuid:str|UUID):
         """Obtener un sistema a partir de su clave secundaria UUID
 
         Parameters:
@@ -275,7 +275,7 @@ class Sistema(models.Model):
 
         """
         try:
-            return cls.objects.get(uuid=uuid)
+            return cls.objects.get(uuid_sistema=uuid)
         except cls.DoesNotExist:
             return None
 
@@ -471,7 +471,7 @@ class Usuario(models.Model):
         )
     organismo = models.ForeignKey(
         Organismo,
-        related_name='usurios',
+        related_name='usuarios',
         on_delete=models.PROTECT,
         )
     f_alta = models.DateTimeField(auto_now_add=True)
@@ -481,9 +481,6 @@ class Usuario(models.Model):
         blank=True,
         null=True,
         )
-
-    def organismos_filtrados(self, query: str):
-        return models.Organismo.search(query)
 
     @classmethod
     def load_usuario(cls, pk:str):
@@ -507,15 +504,6 @@ class Usuario(models.Model):
         if not self.email:
             self.email = f'{self.login}@{EMAIL_DOMAIN}'
         super().save(*args, **kwargs)
-
-
-    def as_dict(self) -> dict:
-        if self.is_valid():
-            return {
-                name: self.cleaned_data[name]
-                for name in self.Meta.fields
-                }
-        return {}
 
     def nombre_completo(self):
         if self.nombre:
