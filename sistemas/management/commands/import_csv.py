@@ -10,8 +10,12 @@ from django.core.management.base import BaseCommand
 from rich.console import Console
 from rich.table import Table
 
-from sistemas import parsers
 from sistemas import models
+from sistemas import parsers
+from sistemas.models import Ente
+from sistemas.models import NormaSistema
+from sistemas.models import Perfil
+from sistemas.models import Sistema
 
 INPUT_DIR = settings.BASE_DIR / 'imports'
 
