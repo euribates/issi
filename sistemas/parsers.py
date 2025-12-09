@@ -4,10 +4,10 @@
 import re
 from uuid import UUID
 
+from caches.dir3 import reverse_dir3
+from caches.temas import temas
 from comun.funcop import static
 from sistemas.error import errors
-from caches.temas import temas
-from caches.dir3 import reverse_dir3
 
 
 DEFAULT_DOMAIN = 'gobiernodecanarias.org'
