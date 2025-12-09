@@ -2,7 +2,6 @@
 # pylint: disable=no-member
 
 import re
-import json
 from uuid import UUID
 
 from comun.funcop import static

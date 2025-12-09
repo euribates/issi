@@ -67,31 +67,40 @@ class Command(BaseCommand):
             # )
 
     def handle(self, *args, **options):
-        verbose = options['verbosity'] > 0
+        verbose = options['verbosity'] > 1
+        total_errores = 0
+        total_sistemas = 0
         for filename in options['filename']:
-            if verbose:
-                print(f'Comprobando {bold(filename)}:')
-
+            print(f'Comprobando {bold(filename)}:', end='\n' if verbose else' ')
             with open(filename, 'r', encoding="utf-8") as input_file:
                 reader = csv.reader(input_file, delimiter=',', quotechar='"')
-                first_line = next(reader)      # Ignoramos la primera fila
-                num_errors = 0
+                _first_line = next(reader)      # Ignoramos la primera fila
+                num_errores = 0
                 for n_linea, tupla in enumerate(reader, start=1):
+                    total_sistemas += 1
                     errors, payload = parsers.parse_row(tupla, n_linea=n_linea)
                     if verbose:
-                        print(f'    - {payload["codigo"]}', end='')
+                        print(f'    - {payload["codigo"]}', end=' ')
+                        if uuid_sistema := payload.get('uuid_sistema'):
+                            print(uuid_sistema, end=' ')
                     if errors:
-                        num_errors += len(errors)
+                        num_errores += len(errors)
                         if verbose:
                             print()
                             for error in errors:
                                 print(f'      - Error: {red(error)}')
-                    else:
-                        if verbose:
-                            print('...', green('[OK]'))
-        if num_errors == 0:
-            print('Todo OK')
-            print('No se ha detectado ningún error')
-            print('El fichero esta listo para ser importado')
-        else:
-            print(f'Hay {num_errors} errores en total en el fichero.')
+                    if verbose:
+                        if num_errores == 0:
+                            print(green('[OK]'))
+                        else:
+                            print(red(f'[{num_errores} errores]'))
+                num_errores = num_errores + len(errors)
+                if errors:
+                    total_errores += 1
+        if verbose:
+            if total_errores == 0:
+                print('No se ha detectado ningún error')
+                print('El fichero está listo para ser importado')
+            else:
+                print(f'Total errores: {red(total_errores)}')
+                print(f'Sistemas váldos: {total_sistemas - total_errores}')

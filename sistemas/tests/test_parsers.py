@@ -4,7 +4,6 @@ import pytest
 from uuid import UUID
 
 from sistemas import parsers
-from sistemas import models
 
 
 def test_parse_users_single_username():

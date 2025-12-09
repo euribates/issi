@@ -1,0 +1,30 @@
+Nombre del sistema,Código identificativo interno (CI),Finalidad,Materia competencial ,DIR3 (centro directivo),UID de la persona responsable tecnológica,UID de la persona responsable funcional,"Normativa 
+(Juriscan)",Centro Directivo
+Datos,DATOS,Analítica y Explotación de datos con fines administrativos,Bienestar Social,A05045232,dsuapers,dsuapers,,"Consejería de Bienestar Social, Igualdad, Juventud, Infancia y Familias"
+Dependencia,SIDECAN,Gestión de expedientes de Dependencia,Bienestar Social,A05046452,,,,Dirección General de Dependencia
+RCC,SITA,Gestión de expedientes de Renta Canaria Ciudadana,Bienestar Social,A05045235,,,,Dirección General de Servicios Sociales e Inmigración
+Adopciones ,ADOPCIONES ,Gestión de expediente de adopciones,Bienestar Social,A05045236,,,,Dirección General de Protección a la Infancia y las Familias
+Ayudas Directas,AYUDAS_DIRECTAS,"Gestión de expedientes de ayudas directas (La Palma, Emigrantes Venezolanos retornados, Bono Social Térmico)",Bienestar Social,,,,,
+Centros de Día,CENTROS_DE_DIA,Solicitudes de mayores para centros de día,Bienestar Social,A05046454,,,"Anexo III del Decreto 236/1998, de 18 de diciembre (B.O.C. nº 28, de 5/3/1999) ",Dirección General de Mayores y Participación Activa
+Centros de menores,CENTROS_DE_MENORES,Mantenimiento de centros de menores y habilitación de entidades colaboradoras,Bienestar Social,A05045236,,,,Dirección General de Protección a la Infancia y las Familias
+Discapacidad,DISCAPACIDAD,Gestsión de expedientes de valoración de grado de discapacidad y emisión de tarjetas de estacionamiento,Bienestar Social,A05046453,,,,Dirección General de Discapacidad
+Entidades,ENTIDADES,Registro de Entidades,Bienestar Social,,,,63/1986,
+Escuelas Infantiles ,ESCUELAS_INFANTILES ,Gestión de expedientes de plazas en centros infantiles,Bienestar Social,A05045236,,,,Dirección General de Protección a la Infancia y las Familias
+Expedientes de Asesoría Jurídica,EXPEDIENTES_ASESORIA_JURIDICA,Gestión de expedientes de asesoría jurídica,Bienestar Social,A05045233,,,,"Secretaría General Técnica de Bienestar Social, Igualdad, Juventud, Infancia y Familias"
+Expedientes Régimen Júridico,EXPEDIENTES_REGIMEN_JURIDICO,"Gestión de expedientes del servicio de régimen jurídico, viceconsejería y  procesos judiciales",Bienestar Social,A05045233,,,,"Secretaría General Técnica de Bienestar Social, Igualdad, Juventud, Infancia y Familias"
+Familias Numerosas,FAMILIAS_NUMEROSAS,Gestión de expedientes de Familia Numerosa,Bienestar Social,A05045236,,,,Dirección General de Protección a la Infancia y las Familias
+Inmigración,INMIGRACION,,Bienestar Social,A05045235,,,,Dirección General de Servicios Sociales e Inmigración
+Inspección de Centros,INSPECCION_CENTROS,,Bienestar Social,A05033131,,,,Viceconsejería de Igualdad y Diversidad
+Intercambio de Ficheros Ministerios,INTERCAMBIO_FICHEROS_MINISTERIOS,"Envío de datos al Ministerio, incluye el 990, el TSD, estadísticas de prestaciones, etc.",Bienestar Social,A05045233,,,,"Secretaría General Técnica de Bienestar Social, Igualdad, Juventud, Infancia y Familias"
+Justicia Juvenil,JUSTICIA_JUVENIL,Gestión de las Medidas Judiciales de Menores,Bienestar Social,A05045236,,,,Dirección General de Protección a la Infancia y las Familias
+Pensiones ,PENSIONES ,"Gestión de expedientes de Pensiones No Contributivas (por Jubilación o Invalidez), ",Bienestar Social,A05046454,,,,Dirección General de Mayores y Participación Activa
+Registro del Menor,REGISTRO_DEL_MENOR,"Gestión de expedientes de menores (tutela, extutelados, desamparo, acogimiento, aplicación de medidas, guarda voluntaria, seguimiento del menor)",Bienestar Social,A05045236,,,,Dirección General de Protección a la Infancia y las Familias
+Subvenciones,SUBVENCIONES,"Gestión de subvenciones (Plan Concertado, LGTBI, conciliación, …)",Bienestar Social,A05045232,,,"Ley de Subvenciones, la de Canarias, la  de cada subvención dictada  por cada centro directivo ","Consejería de Bienestar Social, Igualdad, Juventud, Infancia y Familias"
+Registro de SI,REGISTRO_SI,Registro SI,Bienestar Social,A05045233,,,,"Secretaría General Técnica de Bienestar Social, Igualdad, Juventud, Infancia y Familias"
+Gestor de incidencias,GESTOR_INCIDENCIAS,Sistema de gestión de incidencias  (RedMine) del SMNT,Bienestar Social,,,,,
+GPorta,GPORTA,Sistema de circuito de firma para procedimientos y comunicaciones internas.,,,,,,
+Registro perros guía,REGISTRO_PERROS_GUIA,Gestión de expedientes de perros guía,,,,,,TRANSVERSAL
+IMV,IMV,Gestión de Ingreso Mínimo Vital,,,,,,
+Subvención ITC,SUBVENCION_ITC,Subvención ITC,,,,,,
+Fondos Europeos,FONDOS_EUROPEOS,Gestión de Fondos Europeos. Plataforma de Contratación,,,,,,
+Personal,PERSONAL,Llamamiento de personal laboral para puestos delegados en la Consejería,,,,,,

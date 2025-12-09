@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from django.core.management.base import BaseCommand
-from django.core.management import CommandError
 
 from django.conf import settings
 

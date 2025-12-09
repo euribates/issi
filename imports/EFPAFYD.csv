@@ -1,0 +1,9 @@
+Nombre del sistema,Código identificativo interno (CI),Finalidad,Materia competencial ,DIR3 (centro directivo),UID de la persona responsable tecnológica,UID de la persona responsable funcional,Normativa (Juriscan),Comantarios
+Gestión de centros e infraestructuras ,GESTION_CENTROS,Gestión de centros e infrastestructuras educativas,Educación,A05047943,fcabherl ,"jrosperf, esosperm",,A05047944
+Gestión académica ,GESTION_ACADEMICA,Planificación educativa y gestiones académicas,Educación,A05047934,jtardel ,"gojezam, mperbej, vferlop",,"A05047940,  A05003415"
+"Servicios complementarios, becas y ayudas",AYUDAS_EDUCACION,Gestión de servicios complementarios y ayudas no universitarias,Educación,A05047943,fcabherl,"Joquimel, vsanari ",,
+Gestión administrativa y académica en los centros educativos,GESTION_ADMINISTRATIVA,Pincel Ekade,Educación,A05047934,jtardel,"gojezam, vferlop",,A05003415
+Gestión de personal docente,GESTION_PERSONAL_DOCENTE,Gestión del personal docente de centros públicos o sostenidos con fondos públicos,Educación,A05003414,jgommar ,"mrodbraz, mpeibos",,"A05047934,  A05047938"
+Gestión de personal,GESTION_PERSONAL_NO_DOCENTE,Gestión del personal no docente,Educación,A05047938,jgommar,mpeibos ,,
+Arquitectura de aplicaciones y sistemas de soporte,ARQUITECTURA_INF_EDUCACION,Aplicaciones transversales de la arquitectura informática de la consejería,Educación,A05047938,cgarherx,gojezam,,
+Arquitectura y explotación de datos,ANALITICA_EDUCACION,Explotación y estructura de datos,Educación,A05047934,agilarm,rregrod ,,
