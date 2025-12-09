@@ -97,6 +97,10 @@ class Command(BaseCommand):
                 num_errores = num_errores + len(errors)
                 if errors:
                     total_errores += 1
+            if num_errores == 0:
+                print(green('[OK]'))
+            else:
+                print(red(f'[{num_errores} errores]'))
         if verbose:
             if total_errores == 0:
                 print('No se ha detectado ningún error')

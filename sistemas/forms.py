@@ -5,11 +5,25 @@ from django.forms import widgets
 
 from . import models
 
+class SimpleForm(forms.Form):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            widget = visible.field.widget
+            match widget.__class__:
+                case widgets.RadioSelect:
+                    widget.attrs['class'] = 'form-check-input'
+                case widgets.CheckboxInput:
+                    widget.attrs['class'] = 'form-check-input'
+                case _:
+                    widget.attrs['class'] = 'form-control'
+
 
 # ------------------------------------------[ Formularios genéricos ]--
 
 
-class EstaSeguroForm(forms.Form):
+class EstaSeguroForm(SimpleForm):
     """Formulario para autorizar operaciones críticas.
 
     Solo será válido si se ha marcado el checkbox.
@@ -18,6 +32,12 @@ class EstaSeguroForm(forms.Form):
         required=True,
         initial=False,
         label="Confirme la operación",
+        )
+
+
+class CVSFileForm(SimpleForm):
+    archivo =forms.FileField(
+        label='Archivo CVS',
         )
 
 

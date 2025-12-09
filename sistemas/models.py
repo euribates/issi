@@ -408,6 +408,16 @@ class Sistema(models.Model):
         return perfil
 
 
+def importar_sistemas_desde_fichero(stream):
+    import csv
+    from . import parsers
+    reader = csv.reader(stream, delimiter=',', quotechar='"')
+    _first_line = next(reader)      # Ignoramos la primera fila
+    for n_linea, tupla in enumerate(reader, start=1):
+        errors, payload = parsers.parse_row(tupla, n_linea=n_linea)
+        yield errors, payload
+
+
 class Activo(models.Model):
 
     NIVELES_DATOS_PERSONALES = [

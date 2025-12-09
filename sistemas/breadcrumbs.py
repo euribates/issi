@@ -181,3 +181,10 @@ def exportar_sistemas() -> str:
         'Exportar',
         links.a_exportar_sistemas(),
         )
+
+
+def importar_sistemas() -> str:
+    return sistemas().step(
+        'Importar',
+        links.a_importar_sistemas(),
+        )

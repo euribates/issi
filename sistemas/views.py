@@ -1,27 +1,29 @@
 #!/usr/bin/env python3
 
-import json
-from html import escape
 from functools import cache
+from html import escape
+import io
+import json
 
 from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
 
-from comun.funcop import agrupa
-from comun.bus import Bus
 from . import breadcrumbs as bc
+from . import diagnosis
 from . import forms
 from . import links
 from . import models
 from . import serializers
-from . import diagnosis
+from comun.bus import Bus
 from comun.commands import Command
+from comun.funcop import agrupa
 
-from sistemas import filtersets
 from directorio.models import Organismo
+from sistemas import filtersets
 from sistemas.models import Ente
+from sistemas.models import importar_sistemas_desde_fichero
 from sistemas.models import Sistema
 from sistemas.models import Usuario
 
@@ -671,9 +673,32 @@ def patch_usuarios(request):
         f'<div id="contador">{contador}<div>'
         )
 
+
 def importar_sistemas(request, *args, **kwargs):
-    from django.http import HttpResponse
-    return HttpResponse("importar_sistemas no implementado", content_type="text/plain")
+    if request.method == 'POST':
+        form = forms.CVSFileForm(request.POST, request.FILES)
+        if form.is_valid():
+            archivo = request.FILES["archivo"]
+            stream = io.StringIO(archivo.read().decode('utf-8'))
+            results = list(importar_sistemas_desde_fichero(stream))
+            return render(request, 'sistemas/importar-sistemas-control.html', {
+                'titulo': 'Importar sistemas',
+                'commands': cmd_sistemas(),
+                'tab': 'sistemas',
+                'breadcrumbs': bc.importar_sistemas(),
+                'results': results,
+                })
+
+    else:
+        form = forms.CVSFileForm()
+    return render(request, 'sistemas/importar-sistemas.html', {
+        'titulo': 'Importar sistemas',
+        'commands': cmd_sistemas(),
+        'tab': 'sistemas',
+        'breadcrumbs': bc.importar_sistemas(),
+        'form': form,
+        })
+
 
 
 def exportar_sistemas(request):

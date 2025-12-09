@@ -1,0 +1,44 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+
+{% block content %}
+
+<div class="card m-3">
+
+  <div class="card-header">
+    Importar sistemas de información en bloque
+  </div>
+
+  <div class="card-body">
+
+    <table class="table">
+      <thead>
+        <th>Sistema</th>
+        <th>Errores</th>
+      </thead>
+      <tbody>
+      {% for errores, sistema in results %}<tr>
+        <td>
+            <b class="sistema-codigo{% if errores %} color-red{% endif %}">{{ sistema.codigo }}</b><br>
+            <small class="sistema-nombre"> {{ sistema.nombre_sistema }}</small>
+        </td>  
+        <td>
+        {% if errores %}
+          <ul class="error-list">
+          {% for error in errores %}
+            <li>{{ error }} </li>
+          {% endfor %}
+          </ul>
+        {% else %}
+          OK
+        {% endif %}  
+        </td>
+      </tr>{% endfor %}    
+      </tbody>
+
+    </table>
+
+  </div>
+</div>  
+{% endblock content %}
+

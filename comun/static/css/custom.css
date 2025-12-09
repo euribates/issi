@@ -257,3 +257,7 @@ a.email:hover {
   font-weight: bolder;
   font-size: 110%;
 }
+
+.color-red {
+  color: #aa4400;
+}
