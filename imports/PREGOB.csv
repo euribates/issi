@@ -1,6 +1,4 @@
- Nombre,Código identificativo interno (CI),Finalidad,Materia competencial ,DIR3 (centro directivo),"UID de la persona responsable tecnológica
-rrosver +",UID de la persona responsable funcional,"Normativa 
-(Juriscan)",Comentarios,uuid
+Nombre,"Código identificativo interno (CI)",Finalidad,"Materia competencial" ,"DIR3 (centro directivo)","Responsable tecnológico", "Responsable funcional","Normativa (Juriscan)",Comentarios,uuid
 BBDD de legislación y jurisprudencia relativa a la APCAC,JURISCAN,BBDD de legislación y jurisprudencia relativa a la APCAC,Transformación digital,,jsersanp,PG-SG,,,2b4c67ad-cf08-11f0-bdf7-38d5470ea667
 Sistema de registro de entrada y salida de documentos,HIPERREG,Sistema de registro de entrada y salidad de documentos de la APCAC,Transformación digital,,"pcanper
 rmedsos","DGMCSP:

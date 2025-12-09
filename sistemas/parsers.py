@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 # pylint: disable=no-member
 
-from html import escape
 import re
+import json
 from uuid import UUID
 
 from comun.funcop import static
-from directorio.models import Organismo
-from sistemas.models import Tema
-from sistemas.models import Sistema
 from sistemas.error import errors
+from caches.temas import temas
+from caches.dir3 import reverse_dir3
 
 
 DEFAULT_DOMAIN = 'gobiernodecanarias.org'
@@ -41,33 +40,36 @@ def parse_proposito(texto, n_linea) -> str:
     return ''
 
 
-def parse_descripcion(text, n_linea) -> str:
+def parse_descripcion(texto, n_linea) -> str:
     sublines = texto.splitlines()
     if len(sublines) > 1:
         return '\n\n'.join(sublines[1:])
     return ''
 
 
-def parse_dir3(dir3, n_linea=None):
-    dir3 = dir3.strip()
+def parse_dir3(dir3, n_linea=None) -> int|None:
+    if dir3 is None:
+        return None
+    dir3 = str(dir3).strip()
     if not dir3:
         return None
-    organismo = Organismo.load_organismo_using_dir3(dir3)
-    if not organismo:
-        raise errors.EI0007(dir3, n_linea=n_linea)
-    return organismo
+    if dir3 in reverse_dir3:
+        return reverse_dir3[dir3]
+    raise errors.EI0007(dir3, n_linea=n_linea)
 
 
-def parse_materia_competencial(materia: str, n_linea=None) -> Tema|None:
+def parse_materia_competencial(materia: str, n_linea=None) -> str|None:
+    if materia is None:
+        return 'UNK'
     materia = materia.strip()
-    if not materia:
-        return Tema.load_tema('UNK')
-    tema = Tema.load_tema(materia)
-    if not tema:
-        tema = Tema.load_tema_por_nombre(materia)
-        if not tema:
-            raise errors.EI0008(materia, n_linea=n_linea)
-    return tema
+    if materia == '':
+        return 'UNK'
+    if materia in temas:
+        return materia
+    for codigo, descripcion in temas.items():
+        if descripcion == materia:
+            return codigo
+    raise errors.EI0008(materia, n_linea=n_linea)
 
 
 def parse_users(txt: str, n_linea=None) -> set[dict]:
@@ -163,12 +165,12 @@ CHECKS = [
     (5, 'responsables_tecnologicos', parse_users),
     (6, 'responsables_funcionales', parse_users),
     (7, 'juriscan', parse_juriscan),
-    (9, 'comentarios', None),
-    (10, 'uuid_sistema', parse_uuid),
-    (
+    (8, 'comentarios', None),
+    (9, 'uuid_sistema', parse_uuid),
+    ]
+
 
 def parse_row(tupla, n_linea=None):
-    n_cols = len(tupla)
     errors = []
     payload = {}
     for num_col, field_name, parser_function in CHECKS:
@@ -182,24 +184,4 @@ def parse_row(tupla, n_linea=None):
             except ValueError as err:
                 errors.append(str(err))
         payload[field_name] = value
-    
-
-    if uuid_sistema:
-            sistema = Sistema.load_sistema_por_uuid(uuid_sistema)
-            if sistema:
-                id_sistema = sistema.pk
-    payload = {
-        'id_sistema': id_sistema,
-        'uuid': uuid_sistema,
-        'nombre_sistema': nombre_sistema,
-        'organismo': organismo,
-        'codigo': codigo,
-        'proposito': proposito,
-        'descripcion': descripcion,
-        'observaciones': comentarios,
-        'tema': tema,
-        'juriscan': juriscan,
-        'responsables_tecnologicos': responsables_tecnologicos,
-        'responsables_funcionales': responsables_funcionales,
-        }
     return errors, payload

@@ -6,6 +6,7 @@ from uuid import UUID
 from sistemas import parsers
 from sistemas import models
 
+
 def test_parse_users_single_username():
     expected = [{
         'name': None,
@@ -96,18 +97,62 @@ def test_parse_uuid_bad():
         parsers.parse_uuid('María tenía un corderito')
 
 
-@pytest.mark.django_db
-def test_parse_materia_compentecial():
-    expected = models.Tema.load_tema('HAC')
-    assert expected is not None
+def test_parse_materia_competencial_codigo():
+    expected = 'HAC'
     assert parsers.parse_materia_competencial('HAC') == expected
 
 
+def test_parse_materia_competencial_descripcion():
+    expected = 'HAC'
+    assert parsers.parse_materia_competencial('Hacienda') == expected
 
-@pytest.mark.django_db
-def test_parse_materia_compentecial_failure():
+
+def test_parse_materia_competencial_empty():
+    expected = 'UNK'
+    assert parsers.parse_materia_competencial('') == expected
+    assert parsers.parse_materia_competencial(None) == expected
+
+
+def test_parse_materia_competencial_failure():
     with pytest.raises(ValueError):
         parsers.parse_materia_competencial('¯\_(ツ)_/¯')
+
+
+def test_parse_row():
+    row = (
+        "BBDD de legislación y jurisprudencia relativa a la APCAC",  # Nombre
+        "JURISCAN",                                                  # Código
+        "BBDD de legislación y jurisprudencia relativa a la APCAC",  # Finalidad
+        "Transformación digital",                                    # Materia compotencial
+        None,                                                        # DIR3
+        'jsersanp',                                                  # Resp. tecnológico
+        '',                                                          # Resp. funcional
+        None,                                                        # Normativa
+        None,                                                        # Comentarios
+        "2b4c67ad-cf08-11f0-bdf7-38d5470ea667",                      # uuid
+        )
+    expected = {
+        'nombre_sistema': "BBDD de legislación y jurisprudencia relativa a la APCAC",
+        'codigo': 'JURISCAN',
+        'proposito': "BBDD de legislación y jurisprudencia relativa a la APCAC",
+        'descripcion': '',
+        'tema': 'TRD',
+        'organismo': None,
+        'responsables_tecnologicos': [{
+            'name': None,
+            'login': 'jsersanp',
+            'email': 'jsersanp@gobiernodecanarias.org',
+            }],
+        'responsables_funcionales': [],
+        'juriscan': [],
+        'comentarios': None,
+        'uuid_sistema': UUID('2b4c67ad-cf08-11f0-bdf7-38d5470ea667'),
+        }
+    errors, outcome = parsers.parse_row(row)
+    assert errors == []
+    assert outcome == expected
+
+
 
 
 if __name__ == '__main__':
