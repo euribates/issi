@@ -644,7 +644,7 @@
     "model": "sistemas.sistema",
     "pk": 1,
     "fields": {
-        "uuid": "c704670c-cf07-11f0-88aa-38d5470ea667",
+        "uuid_sistema": "c704670c-cf07-11f0-88aa-38d5470ea667",
         "nombre_sistema": "Inventario de Sistemas de Información",
         "organismo": 42093,
         "codigo": "ISSI",
@@ -669,7 +669,7 @@
     "model": "sistemas.sistema",
     "pk": 2,
     "fields": {
-        "uuid": "1ef52ee1-cf08-11f0-8b01-38d5470ea667",
+        "uuid_sistema": "1ef52ee1-cf08-11f0-8b01-38d5470ea667",
         "nombre_sistema": "Registro General de Empresas, Actividades y Establecimientos Turísticos",
         "organismo": 42144,
         "codigo": "TURIDATA",
@@ -694,7 +694,7 @@
     "model": "sistemas.sistema",
     "pk": 3,
     "fields": {
-        "uuid": "2b4c67ad-cf08-11f0-bdf7-38d5470ea667",
+        "uuid_sistema": "2b4c67ad-cf08-11f0-bdf7-38d5470ea667",
         "nombre_sistema": "BBDD de legislación y jurisprudencia relativa a la APCAC",
         "organismo": null,
         "codigo": "JURISCAN",
@@ -719,7 +719,7 @@
     "model": "sistemas.sistema",
     "pk": 4,
     "fields": {
-        "uuid": "18b07fb7-cf09-11f0-ab71-38d5470ea667",
+        "uuid_sistema": "18b07fb7-cf09-11f0-ab71-38d5470ea667",
         "nombre_sistema": "Sistema de información de recursos humanos",
         "organismo": 41545,
         "codigo": "SIRHUS",
@@ -744,7 +744,7 @@
     "model": "sistemas.sistema",
     "pk": 5,
     "fields": {
-        "uuid": "18a72010-cf09-11f0-a413-38d5470ea667",
+        "uuid_sistema": "18a72010-cf09-11f0-a413-38d5470ea667",
         "nombre_sistema": "Gestor de Expedientes Corporativo",
         "organismo": 42093,
         "codigo": "PLATEA",
@@ -769,7 +769,7 @@
     "model": "sistemas.sistema",
     "pk": 6,
     "fields": {
-        "uuid": "18acd5e3-cf09-11f0-b6ea-38d5470ea667",
+        "uuid_sistema": "18acd5e3-cf09-11f0-b6ea-38d5470ea667",
         "nombre_sistema": "Sirvete",
         "organismo": 42093,
         "codigo": "SIRVETE",
@@ -794,7 +794,7 @@
     "model": "sistemas.sistema",
     "pk": 7,
     "fields": {
-        "uuid": "18a83c79-cf09-11f0-be8f-38d5470ea667",
+        "uuid_sistema": "18a83c79-cf09-11f0-be8f-38d5470ea667",
         "nombre_sistema": "Platino",
         "organismo": 42093,
         "codigo": "PLATINO",
@@ -819,7 +819,7 @@
     "model": "sistemas.sistema",
     "pk": 8,
     "fields": {
-        "uuid": "18aba9c2-cf09-11f0-99e5-38d5470ea667",
+        "uuid_sistema": "18aba9c2-cf09-11f0-99e5-38d5470ea667",
         "nombre_sistema": "SEFLOGIC",
         "organismo": 42088,
         "codigo": "SEFLOGIC",
@@ -844,7 +844,7 @@
     "model": "sistemas.sistema",
     "pk": 9,
     "fields": {
-        "uuid": "18af4805-cf09-11f0-9198-38d5470ea667",
+        "uuid_sistema": "18af4805-cf09-11f0-9198-38d5470ea667",
         "nombre_sistema": "Sistema de Información de Actuaciones Administrativas de la Administración Pública de la Comunidad Autónoma de Canarias",
         "organismo": 42093,
         "codigo": "SICAC",
@@ -869,7 +869,7 @@
     "model": "sistemas.sistema",
     "pk": 10,
     "fields": {
-        "uuid": "18aa7fc7-cf09-11f0-ab4e-38d5470ea667",
+        "uuid_sistema": "18aa7fc7-cf09-11f0-ab4e-38d5470ea667",
         "nombre_sistema": "Registro de entrada  y salida",
         "organismo": 42119,
         "codigo": "HIPERREG",
@@ -894,7 +894,7 @@
     "model": "sistemas.sistema",
     "pk": 11,
     "fields": {
-        "uuid": "18adfb3f-cf09-11f0-b191-38d5470ea667",
+        "uuid_sistema": "18adfb3f-cf09-11f0-b191-38d5470ea667",
         "nombre_sistema": "Sistema de Dirección por Objetivos",
         "organismo": 42119,
         "codigo": "TRISKELL",
@@ -919,7 +919,7 @@
     "model": "sistemas.sistema",
     "pk": 12,
     "fields": {
-        "uuid": "8a5edb70-cf0c-11f0-895f-38d5470ea667",
+        "uuid_sistema": "8a5edb70-cf0c-11f0-895f-38d5470ea667",
         "nombre_sistema": "Directorio de Unidades Administrativas y Oficinas de Registro y Atención a la Ciudadanía",
         "organismo": 42119,
         "codigo": "DIRCAC",
@@ -944,7 +944,7 @@
     "model": "sistemas.sistema",
     "pk": 13,
     "fields": {
-        "uuid": "18b1b0e4-cf09-11f0-b781-38d5470ea667",
+        "uuid_sistema": "18b1b0e4-cf09-11f0-b781-38d5470ea667",
         "nombre_sistema": "Sistema de tramitación electrónica de procedimientos de Ganadería",
         "organismo": 39073,
         "codigo": "SIRBA",
@@ -969,7 +969,7 @@
     "model": "sistemas.sistema",
     "pk": 14,
     "fields": {
-        "uuid": "18a9417b-cf09-11f0-97ca-38d5470ea667",
+        "uuid_sistema": "18a9417b-cf09-11f0-97ca-38d5470ea667",
         "nombre_sistema": "Pruebas",
         "organismo": 42093,
         "codigo": "BORRAME",
@@ -994,7 +994,7 @@
     "model": "sistemas.sistema",
     "pk": 15,
     "fields": {
-        "uuid": "18a5c990-cf09-11f0-9553-38d5470ea667",
+        "uuid_sistema": "18a5c990-cf09-11f0-9553-38d5470ea667",
         "nombre_sistema": "Gestión de expedientes de Dependencia",
         "organismo": 42168,
         "codigo": "SIDECAN",
@@ -1019,7 +1019,7 @@
     "model": "sistemas.sistema",
     "pk": 16,
     "fields": {
-        "uuid": "f07d154d-e601-4f2f-90e5-8f3599d16da8",
+        "uuid_sistema": "f07d154d-e601-4f2f-90e5-8f3599d16da8",
         "nombre_sistema": "Renta Canaria Ciudadana",
         "organismo": 42167,
         "codigo": "RCC",
@@ -1044,7 +1044,7 @@
     "model": "sistemas.sistema",
     "pk": 17,
     "fields": {
-        "uuid": "17aefe7c-f6b3-4f2b-b73a-f5047525704a",
+        "uuid_sistema": "17aefe7c-f6b3-4f2b-b73a-f5047525704a",
         "nombre_sistema": "Adopciones",
         "organismo": 42169,
         "codigo": "ADOPTA",
@@ -1069,7 +1069,7 @@
     "model": "sistemas.sistema",
     "pk": 18,
     "fields": {
-        "uuid": "4c5456c0-e2f8-4ae4-a24f-542b93ad3ccb",
+        "uuid_sistema": "4c5456c0-e2f8-4ae4-a24f-542b93ad3ccb",
         "nombre_sistema": "Ingreso Mínimo Vital",
         "organismo": null,
         "codigo": "IMV",
@@ -1094,7 +1094,7 @@
     "model": "sistemas.sistema",
     "pk": 19,
     "fields": {
-        "uuid": "35ffe319-a950-4a1f-be0f-8a8aec306555",
+        "uuid_sistema": "35ffe319-a950-4a1f-be0f-8a8aec306555",
         "nombre_sistema": "Registro perros guía",
         "organismo": null,
         "codigo": "RPG",
@@ -1119,7 +1119,7 @@
     "model": "sistemas.sistema",
     "pk": 20,
     "fields": {
-        "uuid": "5d93fbb4-18a1-4957-adbb-bc924db66f6a",
+        "uuid_sistema": "5d93fbb4-18a1-4957-adbb-bc924db66f6a",
         "nombre_sistema": "Justicia Juvenil",
         "organismo": 42169,
         "codigo": "JUSTICIAJUVENIL",
@@ -1144,7 +1144,7 @@
     "model": "sistemas.sistema",
     "pk": 21,
     "fields": {
-        "uuid": "52c98152-f54e-41f2-8d80-4d1923f7f577",
+        "uuid_sistema": "52c98152-f54e-41f2-8d80-4d1923f7f577",
         "nombre_sistema": "Sigestein",
         "organismo": 41854,
         "codigo": "SIGESTEIN",
@@ -1169,7 +1169,7 @@
     "model": "sistemas.sistema",
     "pk": 22,
     "fields": {
-        "uuid": "61a978c6-58cb-45e3-9657-a5e7977d0a82",
+        "uuid_sistema": "61a978c6-58cb-45e3-9657-a5e7977d0a82",
         "nombre_sistema": "Programa de gestión de cursos",
         "organismo": 6564,
         "codigo": "PGC",
@@ -1194,7 +1194,7 @@
     "model": "sistemas.sistema",
     "pk": 23,
     "fields": {
-        "uuid": "d9fded6d-cd3f-4306-885f-b96f28336c65",
+        "uuid_sistema": "d9fded6d-cd3f-4306-885f-b96f28336c65",
         "nombre_sistema": "SISTEMA DE FICHAJES ESSSCAN",
         "organismo": 6564,
         "codigo": "TIMEVIEW",
@@ -1219,7 +1219,7 @@
     "model": "sistemas.sistema",
     "pk": 24,
     "fields": {
-        "uuid": "1483d3ec-b8bd-43fb-b482-a66e19f4c21e",
+        "uuid_sistema": "1483d3ec-b8bd-43fb-b482-a66e19f4c21e",
         "nombre_sistema": "Gestión de personal docente",
         "organismo": 42125,
         "codigo": "GPD",
@@ -1244,7 +1244,7 @@
     "model": "sistemas.sistema",
     "pk": 25,
     "fields": {
-        "uuid": "2b77c42f-6c59-405b-bd89-dd122b2219a0",
+        "uuid_sistema": "2b77c42f-6c59-405b-bd89-dd122b2219a0",
         "nombre_sistema": "Gestión de personal no docente",
         "organismo": 42135,
         "codigo": "GPND",
@@ -1269,7 +1269,7 @@
     "model": "sistemas.sistema",
     "pk": 26,
     "fields": {
-        "uuid": "fdc08ab4-5b82-4e45-b0d3-120c3a843344",
+        "uuid_sistema": "fdc08ab4-5b82-4e45-b0d3-120c3a843344",
         "nombre_sistema": "Gestión académica",
         "organismo": 42126,
         "codigo": "GESTACAD",
@@ -1294,7 +1294,7 @@
     "model": "sistemas.sistema",
     "pk": 27,
     "fields": {
-        "uuid": "4c022016-ba96-491f-be6e-01f44aa19409",
+        "uuid_sistema": "4c022016-ba96-491f-be6e-01f44aa19409",
         "nombre_sistema": "Registro de comerciantes y comercios",
         "organismo": 42110,
         "codigo": "REGCOMERCIA",
@@ -1319,7 +1319,7 @@
     "model": "sistemas.sistema",
     "pk": 28,
     "fields": {
-        "uuid": "bf5d01a7-a93c-49a8-b1b6-26099c486f5b",
+        "uuid_sistema": "bf5d01a7-a93c-49a8-b1b6-26099c486f5b",
         "nombre_sistema": "Gestión y control de denuncias y reclamaciones",
         "organismo": 42110,
         "codigo": "SIGLO",
@@ -1344,7 +1344,7 @@
     "model": "sistemas.sistema",
     "pk": 29,
     "fields": {
-        "uuid": "ac8f614b-1188-4798-ba7e-5e36046bfd6c",
+        "uuid_sistema": "ac8f614b-1188-4798-ba7e-5e36046bfd6c",
         "nombre_sistema": "Sistemas de Atención al Usuario Centralizado en el ámbito sanitario",
         "organismo": 6583,
         "codigo": "SAUCE",
@@ -1369,7 +1369,7 @@
     "model": "sistemas.sistema",
     "pk": 30,
     "fields": {
-        "uuid": "ea669766-ea05-453b-bce1-177e1ad5460d",
+        "uuid_sistema": "ea669766-ea05-453b-bce1-177e1ad5460d",
         "nombre_sistema": "Registro de Manifestaciones Anticipadas de Voluntad",
         "organismo": 6583,
         "codigo": "REMAV",
@@ -1394,7 +1394,7 @@
     "model": "sistemas.sistema",
     "pk": 31,
     "fields": {
-        "uuid": "215a2c7c-182a-4ae7-83e8-e2a32cc1c598",
+        "uuid_sistema": "215a2c7c-182a-4ae7-83e8-e2a32cc1c598",
         "nombre_sistema": "Visualización por parte de los Profesionales Sanitarios de MAV en el Registro Autonómico (ReMav) y en el Registro Nacional de Instrucciones Previas (RNIP)",
         "organismo": 6583,
         "codigo": "VIPROF",
@@ -1419,7 +1419,7 @@
     "model": "sistemas.sistema",
     "pk": 32,
     "fields": {
-        "uuid": "7a9c1392-a298-4a11-9ffd-9d16260f359a",
+        "uuid_sistema": "7a9c1392-a298-4a11-9ffd-9d16260f359a",
         "nombre_sistema": "Visualización de la Manifestación Anticipada de Voluntad a través de medios telemáticos",
         "organismo": 6583,
         "codigo": "VIMAV",
@@ -1444,7 +1444,7 @@
     "model": "sistemas.sistema",
     "pk": 33,
     "fields": {
-        "uuid": "442fa3ab-ef74-4bd2-8b94-af9093c106c0",
+        "uuid_sistema": "442fa3ab-ef74-4bd2-8b94-af9093c106c0",
         "nombre_sistema": "Repositorio y Archivos Multimedia",
         "organismo": 6583,
         "codigo": "RETAMA",
@@ -1469,7 +1469,7 @@
     "model": "sistemas.sistema",
     "pk": 34,
     "fields": {
-        "uuid": "5f1f53ea-4071-45e0-b153-96479cb7f0d6",
+        "uuid_sistema": "5f1f53ea-4071-45e0-b153-96479cb7f0d6",
         "nombre_sistema": "Subsistema de RETAMA de  Iniciativas Parlamentarias",
         "organismo": 6583,
         "codigo": "RETAMA_IP",
@@ -1494,7 +1494,7 @@
     "model": "sistemas.sistema",
     "pk": 35,
     "fields": {
-        "uuid": "ebf07680-ef34-4a88-88fe-87bf938e329d",
+        "uuid_sistema": "ebf07680-ef34-4a88-88fe-87bf938e329d",
         "nombre_sistema": "Recursos de Estudios",
         "organismo": 6583,
         "codigo": "EST_RECU",
@@ -1519,7 +1519,7 @@
     "model": "sistemas.sistema",
     "pk": 36,
     "fields": {
-        "uuid": "b2196593-1ac1-4e3c-b6da-df218230a876",
+        "uuid_sistema": "b2196593-1ac1-4e3c-b6da-df218230a876",
         "nombre_sistema": "Registro de Plantaciones de Viñedo",
         "organismo": 39060,
         "codigo": "REGVIN",
@@ -1544,7 +1544,7 @@
     "model": "sistemas.sistema",
     "pk": 37,
     "fields": {
-        "uuid": "12c75d10-c8cc-4630-9814-a93fdfb0a4f8",
+        "uuid_sistema": "12c75d10-c8cc-4630-9814-a93fdfb0a4f8",
         "nombre_sistema": "Registro de Sociedades Agrarias de Transformación de Canarias",
         "organismo": 39053,
         "codigo": "REGSAT",
@@ -1569,7 +1569,7 @@
     "model": "sistemas.sistema",
     "pk": 38,
     "fields": {
-        "uuid": "9f1b9417-5ef8-4e30-b255-c98f8b0c9911",
+        "uuid_sistema": "9f1b9417-5ef8-4e30-b255-c98f8b0c9911",
         "nombre_sistema": "Registro de Explotaciones Agrarias Prioritarias de Canarias",
         "organismo": 39060,
         "codigo": "REGEAP",
@@ -1594,7 +1594,7 @@
     "model": "sistemas.sistema",
     "pk": 39,
     "fields": {
-        "uuid": "e3494df6-a0df-4b49-b72b-14c4fa1f17be",
+        "uuid_sistema": "e3494df6-a0df-4b49-b72b-14c4fa1f17be",
         "nombre_sistema": "Sistema de gestión del PEPAC",
         "organismo": 39053,
         "codigo": "TITAN",
@@ -1619,7 +1619,7 @@
     "model": "sistemas.sistema",
     "pk": 40,
     "fields": {
-        "uuid": "9f421da9-fa51-461d-ac5a-a1c49ac88e71",
+        "uuid_sistema": "9f421da9-fa51-461d-ac5a-a1c49ac88e71",
         "nombre_sistema": "Sistema de Gestión de las ayudas del Programa de opciones específicas por la lejanía y la insularidad (POSEI).",
         "organismo": 39053,
         "codigo": "SAGA",
@@ -1644,7 +1644,7 @@
     "model": "sistemas.sistema",
     "pk": 41,
     "fields": {
-        "uuid": "a777ded4-0538-4121-88bb-adfc987ce259",
+        "uuid_sistema": "a777ded4-0538-4121-88bb-adfc987ce259",
         "nombre_sistema": "Sistema de gestión de las ayudas del POSEICAN",
         "organismo": 39153,
         "codigo": "POSEICAN",
@@ -1669,7 +1669,7 @@
     "model": "sistemas.sistema",
     "pk": 42,
     "fields": {
-        "uuid": "c145ade6-0199-4860-994f-74f8ce75ff37",
+        "uuid_sistema": "c145ade6-0199-4860-994f-74f8ce75ff37",
         "nombre_sistema": "Gestión de parcelas agrícolas",
         "organismo": 39060,
         "codigo": "SIGPAC",
@@ -1694,7 +1694,7 @@
     "model": "sistemas.sistema",
     "pk": 43,
     "fields": {
-        "uuid": "3c0ae5d6-be42-4f1b-936e-c491c73bbafe",
+        "uuid_sistema": "3c0ae5d6-be42-4f1b-936e-c491c73bbafe",
         "nombre_sistema": "Sistema de gestión del registro de animales",
         "organismo": 39073,
         "codigo": "BADACANA",
@@ -1719,7 +1719,7 @@
     "model": "sistemas.sistema",
     "pk": 44,
     "fields": {
-        "uuid": "32d1ddaa-7798-44e4-b1af-66e3b7f4b55c",
+        "uuid_sistema": "32d1ddaa-7798-44e4-b1af-66e3b7f4b55c",
         "nombre_sistema": "Centros de Día",
         "organismo": 42170,
         "codigo": "CENTROS_DIA",
@@ -1744,7 +1744,7 @@
     "model": "sistemas.sistema",
     "pk": 45,
     "fields": {
-        "uuid": "43c13957-cb8a-484f-803a-a258446a2010",
+        "uuid_sistema": "43c13957-cb8a-484f-803a-a258446a2010",
         "nombre_sistema": "Centros de menores",
         "organismo": 42169,
         "codigo": "CENTROS_MENORES",
@@ -1769,7 +1769,7 @@
     "model": "sistemas.sistema",
     "pk": 46,
     "fields": {
-        "uuid": "5e7234ee-4ed0-4269-8762-b2273bf4a6ec",
+        "uuid_sistema": "5e7234ee-4ed0-4269-8762-b2273bf4a6ec",
         "nombre_sistema": "Familias Numerosas",
         "organismo": 42169,
         "codigo": "FAMNUM",
@@ -1794,7 +1794,7 @@
     "model": "sistemas.sistema",
     "pk": 47,
     "fields": {
-        "uuid": "227ef728-bb0d-4c70-a87e-5009b05131a5",
+        "uuid_sistema": "227ef728-bb0d-4c70-a87e-5009b05131a5",
         "nombre_sistema": "GPorta",
         "organismo": null,
         "codigo": "GPorta",
@@ -1819,7 +1819,7 @@
     "model": "sistemas.sistema",
     "pk": 48,
     "fields": {
-        "uuid": "21ab2f7e-803e-47e9-bf02-6570c6f41db5",
+        "uuid_sistema": "21ab2f7e-803e-47e9-bf02-6570c6f41db5",
         "nombre_sistema": "Discapacidad",
         "organismo": 42171,
         "codigo": "Discapacidad",
@@ -1844,7 +1844,7 @@
     "model": "sistemas.sistema",
     "pk": 49,
     "fields": {
-        "uuid": "6a8516c0-8fa8-4606-969a-e616ac3244ea",
+        "uuid_sistema": "6a8516c0-8fa8-4606-969a-e616ac3244ea",
         "nombre_sistema": "Inmigración",
         "organismo": 42167,
         "codigo": "INMIGRACION",
@@ -1869,7 +1869,7 @@
     "model": "sistemas.sistema",
     "pk": 50,
     "fields": {
-        "uuid": "0aa531f4-a65b-4492-9aec-d05c6b12a1f7",
+        "uuid_sistema": "0aa531f4-a65b-4492-9aec-d05c6b12a1f7",
         "nombre_sistema": "Entidades",
         "organismo": null,
         "codigo": "ENTIDADES",
@@ -1894,7 +1894,7 @@
     "model": "sistemas.sistema",
     "pk": 51,
     "fields": {
-        "uuid": "b549a5cb-0d24-4085-bca7-b10f8c585ab0",
+        "uuid_sistema": "b549a5cb-0d24-4085-bca7-b10f8c585ab0",
         "nombre_sistema": "Escuelas Infantiles",
         "organismo": 42169,
         "codigo": "ESC_INFANTIL",
@@ -1919,7 +1919,7 @@
     "model": "sistemas.sistema",
     "pk": 52,
     "fields": {
-        "uuid": "40421b48-ec74-4068-8ecf-b67f7283a3de",
+        "uuid_sistema": "40421b48-ec74-4068-8ecf-b67f7283a3de",
         "nombre_sistema": "Expedientes de Asesoría Jurídica",
         "organismo": 42172,
         "codigo": "EXP_JUR",
@@ -1944,7 +1944,7 @@
     "model": "sistemas.sistema",
     "pk": 53,
     "fields": {
-        "uuid": "d8b5dfda-755d-491c-9c00-fa5d73895948",
+        "uuid_sistema": "d8b5dfda-755d-491c-9c00-fa5d73895948",
         "nombre_sistema": "Intercambio de Ficheros Ministerios",
         "organismo": 38691,
         "codigo": "INTEROP_FM",
@@ -1969,7 +1969,7 @@
     "model": "sistemas.sistema",
     "pk": 54,
     "fields": {
-        "uuid": "251203de-397a-44ea-9a1a-4f5cd5c57cdb",
+        "uuid_sistema": "251203de-397a-44ea-9a1a-4f5cd5c57cdb",
         "nombre_sistema": "Subvención ITC",
         "organismo": null,
         "codigo": "SUB_ITC",
@@ -1994,7 +1994,7 @@
     "model": "sistemas.sistema",
     "pk": 55,
     "fields": {
-        "uuid": "f011cf03-dd14-4506-a529-5a69c1366d02",
+        "uuid_sistema": "f011cf03-dd14-4506-a529-5a69c1366d02",
         "nombre_sistema": "Gestión administrativa y académica en los centros educativos",
         "organismo": 42126,
         "codigo": "PINCEL_EKADE",
@@ -2019,7 +2019,7 @@
     "model": "sistemas.sistema",
     "pk": 56,
     "fields": {
-        "uuid": "123a3d90-a6a6-411c-89eb-30b45458f1c0",
+        "uuid_sistema": "123a3d90-a6a6-411c-89eb-30b45458f1c0",
         "nombre_sistema": "Gestión de centros e infraestructuras",
         "organismo": 42128,
         "codigo": "GESTCEN",
@@ -2044,7 +2044,7 @@
     "model": "sistemas.sistema",
     "pk": 57,
     "fields": {
-        "uuid": "889805b6-4eae-448e-aefc-085b029ff1d7",
+        "uuid_sistema": "889805b6-4eae-448e-aefc-085b029ff1d7",
         "nombre_sistema": "Programa Económico Actividad ESSSCAN",
         "organismo": 6564,
         "codigo": "ESSSCAN_ECO",
@@ -2069,7 +2069,7 @@
     "model": "sistemas.sistema",
     "pk": 58,
     "fields": {
-        "uuid": "11f66c9f-fb9b-4dcd-8908-7fdef108180d",
+        "uuid_sistema": "11f66c9f-fb9b-4dcd-8908-7fdef108180d",
         "nombre_sistema": "Share ESSSCAN",
         "organismo": 6564,
         "codigo": "ESSSCAN_SHARE",
@@ -2094,7 +2094,7 @@
     "model": "sistemas.sistema",
     "pk": 59,
     "fields": {
-        "uuid": "44a2ad30-9073-4eef-b0a8-42b1f597ec37",
+        "uuid_sistema": "44a2ad30-9073-4eef-b0a8-42b1f597ec37",
         "nombre_sistema": "Precio máximo de privada - Servicio de promoción privada",
         "organismo": 37152,
         "codigo": "PMPRIV",
@@ -2119,7 +2119,7 @@
     "model": "sistemas.sistema",
     "pk": 60,
     "fields": {
-        "uuid": "20181c5f-fb56-4a3b-93cc-bdf9fee5d6d4",
+        "uuid_sistema": "20181c5f-fb56-4a3b-93cc-bdf9fee5d6d4",
         "nombre_sistema": "Adquisición de Vivienda Joven",
         "organismo": 37152,
         "codigo": "AVJ",
@@ -2144,7 +2144,7 @@
     "model": "sistemas.sistema",
     "pk": 61,
     "fields": {
-        "uuid": "1878a1da-562a-489c-8b81-f6190ebb57b6",
+        "uuid_sistema": "1878a1da-562a-489c-8b81-f6190ebb57b6",
         "nombre_sistema": "Justiniano",
         "organismo": 37152,
         "codigo": "JUSTINIANO",
@@ -2169,7 +2169,7 @@
     "model": "sistemas.sistema",
     "pk": 62,
     "fields": {
-        "uuid": "c41f49f3-9092-469c-b3ff-8be853504dd4",
+        "uuid_sistema": "c41f49f3-9092-469c-b3ff-8be853504dd4",
         "nombre_sistema": "Registro de Planeamiento de Canarias",
         "organismo": 42138,
         "codigo": "RPC",
@@ -2194,7 +2194,7 @@
     "model": "sistemas.sistema",
     "pk": 63,
     "fields": {
-        "uuid": "efd586a6-9aac-4292-adbd-24f2bd4de8cd",
+        "uuid_sistema": "efd586a6-9aac-4292-adbd-24f2bd4de8cd",
         "nombre_sistema": "Aplicación de Consulta del Archivo de Planeamiento",
         "organismo": 42138,
         "codigo": "ACAP",
@@ -2219,7 +2219,7 @@
     "model": "sistemas.sistema",
     "pk": 64,
     "fields": {
-        "uuid": "6ff70bc7-1d5d-40eb-bbaa-ff363caa79f9",
+        "uuid_sistema": "6ff70bc7-1d5d-40eb-bbaa-ff363caa79f9",
         "nombre_sistema": "Sistema Información Transversal de Áreas",
         "organismo": 42142,
         "codigo": "SITA_TERRITORIO",
@@ -2244,7 +2244,7 @@
     "model": "sistemas.sistema",
     "pk": 65,
     "fields": {
-        "uuid": "9e8ea2e4-7cce-4113-8c7a-5e9817d92818",
+        "uuid_sistema": "9e8ea2e4-7cce-4113-8c7a-5e9817d92818",
         "nombre_sistema": "Proyectos PTCTA",
         "organismo": 42138,
         "codigo": "PROYECTOS_PTCTA",
@@ -2269,7 +2269,7 @@
     "model": "sistemas.sistema",
     "pk": 66,
     "fields": {
-        "uuid": "982d1820-e0e2-4f03-bbb8-225bb1ab7417",
+        "uuid_sistema": "982d1820-e0e2-4f03-bbb8-225bb1ab7417",
         "nombre_sistema": "Catálogo de Aplicaciones, Servidores, Portales, Empresas y  Responsable de la CTEEN",
         "organismo": 42164,
         "codigo": "CASPER",
@@ -2294,7 +2294,7 @@
     "model": "sistemas.sistema",
     "pk": 67,
     "fields": {
-        "uuid": "e02dd18d-a05e-47a4-930f-ef3eee411bef",
+        "uuid_sistema": "e02dd18d-a05e-47a4-930f-ef3eee411bef",
         "nombre_sistema": "Redmine de gestión de proyectos de la consejería",
         "organismo": 42164,
         "codigo": "GESVER",
@@ -2319,7 +2319,7 @@
     "model": "sistemas.sistema",
     "pk": 68,
     "fields": {
-        "uuid": "34fc2ef7-78f9-4a36-ae0c-673aaef70967",
+        "uuid_sistema": "34fc2ef7-78f9-4a36-ae0c-673aaef70967",
         "nombre_sistema": "Gestión de activos de Microinformática",
         "organismo": 42164,
         "codigo": "GAMI",
@@ -2344,7 +2344,7 @@
     "model": "sistemas.sistema",
     "pk": 69,
     "fields": {
-        "uuid": "0fa07cb1-70db-4d6b-a6d6-82cd03fc5aa1",
+        "uuid_sistema": "0fa07cb1-70db-4d6b-a6d6-82cd03fc5aa1",
         "nombre_sistema": "Central de usuarios",
         "organismo": 42164,
         "codigo": "CEUS",
@@ -2369,7 +2369,7 @@
     "model": "sistemas.sistema",
     "pk": 70,
     "fields": {
-        "uuid": "b431def1-6184-4ad6-bc9e-9927b9caaa3e",
+        "uuid_sistema": "b431def1-6184-4ad6-bc9e-9927b9caaa3e",
         "nombre_sistema": "BackOffice de gestión de expedientes de la D.G. Energía (1)",
         "organismo": 42163,
         "codigo": "CANDELA",
@@ -2394,7 +2394,7 @@
     "model": "sistemas.sistema",
     "pk": 71,
     "fields": {
-        "uuid": "6e28f140-c141-4f6b-b08d-c12173094bc8",
+        "uuid_sistema": "6e28f140-c141-4f6b-b08d-c12173094bc8",
         "nombre_sistema": "BackOffice de gestión de expedientes de la D.G. Energía (2)",
         "organismo": 42163,
         "codigo": "SINERGIA",
@@ -2419,7 +2419,7 @@
     "model": "sistemas.sistema",
     "pk": 72,
     "fields": {
-        "uuid": "0962ac86-c276-4725-9b44-d85e609c2fbe",
+        "uuid_sistema": "0962ac86-c276-4725-9b44-d85e609c2fbe",
         "nombre_sistema": "Observatorio de la Energía de Canarias",
         "organismo": 42163,
         "codigo": "OECAN",
@@ -2444,7 +2444,7 @@
     "model": "sistemas.sistema",
     "pk": 73,
     "fields": {
-        "uuid": "ab611ec5-44e4-456c-84d0-f1565c4196bf",
+        "uuid_sistema": "ab611ec5-44e4-456c-84d0-f1565c4196bf",
         "nombre_sistema": "Registro Canario de Infractores de Caza",
         "organismo": 42162,
         "codigo": "RICAZA",
@@ -2469,7 +2469,7 @@
     "model": "sistemas.sistema",
     "pk": 74,
     "fields": {
-        "uuid": "7e69aa8f-5a97-4347-8897-8f88de8a5817",
+        "uuid_sistema": "7e69aa8f-5a97-4347-8897-8f88de8a5817",
         "nombre_sistema": "Red Canaria de Alerta Temprana de Especies Exóticas Invasoras",
         "organismo": 42162,
         "codigo": "REDEXOS",
@@ -2494,7 +2494,7 @@
     "model": "sistemas.sistema",
     "pk": 75,
     "fields": {
-        "uuid": "04668f8f-ceea-4dfa-bec1-629071ff7f3e",
+        "uuid_sistema": "04668f8f-ceea-4dfa-bec1-629071ff7f3e",
         "nombre_sistema": "Boletín Oficial de Canarias",
         "organismo": 42121,
         "codigo": "BOC",
@@ -2519,7 +2519,7 @@
     "model": "sistemas.sistema",
     "pk": 76,
     "fields": {
-        "uuid": "1658f6e4-5676-4453-9233-3106e5d4515a",
+        "uuid_sistema": "1658f6e4-5676-4453-9233-3106e5d4515a",
         "nombre_sistema": "Red de Observadores del Medio Marino en Canarias",
         "organismo": 42162,
         "codigo": "REDPROMAR",
@@ -2544,7 +2544,7 @@
     "model": "sistemas.sistema",
     "pk": 78,
     "fields": {
-        "uuid": "95b9e6cf-72ec-4ac1-9d06-9429e8f297cf",
+        "uuid_sistema": "95b9e6cf-72ec-4ac1-9d06-9429e8f297cf",
         "nombre_sistema": "Sinca",
         "organismo": 42093,
         "codigo": "SINCA",
@@ -2569,7 +2569,7 @@
     "model": "sistemas.sistema",
     "pk": 79,
     "fields": {
-        "uuid": "ec6e56af-b597-4188-97ea-38baddb3b464",
+        "uuid_sistema": "ec6e56af-b597-4188-97ea-38baddb3b464",
         "nombre_sistema": "Control horario",
         "organismo": 41567,
         "codigo": "SICHO",
@@ -2594,7 +2594,7 @@
     "model": "sistemas.sistema",
     "pk": 80,
     "fields": {
-        "uuid": "0ca60d06-9c5b-4b2c-a91a-e8cc52ef62b7",
+        "uuid_sistema": "0ca60d06-9c5b-4b2c-a91a-e8cc52ef62b7",
         "nombre_sistema": "Gestión de nóminas M4",
         "organismo": 41567,
         "codigo": "NOMINA",
@@ -2619,7 +2619,7 @@
     "model": "sistemas.sistema",
     "pk": 81,
     "fields": {
-        "uuid": "637e11d3-8a8b-4b6a-a784-698f53435ad6",
+        "uuid_sistema": "637e11d3-8a8b-4b6a-a784-698f53435ad6",
         "nombre_sistema": "Sistema de gestión integral de seguridad canaria",
         "organismo": 42122,
         "codigo": "SIGESCA",
