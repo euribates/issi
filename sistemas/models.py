@@ -252,7 +252,7 @@ class Sistema(models.Model):
         Returns:
 
             La instancia, si existe el registro correspondiente
-            en la base de datos, o `None` en caso contrario.
+            en la base de datos, o ``None`` en caso contrario.
 
         """
         try:
@@ -271,7 +271,26 @@ class Sistema(models.Model):
         Returns:
 
             La instancia, si existe el registro correspondiente
-            en la base de datos, o `None` en caso contrario.
+            en la base de datos, o ``None`` en caso contrario.
+
+        """
+        try:
+            return cls.objects.get(uuid_sistema=uuid)
+        except cls.DoesNotExist:
+            return None
+
+    @classmethod
+    def load_sistema_por_codigo(cls, codigo: str):
+        """Obtener un sistema a partir de su código
+
+        Parameters:
+
+            codigo (str): Clave secundaria del sistema
+
+        Returns:
+
+            La instancia, si existe el registro correspondiente
+            en la base de datos, o ``None`` en caso contrario.
 
         """
         try:
@@ -414,8 +433,9 @@ def importar_sistemas_desde_fichero(stream):
     reader = csv.reader(stream, delimiter=',', quotechar='"')
     _first_line = next(reader)      # Ignoramos la primera fila
     for n_linea, tupla in enumerate(reader, start=1):
-        errors, payload = parsers.parse_row(tupla, n_linea=n_linea)
-        yield errors, payload
+        payload = parsers.parse_row(tupla, n_linea=n_linea)
+        yield payload
+
 
 
 class Activo(models.Model):

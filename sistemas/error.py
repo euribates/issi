@@ -88,3 +88,22 @@ class EI0009:
         "No puedo interpretar {value} como un *email* o un login"
         " de usuario."
         )
+
+
+@errors.register
+class EI0010:
+    name = "UUID no identificado"
+    desc = (
+        'Se ha indicado un UUID de sistema: {value}'
+        ' que no existe en la base de datos.'
+        )
+    refs = ['Formato UUID <formato_uuid>']
+
+
+@errors.register
+class EI0011:
+    name = "Código duplicado"
+    desc = (
+        'Ya existe en la base de datos'
+        ' un sistema con el codigo indicado: {value}.'
+        )

@@ -16,6 +16,8 @@ from . import forms
 from . import links
 from . import models
 from . import serializers
+from . import error
+
 from comun.bus import Bus
 from comun.commands import Command
 from comun.funcop import agrupa
@@ -674,13 +676,37 @@ def patch_usuarios(request):
         )
 
 
+
+def verificar_existencia_sistema(payload: dict) -> dict:
+    '''Verifica si los datos a importar son sconsistentes con la BD.
+    '''
+    # Si indica UUID, este debe existir en la base de datos
+    if 'uuid_sistema' in payload:
+        uuid_sistema = payload['uuid_sistema']
+        sistema = Sistema.load_sistema_por_uuid(uuid_sistema)
+        if sistema:
+            payload['sistema'] = sistema
+        else:
+            payload['errors'].append(error.EI0010(uuid_sistema))
+    ## El código debe ser único
+    codigo = payload['codigo']
+    sistema = Sistema.load_sistema_por_codigo(codigo)
+    if sistema:
+        payload['sistema'] = sistema
+        payload['errors'].append(error.EI0011(codigo))
+    return payload
+
+
 def importar_sistemas(request, *args, **kwargs):
     if request.method == 'POST':
         form = forms.CVSFileForm(request.POST, request.FILES)
         if form.is_valid():
             archivo = request.FILES["archivo"]
             stream = io.StringIO(archivo.read().decode('utf-8'))
-            results = list(importar_sistemas_desde_fichero(stream))
+            results = [
+                verificar_existencia_sistema(_sis)
+                for _sis in importar_sistemas_desde_fichero(stream)
+                ]
             return render(request, 'sistemas/importar-sistemas-control.html', {
                 'titulo': 'Importar sistemas',
                 'commands': cmd_sistemas(),

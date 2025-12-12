@@ -1,16 +1,47 @@
 #!/usr/bin/env python3
 
 from html import escape
+from dataclasses import dataclass
+from typing import Any
 import textwrap
 
 
-def wrap(texto: str, width=75, indent='  ') -> str:
-    return '\n'.join(textwrap.wrap(
-        texto, 
-        subsequent_indent=indent,
-        ))
+@dataclass
+class ErrorMessage(ValueError):
+    code: str
+    name: str
+    message: str
+    context: dict
 
-class Error():
+    def __str__(self) -> str:
+        buff = [f'Error {self.code}: {self.name}']
+        buff.append(self.message)
+        if self.context:
+            buff.append('\nVariables de contexto:')
+            for _name, _val in self.context.items():
+                buff.append(f' - {_name}: {escape(repr(_val))}')
+        return '\n'.join(buff)
+
+    def as_html(self):
+        '''Descripción del error para mensajes HTML.
+        '''
+        buff = [
+            '<div class="error-message">',
+            '<p>',
+            f'<code>{self.code}</code>: <b>{self.name}<b>.',
+            f'{self.message}',
+            '</p>',
+            ]
+        if self.context:
+            buff.append('<hr>')
+            buff.append('<p>Contextp:</p>')
+            for _name, _val in self.context.items():
+                buff.append(f'<p>{_name}: {escape(repr(_val))}</p>')
+        buff.append('</div>')
+        return '\n'.join(buff)
+
+
+class BaseError():
     '''Clase Base para todos los errores.
     '''
 
@@ -23,31 +54,10 @@ class Error():
         self.refs = refs or []
 
     def __call__(self, value=None, **context):
-        buff = [f'Error {self.code}: {self.name}']
-        desc = self.desc
+        message = self.desc
         if value:
-            desc = desc.format(value=escape(repr(value)))
-        buff.append(desc)
-        if context:
-            buff.append('\n--[ Variables de contexto ]--')
-            for _name, _val in context.items():
-                buff.append(f'- {_name}: {escape(repr(_val))}')
-            buff.append('-----------------------------')
-        return ValueError('\n'.join(buff))
-
-    def as_resumen_rest(self):
-        '''Descripcióm del error para la documentación.
-        '''
-        desc = self.desc.format(value="**VALUE**")
-        buff = [
-            f'- ``{self.code}``: **{self.name}**.\n',
-            f'  {wrap(desc)}\n'
-            ]
-        if self.refs:
-            buff.append('  Véase:\n')
-            for _ref in self.refs:
-                buff.append(f'    - :ref:`{_ref}`.')
-        return '\n'.join(buff)
+            message = self.desc.format(value=escape(repr(value)))
+        return ErrorMessage(self.code, self.name, message, context.copy())
 
 
 class ErrorCatalog:
@@ -63,7 +73,7 @@ class ErrorCatalog:
         refs = []
         if hasattr(cls, 'refs'):
             refs = list(cls.refs)
-        err_handler = Error(code, name, desc, refs)
+        err_handler = BaseError(code, name, desc, refs)
         self.kernel[code] = err_handler
         return cls
 

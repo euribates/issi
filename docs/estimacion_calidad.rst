@@ -62,7 +62,7 @@ Donde:
   - :math:`T_a` es la estimación del área
   - :math:`N` es el número de preguntas en el área  
   - :math:`P_a` es el peso total del área (20 en la propuesta)
-  - :math:`p_i` es el peso de la _i-esima_ pregunta del área
+  - :math:`p_i` es el peso de la *i-esima* pregunta del área
 
 El valor final ESC (Estimación Subjetiva de la Calidad) es:
 

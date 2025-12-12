@@ -19,3 +19,6 @@ documentation for details.
    estimacion_calidad
    entes
    materias
+
+   glosario.md
+   FAQ.md

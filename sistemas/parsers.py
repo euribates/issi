@@ -169,9 +169,10 @@ CHECKS = [
     ]
 
 
-def parse_row(tupla, n_linea=None):
-    errors = []
-    payload = {}
+def parse_row(tupla: tuple, n_linea=None) -> dict:
+    payload = {
+        'errors': [],
+        }
     for num_col, field_name, parser_function in CHECKS:
         try:
             value = tupla[num_col]
@@ -181,6 +182,7 @@ def parse_row(tupla, n_linea=None):
             try:
                 value = parser_function(value, n_linea=n_linea)
             except ValueError as err:
-                errors.append(str(err))
+                payload['errors'].append(err)
         payload[field_name] = value
-    return errors, payload
+
+    return payload

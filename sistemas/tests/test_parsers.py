@@ -146,10 +146,9 @@ def test_parse_row():
         'juriscan': [],
         'comentarios': None,
         'uuid_sistema': UUID('2b4c67ad-cf08-11f0-bdf7-38d5470ea667'),
+        'errors': [],
         }
-    errors, outcome = parsers.parse_row(row)
-    assert errors == []
-    assert outcome == expected
+    assert parsers.parse_row(row) == expected
 
 
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import textwrap
+
 from django.core.management.base import BaseCommand
 from django.core.management import CommandError
 
@@ -14,9 +16,55 @@ EPILOG   = 'ISSI - Inventario de sistemas de información'
 PARTES = [
     'materias',
     'entes',
-    'errores'
+    'errores',
+    'glosario',
     ]
 
+
+def wrap(texto: str, width=75, indent='  ') -> str:
+    return '\n'.join(textwrap.wrap(
+        texto, 
+        subsequent_indent=indent,
+        ))
+
+
+def print_errores():
+    '''Imprime los errores registrados en el sistema.
+
+    En formato RestructuredText.
+    '''
+    from sistemas.error import errors
+    for code, err in errors:
+        desc = err.desc.format(value="**VALUE**")
+        print(f'- ``{code}``: **{err.name}**.')
+        print(f'  {wrap(desc)}')
+        if err.refs:
+            print('  Véase:\n')
+            for _ref in err.refs:
+                print(f'    - :ref:`{_ref}`.')
+        print()
+
+
+def print_glosario():
+    """Imprime el glosario en formato docutils.
+    """
+    from glosario.models import Termino
+    print('# Glosario de términos')
+    print()
+    print('```{glossary}')
+    print(':sorted:')
+    for termino in Termino.objects.all():
+        print()
+        print(f'{termino.entrada}')
+        for paragraph in termino.descripcion.split('\n'):
+            paragraph = paragraph.strip()
+            if paragraph:
+                print('\n'.join(textwrap.wrap(
+                    paragraph,
+                    initial_indent='\n    ',
+                    subsequent_indent='    ',
+                    )))
+            first_indent = '\n    '
 class Command(BaseCommand):
     help = ABOUT
 
@@ -48,10 +96,9 @@ class Command(BaseCommand):
                     print(f'{codigo:13} {ente.organismo.nombre_organismo}')
                 print('============= =========================================')
             case 'errores':
-                from sistemas.error import errors
-                for _code, err in errors:
-                    print(err.as_resumen_rest())
-                    print()
+                print_errores()
+            case 'glosario':
+                print_glosario()
             case _:
                 raise CommandError(
                     f'No se como generar el fragmento {parte}'

@@ -86,11 +86,12 @@ migrate $APP='': check
 # Generar imágenes para la documentación de los modelos
 docs *args='.':
     python ./manage.py graph_models -g -o docs/sistemas.png sistemas
+    python ./manage.py update_docs glosario > docs/glosario.md
     python ./manage.py update_docs materias > docs/includes/materias.rst
     python ./manage.py update_docs entes > docs/includes/entes.rst
     python ./manage.py update_docs errores > docs/includes/errores.rst
 
-    sphinx-build -M html docs/ docs/ {{ args }}
+    sphinx-build -M html docs/ docs/ {{ args }} -E
 
 # Actualiza en caliente contenidos estaticos js/css/png/svg
 [unix]
@@ -101,7 +102,7 @@ watch: static
 
 # Genera el fichero de tags
 tags:
-    cd {{justfile_directory()}} && ctags -R  --exclude=media/*  --exclude=*/static/* --exclude=static/* .
+    cd {{justfile_directory()}} && ctags -R  --exclude=media/* --exclude=docs/* --exclude=.venv/* --exclude=*/static/* --exclude=static/* .
 
 # Buscar con pss pero omitiendo directorios .venv y migrations
 pss  *args='':
