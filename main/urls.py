@@ -22,6 +22,7 @@ def goto(url):
 
 urlpatterns = [
     tie("", homepage),
+    path("health/", include("health_check.urls")),
     path("favicon.ico", goto('static/favicon.png')),
     path('labo/', labo),
     path("comun/", include('comun.urls')),

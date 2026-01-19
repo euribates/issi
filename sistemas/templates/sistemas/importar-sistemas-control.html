@@ -26,12 +26,13 @@
         {% if sistema.errores %}
           <ul class="error-list">
           {% for error in sistema.errores %}
-            <li>{{ error }} </li>
+            <li>{{ error.as_html|safe }} </li>
           {% endfor %}
           </ul>
         {% else %}
-          OK
+        <b class="color-green">Válido<b>
         {% endif %}  
+
         </td>
       </tr>{% endfor %}    
       </tbody>

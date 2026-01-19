@@ -1,9 +1,9 @@
 Nombre,Código identificativo interno (CI),Finalidad,Materia competencial,DIR3 (centro directivo),UID de la persona responsable tecnológica,UID de la persona responsable funcional,"Normativa
  (Juriscan)",Observaciones
-DRAGO Atención Primaria,DRAGO AP,Historia clínica electrónica específica de Atención Primaria del SCS. DATO DE USO PRIMARIO ASISTENCIAL Y ADMINISTRATIVO (DRAGO ADMIN),SAN,A05003609,ÁREA DE SISTEMAS ELECTROMÉDICOS Y DE INFORMACIÓN / SECRETARIA GENERAL. Jefa de Área: María Jesús Millán Muñoz,epuecas,,
-DRAGO Atención Especializada,DRAGO AE,Historia clínica electrónica de atención especializada hospitalaria. DATO DE USO PRIMARIO ASISTENCIAL Y ADMINISTRATIVO (DRAGO ADMIN),SAN,A05003609,ÁREA DE SISTEMAS ELECTROMÉDICOS Y DE INFORMACIÓN / SECRETARIA GENERAL. Jefa de Área: María Jesús Millán Muñoz,epuecas,,
-SAP,SAP,Historia Clínica electrónica de atención especializada en el Complejo Hospitalario Universitario de Tenerife . DATO DE USO PRIMARIO ASISTENCIAL Y ADMINISTRATIVO ,SAN,A05003609,Sistemas de Información CHUC,jemarrod,,
-Tarjeta Sanitaria/Maestro personas,TSI,Fichero maestro de pacientes del SCS,SAN,A05003609,ÁREA DE SISTEMAS ELECTROMÉDICOS Y DE INFORMACIÓN / SECRETARIA GENERAL. Jefa de Área: María Jesús Millán Muñoz,aartrodc,,
-DRAGO FARMA,DRAGO FARMA,Sistema de información de farmacia hospitalaria,SAN,A05003609,ÁREA DE SISTEMAS ELECTROMÉDICOS Y DE INFORMACIÓN / SECRETARIA GENERAL. Jefa de Área: María Jesús Millán Muñoz,iloppuep,,
-RECETA ELECTRÓNICA,REC-SCS,"Sistema de prescripción, dispensación y firma de receta electrónica",SAN,A05003609,ÁREA DE SISTEMAS ELECTROMÉDICOS Y DE INFORMACIÓN / SECRETARIA GENERAL. Jefa de Área: María Jesús Millán Muñoz,iloppuep,,
-CANTONERA,CANTONERA,Contabilidad analítica de la actividad asistencial de los centros sanitarios,SAN,A05003609,ÁREA DE SISTEMAS ELECTROMÉDICOS Y DE INFORMACIÓN / SECRETARIA GENERAL. Jefa de Área: María Jesús Millán Muñoz,jolmgue,,
+DRAGO Atención Primaria,DRAGO_AP,Historia clínica electrónica específica de Atención Primaria del SCS,SAN,A05003609,mmilmun@gobiernodecanarias.org,epuecas,,DATO DE USO PRIMARIO ASISTENCIAL Y ADMINISTRATIVO (DRAGO ADMIN)
+DRAGO Atención Especializada,DRAGO_AE,Historia clínica electrónica de atención especializada hospitalaria,SAN,A05003609,mmilmun@gobiernodecanarias.org,epuecas,, DATO DE USO PRIMARIO ASISTENCIAL Y ADMINISTRATIVO (DRAGO ADMIN)
+SAP,SAP,Historia Clínica electrónica de atención especializada en el Complejo Hospitalario Universitario de Tenerife,SAN,A05003609,Sistemas de Información CHUC,jemarrod,, DATO DE USO PRIMARIO ASISTENCIAL Y ADMINISTRATIVO 
+Tarjeta Sanitaria/Maestro personas,TSI,Fichero maestro de pacientes del SCS,SAN,A05003609,mmilmun@gobiernodecanarias.org,aartrodc,,
+DRAGO FARMA,DRAGO_FARMA,Sistema de información de farmacia hospitalaria,SAN,A05003609,mmilmun@gobiernodecanarias.org,iloppuep,,
+RECETA ELECTRÓNICA,REC_SCS,"Sistema de prescripción, dispensación y firma de receta electrónica",SAN,A05003609,mmilmun@gobiernodecanarias.org,iloppuep,,
+CANTONERA,CANTONERA,Contabilidad analítica de la actividad asistencial de los centros sanitarios,SAN,A05003609,mmilmun@gobiernodecanarias.org,jolmgue,,

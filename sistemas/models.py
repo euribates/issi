@@ -294,7 +294,7 @@ class Sistema(models.Model):
 
         """
         try:
-            return cls.objects.get(uuid_sistema=uuid)
+            return cls.objects.get(codigo=codigo)
         except cls.DoesNotExist:
             return None
 

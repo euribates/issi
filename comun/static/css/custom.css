@@ -187,10 +187,15 @@ img.card-top-logo {
   text-align: right;
   font-size: 130%;
   font-weight: bolder;
-  margin-bottom: 0;
+  margin: 2px;
   padding-bottom: 0;
-  border-bottom: 1px solid #303030;
-}
+  border-bottom: 0px solid #303030;
+  text-decoration: none;
+  }
+
+.sistema-codigo:hover {
+  text-decoration: underline;
+  }
 
 .sistema-nombre {
   text-align: right;
@@ -260,4 +265,21 @@ a.email:hover {
 
 .color-red {
   color: #aa4400;
+}
+
+.color-grey {
+  color: #334455;
+}
+
+.color-green {
+  border: 1px solid #00B894;
+  color: #16A085;
+  background-color: #A9DFBF;
+  padding-top: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 1px;
+  border-radius: 2.5px;
+  text-decoration: None;
+  font-weight: bolder;
 }

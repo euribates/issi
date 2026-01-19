@@ -31,17 +31,17 @@ def wrap(texto: str, width=75, indent='  ') -> str:
 def print_errores():
     '''Imprime los errores registrados en el sistema.
 
-    En formato RestructuredText.
+    En formato MarkDown.
     '''
     from sistemas.error import errors
     for code, err in errors:
         desc = err.desc.format(value="**VALUE**")
-        print(f'- ``{code}``: **{err.name}**.')
+        print(f'- `{code}`: **{err.name}**.')
         print(f'  {wrap(desc)}')
         if err.refs:
             print('  Véase:\n')
             for _ref in err.refs:
-                print(f'    - :ref:`{_ref}`.')
+                print(f'    - {{ref}}`{_ref}`.')
         print()
 
 
@@ -64,7 +64,8 @@ def print_glosario():
                     initial_indent='\n    ',
                     subsequent_indent='    ',
                     )))
-            first_indent = '\n    '
+
+
 class Command(BaseCommand):
     help = ABOUT
 

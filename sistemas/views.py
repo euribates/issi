@@ -16,8 +16,8 @@ from . import forms
 from . import links
 from . import models
 from . import serializers
-from . import error
 
+from comun.error import errors
 from comun.bus import Bus
 from comun.commands import Command
 from comun.funcop import agrupa
@@ -678,22 +678,22 @@ def patch_usuarios(request):
 
 
 def verificar_existencia_sistema(payload: dict) -> dict:
-    '''Verifica si los datos a importar son sconsistentes con la BD.
+    '''Verifica si los datos a importar son consistentes con la BD.
     '''
     # Si indica UUID, este debe existir en la base de datos
-    if 'uuid_sistema' in payload:
-        uuid_sistema = payload['uuid_sistema']
+    uuid_sistema = payload.get('uuid_sistema')
+    if uuid_sistema:
         sistema = Sistema.load_sistema_por_uuid(uuid_sistema)
         if sistema:
             payload['sistema'] = sistema
         else:
-            payload['errors'].append(error.EI0010(uuid_sistema))
+            payload['errores'].append(errors.EI0010(uuid_sistema))
     ## El código debe ser único
     codigo = payload['codigo']
     sistema = Sistema.load_sistema_por_codigo(codigo)
     if sistema:
         payload['sistema'] = sistema
-        payload['errors'].append(error.EI0011(codigo))
+        payload['errores'].append(errors.EI0011(codigo))
     return payload
 
 

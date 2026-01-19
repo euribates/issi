@@ -43,6 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'health_check',
+    'health_check.cache',
+    'health_check.storage',
+    'health_check.contrib.psutil',
+    'health_check.contrib.migrations',
     'django_filters',
     'comun',
     'normativa',
@@ -221,3 +226,7 @@ if DEBUG:
 
 
 LC_TIME_SPANISH_LOCALE = config('LC_TIME_SPANISH_LOCALE', default='es_ES.utf8')
+
+# Health
+
+HEALTHCHECK_CACHE_KEY = "issi_healthcheck_key"

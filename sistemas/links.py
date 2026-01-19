@@ -137,7 +137,3 @@ def a_importar_sistemas() -> str:
 
 def a_exportar_sistemas() -> str:
     return _a('sistemas:exportar_sistemas')
-
-
-def a_importar_sistemas() -> str:
-    return _a('sistemas:importar_sistemas')

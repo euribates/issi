@@ -117,6 +117,8 @@ class Organismo(models.Model):
         self.ruta = f'{self.depende.ruta}{sep}{self.depende_de.pk}'
 
     def es_primer_nivel(self) -> bool:
+        if self.depende_de is None:
+            return True
         return self.depende_de.pk == 1
 
     def iter_jerarquia(self, nivel=0):

@@ -27,7 +27,7 @@ def parse_codigo_interno(codigo: str, n_linea=None):
     if not _match:
         raise errors.EI0002(codigo, n_linea=n_linea)
     if codigo in parse_codigo_interno.ya_vistos:
-        raise errors.EI0001(codigo, n_linea=n_linea)
+        raise errors.EI0004(codigo, n_linea=n_linea)
     parse_codigo_interno.ya_vistos.add(codigo)
     return codigo
 
@@ -171,7 +171,7 @@ CHECKS = [
 
 def parse_row(tupla: tuple, n_linea=None) -> dict:
     payload = {
-        'errors': [],
+        'errores': [],
         }
     for num_col, field_name, parser_function in CHECKS:
         try:
@@ -182,7 +182,7 @@ def parse_row(tupla: tuple, n_linea=None) -> dict:
             try:
                 value = parser_function(value, n_linea=n_linea)
             except ValueError as err:
-                payload['errors'].append(err)
+                payload['errores'].append(err)
         payload[field_name] = value
 
     return payload

@@ -221,7 +221,7 @@ Posibles errores en la importación de datos
 
 Los posibles errores que impiden la carga de datos son los siguientes:
 
-.. include:: includes/errores.rst
+.. include:: includes/errores.md
 
 .. _CSV: https://es.wikipedia.org/wiki/Valores_separados_por_comas
 .. _UUID: https://es.wikipedia.org/wiki/Identificador_%C3%BAnico_universal

@@ -55,7 +55,7 @@ static:
 
 # Ejecutar un run server en modo desarrollo
 rundev: static 
-    python ./manage.py runserver 0.0.0.0:8800 
+    python ./manage.py runserver 0.0.0.0:8801 
 
 
 # Borrar ficheros compilados de python
@@ -89,7 +89,7 @@ docs *args='.':
     python ./manage.py update_docs glosario > docs/glosario.md
     python ./manage.py update_docs materias > docs/includes/materias.rst
     python ./manage.py update_docs entes > docs/includes/entes.rst
-    python ./manage.py update_docs errores > docs/includes/errores.rst
+    python ./manage.py update_docs errores > docs/includes/errores.md
 
     sphinx-build -M html docs/ docs/ {{ args }} -E
 

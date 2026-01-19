@@ -2,8 +2,6 @@
 
 from html import escape
 from dataclasses import dataclass
-from typing import Any
-import textwrap
 
 
 @dataclass
@@ -28,13 +26,14 @@ class ErrorMessage(ValueError):
         buff = [
             '<div class="error-message">',
             '<p>',
-            f'<code>{self.code}</code>: <b>{self.name}<b>.',
+            f'<code class="codigo-error">{self.code}</code>:'
+            f' <b class="nombre-error">{self.name}<b>.',
             f'{self.message}',
             '</p>',
             ]
         if self.context:
             buff.append('<hr>')
-            buff.append('<p>Contextp:</p>')
+            buff.append('<p>Contexto:</p>')
             for _name, _val in self.context.items():
                 buff.append(f'<p>{_name}: {escape(repr(_val))}</p>')
         buff.append('</div>')

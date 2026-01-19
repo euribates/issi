@@ -5,7 +5,8 @@ from django.forms import widgets
 
 from . import models
 
-class SimpleForm(forms.Form):
+
+class BootstrapForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -19,11 +20,19 @@ class SimpleForm(forms.Form):
                 case _:
                     widget.attrs['class'] = 'form-control'
 
+    def as_dict(self) -> dict:
+        if self.is_valid():
+            return {
+                name: self.cleaned_data[name]
+                for name in self.Meta.fields
+                }
+        return {}
+
 
 # ------------------------------------------[ Formularios genéricos ]--
 
 
-class EstaSeguroForm(SimpleForm):
+class EstaSeguroForm(BootstrapForm, forms.Form):
     """Formulario para autorizar operaciones críticas.
 
     Solo será válido si se ha marcado el checkbox.
@@ -35,7 +44,7 @@ class EstaSeguroForm(SimpleForm):
         )
 
 
-class CVSFileForm(SimpleForm):
+class CVSFileForm(BootstrapForm, forms.Form):
     archivo =forms.FileField(
         label='Archivo CVS',
         )
@@ -44,22 +53,7 @@ class CVSFileForm(SimpleForm):
 # ---------------------------------------[ Formularios para modelos ]--
 
 
-class BaseForm(forms.ModelForm):
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        for visible in self.visible_fields():
-            widget = visible.field.widget
-            match widget.__class__:
-                case widgets.RadioSelect:
-                    widget.attrs['class'] = 'form-check-input'
-                case widgets.CheckboxInput:
-                    widget.attrs['class'] = 'form-check-input'
-                case _:
-                    widget.attrs['class'] = 'form-control'
-
-
-class AltaSistemaForm(BaseForm):
+class AltaSistemaForm(BootstrapForm, forms.ModelForm):
 
     class Meta:
         model = models.Sistema
@@ -74,16 +68,9 @@ class AltaSistemaForm(BaseForm):
     def organismos_filtrados(self, query: str):
         return models.Organismo.search(query)
 
-    def as_dict(self) -> dict:
-        if self.is_valid():
-            return {
-                name: self.cleaned_data[name]
-                for name in self.Meta.fields
-                }
-        return {}
 
 
-class EditarSistemaForm(BaseForm):
+class EditarSistemaForm(BootstrapForm, forms.ModelForm):
 
     class Meta:
         model = models.Sistema
@@ -94,7 +81,8 @@ class EditarSistemaForm(BaseForm):
             'url',
             ]
 
-class AsignarOrganismoForm(BaseForm):
+
+class AsignarOrganismoForm(BootstrapForm, forms.ModelForm):
 
     class Meta:
         model = models.Sistema
@@ -104,25 +92,28 @@ class AsignarOrganismoForm(BaseForm):
         return models.Organismo.search_organismos(query)
 
 
-class AsignarTemaForm(BaseForm):
+class AsignarTemaForm(BootstrapForm, forms.ModelForm):
+
     class Meta:
         model = models.Sistema
         fields = ['tema']
 
 
-class AsignarFamiliaForm(BaseForm):
+class AsignarFamiliaForm(BootstrapForm, forms.ModelForm):
+
     class Meta:
         model = models.Sistema
         fields = ['familia']
 
 
-class AsignarIconoForm(BaseForm):
+class AsignarIconoForm(BootstrapForm, forms.ModelForm):
+
     class Meta:
         model = models.Sistema
         fields = ['icono']
 
 
-class EditarPropositoForm(BaseForm):
+class EditarPropositoForm(BootstrapForm, forms.ModelForm):
 
     class Meta:
         model = models.Sistema
@@ -134,7 +125,7 @@ class EditarPropositoForm(BaseForm):
         )
 
 
-class EditarDescripcionForm(BaseForm):
+class EditarDescripcionForm(BootstrapForm, forms.ModelForm):
 
     class Meta:
         model = models.Sistema
@@ -146,7 +137,7 @@ class EditarDescripcionForm(BaseForm):
         )
 
 
-class AsignarResponsableForm(BaseForm):
+class AsignarResponsableForm(BootstrapForm, forms.ModelForm):
 
     class Meta:
         model = models.Perfil
@@ -156,14 +147,14 @@ class AsignarResponsableForm(BaseForm):
             }
 
 
-class AsignarInterlocutorForm(BaseForm):
+class AsignarInterlocutorForm(BootstrapForm, forms.ModelForm):
 
     class Meta:
         model = models.Interlocutor
         fields = ['usuario']
 
 
-class AltaUsuarioForm(BaseForm):
+class AltaUsuarioForm(BootstrapForm, forms.ModelForm):
 
     class Meta:
         model = models.Usuario

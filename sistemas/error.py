@@ -22,12 +22,12 @@ class EI0002:
     desc = (
         "El valor indicado en el CII no sigue las reglas de "
         "formato esperadas. Solo son válidos los caracteres "
-        "desde la ``A`` hasta la ``Z``, sin minúsculas, los "
+        "desde la `A` hasta la `Z`, sin minúsculas, los "
         "dígitos desde el cero hasta el nueve, y el caracter "
         "subrayado.\n"
         "Además, no puede empezar por un dígito, y debe "
-        "tener tres o más caracteres. El valor indicado "
-        "{value} no sigue el formato."
+        "tener tres o más caracteres. El valor indicado: "
+        "«{value}» no sigue el formato."
         )
     refs = ['Codigo Identificador Interno <CII>']
 
@@ -39,7 +39,7 @@ class EI0003:
 
 
 @errors.register
-class I0004:
+class EI0004:
     name = "Código identificador interno duplicado"
     desc = (
         "Se está intentado dar de alta un sistema de información"
@@ -75,8 +75,8 @@ class EI0007:
 class EI0008:
     name = "Materia competencial desconocida o incorrecta"
     desc = (
-        "Los valores esperados están en la tabla de materias,"
-        " pero {value} no está entre ellos."
+        "Los valores esperados **no** están en la tabla de materias,"
+        " pero «{value}» no está entre ellos."
         )
     refs = ['materias competenciales <materias_competenciales>']
 
@@ -85,7 +85,7 @@ class EI0008:
 class EI0009:
     name = "Email o login de usuario incorrecto"
     desc = (
-        "No puedo interpretar {value} como un *email* o un login"
+        "No puedo interpretar «{value}» como un *email* o un login"
         " de usuario."
         )
 
@@ -94,7 +94,7 @@ class EI0009:
 class EI0010:
     name = "UUID no identificado"
     desc = (
-        'Se ha indicado un UUID de sistema: {value}'
+        'Se ha indicado un UUID de sistema: «{value}»'
         ' que no existe en la base de datos.'
         )
     refs = ['Formato UUID <formato_uuid>']
