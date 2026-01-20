@@ -19,6 +19,17 @@
     <tr>
       <th colspan="3">
         {{ filterset.form }}
+        <input
+
+    type="text"
+
+    placeholder="Search..."
+
+    data-bind:search
+
+    data-on:input__debounce.200ms="@get('/examples/active_search/search')"
+
+/>
         <input type="submit" value="🔍" />
       </th>
     </tr> 

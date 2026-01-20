@@ -1,4 +1,4 @@
-# Glosario de t√©rminos
+# Glosario de tÈrminos
 
 ```{glossary}
 :sorted:
@@ -6,214 +6,205 @@
 Activo de datos
 
     Es cualquier recurso de datos con valor para el desarrollo de las
-    funciones de una organizaci√≥n, que puede ser comprendido y tratado
-    como una √∫nica unidad a efectos de gesti√≥n, uso, protecci√≥n e
+    funciones de una organizaciÛn, que puede ser comprendido y tratado
+    como una ˙nica unidad a efectos de gestiÛn, uso, protecciÛn e
     intercambio.
 
-Activo sam√°ntico
+Activo sam·ntico
 
     Unidad que describe la estructura y el significado de los datos,
-    facilitando su intercambio, interpretaci√≥n autom√°tica y
-    reutilizaci√≥n por diferentes aplicaciones o sistemas.
+    facilitando su intercambio, interpretaciÛn autom·tica y
+    reutilizaciÛn por diferentes aplicaciones o sistemas.
 
-Anonimizaci√≥n
+AnonimizaciÛn
 
-    Tratamiento de datos personales de manera que la informaci√≥n que
+    Tratamiento de datos personales de manera que la informaciÛn que
     se obtenga no pueda asociarse con persona identificada o
     identificable.
 
-An√°lisis de riesgo
+An·lisis de riesgo
 
-    El an√°lisis de riesgos es el proceso mediante el cual se
-    identifican, eval√∫an y priorizan los riesgos potenciales que
-    pueden afectar a los activos de informaci√≥n de una organizaci√≥n.
+    El an·lisis de riesgos es el proceso mediante el cual se
+    identifican, eval˙an y priorizan los riesgos potenciales que
+    pueden afectar a los activos de informaciÛn de una organizaciÛn.
 
-Cifrado asim√©trico
+Cifrado asimÈtrico
 
-    En los esquemas de cifrado de clave asim√©rico, o clave
-    p√∫blica/privada, se utilizan dos claves distintas, muy
+    En los esquemas de cifrado de clave asimÈrico, o clave
+    p˙blica/privada, se utilizan dos claves distintas, muy
     dificilmente deducibles la una a partir de la otra. La clave
-    p√∫blica, como su nombre indica, es bien conocida, mientras que la
+    p˙blica, como su nombre indica, es bien conocida, mientras que la
     clave privada se mantiene secreta. La particularidad de este
-    m√©todo es que, una vez cifrado un mensaje con una de las claves,
+    mÈtodo es que, una vez cifrado un mensaje con una de las claves,
     solo se puede descifrar usando la otra.
 
-    La criptograf√≠a asim√©trica presenta dos ventajas principales:
-    suprime el problema de transmisi√≥n segura de la clave y permite la
-    **firma electr√≥nica**. No reemplaza sin embargo los cifrados
-    sim√©tricos, ya que los tiempos de c√°lculo son mucho m√°s cortos con
-    los sistemas sim√©tricos que con los asim√©tricos.
+    La criptografÌa asimÈtrica presenta dos ventajas principales:
+    suprime el problema de transmisiÛn segura de la clave y permite la
+    **firma electrÛnica**. No reemplaza sin embargo los cifrados
+    simÈtricos, ya que los tiempos de c·lculo son mucho m·s cortos con
+    los sistemas simÈtricos que con los asimÈtricos.
 
-Cifrado sim√©trico
+Cifrado simÈtrico
 
-    En los esquemas de clave sim√©trica, las claves de cifrado y
+    En los esquemas de clave simÈtrica, las claves de cifrado y
     descifrado son las mismas, o trivialmente deducibles la una a
     partir de la otra. Las partes comunicantes deben tener la misma
-    clave para lograr una comunicaci√≥n segura.
+    clave para lograr una comunicaciÛn segura.
 
 Clasificaciones
 
-    Organizaci√≥n de los datos seg√∫n su significado, uso y contexto
-    dentro de un sistema de informaci√≥n. Esto implica definir
-    criterios y estructuras que permitan su identificaci√≥n, gesti√≥n e
+    OrganizaciÛn de los datos seg˙n su significado, uso y contexto
+    dentro de un sistema de informaciÛn. Esto implica definir
+    criterios y estructuras que permitan su identificaciÛn, gestiÛn e
     interoperabilidad.
 
 Clasificaciones normalizadas
 
-    Una clasificaci√≥n normalizada es un sistema de categorizaci√≥n de
-    datos basado en est√°ndares reconocidos que garantizan la
-    coherencia, interoperabilidad y reutilizaci√≥n de la informaci√≥n
+    Una clasificaciÛn normalizada es un sistema de categorizaciÛn de
+    datos basado en est·ndares reconocidos que garantizan la
+    coherencia, interoperabilidad y reutilizaciÛn de la informaciÛn
     entre diferentes sistemas y entidades.
 
 Conjunto de datos
 
-    Un conjunto de datos es una recopilaci√≥n de datos estructurada.
+    Un conjunto de datos es una recopilaciÛn de datos estructurada.
     Un ejemplo de conjunto de datos es una tabla en la que cada
     columna representa una variable concreta y cada fila corresponde a
     un registro diferente.
 
 Conjuntos de datos de alto valor
 
-    Documentos cuya reutilizaci√≥n est√° asociada a considerables
-    beneficios para la sociedad, el medio ambiente y la econom√≠a, en
-    particular debido a su idoneidad para la creaci√≥n de servicios de
-    valor a√±adido, aplicaciones y puestos de trabajo nuevos, dignos y
-    de calidad, y del n√∫mero de beneficiarios potenciales de los
-    servicios de valor a√±adido y aplicaciones basados en tales
+    Documentos cuya reutilizaciÛn est· asociada a considerables
+    beneficios para la sociedad, el medio ambiente y la economÌa, en
+    particular debido a su idoneidad para la creaciÛn de servicios de
+    valor aÒadido, aplicaciones y puestos de trabajo nuevos, dignos y
+    de calidad, y del n˙mero de beneficiarios potenciales de los
+    servicios de valor aÒadido y aplicaciones basados en tales
     conjuntos de datos.
-
-DIR3
-
-    **Directorio Com√∫n de Unidades Org√°nicas y Oficinas**. El
-    Directorio Com√∫n proporciona un Inventario unificado y com√∫n a
-    toda la Administraci√≥n de las unidades org√°nicas / organismos
-    p√∫blicos, sus oficinas asociadas y unidades de gesti√≥n econ√≥mica -
-    presupuestaria, facilitando el mantenimiento distribuido y
-    corresponsable de la informaci√≥n.
 
 Dato
 
-    Una representaci√≥n de hechos, conceptos o instrucciones de un
-    modo formalizado, y adecuado para su comunicaci√≥n, interpretaci√≥n
-    o procesamiento por medios autom√°ticos o humanos.
+    Una representaciÛn de hechos, conceptos o instrucciones de un
+    modo formalizado, y adecuado para su comunicaciÛn, interpretaciÛn
+    o procesamiento por medios autom·ticos o humanos.
 
 Dato maestro
 
-    Dato que posee una organizaci√≥n para describir las entidades que
-    son independientes y fundamentales para dicha organizaci√≥n, y a
+    Dato que posee una organizaciÛn para describir las entidades que
+    son independientes y fundamentales para dicha organizaciÛn, y a
     las que se hace referencia para realizar sus transacciones.
 
 Datos abiertos
 
     Son aquellos que cualquiera es libre de utilizar, reutilizar y
-    redistribuir, con el √∫nico l√≠mite, en su caso, del requisito de
-    atribuci√≥n de su fuente o reconocimiento de su autor√≠a.
+    redistribuir, con el ˙nico lÌmite, en su caso, del requisito de
+    atribuciÛn de su fuente o reconocimiento de su autorÌa.
 
-Datos din√°micos
+Datos din·micos
 
     Documentos en formato digital, sujetos a actualizaciones
     frecuentes o en tiempo real, debido, en particular, a su
-    volatilidad o r√°pida obsolescencia; los datos generados por los
-    sensores suelen considerarse datos din√°micos.
+    volatilidad o r·pida obsolescencia; los datos generados por los
+    sensores suelen considerarse datos din·micos.
 
 Datos personales
 
-    Toda informaci√≥n sobre una persona f√≠sica identificada o
-    identificable (¬´el interesado¬ª); se considerar√° persona f√≠sica
+    Toda informaciÛn sobre una persona fÌsica identificada o
+    identificable (´el interesadoª); se considerar· persona fÌsica
     identificable toda persona cuya identidad pueda determinarse,
     directa o indirectamente, en particular mediante un identificador,
-    como por ejemplo un nombre, un n√∫mero de identificaci√≥n, datos de
-    localizaci√≥n, un identificador en l√≠nea o uno o varios elementos
-    propios de la identidad f√≠sica, fisiol√≥gica, gen√©tica, ps√≠quica,
-    econ√≥mica, cultural o social de dicha persona.
+    como por ejemplo un nombre, un n˙mero de identificaciÛn, datos de
+    localizaciÛn, un identificador en lÌnea o uno o varios elementos
+    propios de la identidad fÌsica, fisiolÛgica, genÈtica, psÌquica,
+    econÛmica, cultural o social de dicha persona.
 
 Datos sensibles
 
     Los siguientes datos personales se consideran **sensibles** y
-    est√°n sujetos a condiciones de tratamiento espec√≠ficas:
+    est·n sujetos a condiciones de tratamiento especÌficas:
 
-    - datos personales que revelen el origen racial o √©tnico, las
-    opiniones pol√≠ticas, las convicciones religiosas o filos√≥ficas
+    - datos personales que revelen el origen racial o Ètnico, las
+    opiniones polÌticas, las convicciones religiosas o filosÛficas
 
-    - la afiliaci√≥n sindical
+    - la afiliaciÛn sindical
 
-    - datos gen√©ticos, datos biom√©tricos tratados √∫nicamente para
+    - datos genÈticos, datos biomÈtricos tratados ˙nicamente para
     identificar un ser humano,
 
     - datos relativos a la salud,
 
-    - datos relativos a la vida sexual u orientaci√≥n sexual de una
+    - datos relativos a la vida sexual u orientaciÛn sexual de una
     persona.
 
 ETL
 
-    Iniciales de _Extract, Transform and Load_ (¬´Extraer, transformar
-    y cargar¬ª, se refiere el proceso que permite a las organizaciones
-    mover datos desde m√∫ltiples fuentes, reformatearlos y limpiarlos,
+    Iniciales de _Extract, Transform and Load_ (´Extraer, transformar
+    y cargarª, se refiere el proceso que permite a las organizaciones
+    mover datos desde m˙ltiples fuentes, reformatearlos y limpiarlos,
     y cargarlos en otra base de datos, _data mart_, o _data warehouse_
     para analizar, o en otro sistema operacional para apoyar un
     proceso de negocio.
 
-Encriptaci√≥n
+EncriptaciÛn
 
-    La encriptaci√≥n o cifrado es un mecanismo de seguridad que
+    La encriptaciÛn o cifrado es un mecanismo de seguridad que
     permite modificar un mensaje de modo que su contenido sea
     ilegible, salvo para su destinatario. De modo inverso, la
-    desencriptaci√≥n o descifrado permitir√° hacer legible un mensaje
+    desencriptaciÛn o descifrado permitir· hacer legible un mensaje
     que estaba cifrado.
 
-    Los esquemas modernos de encriptaci√≥n utilizan los conceptos de
-    **cifrado sim√©trico** y **cifrado asim√©trico**.
+    Los esquemas modernos de encriptaciÛn utilizan los conceptos de
+    **cifrado simÈtrico** y **cifrado asimÈtrico**.
 
-Gesti√≥n del dato
+GestiÛn del dato
 
-    Desarrollo, ejecuci√≥n y supervisi√≥n de planes, pol√≠ticas,
-    programas y pr√°cticas que proporcionen, controlen, protejan y
-    mejoren el valor de los activos de datos e informaci√≥n a lo largo
+    Desarrollo, ejecuciÛn y supervisiÛn de planes, polÌticas,
+    programas y pr·cticas que proporcionen, controlen, protejan y
+    mejoren el valor de los activos de datos e informaciÛn a lo largo
     de su ciclo de vida.
 
 Gobernanza del dato
 
     La gobernanza de los datos es un conjunto de procesos, funciones,
-    pol√≠ticas, normas y m√©tricas que garantizan el uso eficiente de la
-    informaci√≥n para que su organizaci√≥n alcance sus objetivos. Una
+    polÌticas, normas y mÈtricas que garantizan el uso eficiente de la
+    informaciÛn para que su organizaciÛn alcance sus objetivos. Una
     estrategia de gobierno de datos bien elaborada garantiza que los
-    datos de su empresa sean fiables, precisos y est√©n disponibles.
+    datos de su empresa sean fiables, precisos y estÈn disponibles.
 
 Gobierno de datos
 
-    Desarrollo y aplicaci√≥n de pol√≠ticas relacionadas con la
-    **gesti√≥n del dato**.
+    Desarrollo y aplicaciÛn de polÌticas relacionadas con la
+    **gestiÛn del dato**.
 
-Integraci√≥n
+IntegraciÛn
 
-    En el √°mbito tecnol√≥gico es la acci√≥n de establecer mecanismos de
-    comunicaci√≥n autom√°tica basada en la implementaci√≥n de protocolos
-    y formatos comunes de intercambio de datos entre dos o m√°s
-    sistemas de informaci√≥n.
+    En el ·mbito tecnolÛgico es la acciÛn de establecer mecanismos de
+    comunicaciÛn autom·tica basada en la implementaciÛn de protocolos
+    y formatos comunes de intercambio de datos entre dos o m·s
+    sistemas de informaciÛn.
 
 Interoperabilidad
 
-    Capacidad de los sistemas de informaci√≥n, y por ende de los
+    Capacidad de los sistemas de informaciÛn, y por ende de los
     procedimientos a los que estos dan soporte, de compartir datos y
-    posibilitar el intercambio de informaci√≥n y conocimiento entre
+    posibilitar el intercambio de informaciÛn y conocimiento entre
     ellos.
 
-Interoperabilidad sem√°ntica
+Interoperabilidad sem·ntica
 
-    Dimensi√≥n de la **interoperabilidad** relativa a que la
-    informaci√≥n intercambiada pueda ser interpretable de forma
-    autom√°tica y reutilizable por aplicaciones que no intervinieron en
-    su creaci√≥n.
+    DimensiÛn de la **interoperabilidad** relativa a que la
+    informaciÛn intercambiada pueda ser interpretable de forma
+    autom·tica y reutilizable por aplicaciones que no intervinieron en
+    su creaciÛn.
 
-Interoperabilidad t√©cnica
+Interoperabilidad tÈcnica
 
-    Dimensi√≥n de la **interoperabilidad** relativa a la relaci√≥n
-    entre sistemas y servicios de tecnolog√≠as de la informaci√≥n,
-    incluyendo aspectos tales como las interfaces, la interconexi√≥n,
-    la integraci√≥n de datos y servicios, la presentaci√≥n de la
-    informaci√≥n, la accesibilidad y la seguridad, u otros de
-    naturaleza an√°loga.
+    DimensiÛn de la **interoperabilidad** relativa a la relaciÛn
+    entre sistemas y servicios de tecnologÌas de la informaciÛn,
+    incluyendo aspectos tales como las interfaces, la interconexiÛn,
+    la integraciÛn de datos y servicios, la presentaciÛn de la
+    informaciÛn, la accesibilidad y la seguridad, u otros de
+    naturaleza an·loga.
 
 Metadatos
 
@@ -222,36 +213,36 @@ Metadatos
 Modelo de datos
 
     Conjunto de definiciones (modelo conceptual), interrelaciones
-    (modelo l√≥gico) y reglas y convenciones (modelo f√≠sico) que
+    (modelo lÛgico) y reglas y convenciones (modelo fÌsico) que
     permiten describir los datos para su intercambio.
 
 Nivel de madurez
 
     Punto en una escala ordinal de madurez de procesos organizativos
-    que caracteriza la madurez de la unidad de la organizaci√≥n
-    evaluada en el √°mbito del modelo de madurez utilizado.
+    que caracteriza la madurez de la unidad de la organizaciÛn
+    evaluada en el ·mbito del modelo de madurez utilizado.
 
-Organizaci√≥n
+OrganizaciÛn
 
     En el contexto del presente documento, se considera como
-    organizaci√≥n tanto los departamentos del gobierno, como las
-    organizaciones p√∫blicas aut√≥nomas.
+    organizaciÛn tanto los departamentos del gobierno, como las
+    organizaciones p˙blicas autÛnomas.
 
-Sistema de informaci√≥n
+Sistema de informaciÛn
 
     Conjunto organizado de elementos interrelacionados (personas,
-    procesos, datos, tecnolog√≠a y recursos) que trabajan juntos para
-    recopilar, procesar, almacenar, distribuir y gestionar informaci√≥n
-    con el fin de apoyar la toma de decisiones, la coordinaci√≥n
-    operativa y el control dentro de una organizaci√≥n.
+    procesos, datos, tecnologÌa y recursos) que trabajan juntos para
+    recopilar, procesar, almacenar, distribuir y gestionar informaciÛn
+    con el fin de apoyar la toma de decisiones, la coordinaciÛn
+    operativa y el control dentro de una organizaciÛn.
 
 Tratamiento
 
-    Cualquier operaci√≥n o conjunto de operaciones realizadas sobre
+    Cualquier operaciÛn o conjunto de operaciones realizadas sobre
     datos personales o conjuntos de datos personales, ya sea por
     procedimientos automatizados o no, como la recogida, registro,
-    organizaci√≥n, estructuraci√≥n, conservaci√≥n, adaptaci√≥n o
-    modificaci√≥n, extracci√≥n, consulta, utilizaci√≥n, comunicaci√≥n por
-    transmisi√≥n, difusi√≥n o cualquier otra forma de habilitaci√≥n de
-    acceso, cotejo o interconexi√≥n, limitaci√≥n, supresi√≥n o
-    destrucci√≥n.
+    organizaciÛn, estructuraciÛn, conservaciÛn, adaptaciÛn o
+    modificaciÛn, extracciÛn, consulta, utilizaciÛn, comunicaciÛn por
+    transmisiÛn, difusiÛn o cualquier otra forma de habilitaciÛn de
+    acceso, cotejo o interconexiÛn, limitaciÛn, supresiÛn o
+    destrucciÛn.
