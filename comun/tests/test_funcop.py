@@ -6,6 +6,31 @@ import pytest
 
 from comun.funcop import agrupa
 from comun.funcop import static
+from comun.funcop import first
+
+def test_first_empty_list():
+
+    assert first([]) is None
+
+
+def test_first_one_element_list():
+    assert first([0]) == 0
+
+
+def test_first_many_element_list():
+    assert first([4, 5, 6, 7]) == 4
+
+
+def test_first_many_element_list_with_condition():
+    assert first([4, 5, 6, 7], lambda x: x > 5) == 6
+
+
+def test_first_many_element_found_nothing():
+    assert first([4, 5, 6, 7], lambda x: x > 55) is None
+
+
+def test_first_many_element_with_sentinel():
+    assert first([4, 5, 6, 7], lambda x: x > 55, default=-1) == -1
 
 
 def test_simple():
