@@ -85,13 +85,13 @@ migrate $APP='': check
 
 # Generar imágenes para la documentación de los modelos
 docs *args='.':
-    python ./manage.py graph_models -g -o docs/sistemas.png sistemas
-    python ./manage.py update_docs glosario > docs/glosario.md
-    python ./manage.py update_docs materias > docs/includes/materias.rst
-    python ./manage.py update_docs entes > docs/includes/entes.rst
-    python ./manage.py update_docs errores > docs/includes/errores.md
+    # python ./manage.py graph_models -g -o docs/sistemas.png sistemas
+    # python ./manage.py update_docs glosario > docs/glosario.md
+    # python ./manage.py update_docs materias > docs/includes/materias.rst
+    # python ./manage.py update_docs entes > docs/includes/entes.rst
+    # python ./manage.py update_docs errores > docs/includes/errores.md
 
-    sphinx-build -M html docs/ docs/ {{ args }} -E
+    sphinx-build -b html ./docs ./docs/html
 
 # Actualiza en caliente contenidos estaticos js/css/png/svg
 [unix]

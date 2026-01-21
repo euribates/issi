@@ -10,6 +10,11 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
+import django
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "main.settings")
+django.setup()
+
+
 project = 'ISSI - Inventario de sistemas de información'
 copyright = '2025, Juan Ignacio Rodríguez de León'
 author = 'Juan Ignacio Rodríguez de León'
@@ -19,13 +24,14 @@ release = '0.1'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 language = 'es'
 extensions = [
+    'sphinx.ext.autodoc',
     'sphinx.ext.graphviz',
     'sphinx.ext.napoleon',
     'sphinx.ext.todo',
     'myst_parser',
     ]
 
-templates_path = ['_templates']
+# templates_path = ['_templates']
 exclude_patterns = []
 
 language = 'es'

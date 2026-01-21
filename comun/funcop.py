@@ -1,37 +1,51 @@
 #!/usr/bin/env python3
 
 """
-## FuncOp - Functional operators
-
+Decoradores y generadores de uso común.
 """
 
+from typing import Any
 from typing import Callable
+from typing import Iterable, Iterator
 from html import escape
 import itertools
 
 
-def agrupa(rows: list, selector: Callable=None) -> dict:
+def agrupa(rows: Iterable, selector: Callable=None) -> dict:
     '''Agrupa una lista de elementos compuestos.
 
     Los elementos pueden ser tuplas, diccionarios, registros de la base
-    de datos, objetos, etc.  Hay que definir mediante el parámetro
-    `selector` un _callable_ que, a partir del elemento, devuelva la
+    de datos, objetos, etc.
+
+    Se puede definir, mediante el parámetro
+    ``selector``, un invocable que, a partir del elemento, devuelva la
     clave por la que se quiere agrupar. Si no se indica selector,
     entonces el selector por defecto espera que los elementos sean
     tuplas, listas, o alguna estructura de datos que se pueda acceder
     por un índice, y utiliza el primer valor, es decir el valor
-    en el índice $0$ para agrupar.
+    en el índice :math:`0` para agrupar.
 
     Ejemplo de uso:
 
         >>> datos = [('a', 1), ('b', 2), ('a', 3)]
         >>> agrupado = agrupa(datos)
+        >>> assert len(agrupado) == 2
         >>> assert agrupado['a'] == [('a', 1), ('a', 3)]
         >>> assert agrupado['b'] == [('b', 2)]
-        >>> assert len(agrupado) == 2
+
+    Parameters:
+
+        rows (Iterable): Sequencia de elementos
+
+    Returns:
+
+        Un diccionario, donde el componente seleccionado con
+        el parámetro ``selector`` actua como clave, u el valor
+        es una lista de los elementos de la sequencia que corresponden
+        con ese valor.
     '''
     result = {}
-    
+
     if selector is None:
 
         def selector(row):
@@ -53,41 +67,48 @@ def agrupa(rows: list, selector: Callable=None) -> dict:
     return result
 
 
-def first(iterable, condition=lambda x: True, default=None):
-    """
-    Find and return the first item in the `iterable` that
-    satisfies the `condition`.
+def first(iterable: Iterable, condition=lambda x: True, default=None) -> Any:
+    """Busca y devuelve el primer elemento de una sequencia.
 
-    Notes:
+    Si se especifica una condición, devuelve el primer elemento
+    que la cumpla, o ``None`` si ninguno lo cumple. Podemos usar
+    el parámetro ``default`` para que nos devuelva otro valor
+    en caso de no encontrar el elemento buscado.
 
-      - If the condition is not given, returns the first item of
-        the iterable. If the iterable is empty, returns the `default`
-        value.
+    Si no se indica la condición, devuelve el primer elemento
+    de la secuencia.
 
-    Examples:
+    Si la secuencia está vacia, devuelve ``None``
+    o el valor indicado en el parámetro ``default``, si se ha
+    especificado.
+
+    Ejemplos:
 
         >>> assert first(range(10)) == 0
         >>> assert first(range(10), lambda x: x != 0) == 1
         >>> assert first(range(10), lambda x: x>3) == 4
         >>> assert first(range(10), lambda x: x>30, default=-1) == -1
 
-    Args:
+    Parameters:
 
-      iterable (iterable): any iterable
+      iterable (Iterable): Una secuencia de elementos
 
-      condition (callale): a callable that acceps a item of the
-        sequence and returns a boolean
+      condition (Callale): un *callable* que acepta un elemento
+        de la secuencia y devulve un booleano.
 
-      defaut (Any): default sentinel value to be used in no
-        item in the iterable satisfies the condition. Value
-        by default is `None`.
+      defaut (Any): Valor centinela, que se usa para señalizar
+        que se ha agotado la secuencia y no se ha encontrado ningún
+        elemento de les deseados.  Por defecto es ``None``.
 
 
     Returns:
 
-        First item on the sequence to satisty the condition, or
-        the sentinel value if no one of the items satisfy the
-        condition.
+        Any: Si no se espedifica ninguna condición, el primer elemento
+        de la secuencia. Si se especifica la condición, el primer
+        elemento de la secuencia que la satisfaga. Si la secuencia
+        está vacía o ningún elemento cumple la condición, se devuelve
+        el valor centinela indicado por el parámetro ``default``,
+        por defecto, ``None``.
     """
     for item in iterable:
         if condition(item):
@@ -95,63 +116,142 @@ def first(iterable, condition=lambda x: True, default=None):
     return default
 
 
-def count_if(iterable, condition):
+def count_if(items: Iterable, condition: Callable) -> int:
     """
-    Returns the number of elements in iterable where condition is true.
+    Número de elementos que cumplen una condicion.
 
-    The `condition` parameter must be a callable expecting an item
-    of the sequence, and returning a boolean.
+    Calcula el número de elementos del iterable para los 
+    que la condición es verdadera.
 
-    Example of use:
+    El parámetro `condición` debe ser un invocable que
+    acepta un elemento de la secuencia y devuelva un booleano.
+
+    Ejemplo de uso:
 
         >>> from comun.seqtools import count_if
-        >>> assert count_if([1, 2, 3, 4], lambda item: item % 2 == 0) == 2
+        >>> def is_even(num: int) -> bool:
+        ...     return item % 2 == 0
+        ...
+        >>> assert count_if([1, 2, 3, 4], is_even) == 2
+
+    Parameters:
+
+        items (Iterable): Sequencia de elementos.
+
+        condition (Callable): Función que acepta como entrada un
+            elemento de la secuencia, y devuelve un booleano
+            que indica si debemos contarlo o no.
+
+    Returns:
+
+        int: Número de elementos de la secuencia que cumplen
+            la condición indicada.
     """
-    return sum(1 for item in iterable if condition(item))
+    return sum(1 for item in items if condition(item))
 
 
-def split_iter(iterable, condition):
+def split_iter(items: Iterable, condition: Callable) -> tuple[Iterable, Iterable]:
     """
-    Split an iterable in two, based on callable condition.
+    Divide un iterable en dos, en base a una condición.
 
-    condition must be a callable that accepts an element
-    of the sequence, and returns a boolean. The `split_iter`
-    function returns two iterables: First one is for the items
-    that are avaluated by `condition` as `True`, second one is
-    an iterable for the rest.
+    La condición debe ser un invocable que acepte un elemento de la
+    secuencia y devuelva un valor booleano. La función ``split_iter``
+    devuelve dos iterables: el primero para los elementos que
+    ``condition`` evalúa como ``True`` y el segundo para ``False``.
 
-    Example:
+    Ejemplo:
 
-        >>> pares, impares = split_iter(range(10), lambda x: x % 2 == 0)
+        >>> def is_even(num: int) -> bool:
+        ...     return item % 2 == 0
+        ...
+        >>> pares, impares = split_iter(range(10), is_even)
         >>> assert list(pares) == [0, 2, 4, 6, 8]
         >>> assert list(impares) == [1, 3, 5, 7, 9]
+
+    Es muy habitual usarlo con expresiones *lambda*:
+
         >>> lt4, gte4 = split_iter(range(10), lambda x: x < 4)
         >>> assert list(lt4) == [0, 1, 2, 3]
         >>> assert list(gte4) == [4, 5, 6, 7, 8, 9]
+
+    Parameters:
+
+        items (Iterable): Sequencia de elementos.
+
+        condition (Callable): Función que acepta como entrada un
+            elemento de la secuencia, y devuelve un booleano
+            que indica en en cual de los dos iterables
+            devuelto debe ir el elemento.
+
+    Returns:
+        
+        tuple[Iterable, Iterable]: Una dupla de dos iteradores, en el
+        primero están los elementos de la secuencia original para los
+        que la función de condición devuelve ``True``, y en el segundo
+        los elementos para los que devuelve ``False``.
     """
-    a, b = itertools.tee(iterable, 2)
-    positive_iter = (_ for _ in a if condition(_))
-    negative_iter = (_ for _ in b if not condition(_))
+    a_iter, b_iter = itertools.tee(items, 2)
+    positive_iter = (_ for _ in a_iter if condition(_))
+    negative_iter = (_ for _ in b_iter if not condition(_))
     return positive_iter, negative_iter
 
 
 def split_list(iterable, condition):
-    '''Like split_iter, but it returns lists instead of iterables.
+    '''Como split_iter, pero devuelve listas en vez de iterables.
+
+    Esta función se comporta igual que :py:func:`split_iter`, pero
+    en vez de devolver una tupla de iteradores, devuelve una tupla
+    de listas.
+
+    Parameters:
+
+        items (Iterable): Sequencia de elementos.
+
+        condition (Callable): Función que acepta como entrada un
+            elemento de la secuencia, y devuelve un booleano
+            que indica en en cual de los dos iterables
+            devuelto debe ir el elemento.
+
+    Returns:
+        
+        tuple[list, list]: Una dupla de dos listas, en la primero están
+        los elementos de la secuencia original para los que la función
+        de condición devuelve ``True``, y en la segunda los elementos
+        para los que devuelve ``False``.
+
     '''
     positive_items, negative_items = split_iter(iterable, condition)
     return list(positive_items), list(negative_items)
 
 
-def batch(iterable, size=2):
-    """Take an iterable and split it in several list
-    of size _size_, except for the last one, which
-    could have less elements.
+def batch(items: Iterable, size: int=2) -> Iterator[list]:
+    """Divide un iterable en una serie de listas más pequeñas.
 
-    Example:
+    Acepta un iterable y lo divide en una serie de listas
+    de tamaño fijo, definido con el segundo parámetro, ``size`` (por
+    defecto, :math:`2`). Las listas son todas del mismo tamaño, excepto
+    la última, que podría tener menos elementos.
+
+    Ejemplo:
 
     >>> assert list(batch(range(1, 8), 3)) == [(1, 2, 3), (4, 5, 6), (7,)]
+
+    Parameters:
+
+        items (Iterable): Sequencia de elementos.
+
+        size (int): El tamaño de los secciones. Por defecto, 2. La
+        última lista podrá tener un número menor de elementos que
+        el indicado.
+
+    Returns:
+
+        Iterator[list]: Es un iterador, cada llamada devolverá una lista
+        con los ``size`` elementos correspondientes, o puede que menos
+        en el caso de la última.
+
     """
-    iterable = iter(iterable)
+    iterable = iter(items)
     while True:
         chunk = []
         for _ in range(size):
@@ -166,8 +266,7 @@ def batch(iterable, size=2):
 
 
 def static(**kwargs):
-    '''
-    Decorador para añadir variables estáticas a una función.
+    '''Decorador para añadir variables estáticas a una función.
 
     Todos los parámetros por nombre que se indiquen, con el valor
     correspondiente, se crean como atributos de la propia función.
@@ -181,6 +280,12 @@ def static(**kwargs):
         ...     return suma.base + offset
         ...
         >>> assert suma(3) == 15
+
+    Parameters:
+
+        kwargs(dict): Parámetros pasados por nombre para indicar
+            los nombres valores de las variables estáticas
+            asociadas a la función decorada
 
     Returns:
 

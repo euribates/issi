@@ -17,7 +17,8 @@ from prettyconf import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+DOCS_ROOT = BASE_DIR / 'docs' / 'html'
+DOCS_ACCESS = 'public'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
     'health_check.storage',
     'health_check.contrib.psutil',
     'health_check.contrib.migrations',
+    'docs',
     'django_filters',
     'comun',
     'normativa',

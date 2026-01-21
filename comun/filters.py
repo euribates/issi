@@ -4,21 +4,26 @@ import re
 from urllib.parse import urlparse
 from html import escape
 
+"""
+Estos filtros son funciones que esperan un único parámetro y devuelven
+un único resultado. Están pensados sobre todo para limpiar o representar
+datos en distintos formatos.
 
+"""
 def clean_text(text: str) -> str|None:
     """Limpia el formato de texto.
 
     - Si hay espacios al principio o al final se eliminan
-    - Si tiene triples comillas dobles al principio y al final las elimina.
-    - Si tiene triples comillas simples al principio y al final las elimina.
     - Si tiene comillas dobles al principio y al final las elimina.
     - Si tiene comillas simples al principio y al final las elimina.
+    - Si tiene triples comillas dobles al principio y al final las elimina.
+    - Si tiene triples comillas simples al principio y al final las elimina.
 
     >>> assert clean_text('"hola"') == 'hola'
 
-    Params:
+    Parameters:
         
-        - text (str): La cadena de texto a limpiar.
+        text (str): La cadena de texto a limpiar.
 
     Returns:
 
@@ -45,20 +50,20 @@ def clean_text(text: str) -> str|None:
 def clean_integer(text: str) -> int|None:
     """Interpreta una cadena de texto como un número entero.
 
-    Los valores especiales '' (cadena vacia) o `'_U'` se 
-    interpretan como `None`.
+    Los valores especiales ``''`` (cadena vacia) o ``'_U'`` se 
+    interpretan como ``None``.
 
     >>> assert clean_integer('123') == 123
     >>> assert clean_integer('_U') is None
 
-    Params:
+    Parameters:
 
         text (str): Una cadena de texto que contiene un número
-                    entero, como `'123'`.
+                    entero, como ``'123'``.
 
     Returns:
 
-        Un entero, o `None`.
+        Un entero, o ``None``.
     """
     text = clean_text(text)
     if text is None:
@@ -74,9 +79,10 @@ def clean_integer(text: str) -> int|None:
 def clean_url(url: str) -> str:
     """Limpia el formato de texto de una url.
 
-    - Si `url` es nulo, vacio o el valor `_U` se devuelve None
-    - Verifica que empieza por http
-    - Realiza las mismas operaciones de limpieza que `clean_text`:
+    - Si ``url`` es nulo, vacio o el valor ``_U`` se devuelve ``None``
+    - Verifica que empieza por ``http``
+    - Realiza las mismas operaciones de limpieza que 
+      :py:func:`clean_text`:
 
     >>> assert clean_url('http://www.python.org/') == 'http://www.python.org/'
     >>> assert clean_url(None) == None
@@ -89,9 +95,9 @@ def clean_url(url: str) -> str:
 
     Returns:
 
-        Una cadena de texto con la URL limpia, o `None`. Si la entrada
+        Una cadena de texto con la URL limpia, o ``None``. Si la entrada
         no es vacia paro no tiene el formato de una URL se eleva la
-        excepcion `ValueError`.
+        excepcion :py:exc:`ValueError`.
     """
 
     if url in {'_U', '', None}:
@@ -162,9 +168,9 @@ _SLUGIFY_PAT_MULTIPLE_HYPHENS = re.compile(r'--+')
 
 
 def slugify(texto: str) -> str:
-    """Transforma texto a un valor válido para usarse como _slug_
+    """Transforma texto a un valor válido para usarse como *slug*.
 
-    Sustituye espacion por el caracter `'-'`, elimina caracteres
+    Sustituye espacios por el caracter ``'-'``, elimina caracteres
     especiales, convierte vocales acentuadas, reduce repeticiones,
     convierte mayúsculas a minúsculas y otras modificaciones que
     permiten usar el resultado como un valor seguro para ser usado como
@@ -172,7 +178,7 @@ def slugify(texto: str) -> str:
 
     >>> slugify('Hola, mundo') == 'hola-mundo'
 
-    Params:
+    Parameters:
 
         text (str): El texto a transformar
 
@@ -188,4 +194,3 @@ def slugify(texto: str) -> str:
     result = ''.join([_ for _ in result if ord(_) < 129])
     result = _SLUGIFY_PAT_MULTIPLE_HYPHENS.sub('-', result)
     return result
-

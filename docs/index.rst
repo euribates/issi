@@ -1,24 +1,22 @@
-.. ISSI - Inventario de sistemas de información documentation master file, created by
-   sphinx-quickstart on Thu Nov 20 17:44:06 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. ISSI - Inventario de sistemas de información documentation master file
 
-ISSI - Inventario de sistemas de información documentation
+==========================================================
+ISSI - Inventario de sistemas de información 
 ==========================================================
 
+Documentación.
 
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Contents:
-
-   sistemas.rst
+   :maxdepth: 2
+   :caption: Índice de contenidos:
 
    importacion_exportacion
    estimacion_calidad
    entes
 
-materias
-
-glosario.md
-FAQ.md
+   sistemas
+   comun
+   materias
+   glosario
+   FAQ

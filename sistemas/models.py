@@ -17,6 +17,9 @@ from directorio.models import Organismo
 from . import diagnosis
 from . import links
 
+"""
+Modelos definidos en sistemas.
+"""
 
 #~ Dominio para correo electrónico
 EMAIL_DOMAIN = 'gobiernodecanarias.org'

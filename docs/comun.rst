@@ -1,15 +1,17 @@
+
 ************************************************************************
-Sistemas
+Utilidades comunes
 ************************************************************************
 
-Modelos
+Filtros
 ========================================================================
 
-.. automodule:: sistemas.models
+.. automodule:: comun.filters
    :members: 
 
-Vistas
+Operadores funcionales
 ========================================================================
 
-.. automodule:: sistemas.views
+.. automodule:: comun.funcop
    :members: 
+

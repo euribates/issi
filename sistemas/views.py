@@ -29,6 +29,8 @@ from sistemas.models import importar_sistemas_desde_fichero
 from sistemas.models import Sistema
 from sistemas.models import Usuario
 
+"""Vistas de sistemas.
+"""
 
 @cache
 def cmd_sistemas():
@@ -66,6 +68,8 @@ def cmd_usuarios():
 
 
 def index(request, *args, **kwargs):
+    """Página de inicio de sistemas.
+    """
     sistemas = (
         models.Sistema.objects
         .select_related('tema')
