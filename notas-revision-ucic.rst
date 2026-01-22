@@ -64,12 +64,14 @@ Tipos de subvenciones detectadas:
 - PRESTAMOS DIRECTOS (361)
 - PROIS Proyectos de Innovación Social (264, 277, 283)
 - PROYECTOS I+D (260, 270, 302, 322, 344)
-- REDCIDE (259, 271, 316, 336, 341, 350, 351, 356)
+- REDCIDE, o RED CIDE (259, 271, 316, 336, 341, 350, 351, 356)
 - REPT (354)
-- 
+- SCAIE (353)
+- SUBVENCION DIRECTA (360)
+- TDT (313)
+- TESIS (266, 278, 282, 295, 311, 315, 330, 335, 342, 348, 349, 355)
+- TECNOLOGOS, o TECNÓLOGOS (261, 276, 285, 297, 304, 319, 327, 343)
 
-- TECNOLOGOS (261, 276, 285, 297, 304, 319, 327, 343)
-- TESIS 
 
 
 APCR
@@ -106,7 +108,7 @@ SCAIE
 SUBVENCION DIRECTA
 TDT
 TECNOLOGOS (o TECNÓLOGOS)
-TESIS
+TESI
 
 
 Una excepción podria ser el de Ayudas directas. Puede que el proceso
