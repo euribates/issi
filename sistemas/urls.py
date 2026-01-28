@@ -50,4 +50,5 @@ urlpatterns = [
     tie('importar/', views.importar_sistemas),
     tie("patch/organismos/", views.patch_organismos),
     tie("patch/usuarios/", views.patch_usuarios),
+    tie("patch/sistemas/", views.patch_sistemas),
     ]
