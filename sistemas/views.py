@@ -17,6 +17,7 @@ from . import links
 from . import models
 from . import serializers
 
+from comun.results import Result, Success, Failure
 from comun.error import errors
 from comun.bus import Bus
 from comun.commands import Command
@@ -608,25 +609,30 @@ def sistemas_sin_tema(request):
         })
 
 
-def patch_organismos(request):
-    datastar = request.GET.get('datastar')
-    try:
+# Patchs for datastar
+
+
+def get_datastar_parameter(request, name: str, default=None) -> Result:
+    datastar = request.GET.get('datastar', '')
+    if datastar:
         params = json.loads(datastar)
-    except Exception as err:
-        params = {
-            'error': escape(repr(err)),
-            }
-    query = params.get("query")
+        if name in params:
+            return params[name]
+    return default
+
+
+def patch_organismos(request):
+    query = get_datastar_parameter(request, 'query')
+    if query:
+        organismos = Organismo.search_organismos(query)
+    else:
+        organismos = Organismo.objects.all()
     buff = [
         '<select name="organismo"'
         ' size="17"'
         ' class="form-control">',
         '<option value="">Sin asignar</option>'
         ]
-    if query:
-        organismos = Organismo.search_organismos(query)
-    else:
-        organismos = Organismo.objects.all()
     selected = ' selected'
     contador = organismos.count()
     for org in organismos:
@@ -644,25 +650,32 @@ def patch_organismos(request):
         )
 
 
+def patch_sistemas(request):
+    sistemas = Sistema.objects.all()
+    query = get_datastar_parameter(request, 'query')
+    if query:
+        sistemas = sistemas.filter(
+            Q(nombre_sistema__icontains=query)
+            | Q(codigo__icontains=query)
+            | Q(tema__nombre_tema__icontains=query)
+            )
+    return render(request, 'sistemas/includes/listado-sistemas.html', {
+        'sistemas': sistemas,
+        })
+
+
 def patch_usuarios(request):
-    datastar = request.GET.get('datastar')
-    try:
-        params = json.loads(datastar)
-    except Exception as err:
-        params = {
-            'error': escape(repr(err)),
-            }
-    query = params.get("query")
+    query = get_datastar_parameter(request, 'query')
+    if query:
+        usuarios = Usuario.search_usuarios(query)
+    else:
+        usuarios = Usuario.objects.all()[0:100]
     buff = [
         '<select name="usuario"'
         ' size="7"'
         ' class="form-control">',
         '<option value="">Sin asignar</option>'
         ]
-    if query:
-        usuarios = Usuario.search_usuarios(query)
-    else:
-        usuarios = Usuario.objects.all()[0:100]
     selected = ' selected'
     contador = usuarios.count()
     for usr in usuarios:

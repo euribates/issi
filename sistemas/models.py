@@ -528,7 +528,7 @@ class Usuario(models.Model):
             cls.objects.filter(
                 Q(login__icontains=query) |
                 Q(email__icontains=query) |
-                Q(nombre_sistema__icontains=query) |
+                Q(nombre__icontains=query) |
                 Q(apellidos__icontains=query)
                 )
             )

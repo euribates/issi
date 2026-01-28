@@ -40,7 +40,13 @@ class Norma(models.Model):
         return self.nombre_norma
 
     def url_juriscan(self) -> Optional[str]:
-        '''Devuelve la URL de la ficha de Juriscan, si existe, o None.
+        '''URL a la ficha de Juriscan, si existe, o None.
+
+        Returns:
+
+            (str|None): La URL completa de la ficha de Juriscan,
+            si existe, o ``None`` en caso de que no se haya
+            definido.
         '''
         if self.id_juriscan > 0:
             return f'{JURISCAN_BASE}/ficha.jsp?id={self.id_juriscan}'

@@ -74,3 +74,11 @@ def as_markdown(text):
     if '<table' in result:
         result = result.replace('<table', '<table class="table"')
     return mark_safe(result)
+
+
+@register.filter
+def as_badge(text: str, klass='') -> str:
+    _klass = 'badge text-white bg-primary'
+    if klass:
+        _klass = f'{_klass} {klass}'
+    return mark_safe(f'<span class="{_klass}">{text}</span>')
