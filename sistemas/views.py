@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 from functools import cache
-from html import escape
 import io
 import json
 
@@ -9,6 +8,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
+from django.db.models import Q
 
 from . import breadcrumbs as bc
 from . import diagnosis
@@ -17,7 +17,6 @@ from . import links
 from . import models
 from . import serializers
 
-from comun.results import Result, Success, Failure
 from comun.error import errors
 from comun.bus import Bus
 from comun.commands import Command
@@ -612,7 +611,7 @@ def sistemas_sin_tema(request):
 # Patchs for datastar
 
 
-def get_datastar_parameter(request, name: str, default=None) -> Result:
+def get_datastar_parameter(request, name: str, default=None) -> str|None:
     datastar = request.GET.get('datastar', '')
     if datastar:
         params = json.loads(datastar)
