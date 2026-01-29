@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'normativa',
     'sistemas',
     'directorio',
+    'juriscan',
     'glosario',
     ]
 
