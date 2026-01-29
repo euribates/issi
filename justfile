@@ -6,6 +6,7 @@ DATABASE := "default"
 shell:
     python ./manage.py shell_plus
 
+
 # Buscar en el código usando
 search *args: 
     pss --py --html --css --txt {{ args }} --ignore-dir=.venv
@@ -48,6 +49,7 @@ check:
     # python ./manage.py validate_templates
     ruff check .
 
+
 # Ejecutar django collectstatic
 static:
     python ./manage.py collectstatic --no-input
@@ -73,15 +75,18 @@ showmigrations $APP='': check
 
 alias sm := showmigrations
 
+
 # Crear nuevas migraciones Django
 makemigrations $APP='': check
     python manage.py makemigrations {{APP}}
 
 alias mm := makemigrations
 
+
 # Ejecutar migraciones Django
 migrate $APP='': check
     python manage.py migrate {{APP}} --database $DATABASE
+
 
 # Generar imágenes para la documentación de los modelos
 docs *args='.':
@@ -90,7 +95,6 @@ docs *args='.':
     # python ./manage.py update_docs materias > docs/includes/materias.rst
     # python ./manage.py update_docs entes > docs/includes/entes.rst
     # python ./manage.py update_docs errores > docs/includes/errores.md
-
     sphinx-build -b html ./docs ./docs/html
 
 # Actualiza en caliente contenidos estaticos js/css/png/svg
