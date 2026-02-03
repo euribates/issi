@@ -4,7 +4,7 @@ from uuid import UUID
 
 import pytest
 
-from comum.erros import ErrorMessage
+from comum.error import ErrorMessage
 from sistemas.error import errors
 
 

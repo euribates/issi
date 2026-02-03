@@ -237,7 +237,6 @@ def test_parse_row(hacienda, jrodleo, malosua, juriscan_5559):
         '2b4c67ad-cf08-11f0-bdf7-38d5470ea667', # uuid
         )
     data = parsers.parse_row(row)
-    from icecream import ic; ic(data)
     assert data['nombre_sistema'].value == 'Nombre del sistema'
     assert data['codigo'].value == 'CODIGO'
     assert data['proposito'].value == 'Esta es la finalidad'
