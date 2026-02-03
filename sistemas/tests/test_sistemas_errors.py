@@ -4,11 +4,12 @@ from uuid import UUID
 
 import pytest
 
+from comum.erros import ErrorMessage
 from sistemas.error import errors
 
 
-def test_EI0001_is_exception():
-    assert isinstance(errors.EI0001(23), ValueError)
+def test_EI0001_is_error_message():
+    assert isinstance(errors.EI0001(23), ErrorMessage)
 
 
 def test_EI0001_message():
@@ -24,7 +25,7 @@ def test_EI0001_message_with_num_linea():
 def test_num_errores_definidos_en_catalogo():
     """Incrementar el número cuando se den de alta más errores.
     """
-    assert len(errors) >= 6
+    assert len(errors) >= 8
     assert 'EI0001' in errors.keys()
 
 
@@ -52,6 +53,7 @@ def test_EI0011_codigo_duplicado():
         ]
     for expected in expecteds:
         assert expected in str(errors.EI0011(codigo))
+
 
 
 if __name__ == "__main__":

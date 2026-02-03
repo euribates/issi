@@ -5,23 +5,25 @@ from dataclasses import dataclass
 
 
 @dataclass
-class ErrorMessage(ValueError):
+class ErrorMessage():
+
     code: str
     name: str
     message: str
     context: dict
 
     def __str__(self) -> str:
-        buff = [f'Error {self.code}: {self.name}']
+        '''Descripción del error en texto plano.
+        '''
+        buff = [f'Error {self.code}: {self.name} ']
         buff.append(self.message)
         if self.context:
-            buff.append('\nVariables de contexto:')
             for _name, _val in self.context.items():
                 buff.append(f' - {_name}: {escape(repr(_val))}')
         return '\n'.join(buff)
 
     def as_html(self):
-        '''Descripción del error para mensajes HTML.
+        '''Descripción del error en formato HTML.
         '''
         buff = [
             '<div class="error-message">',
@@ -32,49 +34,35 @@ class ErrorMessage(ValueError):
             '</p>',
             ]
         if self.context:
-            buff.append('<hr>')
-            buff.append('<p>Contexto:</p>')
+            buff.append('<dl>')
             for _name, _val in self.context.items():
-                buff.append(f'<p>{_name}: {escape(repr(_val))}</p>')
+                buff.append(f'<dt>{_name}</dt>')
+                buff.append(f' <dd>{escape(repr(_val))}</dd>')
+            buff.append('</dl>')
         buff.append('</div>')
         return '\n'.join(buff)
 
-
-class BaseError():
-    '''Clase Base para todos los errores.
-    '''
-
-    def __init__(self, code, name, desc, refs):
-        '''Contructor de la clase Error.
-        '''
-        self.code = code
-        self.name = name
-        self.desc = desc
-        self.refs = refs or []
-
     def __call__(self, value=None, **context):
-        message = self.desc
+        message = self.message
         if value:
-            message = self.desc.format(value=escape(repr(value)))
-        return ErrorMessage(self.code, self.name, message, context.copy())
+            message = message.format(value=escape(repr(value)))
+        return ErrorMessage(
+            self.code,
+            self.name,
+            message,
+            context.copy(),
+            )
 
 
 class ErrorCatalog:
 
     kernel = {}
 
-    def register(self, cls):
+    def register(self, code, name, desc='', refs=None):
         '''Decorador para registar una clase de error en el catálogo.
         '''
-        code = cls.__name__
-        name = cls.name
-        desc = cls.desc
-        refs = []
-        if hasattr(cls, 'refs'):
-            refs = list(cls.refs)
-        err_handler = BaseError(code, name, desc, refs)
-        self.kernel[code] = err_handler
-        return cls
+        refs = list(refs) if refs else []
+        self.kernel[code] = ErrorMessage(code, name, desc, refs)
 
     def __len__(self):
         return len(self.kernel)
@@ -87,16 +75,15 @@ class ErrorCatalog:
             f' atributo llamado {escape(name)}'
             )
 
-    def __iter__(self):
-        self._items = list(self.kernel.items())
-        return self
+    def __getitem__(self, key):
+        return self.kernel[key]
 
-    def __next__(self):
-        if self._items:
-            return self._items.pop(0)
-        raise StopIteration
+    def __iter__(self):
+        return iter(list(self.kernel.items()))
 
     def keys(self):
+        '''Devuelve los códigos de errores registrados.
+        '''
         return self.kernel.keys()
 
 

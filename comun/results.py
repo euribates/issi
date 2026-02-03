@@ -48,7 +48,7 @@ class Success:
         value (Any): Un valor para incluir en el resultado (opcional)
     """
 
-    def __init__(self, value=True):
+    def __init__(self, value=True, extra=None):
         """constructor de la clase success.
 
         Params:
@@ -56,6 +56,7 @@ class Success:
             value (any): el valor a incluir en el resultado.
         """
         self.value = value
+        self.extra = extra
 
     def __bool__(self) -> bool:
         """Resultado se intenta evaluar una instancia como booleno.
@@ -89,6 +90,8 @@ class Success:
     def __repr__(self):
         """Representación de una instancia tipo ``Success``.
         """
+        if self.extra:
+            return f'Success({self.value!r}, extra={self.extra!r})'
         return f'Success({self.value!r})'
 
     @property
@@ -163,9 +166,9 @@ class Failure:
     def __repr__(self) -> str:
         """Representación de una instancia tipo ``Failure``.
         """
-        if self.extra is None:
-            return f'Failure({self.error_message!r})'
-        return f'Failure({self.error_message!r}, extra={self.extra!r})'
+        if self.extra:
+            return f'Failure({self.error_message!r}, extra={self.extra!r})'
+        return f'Failure({self.error_message!r})'
 
     def __str__(self) -> str:
         """Versión texto de una instancia tipo ``Failure``.

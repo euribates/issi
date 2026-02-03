@@ -523,6 +523,13 @@ class Usuario(models.Model):
             return None
 
     @classmethod
+    def load_usuario_by_username(cls, username:str):
+        try:
+            return cls.objects.get(login=username)
+        except cls.DoesNotExist:
+            return None
+
+    @classmethod
     def search_usuarios(cls, query):
         return (
             cls.objects.filter(

@@ -1,188 +1,255 @@
 #!/usr/bin/env python3
 # pylint: disable=no-member
 
+"""
+Todas las funciones definidas en este módulo
+deben devolver o bien un pbjeto de la clase
+``Success`` o uno de la clase ``Failure``.
+
+El valor devuelto dentro de ``Success`` deberia
+ser del tipo más cercanbo posible al esperado.
+"""
+
 import re
 from uuid import UUID
 
-from caches.dir3 import reverse_dir3
 from caches.temas import temas
-from comun.funcop import static
+from comun.funcop import first
+from comun.results import Result, Success, Failure
+from directorio.models import Organismo
+from juriscan.models import Juriscan
 from sistemas.error import errors
+from sistemas.models import Tema
+from sistemas.models import Usuario
 
-
+#: Dominio por defecto para los correos electrónicos.
 DEFAULT_DOMAIN = 'gobiernodecanarias.org'
 
-pat_username = re.compile(r"[a-zA-Z0-9_.+-]+$")
-pat_email = re.compile(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
-pat_full = re.compile(r"(.+)\s+<(.+)>$")
+#: Patron para localizar separados coma y punto y coma
+pat_sep = re.compile(r'\s*[,;]\s*')
 
+#: Patrón para detectar valores de username
+pat_username = re.compile(r"^[a-zA-Z0-9_.+-]+$")
 
-@static(ya_vistos=set([]))
-def parse_codigo_interno(codigo: str, n_linea=None):
-    codigo = codigo.strip()
-    if not codigo:
-        raise errors.EI0003(n_linea=n_linea)
-    pat_codigo_interno = re.compile(r'[A-Z_][0-9A-Z_][0-9A-Z_]+$')
-    _match = pat_codigo_interno.match(codigo)
-    if not _match:
-        raise errors.EI0002(codigo, n_linea=n_linea)
-    if codigo in parse_codigo_interno.ya_vistos:
-        raise errors.EI0004(codigo, n_linea=n_linea)
-    parse_codigo_interno.ya_vistos.add(codigo)
-    return codigo
+#: Patrón para detectar correos electrónicos simples
+pat_email = re.compile(r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$")
 
+#: Patrón para detectar correos elctrónicos completos
+pat_full = re.compile(r"(.+)\s+<(.+@.+)>$")
 
-def parse_proposito(texto, n_linea) -> str:
-    sublines = texto.splitlines()
-    if len(sublines) > 0:
-        return sublines[0]
-    return ''
-
-
-def parse_descripcion(texto, n_linea) -> str:
-    sublines = texto.splitlines()
-    if len(sublines) > 1:
-        return '\n\n'.join(sublines[1:])
-    return ''
-
-
-def parse_dir3(dir3, n_linea=None) -> int|None:
-    if dir3 is None:
-        return None
-    dir3 = str(dir3).strip()
-    if not dir3:
-        return None
-    if dir3 in reverse_dir3:
-        return reverse_dir3[dir3]
-    raise errors.EI0007(dir3, n_linea=n_linea)
-
-
-def parse_materia_competencial(materia: str, n_linea=None) -> str|None:
-    if materia is None:
-        return 'UNK'
-    materia = materia.strip()
-    if materia == '':
-        return 'UNK'
-    if materia in temas:
-        return materia
-    for codigo, descripcion in temas.items():
-        if descripcion == materia:
-            return codigo
-    raise errors.EI0008(materia, n_linea=n_linea)
-
-
-def parse_users(txt: str, n_linea=None) -> set[dict]:
-    result = []
-    txt = txt.strip()
-    if not txt:
-        return result
-    if ',' in txt:
-        for item in pat_comma.split(txt):
-            values = parse_users(item, n_linea=n_linea)
-            if values:
-                result.extend(values)
-        return result
-    match = pat_full.match(txt)
-    if match:
-        name = match.group(1)
-        email = match.group(2)
-        if pat_email.match(email):
-            login = email.split('@', 1)[0]
-            return [{
-                'name': name,
-                'login': login,
-                'email': email,
-    }]
-    match = pat_email.match(txt)
-    if match:
-        login = txt.split('@', 1)[0]
-        return [{
-            'name': None,
-            'login': login,
-            'email': txt,
-            }]
-    match = pat_username.search(txt)
-    if match:
-        return [{
-            'name': None,
-            'login': txt,
-            'email': f'{txt}@{DEFAULT_DOMAIN}'
-            }]
-    raise errors.EI0009(txt, n_linea=n_linea)
-
-
+#: Patrón para detectar números enteros
 pat_integer = re.compile(r'\d+$')
-pat_comma = re.compile(r'\s*,\s*')
+
+#: Patron para detectar enlaces a Juriscán
 pat_url_juriscan = re.compile(
     r'https?://www\d?\.gobiernodecanarias\.org/juriscan/ficha\.jsp\?id=(\d+)'
     )
 
+# Patron para detectar UUID
+pat_uuid = re.compile(r'[\da-f]{8}-([\da-f]{4}-){3}[\da-f]{12}$', re.IGNORECASE)
 
-def parse_juriscan(text: str|None, n_linea=None) -> list[int]:
-    result = []
-    if not bool(text):
-        return result
+
+def parse_nombre_sistema(texto: str, n_linea=None) -> Result:
+    """Parsea el nombre del sistema.
+
+    Este no puede ser nulo, y debe tener como mínimo tres
+    caracteres. Si hay un punto al final, se elimina.
+
+    Ejemplo de uso:
+
+        >>> rs = parse_nombre_del_sistema('')
+        >>> assert rs.is_failure()
+        >>> rs = parse_nombre_del_sistema('Ares.')
+        >>> assert rs.is_success()
+        >>> assert rs.value = 'Ares'
+
+    Parameters:
+
+        - texto (str): El texto que contiene el nombre del sistema.
+
+    Returns:
+
+        (Result) ``Success`` si el nombre se considera válido,
+          ``Failure`` en caso contrario.
+
+    """
+    if texto:
+        texto = texto.strip()
+        if texto[-1] == '.':
+            texto = texto[:-1]
+        if len(texto) > 3:
+            return Success(texto)
+    return Failure(errors.EI0013(texto, n_linea=n_linea))
+
+
+def parse_codigo_interno(codigo: str, n_linea=None) -> Result:
+    '''devuelve el código identificativo interno (CII) del sistema.
+    '''
+    codigo = codigo.strip()
+    if not codigo:
+        return Failure(errors.EI0003(n_linea=n_linea))
+    pat_codigo_interno = re.compile(r'[A-Z_][0-9A-Z_][0-9A-Z_]+$')
+    _match = pat_codigo_interno.match(codigo)
+    if not _match:
+        return Failure(errors.EI0002(codigo, n_linea=n_linea))
+    return Success(codigo)
+
+
+def parse_proposito(texto, n_linea=None) -> Result:
+    if texto is None:
+        return Success('')
+    texto = texto.strip()
+    sublines = texto.splitlines()
+    if len(sublines) > 0:
+        return Success(sublines[0])
+    else:
+        return Success(texto)
+
+
+def parse_descripcion(texto, n_linea=None) -> Result:
+    sublines = texto.splitlines()
+    if len(sublines) > 1:
+        return Success('\n\n'.join(sublines[1:]))
+    return Success('')
+
+
+def parse_comentarios(texto, n_linea=None) -> Result:
+    if texto is None:
+        return Success('')
+    texto = texto.strip()
+    if texto == '':
+        return Success('')
+    sublines = texto.splitlines()
+    return Success('\n\n'.join(sublines))
+
+
+def parse_dir3(dir3, n_linea=None) -> Result:
+    if dir3 is None:
+        return Success(None)
+    dir3 = str(dir3).strip()
+    if not dir3:
+        return Success(None)
+    organismo = Organismo.load_organismo_using_dir3(dir3)
+    if organismo:
+        return Success(organismo)
+    return Failure(errors.EI0007(dir3, n_linea=n_linea))
+
+
+def parse_materia_competencial(materia: str, n_linea=None) -> Result:
+    '''Devuelve la materia competencial que corresponda.
+
+    Si no se especifica, devuelve la materia ``UNK``.
+    '''
+    if materia is None:
+        return Success(Tema.load_tema('UNK'))
+    materia = materia.strip()
+    if materia == '':
+        return Success(Tema.load_tema('UNK'))
+    if materia in temas:
+        return Success(Tema.load_tema(materia))
+    for codigo, descripcion in temas.items():
+        if descripcion == materia:
+            return Success(Tema.load_tema(codigo))
+    return Failure(errors.EI0008(materia, n_linea=n_linea))
+
+
+def _parse_one_user(text: str, n_linea: int) -> Result|Failure:
+    if match := pat_full.match(text):
+        nombre = match.group(1)
+        email = match.group(2)
+        username = first(email.split('@'))
+    elif match := pat_email.match(text):
+        username = first(text.split('@'))
+        email = text
+        nombre = None
+    elif match := pat_username.search(text):
+        username = text
+        email = f'{text}@{DEFAULT_DOMAIN}'
+        nombre = None
+    else:
+        return Failure(errors.EI0009(text, n_linea=n_linea))
+    usuario = Usuario.load_usuario_by_username(username) or Usuario(
+            login=username,
+            email=email,
+            nombre=nombre,
+            )
+    return Success(usuario)
+
+
+def parse_users(text: str, n_linea=None) -> set[Result]:
+    """Devuelve un conjunto de usuarios.
+    """
     text = text.strip()
-    match = pat_integer.match(text)
-    if match:
-        result.append(int(match.group(0)))
-        return result
-    if ',' in text:
-        for item in pat_comma.split(text):
-            values = parse_juriscan(item, n_linea=n_linea)
-            if values:
-                result.extend(values)
-        return result
-    for match in pat_url_juriscan.finditer(text):
-        result.append(int(match.group(1)))
-    return result
+    if not text:
+        return set()
+    if '\n' in text:
+        return {
+            _parse_one_user(item, n_linea=n_linea)
+            for item in text.splitlines(text)
+            }
+    if ',' in text or ';' in text:
+        return {
+            _parse_one_user(item, n_linea=n_linea)
+            for item in pat_sep.split(text)
+            }
+    return {
+        _parse_one_user(text, n_linea=n_linea)
+        }
 
 
-PAT_UUID = re.compile(r'[\da-f]{8}-([\da-f]{4}-){3}[\da-f]{12}$', re.IGNORECASE)
+def _parse_one_juriscan(text: str, n_linea=None) -> Result:
+    if match := pat_integer.match(text):
+        id_juriscan = int(match.group(0))
+    elif match := pat_url_juriscan.match(text):
+        id_juriscan = int(match.group(1))
+    juriscan = Juriscan.load_or_create(id_juriscan)
+    if juriscan:
+        return Success(juriscan)
+    return Failure(errors.EI0012(text))
 
 
-def parse_uuid(value: str, n_linea=None) -> UUID|None:
-    if value is None:
-        return None
-    value = value.strip()
-    if value == '':
-        return None
-    match = PAT_UUID.match(value)
-    if match:
-        return UUID(value)
-    raise errors.EI0005(value)
+def parse_juriscan(text: str|None, n_linea=None) -> set[Result]:
+    if not text:
+        return set()
+    text = text.strip()
+    if '\n' in text:
+        return {
+            _parse_one_juriscan(item, n_linea=n_linea)
+            for item in text.splitlines(text)
+            }
+    if ',' in text or ';' in text:
+        for item in pat_sep.split(text):
+            return {
+                _parse_one_juriscan(item, n_linea=n_linea)
+                for r in pat_sep.split(item)
+                }
+    return {
+        _parse_one_juriscan(text, n_linea=n_linea)
+        }
 
 
-CHECKS = [
-    # (columna, field_name, parser_function),
-    (0, 'nombre_sistema', None),
-    (1, 'codigo', parse_codigo_interno),
-    (2, 'proposito', parse_proposito),
-    (2, 'descripcion', parse_descripcion),
-    (3, 'tema', parse_materia_competencial),
-    (4, 'organismo', parse_dir3),
-    (5, 'responsables_tecnologicos', parse_users),
-    (6, 'responsables_funcionales', parse_users),
-    (7, 'juriscan', parse_juriscan),
-    (8, 'comentarios', None),
-    (9, 'uuid_sistema', parse_uuid),
-    ]
+def parse_uuid(value: str, n_linea=None) -> Result:
+    if value:
+        value = value.strip()
+        match = pat_uuid.match(value)
+        if match:
+            return Success(UUID(value))
+    return Failure(errors.EI0005(value))
+
 
 
 def parse_row(tupla: tuple, n_linea=None) -> dict:
-    payload = {
-        'errores': [],
-        }
-    for num_col, field_name, parser_function in CHECKS:
-        try:
-            value = tupla[num_col]
-        except IndexError:
-            value = None
-        if parser_function:
-            try:
-                value = parser_function(value, n_linea=n_linea)
-            except ValueError as err:
-                payload['errores'].append(err)
-        payload[field_name] = value
-
-    return payload
+    result = {}
+    result['nombre_sistema'] = parse_nombre_sistema(tupla[0])
+    result['codigo'] = parse_codigo_interno(tupla[1])
+    result['proposito'] = parse_proposito(tupla[2])
+    result['descripcion'] = parse_descripcion(tupla[2])
+    result['tema'] = parse_materia_competencial(tupla[3])
+    result['organismo'] = parse_dir3(tupla[4])
+    result['responsables_tecnologicos'] = parse_users(tupla[5])
+    result['responsables_funcionales'] = parse_users(tupla[6])
+    result['juriscan'] = parse_juriscan(tupla[7])
+    result['comentarios'] = parse_comentarios(tupla[8])
+    if len(tupla) > 9:
+        result['uuid'] = parse_uuid(tupla[9])
+    return result
