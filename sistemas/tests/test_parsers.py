@@ -114,7 +114,7 @@ def test_parse_materia_competencial_empty():
 
 def test_parse_materia_competencial_failure():
     with pytest.raises(ValueError):
-        parsers.parse_materia_competencial('¯\_(ツ)_/¯')
+        parsers.parse_materia_competencial(r'¯\_(ツ)_/¯')
 
 
 def test_parse_row():

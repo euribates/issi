@@ -9,6 +9,8 @@ from django.contrib import admin
 from django.urls import include
 from django.urls import path
 
+from health_check.views import HealthCheckView
+
 from comun.views import homepage, labo
 
 
@@ -22,7 +24,18 @@ def goto(url):
 
 urlpatterns = [
     tie("", homepage),
-    path("health/", include("health_check.urls")),
+    path("health/", HealthCheckView.as_view(checks=[
+            "health_check.Cache",
+            "health_check.Database",
+            "health_check.Disk",
+            # "health_check.Mail",
+            "health_check.Memory",
+            "health_check.Storage",
+            # 3rd party checks
+            # "health_check.contrib.celery.Ping",
+            # "health_check.contrib.rabbitmq.RabbitMQ",
+            # "health_check.contrib.redis.Redis",
+        ])),
     path("favicon.ico", goto('static/favicon.png')),
     path('labo/', labo),
     path("comun/", include('comun.urls')),

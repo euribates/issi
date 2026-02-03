@@ -45,10 +45,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'health_check',
-    'health_check.cache',
-    'health_check.storage',
-    'health_check.contrib.psutil',
-    'health_check.contrib.migrations',
+
+#   'health_check.cache',
+#   'health_check.storage',
+#   'health_check.Disk',
+#   'health_check.Memory',
+#   'health_check.contrib.migrations',
+
     'docs',
     'django_filters',
     'comun',
@@ -160,7 +163,7 @@ STATICFILES_DIRS = [BASE_DIR / "main" / "static"]
 MEDIA_URL = 'files/'
 MEDIA_ROOT = BASE_DIR / 'uploads'
 
-FORMS_URLFIELD_ASSUME_HTTPS = True
+# FORMS_URLFIELD_ASSUME_HTTPS = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -229,7 +232,3 @@ if DEBUG:
 
 
 LC_TIME_SPANISH_LOCALE = config('LC_TIME_SPANISH_LOCALE', default='es_ES.utf8')
-
-# Health
-
-HEALTHCHECK_CACHE_KEY = "issi_healthcheck_key"

@@ -27,7 +27,7 @@ Se han marcado como borrados, pero ¿quizá no merece la pena mantenerlas,
 sino borrarlos físicamente de lo hoja de cálculo? No parecen aportar
 absolutamente nada. Y, en caso de ser necesaria esta información, siempre
 tenemos las hojas de calculo presentadas originalmente. Un problema de
-esto es que cambiara los números de los siguientes registros.
+esto es que cambiará los números de los siguientes registros.
 
 
 Registro electrónico

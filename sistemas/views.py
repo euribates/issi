@@ -77,17 +77,13 @@ def index(request, *args, **kwargs):
         .order_by('-f_cambio')
         )
     num_sistemas = sistemas.count()
-    filterset = filtersets.SistemaFilter(
-        request.GET,
-        queryset=sistemas,
-        )
     return render(request, 'sistemas/index.html', {
         'titulo': 'Sistemas de información',
         'breadcrumbs': bc.sistemas(),
         'commands': cmd_sistemas(),
         'tab': 'sistemas',
+        'sistemas': sistemas,
         'num_sistemas': num_sistemas,
-        "filterset": filterset,
         })
 
 
