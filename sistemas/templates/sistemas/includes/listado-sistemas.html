@@ -1,28 +1,52 @@
-{% load sistemas %}
+{% load static sistemas %}
 
-<table class="table table-striped table-hover">
-  <thead>
-  <tr>
-  <th>Código</th>
-  <th>Nombre</th>
-  <th>Tema</th></tr>
-  </thead>
-  <tbody>
-    {% for sistema in sistemas %}
+<table id="sistemas" class="table table-striped table-hover">
+  <thead>  
     <tr>
+        <th>Icono</th>
+        <th>CII</th>
+        <th>Nombre</th>
+        <th>Organismo</th>
+        <th>Materia</th>
+        <th>Estado</th>
+    </tr>
+  </thead>  
+  <tbody>
+{% for sistema in sistemas %}
+  <tr>
+    <td>
+      <a href="{{ sistema.url_detalle_sistema }}" alt="Ver detalles del S.I. {sistema}">
+       <img
+       {% if sistema.icono %}
+            src="{{ sistema.icono.url }}" 
+       {% else %}
+            src="{% static 'sistemas/no-logo.png' %}"
+       {% endif %}
+            class="img-fluid mr-1"
+            alt="Logo {{ sistema }}"
+            title="Logo {{ sistema }}"
+            >
+     </a>
+      
+    </td>
+    <td><big>{{ sistema.codigo }}</big></td>
       <td>
-        <a href="{% url 'sistemas:detalle_sistema' sistema=sistema %}">
-        {{ sistema.codigo }}
-        </a>
+          <b>{{ sistema.nombre_sistema }}</b><br>
+          {{ sistema.descripcion|as_descripcion }}
       </td>
-      <td>
-        <b>{{ sistema.nombre_sistema }}</b><br>
-        <small>{{ sistema.descripcion }}</small>
-      </td>
+      <td>{{ sistema.organismo }}</td>
       <td>
         {{ sistema.tema|as_tema }}
+        {% if sistema.es_transversal %}
+          <span class="badge text-bg-info">Transversal</span>
+        {% endif %}
+
       </td>
-    </tr>
-    {% endfor %}
+      <td><img src="{% static sistema.get_estado|as_status_icon %}"
+               title="{{ sistema.get_estado|as_status_desc }}"
+               >
+            </td>
+  </tr>
+{% endfor %}
   </tbody>
 </table>

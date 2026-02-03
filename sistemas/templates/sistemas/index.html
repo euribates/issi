@@ -2,215 +2,33 @@
 {% load static comun_filters sistemas %}
 
 {% block content %}
-{% extends "comun/base.html" %}
-{% load static comun_filters sistemas %}
-
-{% block content %}
 
 <h2 class="m-2">Hay {{ num_sistemas|as_badge }} sistemas de información
 <br><small>Identificados en el sistema</small>
 </h2>
-<form method="get">
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Código</th>
-      <th>Organismo</th>
-    </tr>  
+<div class="controls">
+<input type="text" class="form-control"
+     placeholder="Search..."
+     data-bind:query
+     data-on:input__debounce.250ms="@get('/sistemas/patch/sistemas/')"
+     />
+<button role="button" class="btn btn-primary" data-on:click="console.log('matrka'); @get('/sistemas/patch/sistemas/')">
+    <i class="bi bi-search"></i></button>
 
-    <tr>
-      <th colspan="3">
-        {{ filterset.form }}
-        <input
-
-    type="text"
-
-    placeholder="Search..."
-
-    data-bind:search
-
-    data-on:input__debounce.200ms="@get('/examples/active_search/search')"
-
-/>
-        <input type="submit" value="🔍" />
-      </th>
-    </tr> 
-    
-  </thead> 
-</table>
-
-
-<div class="row px-4">
-  
-{% for sistema in filterset.qs.all %}
-<div class="col-sm-12 col-md-4 col-lg-3">
-
-<div class="card text-center border-0 shadow mt-5">
-   <div class="card-icon position-absolute start-50 translate-middle text-light rounded-circle p-3">
-     <a href="{{ sistema.url_detalle_sistema }}" alt="Ver detalles del S.I. {sistema}">
-       <img
-       {% if sistema.icono %}
-            src="{{ sistema.icono.url }}" 
-       {% else %}
-            src="{% static 'sistemas/no-logo.png' %}"
-       {% endif %}
-            class="img-fluid mr-1"
-            alt="Logo {{ sistema }}"
-            title="Logo {{ sistema }}"
-            >
-     </a>
-   </div>
+<button role="button" class="btn btn-primary" data-on:click="alert('holi')">
+  Holi
+</button>
 
 
 
-  <div class="card-body mt-5">
-     <h2 class="sistema-codigo">{{ sistema.codigo }}</h2>
-     <h3 class="sistema-nombre"><b>{{ sistema.nombre_sistema }}</b></h3>
-     <p class="card-text">
-       {{ sistema.proposito|as_markdown }}
-     </p>
+<button role="button" class="btn btn-primary" onclick="alert('holi pure js')">
+  Holi Pure JS
+</button>
 
-     <p class="card-organismo">
-        {% if sistema.organismo %}
-        <a href="{% url 'sistemas:detalle_organismo' organismo=sistema.organismo %}">
-          {{ sistema.organismo }}
-        </a>    
-        {% else %}
-          <i class="bi bi-exclamation-diamond"></i>
-          Pendiente de asignar
-        {% endif %}
-      </p>  
-    {{ sistema.tema|as_tema }}
-    {% if sistema.es_transversal %}
-      <span class="badge text-bg-info">Transversal</span>
-    {% endif %}
-    {% if sistema.es_subsistema_de %}
-    <span class="badge text-bg-warning" title="de {{ sistema.es_subsistema_de }}">
-        Subsistema
-    </span>
-    {% endif %}
-  </div>
-  <footer class="card-footer">
-    <div class="commands">
-    <a class="btn bg-info"
-       href="{{ sistema.url_detalle_sistema }}"
-       alt="Ver detalles del S.I. {sistema}">
-        <i class="bi bi-pencil"></i>
-        Ver detalles
-    </a>
-    </div>
-    </footer>
 </div>
-</div>
-{% endfor %}
-  
-  </div>
 
-
-{% endblock content %}
-
-<h2 class="m-2">Hay <b>{{ num_sistemas }}</b> sistemas de información
-<br><small>Identificados en el sistema</small>
-</h2>
-<form method="get">
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Código</th>
-      <th>Organismo</th>
-    </tr>  
-
-    <tr>
-      <th colspan="3">
-        {{ filterset.form }}
-        <input
-
-    type="text"
-
-    placeholder="Search..."
-
-    data-bind:search
-
-    data-on:input__debounce.200ms="@get('/examples/active_search/search')"
-
-/>
-        <input type="submit" value="🔍" />
-      </th>
-    </tr> 
-    
-  </thead> 
-</table>
-
-
-<div class="row px-4">
-  
-{% for sistema in filterset.qs.all %}
-<div class="col-sm-12 col-md-4 col-lg-3">
-
-<div class="card text-center border-0 shadow mt-5">
-   <div class="card-icon position-absolute start-50 translate-middle text-light rounded-circle p-3">
-     <a href="{{ sistema.url_detalle_sistema }}" alt="Ver detalles del S.I. {sistema}">
-       <img
-       {% if sistema.icono %}
-            src="{{ sistema.icono.url }}" 
-       {% else %}
-            src="{% static 'sistemas/no-logo.png' %}"
-       {% endif %}
-            class="img-fluid mr-1"
-            alt="Logo {{ sistema }}"
-            title="Logo {{ sistema }}"
-            >
-     </a>
-   </div>
-
-
-
-  <div class="card-body mt-5">
-     <h2 class="sistema-codigo">{{ sistema.codigo }}</h2>
-     <h3 class="sistema-nombre"><b>{{ sistema.nombre_sistema }}</b></h3>
-     <p class="card-text">
-       {{ sistema.proposito|as_markdown }}
-     </p>
-
-     <p class="card-organismo">
-        {% if sistema.organismo %}
-        <a href="{% url 'sistemas:detalle_organismo' organismo=sistema.organismo %}">
-          {{ sistema.organismo }}
-        </a>    
-        {% else %}
-          <i class="bi bi-exclamation-diamond"></i>
-          Pendiente de asignar
-        {% endif %}
-      </p>  
-    {{ sistema.tema|as_tema }}
-    {% if sistema.es_transversal %}
-      <span class="badge text-bg-info">Transversal</span>
-    {% endif %}
-    {% if sistema.es_subsistema_de %}
-    <span class="badge text-bg-warning" title="de {{ sistema.es_subsistema_de }}">
-        Subsistema
-    </span>
-    {% endif %}
-  </div>
-  <footer class="card-footer">
-    <div class="commands">
-    <a class="btn bg-info"
-       href="{{ sistema.url_detalle_sistema }}"
-       alt="Ver detalles del S.I. {sistema}">
-        <i class="bi bi-pencil"></i>
-        Ver detalles
-    </a>
-    </div>
-    </footer>
-</div>
-</div>
-{% endfor %}
-  
-  </div>
+{% include 'sistemas/includes/lista-sistemas.html' %}
 
 
 {% endblock content %}
