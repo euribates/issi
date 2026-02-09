@@ -16,11 +16,9 @@ from uuid import UUID
 from caches.temas import temas
 from comun.funcop import first
 from comun.results import Result, Success, Failure
+from comun.error import errors
 from directorio.models import Organismo
 from juriscan.models import Juriscan
-from sistemas.models import Tema
-from sistemas.models import Sistema
-from sistemas.error import errors
 from sistemas.models import Tema
 from sistemas.models import Usuario
 
@@ -47,7 +45,7 @@ pat_url_juriscan = re.compile(
     r'https?://www\d?\.gobiernodecanarias\.org/juriscan/ficha\.jsp\?id=(\d+)'
     )
 
-# Patron para detectar UUID
+#: Patron para detectar UUID
 pat_uuid = re.compile(r'[\da-f]{8}-([\da-f]{4}-){3}[\da-f]{12}$', re.IGNORECASE)
 
 

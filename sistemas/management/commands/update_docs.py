@@ -33,7 +33,7 @@ def print_errores():
 
     En formato MarkDown.
     '''
-    from sistemas.error import errors
+    from comun.error import errors
     for code, err in errors:
         desc = err.desc.format(value="**VALUE**")
         print(f'- `{code}`: **{err.name}**.')

@@ -95,6 +95,8 @@ docs *args='.':
     # python ./manage.py update_docs materias > docs/includes/materias.rst
     # python ./manage.py update_docs entes > docs/includes/entes.rst
     # python ./manage.py update_docs errores > docs/includes/errores.md
+    # ./manage.py graph_models glosario --pydot --output docs/images/glosario.dot
+    # ./manage.py graph_models sistemas --pydot --output docs/images/sistemas.dot
     sphinx-build -b html ./docs ./docs/html
 
 # Actualiza en caliente contenidos estaticos js/css/png/svg

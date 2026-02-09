@@ -17,6 +17,7 @@ Documentación.
 
    sistemas
    comun
+   modulo_glosario
    apps/caches
    apps/normativa
    materias

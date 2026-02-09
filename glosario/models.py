@@ -4,6 +4,14 @@ from django.db import models
 
 
 class Termino(models.Model):
+    """Modelo de entrada en el glosario.
+
+    Conta de un identificador del término, el término en si, la
+    descripción y, en el caso de que la hubiera, una URL de referencia,
+    opcional.
+
+    .. graphviz:: images/glosario.dot
+    """
 
     class Meta:
         ordering = ['entrada',]
