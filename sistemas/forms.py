@@ -61,7 +61,7 @@ class AltaSistemaForm(BootstrapForm, forms.ModelForm):
             'nombre_sistema',
             'codigo',
             'organismo',
-            'proposito',
+            'finalidad',
             'tema',
             ]
 
@@ -113,13 +113,13 @@ class AsignarIconoForm(BootstrapForm, forms.ModelForm):
         fields = ['icono']
 
 
-class EditarPropositoForm(BootstrapForm, forms.ModelForm):
+class EditarFinalidadForm(BootstrapForm, forms.ModelForm):
 
     class Meta:
         model = models.Sistema
-        fields = ['proposito']
+        fields = ['finalidad']
 
-    proposito = forms.CharField(
+    finalidad = forms.CharField(
         widget=widgets.Textarea(attrs={"cols": "40", "rows": 12}),
         required=False,
         )

@@ -13,6 +13,8 @@ ser del tipo más cercanbo posible al esperado.
 import re
 from uuid import UUID
 
+import pandas as pd
+
 from caches.temas import temas
 from comun.funcop import first
 from comun.results import Result, Success, Failure
@@ -95,7 +97,7 @@ def parse_codigo_interno(codigo: str, n_linea=None) -> Result:
     return Success(codigo)
 
 
-def parse_proposito(texto, n_linea=None) -> Result:
+def parse_finalidad(texto, n_linea=None) -> Result:
     if texto is None:
         return Success('')
     texto = texto.strip()
@@ -114,7 +116,7 @@ def parse_descripcion(texto, n_linea=None) -> Result:
 
 
 def parse_comentarios(texto, n_linea=None) -> Result:
-    if texto is None:
+    if texto is None or pd.isna(texto):
         return Success('')
     texto = texto.strip()
     if texto == '':
@@ -179,9 +181,9 @@ def _parse_one_user(text: str, n_linea: int) -> Result|Failure:
 def parse_users(text: str, n_linea=None) -> set[Result]:
     """Devuelve un conjunto de usuarios.
     """
-    text = text.strip()
-    if not text:
+    if not text or pd.isna(text):
         return set()
+    text = text.strip()
     if '\n' in text:
         return {
             _parse_one_user(item, n_linea=n_linea)
@@ -200,16 +202,18 @@ def parse_users(text: str, n_linea=None) -> set[Result]:
 def _parse_one_juriscan(text: str, n_linea=None) -> Result:
     if match := pat_integer.match(text):
         id_juriscan = int(match.group(0))
-    elif match := pat_url_juriscan.match(text):
+        juriscan = Juriscan.load_or_create(id_juriscan)
+        return Success(juriscan)
+    if match := pat_url_juriscan.match(text):
         id_juriscan = int(match.group(1))
-    juriscan = Juriscan.load_or_create(id_juriscan)
-    if juriscan:
+        juriscan = Juriscan.load_or_create(id_juriscan)
         return Success(juriscan)
     return Failure(errors.EI0012(text))
 
 
 def parse_juriscan(text: str|None, n_linea=None) -> set[Result]:
-    if not text:
+    print(text, type(text))
+    if not text or pd.isna(text):
         return set()
     text = text.strip()
     if '\n' in text:
@@ -229,6 +233,8 @@ def parse_juriscan(text: str|None, n_linea=None) -> set[Result]:
 
 
 def parse_uuid(value: str, n_linea=None) -> Result:
+    if not value or pd.isna(value):
+        return Success(None)
     if value:
         value = value.strip()
         match = pat_uuid.match(value)
@@ -242,7 +248,7 @@ def parse_row(tupla: tuple, n_linea=None) -> dict:
     result = {}
     result['nombre_sistema'] = parse_nombre_sistema(tupla[0])
     result['codigo'] = parse_codigo_interno(tupla[1])
-    result['proposito'] = parse_proposito(tupla[2])
+    result['finalidad'] = parse_finalidad(tupla[2])
     result['descripcion'] = parse_descripcion(tupla[2])
     result['tema'] = parse_materia_competencial(tupla[3])
     result['organismo'] = parse_dir3(tupla[4])

@@ -147,10 +147,10 @@ class Sistema(models.Model):
         default='',
         verbose_name="Descripción del sistema",
         )
-    proposito = models.TextField(
+    finalidad = models.TextField(
         blank=True,
         default='',
-        verbose_name="Propósito",
+        verbose_name="Finalidad del sistema",
         )
     observaciones = models.TextField(
         blank=True,
@@ -214,7 +214,7 @@ class Sistema(models.Model):
             cls,
             nombre_sistema: str,
             codigo: str,
-            proposito: str,
+            finalidad: str,
             organismo: Organismo,
             tema=None,
             ):
@@ -224,7 +224,7 @@ class Sistema(models.Model):
 
             - nombre_sistema (str): Nombre del sistema
             - codigo (str): Código identificador del sistema
-            - proposito (str): Propósito
+            - finalidad (str): Finalidad del sistema
             - organismo (Organismo): Instancia del organismo al que
                 está asociado el sistema.
             - tema (Tema|None): Instacia del tema, o `None`
@@ -237,7 +237,7 @@ class Sistema(models.Model):
         sistema = Sistema(
             nombre_sistema=nombre_sistema,
             codigo=codigo,
-            proposito=proposito,
+            finalidad=finalidad,
             organismo=organismo,
             tema=tema,
             )

@@ -19,7 +19,7 @@ class SistemaAdmin(admin.ModelAdmin):
     search_fields = [
         'codigo',
         'descripcion',
-        'proposito',
+        'finalidad',
         ]
 
 admin.site.register(models.Sistema, SistemaAdmin)

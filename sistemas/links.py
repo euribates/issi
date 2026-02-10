@@ -48,8 +48,8 @@ def a_asignar_icono(id_sistema: int) -> str:
     return _a('sistemas:asignar_icono', sistema=id_sistema)
 
 
-def a_editar_proposito(id_sistema: int) -> str:
-    return _a('sistemas:editar_proposito', sistema=id_sistema)
+def a_editar_finalidad(id_sistema: int) -> str:
+    return _a('sistemas:editar_finalidad', sistema=id_sistema)
 
 
 def a_editar_descripcion(id_sistema: int) -> str:

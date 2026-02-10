@@ -1,0 +1,62 @@
+{% extends "comun/base.html" %}
+{% load static comun_filters %}
+
+{% block content %}
+
+<h2>Ficha Juriscán {{ ficha.pk }}</h2>
+
+<table class="table table-striped">
+  <thead>
+
+      <tr>
+          <th>Id. Juriscán</th>
+          <td>{{ ficha.pk }}</td>
+      </tr>
+
+      <tr>
+          <th>Título</th>
+          <td>{{ ficha.titulo }}</td>
+      </tr>
+
+      <tr>
+          <th>URL</th>
+          <td>
+              <a href="{{ ficha.url }}">{{ ficha.url }}</a>
+          </td>
+      </tr>
+
+      <tr>
+          <th>Creado el</th>
+          <td>{{ ficha.created }}</td>
+      </tr>
+
+      <tr>
+          <th>Modificado por última vez</th>
+          <td>{{ ficha.updated }}</td>
+      </tr>
+
+      <tr>
+          <th>Última comprobación</th>
+          <td>{{ ficha.updated }}</td>
+      </tr>
+
+
+
+  </thead>
+  <tbody>
+{% for j in juriscan %}
+    <tr>
+        <td>{{ j.pk }}</td>
+        <td>{{ j.titulo }}</td>
+        <td>{{ j.necesita_actualizar }}
+    </tr>
+{% endfor %}
+
+    <tr>
+        <th>Sistemas vinculados {{ num_sistemas|as_badge }}</th>
+        <td></td>
+
+  </tbody>
+</table>  
+
+{% endblock content %}

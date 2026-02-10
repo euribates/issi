@@ -52,7 +52,7 @@ class UpdateSistema(BaseOpCommand):
         n_cambios = 0
         n_cambios += self.f_update('nombre_sistema')
         n_cambios += self.f_update('organismo')
-        n_cambios += self.f_update('proposito')
+        n_cambios += self.f_update('finalidad')
         n_cambios += self.f_update('descripcion')
         n_cambios += self.f_update('observaciones')
         n_cambios += self.f_update('tema')

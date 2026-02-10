@@ -95,7 +95,7 @@ def alta_sistema(request):
             sistema = models.Sistema.alta_sistema(
                 nombre=data['nombre'],
                 codigo=data['codigo'],
-                proposito=data['proposito'],
+                finalidad=data['finalidad'],
                 organismo=data['organismo'],
                 tema=data['tema'],
                 )
@@ -181,11 +181,11 @@ def asignar_familia(request, sistema):
         })
 
 
-def editar_proposito(request, sistema):
+def editar_finalidad(request, sistema):
     if request.method == "POST":
-        form = forms.EditarPropositoForm(request.POST)
+        form = forms.EditarFinalidadForm(request.POST)
         if form.is_valid():
-            sistema.proposito = form.cleaned_data['proposito']
+            sistema.finalidad = form.cleaned_data['finalidad']
             sistema.save()
             Bus(request).success(
                 f"El propósito del S.I. {sistema}"
@@ -193,10 +193,10 @@ def editar_proposito(request, sistema):
                 )
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
-        form = forms.EditarPropositoForm(instance=sistema)
-    return render(request, 'sistemas/editar-proposito.html', {
-        'titulo': f'Editar proposito de {sistema}',
-        'breadcrumbs': bc.editar_proposito(sistema),
+        form = forms.EditarFinalidadForm(instance=sistema)
+    return render(request, 'sistemas/editar-finalidad.html', {
+        'titulo': f'Editar finalidad de {sistema}',
+        'breadcrumbs': bc.editar_finalidad(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,
@@ -216,8 +216,8 @@ def editar_descripcion(request, sistema):
     else:
         form = forms.EditarDescripcionForm(instance=sistema)
     return render(request, 'sistemas/editar-descripcion.html', {
-        'titulo': f'Editar proposito de {sistema}',
-        'breadcrumbs': bc.editar_proposito(sistema),
+        'titulo': f'Editar finalidad de {sistema}',
+        'breadcrumbs': bc.editar_finalidad(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,

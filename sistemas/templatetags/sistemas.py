@@ -24,14 +24,14 @@ def as_descripcion(descripcion):
 
 
 @register.filter
-def as_proposito(proposito):
-    if not proposito:
+def as_finalidad(finalidad):
+    if not finalidad:
         return mark_safe(
             '<i class="bi bi-exclamation-diamond"></i>'
             '&nbsp;'
-            '<i>Falta definir el propósito del S.I.</i>'
+            '<i>Falta definir la finalidad del S.I.</i>'
             )
-    return as_markdown(proposito)
+    return as_markdown(finalidad)
 
 
 

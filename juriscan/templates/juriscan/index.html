@@ -1,0 +1,31 @@
+{% extends "comun/base.html" %}
+{% load static comun_filters %}
+
+{% block content %}
+
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <th>Id. Juriscán</th>
+          <th>Título</th>
+          <th>Necesita actualizar</th>
+      </tr>
+  </thead>
+  <tbody>
+{% for j in juriscan %}
+    <tr>
+        <td>{{ j.pk }}</td>
+        
+        <td>
+            <a href="{% url 'juriscan:ficha_juriscan' num_ficha=j.pk %}">
+            {{ j.titulo }}
+            </a>
+        </td>
+        
+        <td>{{ j.necesita_actualizar }}
+    </tr>
+{% endfor %}
+  </tbody>
+</table>  
+
+{% endblock content %}

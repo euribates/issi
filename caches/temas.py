@@ -75,7 +75,6 @@ temas = {
     'RSD': 'Recepción y salida de documentos',
     'RHU': 'Recursos Humanos',
     'SAN': 'Sanidad',
-    'SEG': 'Seguridad',
     'TEC': 'Tecnología',
     'TPF': 'Tesoro y política financiera',
     'TRD': 'Transformación digital',

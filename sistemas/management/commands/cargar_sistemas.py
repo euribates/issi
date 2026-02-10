@@ -1,17 +1,13 @@
 #!/usr/bin/env python3
 
-import csv
 from pathlib import Path
 
 from django.core.management.base import BaseCommand
-from django.core.management.base import CommandError
 
 import pandas as pd
 from rich.console import Console
 
-from sistemas.models import Usuario, Interlocutor
-from sistemas.models import Sistema
-from directorio.models import Organismo
+from sistemas.parsers import parse_row
 
 
 CMD_NAME = 'cargar_sistemas'
@@ -59,83 +55,45 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument(
             'filename',
-            help='Especificar el archivo CSV o ODS',
+            help='Especificar el archivo ODS',
             )
 
-    def rename_headers(df):
-        origin_names = list(df.keys())
-        df.rename(columns={
+    def rename_headers(self, df):
+        origin_names = list(df.columns)
+        return df.rename(columns={
             origin_names[0]: 'estado',
             origin_names[1]: 'departamento',
             origin_names[2]: 'nombre_sistema',
             origin_names[3]: 'codigo',
-            origin_names[4]: 'proposito',
+            origin_names[4]: 'finalidad',
             origin_names[5]: 'materia',
             origin_names[6]: 'dir3',
             origin_names[7]: 'responsables_tecnologicos',
             origin_names[8]: 'responsables_funcionales',
             origin_names[9]: 'juriscan',
             origin_names[10]: 'comentarios',
-            origin_names[11]: 'estado',
-            origin_names[12]: 'estado',
+            origin_names[11]: 'uuid',
+            })
 
-
-            }
     def handle(self, *args, **options):
         """Punto de entrada.
         """
         filename = Path(options.get('filename'))
-        ext = filename.suffix.lower()
-        match ext:
-            case '.csv':
-                self.shout(f"Procesando fichero CCS [bold]{filename}[bold]")
-                df = pd.read_csv(filename)
-            case '.ods':
-                self.shout(f"Procesando fichero libreOffice [bold]{filename}[bold]")
-                df = pd.read_excel(filename, engine="odf")
-            case _:
-                raise CommandError(f"No sé como procesar el fichero {filename}")
+        self.shout(f"Procesando fichero libreOffice [bold]{filename}[bold]")
+        df = pd.read_excel(filename, engine="odf")
+        assert isinstance(df, pd.DataFrame)
         print(f'Hay {len(df)} registros')
-        print('Columnas:')
-        for name in df.keys():
-            print(name)
-        return
-        with open(filename, 'r', encoding='utf-8') as f_in:
-            reader = csv.reader(f_in)
-            next(reader)  # Ignoramos la línea de cabecera
-            for row in reader:
-                dir3 = clean_text(row[3])
-                organismo = Organismo.load_organismo_using_dir3(dir3)
-                nombre = clean_text(row[7])
-                apellidos = clean_text(row[8])
-                email = clean_text(row[10])
-                username = email.rsplit('@', 1)[0]
-                usuario = Usuario.load_usuario(username)
-                if usuario:
-                    self.console.print(
-                        f"Usuario [bold]{username}[/]"
-                        f" ({nombre} {apellidos})"
-                        " [yellow]Ya existe[/], lo ignoramos"
-                        )
-                else:
-                    self.console.print(
-                        f"Usuario [bold]{username}[/]"
-                        f" ({nombre} {apellidos})"
-                        " no existe, lo crearemos"
-                        )
-                    usuario = Usuario(
-                        login=username,
-                        email=email,
-                        nombre=nombre,
-                        organismo=organismo,
-                        apellidos=apellidos,
-                        )
-                    usuario.save()
-                if organismo:
-                    _interlocutor, created = Interlocutor.upsert(
-                        usuario=usuario,
-                        organismo=organismo,
-                        )
-                    if created:
-                        self.console.print("[green]Creado[/] como interlocutor")
-        return
+        df = self.rename_headers(df)
+        df = df.drop(columns=['estado', 'departamento'])
+        for index, row in df.iterrows():
+            row = tuple(row)
+            data = parse_row(row, n_linea=index+1)
+            for name in data:
+                print(f'{name}: {type(data[name])!r}')
+            print(index, data['nombre_sistema'], everything_pass(data))
+
+
+def everything_pass(data):
+    return all([
+        isinstance(v, set) or v.is_success() for name, v in data.items()
+        ])

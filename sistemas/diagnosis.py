@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 @dataclass
 class DiagnosticoSistema:
-    tiene_proposito: bool
+    tiene_finalidad: bool
     tiene_descripcion: bool
     tiene_organismo: bool
     tiene_tema: bool
@@ -16,7 +16,7 @@ class DiagnosticoSistema:
         self.evaluate()
 
     def evaluate(self):
-        self.tiene_proposito = bool(self._sistema.proposito)
+        self.tiene_finalidad = bool(self._sistema.finalidad)
         self.tiene_organismo = bool(self._sistema.organismo)
         self.tiene_descripcion = bool(self._sistema.descripcion)
         self.tiene_tema = bool(self._sistema.tema.pk != 'UNK')
@@ -25,7 +25,7 @@ class DiagnosticoSistema:
 
     def flags(self) -> list[bool]:
         return [
-            self.tiene_proposito,
+            self.tiene_finalidad,
             self.tiene_descripcion,
             self.tiene_organismo,
             self.tiene_tema,
@@ -36,7 +36,7 @@ class DiagnosticoSistema:
     def evaluaciones(self) -> list[str]:
         self.evaluate()
         result = []
-        if not self.tiene_proposito:
+        if not self.tiene_finalidad:
             result.append('No se ha definido el campo propósito')
         if not self.tiene_descripcion:
             result.append('No se ha definido el campo descripción')

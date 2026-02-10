@@ -3,17 +3,17 @@
 <div class="card m-2">
   <div class="card-header">
       <h4 class="card-title">
-        Propósito
+          Editar finalidad del sistema {{ sistema }}
       </h4>
   </div>
   <div class="card-body">
       <p class="card-text">
-        {{ sistema.proposito|as_proposito }}    
+        {{ sistema.finalidad|as_finalidad }}    
       </p>
   </div>
   <div class="card-footer d-flex flex-row-reverse">
       <a class="btn btn-warning"
-         href="{% url 'sistemas:editar_proposito' sistema=sistema.pk %}">
+         href="{% url 'sistemas:editar_finalidad' sistema=sistema.pk %}">
       <i class="bi bi-pencil"></i>
       Editar propósito
       </a>

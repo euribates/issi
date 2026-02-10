@@ -47,10 +47,10 @@ def asignar_tema(sistema: models.Sistema) -> BreadCrumb:
         )
 
 
-def editar_proposito(sistema: models.Sistema) -> BreadCrumb:
+def editar_finalidad(sistema: models.Sistema) -> BreadCrumb:
     return detalle_sistema(sistema).step(
         "Editar propósito",
-        links.a_editar_proposito(sistema.pk),
+        links.a_editar_finalidad(sistema.pk),
         )
 
 

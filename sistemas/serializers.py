@@ -37,7 +37,7 @@ def sistemas_a_csv(sistemas, stream):
         _cvs.writerow([
             sistema.nombre_sistema,
             sistema.codigo,
-            sistema.proposito,
+            sistema.finalidad,
             sistema.tema.pk,
             sistema.organismo.dir3 if sistema.organismo else '',
             _responsables(sistema, 'TEC'),

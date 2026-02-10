@@ -86,3 +86,10 @@ class Juriscan(models.Model):
                     )
                 juriscan.save()
         return juriscan
+    
+    def necesita_actualizar(self):
+        now = timezone.now()
+        delta = now - self.checked
+        return delta.days > 27
+
+
