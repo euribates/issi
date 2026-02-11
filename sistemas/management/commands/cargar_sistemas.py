@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from pathlib import Path
+from textwrap import wrap
 
 from django.core.management.base import BaseCommand
 
@@ -85,15 +86,53 @@ class Command(BaseCommand):
         print(f'Hay {len(df)} registros')
         df = self.rename_headers(df)
         df = df.drop(columns=['estado', 'departamento'])
+        num_total = num_correctos = num_erroneos = 0
         for index, row in df.iterrows():
+            num_total += 1
+            num_linea = index + 1
             row = tuple(row)
-            data = parse_row(row, n_linea=index+1)
-            for name in data:
-                print(f'{name}: {type(data[name])!r}')
-            print(index, data['nombre_sistema'], everything_pass(data))
+            data = parse_row(row, n_linea=num_linea)
+            num_errores = count_all_errors(data)
+            print(f'[{num_linea:6d}', end='] ')
+            if has_minimum(data):
+                num_correctos += 1
+                print(
+                    data['codigo'].value,
+                    data['nombre_sistema'].value,
+                    str(num_errores),
+                    'errores',
+                    )
+            else:
+                num_erroneos += 1
+                print(f'{num_errores} errores. Inválido')
+            if num_errores:
+                print()
+                for name, result in data.items():
+                    if result.is_failure():
+                        print('\n'.join(wrap(
+                            f"{name}: {result.error_message}",
+                            width=50,
+                            initial_indent='\t- ',
+                            subsequent_indent='\t',
+                            )))
+            print()
+            # sigo = input('Sigo? [S]|n :')
+            # if sigo.lower() == 'n':
+                # break
+        print(f'Total de registros: {num_total:>9}')
+        print(f'       con errores: {num_erroneos:>9}')
+        print(f'       insertables: {num_correctos:>9}')
 
 
-def everything_pass(data):
+def has_minimum(data: dict) -> bool:
     return all([
-        isinstance(v, set) or v.is_success() for name, v in data.items()
+        data['codigo'].is_success(),
+        data['nombre_sistema'].is_success(),
+        ])
+
+
+def count_all_errors(data):
+    return sum([
+        0 if isinstance(v, set) or v.is_success() else 1
+        for name, v in data.items()
         ])

@@ -87,6 +87,8 @@ def parse_nombre_sistema(texto: str, n_linea=None) -> Result:
 def parse_codigo_interno(codigo: str, n_linea=None) -> Result:
     '''devuelve el código identificativo interno (CII) del sistema.
     '''
+    if codigo is None or pd.isna(codigo):
+        return Failure(errors.EI0003(n_linea=n_linea))
     codigo = codigo.strip()
     if not codigo:
         return Failure(errors.EI0003(n_linea=n_linea))
@@ -98,7 +100,7 @@ def parse_codigo_interno(codigo: str, n_linea=None) -> Result:
 
 
 def parse_finalidad(texto, n_linea=None) -> Result:
-    if texto is None:
+    if texto is None or pd.isna(texto):
         return Success('')
     texto = texto.strip()
     sublines = texto.splitlines()
@@ -109,6 +111,8 @@ def parse_finalidad(texto, n_linea=None) -> Result:
 
 
 def parse_descripcion(texto, n_linea=None) -> Result:
+    if texto is None or pd.isna(texto):
+        return Success('')
     sublines = texto.splitlines()
     if len(sublines) > 1:
         return Success('\n\n'.join(sublines[1:]))
@@ -155,7 +159,7 @@ def parse_materia_competencial(materia: str, n_linea=None) -> Result:
     return Failure(errors.EI0008(materia, n_linea=n_linea))
 
 
-def _parse_one_user(text: str, n_linea: int) -> Result|Failure:
+def _parse_one_user(text: str, n_linea: int) -> Success|Failure:
     if match := pat_full.match(text):
         nombre = match.group(1)
         email = match.group(2)
@@ -178,58 +182,58 @@ def _parse_one_user(text: str, n_linea: int) -> Result|Failure:
     return Success(usuario)
 
 
-def parse_users(text: str, n_linea=None) -> set[Result]:
+def parse_users(text: str, n_linea=None) -> Result:
     """Devuelve un conjunto de usuarios.
     """
     if not text or pd.isna(text):
-        return set()
+        return Success(set())
     text = text.strip()
     if '\n' in text:
-        return {
-            _parse_one_user(item, n_linea=n_linea)
-            for item in text.splitlines(text)
-            }
-    if ',' in text or ';' in text:
-        return {
-            _parse_one_user(item, n_linea=n_linea)
-            for item in pat_sep.split(text)
-            }
-    return {
-        _parse_one_user(text, n_linea=n_linea)
-        }
+        items = list(text.splitlines(text))
+    elif ',' in text or ';' in text:
+        items = list(pat_sep.split(text))
+    else:
+        items = [text]
+    result = set()
+    for item in items:
+        user = _parse_one_user(item, n_linea=n_linea)
+        if user.is_failure():
+            return Failure(errors.EI0009(item))
+        result.add(user.value)
+    return Success(result)
 
 
 def _parse_one_juriscan(text: str, n_linea=None) -> Result:
     if match := pat_integer.match(text):
         id_juriscan = int(match.group(0))
         juriscan = Juriscan.load_or_create(id_juriscan)
-        return Success(juriscan)
+        if juriscan is not None:
+            return Success(juriscan)
     if match := pat_url_juriscan.match(text):
         id_juriscan = int(match.group(1))
         juriscan = Juriscan.load_or_create(id_juriscan)
-        return Success(juriscan)
+        if juriscan is not None:
+            return Success(juriscan)
     return Failure(errors.EI0012(text))
 
 
-def parse_juriscan(text: str|None, n_linea=None) -> set[Result]:
-    print(text, type(text))
+def parse_juriscan(text: str|None, n_linea=None) -> Result|Failure:
     if not text or pd.isna(text):
-        return set()
+        return Success(set())
     text = text.strip()
     if '\n' in text:
-        return {
-            _parse_one_juriscan(item, n_linea=n_linea)
-            for item in text.splitlines(text)
-            }
-    if ',' in text or ';' in text:
-        for item in pat_sep.split(text):
-            return {
-                _parse_one_juriscan(item, n_linea=n_linea)
-                for r in pat_sep.split(item)
-                }
-    return {
-        _parse_one_juriscan(text, n_linea=n_linea)
-        }
+        items = list(text.splitlines(text))
+    elif ',' in text or ';' in text:
+        items = list(pat_sep.split(text))
+    else:
+        items = [text]
+    result = set()
+    for item in items:
+        ficha = _parse_one_juriscan(item, n_linea=n_linea)
+        if ficha.is_failure():
+            return Failure(errors.EI0012(item))
+        result.add(ficha.value)
+    return Success(result)
 
 
 def parse_uuid(value: str, n_linea=None) -> Result:
@@ -246,16 +250,15 @@ def parse_uuid(value: str, n_linea=None) -> Result:
 
 def parse_row(tupla: tuple, n_linea=None) -> dict:
     result = {}
-    result['nombre_sistema'] = parse_nombre_sistema(tupla[0])
-    result['codigo'] = parse_codigo_interno(tupla[1])
-    result['finalidad'] = parse_finalidad(tupla[2])
-    result['descripcion'] = parse_descripcion(tupla[2])
-    result['tema'] = parse_materia_competencial(tupla[3])
-    result['organismo'] = parse_dir3(tupla[4])
-    result['responsables_tecnologicos'] = parse_users(tupla[5])
-    result['responsables_funcionales'] = parse_users(tupla[6])
-    result['juriscan'] = parse_juriscan(tupla[7])
-    result['comentarios'] = parse_comentarios(tupla[8])
-    if len(tupla) > 9:
-        result['uuid'] = parse_uuid(tupla[9])
+    result['nombre_sistema'] = parse_nombre_sistema(tupla[0], n_linea=n_linea)
+    result['codigo'] = parse_codigo_interno(tupla[1], n_linea=n_linea)
+    result['finalidad'] = parse_finalidad(tupla[2], n_linea=n_linea)
+    result['descripcion'] = parse_descripcion(tupla[2], n_linea=n_linea)
+    result['tema'] = parse_materia_competencial(tupla[3], n_linea=n_linea)
+    result['organismo'] = parse_dir3(tupla[4], n_linea=n_linea)
+    result['responsables_tecnologicos'] = parse_users(tupla[5], n_linea=n_linea)
+    result['responsables_funcionales'] = parse_users(tupla[6], n_linea=n_linea)
+    result['juriscan'] = parse_juriscan(tupla[7], n_linea=n_linea)
+    result['comentarios'] = parse_comentarios(tupla[8], n_linea=n_linea)
+    result['uuid'] = parse_uuid(tupla[9], n_linea=n_linea)
     return result

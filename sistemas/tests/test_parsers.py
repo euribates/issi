@@ -12,41 +12,6 @@ from juriscan.models import Juriscan
 from directorio.models import Organismo
 
 
-# --------------------------------------------------------[ Fixtures ]--
-
-@pytest.fixture
-def jrodleo():
-    return Usuario.load_usuario('jrodleo')
-
-
-@pytest.fixture
-def malosua():
-    return Usuario.load_usuario('malosua')
-
-
-@pytest.fixture
-def juriscan_5559():
-    return Juriscan.load_or_create(5559)
-
-
-@pytest.fixture
-def juriscan_sample():
-    return set([
-        Juriscan.load_or_create(5559),
-        Juriscan.load_or_create(79558),
-        ])
-
-
-@pytest.fixture
-def hacienda():
-    return Tema.load_tema('HAC')
-
-
-@pytest.fixture
-def materia_desconocida():
-    return Tema.load_tema('UNK')
-
-
 # -------------------------------------------------[ Nombre sistema ]--
 
 def test_parse_nombre_sistema_vacio():
@@ -71,112 +36,130 @@ def test_parse_nombre_sistema_se_elimina_punto_filal():
 
 
 @pytest.mark.django_db
-def test_parse_users_single_username(jrodleo):
-    users = parsers.parse_users('jrodleo')
+def test_parse_users_single_username():
+    expected = Usuario.load_usuario('jrodleo')
+    result = parsers.parse_users('jrodleo')
+    assert result.is_success()
+    users = result.value
+    assert type(users) is set
     assert len(users) == 1
-    r = first(users)
-    assert r.is_success() and r.value == jrodleo
+    assert first(users) == expected
 
 
 @pytest.mark.django_db
-def test_parse_users_double_username(malosua, jrodleo):
-    users = parsers.parse_users('malosua, jrodleo')
-    for r in users:
-        assert r.is_success()
-        user = r.value
-        match user.login:
-            case 'jrodleo':
-                assert user == jrodleo
-            case 'malosua':
-                assert user == malosua
-            case _:
-                raise ValueError('No debería pasar nunca, pero aquí estamos...')
+def test_parse_users_double_username():
+    expected = set([
+        Usuario.load_usuario('jrodleo'),
+        Usuario.load_usuario('malosua'),
+        ])
+    rs = parsers.parse_users('malosua, jrodleo')
+    assert rs.is_success()
+    assert rs.value == expected
 
 
 @pytest.mark.django_db
-def test_parse_users_single_email(jrodleo):
-    r = first(parsers.parse_users('jrodleo@gobiernodecanarias.org'))
-    assert r.is_success()
-    assert r.value == jrodleo
+def test_parse_users_single_email():
+    expected = set([Usuario.load_usuario('jrodleo')])
+    rs = parsers.parse_users('jrodleo@gobiernodecanarias.org')
+    assert rs.is_success()
+    assert rs.value == expected
 
 
 @pytest.mark.django_db
-def test_parse_user_full_email(jrodleo):
-    r = first(parsers.parse_users('Juan Ignacio <jrodleo@gobiernodecanarias.org>'))
-    assert r.is_success()
-    assert r.value == jrodleo
+def test_parse_user_full_email():
+    expected = set([Usuario.load_usuario('jrodleo')])
+    rs = parsers.parse_users('Juan Ignacio <jrodleo@gobiernodecanarias.org>')
+    assert rs.is_success()
+    assert rs.value == expected
 
 
 @pytest.mark.django_db
 def test_parse_users_bad_input():
-    users = parsers.parse_users("I'm Bad! Bad! (Really, really bad)")
-    assert len(users) == 2
-    for r in users:
-        assert r.is_failure()
+    rs = parsers.parse_users("I'm Bad! Bad! (Really, really bad)")
+    assert rs.is_failure()
 
 
 @pytest.mark.django_db
 def test_parse_users_void_input():
-    assert parsers.parse_users('') == set([])
+    expected = set([])
+    rs = parsers.parse_users('')
+    assert rs.is_success()
+    assert rs.value == expected
 
 
 @pytest.mark.django_db
 def test_parse_juriscan_single_number():
-    result = first(parsers.parse_juriscan('5559'))
-    assert result.is_success()
-    assert isinstance(result.value, Juriscan)
-    assert result.value.titulo == 'Ley 2/1984, 11 abril, de Premios Canarias'
+    rs = parsers.parse_juriscan('5559')
+    assert rs.is_success()
+    assert type(rs.value) is set
+    ficha = first(rs.value)
+    assert ficha.titulo == 'Ley 2/1984, 11 abril, de Premios Canarias'
 
 
 @pytest.mark.django_db
-def test_parse_juriscan_double_number(juriscan_sample):
-    expected = juriscan_sample
-    for rj in parsers.parse_juriscan('79558, 5559'):
-        assert rj.is_success()
-        assert rj.value in expected
-    for rj in parsers.parse_juriscan('79558; 5559'):
-        assert rj.is_success()
-        assert rj.value in expected
+def test_parse_juriscan_double_number():
+    expected = set([
+        Juriscan.load_or_create(5559),
+        Juriscan.load_or_create(79558),
+        ])
+    rs = parsers.parse_juriscan('79558, 5559')
+    from icecream import ic; ic(rs)
+    from icecream import ic; ic(rs.value)
+    assert rs.is_success()
+    assert rs.value == expected
+
+    rs = parsers.parse_juriscan('79558; 5559')
+    assert rs.is_success()
+    assert rs.value == expected
+
 
 
 @pytest.mark.django_db
-def test_parse_juriscan_en_diferentes_lineas(juriscan_sample):
-    expected = juriscan_sample
-    for rj in parsers.parse_juriscan('79558\n5559'):
-        assert rj.is_success()
-        assert rj.value in expected
+def test_parse_juriscan_en_diferentes_lineas():
+    expected = set([
+        Juriscan.load_or_create(5559),
+        Juriscan.load_or_create(79558),
+        ])
+    rs = parsers.parse_juriscan('79558\n5559')
+    assert rs.is_success()
+    assert rs.value == expected
 
 
 @pytest.mark.django_db
-def test_parse_juriscan_link(juriscan_sample):
-    expected = juriscan_sample
+def test_parse_juriscan_link():
+    expected = Juriscan.load_or_create(5559)
     url = 'https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=5559'
-    rj = first(parsers.parse_juriscan(url))
-    assert rj.is_success()
-    assert rj.value in expected
+    rs = parsers.parse_juriscan(url)
+    assert rs.is_success()
+    assert first(rs.value) == expected
 
 
 @pytest.mark.django_db
-def test_parse_juriscan_multiples_enlaces(juriscan_sample):
-    expected = juriscan_sample
+def test_parse_juriscan_multiples_enlaces():
+    expected = set([
+        Juriscan.load_or_create(5559),
+        Juriscan.load_or_create(79558),
+        ])
     urls = (
         'https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=5559\n'
         'https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=79558&from=0&nreg=25&materiasop=AND&materias1=*&materias2=*&rango1=*&rango2=*&titulo=internet&desdeemi=&hastaemi=&ordendesc=IdRango&orden=asc&numdisp=0&tituloAux=internet.'
         )
-    for rj in parsers.parse_juriscan(urls):
-        assert rj.is_success()
-        assert rj.value in expected
+    rs = parsers.parse_juriscan(urls)
+    assert rs.is_success()
+    assert rs.value == expected
 
 
 def test_parse_juriscan_empty():
-    assert parsers.parse_juriscan('') == set()
+    rs = parsers.parse_juriscan('')
+    assert rs.is_success()
+    assert rs.value == set()
 
 
 # -------------------------------------------[ Tests para parse_uuid ]--
 
 
 def test_parse_uuid_empty():
-    assert parsers.parse_uuid('').is_failure()
+    assert parsers.parse_uuid('').is_success()
 
 
 def test_parse_uuid_bad():
@@ -193,27 +176,31 @@ def test_parse_uuid():
 
 
 @pytest.mark.django_db
-def test_parse_materia_competencial_codigo(hacienda):
+def test_parse_materia_competencial_codigo():
+    hacienda = Tema.load_tema('HAC')
     rs = parsers.parse_materia_competencial('HAC')
     assert rs.is_success() and rs.value == hacienda
 
 
 @pytest.mark.django_db
-def test_parse_materia_competencial_descripcion(hacienda):
+def test_parse_materia_competencial_descripcion():
+    hacienda = Tema.load_tema('HAC')
     rs = parsers.parse_materia_competencial('Hacienda')
     assert rs.is_success() and rs.value == hacienda
 
 
 @pytest.mark.django_db
-def test_parse_materia_competencial_empty(materia_desconocida):
+def test_parse_materia_competencial_empty():
+    expected = Tema.load_tema('UNK')
     rs = parsers.parse_materia_competencial('')
-    assert rs.is_success() and rs.value == materia_desconocida
+    assert rs.is_success() and rs.value == expected
 
 
 @pytest.mark.django_db
-def test_parse_materia_competencial_none(materia_desconocida):
+def test_parse_materia_competencial_none():
+    expected = Tema.load_tema('UNK')
     rs = parsers.parse_materia_competencial(None)
-    assert rs.is_success() and rs.value == materia_desconocida
+    assert rs.is_success() and rs.value == expected
 
 
 @pytest.mark.django_db
@@ -223,7 +210,11 @@ def test_parse_materia_competencial_failure():
 
 
 @pytest.mark.django_db
-def test_parse_row(hacienda, jrodleo, malosua, juriscan_5559):
+def test_parse_row():
+    jrodleo = Usuario.load_usuario('jrodleo')
+    malosua = Usuario.load_usuario('malosua')
+    juriscan_5559 = Juriscan.load_or_create(5559)
+    hacienda = Tema.load_tema('HAC')
     row = (
         "Nombre del sistema",                   # Nombre
         'CODIGO',                               # Código
@@ -243,18 +234,9 @@ def test_parse_row(hacienda, jrodleo, malosua, juriscan_5559):
     assert data['descripcion'].value == ''
     assert data['tema'].value == hacienda
     assert data['organismo'].value == Organismo.load_organismo(42093)
-    for rs in data['responsables_tecnologicos']:
-        assert rs.is_success()
-        user = rs.value
-        match user.login:
-            case 'jrodleo':
-                assert user == jrodleo
-            case 'malosua':
-                assert user == malosua
-            case _:
-                raise ValueError(f'No se esperaba {user}')
-    assert first(data['responsables_funcionales']).value == malosua
-    assert first(data['juriscan']).value == juriscan_5559
+    assert data['responsables_tecnologicos'].value == set([jrodleo, malosua])
+    assert data['responsables_funcionales'].value == set([malosua])
+    assert data['juriscan'].value == set([juriscan_5559])
     assert data['comentarios'].value == 'Este es el comentario'
     assert data['uuid'].value == UUID('2b4c67ad-cf08-11f0-bdf7-38d5470ea667')
 

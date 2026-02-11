@@ -19,7 +19,7 @@ class ErrorMessage():
         buff.append(self.message)
         if self.context:
             for _name, _val in self.context.items():
-                buff.append(f' - {_name}: {escape(repr(_val))}')
+                buff.append(f' - {_name}: {escape(str(_val))}')
         return '\n'.join(buff)
 
     def as_html(self):
@@ -45,7 +45,7 @@ class ErrorMessage():
     def __call__(self, value=None, **context):
         message = self.message
         if value:
-            message = message.format(value=escape(repr(value)))
+            message = message.format(value=escape(str(value)))
         return ErrorMessage(
             self.code,
             self.name,
@@ -114,7 +114,7 @@ errors.register(
         "subrayado.\n"
         "Además, no puede empezar por un dígito, y debe "
         "tener tres o más caracteres. El valor indicado: "
-        "«{value}» no sigue el formato."
+        "'{value}', no sigue el formato."
         ),
     refs=['Codigo Identificador Interno <CII>']
     )
@@ -156,7 +156,7 @@ errors.register(
 errors.register(
     'EI0007',
     "Código DIR3 incorrecto o desconocido",
-    desc="El DIR3 indicado: {value} no parece correcto.",
+    desc="El DIR3 indicado: \"{value}\" no parece correcto.",
     )
 
 errors.register(
@@ -164,7 +164,7 @@ errors.register(
     "Materia competencial desconocida o incorrecta",
     desc=(
         "Los valores esperados **no** están en la tabla de materias,"
-        " pero «{value}» no está entre ellos."
+        " pero '{value}' no está entre ellos."
         ),
     refs=['materias competenciales <materias_competenciales>'],
     )
@@ -174,7 +174,7 @@ errors.register(
     'EI0009',
     "Email o login de usuario incorrecto",
     desc=(
-        "No puedo interpretar «{value}» como un *email"
+        "No puedo interpretar '{value}' como un email"
         " o un login de usuario."
         ),
     )
@@ -184,8 +184,8 @@ errors.register(
     'EI0010',
     "UUID no identificado",
     desc=(
-        'Se ha indicado un UUID de sistema: «{value}»'
-        ' que no existe en la base de datos.'
+        "Se ha indicado un UUID de sistema: '{value}'"
+        " que no existe en la base de datos."
         ),
     )
 
@@ -195,7 +195,7 @@ errors.register(
     "Código duplicado",
     desc=(
         'Ya existe en la base de datos'
-        ' un sistema con el codigo indicado: {value}.'
+        " un sistema con el código indicado: '{value}'."
         ),
     )
 
@@ -204,13 +204,13 @@ errors.register(
     'EI0012',
     "Código de Juriscán no reconocido",
     desc=(
-        'No es posible conseguir la información de Juriscán'
-        ' para la clave suministrada: {value}.'
-        ' Se esperaba o bién una serie de digitos o una'
-        ' URL con el patrón:\n\n'
-        ' gobiernodecanarias.org/juriscan/ficha.jsp?id=<cod. jur.>.\n\n'
-        ' Es posible que el código esté mal o que la conexión'
-        ' con Juriscán esté caida en este momento.'
+        "No es posible conseguir la información de Juriscán"
+        " para la clave suministrada: '{value}'."
+        " Se esperaba o bién una serie de digitos o una"
+        " URL con el patrón:\n\n"
+        " gobiernodecanarias.org/juriscan/ficha.jsp?id=<cod. jur.>.\n\n"
+        " Es posible que el código esté mal o que la conexión"
+        " con Juriscán esté caida en este momento."
         ),
     )
 
@@ -220,6 +220,6 @@ errors.register(
     "Falta el nombre del sistema",
     desc=(
         "El nombre del sistema es obligatorio, y tiene que tener"
-        " como mínimo 3 caracteres. {value} no es un nombre válido"
+        " como mínimo 3 caracteres. '{value}' no es un nombre válido"
         ),
     )

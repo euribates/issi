@@ -45,13 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'health_check',
-
-#   'health_check.cache',
-#   'health_check.storage',
-#   'health_check.Disk',
-#   'health_check.Memory',
-#   'health_check.contrib.migrations',
-
     'docs',
     'django_filters',
     'comun',
