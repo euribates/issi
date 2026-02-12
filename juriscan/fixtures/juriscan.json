@@ -1,0 +1,42 @@
+[
+{
+    "model": "juriscan.juriscan",
+    "pk": 5559,
+    "fields": {
+        "titulo": "Ley 2/1984, 11 abril, de Premios Canarias",
+        "created": "2026-02-12T08:18:17Z",
+        "updated": "2026-02-12T08:18:17Z",
+        "checked": "2026-02-12T08:18:17Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 22137,
+    "fields": {
+        "titulo": "Decreto 73/1995, 7 abril, por el que se crea el Registro de Sociedades Agrarias de Transformación de Canarias",
+        "created": "2026-02-12T08:26:06Z",
+        "updated": "2026-02-12T08:26:06Z",
+        "checked": "2026-02-12T08:26:06Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 71248,
+    "fields": {
+        "titulo": "Ley 3/1997, 8 mayo, de Incompatibilidades de los miembros del Gobierno y altos cargos de la Administración Pública de la Comunidad Autónoma de Canarias",
+        "created": "2026-02-12T08:18:17Z",
+        "updated": "2026-02-12T08:18:17Z",
+        "checked": "2026-02-12T08:18:17Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 79558,
+    "fields": {
+        "titulo": "Ley 5/2025, de 30 de septiembre, de volcanes de Canarias.",
+        "created": "2026-02-12T08:18:17Z",
+        "updated": "2026-02-12T08:18:17Z",
+        "checked": "2026-02-12T08:18:17Z"
+    }
+}
+]
