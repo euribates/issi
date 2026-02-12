@@ -279,6 +279,15 @@
     }
 },
 {
+    "model": "glosario.termino",
+    "pk": 32,
+    "fields": {
+        "entrada": "DIR3",
+        "descripcion": "**Directorio Común de Unidades Orgánicas y Oficinas**. El Directorio Común proporciona un Inventario unificado y común a toda la Administración de las unidades orgánicas / organismos públicos, sus oficinas asociadas y unidades de gestión económica - presupuestaria, facilitando el mantenimiento distribuido y corresponsable de la información.",
+        "fuente": "https://administracionelectronica.gob.es/ctt/dir3"
+    }
+},
+{
     "model": "glosario.fuente",
     "pk": 1,
     "fields": {

@@ -220,7 +220,7 @@ def _parse_one_juriscan(text: str, n_linea=None) -> Result:
 def parse_juriscan(text: str|None, n_linea=None) -> Result|Failure:
     if not text or pd.isna(text):
         return Success(set())
-    text = text.strip()
+    text = str(text).strip()
     if '\n' in text:
         items = list(text.splitlines(text))
     elif ',' in text or ';' in text:

@@ -570,6 +570,14 @@
 },
 {
     "model": "sistemas.tema",
+    "pk": "SEG",
+    "fields": {
+        "nombre_tema": "Seguridad",
+        "transversal": false
+    }
+},
+{
+    "model": "sistemas.tema",
     "pk": "TEC",
     "fields": {
         "nombre_tema": "Tecnología",
@@ -782,11 +790,11 @@
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
         "familia": "UNK",
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": "",
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2026/sirvete-logo.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-12-01T22:57:22.412Z",
+        "f_cambio": "2026-02-12T13:11:35.103Z",
         "f_baja": null
     }
 },
@@ -1520,23 +1528,23 @@
     "pk": 36,
     "fields": {
         "uuid_sistema": "b2196593-1ac1-4e3c-b6da-df218230a876",
-        "nombre_sistema": "Registro de Plantaciones de Viñedo",
+        "nombre_sistema": "Registro  vitícola comunitario",
         "organismo": 39060,
         "codigo": "REGVIN",
         "url": null,
-        "descripcion": "",
+        "descripcion": "El Registro de Plantaciones de Viñedo es el censo de todas las parcelas con viñedo.",
         "finalidad": "mantener el censo de todas las parcelas con viñedo.",
         "observaciones": "",
         "tema": "AGR",
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F11",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2026-02-12T12:30:21.645Z",
         "f_baja": null
     }
 },
@@ -1547,7 +1555,7 @@
         "uuid_sistema": "12c75d10-c8cc-4630-9814-a93fdfb0a4f8",
         "nombre_sistema": "Registro de Sociedades Agrarias de Transformación de Canarias",
         "organismo": 39053,
-        "codigo": "REGSAT",
+        "codigo": "REG_SATC",
         "url": null,
         "descripcion": "",
         "finalidad": "Registro administrativo en el que serán inscritas las Sociedades Agrarias de Transformación que operen exclusivamente en el territorio de la Comunidad Autónoma de Canarias y que reúnan los requisitos establecidos en la normativa que las regula.",
@@ -1556,12 +1564,12 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
-        "familia": "UNK",
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": "",
+        "familia": "F11",
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2026/reg_satc.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2026-02-12T10:30:00.476Z",
         "f_baja": null
     }
 },
@@ -2502,16 +2510,16 @@
         "descripcion": "",
         "finalidad": "Gestionar el Boletín Oficial de Canarias",
         "observaciones": "",
-        "tema": "UNK",
-        "es_transversal": false,
+        "tema": "EOA",
+        "es_transversal": true,
         "es_subsistema_de": null,
-        "tiene_especial_importancia": false,
-        "familia": "UNK",
+        "tiene_especial_importancia": true,
+        "familia": "F13",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/geboc-logo.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2026-01-27T09:20:17.477Z",
         "f_baja": null
     }
 },
@@ -2637,6 +2645,31 @@
         "icono": "sistemas/iconos/2025/sigesca-logo.png",
         "f_alta": "2025-11-24T12:50:17.865Z",
         "f_cambio": "2025-11-24T13:01:49.369Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 82,
+    "fields": {
+        "uuid_sistema": "d6bdd66a-c7e9-4a39-bbfe-548a2ee500cd",
+        "nombre_sistema": "Sistema Integrado de Gestión Bibliotecaria",
+        "organismo": 42154,
+        "codigo": "ABSYSNET",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Gestión de la Red de Bibliotecas",
+        "observaciones": "",
+        "tema": "CUL",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2026/absysnet-logo.png",
+        "f_alta": "2026-02-12T11:50:05.072Z",
+        "f_cambio": "2026-02-12T12:10:48.968Z",
         "f_baja": null
     }
 },
@@ -2773,6 +2806,19 @@
         "organismo": 6583,
         "f_alta": "2025-11-07T15:33:45.060Z",
         "f_cambio": "2025-11-07T15:33:45.060Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "amorcom",
+    "fields": {
+        "email": "amorcom@gobiernodecanarias.org",
+        "nombre": "Antonio",
+        "apellidos": "Morales Comalat",
+        "organismo": 42154,
+        "f_alta": "2026-02-12T12:14:24.181Z",
+        "f_cambio": "2026-02-12T12:14:24.181Z",
         "f_baja": null
     }
 },
@@ -3233,6 +3279,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "jaldrua",
+    "fields": {
+        "email": "jaldrua@gobiernodecanarias.org",
+        "nombre": "José Javier",
+        "apellidos": "Aldunate Ruano",
+        "organismo": 42121,
+        "f_alta": "2026-01-27T09:50:01.095Z",
+        "f_cambio": "2026-01-27T09:50:01.095Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "jbejgar",
     "fields": {
         "email": "jbejgar@gobierniodecanarias.org",
@@ -3332,6 +3391,19 @@
         "organismo": 42163,
         "f_alta": "2025-11-11T08:16:32.125Z",
         "f_cambio": "2025-11-11T08:16:32.125Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jmacgod",
+    "fields": {
+        "email": "jmacgod@gobiernodecanarias.org",
+        "nombre": "Francisco Javier",
+        "apellidos": "Machín Godoy",
+        "organismo": 42154,
+        "f_alta": "2026-02-12T12:16:01.824Z",
+        "f_cambio": "2026-02-12T12:16:01.824Z",
         "f_baja": null
     }
 },
@@ -3467,6 +3539,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "lbarqui",
+    "fields": {
+        "email": "lbarqui@gobiernodecanarias.org",
+        "nombre": "Luis",
+        "apellidos": "Barrera Quintero",
+        "organismo": 42085,
+        "f_alta": "2026-02-12T08:45:35.896Z",
+        "f_cambio": "2026-02-12T08:45:35.896Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "lgalrev",
     "fields": {
         "email": "lgalrev@gobiernodecanarias.org",
@@ -3597,6 +3682,19 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "mfuedia",
+    "fields": {
+        "email": "mfuedia@gobiernodecanarias.org",
+        "nombre": "María Loreto",
+        "apellidos": "Fuertes Díaz",
+        "organismo": 42085,
+        "f_alta": "2026-02-12T09:01:18.625Z",
+        "f_cambio": "2026-02-12T09:01:18.625Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "mgarrodx",
     "fields": {
         "email": "mgarrodx@gobiernodecanarias.org",
@@ -3683,6 +3781,32 @@
         "organismo": 42125,
         "f_alta": "2025-11-05T20:20:46.868Z",
         "f_cambio": "2025-11-05T20:21:10.259Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mmilmun",
+    "fields": {
+        "email": "mmilmun@gobiernodecanarias.org",
+        "nombre": "María Jesús",
+        "apellidos": "Millán Muñoz",
+        "organismo": 6652,
+        "f_alta": "2025-12-18T08:15:48.059Z",
+        "f_cambio": "2025-12-18T08:15:48.059Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mnavfri",
+    "fields": {
+        "email": "mnavfri@gobiernodecanarias.org",
+        "nombre": "Miguel",
+        "apellidos": "Navarro Frias",
+        "organismo": 42121,
+        "f_alta": "2026-01-27T09:46:44.229Z",
+        "f_cambio": "2026-01-27T09:46:44.229Z",
         "f_baja": null
     }
 },
@@ -6037,6 +6161,114 @@
         "f_alta": "2025-11-24T12:56:37.672Z",
         "f_cambio": "2025-11-24T12:56:37.673Z",
         "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 124,
+    "fields": {
+        "usuario": "mnavfri",
+        "cometido": "TEC",
+        "sistema": 75,
+        "f_alta": "2026-01-27T09:48:18.239Z",
+        "f_cambio": "2026-01-27T09:48:18.240Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 125,
+    "fields": {
+        "usuario": "jaldrua",
+        "cometido": "FUN",
+        "sistema": 75,
+        "f_alta": "2026-01-27T09:50:11.301Z",
+        "f_cambio": "2026-01-27T09:50:11.301Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 126,
+    "fields": {
+        "usuario": "lbarqui",
+        "cometido": "TEC",
+        "sistema": 37,
+        "f_alta": "2026-02-12T08:59:37.632Z",
+        "f_cambio": "2026-02-12T08:59:37.632Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 127,
+    "fields": {
+        "usuario": "mfuedia",
+        "cometido": "FUN",
+        "sistema": 37,
+        "f_alta": "2026-02-12T09:01:28.998Z",
+        "f_cambio": "2026-02-12T09:01:28.998Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 128,
+    "fields": {
+        "usuario": "amorcom",
+        "cometido": "FUN",
+        "sistema": 82,
+        "f_alta": "2026-02-12T12:14:41.173Z",
+        "f_cambio": "2026-02-12T12:14:41.173Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 129,
+    "fields": {
+        "usuario": "jmacgod",
+        "cometido": "TEC",
+        "sistema": 82,
+        "f_alta": "2026-02-12T12:16:08.560Z",
+        "f_cambio": "2026-02-12T12:16:08.560Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 133,
+    "fields": {
+        "usuario": "mgarrodx",
+        "cometido": "TEC",
+        "sistema": 36,
+        "f_alta": "2026-02-12T12:31:02.335Z",
+        "f_cambio": "2026-02-12T12:31:02.335Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 1,
+    "fields": {
+        "sistema": 37,
+        "juriscan": 22137
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 2,
+    "fields": {
+        "sistema": 37,
+        "juriscan": 5559
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 3,
+    "fields": {
+        "sistema": 82,
+        "juriscan": 77865
     }
 },
 {

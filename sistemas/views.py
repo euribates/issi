@@ -93,7 +93,7 @@ def alta_sistema(request):
         if form.is_valid():
             data = form.as_dict()
             sistema = models.Sistema.alta_sistema(
-                nombre=data['nombre'],
+                nombre_sistema=data['nombre_sistema'],
                 codigo=data['codigo'],
                 finalidad=data['finalidad'],
                 organismo=data['organismo'],
