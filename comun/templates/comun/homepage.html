@@ -69,43 +69,9 @@
     </div>
 
     <div class="col">
-      <div class="card">
-       <div class="card-header">
-       Más informacióm
-       </div>
-       <div class="card-body">
-           
-
-        <ul class="list-group">
-          <li class="list-group-item">
-              <a href="{% url 'normativa:index' %}">
-              Normativa
-            </a>  
-          </li>
-          <li class="list-group-item">
-              <a href="{% url 'glosario:index' %}">
-              Glosario de términos
-            </a>  
-          </li>
-
-          <li class="list-group-item">
-              <a href="{% url 'directorio:index' %}">
-              Organigrama y directorio
-            </a>  
-          </li>
-
-          <li class="list-group-item">
-              <a href="{% url 'sistemas:listado_temas' %}">
-              Áreas temáticas
-            </a>  
-          </li>
-
-        </ul>
-        </div>
-
-
-      </div>
+      {% include "comun/sidebar.html" %}  
     </div>
+
   </div><!-- de row -->
 </div>
 

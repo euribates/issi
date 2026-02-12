@@ -11,19 +11,21 @@
     </p>
     {% else %}
     <table class="table">
-    {% for norma in sistema.normativa.all %}
+    {% for sj in sistema.fichas_juriscan.all %}
       <tr>
           <th>
-            {{ norma.num_juriscan }}
+            {{ sj.juriscan_id }}
           </th>
           <td>
-            {{ norma.resumen }}
+            <a href="{{ sj.juriscan.url }}">
+            {{ sj.juriscan.titulo }}
+            </a>
           </td>
           <td>
            <a class="btn btn-danger" 
-              href="{% url 'sistemas:borrar_normativa' id_normativa=norma.pk %}"
+              href="{% url 'sistemas:desasignar_normativa' sistema=sj.sistema_id juriscan=sj.juriscan_id %}"
               title="Borrar enlace a Juriscán">
-              <i class="bi bi-person-dash-fill"></i>
+              <i class="bi bi-trash"></i>
            </a>   
           </td>
       </tr>   

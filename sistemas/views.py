@@ -137,6 +137,12 @@ def asignar_normativa(request, sistema):
     return HttpResponse(" no implementado", content_type="text/plain")
 
 
+def desasignar_normativa(request, sistema, juriscan: int):
+    from django.http import HttpResponse
+    return HttpResponse(" no implementado", content_type="text/plain")
+
+
+
 def asignar_organismo(request, sistema):
     if request.method == "POST":
         form = forms.AsignarOrganismoForm(request.POST, instance=sistema)

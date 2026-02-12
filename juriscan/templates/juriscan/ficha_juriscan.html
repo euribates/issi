@@ -1,5 +1,5 @@
 {% extends "comun/base.html" %}
-{% load static comun_filters %}
+{% load static comun_filters sistemas %}
 
 {% block content %}
 
@@ -44,17 +44,22 @@
 
   </thead>
   <tbody>
-{% for j in juriscan %}
-    <tr>
-        <td>{{ j.pk }}</td>
-        <td>{{ j.titulo }}</td>
-        <td>{{ j.necesita_actualizar }}
-    </tr>
-{% endfor %}
+
+
 
     <tr>
-        <th>Sistemas vinculados {{ num_sistemas|as_badge }}</th>
-        <td></td>
+      <th>Sistemas vinculados</th>
+      <td> {{ num_sistemas|as_badge }} </td>
+    </tr>
+    {% for sj in ficha.sistemas.all %}<tr>
+      <td>
+      </td>
+      <td>
+          <a href="{{ sj.sistema.url_detalle_sistema }}">
+           {{ sj.sistema|as_codigo }}</a>
+          {{ sj.sistema|as_nombre_sistema }}
+      </td>
+    </tr>{% endfor %}
 
   </tbody>
 </table>  

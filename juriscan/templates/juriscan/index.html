@@ -18,11 +18,11 @@
         
         <td>
             <a href="{% url 'juriscan:ficha_juriscan' num_ficha=j.pk %}">
-            {{ j.titulo }}
+              <big>{{ j.titulo }}</big>
             </a>
         </td>
         
-        <td>{{ j.necesita_actualizar }}
+        <td>{{ j.necesita_actualizar|as_boolean }}
     </tr>
 {% endfor %}
   </tbody>

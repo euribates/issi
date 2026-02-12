@@ -1,14 +1,39 @@
-<sidebar class="right-float-menu">
+      <div class="card">
+       <div class="card-header">
+       Más información
+       </div>
+           
+        <ul class="list-group">
+          <li class="list-group-item">
+              <a href="{% url 'normativa:index' %}">
+              Normativa
+            </a>  
+          </li>
+          <li class="list-group-item">
+              <a href="{% url 'glosario:index' %}">
+              Glosario de términos
+            </a>  
+          </li>
 
-<h4 class="sidebar-title">Sistemas
-<button type="button" class="btn-close btn-sm" aria-label="Cerrar"></button>
-</h4>
+          <li class="list-group-item">
+              <a href="{% url 'directorio:index' %}">
+              Organigrama y directorio
+            </a>  
+          </li>
 
-<ul class="sidebar-menu">
-  <li><a href="{% url 'sistemas:alta_sistema' %}">Añadir sistema</a></li>
-  <li>A second item</li>
-  <li>A third item</li>
-  <li>A fourth item</li>
-  <li>And a fifth one</li>
-</ul>
-</sidebar>
+          <li class="list-group-item">
+              <a href="{% url 'sistemas:listado_temas' %}">
+              Áreas temáticas
+            </a>  
+          </li>
+
+          <li class="list-group-item">
+              <a href="{% url 'juriscan:index' %}">
+              Juriscán
+            </a>  
+          </li>
+
+
+        </ul>
+
+      </div>

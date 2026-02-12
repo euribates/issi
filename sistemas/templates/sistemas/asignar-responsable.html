@@ -49,9 +49,11 @@
              <div id="contador">0</div>
              </span>
          </label>
+
              <button 
                  type="button"
-                 data-on-click="@get('/sistemas/patch/usuarios/')">
+                 data-on:load="@get('/sistemas/patch/usuarios/')"
+                 data-on:click="@get('/sistemas/patch/usuarios/')">
              filtrar por
              </button>
   

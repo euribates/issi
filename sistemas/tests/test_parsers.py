@@ -103,8 +103,6 @@ def test_parse_juriscan_double_number():
         Juriscan.load_or_create(79558),
         ])
     rs = parsers.parse_juriscan('79558, 5559')
-    from icecream import ic; ic(rs)
-    from icecream import ic; ic(rs.value)
     assert rs.is_success()
     assert rs.value == expected
 

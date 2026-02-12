@@ -11,16 +11,34 @@ from comun.templatetags.comun_filters import as_markdown
 
 register = template.Library()
 
+@register.filter
+def as_codigo(sistema):
+    url = sistema.url_detalle_sistema()
+    return mark_safe(
+        f'<a href="{url}" class="sistema-codigo">'
+        f'{sistema.codigo}'
+        '</a>'
+        )
+    
 
 @register.filter
-def as_descripcion(descripcion):
-    if not descripcion:
+def as_nombre_sistema(sistema):
+    return mark_safe(
+        f'<span class="sistema-nombre">'
+        f'{sistema.nombre_sistema}'
+        '</span>'
+        )
+
+
+@register.filter
+def as_descripcion(sistema):
+    if not sistema.descripcion:
         return mark_safe(
             '<i class="bi bi-exclamation-diamond"></i>'
             '&nbsp;'
             '<i>Falta la descripción</i>'
             )
-    return as_markdown(descripcion)
+    return as_markdown(sistema.descripcion)
 
 
 @register.filter

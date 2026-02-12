@@ -14,6 +14,7 @@ from django.db.models.functions import Coalesce
 from django.utils.timezone import localtime
 
 from directorio.models import Organismo
+from juriscan.models import Juriscan
 from . import diagnosis
 from . import links
 
@@ -651,76 +652,81 @@ class Perfil(models.Model):
         return f"{self.get_cometido_display()} de {self.sistema.codigo}"
 
 
-class NormativaSistemaManager(models.Manager):
+class JuriscanSistemaManager(models.Manager):
 
-    def get_by_natural_key(self, id_sistema, num_juriscan):
-        return self.get(id_sistema, num_juriscan)
+    def get_by_natural_key(self, id_sistema, id_juriscan):
+        return self.get(
+            sistema=id_sistema,
+            juriscan=id_juriscan,
+            )
 
 
-class NormaSistema(models.Model):
-
+class JuriscanSistema(models.Model):
+    
     class Meta:
         constraints = [
             models.UniqueConstraint(
-                fields=["sistema", "num_juriscan"],
-                name="unique_sistema_juriscan",
+                fields=["sistema", "juriscan"],
+                name="unq_sistema_juriscan",
                 ),
             ]
 
-    id_normativa = models.BigAutoField(primary_key=True)
+    id = models.BigAutoField(primary_key=True)
     sistema = models.ForeignKey(
         Sistema,
-        related_name='normativa',
+        related_name='fichas_juriscan',
         on_delete=models.CASCADE,
         )
-    num_juriscan = models.PositiveIntegerField()
-    resumen = models.CharField(
-        max_length=2048,
-        null=True,
-        default=None,
-        blank=True,
+    juriscan = models.ForeignKey(
+        Juriscan,
+        related_name='sistemas',
+        on_delete=models.CASCADE,
         )
-    f_alta = models.DateTimeField(auto_now_add=True)
-    f_cambio = models.DateTimeField(auto_now=True)
-    f_baja = models.DateTimeField(
-        default=None,
-        blank=True,
-        null=True,
-        )
+
+    objects = JuriscanSistemaManager()
 
     def natural_key(self) -> tuple[int, int]:
         '''Devuelve una tupla con los valores de la clave natural.
         '''
-        return (self.sistema.pk, self.num_juriscan)
-
-    def __str__(self):
-        return 'Juriscan/{self.num_juriscan}'
+        return (self.sistema.pk, self.juriscan.pk)
 
     @classmethod
-    def upsert(cls, sistema, num_juriscan: int) -> tuple:
-        """Actualiza o inserta la norma del sistema, según proceda.
+    def load_juriscan_sistema(cls, id_sistema, id_juriscan):
+        return cls.objects.get_by_natural_key(id_sistema, id_juriscan)
+
+    def __str__(self):
+        return f'Sistema[{self.sistema_id}] -> Juriscan[{self.juriscan_id}]'
+
+    @classmethod
+    def upsert(cls, id_sistema: int, id_juriscan: int) -> tuple:
+        """Actualiza o inserta la vincluación juriscan / sistema.
 
         Es idempotente; si el sistema ya está vinculado a ese
         código de Juriscán, no hace nada.
 
         Patrameters:
 
-            sistema: Sistema - El sistema al que se le va a asignar la norma.
+            id_sistema (int): El identificador del sistema al que 
+              se le va a asignar la ficha juriscán.
 
-            num_juriscan: int - El código o número Juriscan de la norma.
+            if_juriscan (int): El número de la ficha Juriscan de la norma.
 
         Returns:
             
-            Una dupla, en la que el primer elemento
+            (tuple) Una dupla, en la que el primer elemento
             es la instancia recién creada o actualizada
             y el segundo un booleano indicando si ha
             sido creado (`True`) o modificado (`False`).
         """
-        norma_sistema, created = cls.objects.update_or_create(
+        sistema = Sistema.load_sistema(id_sistema)
+        juriscan = Juriscan.load_juriscan(id_juriscan)
+        juriscan_sistema, created = cls.objects.update_or_create(
             sistema=sistema,
-            num_juriscan=num_juriscan,
+            juriscan=juriscan,
             )
-        return norma_sistema, created
+        if created:
+            sistema.touch()
+        return juriscan_sistema, created
 
 
 class Ente(models.Model):

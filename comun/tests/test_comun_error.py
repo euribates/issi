@@ -113,7 +113,7 @@ def test_EI0011_codigo_duplicado():
     codigo = 'JURICAN'
     expecteds = [
         'Ya existe en la base de datos',
-        'un sistema con el codigo indicado:',
+        'un sistema con el código indicado:',
         str(codigo),
         ]
     for expected in expecteds:

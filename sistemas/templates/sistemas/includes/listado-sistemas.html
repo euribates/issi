@@ -29,10 +29,10 @@
      </a>
       
     </td>
-    <td><big>{{ sistema.codigo }}</big></td>
+    <td><big>{{ sistema|as_codigo }}</big></td>
       <td>
           <b>{{ sistema.nombre_sistema }}</b><br>
-          {{ sistema.descripcion|as_descripcion }}
+          {{ sistema|as_descripcion }}
       </td>
       <td>{{ sistema.organismo }}</td>
       <td>

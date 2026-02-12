@@ -183,13 +183,17 @@ img.card-top-logo {
   text-decoration: none!important;
 }
 
+
 .sistema-codigo {
   text-align: right;
-  font-size: 130%;
+  font-size: 125%;
   font-weight: bolder;
   margin: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
   padding-bottom: 0;
-  border-bottom: 0px solid #303030;
+  border: 1px solid #9A9A9A;
+  border-radius: 4px;
   text-decoration: none;
   }
 
