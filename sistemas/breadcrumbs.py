@@ -188,3 +188,23 @@ def importar_sistemas() -> str:
         'Importar',
         links.a_importar_sistemas(),
         )
+
+
+def listado_preguntas():
+    return bc_issi().step(
+        'Cuestionario',
+        links.a_listado_preguntas(),
+        )
+
+
+def ver_pregunta(pregunta):
+    return listado_preguntas().step(
+        f'Pregunta {pregunta.pk}',
+        links.a_ver_pregunta(pregunta.pk),
+        )
+
+def alta_opcion(pregunta):
+    return ver_pregunta(pregunta).step(
+        'Añadir opción',
+        links.a_alta_opcion(pregunta.pk),
+        )

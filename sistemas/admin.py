@@ -105,3 +105,54 @@ class EnteAdmin(admin.ModelAdmin):
         ]
 
 admin.site.register(models.Ente, EnteAdmin)
+
+
+class EjeAdmin(admin.ModelAdmin):
+    list_display = [
+        "id_eje",
+        "nombre_eje",
+        "influencia",
+        "orden",
+        ]
+    search_fields = [
+        'nombre_eje',
+        ]
+
+admin.site.register(models.Eje, EjeAdmin)
+
+
+class PreguntaAdmin(admin.ModelAdmin):
+    list_display = [
+        "id_pregunta",
+        "texto_pregunta",
+        "eje",
+        "orden",
+        ]
+    list_filter = [
+        "eje",
+        ]
+    search_fields = [
+        'texto_pregunta',
+        ]
+
+admin.site.register(models.Pregunta, PreguntaAdmin)
+
+
+class OpcionAdmin(admin.ModelAdmin):
+    list_display = [
+        "id_opcion",
+        "texto_opcion",
+        "valor",
+        "pregunta__texto_pregunta",
+        "pregunta__eje",
+        "orden",
+        ]
+    list_filter = [
+        'pregunta',
+        'pregunta__eje',
+        ]
+    search_fields = [
+        'texto_opcion',
+        ]
+
+admin.site.register(models.Opcion, OpcionAdmin)

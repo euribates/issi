@@ -1,0 +1,40 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+
+{% block content %}
+
+<h2>{{ pregunta.texto_pregunta }}</h2>
+<h3>
+    {{ pregunta.eje }} / {{ pregunta.orden }}
+</h3>
+
+<div class="controles">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right">
+      {% include "sistemas/includes/pb-alta-opcion.html" with pregunta=pregunta %}  
+    </div>
+</div>
+
+<table class="table table-striped">
+  <thead>
+      <th>Orden</th>
+      <th>Texto opción</th>
+      <th>Valor</th>
+  </thead>    
+  <tbody>
+    {% for opcion in pregunta.opciones.all %}<tr>
+      <th>
+          {{ opcion.orden }}
+      </th>
+      <td>
+          {{ opcion.texto_opcion }}
+      </td>
+      <td>
+          {{ opcion.valor }}
+      </td>
+    </tr>{% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}

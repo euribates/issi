@@ -570,6 +570,47 @@ def detalle_familia(request, familia):
         })
 
 
+def listado_preguntas(request):
+    preguntas = models.Pregunta.objects.all()
+    por_eje = agrupa(preguntas, lambda _p: _p.eje)
+    return render(request, 'sistemas/listado-preguntas.html', {
+        'titulo': 'Cuestionario de sistemas',
+        'breadcrumbs': bc.listado_preguntas(),
+        'tab': 'cuestionario',
+        'num_preguntas': preguntas.count(),
+        'por_eje': por_eje,
+        })
+
+
+def ver_pregunta(request, id_pregunta: int):
+    pregunta = models.Pregunta.load_pregunta(id_pregunta)
+    return render(request, 'sistemas/ver-pregunta.html', {
+        'titulo': f'Pregunta {pregunta.pk}: {pregunta.texto_pregunta}',
+        'breadcrumbs': bc.ver_pregunta(pregunta),
+        'tab': 'cuestionario',
+        'pregunta': pregunta,
+        })
+
+
+def alta_opcion(request, id_pregunta: int):
+    pregunta = models.Pregunta.load_pregunta(id_pregunta)
+    if request.method == 'POST':
+        form = forms.AltaOpcionForm(request.POST)
+        if form.is_valid():
+            form.save(pregunta)
+            return redirect(links.a_ver_pregunta(pregunta.pk))
+    else:
+        form = forms.AltaOpcionForm()
+
+    return render(request, 'sistemas/alta-opcion.html', {
+        'titulo': f'Añadir opción a la pregunta {id_pregunta}',
+        'breadcrumbs': bc.alta_opcion(pregunta),
+        'tab': 'cuestionario',
+        'pregunta': pregunta,
+        'form': form,
+        })
+
+
 def listado_activos(request):
     filterset = filtersets.ActivoFilter(
         request.GET,

@@ -137,3 +137,16 @@ def a_importar_sistemas() -> str:
 
 def a_exportar_sistemas() -> str:
     return _a('sistemas:exportar_sistemas')
+
+
+def a_listado_preguntas():
+    return _a('sistemas:listado_preguntas')
+
+
+def a_ver_pregunta(id_pregunta):
+    return _a('sistemas:ver_pregunta', id_pregunta=id_pregunta)
+
+
+def a_alta_opcion(id_pregunta):
+    return _a('sistemas:alta_opcion', id_pregunta=id_pregunta)
+

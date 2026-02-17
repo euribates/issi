@@ -42,6 +42,11 @@ urlpatterns = [
     tie('temas/<tema:tema>/', views.detalle_tema),
     tie('familias/', views.listado_familias),
     tie('familias/<fam:familia>/', views.detalle_familia),
+
+    tie('cuestionario/', views.listado_preguntas),
+    tie('cuestionario/<int:id_pregunta>/', views.ver_pregunta),
+    tie('cuestionario/<int:id_pregunta>/alta/opcion/', views.alta_opcion),
+
     tie('activos/', views.listado_activos),
     tie('pendientes/', views.pendientes),
     tie('pendientes/temas/', views.sistemas_sin_tema),

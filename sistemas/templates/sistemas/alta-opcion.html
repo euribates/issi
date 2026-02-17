@@ -1,0 +1,56 @@
+{% extends "comun/base.html" %}
+{% load comun_filters cards %}
+
+{% block content %}
+
+<h2>Dar de alta una nueva opción</br>
+    <small>para la pregunta "{{ pregunta }}"</small>
+</h2>
+
+{% table_card "Nueva opción" %}
+
+<form method="POST" action=".">
+{% csrf_token %}
+{{ form.errors }}
+  <tr>
+    <th>
+      {{ form.texto_opcion.label }}
+    </th>
+    <td>
+      {{ form.texto_opcion }}
+      {% if form.texto_opcion.errors %}<ul class="form-errors">
+        {% for err in form.texto_opcion.errors %}
+          <li>{{ err }}</li> 
+        {% endfor %}
+        </ul>{% endif %}
+    </td>
+  </tr>
+
+  <tr>
+    <th>
+      {{ form.valor.label }}
+    </th>
+    <td>
+      {{ form.valor }}
+      {% if form.valor.errors %}<ul class="form-errors">
+        {% for err in form.valor.errors %}
+          <li>{{ err }}</li> 
+        {% endfor %}
+        </ul>{% endif %}
+    </td>
+  </tr>
+
+  <tr>
+      <th></th>
+      <td>
+        <button type="submit" class="btn btn-primary">
+        Añadir opción
+        </button>
+      </td>
+  </tr>
+  </div>
+
+
+{% end_card %}
+
+{% endblock content %}

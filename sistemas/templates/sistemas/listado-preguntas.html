@@ -1,0 +1,46 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+
+{% block content %}
+
+<h2>Hay {{ num_preguntas|as_badge }} preguntas actualmente en el sistema</h2>
+
+{% for eje, preguntas in por_eje.items %}
+
+  <h3>{{ eje.nombre_eje }}
+      {{ preguntas|length|as_badge }}
+  </h3>
+    
+  <table class="table table-striped">
+    <thead>
+        <th>Orden</th>
+        <th>Texto pregunta</th>
+        <th>Nº de opciones</th>
+        <th><i class="bi bi-plus-circle"></i></th>
+    </thead>    
+    <tbody>
+    {% for pregunta in preguntas %}<tr>
+      <th>
+          {{ pregunta.orden }}
+      </th>
+      <td>
+        <a href="{% url 'sistemas:ver_pregunta' id_pregunta=pregunta.pk %}">
+          {{ pregunta }}
+        </a>
+      </td>
+      <td>
+        {% if pregunta.num_opciones == 0 %}
+          Ninguna
+        {% else %}
+         {{ pregunta.num_opciones|as_badge }}
+        {% endif %}  
+      </td>
+      <td>
+        {% include "sistemas/includes/pb-alta-opcion.html" with pregunta=pregunta %}
+      </td>
+    </tr>{% endfor %}
+    </tbody>
+  </table>
+
+{% endfor %}
+{% endblock content %}

@@ -164,3 +164,27 @@ class AltaUsuarioForm(BootstrapForm, forms.ModelForm):
             'apellidos',
             'organismo',
             ]
+
+
+class AltaOpcionForm(BootstrapForm, forms.ModelForm):
+
+    class Meta:
+        model = models.Opcion
+        fields = [
+            'texto_opcion',
+            'valor',
+            ]
+        widgets = {
+            'texto_opcion': forms.Textarea(attrs={
+                'class': "form-control",
+                'cols': 70,
+                'rows': 7,
+                }),
+        }
+
+    def save(self, pregunta, commit=True):
+        instance = super().save(commit=False)
+        instance.pregunta = pregunta
+        instance.orden = instance.get_next_orden()
+        instance = super().save(commit=commit)
+        return instance

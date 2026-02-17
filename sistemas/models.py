@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
 
 from datetime import datetime as DateTime
+from decimal import Decimal
 from html import escape
 from pathlib import Path
 from urllib.request import urlretrieve
 from uuid import uuid4, UUID
 
 from bs4 import BeautifulSoup
+
 from django.conf import settings
+from django.core.validators import DecimalValidator
+from django.core.validators import MaxValueValidator
+from django.core.validators import MinValueValidator
 from django.db import models
+from django.db.models import Max
 from django.db.models import Q
 from django.db.models.functions import Coalesce
 from django.utils.timezone import localtime
@@ -824,3 +830,119 @@ class Ente(models.Model):
             )
         return interlocutor
 
+
+class Eje(models.Model):
+
+    class Meta:
+        ordering = [ 'orden' ]
+
+    id_eje = models.SlugField(
+        max_length=1,
+        primary_key=True,
+        )
+    nombre_eje = models.CharField(max_length=24, unique=True)
+    influencia = models.DecimalField(
+        max_digits=4,
+        decimal_places=3,
+        default=Decimal('0.200'),
+        validators=[
+            DecimalValidator(4, 3),
+            MaxValueValidator(
+                Decimal('1.0'),
+                message='La influencia debe estar comprendida entre 0.0 y 1.0',
+                ),
+            MinValueValidator(
+                Decimal('0.0'),
+                message='La influencia debe estar comprendida entre 0.0 y 1.0',
+                ),
+            ],
+        )
+    orden = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.nombre_eje
+
+
+class PreguntaManager(models.Manager):
+
+    def get_queryset(self):
+        return (
+            super()
+            .get_queryset()
+            .annotate(num_opciones=Coalesce(models.Count("opciones"), 0))
+            .order_by('eje__orden', 'orden')
+            )
+
+
+class Pregunta(models.Model):
+
+    class Meta:
+        ordering = [ 'eje__orden', 'orden' ]
+
+    id_pregunta = models.BigAutoField(primary_key=True)
+    texto_pregunta = models.CharField(max_length=1024, unique=True)
+    eje = models.ForeignKey(
+        Eje,
+        related_name='preguntas',
+        on_delete=models.PROTECT,
+        )
+    orden = models.IntegerField(default=0)
+
+    objects = PreguntaManager()
+
+    def __str__(self):
+        return self.texto_pregunta
+
+    @classmethod
+    def load_pregunta(cls, pk:str):
+        try:
+            return cls.objects.get(id_pregunta=pk)
+        except cls.DoesNotExist:
+            return None
+
+
+class Opcion(models.Model):
+
+    class Meta:
+        ordering = ['orden']
+        verbose_name = 'Opción'
+        verbose_name_plural = 'Opciones'
+
+    id_opcion = models.BigAutoField(primary_key=True)
+    pregunta =  models.ForeignKey(
+        Pregunta,
+        related_name='opciones',
+        on_delete=models.CASCADE,
+        )
+    texto_opcion = models.CharField(max_length=1024, unique=True)
+    valor = models.DecimalField(
+        max_digits=4,
+        decimal_places=3,
+        default=Decimal('0.25'),
+        validators=[
+            DecimalValidator(4, 3),
+            MaxValueValidator(
+                Decimal('1.0'),
+                message='El valor de la opción debe estar comprendida entre 0.0 y 1.0',
+                ),
+            MinValueValidator(
+                Decimal('0.0'),
+                message='La valor de la opción debe estar comprendida entre 0.0 y 1.0',
+                ),
+            ],
+        )
+    orden = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.texto_opcion
+
+    def get_next_orden(self) -> int:
+        if not self.pregunta:
+            return 1
+        siblings = Opcion.objects.filter(pregunta=self.pregunta)
+        if siblings.count() == 0:
+            orden = 1
+        else:
+            data = siblings.aggregate(max_orden=Max('orden'))
+            orden = data['max_orden'] + 1
+        return orden
