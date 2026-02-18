@@ -124,7 +124,7 @@ class CardNode(template.Node):  # Bootstrap 5
         buff.append(self.body.render(context))
         buff.append(self.body_end_tag())
         if self.footer:
-            buff.append(f'<div class="card-footer">')
+            buff.append('<div class="card-footer">')
             buff.append(self.footer)
             buff.append('</div>')
         buff.append('</div>\n')
