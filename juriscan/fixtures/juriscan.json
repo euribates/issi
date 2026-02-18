@@ -1,0 +1,162 @@
+[
+{
+    "model": "juriscan.juriscan",
+    "pk": 636,
+    "fields": {
+        "titulo": "Ley 14/1990, 26 julio, de Reforma de la Ley 8/1986, 18 noviembre (BOCAC 139, 19.11.86; BOE 304, 20.12.86), de Régimen Jurídico de las Administraciones Públicas de Canarias",
+        "created": "2026-02-12T10:58:14.187Z",
+        "updated": "2026-02-12T10:58:14.187Z",
+        "checked": "2026-02-12T10:58:14.186Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 4643,
+    "fields": {
+        "titulo": "Ley 8/1991, 30 abril, de protección de los animales",
+        "created": "2026-02-12T10:58:14.604Z",
+        "updated": "2026-02-12T10:58:14.604Z",
+        "checked": "2026-02-12T10:58:14.604Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 5559,
+    "fields": {
+        "titulo": "Ley 2/1984, 11 abril, de Premios Canarias",
+        "created": "2026-02-12T08:18:17Z",
+        "updated": "2026-02-12T08:18:17Z",
+        "checked": "2026-02-12T08:18:17Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 8597,
+    "fields": {
+        "titulo": "Decreto 139/1986, 29 septiembre, por el que se dictan normas para la elaboración del Registro de Plantaciones de Viñedo y el Registro Especial de Parcelas con derecho a Replantacion",
+        "created": "2026-02-12T11:44:34.075Z",
+        "updated": "2026-02-12T11:44:34.075Z",
+        "checked": "2026-02-12T11:44:34.074Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 22137,
+    "fields": {
+        "titulo": "Decreto 73/1995, 7 abril, por el que se crea el Registro de Sociedades Agrarias de Transformación de Canarias",
+        "created": "2026-02-12T08:26:06Z",
+        "updated": "2026-02-12T08:26:06Z",
+        "checked": "2026-02-12T08:26:06Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 53183,
+    "fields": {
+        "titulo": "Ley 6/2006,  de 17 de julio, del Patrimonio de la Comunidad Autónoma de Canarias",
+        "created": "2026-02-12T10:58:06.869Z",
+        "updated": "2026-02-12T10:58:06.869Z",
+        "checked": "2026-02-12T10:58:06.869Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 61849,
+    "fields": {
+        "titulo": "Orden, 24 sep 2009, de la Consejería de Bienestar Social, Juventud y Vivienda, por la que se regula el régimen de inscripción, funcionamiento y estructura del Registro Público de Demandantes de Vivienda Protegida de Canarias",
+        "created": "2026-02-12T10:58:06.329Z",
+        "updated": "2026-02-12T10:58:06.329Z",
+        "checked": "2026-02-12T10:58:06.328Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 70580,
+    "fields": {
+        "titulo": "Decreto 21/2014, 31 marzo, del Presidente, por el que se crea la Red de Espacios y Parques Tecnológicos de Canarias y se determinan las empresas vinculadas e implantadas a los Espacios y Parques Tecnológicos de la citada Red",
+        "created": "2026-02-12T10:58:15.887Z",
+        "updated": "2026-02-12T10:58:15.887Z",
+        "checked": "2026-02-12T10:58:15.886Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 71248,
+    "fields": {
+        "titulo": "Ley 3/1997, 8 mayo, de Incompatibilidades de los miembros del Gobierno y altos cargos de la Administración Pública de la Comunidad Autónoma de Canarias",
+        "created": "2026-02-12T08:18:17Z",
+        "updated": "2026-02-12T08:18:17Z",
+        "checked": "2026-02-12T08:18:17Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 76504,
+    "fields": {
+        "titulo": "Decreto 241/2017, de 11 de diciembre, por el que se aprueba el Reglamento de la Caja de Depósitos de la Comunidad Autónoma de Canarias",
+        "created": "2026-02-12T10:58:07.742Z",
+        "updated": "2026-02-12T10:58:07.742Z",
+        "checked": "2026-02-12T10:58:07.742Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 77865,
+    "fields": {
+        "titulo": "Ley 5/2019, 9 abril, de la Presidencia del Gobierno, de la lectura y de las bibliotecas de Canarias",
+        "created": "2026-02-12T11:47:36.888Z",
+        "updated": "2026-02-12T11:47:36.888Z",
+        "checked": "2026-02-12T11:47:36.887Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 78697,
+    "fields": {
+        "titulo": "DECRETO ley 24/2020, de 23 de diciembre, de medidas extraordinarias y urgentes en los ámbitos de vivienda, transportes y puertos de titularidad de la Comunidad Autónoma de Canarias.",
+        "created": "2026-02-12T10:58:05.809Z",
+        "updated": "2026-02-12T10:58:05.809Z",
+        "checked": "2026-02-12T10:58:05.808Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 78738,
+    "fields": {
+        "titulo": "ORDEN de 4 de febrero de 2021, por la que se regula el Registro de solicitudes de acceso a la información pública.",
+        "created": "2026-02-12T10:58:08.816Z",
+        "updated": "2026-02-12T10:58:08.816Z",
+        "checked": "2026-02-12T10:58:08.816Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 79002,
+    "fields": {
+        "titulo": "DECRETO 11/2022, de 20 de enero, por el que se crea y regula el ?Registro de Agentes Inmobiliarios de Canarias?.",
+        "created": "2026-02-12T10:58:07.246Z",
+        "updated": "2026-02-12T10:58:07.246Z",
+        "checked": "2026-02-12T10:58:07.245Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 79417,
+    "fields": {
+        "titulo": "DECRETO 108/2024, de 31 de julio, por el que se aprueba el Reglamento Orgánico de la Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad.",
+        "created": "2026-02-12T10:58:08.429Z",
+        "updated": "2026-02-12T10:58:08.429Z",
+        "checked": "2026-02-12T10:58:08.429Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 79558,
+    "fields": {
+        "titulo": "Ley 5/2025, de 30 de septiembre, de volcanes de Canarias.",
+        "created": "2026-02-12T08:18:17Z",
+        "updated": "2026-02-12T08:18:17Z",
+        "checked": "2026-02-12T08:18:17Z"
+    }
+}
+]

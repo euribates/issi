@@ -446,7 +446,7 @@ class Sistema(models.Model):
             '<div class="progress" role="progressbar"',
             ' aria-label="Prograso cuestionario"',
             f' aria-valuenow="{num_respuestas}"',
-            f' aria-valuemin="0"',
+            ' aria-valuemin="0"',
             f' aria-valuemax="{num_preguntas}">',
             f'<div class="progress-bar bg-success" style="width: {porcentaje}%">',
             f'{porcentaje}%',
