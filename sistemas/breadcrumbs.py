@@ -26,6 +26,13 @@ def detalle_sistema(sistema) -> BreadCrumb:
         )
 
 
+def cuestionario_sistema(sistema):
+    return detalle_sistema(sistema).step(
+        'Cuestionario',
+        links.a_cuestionario_sistema(sistema.pk),
+        )
+
+
 def editar_sistema(sistema) -> BreadCrumb:
     return sistemas().step(
         str(sistema.codigo),

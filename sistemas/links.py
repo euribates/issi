@@ -71,6 +71,10 @@ def a_conmutar_campo(id_sistema: int, campo: str) -> str:
         )
 
 
+def a_cuestionario_sistema(id_sistema: int) -> str:
+    return _a('sistemas:cuestionario_sistema', sistema=id_sistema)
+
+
 def a_usuarios() -> str:
     return _a('sistemas:listado_usuarios')
 

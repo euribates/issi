@@ -182,9 +182,13 @@ class AltaOpcionForm(BootstrapForm, forms.ModelForm):
                 }),
         }
 
-    def save(self, pregunta, commit=True):
+    def __init__(self, *args, **kwargs):
+        self.pregunta = kwargs.pop('pregunta')
+        super().__init__(*args, **kwargs)
+
+    def save(self, commit=True):
         instance = super().save(commit=False)
-        instance.pregunta = pregunta
+        instance.pregunta = self.pregunta
         instance.orden = instance.get_next_orden()
         instance = super().save(commit=commit)
         return instance

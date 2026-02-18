@@ -26,7 +26,8 @@ urlpatterns = [
     tie('sistema/<si:sistema>/desasignar/normativa/<int:juriscan>/', views.desasignar_normativa),
     tie('sistema/<si:sistema>/asignar/normativa/', views.asignar_normativa),
     tie('sistema/<si:sistema>/asignar/icono/', views.asignar_icono),
-    tie('sistema/<si:sistema>/asignar/icono/', views.asignar_icono),
+    tie('sistema/<si:sistema>/cuestionario/', views.cuestionario_sistema),
+
     tie('sistema/<si:sistema>/conmutar/<str:campo>/', views.conmutar_campo),
     tie('perfil/<int:id_perfil>/borrar/', views.borrar_perfil),
     tie('entes/', views.listado_entes),

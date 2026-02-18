@@ -295,6 +295,17 @@ def asignar_icono(request, sistema):
         })
 
 
+def cuestionario_sistema(request, sistema):
+    preguntas = models.Pregunta.objects.all()
+    return render(request, 'sistemas/cuestionario-sistema.html', {
+        'titulo': f'Cuestionario específico para {sistema}',
+        'breadcrumbs': bc.cuestionario_sistema(sistema),
+        'sistema': sistema,
+        'preguntas': preguntas,
+        'num_preguntas': preguntas.count(),
+        })
+
+
 def conmutar_campo(request, sistema, campo: str):
     """Conmutar el estado de un campo lógico.
     """
@@ -595,12 +606,12 @@ def ver_pregunta(request, id_pregunta: int):
 def alta_opcion(request, id_pregunta: int):
     pregunta = models.Pregunta.load_pregunta(id_pregunta)
     if request.method == 'POST':
-        form = forms.AltaOpcionForm(request.POST)
+        form = forms.AltaOpcionForm(request.POST, pregunta=pregunta)
         if form.is_valid():
-            form.save(pregunta)
+            form.save()
             return redirect(links.a_ver_pregunta(pregunta.pk))
     else:
-        form = forms.AltaOpcionForm()
+        form = forms.AltaOpcionForm(pregunta=pregunta)
 
     return render(request, 'sistemas/alta-opcion.html', {
         'titulo': f'Añadir opción a la pregunta {id_pregunta}',

@@ -12,6 +12,7 @@ ser del tipo más cercanbo posible al esperado.
 
 import re
 from uuid import UUID
+from typing import Sequence
 
 import pandas as pd
 
@@ -141,7 +142,7 @@ def parse_dir3(dir3, n_linea=None) -> Result:
     return Failure(errors.EI0007(dir3, n_linea=n_linea))
 
 
-def parse_materia_competencial(materia: str, n_linea=None) -> Result:
+def parse_materia_competencial(materia: str | None, n_linea=None) -> Result:
     '''Devuelve la materia competencial que corresponda.
 
     Si no se especifica, devuelve la materia ``UNK``.
@@ -248,7 +249,7 @@ def parse_uuid(value: str, n_linea=None) -> Result:
 
 
 
-def parse_row(tupla: tuple, n_linea=None) -> dict:
+def parse_row(tupla: Sequence, n_linea=None) -> dict:
     result = {}
     result['nombre_sistema'] = parse_nombre_sistema(tupla[0], n_linea=n_linea)
     result['codigo'] = parse_codigo_interno(tupla[1], n_linea=n_linea)

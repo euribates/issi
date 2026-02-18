@@ -1,0 +1,20 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+{% block content %}
+
+<h3>Cuestionario Específico<br>
+    <small>{{ sistema.nombre_sistema }}</small>
+</h3>
+
+<p>Hay {{ num_preguntas|as_badge }} pregunta en el formulario en el formulario</p>
+
+{% for pregunta in preguntas %}
+    <h4>{{ pregunta.eje }} - {{ pregunta.texto_pregunta }}</h4>
+
+    <ul>{% for opcion in pregunta.opciones.all %}
+        <li>{{ opcion.texto_opcion }}</li>
+    {% endfor %}</ul>
+
+{% endfor %}    
+
+{% endblock content %}

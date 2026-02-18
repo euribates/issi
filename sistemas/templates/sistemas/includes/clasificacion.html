@@ -8,6 +8,18 @@
   </div>
   <div class="card-body">
   <table class="table table-hover">
+
+    <tr>
+      <th>Cuestionario específico</th>
+      <td>{{ sistema.estado_cuestionario|safe }}</td>
+      <td>
+          <a href="{% url 'sistemas:cuestionario_sistema' sistema=sistema %}">
+          <i class="bi bi-list-check"></i>
+          Contestar
+          </a>
+      </td>
+    </tr>
+
     <tr>
       <th>Estado</th>
       <td>{{ sistema.get_estado|as_status_desc }}</td>

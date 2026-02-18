@@ -4,18 +4,19 @@
 Modelos definidos para intermediar con Juriscan.
 """
 
-
 from urllib.request import urlopen
-from django.utils import timezone
 
 from bs4 import BeautifulSoup
 from django.db import models
+from django.utils import timezone
 
-HOST = 'www3.gobiernodecanarias.org'
-URL_BASE = f'https://{HOST}/juriscan/ficha.jsp?id={{id_juriscan}}'
+HOST = "www3.gobiernodecanarias.org"
+URL_BASE = f"https://{HOST}/juriscan/ficha.jsp?id={{id_juriscan}}"
+
+DIAS_ANTES_DE_REVALIDAR = 27
 
 
-def obtener_titulo_desde_juriscan(id_juriscan: int) -> str|None:
+def obtener_titulo_desde_juriscan(id_juriscan: int) -> str | None:
     """A partir del número de ficha de Juriscan, devuelve el título.
 
     Si no se puede acceder a la página de Jurisca ya sea
@@ -42,7 +43,7 @@ def obtener_titulo_desde_juriscan(id_juriscan: int) -> str|None:
     """
     url = URL_BASE.format(id_juriscan=id_juriscan)
     with urlopen(url) as response:
-        html = response.read().decode('iso-8859-1')
+        html = response.read().decode("iso-8859-1")
         soup = BeautifulSoup(html, features="html.parser")
         name = soup.find(id="titleFicha")
         if name:
@@ -51,9 +52,10 @@ def obtener_titulo_desde_juriscan(id_juriscan: int) -> str|None:
 
 
 class Juriscan(models.Model):
-
     class Meta:
-        ordering = ['id_juriscan',]
+        ordering = [
+            "id_juriscan",
+        ]
 
     id_juriscan = models.BigIntegerField(primary_key=True)
     titulo = models.CharField(max_length=2280)
@@ -65,7 +67,7 @@ class Juriscan(models.Model):
         return self.titulo
 
     @classmethod
-    def load_juriscan(cls, pk:str):
+    def load_juriscan(cls, pk: int):
         try:
             return cls.objects.get(id_juriscan=pk)
         except cls.DoesNotExist:
@@ -83,13 +85,11 @@ class Juriscan(models.Model):
                 juriscan = Juriscan(
                     id_juriscan=id_juriscan,
                     titulo=titulo,
-                    )
+                )
                 juriscan.save()
         return juriscan
-    
+
     def necesita_actualizar(self):
         now = timezone.now()
         delta = now - self.checked
-        return delta.days > 27
-
-
+        return delta.days > DIAS_ANTES_DE_REVALIDAR
