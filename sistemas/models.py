@@ -15,7 +15,8 @@ from django.core.validators import (
     MinValueValidator,
 )
 from django.db import models
-from django.db.models import Max, Q
+from django.db.models import Max, Count
+from django.db.models import Q
 from django.db.models.functions import Coalesce
 from django.utils.timezone import localtime
 
@@ -843,6 +844,17 @@ class Ente(models.Model):
         return interlocutor
 
 
+class EjeManager(models.Manager):
+
+    def get_queryset(self):
+        return (
+            super()
+            .get_queryset()
+            .prefetch_related('preguntas')
+            .annotate(num_preguntas=Count("preguntas"))
+        )
+
+
 class Eje(models.Model):
     class Meta:
         ordering = ["orden"]
@@ -869,6 +881,8 @@ class Eje(models.Model):
         ],
     )
     orden = models.IntegerField(default=0)
+
+    objects = EjeManager()
 
     def __str__(self):
         return self.nombre_eje
@@ -958,6 +972,29 @@ class Opcion(models.Model):
             orden = data["max_orden"] + 1
         return orden
 
+    def asignar_respuesta(self, sistema):
+        """Asigna una opción como respuesta de una sistema.
+
+        Es idempotente, si la respuesta ya estaba
+        creada, no hace nada.
+
+        Si existe una respuesta previa para la misma pregunta y el mismo sistema,
+        se borra.
+        """
+        previos = (
+            Respuesta.objects
+            .filter(sistema=sistema)
+            .filter(opcion__pregunta=self.pregunta)
+            .exclude(opcion=self)
+            )
+        if previos.exists():
+            previos.delete()
+        respuesta, _created = Respuesta.objects.update_or_create(
+            sistema=sistema,
+            opcion=self,
+            )
+        return respuesta
+
 
 class RespuestaManager(models.Manager):
 
@@ -967,6 +1004,7 @@ class RespuestaManager(models.Manager):
             .get_queryset()
             .select_related('sistema')
             .select_related('opcion')
+            .select_related('opcion__pregunta')
         )
 
     def get_by_natural_key(self, sistema, opcion):
@@ -999,10 +1037,9 @@ class Respuesta(models.Model):
         related_name="respuestas",
         on_delete=models.CASCADE,
         )
-    f_respuesta = models.DateTimeField(auto_now_add=True)
+    f_respuesta = models.DateTimeField(auto_now=True)
 
     objects = RespuestaManager()
 
     def natural_key(self):
         return (self.sistema, self.opcion)
-

@@ -57,6 +57,7 @@ INSTALLED_APPS = [
 
 if DEBUG:
     INSTALLED_APPS += [
+        'django_werkzeug',
         'django_extensions',
         'debug_toolbar',
     ]

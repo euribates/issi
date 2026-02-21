@@ -288,21 +288,67 @@ def asignar_icono(request, sistema):
         form = forms.AsignarIconoForm(instance=sistema)
     return render(request, 'sistemas/asignar-icono.html', {
         'titulo': f'Asignar icono a {sistema}',
-        'breadcrumbs': bc.asignar_icono(sistema),
         'tab': 'sistemas',
+        'breadcrumbs': bc.asignar_icono(sistema),
         'form': form,
         'sistema': sistema,
         })
 
 
+def create_graph(respuestas):
+    from pychartjs import BaseChart, ChartType
+    ejes = { eje.pk: eje for eje in models.Eje.objects.all() }
+    series = [
+        (r.opcion.pregunta.eje_id, float(r.opcion.valor))
+        for r in respuestas.all()
+        ]
+    labels = []
+    values = []
+    for eje_id, eje in ejes.items():
+        labels.append(eje.nombre_eje)
+        _values = [value for eje, value in series if eje == eje_id]
+        if eje.num_preguntas > 0:
+            value = sum(_values) * float(eje.influencia) / eje.num_preguntas
+        else:
+            value = 0.0
+        values.append(value)
+    
+    class MyBarGraph(BaseChart):
+
+        type = ChartType.Radar
+
+        class labels:
+            group = labels
+
+        class data:
+            data = values
+            label = labels
+            backgroundColor = [
+                '#FFF09C80',
+                '#FFF09C80',
+                '#E6E6FA80',
+                '#FFB6C180',
+                '#FFDAB980',
+                '#C5E5E880',
+                ]
+
+
+    chart = MyBarGraph()
+    chart.data.label = "ISC"
+    return chart.get()
+
+
 def cuestionario_sistema(request, sistema):
     preguntas = models.Pregunta.objects.all()
+    respuestas = sistema.respuestas.all()
     return render(request, 'sistemas/cuestionario-sistema.html', {
         'titulo': f'Cuestionario específico para {sistema}',
+        'tab': 'sistemas',
         'breadcrumbs': bc.cuestionario_sistema(sistema),
         'sistema': sistema,
         'preguntas': preguntas,
         'num_preguntas': preguntas.count(),
+        'chartJSON': create_graph(respuestas),
         })
 
 
