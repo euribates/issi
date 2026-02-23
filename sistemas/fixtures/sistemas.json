@@ -7666,5 +7666,241 @@
         "valor": "1.000",
         "orden": 4
     }
+},
+{
+    "model": "sistemas.opcion",
+    "pk": 92,
+    "fields": {
+        "pregunta": 5,
+        "texto_opcion": "Si.",
+        "valor": "0.000",
+        "orden": 1
+    }
+},
+{
+    "model": "sistemas.opcion",
+    "pk": 93,
+    "fields": {
+        "pregunta": 5,
+        "texto_opcion": "No,",
+        "valor": "1.000",
+        "orden": 2
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 136,
+    "fields": {
+        "sistema": 1,
+        "opcion": 89,
+        "f_respuesta": "2026-02-19T14:59:41.016Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 139,
+    "fields": {
+        "sistema": 1,
+        "opcion": 11,
+        "f_respuesta": "2026-02-19T14:59:40.707Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 153,
+    "fields": {
+        "sistema": 1,
+        "opcion": 48,
+        "f_respuesta": "2026-02-19T14:59:40.990Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 156,
+    "fields": {
+        "sistema": 1,
+        "opcion": 13,
+        "f_respuesta": "2026-02-19T14:59:40.724Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 157,
+    "fields": {
+        "sistema": 1,
+        "opcion": 17,
+        "f_respuesta": "2026-02-19T14:59:40.739Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 158,
+    "fields": {
+        "sistema": 1,
+        "opcion": 24,
+        "f_respuesta": "2026-02-19T14:59:40.752Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 159,
+    "fields": {
+        "sistema": 1,
+        "opcion": 30,
+        "f_respuesta": "2026-02-19T14:59:40.766Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 160,
+    "fields": {
+        "sistema": 1,
+        "opcion": 35,
+        "f_respuesta": "2026-02-19T14:59:40.779Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 161,
+    "fields": {
+        "sistema": 1,
+        "opcion": 39,
+        "f_respuesta": "2026-02-19T14:59:40.793Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 162,
+    "fields": {
+        "sistema": 1,
+        "opcion": 42,
+        "f_respuesta": "2026-02-19T14:59:40.807Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 163,
+    "fields": {
+        "sistema": 1,
+        "opcion": 52,
+        "f_respuesta": "2026-02-19T14:59:40.821Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 164,
+    "fields": {
+        "sistema": 1,
+        "opcion": 58,
+        "f_respuesta": "2026-02-19T14:59:40.839Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 165,
+    "fields": {
+        "sistema": 1,
+        "opcion": 62,
+        "f_respuesta": "2026-02-19T14:59:40.853Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 166,
+    "fields": {
+        "sistema": 1,
+        "opcion": 67,
+        "f_respuesta": "2026-02-19T14:59:40.868Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 167,
+    "fields": {
+        "sistema": 1,
+        "opcion": 70,
+        "f_respuesta": "2026-02-19T14:59:40.882Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 168,
+    "fields": {
+        "sistema": 1,
+        "opcion": 92,
+        "f_respuesta": "2026-02-19T14:59:40.898Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 169,
+    "fields": {
+        "sistema": 1,
+        "opcion": 28,
+        "f_respuesta": "2026-02-19T14:59:40.916Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 170,
+    "fields": {
+        "sistema": 1,
+        "opcion": 73,
+        "f_respuesta": "2026-02-19T14:59:40.937Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 171,
+    "fields": {
+        "sistema": 1,
+        "opcion": 76,
+        "f_respuesta": "2026-02-19T14:59:40.951Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 172,
+    "fields": {
+        "sistema": 1,
+        "opcion": 82,
+        "f_respuesta": "2026-02-19T14:59:40.966Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 173,
+    "fields": {
+        "sistema": 1,
+        "opcion": 47,
+        "f_respuesta": "2026-02-19T14:59:40.981Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 174,
+    "fields": {
+        "sistema": 1,
+        "opcion": 85,
+        "f_respuesta": "2026-02-19T14:59:41.005Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 175,
+    "fields": {
+        "sistema": 1,
+        "opcion": 7,
+        "f_respuesta": "2026-02-19T14:59:41.030Z"
+    }
+},
+{
+    "model": "sistemas.respuesta",
+    "pk": 176,
+    "fields": {
+        "sistema": 1,
+        "opcion": 4,
+        "f_respuesta": "2026-02-19T14:59:41.045Z"
+    }
 }
 ]
