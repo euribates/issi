@@ -16,7 +16,7 @@ from django.core.validators import (
 )
 from django.db import models
 from django.db.models import Max, Count
-from django.db.models import Q
+from django.db.models import Q, F
 from django.db.models.functions import Coalesce
 from django.utils.timezone import localtime
 
@@ -116,8 +116,9 @@ class Sistema(models.Model):
         """Opciones para modelo Sistema."""
 
         ordering = [
-            "nombre_sistema",
-        ]
+            F("es_subsistema_de").desc(nulls_first=True),
+            'nombre_sistema',
+            ]
 
     id_sistema = models.BigAutoField(primary_key=True)
     uuid_sistema = models.UUIDField(
