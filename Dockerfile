@@ -1,7 +1,8 @@
 FROM python:3.14
 RUN mkdir /app
 WORKDIR /app
- 
+
+RUN apt-get install unzip
 # Set environment variables 
 # Prevents Python from writing pyc files to disk
 ENV PYTHONDONTWRITEBYTECODE=1
@@ -21,7 +22,14 @@ RUN pip install -r /app/requirements-dev.txt
 
 # Copy the Django project to the container
 COPY . /app/
- 
+RUN python manage.py migrate
+RUN python manage.py loaddata directorio/fixtures/directorio.json
+RUN python manage.py loaddata normativa/fixtures/normativa.json
+RUN python manage.py loaddata glosario/fixtures/glosario.json
+RUN python manage.py loaddata sistemas/fixtures/sistemas.json
+RUN unzip -ul uploads.zip -d uploads/
+
+
 # Expose the Django port
 EXPOSE 8801
  
