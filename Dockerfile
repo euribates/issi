@@ -4,7 +4,7 @@ RUN mkdir /app/logs
 WORKDIR /app
 ENV PATH="$PATH:/usr/local/bin"
 
-RUN apk add unzip vim
+RUN apk add unzip vim sqlite3
 
 # Set environment variables 
 # Prevents Python from writing pyc files to disk

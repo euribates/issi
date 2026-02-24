@@ -56,6 +56,8 @@ class Juriscan(models.Model):
         ordering = [
             "id_juriscan",
         ]
+        verbose_name = 'Ficha Juriscán'
+        verbose_name_plural = 'Fichas de Juriscán'
 
     id_juriscan = models.BigIntegerField(primary_key=True)
     titulo = models.CharField(max_length=2280)
@@ -93,3 +95,5 @@ class Juriscan(models.Model):
         now = timezone.now()
         delta = now - self.checked
         return delta.days > DIAS_ANTES_DE_REVALIDAR
+
+    necesita_actualizar.boolean = True

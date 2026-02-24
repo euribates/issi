@@ -57,7 +57,7 @@ static:
 
 # Ejecutar un run server en modo desarrollo
 rundev: static 
-    python ./manage.py runserver 0.0.0.0:8801 
+    python ./manage.py runserver_plus 0.0.0.0:8801 
 
 
 # Borrar ficheros compilados de python
