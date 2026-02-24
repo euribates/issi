@@ -1,10 +1,10 @@
-FROM python:3.14-alpine
+FROM python:3.14-slim
 RUN mkdir /app
 RUN mkdir /app/logs
 WORKDIR /app
-ENV PATH="$PATH:/usr/local/bin"
 
-RUN apk add unzip vim sqlite3
+RUN apt-get update && apt-get upgrade
+RUN apk add unzip vim vim-docs vim-scripts sqlite3 -y
 
 # Set environment variables 
 # Prevents Python from writing pyc files to disk

@@ -295,6 +295,7 @@ def asignar_icono(request, sistema):
         })
 
 
+
 def create_graph(respuestas):
     from pychartjs import BaseChart, ChartType
     ejes = { eje.pk: eje for eje in models.Eje.objects.all() }
