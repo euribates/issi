@@ -14,6 +14,7 @@ def tie(ruta, vista, name=None):
 
 urlpatterns = [
     tie('', views.index),
+    tie('labo/', views.labo),
     tie('alta/', views.alta_sistema),
     tie('sistema/<si:sistema>/', views.detalle_sistema),
     tie('sistema/<si:sistema>/editar/', views.editar_sistema),

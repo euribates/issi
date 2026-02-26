@@ -30,7 +30,7 @@
     </div>
 
     <div class="m-2">
-      <label for="id_nombre" class="form-label">Nombre</label>
+      <label for="id_nombre" class="form-label">{{ form.nombre.label }}</label>
       {{ form.nombre }}
       {% if form.nombre.errors %}<ul class="form-errors">
         {% for err in form.nombre.errors %}
@@ -40,7 +40,7 @@
     </div>
 
     <div class="m-2">
-      <label for="id_apellidos" class="form-label">Nombre</label>
+      <label for="id_apellidos" class="form-label">{{ form.apellidos.label }}</label>
       {{ form.apellidos }}
       {% if form.apellidos.errors %}<ul class="form-errors">
         {% for err in form.apellidos.errors %}

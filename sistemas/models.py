@@ -882,6 +882,10 @@ class Eje(models.Model):
         ],
     )
     orden = models.IntegerField(default=0)
+    color = models.CharField(
+        max_length=16,
+        default='silver',
+        )
 
     objects = EjeManager()
 
@@ -1039,7 +1043,7 @@ class Respuesta(models.Model):
         on_delete=models.CASCADE,
         )
     f_respuesta = models.DateTimeField(auto_now=True)
-
+    comentario = models.CharField(max_length=4018, default='')
     objects = RespuestaManager()
 
     def natural_key(self):

@@ -1,0 +1,30 @@
+{% extends 'comun/base.html' %}
+
+
+{% block styles %}
+{{ block.super }}
+<style>
+.chart {
+    width: 512px;
+    height: 612px;
+    border: 2px solid black;
+}
+</style>
+{% endblock styles %}
+
+{% block scripts %}
+{{ block.super }}
+{{ chart.as_javascript }}
+{% endblock scripts %}
+
+{% block content %}
+    
+<h2>Chart.js Demo</h2>
+
+<h3>Radar</h3>
+
+<div class="chart">
+    <canvas id="Chart"></canvas>
+</div>
+
+{% endblock content %}

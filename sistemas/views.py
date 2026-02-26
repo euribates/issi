@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from functools import cache
+from typing import Iterable
 import io
 import json
 
@@ -76,14 +77,16 @@ def index(request, *args, **kwargs):
         .select_related('organismo')
         .order_by('-f_cambio')
         )
-    num_sistemas = sistemas.count()
+    total_sistemas = num_sistemas = sistemas.count()
     return render(request, 'sistemas/index.html', {
-        'titulo': 'Sistemas de información',
-        'breadcrumbs': bc.sistemas(),
+        'titulo': f'Hay {num_sistemas} sistemas de información',
+        'subtitulo': 'Identificados en el sistema', 
+        'breadcrumbs': bc.bc_sistemas(),
         'commands': cmd_sistemas(),
         'tab': 'sistemas',
         'sistemas': sistemas,
         'num_sistemas': num_sistemas,
+        'total_sistemas': total_sistemas,
         })
 
 
@@ -105,7 +108,7 @@ def alta_sistema(request):
         form = forms.AltaSistemaForm()
     return render(request, 'sistemas/alta-sistema.html', {
         'titulo': 'Alta de un nuevo sistemas de información',
-        'breadcrumbs': bc.alta_sistema(),
+        'breadcrumbs': bc.bc_alta_sistema(),
         'tab': 'sistemas',
         'form': form,
         })
@@ -125,7 +128,7 @@ def editar_sistema(request, sistema):
         form = forms.EditarSistemaForm(instance=sistema)
     return render(request, 'sistemas/editar-sistema.html', {
         'titulo': f'Editar {sistema}',
-        'breadcrumbs': bc.editar_sistema(sistema),
+        'breadcrumbs': bc.bc_editar_sistema(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,
@@ -158,7 +161,7 @@ def asignar_organismo(request, sistema):
         form = forms.AsignarOrganismoForm(instance=sistema)
     return render(request, 'sistemas/asignar-organismo.html', {
         'titulo': f'Asignar {sistema} a organismo',
-        'breadcrumbs': bc.asignar_organismo(sistema),
+        'breadcrumbs': bc.bc_asignar_organismo(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,
@@ -180,7 +183,7 @@ def asignar_familia(request, sistema):
         form = forms.AsignarFamiliaForm(instance=sistema)
     return render(request, 'sistemas/asignar-familia.html', {
         'titulo': f'Asignar familia a {sistema}',
-        'breadcrumbs': bc.asignar_familia(sistema),
+        'breadcrumbs': bc.bc_asignar_familia(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,
@@ -202,7 +205,7 @@ def editar_finalidad(request, sistema):
         form = forms.EditarFinalidadForm(instance=sistema)
     return render(request, 'sistemas/editar-finalidad.html', {
         'titulo': f'Editar finalidad de {sistema}',
-        'breadcrumbs': bc.editar_finalidad(sistema),
+        'breadcrumbs': bc.bc_editar_finalidad(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,
@@ -223,7 +226,7 @@ def editar_descripcion(request, sistema):
         form = forms.EditarDescripcionForm(instance=sistema)
     return render(request, 'sistemas/editar-descripcion.html', {
         'titulo': f'Editar finalidad de {sistema}',
-        'breadcrumbs': bc.editar_finalidad(sistema),
+        'breadcrumbs': bc.bc_editar_finalidad(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,
@@ -247,7 +250,7 @@ def asignar_responsable(request, sistema):
         form = forms.AsignarResponsableForm()
     return render(request, 'sistemas/asignar-responsable.html', {
         'titulo': f'Asignar responsable a {sistema}',
-        'breadcrumbs': bc.asignar_responsable(sistema),
+        'breadcrumbs': bc.bc_asignar_responsable(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,
@@ -268,7 +271,7 @@ def asignar_tema(request, sistema):
         form = forms.AsignarTemaForm(instance=sistema)
     return render(request, 'sistemas/asignar-tema.html', {
         'titulo': f'Asignar tema a {sistema}',
-        'breadcrumbs': bc.asignar_tema(sistema),
+        'breadcrumbs': bc.bc_asignar_tema(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,
@@ -289,19 +292,51 @@ def asignar_icono(request, sistema):
     return render(request, 'sistemas/asignar-icono.html', {
         'titulo': f'Asignar icono a {sistema}',
         'tab': 'sistemas',
-        'breadcrumbs': bc.asignar_icono(sistema),
+        'breadcrumbs': bc.bc_asignar_icono(sistema),
         'form': form,
         'sistema': sistema,
         })
 
 
+def labo(request, *args, **kwargs):
+    from comun.graficas import Radar
+    radar = Radar('ISC')
+    radar.add_axis('Seguridad')
+    radar.add_axis('Calidad')
+    radar.add_axis('Interoperabilidad')
+    radar.add_axis('Personal')
+    radar.add_series('Issi', [4, 18, 10, 12])
+    return render(request, "sistemas/labo.html", {
+        'titulo': 'Labo sistemas',
+        'chart': radar,
+        })
+
+
 
 def create_graph(respuestas):
-    from pychartjs import BaseChart, ChartType
-    ejes = { eje.pk: eje for eje in models.Eje.objects.all() }
+
+    radar = graficas.Radar('ISC')
+    for eje in models.Eje.objects.all():
+        radar.add_axis(eje.nombre_eje)
+    dataset = defaultdict(list)
+    for r in respuestas.all():
+        key = r.opcion.pregunta.eje
+        datasets[key].append(float(r.opcion.valor))
+    for eje, values in dataset.items():
+        if values:
+            value = sum(values) * float(eje.influencia) / eje.num_preguntas
+        else:
+            value = 0.0
+        radar.add_value(eje.nombre_eje, value, color=eje.color)
+    return radar
+        
+
+    
+
+
+
     series = [
-        (r.opcion.pregunta.eje_id, float(r.opcion.valor))
-        for r in respuestas.all()
+        (r.opcion.pregunta.eje_id, )
         ]
     labels = []
     values = []
@@ -345,7 +380,7 @@ def cuestionario_sistema(request, sistema):
     return render(request, 'sistemas/cuestionario-sistema.html', {
         'titulo': f'Cuestionario específico para {sistema}',
         'tab': 'sistemas',
-        'breadcrumbs': bc.cuestionario_sistema(sistema),
+        'breadcrumbs': bc.bc_cuestionario_sistema(sistema),
         'sistema': sistema,
         'preguntas': preguntas,
         'num_preguntas': preguntas.count(),
@@ -369,7 +404,7 @@ def conmutar_campo(request, sistema, campo: str):
     help_text = _field.help_text
     return render(request, 'sistemas/conmutar-campo.html', {
         'titulo': f'Cambiar el valor de {verbose_name}',
-        'breadcrumbs': bc.conmutar_campo(sistema, campo, verbose_name),
+        'breadcrumbs': bc.bc_conmutar_campo(sistema, campo, verbose_name),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,
@@ -411,11 +446,11 @@ def borrar_perfil(request, id_perfil: int):
 def detalle_sistema(request, sistema):
     return render(request, 'sistemas/detalle-sistema.html', {
         'titulo': f'Detalles {sistema}',
-        'breadcrumbs': bc.detalle_sistema(sistema),
+        'commands': cmd_sistemas(),
+        'breadcrumbs': bc.bc_detalle_sistema(sistema),
         'tab': 'sistemas',
         'sistema': sistema,
         'diagnostico': diagnosis.DiagnosticoSistema(sistema),
-        'commands': cmd_sistemas(),
         })
 
 
@@ -427,7 +462,7 @@ def listado_usuarios(request):
         )
     return render(request, 'sistemas/listado-usuarios.html', {
         'titulo': 'Usuarios registrados en el sistema',
-        'breadcrumbs': bc.usuarios(),
+        'breadcrumbs': bc.bc_usuarios(),
         'tab': 'usuarios',
         'commands': cmd_usuarios(),
         "filterset": filterset,
@@ -438,7 +473,7 @@ def buscar_usuarios(request):
     return render(request, 'sistemas/buscar-usuarios.html', {
         'titulo': 'Buscar usuarios en pginas blancas',
         'subtitulo': 'Debe estar registrodo como usuario',
-        'breadcrumbs': bc.usuarios(),
+        'breadcrumbs': bc.bc_usuarios(),
         'tab': 'usuarios',
         })
 
@@ -456,7 +491,7 @@ def alta_usuario(request, *args, **kwargs):
         form = forms.AltaUsuarioForm()
     return render(request, 'sistemas/alta-usuario.html', {
         'titulo': 'Dar de alta un nuevo usuario',
-        'breadcrumbs': bc.usuarios(),
+        'breadcrumbs': bc.bc_usuarios(),
         'tab': 'usuarios',
         'form': form,
         })
@@ -465,7 +500,7 @@ def alta_usuario(request, *args, **kwargs):
 def detalle_usuario(request, usuario, *args, **kwargs):
     return render(request, 'sistemas/detalle-usuario.html', {
         'titulo': f'Detalles usuario {usuario}',
-        'breadcrumbs': bc.detalle_usuario(usuario),
+        'breadcrumbs': bc.bc_detalle_usuario(usuario),
         'tab': 'usuarios',
         'usuario': usuario,
         })
@@ -523,7 +558,7 @@ def listado_entes(request):
     chart = bar_sistemas2()
     return render(request, 'sistemas/listado-entes.html', {
         'titulo': 'Entes',
-        'breadcrumbs': bc.entes(),
+        'breadcrumbs': bc.bc_entes(),
         'tab': 'entes',
         'entes': Ente.objects.all(),
         'chart': chart.as_json(),
@@ -533,7 +568,7 @@ def listado_entes(request):
 def detalle_ente(request, ente):
     return render(request, 'sistemas/detalle-ente.html', {
         'titulo': f'Detalles {ente}',
-        'breadcrumbs': bc.detalle_ente(ente),
+        'breadcrumbs': bc.bc_detalle_ente(ente),
         'tab': 'entes',
         'ente': ente,
         'sistemas': (
@@ -561,7 +596,7 @@ def asignar_interlocutor(request, ente):
         form = forms.AsignarInterlocutorForm()
     return render(request, 'sistemas/asignar-interlocutor.html', {
         'titulo': f'Asignar interlocutor a {ente}',
-        'breadcrumbs': bc.asignar_interlocutor(ente),
+        'breadcrumbs': bc.bc_asignar_interlocutor(ente),
         'tab': 'entes',
         'form': form,
         'ente': ente,
@@ -575,7 +610,7 @@ def listado_organismos(request):
         )
     return render(request, 'sistemas/listado-organismos.html', {
         'titulo': 'Organismos',
-        'breadcrumbs': bc.organismos(),
+        'breadcrumbs': bc.bc_organismos(),
         'tab': 'organismos',
         "filterset": filterset,
         })
@@ -584,7 +619,7 @@ def listado_organismos(request):
 def detalle_organismo(request, organismo: Organismo):
     return render(request, 'sistemas/detalle-organismo.html', {
         'titulo': f'Detalles organismo {organismo}',
-        'breadcrumbs': bc.detalle_organismo(organismo),
+        'breadcrumbs': bc.bc_detalle_organismo(organismo),
         'tab': 'organismos',
         'organismo': organismo,
         })
@@ -594,7 +629,7 @@ def listado_temas(request):
     temas = models.Tema.objects.with_counts().all()
     return render(request, 'sistemas/listado-temas.html', {
         'titulo': 'Listado de temas (Áreas temáticas)',
-        'breadcrumbs': bc.temas(),
+        'breadcrumbs': bc.bc_temas(),
         'tab': 'temas',
         'agrupado': agrupa(temas, lambda _:_.inicial()),
         })
@@ -603,7 +638,7 @@ def listado_temas(request):
 def detalle_tema(request, tema):
     return render(request, 'sistemas/detalle-tema.html', {
         'titulo': str(tema),
-        'breadcrumbs': bc.tema(tema),
+        'breadcrumbs': bc.bc_tema(tema),
         'tab': 'temas',
         'tema': tema,
         })
@@ -613,7 +648,7 @@ def listado_familias(request):
     familias = models.Familia.objects.with_counts().all()
     return render(request, 'sistemas/listado-familias.html', {
         'titulo': 'Listado de familias (Áreas temáticas)',
-        'breadcrumbs': bc.familias(),
+        'breadcrumbs': bc.bc_familias(),
         'tab': 'familias',
         'familias': familias,
         })
@@ -622,7 +657,7 @@ def listado_familias(request):
 def detalle_familia(request, familia):
     return render(request, 'sistemas/detalle-familia.html', {
         'titulo': str(familia),
-        'breadcrumbs': bc.detalle_familia(familia),
+        'breadcrumbs': bc.bc_detalle_familia(familia),
         'tab': 'familias',
         'familia': familia,
         })
@@ -633,7 +668,7 @@ def listado_preguntas(request):
     por_eje = agrupa(preguntas, lambda _p: _p.eje)
     return render(request, 'sistemas/listado-preguntas.html', {
         'titulo': 'Cuestionario de sistemas',
-        'breadcrumbs': bc.listado_preguntas(),
+        'breadcrumbs': bc.bc_listado_preguntas(),
         'tab': 'cuestionario',
         'num_preguntas': preguntas.count(),
         'por_eje': por_eje,
@@ -644,7 +679,7 @@ def ver_pregunta(request, id_pregunta: int):
     pregunta = models.Pregunta.load_pregunta(id_pregunta)
     return render(request, 'sistemas/ver-pregunta.html', {
         'titulo': f'Pregunta {pregunta.pk}: {pregunta.texto_pregunta}',
-        'breadcrumbs': bc.ver_pregunta(pregunta),
+        'breadcrumbs': bc.bc_ver_pregunta(pregunta),
         'tab': 'cuestionario',
         'pregunta': pregunta,
         })
@@ -662,7 +697,7 @@ def alta_opcion(request, id_pregunta: int):
 
     return render(request, 'sistemas/alta-opcion.html', {
         'titulo': f'Añadir opción a la pregunta {id_pregunta}',
-        'breadcrumbs': bc.alta_opcion(pregunta),
+        'breadcrumbs': bc.bc_alta_opcion(pregunta),
         'tab': 'cuestionario',
         'pregunta': pregunta,
         'form': form,
@@ -676,7 +711,7 @@ def listado_activos(request):
         )
     return render(request, 'sistemas/listado-activos.html', {
         'titulo': "Listado de activos",
-        'breadcrumbs': bc.activos(),
+        'breadcrumbs': bc.bc_activos(),
         'tab': 'activos',
         "filterset": filterset,
         })
@@ -690,7 +725,7 @@ def pendientes(request):
 
     return render(request, 'sistemas/pendientes.html', {
         'titulo': "Listado de S.I. pendientes / incompletos",
-        'breadcrumbs': bc.pendientes(),
+        'breadcrumbs': bc.bc_pendientes(),
         'sin_tema': sin_tema,
         'con_tema': con_tema,
         'tab': 'sistemas',
@@ -703,7 +738,7 @@ def sistemas_sin_tema(request):
     sistemas = Sistema.objects.filter(tema='UNK')
     return render(request, 'sistemas/sistemas-sin-tema.html', {
         'titulo': "Listado de S.I. pendientes de asignar tema",
-        'breadcrumbs': bc.sistemas_sin_tema(),
+        'breadcrumbs': bc.bc_sistemas_sin_tema(),
         'tab': 'sistemas',
         'sistemas': sistemas,
         })
@@ -752,6 +787,7 @@ def patch_organismos(request):
 
 def patch_sistemas(request):
     sistemas = Sistema.objects.all()
+    total_sistemas = num_sistemas = sistemas.count()
     query = get_datastar_parameter(request, 'query')
     if query:
         sistemas = sistemas.filter(
@@ -759,8 +795,11 @@ def patch_sistemas(request):
             | Q(codigo__icontains=query)
             | Q(tema__nombre_tema__icontains=query)
             )
+        num_sistemas = sistemas.count()
     return render(request, 'sistemas/includes/listado-sistemas.html', {
         'sistemas': sistemas,
+        'num_sistemas': num_sistemas,
+        'total_sistemas': total_sistemas,
         })
 
 
@@ -828,7 +867,7 @@ def importar_sistemas(request, *args, **kwargs):
                 'titulo': 'Importar sistemas',
                 'commands': cmd_sistemas(),
                 'tab': 'sistemas',
-                'breadcrumbs': bc.importar_sistemas(),
+                'breadcrumbs': bc.bc_importar_sistemas(),
                 'results': results,
                 })
 
@@ -838,7 +877,7 @@ def importar_sistemas(request, *args, **kwargs):
         'titulo': 'Importar sistemas',
         'commands': cmd_sistemas(),
         'tab': 'sistemas',
-        'breadcrumbs': bc.importar_sistemas(),
+        'breadcrumbs': bc.bc_importar_sistemas(),
         'form': form,
         })
 
@@ -849,7 +888,7 @@ def exportar_sistemas(request):
         'titulo': 'Exportar sistemas',
         'commands': cmd_sistemas(),
         'tab': 'sistemas',
-        'breadcrumbs': bc.exportar_sistemas(),
+        'breadcrumbs': bc.bc_exportar_sistemas(),
         'entes': Ente.objects.all(),
         })
 

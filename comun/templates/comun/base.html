@@ -12,6 +12,11 @@
   <link media="all" href="{% static 'css/toasts.css' %}" rel="stylesheet">
   <link media="all" href="{% static 'css/controles.css' %}" rel="stylesheet">
   <link media="print" href="{% static 'css/print.css' %}" rel="stylesheet">
+  <!-- estilos especificos de cada página -->
+  {% block styles %}
+      
+  {% endblock styles %}
+  <!-- fin de estilos específicos -->
  </head>
  <body>
 
@@ -19,15 +24,6 @@
 
   <div class="container">
    {% include "comun/header.html" %}
-
-   {% if titulo %}
-    <div class="titulo-cabecera">{{ titulo }}</div>
-   {% else %}
-    <div class="titulo-cabecera text-danger">
-    No se ha definido el título de la página - ISSI
-    </div>     
-   {% endif %}
-   
    {% include "comun/breadcrumbs.html" %}
    {% include "comun/navbar.html" %}
    {% include "comun/includes/commands.html" %}

@@ -1,7 +1,23 @@
+<div class="px-2 py-2">
 {% if commands %}
-<div class="commands" role="group" aria-label="Operaciones disponibles">
-  {% for cmd in commands %}  
-    {{ cmd }}
-  {% endfor %}
-</div>
+  <div class="commands" role="group" aria-label="Operaciones disponibles">
+    {% for cmd in commands %}  
+      {{ cmd }}
+    {% endfor %}
+  </div>
 {% endif %}
+  {% if titulo %}
+    <div class="m-2">
+      <h2 class="titulo">{{ titulo }}
+      {% if subtitulo %}
+      <br><small class="subtitulo">{{ subtitulo }}</small>
+      {% endif %}
+      </h2>
+    </div>
+   {% else %}
+    <div class="text-danger">
+    No se ha definido el título de la página - ISSI
+    </div>     
+   {% endif %}
+  </div>
+

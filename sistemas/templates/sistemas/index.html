@@ -3,30 +3,18 @@
 
 {% block content %}
 
-<h2 class="m-2">Hay {{ num_sistemas|as_badge }} sistemas de información
-<br><small>Identificados en el sistema</small>
-</h2>
-
-<div class="controls">
-<input type="text" class="form-control"
-     placeholder="Search..."
-     data-bind:query
-     data-on:input__debounce.250ms="@get('/sistemas/patch/sistemas/')"
-     />
-<button role="button" class="btn btn-primary" data-on:click="console.log('matrka'); @get('/sistemas/patch/sistemas/')">
-    <i class="bi bi-search"></i></button>
-
-<button role="button" class="btn btn-primary" data-on:click="alert('holi')">
-  Holi
-</button>
-
-
-
-<button role="button" class="btn btn-primary" onclick="alert('holi pure js')">
-  Holi Pure JS
-</button>
-
+<div class="row justify-content-center mb-3">
+  <div class="col-md-6">
+    <div class="search-container">
+      <input type="search" class="form-control search-input"
+             data-bind:query
+             data-on:input__debounce.250ms="@get('/sistemas/patch/sistemas/')"
+             placeholder="Buscar ...">
+    <i class="search-icon bi bi-search"></i>
+    </div>
+  </div>
 </div>
+
 
 {% include 'sistemas/includes/listado-sistemas.html' %}
 
