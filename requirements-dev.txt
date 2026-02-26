@@ -12,3 +12,4 @@ pydot==4.0.1
 ty==0.0.17
 vulture==2.14
 django-werkzeug==1.0.0
+cutelog
