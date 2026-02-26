@@ -24,3 +24,4 @@ docs/doctrees/
 docs/latex/
 test_db.sqlite3
 extra/
+imports/
