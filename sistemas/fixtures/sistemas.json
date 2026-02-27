@@ -1157,19 +1157,19 @@
         "organismo": 41854,
         "codigo": "SIGESTEIN",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestionar los expedientes del departamento.",
         "finalidad": "Gestión de expedientes",
         "observaciones": "",
         "tema": "OTE",
-        "es_transversal": false,
+        "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2026-02-26T10:43:17.047Z",
         "f_baja": null
     }
 },
@@ -1614,12 +1614,12 @@
         "es_transversal": false,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
-        "familia": "UNK",
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": "",
+        "familia": "F05",
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2026/titan-logo.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2026-02-26T11:04:19.347Z",
         "f_baja": null
     }
 },
@@ -1690,11 +1690,11 @@
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
         "familia": "UNK",
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": "",
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2026/sigpac-logo.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2026-02-26T11:23:39.585Z",
         "f_baja": null
     }
 },
@@ -2292,9 +2292,9 @@
         "familia": "F13",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/casper-logo.png",
+        "icono": "sistemas/iconos/2026/casper-logo.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2026-02-26T12:37:26.570Z",
         "f_baja": null
     }
 },
@@ -2670,6 +2670,31 @@
         "icono": "sistemas/iconos/2026/absysnet-logo.png",
         "f_alta": "2026-02-12T11:50:05.072Z",
         "f_cambio": "2026-02-12T12:10:48.968Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 83,
+    "fields": {
+        "uuid_sistema": "52204424-b78b-48de-8521-9b35715556fb",
+        "nombre_sistema": "Acceso a los datos",
+        "organismo": 38691,
+        "codigo": "MOODLE",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Plataforma habilitada por la ACCUEE donde se le da acceso a los solicitantes a los datos.",
+        "observaciones": "",
+        "tema": "EDU",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-02-26T10:26:41.756Z",
+        "f_cambio": "2026-02-26T10:26:41.756Z",
         "f_baja": null
     }
 },
@@ -3248,6 +3273,19 @@
         "organismo": 41854,
         "f_alta": "2025-10-06T18:41:33.860Z",
         "f_cambio": "2025-10-06T18:41:33.860Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "hgonort",
+    "fields": {
+        "email": "hgonort@gobiernodecanarias.org",
+        "nombre": "Hector Javier",
+        "apellidos": "González Ortega",
+        "organismo": 38691,
+        "f_alta": "2026-02-26T10:28:36.392Z",
+        "f_cambio": "2026-02-26T10:28:36.392Z",
         "f_baja": null
     }
 },
@@ -4119,6 +4157,19 @@
         "organismo": 42119,
         "f_alta": "2025-11-26T13:01:44.529Z",
         "f_cambio": "2025-11-26T13:01:44.529Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "rcrugon",
+    "fields": {
+        "email": "rcrugon@gobiernodecanarias.org",
+        "nombre": "Rebeca",
+        "apellidos": "Cruz González",
+        "organismo": 38691,
+        "f_alta": "2026-02-26T10:34:35.961Z",
+        "f_cambio": "2026-02-26T10:34:35.961Z",
         "f_baja": null
     }
 },
@@ -6248,6 +6299,42 @@
     }
 },
 {
+    "model": "sistemas.perfil",
+    "pk": 134,
+    "fields": {
+        "usuario": "hgonort",
+        "cometido": "TEC",
+        "sistema": 83,
+        "f_alta": "2026-02-26T10:28:53.691Z",
+        "f_cambio": "2026-02-26T10:28:53.691Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 135,
+    "fields": {
+        "usuario": "rcrugon",
+        "cometido": "FUN",
+        "sistema": 83,
+        "f_alta": "2026-02-26T10:34:52.028Z",
+        "f_cambio": "2026-02-26T10:34:52.028Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 136,
+    "fields": {
+        "usuario": "hgargarg",
+        "cometido": "TEC",
+        "sistema": 21,
+        "f_alta": "2026-02-26T10:39:15.404Z",
+        "f_cambio": "2026-02-26T10:39:15.404Z",
+        "f_baja": null
+    }
+},
+{
     "model": "sistemas.juriscansistema",
     "pk": 1,
     "fields": {
@@ -6493,7 +6580,8 @@
     "fields": {
         "nombre_eje": "Calidad",
         "influencia": "0.200",
-        "orden": 5
+        "orden": 5,
+        "color": "silver"
     }
 },
 {
@@ -6502,7 +6590,8 @@
     "fields": {
         "nombre_eje": "Protección de Datos",
         "influencia": "0.150",
-        "orden": 4
+        "orden": 4,
+        "color": "silver"
     }
 },
 {
@@ -6511,7 +6600,8 @@
     "fields": {
         "nombre_eje": "Interoperabilidad",
         "influencia": "0.150",
-        "orden": 1
+        "orden": 1,
+        "color": "silver"
     }
 },
 {
@@ -6520,7 +6610,8 @@
     "fields": {
         "nombre_eje": "Personas",
         "influencia": "0.200",
-        "orden": 6
+        "orden": 6,
+        "color": "silver"
     }
 },
 {
@@ -6529,7 +6620,8 @@
     "fields": {
         "nombre_eje": "Reutilización",
         "influencia": "0.150",
-        "orden": 2
+        "orden": 2,
+        "color": "silver"
     }
 },
 {
@@ -6538,7 +6630,8 @@
     "fields": {
         "nombre_eje": "Seguridad",
         "influencia": "0.150",
-        "orden": 3
+        "orden": 3,
+        "color": "silver"
     }
 },
 {
