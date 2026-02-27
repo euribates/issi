@@ -12,6 +12,7 @@ from django.urls import path
 from health_check.views import HealthCheckView
 
 from comun.views import homepage, labo
+from comun.views import login_view
 
 
 def tie(ruta, vista, name=None):
@@ -24,6 +25,7 @@ def goto(url):
 
 urlpatterns = [
     tie("", homepage),
+    tie('login/', login_view),
     path("health/", HealthCheckView.as_view(checks=[
             "health_check.Cache",
             "health_check.Database",
@@ -46,6 +48,7 @@ urlpatterns = [
     path("juriscan/", include('juriscan.urls')),
     path('admin/', admin.site.urls),
     path('docs/', include('docs.urls')),
+
 ]
 
 if settings.DEBUG:

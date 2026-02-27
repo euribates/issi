@@ -1,5 +1,6 @@
  #!/usr/bin/env python3
 
+import json
 from typing import Iterable
 
 from comun.colors import Color
@@ -8,9 +9,9 @@ from comun.colors import BLACK, WHITE
 
 class Serie:
 
-    def __init__(self, label, values: Sequence, **kwargs):
+    def __init__(self, label, values: Iterable, **kwargs):
         self.label = label
-        self.values = list(value)
+        self.values = list(values)
         self.fg_color = kwargs.get('fg_color', Color('AliceBLue'))
         self.bg_color = kwargs.get('fg_color', BLACK)
 
@@ -42,8 +43,8 @@ class Radar():
                 'backgroundColor': str(Color(255, 99, 132, 0.2)),
                 'borderColor': str(Color(255, 99, 132)),
                 'pointBackgroundColor': str(Color(255, 99, 132)),
-                'pointBorderColor': str(Color(0, 0, 0)),
-                'pointHoverBackgroundColor': str(Color('white')),
+                'pointBorderColor': str(BLACK),
+                'pointHoverBackgroundColor': str(WHITE),
                 'pointHoverBorderColor': str(Color(255, 99, 132)),    
                 })
         return json.dumps(result, indent=4)

@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'docs',
     'django_filters',
     'comun',
+    'antecedentes',
     'normativa',
     'sistemas',
     'directorio',

@@ -81,6 +81,23 @@ class EditarSistemaForm(BootstrapForm, forms.ModelForm):
             'url',
             ]
 
+    def _is_diff(self, sistema, field_name):
+        old_value = getattr(sistema, field_name)
+        new_value = self.cleaned_data[field_name]
+        if old_value != new_value:
+            return { field_name: f'Modificado a {new_value!r}' }
+        return {}
+
+
+    def diff_with(self, sistema):
+        result = dict()
+        result.update(self._is_diff(sistema, 'nombre_sistema'))
+        result.update(self._is_diff(sistema, 'codigo'))
+        result.update(self._is_diff(sistema, 'descripcion'))
+        result.update(self._is_diff(sistema, 'url'))
+        return result
+
+
 
 class AsignarOrganismoForm(BootstrapForm, forms.ModelForm):
 

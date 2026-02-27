@@ -3,10 +3,13 @@
 from collections import Counter
 
 from django.utils.safestring import mark_safe
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth import login, logout
+from django.contrib.auth import authenticate
 
-from comun.bus import Bus
+from comun import forms
 from sistemas import breadcrumbs
+from sistemas import links
 from sistemas.models import Sistema
 
 
@@ -92,12 +95,6 @@ def labo(request):
     chart.add_value(37, 'rojo', '#F23A20')
     chart.add_value(137, 'verde', '#3AF220')
     chart.add_value(37, 'verde', '#3F22FA')
-    
-    Bus(request).debug("This is a debug message")
-    Bus(request).info("This is a info message")
-    Bus(request).success("This is a success message")
-    Bus(request).warning("This is a warning message")
-    Bus(request).error("This is a error message")
     return render(request, "comun/labo.html", {
         'titulo': 'Esto es una página de pruebas',
         'subtitulo': 'Si ves cosas raras, es normal',
@@ -121,7 +118,6 @@ def make_chart(percent, color='Lime'):
 
 
 def doughnut(request):
-
     good = int(request.GET.get('g', 33))
     regular = int(request.GET.get('r', 33))
     bad = int(request.GET.get('b', 33))
@@ -143,3 +139,28 @@ def doughnut(request):
     response['Referrer-Policy'] = 'no-referrer'
     response['X-Frame-Options'] = 'SAMEORIGIN'
     return response
+
+
+def logout_view(request):
+    logout(request)
+    redirect('/intranet/')
+
+
+def login_view(request):
+    form = forms.LoginForm()
+    if request.method == 'POST':
+        form = forms.LoginForm(request.POST)
+        if form.is_valid():
+            user = authenticate(
+                username=form.cleaned_data['username'],
+                password=form.cleaned_data['password'],
+            )
+            if user is not None:
+                login(request, user)
+                return redirect(links.a_sistemas())
+    else:
+        form = forms.LoginForm()
+    return render(request, 'comun/login.html', context={
+        'titulo': 'Validación de usuario',
+        'form': form,
+        })

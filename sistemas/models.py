@@ -126,12 +126,12 @@ class Sistema(models.Model):
         editable=False,
         help_text="Identificador público del sistema (UUID)",
         unique=True,
-    )
+        )
     nombre_sistema = models.CharField(
         max_length=220,
         unique=True,
         help_text="Nombre del sistema",
-    )
+        )
     organismo = models.ForeignKey(
         Organismo,
         related_name="sistemas",
@@ -139,42 +139,43 @@ class Sistema(models.Model):
         blank=True,
         null=True,
         default=None,
-    )
+        )
     codigo = models.SlugField(
         max_length=32,
         help_text="Código identificador del sistema (una sola palabra)",
         unique=True,
-    )
+        )
     url = models.URLField(
         max_length=720,
         default=None,
         blank=True,
         null=True,
-    )
+        )
     descripcion = models.TextField(
         blank=True,
         default="",
         verbose_name="Descripción del sistema",
-    )
+        )
     finalidad = models.TextField(
         blank=True,
         default="",
         verbose_name="Finalidad del sistema",
-    )
+        )
     observaciones = models.TextField(
         blank=True,
         default="",
         verbose_name="Observaciones",
-    )
+        )
     tema = models.ForeignKey(
         Tema,
         related_name="sistemas",
         default="UNK",
         on_delete=models.PROTECT,
-    )
+        )
     es_transversal = models.BooleanField(
-        default=False, help_text=("Este S.I. es horizontal a todos los departamentos.")
-    )
+        default=False,
+        help_text="Este S.I. es horizontal a todos los departamentos.",
+        )   
     es_subsistema_de = models.ForeignKey(
         "Sistema",
         null=True,
@@ -183,11 +184,11 @@ class Sistema(models.Model):
         help_text="Es un subsistema de otro S.I.",
         related_name="subsistemas",
         on_delete=models.PROTECT,
-    )
+        )
     tiene_especial_importancia = models.BooleanField(
         default=False,
         help_text="Este S.I. contiene activos de datos de especial importancia",
-    )
+        )
     familia = models.ForeignKey(
         Familia,
         default="UNK",
@@ -361,8 +362,10 @@ class Sistema(models.Model):
                 raise ValueError(
                     f"El código de tema indicado: {escape(repr(tema))} no es válido"
                 )
-        self.tema = tema
-        self.save(update_fields=["tema"])
+        if tema != self.tema:
+            self.tema = tema
+            self.save(update_fields=["tema"])
+            return tema
         return tema
 
     def asignar_familia(self, familia: Familia | str) -> Familia:
@@ -511,6 +514,7 @@ class Activo(models.Model):
 
 
 class Usuario(models.Model):
+
     class Meta:
         ordering = ["nombre", "apellidos"]
 
@@ -586,6 +590,8 @@ class Usuario(models.Model):
     def __str__(self):
         return self.nombre_completo()
 
+    def url_detalle_usuario(self):
+        return links.a_detalle_usuario(self)
 
 class Interlocutor(models.Model):
     class Meta:

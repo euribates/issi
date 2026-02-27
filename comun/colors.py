@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 
 import re
-from typing import Iterable
-from dataclasses import dataclass
 
-pat_color = re.compile(r'#([0-9A-Fa-f]{2})([0-9A-Fa-f]{2})([0-9A-Fa-f]{2})')
+
+pat_color = re.compile(
+    r'#([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})',
+    re.IGNORECASE,
+    )
+
+pat_color_alpha = re.compile(
+    r'#([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})',
+    re.IGNORECASE,
+    )
 
 NAMED_COLORS = {
     'aliceblue': (240, 248, 255),
@@ -163,21 +170,48 @@ class Color:
             self.red = args[0]
             self.green = args[1]
             self.blue = args[2]
+            self.alpha = None
+        elif len(args) == 4:
+            self.red = args[0]
+            self.green = args[1]
+            self.blue = args[2]
+            self.alpha = args[3]
         elif len(kwargs) == 3:
             self.red = kwargs['red']
             self.green = kwargs['green']
             self.blue = kwargs['blue']
+            self.alpha = None
+        elif len(kwargs) == 4:
+            self.red = kwargs['red']
+            self.green = kwargs['green']
+            self.blue = kwargs['blue']
+            self.alpha = kwargs['alpha']
         elif len(args) == 1:
             name_or_code = args[0].lower()
             if name_or_code in NAMED_COLORS:
                 self.red, self.green, self.blue = NAMED_COLORS[name_or_code]
+                self.alpha = None
+            elif _match := pat_color_alpha.match(name_or_code):
+                self.red = int(_match.group(1), 16)
+                self.green = int(_match.group(2), 16)
+                self.blue = int(_match.group(3), 16)
+                self.alpha = int(_match.group(4), 16)
             elif _match := pat_color.match(name_or_code):
                 self.red = int(_match.group(1), 16)
                 self.green = int(_match.group(2), 16)
                 self.blue = int(_match.group(3), 16)
+                self.alpha = None
 
     def __str__(self):
-        return f'#{self.red:02x}{self.green:02x}{self.blue:02x}'.upper()
+        if self.alpha is None:
+            return f'#{self.red:02x}{self.green:02x}{self.blue:02x}'.upper()
+        return (
+            f'#{self.red:02x}'
+            f'{self.green:02x}'
+            f'{self.blue:02x}'
+            f'{self.alpha:02x}'
+            f'').upper()
+
 
     def to_hsl(self):
         _red = self.red / 255.0
@@ -200,75 +234,6 @@ class Color:
             hue = round(60.0 * (((_red - _green) / delta) + 4), 2)
         saturation = round((delta * 100.0)/ (1 - abs(2 * lightness - 1.0)), 2)
         return (hue, saturation, lightness * 100.0)
-
-
-
-class Serie:
-
-    def __init__(self, label, values: Sequence, **kwargs):
-        self.label = label
-        self.values = list(value)
-        self.fg_color = kwargs.get('fg_color', Color('AliceBLue'))
-        self.bg_color = kwargs.get('fg_color', Color(0, 0, 0))
-
-
-class Radar():
-
-    def __init__(self, title, fill=True):
-        self.title = title
-        self.axis = []
-        self.series = []
-        self.fill = fill
-
-    def add_axis(self, axis_name: str):
-        self.axis.append(axis_name)
-        
-    def add_series(self, label: str, values: Iterable, **kwargs):
-        assert len(values) == len(self.axis)
-        self.series.append(Serie(label, values, **kwargs))
-
-    def _as_data(self):
-        result = {}
-        result['labels'] = self.axis
-        result['datasets'] = []
-        for serie in self.series:
-            result['datasets'].append({
-                'label': serie.label,
-                'data': serie.values,
-                'fill': self.fill,
-                'backgroundColor': str(Color(255, 99, 132, 0.2)),
-                'borderColor': str(Color(255, 99, 132)),
-                'pointBackgroundColor': str(Color(255, 99, 132)),
-                'pointBorderColor': str(Color(0, 0, 0)),
-                'pointHoverBackgroundColor': str(Color('white')),
-                'pointHoverBorderColor': str(Color(255, 99, 132)),    
-                })
-        return json.dumps(result, indent=4)
-
-    def _as_config(self):
-        return ('\n'.join([
-            "{",
-            "  'type': 'radar',",
-            "  'data': data,",
-            "  'options': {",
-            "    'elements': {",
-            "      'line': {",
-            "        'borderWidth': 3",
-            "      }",
-            "    }",
-            "  },",
-            "}"
-            ]))
-
-    def as_javascript(self):
-        return ('\n'.join([
-            '<script>',
-            'const data = {self._as_data()};'
-            'const config = {self._as_config()};' 
-            'var ctx = document.getElementById("Chart");',
-            'var chart = new Chart(ctx, config);',
-            '</script>',
-            ]))
 
 BLACK = Color(0, 0, 0)
 WHITE = Color(255, 255, 255)

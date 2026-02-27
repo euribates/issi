@@ -13,19 +13,21 @@
     <table class="table">
     {% for perfil in sistema.perfiles.all %}
       <tr>
-          <td>
-            <span class="title" title="{{ perfil.usuario.email }}">
-            {{ perfil.usuario }}
-            </span>
-          </td>  
-          <td>{{ perfil.get_cometido_display }}</td>  
-          <td>
-           <a class="btn btn-danger" 
-              href="{% url 'sistemas:borrar_perfil' id_perfil=perfil.pk %}"
-              title="Borrar perfil">
-              <i class="bi bi-person-dash-fill"></i>
-           </a>   
-          </td>
+        <td>
+          <span class="title" title="{{ perfil.usuario.email }}">
+            <a href="{{ perfil.usuario.url_detalle_usuario }}">
+              {{ perfil.usuario }}
+            </a>
+          </span>
+        </td>  
+        <td>{{ perfil.get_cometido_display }}</td>  
+        <td>
+         <a class="btn btn-danger" 
+            href="{% url 'sistemas:borrar_perfil' id_perfil=perfil.pk %}"
+            title="Borrar perfil">
+            <i class="bi bi-person-dash-fill"></i>
+         </a>   
+        </td>
       </tr>   
       {% endfor %}
     <tr>

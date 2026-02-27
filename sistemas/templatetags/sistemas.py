@@ -79,16 +79,14 @@ def as_familia(familia):
     url = links.a_detalle_familia(familia.pk)
     txt = familia.nombre_familia
     if familia.no_definida():
+        klass = 'btn btn-outline-danger'
         icon = '<i class="bi bi-exclamation-diamond"></i> '
-        klass = 'familia badge bg-danger text-white'
     else:
+        klass = 'btn btn-success'
         icon = ''
-        klass = 'familia badge bg-info text-white'
     return mark_safe(
-        f'{icon}<span class="{klass}">'
-        f'<a class="link-light text-decoration-none"'
-        f' href="{url}">{txt}</a>'
-        '</span>')
+        f'<a class="{klass}" href="{url}">{icon}{txt}</a>'
+        )
 
 
 @register.filter

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from functools import cache
-from typing import Iterable
+from collections import defaultdict
 import io
 import json
 
@@ -10,6 +10,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
 
 from . import breadcrumbs as bc
 from . import diagnosis
@@ -22,6 +23,7 @@ from comun.error import errors
 from comun.bus import Bus
 from comun.commands import Command
 from comun.funcop import agrupa
+from comun import graficas
 
 from directorio.models import Organismo
 from sistemas import filtersets
@@ -67,7 +69,7 @@ def cmd_usuarios():
         ]
 
 
-
+@login_required
 def index(request, *args, **kwargs):
     """Página de inicio de sistemas.
     """
@@ -90,6 +92,7 @@ def index(request, *args, **kwargs):
         })
 
 
+@login_required
 def alta_sistema(request):
     if request.method == 'POST':
         form = forms.AltaSistemaForm(request.POST)
@@ -102,7 +105,7 @@ def alta_sistema(request):
                 organismo=data['organismo'],
                 tema=data['tema'],
                 )
-            Bus(request).success(f'Añadido el sistema {sistema}')
+            Bus(request).nuevo_sistema(sistema)
             return redirect(sistema.url_detalle_sistema())
     else:
         form = forms.AltaSistemaForm()
@@ -114,15 +117,14 @@ def alta_sistema(request):
         })
 
 
+@login_required
 def editar_sistema(request, sistema):
     if request.method == "POST":
         form = forms.EditarSistemaForm(request.POST, instance=sistema)
         if form.is_valid():
+            diffs = form.diff_with(sistema)
             form.save()
-            Bus(request).success(
-                f"El sistema de información {sistema}"
-                f" ha sido modificado"
-                )
+            Bus(request).sistema_modificado(sistema, **diffs)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.EditarSistemaForm(instance=sistema)
@@ -135,27 +137,27 @@ def editar_sistema(request, sistema):
         })
 
 
+@login_required
 def asignar_normativa(request, sistema):
     from django.http import HttpResponse
     return HttpResponse(" no implementado", content_type="text/plain")
 
 
+@login_required
 def desasignar_normativa(request, sistema, juriscan: int):
     from django.http import HttpResponse
     return HttpResponse(" no implementado", content_type="text/plain")
 
 
 
+@login_required
 def asignar_organismo(request, sistema):
     if request.method == "POST":
         form = forms.AsignarOrganismoForm(request.POST, instance=sistema)
         if form.is_valid():
             organismo = form.cleaned_data['organismo']
             sistema.asignar_organismo(organismo)
-            Bus(request).success(
-                f"El sistema de información {sistema}"
-                f" ha sido asignado a {organismo}"
-                )
+            Bus(request).sistema_asignado_organismo(sistema, organismo)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.AsignarOrganismoForm(instance=sistema)
@@ -168,16 +170,13 @@ def asignar_organismo(request, sistema):
         })
 
 
-
+@login_required
 def asignar_familia(request, sistema):
     if request.method == "POST":
         form = forms.AsignarFamiliaForm(request.POST, instance=sistema)
         if form.is_valid():
             familia = sistema.asignar_familia(form.cleaned_data['familia'])
-            Bus(request).success(
-                f"El S.I. {sistema}"
-                f" ha sido asignado a la familia {familia}"
-                )
+            Bus(request).sistema_asignado_familia(sistema, familia)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.AsignarFamiliaForm(instance=sistema)
@@ -190,16 +189,15 @@ def asignar_familia(request, sistema):
         })
 
 
+@login_required
 def editar_finalidad(request, sistema):
     if request.method == "POST":
         form = forms.EditarFinalidadForm(request.POST)
         if form.is_valid():
-            sistema.finalidad = form.cleaned_data['finalidad']
-            sistema.save()
-            Bus(request).success(
-                f"El propósito del S.I. {sistema}"
-                " ha sido actualizado"
-                )
+            finalidad = form.cleaned_data['finalidad']
+            if finalidad != sistema.finalidad:
+                sistema.save(update_fields=['finalidad'])
+                Bus(request).sistema_editar_finalidad(sistema, finalidad)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.EditarFinalidadForm(instance=sistema)
@@ -212,15 +210,15 @@ def editar_finalidad(request, sistema):
         })
 
 
+@login_required
 def editar_descripcion(request, sistema):
     if request.method == "POST":
         form = forms.EditarDescripcionForm(request.POST, instance=sistema)
         if form.is_valid():
-            form.save()
-            Bus(request).success(
-                f"La descripción del S.I. {sistema}"
-                " ha sido actualizada"
-                )
+            descripcion = form.cleaned_data['descripcion']
+            if descripcion != sistema.descripcion:
+                sistema.save(update_fields=['descripcion'])
+                Bus(request).sistema_editar_descripcion(sistema, descripcion)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.EditarDescripcionForm(instance=sistema)
@@ -233,6 +231,7 @@ def editar_descripcion(request, sistema):
         })
 
 
+@login_required
 def asignar_responsable(request, sistema):
     if request.method == "POST":
         form = forms.AsignarResponsableForm(request.POST)
@@ -240,11 +239,7 @@ def asignar_responsable(request, sistema):
             cometido = form.cleaned_data['cometido']
             usuario = form.cleaned_data['usuario']
             perfil = sistema.asignar_responsable(cometido, usuario)
-            Bus(request).success(
-                f"El usuario {perfil.usuario}"    
-                f" ha sido asignado como {perfil.get_cometido_display()}"
-                f" del S.I. {perfil.sistema}"
-                )
+            Bus(request).sistema_asignar_responsable(sistema, perfil)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.AsignarResponsableForm()
@@ -257,15 +252,13 @@ def asignar_responsable(request, sistema):
         })
 
 
+@login_required
 def asignar_tema(request, sistema):
     if request.method == "POST":
         form = forms.AsignarTemaForm(request.POST, instance=sistema)
         if form.is_valid():
             tema = sistema.asignar_tema(form.cleaned_data['tema'])
-            Bus(request).success(
-                f"El S.I. {sistema}"
-                f" ha sido asignado al tema {tema}"
-                )
+            Bus(request).sistema_asignar_materia(sistema, tema)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.AsignarTemaForm(instance=sistema)
@@ -278,14 +271,13 @@ def asignar_tema(request, sistema):
         })
 
 
+@login_required
 def asignar_icono(request, sistema):
     if request.method == "POST":
         form = forms.AsignarIconoForm(request.POST, request.FILES, instance=sistema)
         if form.is_valid():
             form.save()
-            Bus(request).success(
-                f"Se ha asignado un icono al S.I. {sistema}"
-                )
+            Bus(request).sistema_asignar_icono(sistema)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.AsignarIconoForm(instance=sistema)
@@ -314,14 +306,13 @@ def labo(request, *args, **kwargs):
 
 
 def create_graph(respuestas):
-
     radar = graficas.Radar('ISC')
     for eje in models.Eje.objects.all():
         radar.add_axis(eje.nombre_eje)
     dataset = defaultdict(list)
     for r in respuestas.all():
         key = r.opcion.pregunta.eje
-        datasets[key].append(float(r.opcion.valor))
+        dataset[key].append(float(r.opcion.valor))
     for eje, values in dataset.items():
         if values:
             value = sum(values) * float(eje.influencia) / eje.num_preguntas
@@ -334,46 +325,35 @@ def create_graph(respuestas):
     
 
 
-
-    series = [
-        (r.opcion.pregunta.eje_id, )
-        ]
-    labels = []
-    values = []
-    for eje_id, eje in ejes.items():
-        labels.append(eje.nombre_eje)
-        _values = [value for eje, value in series if eje == eje_id]
-        if eje.num_preguntas > 0:
-            value = sum(_values) * float(eje.influencia) / eje.num_preguntas
-        else:
-            value = 0.0
-        values.append(value)
-    
-    class MyBarGraph(BaseChart):
-
-        type = ChartType.Radar
-
-        class labels:
-            group = labels
-
-        class data:
-            data = values
-            label = labels
-            backgroundColor = [
-                '#FFF09C80',
-                '#FFF09C80',
-                '#E6E6FA80',
-                '#FFB6C180',
-                '#FFDAB980',
-                '#C5E5E880',
-                ]
+#    series = [
+#        (r.opcion.pregunta.eje_id, )
+#        ]
+#    labels = []
+#    values = []
+#    for eje_id, eje in ejes.items():
+#        labels.append(eje.nombre_eje)
+#        _values = [value for eje, value in series if eje == eje_id]
+#        if eje.num_preguntas > 0:
+#            value = sum(_values) * float(eje.influencia) / eje.num_preguntas
+#        else:
+#            value = 0.0
+#        values.append(value)
+#        pal = [
+#            '#FFF09C80',
+#            '#FFF09C80',
+#            '#E6E6FA80',
+#            '#FFB6C180',
+#            '#FFDAB980',
+#            '#C5E5E880',
+#            ]
+#
+#
+#    chart = MyBarGraph()
+#    chart.data.label = "ISC"
+#    return chart.get()
 
 
-    chart = MyBarGraph()
-    chart.data.label = "ISC"
-    return chart.get()
-
-
+@login_required
 def cuestionario_sistema(request, sistema):
     preguntas = models.Pregunta.objects.all()
     respuestas = sistema.respuestas.all()
@@ -388,6 +368,7 @@ def cuestionario_sistema(request, sistema):
         })
 
 
+@login_required
 def conmutar_campo(request, sistema, campo: str):
     """Conmutar el estado de un campo lógico.
     """
@@ -416,6 +397,7 @@ def conmutar_campo(request, sistema, campo: str):
         })
 
 
+@login_required
 def borrar_perfil(request, id_perfil: int):
     """Borrar un perfil.
 
@@ -434,15 +416,12 @@ def borrar_perfil(request, id_perfil: int):
     if perfil:
         id_sistema = perfil.sistema.pk
         perfil.delete()
-        Bus(request).success(
-            f"El usuario {perfil.usuario}"    
-            f" ha dejado de ser {perfil.get_cometido_display()}"
-            f" del S.I. {perfil.sistema}"
-            )
+        Bus(request).perfil_borrado(perfil)
         return redirect(links.a_detalle_sistema(id_sistema))
     return redirect(links.a_sistemas())
 
     
+@login_required
 def detalle_sistema(request, sistema):
     return render(request, 'sistemas/detalle-sistema.html', {
         'titulo': f'Detalles {sistema}',
@@ -454,6 +433,7 @@ def detalle_sistema(request, sistema):
         })
 
 
+@login_required
 def listado_usuarios(request):
     messages.add_message(request, messages.INFO, "Hello world.")
     filterset = filtersets.UsuarioFilter(
@@ -469,6 +449,7 @@ def listado_usuarios(request):
         })
 
 
+@login_required
 def buscar_usuarios(request):
     return render(request, 'sistemas/buscar-usuarios.html', {
         'titulo': 'Buscar usuarios en pginas blancas',
@@ -478,14 +459,13 @@ def buscar_usuarios(request):
         })
 
 
+@login_required
 def alta_usuario(request, *args, **kwargs):
     if request.method == 'POST':
         form = forms.AltaUsuarioForm(request.POST)
         if form.is_valid():
             usuario = form.save()
-            Bus(request).success(
-                f"Se ha dado de alta al usuario {usuario}"
-                )
+            Bus(request).nuevo_usuario(usuario)
             return redirect(links.a_detalle_usuario(usuario.pk))
     else:
         form = forms.AltaUsuarioForm()
@@ -497,6 +477,7 @@ def alta_usuario(request, *args, **kwargs):
         })
 
 
+@login_required
 def detalle_usuario(request, usuario, *args, **kwargs):
     return render(request, 'sistemas/detalle-usuario.html', {
         'titulo': f'Detalles usuario {usuario}',
@@ -505,6 +486,8 @@ def detalle_usuario(request, usuario, *args, **kwargs):
         'usuario': usuario,
         })
 
+
+@login_required
 def bar_sistemas2():
     from comun.charts import BarChart
     result = BarChart()
@@ -554,6 +537,7 @@ def bar_sistemas2():
     # return new_chart
 
 
+@login_required
 def listado_entes(request):
     chart = bar_sistemas2()
     return render(request, 'sistemas/listado-entes.html', {
@@ -565,6 +549,7 @@ def listado_entes(request):
         })
 
 
+@login_required
 def detalle_ente(request, ente):
     return render(request, 'sistemas/detalle-ente.html', {
         'titulo': f'Detalles {ente}',
@@ -580,6 +565,7 @@ def detalle_ente(request, ente):
         })
 
 
+@login_required
 def asignar_interlocutor(request, ente):
     if request.method == "POST":
         form = forms.AsignarInterlocutorForm(request.POST)
@@ -603,6 +589,7 @@ def asignar_interlocutor(request, ente):
         })
 
 
+@login_required
 def listado_organismos(request):
     filterset = filtersets.OrganismoFilter(
         request.GET,
@@ -616,6 +603,7 @@ def listado_organismos(request):
         })
 
 
+@login_required
 def detalle_organismo(request, organismo: Organismo):
     return render(request, 'sistemas/detalle-organismo.html', {
         'titulo': f'Detalles organismo {organismo}',
@@ -625,6 +613,7 @@ def detalle_organismo(request, organismo: Organismo):
         })
 
 
+@login_required
 def listado_temas(request):
     temas = models.Tema.objects.with_counts().all()
     return render(request, 'sistemas/listado-temas.html', {
@@ -635,6 +624,7 @@ def listado_temas(request):
         })
 
 
+@login_required
 def detalle_tema(request, tema):
     return render(request, 'sistemas/detalle-tema.html', {
         'titulo': str(tema),
@@ -644,6 +634,7 @@ def detalle_tema(request, tema):
         })
 
 
+@login_required
 def listado_familias(request):
     familias = models.Familia.objects.with_counts().all()
     return render(request, 'sistemas/listado-familias.html', {
@@ -654,6 +645,7 @@ def listado_familias(request):
         })
 
 
+@login_required
 def detalle_familia(request, familia):
     return render(request, 'sistemas/detalle-familia.html', {
         'titulo': str(familia),
@@ -663,6 +655,7 @@ def detalle_familia(request, familia):
         })
 
 
+@login_required
 def listado_preguntas(request):
     preguntas = models.Pregunta.objects.all()
     por_eje = agrupa(preguntas, lambda _p: _p.eje)
@@ -675,6 +668,7 @@ def listado_preguntas(request):
         })
 
 
+@login_required
 def ver_pregunta(request, id_pregunta: int):
     pregunta = models.Pregunta.load_pregunta(id_pregunta)
     return render(request, 'sistemas/ver-pregunta.html', {
@@ -685,6 +679,7 @@ def ver_pregunta(request, id_pregunta: int):
         })
 
 
+@login_required
 def alta_opcion(request, id_pregunta: int):
     pregunta = models.Pregunta.load_pregunta(id_pregunta)
     if request.method == 'POST':
@@ -704,6 +699,7 @@ def alta_opcion(request, id_pregunta: int):
         })
 
 
+@login_required
 def listado_activos(request):
     filterset = filtersets.ActivoFilter(
         request.GET,
@@ -717,6 +713,7 @@ def listado_activos(request):
         })
 
 
+@login_required
 def pendientes(request):
     '''Dashboard de control de información ausente o incompleta.
     '''
@@ -732,6 +729,7 @@ def pendientes(request):
         })
 
 
+@login_required
 def sistemas_sin_tema(request):
     '''Listado de sistemas que no tienen tema asignado.
     '''
@@ -747,6 +745,7 @@ def sistemas_sin_tema(request):
 # Patchs for datastar
 
 
+@login_required
 def get_datastar_parameter(request, name: str, default=None) -> str|None:
     datastar = request.GET.get('datastar', '')
     if datastar:
@@ -756,6 +755,7 @@ def get_datastar_parameter(request, name: str, default=None) -> str|None:
     return default
 
 
+@login_required
 def patch_organismos(request):
     query = get_datastar_parameter(request, 'query')
     if query:
@@ -785,6 +785,7 @@ def patch_organismos(request):
         )
 
 
+@login_required
 def patch_sistemas(request):
     sistemas = Sistema.objects.all()
     total_sistemas = num_sistemas = sistemas.count()
@@ -803,6 +804,7 @@ def patch_sistemas(request):
         })
 
 
+@login_required
 def patch_usuarios(request):
     query = get_datastar_parameter(request, 'query')
     if query:
@@ -853,6 +855,7 @@ def verificar_existencia_sistema(payload: dict) -> dict:
     return payload
 
 
+@login_required
 def importar_sistemas(request, *args, **kwargs):
     if request.method == 'POST':
         form = forms.CVSFileForm(request.POST, request.FILES)
@@ -883,6 +886,7 @@ def importar_sistemas(request, *args, **kwargs):
 
 
 
+@login_required
 def exportar_sistemas(request):
     return render(request, 'sistemas/exportar-sistemas.html', {
         'titulo': 'Exportar sistemas',
@@ -893,6 +897,7 @@ def exportar_sistemas(request):
         })
 
 
+@login_required
 def exportar_sistemas_por_ente(request, ente: Ente):
     sistemas = ente.sistemas_del_ente()
     result = HttpResponse(content_type='text/csv')
@@ -902,6 +907,7 @@ def exportar_sistemas_por_ente(request, ente: Ente):
     return result
 
 
+@login_required
 def exportar_sistemas_todos(request):
     sistemas = Sistema.objects.all()
     result = HttpResponse(content_type='text/csv')
