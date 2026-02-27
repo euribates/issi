@@ -1,0 +1,37 @@
+[
+{
+    "model": "antecedentes.tipoevento",
+    "pk": "D",
+    "fields": {
+        "nombre_tipo": "DELETE"
+    }
+},
+{
+    "model": "antecedentes.tipoevento",
+    "pk": "I",
+    "fields": {
+        "nombre_tipo": "INSERT"
+    }
+},
+{
+    "model": "antecedentes.tipoevento",
+    "pk": "M",
+    "fields": {
+        "nombre_tipo": "MERGE"
+    }
+},
+{
+    "model": "antecedentes.tipoevento",
+    "pk": "S",
+    "fields": {
+        "nombre_tipo": "SPLIT"
+    }
+},
+{
+    "model": "antecedentes.tipoevento",
+    "pk": "U",
+    "fields": {
+        "nombre_tipo": "UPDATE"
+    }
+}
+]
