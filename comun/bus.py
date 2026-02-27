@@ -10,6 +10,7 @@ from sistemas.models import Usuario
 from sistemas.models import Sistema
 from sistemas.models import Perfil
 
+
 class Bus:
 
     def __init__(self, request):
@@ -82,14 +83,14 @@ class Bus:
             case 'Sistema':
                 HistoricoSistema(
                     sujeto=item,
-                    tipo_evento=tipo,
+                    tipo_evento_id=tipo,
                     descripcion=msg,
                     usuario=self.usuario,
                     ).save()
             case 'Usuario':
                 HistoricoUsuario(
                     sujeto=item,
-                    tipo_evento=tipo,
+                    tipo_evento_id=tipo,
                     descripcion=msg,
                     usuario=self.usuario,
                     ).save()
@@ -101,36 +102,37 @@ class Bus:
                     )
 
     def nuevo_sistema(self, sistema: Sistema):
-        self.publica(sistema, 'I', f'Añadido el sistema de información {sistema}')
+        msg = f'Añadido el sistema de información {sistema}'
+        self.publica(sistema, msg=msg, tipo='I')
 
     def sistema_modificado(self, sistema: Sistema, **kwargs):
         buff = [f"El sistema de información {sistema} ha sido modificado"]
         for field_name, value in kwargs.items:
             buff.append(f'- {field_name} : {value!r}')
         msg = '\n'.join(buff)
-        self.publica(sistema, 'U', msg)
+        self.publica(sistema, msg=msg, tipo='U')
 
     def sistema_asignado_organismo(self, sistema: Sistema, organismo):
         msg = f'El sistema {sistema} ha sido asignado al organismo {organismo}'
-        self.publica(sistema, 'U', msg) 
+        self.publica(sistema, msg=msg, tipo='U') 
 
     def sistema_asignado_familia(self, sistema: Sistema, familia):
         msg = f'El sistema {sistema} ha sido asignado a la familia {familia}'
-        self.publica(sistema, 'U', msg) 
+        self.publica(sistema, msg=msg, tipo='U') 
 
     def sistema_editar_finalidad(self, sistema: Sistema, finalidad: str):
         msg = (
             f"La finalidad del sistema {sistema}"
             f" ha sido actualizada a {finalidad!r}"
             )
-        self.publica(sistema, 'U', msg) 
+        self.publica(sistema, msg=msg, tipo='U') 
 
     def sistema_editar_descripcion(self, sistema: Sistema, descripcion: str):
         msg = (
             f"La descripción del sistema {sistema}"
             f" ha sido actualizada a {descripcion!r}"
             )
-        self.publica(sistema, 'U', msg) 
+        self.publica(sistema, msg=msg, tipo='U') 
 
     def sistema_asignar_responsable(self, sistema: Sistema, perfil: Perfil):
         msg = (
@@ -138,18 +140,27 @@ class Bus:
             f" ha sido asignado como {perfil.get_cometido_display()}"
             f" del sistema {perfil.sistema}"
             )
-        self.publica(sistema, 'U', msg) 
+        self.publica(sistema, msg=msg, tipo='U') 
     
     def sistema_asignar_materia(self, sistema: Sistema, materia):
         msg = (
             f"El sistema {sistema} ha sido asignado"
             f" a la materia competencial {materia}"
             )
-        self.publica(sistema, 'U', msg) 
+        self.publica(sistema, msg=msg, tipo='U') 
     
     def sistema_asignar_icono(self, sistema: Sistema):
         msg = f"Se ha asignado un icono al sistema {sistema}"
-        self.publica(sistema, 'U', msg) 
+        self.publica(sistema, msg=msg, tipo='U') 
+
+    def sistema_conmutar_campo(self, sistema: Sistema, campo: str):
+        valor = getattr(sistema, campo)
+        desc_valor = 'verdadero' if valor else 'falso'
+        msg = (
+            f'El sistema {sistema} ha cambiado su valor'
+            f' {campo}, ahora vale **{desc_valor}**'
+            )
+        self.publica(sistema, msg=msg, tipo='U')
 
     def perfil_borrado(self, perfil: Perfil):
         msg = (
@@ -157,10 +168,8 @@ class Bus:
             f" ha dejado de ser {perfil.get_cometido_display()}"
             f" del sistema {perfil.sistema}"
             )
-        self.publica(perfil.sistema, 'U', msg) 
+        self.publica(perfil.sistema, msg=msg, tipo='U') 
 
     def nuevo_usuario(self, usuario: Usuario):
         msg = f"Se ha dado de alta al usuario {usuario}"
-        self.publica(usuario, 'I', msg)
-
-
+        self.publica(usuario, msg=msg, tipo='I')

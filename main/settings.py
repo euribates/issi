@@ -86,6 +86,9 @@ INTERNAL_IPS = [
 
 ROOT_URLCONF = 'main.urls'
 
+LOGIN_URL = '/login/'
+LOGOUT_URL = '/logout/'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

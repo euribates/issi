@@ -291,13 +291,13 @@ def asignar_icono(request, sistema):
 
 
 def labo(request, *args, **kwargs):
-    from comun.graficas import Radar
-    radar = Radar('ISC')
-    radar.add_axis('Seguridad')
-    radar.add_axis('Calidad')
-    radar.add_axis('Interoperabilidad')
-    radar.add_axis('Personal')
-    radar.add_series('Issi', [4, 18, 10, 12])
+    from comun.graficas import PolarArea
+    radar = PolarArea('ISC')
+    radar.add_value('Seguridad', 12, '#FF000080')
+    radar.add_value('Calidad', 2.5, '#00FF0080')
+    radar.add_value('Interoperabilidad', 12, '#0000FF80')
+    radar.add_value('Personal', 8, '#00FFFF80')
+    radar.add_value('Matraka', 17, '#FF00FF80')
     return render(request, "sistemas/labo.html", {
         'titulo': 'Labo sistemas',
         'chart': radar,
@@ -377,6 +377,7 @@ def conmutar_campo(request, sistema, campo: str):
         if form.is_valid():
             setattr(sistema, campo, not getattr(sistema, campo))
             sistema.save()
+            Bus(request).sistema_conmutar_campo(sistema, campo)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.EstaSeguroForm()

@@ -148,16 +148,17 @@ def logout_view(request):
 
 def login_view(request):
     form = forms.LoginForm()
+    next_url = request.GET.get('next', links.a_sistemas())
     if request.method == 'POST':
         form = forms.LoginForm(request.POST)
         if form.is_valid():
             user = authenticate(
                 username=form.cleaned_data['username'],
                 password=form.cleaned_data['password'],
-            )
+                )
             if user is not None:
                 login(request, user)
-                return redirect(links.a_sistemas())
+                return redirect(next_url)
     else:
         form = forms.LoginForm()
     return render(request, 'comun/login.html', context={
