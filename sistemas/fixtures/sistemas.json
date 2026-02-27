@@ -664,12 +664,12 @@
         "es_transversal": true,
         "es_subsistema_de": null,
         "tiene_especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-issi_GKKmb4J.png",
+        "icono": "sistemas/iconos/2025/logo-issi.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2025-11-24T10:20:18.254Z",
+        "f_cambio": "2026-02-27T21:03:16.583Z",
         "f_baja": null
     }
 },
@@ -767,7 +767,7 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo_platea_8ugjV2e.png",
+        "icono": "sistemas/iconos/2025/logo_platea.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
         "f_cambio": "2025-12-01T22:57:22.375Z",
         "f_baja": null
@@ -892,7 +892,7 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/logo-hiperreg_y6TMSbi.png",
+        "icono": "sistemas/iconos/2025/logo-hiperreg.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
         "f_cambio": "2025-12-01T22:57:22.397Z",
         "f_baja": null
@@ -1067,7 +1067,7 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/rpg-adopciones_Y5i95aY.png",
+        "icono": "sistemas/iconos/2025/rpg-adopciones.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
         "f_cambio": "2025-11-24T10:20:18.254Z",
         "f_baja": null
@@ -2167,7 +2167,7 @@
         "familia": "UNK",
         "icono_height": 512,
         "icono_width": 512,
-        "icono": "sistemas/iconos/2025/justiniano-logo_fkL3ZjJ.png",
+        "icono": "sistemas/iconos/2025/justiniano-logo.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
         "f_cambio": "2025-11-24T10:20:18.254Z",
         "f_baja": null

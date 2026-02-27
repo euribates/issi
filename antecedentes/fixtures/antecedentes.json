@@ -33,5 +33,38 @@
     "fields": {
         "nombre_tipo": "UPDATE"
     }
+},
+{
+    "model": "antecedentes.historicosistema",
+    "pk": "2c7f0df5-87d5-49cc-8371-f675f1541356",
+    "fields": {
+        "tipo_evento": "U",
+        "descripcion": "El sistema Inventario de Sistemas de Información ha cambiado su valor es_transversal, ahora vale **falso**",
+        "f_evento": "2026-02-27T21:02:18.802Z",
+        "usuario": "jrodleo",
+        "sujeto": 1
+    }
+},
+{
+    "model": "antecedentes.historicosistema",
+    "pk": "69bcb0fb-2e05-40be-b744-f89270e38033",
+    "fields": {
+        "tipo_evento": "U",
+        "descripcion": "La finalidad del sistema Inventario de Sistemas de Información ha sido actualizada a 'Inventario global de sistemas de información y activos de datos de las administraciones publicas canarias.'",
+        "f_evento": "2026-02-27T21:05:09.569Z",
+        "usuario": "jrodleo",
+        "sujeto": 1
+    }
+},
+{
+    "model": "antecedentes.historicosistema",
+    "pk": "bd4f6994-205f-403f-8170-b2e1974b4285",
+    "fields": {
+        "tipo_evento": "U",
+        "descripcion": "El sistema Inventario de Sistemas de Información ha cambiado su valor es_transversal, ahora vale **verdadero**",
+        "f_evento": "2026-02-27T21:03:16.659Z",
+        "usuario": "jrodleo",
+        "sujeto": 1
+    }
 }
 ]
