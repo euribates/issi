@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
     'localhost',
     'nova',
     'picara',
+    '188.86.150.172',
     ]
 
 

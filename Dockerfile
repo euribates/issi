@@ -1,10 +1,10 @@
-FROM python:3.14-slim
+FROM python:3.14
 RUN mkdir /app
 RUN mkdir /app/logs
 WORKDIR /app
 
-RUN apt-get update && apt-get upgrade
-RUN apk add unzip vim vim-docs vim-scripts sqlite3 -y
+RUN apt-get update -y && apt-get upgrade -y
+RUN apt-get install unzip vim vim-doc vim-scripts sqlite3 -y
 
 # Set environment variables 
 # Prevents Python from writing pyc files to disk
