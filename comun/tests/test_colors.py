@@ -1,8 +1,39 @@
 #!/usr/bin/env python3
 
 import pytest
+import re
 
 from comun.colors import Color
+
+
+def test_create_random_color():
+    c = Color.random()
+    assert 0 <= c.red < 256
+    assert 0 <= c.green < 256
+    assert 0 <= c.blue < 256
+    assert c == Color(str(c))
+
+
+def test_inverse_color():
+    c = Color(32, 128, 188)
+    assert c.inverse() == Color(223, 127, 67)
+
+
+def test_create_color_from_color():
+    old_color = Color('lavenderblush')
+    new_color = Color(old_color)
+    assert new_color.red == 255
+    assert new_color.green == 240
+    assert new_color.blue == 245
+    assert new_color.alpha is None
+    assert str(new_color) == '#FFF0F5'
+
+
+def test_change_color():
+    old_color = Color('magenta')
+    new_color = old_color.change(red=33)
+    assert new_color != old_color
+    assert new_color.red == 33
 
 
 def test_create_color_using_positional_args():

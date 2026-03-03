@@ -1,7 +1,7 @@
 ESC - Estimación Subjetiva de Calidad
 ========================================================================
 
-Caráteristicas deseables de una estimación
+Características deseables de una estimación
 ------------------------------------------------------------------------
 
 Algunas de las características que deseamos que tenga una estimación de
@@ -16,7 +16,7 @@ calidad son las siguientes:
   realizados.
 
 - **Monotonicidad**: La función de cálculo del indicador debería ser
-  monotoma con respecto a la calidad del sistema. Es decir, una mejora
+  monótona con respecto a la calidad del sistema. Es decir, una mejora
   en la calidad del sistema debería reflejarse en un incremento del
   indicador, y viceversa.
 
@@ -26,29 +26,26 @@ Propuesto de función de cálculo del IDS
 - Un número en un intervalo definido. Se sugiere entre 0 y 100, siendo 0
   la nota más baja y 100 la nota más alta.
 
-- Los 100 puntos se distribuyen en **dimensiones** o **áreas**. Se
-  sugieren estas 5 áreas:
+- Los 100 puntos se distribuyen las siguientes 6 **dimensiones** o **áreas**:
 
-  - Seguridad
+  - Calidad (18 puntos)
+  - Interoperabilidad (18 puntos)
+  - Personas (10 puntos)
+  - Protección de datos (18 puntos)
+  - Reutilización (18 puntos)
+  - Seguridad (18 puntos)
 
-  - Reutilización e Interoperabilidad
+.. note::
 
-  - Personas
-
-  - Calidad
-
-  - Protección de datos
-
-  Nota: Quiza se podrían unificar seguridad y protección de datos en una
-  sola, lo que nos dejaría solo cuatro áreas.
+    Quizá se podrían unificar seguridad y protección de datos en una
+    sola, hacer lo mismo con reutilización e interoperabilidad, lo que
+    nos dejaría solo cuatro áreas.
 
 Cálculo del indicador
 ------------------------------------------------------------------------
 
 El peso de cada área *puede* ser diferente, pero la suma total debe
-ser siempre la puntuación total (100 es la propuesta). Lo más sencillo
-sería asignar 20 puntos a cada área (25 si se unifican las áreas de
-Seguridad y Protección de datos)
+ser siempre la puntuación total (100 es la propuesta). 
 
 Cada pregunta dentro de un área se pondera en el intervalo [0..1]. Se
 calcula el total de cada área de la forma:
@@ -66,12 +63,15 @@ Donde:
 
 El valor final ESC (Estimación Subjetiva de la Calidad) es:
 
-$$ ESC = T_s + T_i + T_p + T_k + T_j $$
+$$ ESC = T_c + T_i + T_p + T_d + T_r + T_s $$
 
 Donde:
 
-  - :math:`T_s` es la estimación en la dimensión de seguridad
+  - :math:`T_c` es la estimación en la dimensión de calidad
   - :math:`T_i` es la estimación en la dimensión de interoperabilidad
   - :math:`T_p` es la estimación en la dimensión de personas
-  - :math:`T_q` es la estimación en la dimensión de calidad de datos
-  - :math:`T_j` es la estimación en la dimensión de protección de datos
+  - :math:`T_d` es la estimación en la dimensión de protección de datos
+  - :math:`T_r` es la estimación en la dimensión de reutilización
+  - :math:`T_s` es la estimación en la dimensión de seguridad
+
+  

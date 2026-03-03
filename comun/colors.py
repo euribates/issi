@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 
+from typing import Self
 import re
+import random
 
 
-pat_color = re.compile(
+pat_hex_color = re.compile(
     r'#([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})',
     re.IGNORECASE,
     )
 
-pat_color_alpha = re.compile(
+pat_hex_color_alpha = re.compile(
     r'#([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})([0-9A-F]{2})',
     re.IGNORECASE,
     )
@@ -187,20 +189,47 @@ class Color:
             self.blue = kwargs['blue']
             self.alpha = kwargs['alpha']
         elif len(args) == 1:
-            name_or_code = args[0].lower()
-            if name_or_code in NAMED_COLORS:
-                self.red, self.green, self.blue = NAMED_COLORS[name_or_code]
+            unique_parameter = args[0]
+            if isinstance(unique_parameter, Color):
+                self.red = unique_parameter.red
+                self.green = unique_parameter.green
+                self.blue = unique_parameter.blue
+                self.alpha = unique_parameter.alpha
+                return
+            unique_parameter = str(unique_parameter).lower()
+            if unique_parameter in NAMED_COLORS:
+                self.red, self.green, self.blue = NAMED_COLORS[unique_parameter]
                 self.alpha = None
-            elif _match := pat_color_alpha.match(name_or_code):
+            elif _match := pat_hex_color_alpha.match(unique_parameter):
                 self.red = int(_match.group(1), 16)
                 self.green = int(_match.group(2), 16)
                 self.blue = int(_match.group(3), 16)
                 self.alpha = int(_match.group(4), 16)
-            elif _match := pat_color.match(name_or_code):
+            elif _match := pat_hex_color.match(unique_parameter):
                 self.red = int(_match.group(1), 16)
                 self.green = int(_match.group(2), 16)
                 self.blue = int(_match.group(3), 16)
                 self.alpha = None
+
+    def __eq__(self, other) -> bool:
+        '''Color equality function.
+        '''
+        return (
+            (self.red == other.red) and
+            (self.green == other.green) and
+            (self.blue == other.blue) and
+            (self.alpha == other.alpha)
+            )
+
+    @classmethod
+    def random(cls) -> Self:
+        '''Returns a random color.
+        '''
+        return cls(
+            red=random.randint(0, 255),
+            green=random.randint(0, 255),
+            blue=random.randint(0, 255),
+            )
 
     def __str__(self):
         if self.alpha is None:
@@ -212,6 +241,29 @@ class Color:
             f'{self.alpha:02x}'
             f'').upper()
 
+    def __repr__(self) -> str:
+        """Reprentacioón de unainstancia de Color.
+        """
+        return (
+            'Color('
+            f'red={self.red!r}, '
+            f'green={self.green!r}, '
+            f'blue={self.blue!r}'
+            ')'
+            )
+
+    def change(self, **kwargs) -> Self:
+        red = kwargs.pop('red', self.red)
+        green = kwargs.pop('green', self.green)
+        blue = kwargs.pop('blue', self.blue)
+        alpha = kwargs.pop('alpha', self.alpha)
+        return Color(red, green, blue, alpha)
+
+    def inverse(self) -> Self:
+        red = 255 - self.red
+        green = 255 - self.green
+        blue = 255 - self.blue
+        return Color(red, green, blue, self.alpha)
 
     def to_hsl(self):
         _red = self.red / 255.0
@@ -237,3 +289,58 @@ class Color:
 
 BLACK = Color(0, 0, 0)
 WHITE = Color(255, 255, 255)
+
+Palette = {
+    'pastel': [
+        Color('#C5E5E8'),
+        Color('#FFF09C'),
+        Color('#FFDAB9'),
+        Color('#ACEFAC'),
+        Color('#FFA07A'),
+        Color('#E6E6FA'),
+        Color('#FFB6C1'),
+        Color('#F0E68C'),
+        Color('#D8BFD8'),
+        ],
+    'bright': [
+        Color('#003A7D'),
+        Color('#008DFF'),
+        Color('#FF73B6'),
+        Color('#C701FF'),
+        Color('#4ECB8D'),
+        Color('#FF9D3A'),
+        Color('#F8E858'),
+        Color('#D83034'),
+        ],
+    'muted': [
+        Color('#C8C8C8'),
+        Color('#F0C571'),
+        Color('#59A89C'),
+        Color('#0B81A2'),
+        Color('#E25759'),
+        Color('#9D2C00'),
+        Color('#7E4794'),
+        Color('#36B700'),
+        ],
+    'alternate': [
+        Color('#8FD7D7'),
+        Color('#00B0BE'),
+        Color('#FF9CA1'),
+        Color('#F45F74'),
+        Color('#BDD373'),
+        Color('#98C127'),
+        Color('#FFCD8E'),
+        Color('#FFB255'),
+        ],
+    'extreme': [
+        Color('red'),
+        Color('blue'),
+        Color('green'),
+        Color('magenta'),
+        Color('yellow'),
+        Color('purple'),
+        Color('silver'),
+        Color('black'),
+        ]
+    }
+Palette['default'] = Palette['pastel']
