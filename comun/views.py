@@ -9,8 +9,6 @@ from django.contrib.auth import login, logout
 from django.contrib.auth import authenticate
 
 from comun import forms
-from comun.colors import Color
-from comun.colors import Palette
 from sistemas import breadcrumbs
 from sistemas import links
 from sistemas.models import Sistema
@@ -152,13 +150,6 @@ def doughnut(request):
         'bad': bad,
         'regular': regular,
         'good': good,
-                f' <animateTransform attributeName="transform"'
-                '    type="scale"'
-                '    from="0 0"'
-                '    to="1 1"'
-                f'    begin="{index}s"'
-                '    dur="1.2s"'
-                '    />\n'
         'total': total,
         'green_chart': make_chart(percent=green_percent, color="#00a443"),
         'yellow_chart': make_chart(percent=yellow_percent, color="#f5d80a"),

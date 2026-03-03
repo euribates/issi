@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import pytest
-import re
 
 from comun.colors import Color
 

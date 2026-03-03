@@ -6,13 +6,10 @@ from html import escape
 from typing import Iterable
 import math
 
-from django.utils.safestring import mark_safe
-from django.template import Template, Context
 from django.template.loader import get_template
 
 from comun.colors import Color
 from comun.colors import Palette
-from comun.colors import BLACK, WHITE
 
 
 DEFAULT_WIDTH = 250
