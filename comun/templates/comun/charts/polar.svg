@@ -32,7 +32,12 @@
      id="defs2">
   </defs>
 
-  <text x="-100" y="-100" class="chart_title">{{ chart.title }}</text>
+    <text x="0" y="-115"
+        text-anchor="middle" 
+        dominant-baseline="central"
+        class="chart_title">
+        {{ chart.title }}
+    </text>
 
   <circle cx="0" cy="0" r="3" fill="lightgray" />
 

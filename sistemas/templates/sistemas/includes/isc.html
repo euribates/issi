@@ -1,0 +1,38 @@
+{% load mapper %}
+
+{% if isc %}
+<div class="card m-2">
+  <div class="card-header">  
+    <h5 class="card-title">Índice Subjetivo de Calidad</h5>
+  </div>  
+  <div class="card-body">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          {{ isc.as_svg }}
+        </div>
+        <div class="col">
+          <table class="table">
+            {% with isc.series.0.values as values %}
+            {% for label,axis in isc.axis.items %}
+            <tr>
+              <th>
+                {{ axis.name }}
+              </th>
+              <td>
+                {{ axis.label }}
+              </td>
+              <td>
+                {% map values using forloop.counter0 as value %}
+                {{ value }}
+              </td>
+            </tr>
+          {% endfor %}
+          </table>
+          {% endwith %}
+        </div>
+      </div>
+    </div>  
+  </div>
+</div> 
+{% endif %}

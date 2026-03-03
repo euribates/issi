@@ -422,6 +422,30 @@ def borrar_perfil(request, id_perfil: int):
     return redirect(links.a_sistemas())
 
     
+def isc_chart(sistema):
+    from comun.graficas import PolarChart
+    import random
+    polar = PolarChart(f'ISC {sistema.codigo}', max_value=25)
+    polar.add_axis('C', 'Calidad')
+    polar.add_axis('D', 'Protección de datos')
+    polar.add_axis('I', 'Interoperabilidad')
+    polar.add_axis('P', 'Personas')
+    polar.add_axis('R', 'Reutilización')
+    polar.add_axis('S', 'Seguridad')
+    data = [
+        random.randint(0, 18),
+        random.randint(0, 18),
+        random.randint(0, 18),
+        random.randint(0, 10),
+        random.randint(0, 18),
+        random.randint(0, 18),
+        ]
+    polar.add_serie(data, label=str(sistema))
+    return polar
+
+
+
+
 @login_required
 def detalle_sistema(request, sistema):
     return render(request, 'sistemas/detalle-sistema.html', {
@@ -431,6 +455,7 @@ def detalle_sistema(request, sistema):
         'tab': 'sistemas',
         'sistema': sistema,
         'diagnostico': diagnosis.DiagnosticoSistema(sistema),
+        'isc': isc_chart(sistema),
         })
 
 

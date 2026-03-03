@@ -1,147 +1,138 @@
  #!/usr/bin/env python3
 
-import json
+from collections import OrderedDict
+from dataclasses import dataclass
+from html import escape
 from typing import Iterable
+import math
 
 from django.utils.safestring import mark_safe
+from django.template import Template, Context
+from django.template.loader import get_template
 
 from comun.colors import Color
+from comun.colors import Palette
 from comun.colors import BLACK, WHITE
 
 
+DEFAULT_WIDTH = 250
+DEFAULT_HEIGHT = 250
+
+
+@dataclass()
+class Axis:
+    name: str
+    label: str
+    values: list
+
+    def __init__(self, name: str, label: str|None):
+        self.name = name
+        self.label = label or name
+        self.values = []
+
+
+@dataclass(frozen=True)
 class Serie:
-
-    def __init__(self, label, values: Iterable, **kwargs):
-        self.label = label
-        self.values = list(values)
-        self.fill = kwargs.get('fill', True)
-        self.background_color = str(kwargs.get('background_color', Color('Coral')))
-        self.border_color = str(kwargs.get('border_color', Color('AliceBLue')))
-        self.point_background_color = str(Color(255, 99, 132))
-        self.point_border_color = str(BLACK)
-        self.point_hover_background_color = str(WHITE)
-        self.point_hover_border_color = str(Color(255, 99, 132))
+    values: tuple
+    label: str
+    color: Color
 
 
-class PolarArea:
+class PolarChart:
 
-    def __init__(self, title):
+    def __init__(self, title, **kwargs):
         self.title = title
-        self.items = []
-
-    def add_value(self, label, value, color):
-        self.items.append({
-            'label': label,
-            'value': value,
-            'color': color,
-            })
-
-    def _as_data(self):
-        result = {}
-        result['labels'] = [_['label'] for _ in self.items]
-        result['datasets'] = [{
-            'label': self.title,
-            'data': [_['value'] for _ in self.items],
-            'backgroundColor': [_['color'] for _ in self.items],
-            }]
-        return json.dumps(result, indent=4)
-
-    def _as_config(self):
-        return ('\n'.join([
-            "{",
-            "  'type': 'polarArea',",
-            "  'data': data,",
-            "  'options': {",
-            "     scales: {",
-            "       r: {",
-            "           beginAtZero: true,",
-            "           min: 0,",
-            "           max: 80",
-            "         }",
-            "       },",
-            "    'elements': {",
-            "      'line': {",
-            "        'borderWidth': 2",
-            "      }",
-            "    }",
-            "  },",
-            "}"
-            ]))
-
-    def as_javascript(self):
-        return mark_safe('\n'.join([
-            '<script type="text/javascript">',
-            f'const data = {self._as_data()};'
-            f'const config = {self._as_config()};' 
-            'var ctx = document.getElementById("Chart");',
-            'var chart = new Chart(ctx, config);',
-            '</script>',
-            ]))
-
-
-
-class Radar:
-
-    def __init__(self, title):
-        self.title = title
-        self.axis = []
+        self.width = kwargs.pop('width', DEFAULT_WIDTH)
+        self.height = kwargs.pop('height', DEFAULT_HEIGHT)
+        self.max_value = kwargs.pop('max_value', 100)
+        palette = kwargs.pop('palette', 'default')
+        self.palette = Palette[palette]
+        self.radio = 100
         self.series = []
+        self.axis = OrderedDict({})  # Es importante que el diccionario 
 
-    def add_axis(self, axis_name: str):
-        self.axis.append(axis_name)
-        
-    def add_series(self, label: str, values: Iterable, **kwargs):
+    def scale(self, v: float) -> float:
+        return v * self.radio / self.max_value
+
+    def polar_to_coord(self, value, angle):
+        angle = angle - (math.tau / 3.)
+        value = self.scale(value)
+        return (
+            str(round(math.cos(angle) * value, 2)),
+            str(round(math.sin(angle) * value, 2)),
+            )
+
+    def add_axis(self, name, label=None):
+        """Añade un eje al diagrama.
+        """
+        self.axis[name] = Axis(name, label)
+
+    def add_serie(self, values: Iterable, label='', color=None):
         assert len(values) == len(self.axis)
-        self.series.append(Serie(label, list(values), **kwargs))
+        num_series = len(self.series)
+        label = label or f'Serie {num_series + 1}'
+        color = color or self.palette[num_series]
+        for axis_name, value in zip(self.axis.keys(), values):
+            if value > self.max_value:
+                raise ValueError(
+                    'Se ha definido el gráfico polar con un '
+                    f' valor máximo de {self.max_value}'
+                    f' pero se ha pasado el valor {escape(value)}'
+                    ' que inclumple este criterio.'
+                    )
+            self.axis[axis_name].values.append(value)
+        self.series.append(Serie(tuple(values), label, color))
 
-    def _as_data(self):
-        result = {}
-        result['labels'] = self.axis
-        result['datasets'] = []
-        for serie in self.series:
-            result['datasets'].append({
-                'label': serie.label,
-                'data': serie.values,
-                'fill': serie.fill,
-                'backgroundColor': serie.background_color,
-                'borderColor': serie.border_color,
-                'pointBackgroundColor': serie.point_background_color,
-                'pointBorderColor': serie.point_border_color,
-                'pointHoverBackgroundColor': serie.point_hover_background_color,
-                'pointHoverBorderColor': serie.point_hover_border_color,    
-                })
-        return json.dumps(result, indent=4)
-
-    def _as_config(self):
-        return ('\n'.join([
-            "{",
-            "  'type': 'radar',",
-            "  'data': data,",
-            "  'options': {",
-            "     scales: {",
-            "       r: {",
-            "           angleLines: {",
-            "               display: true",
-            "           },",
-            "           min: 0,",
-            "           max: 20",
-            "         }",
-            "       },",
-            "    'elements': {",
-            "      'line': {",
-            "        'borderWidth': 2",
-            "      }",
-            "    }",
-            "  },",
-            "}"
-            ]))
-
-    def as_javascript(self):
-        return mark_safe('\n'.join([
-            '<script type="text/javascript">',
-            f'const data = {self._as_data()};'
-            f'const config = {self._as_config()};' 
-            'var ctx = document.getElementById("Chart");',
-            'var chart = new Chart(ctx, config);',
-            '</script>',
-            ]))
+    def as_svg(self) -> str:
+        angle = math.tau / len(self.axis)
+        template = get_template('comun/charts/polar.svg')
+        coords = [
+            tuple([
+                axis_name,
+                *self.polar_to_coord(self.max_value, angle * i),
+                ])
+            for i, axis_name in enumerate(self.axis)
+            ]
+        polygons = []
+        for index, serie in enumerate(self.series):
+            l_points = [
+                tuple([
+                    *self.polar_to_coord(value, angle * i),
+                    value,
+                    ])
+                for i, value in enumerate(serie.values)
+                ]
+            l_points.append(l_points[0])  # Close the polygon
+            s_points = ' '.join([f'{x},{y}' for x, y, _ in l_points])
+            stroke_color = Color(serie.color)
+            fill_color = stroke_color.change(alpha=160)
+            polygons.append(
+                '<g scale="0 0">'    
+                f' <animateTransform attributeName="transform"'
+                '    type="scale"'
+                '    from="0 0"'
+                '    to="1 1"'
+                f'    begin="{index}s"'
+                '    dur="1.2s"'
+                '    />\n'
+                f'<polygon scale="0 0"'
+                f' points="{s_points}"'
+                f' fill="{fill_color}" stroke="{stroke_color}">\n'
+                '</polygon>\n'
+                )
+            for (x, y, v) in l_points[0:-1]:
+                polygons.append(
+                    f'<circle cx="{x}" cy="{y}" r="3"'
+                    f' fill="{stroke_color}">'
+                    f'<title>{v}</title>'
+                    '</circle>'
+                    )
+            polygons.append('</g>')
+        context = {
+            'chart': self,
+            'angle': angle,
+            'data': self.axis.items(),
+            'coords': coords,
+            'polygons': polygons,
+            }
+        return template.render(context)
