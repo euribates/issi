@@ -21,3 +21,16 @@ class OrganismoAdmin(admin.ModelAdmin):
         ]
 
 admin.site.register(models.Organismo, OrganismoAdmin)
+
+
+class EmpresaAdmin(admin.ModelAdmin):
+    list_display = [
+        "pk",
+        "nif",
+        "nombre_empresa",
+        ]
+    search_fields = [
+        'nombre_empresa',
+        'dir3',
+        ]
+admin.site.register(models.Empresa, EmpresaAdmin)

@@ -36,8 +36,14 @@
               </td>
           </tr>
           <tr>
-              <th>Adscrito a</th>
-              <td>{{ usuario.organismo.nombre_organismo }}</td>
+          {% if usuario.empresa %}
+            <th>Empresa</th>
+            <td>{{ usuario.empresa }}</td>
+          {% else %}
+            <th>Adscrito a</th>
+            <td>{{ usuario.organismo.nombre_organismo }}</td>
+          {% endif %}
+          <tr>
         </table>
       </div>
     </div><!-- de card -->

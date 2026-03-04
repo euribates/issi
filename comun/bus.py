@@ -6,9 +6,9 @@ from django.conf import settings
 from comun.templatetags.comun_filters import as_markdown
 from antecedentes.models import HistoricoSistema
 from antecedentes.models import HistoricoUsuario
-from sistemas.models import Usuario
 from sistemas.models import Sistema
 from sistemas.models import Perfil
+from sistemas.models import Usuario
 
 
 class Bus:
@@ -18,7 +18,7 @@ class Bus:
         if settings.DEBUG:
             messages.set_level(request, messages.DEBUG)
         self.request = request
-        self.usuario = Usuario.load_usuario(request.user.username)
+        self.username = request.user.username
 
     def _debug(self, text: str):
         messages.add_message(
@@ -85,14 +85,14 @@ class Bus:
                     sujeto=item,
                     tipo_evento_id=tipo,
                     descripcion=msg,
-                    usuario=self.usuario,
+                    usuario_id=self.username,
                     ).save()
             case 'Usuario':
                 HistoricoUsuario(
                     sujeto=item,
                     tipo_evento_id=tipo,
                     descripcion=msg,
-                    usuario=self.usuario,
+                    usuario_id=self.username,
                     ).save()
 
             case _:

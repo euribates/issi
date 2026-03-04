@@ -8,19 +8,35 @@ from . import links
 
 
 
-
 class Organismo(models.Model):
 
     class Meta:
         ordering = ['nombre_organismo']
+        constraints = [
+            models.UniqueConstraint(
+                fields=["dir3"],
+                condition=~Q(dir3=""),
+                name="unique_dir3",
+                ),
+            models.UniqueConstraint(
+                fields=["id_sirhus"],
+                condition=~Q(id_sirhus__isnull=True),
+                name="unique_id_sirhus",
+                ),
+            models.UniqueConstraint(
+                fields=['dir3', 'id_sirhus'],
+                condition=(Q(id_sirhus__isnull=False) & ~Q(dir3="")),
+                name="unique_together_dir3_id_sirhus",
+                ),
+            ]
 
     id_organismo = models.BigIntegerField(primary_key=True)
     nombre_organismo = models.CharField(
         max_length=144,
         unique=True,
         )
-    dir3 = models.CharField(max_length=9, unique=True)
-    id_sirhus = models.IntegerField(unique=True)
+    dir3 = models.CharField(max_length=9, blank=True)
+    id_sirhus = models.IntegerField(blank=True)
     categoria = models.CharField(max_length=40)
     competencias = models.TextField(
         blank=True,
@@ -136,3 +152,53 @@ class Organismo(models.Model):
         self.save(update_fields=['f_cambio'])
         if self.depende_de.exists():
             self.depende_de.touch()
+
+
+
+class Empresa(models.Model):
+
+    class Meta:
+        db_table = 'dir_empresa'
+        verbose_name = 'Empresa externa'
+        verbose_name_plural = 'Empresas externas'
+
+    id_empresa = models.BigIntegerField(primary_key=True)
+    nombre_empresa = models.CharField(
+        max_length=144,
+        unique=True,
+        )
+    nif = models.CharField(
+        max_length=9,
+        unique=True,
+        )    
+    f_alta = models.DateTimeField(
+        auto_now_add=True,
+        help_text="Fecha en la que la empresa se dio de alta",
+        )
+    f_cambio = models.DateTimeField(
+        auto_now=True,
+        help_text="Fecha de la última modificación de la empresa",
+        )
+    f_baja = models.DateTimeField(
+        default=None,
+        blank=True,
+        null=True,
+        )
+
+    def __str__(self):
+        return self.nombre_empresa
+
+    @classmethod
+    def load_empresa(cls, pk:int):
+        try:
+            return cls.objects.get(id_empresa=pk)
+        except cls.DoesNotExist:
+            return None
+
+    @classmethod
+    def load_empresa_using_nif(cls, nif: str):
+        try:
+            return cls.objects.get(nif=nif)
+        except cls.DoesNotExist:
+            return None
+

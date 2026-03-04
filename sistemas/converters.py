@@ -33,9 +33,11 @@ class SistemaConverter:
 
 class UserNameConverter:
 
-    regex = '[a-z][a-z0-9-.]+'
+    regex = '[a-z][a-z0-9-._]+'
 
     def to_python(self, value):
+        if isinstance(value, Usuario):
+            return value
         usuario = Usuario.load_usuario(value)
         if not usuario:
             raise ValueError("El usuario especificado es incorrecto")

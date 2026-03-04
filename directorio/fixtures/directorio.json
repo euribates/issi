@@ -2531,5 +2531,27 @@
         "f_cambio": "2025-11-27T13:28:21.256Z",
         "f_baja": null
     }
+},
+{
+    "model": "directorio.empresa",
+    "pk": 1,
+    "fields": {
+        "nombre_empresa": "ITC Instituto Tecnológico de Canarias",
+        "nif": "A35313170",
+        "f_alta": "2026-03-04T11:07:57.346Z",
+        "f_cambio": "2026-03-04T11:07:57.346Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "directorio.empresa",
+    "pk": 2,
+    "fields": {
+        "nombre_empresa": "Arte Consultores",
+        "nif": "B38816328",
+        "f_alta": "2026-03-04T12:03:45.468Z",
+        "f_cambio": "2026-03-04T12:03:45.468Z",
+        "f_baja": null
+    }
 }
 ]

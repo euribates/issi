@@ -16,11 +16,13 @@ from django.core.validators import (
 )
 from django.db import models
 from django.db.models import Max, Count
+# from django.db.models.constraints import CheckConstraint
 from django.db.models import Q, F
 from django.db.models.functions import Coalesce
 from django.utils.timezone import localtime
 
 from directorio.models import Organismo
+from directorio.models import Empresa
 from juriscan.models import Juriscan
 
 from . import diagnosis, links
@@ -517,6 +519,16 @@ class Usuario(models.Model):
 
     class Meta:
         ordering = ["nombre", "apellidos"]
+        # constraints = [
+        #     CheckConstraint(
+        #         condition=Q(empresa__isnull=True) & Q(organismo__isnull=False),
+        #         name='empresa_mandatory_if_not_organismo',
+        #         ),
+        #     CheckConstraint(
+        #         condition=Q(empresa__isnull=False) & Q(organismo__isnull=True),
+        #         name='organismo_mandatory_if_not_empresa',
+        #         ),
+        #     ]
 
     login = models.CharField(max_length=32, primary_key=True)
     email = models.CharField(max_length=384, unique=True)
@@ -536,7 +548,18 @@ class Usuario(models.Model):
         Organismo,
         related_name="usuarios",
         on_delete=models.PROTECT,
+        blank=True,
+        null=True,
+        default=None,
     )
+    empresa = models.ForeignKey(
+        Empresa,
+        related_name="usuarios",
+        on_delete=models.PROTECT,
+        blank=True,
+        null=True,
+        default=None,
+        )
     f_alta = models.DateTimeField(auto_now_add=True)
     f_cambio = models.DateTimeField(auto_now=True)
     f_baja = models.DateTimeField(

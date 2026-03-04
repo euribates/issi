@@ -2699,6 +2699,306 @@
     }
 },
 {
+    "model": "sistemas.sistema",
+    "pk": 84,
+    "fields": {
+        "uuid_sistema": "d81a27f2-c1bd-40e2-b494-3e5256c5bed9",
+        "nombre_sistema": "FPI (Tesis y ayudas predoctorales)",
+        "organismo": 42158,
+        "codigo": "TESIS",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Ayudas transferidas a entidades colaboradoras: ULL, ULPGC, FIISC, CSIC, para contratación predoctoral de personal investigador dentro de un programa oficial de Doctorado en Canarias.",
+        "observaciones": "",
+        "tema": "IDI",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-03-04T10:18:01.235Z",
+        "f_cambio": "2026-03-04T10:18:01.235Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 85,
+    "fields": {
+        "uuid_sistema": "e838483e-cbcb-44d1-9798-669e7adccdcd",
+        "nombre_sistema": "Subvenciones para estancias breves",
+        "organismo": 42158,
+        "codigo": "EST",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Subvenciones para Estancias breves",
+        "observaciones": "",
+        "tema": "IDI",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-03-04T12:06:58.357Z",
+        "f_cambio": "2026-03-04T12:06:58.357Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 86,
+    "fields": {
+        "uuid_sistema": "228a914a-3cdd-45d1-a0be-fa6549558524",
+        "nombre_sistema": "Programa Tecnólogos / IPI - Incorporación de personal innovador",
+        "organismo": 42158,
+        "codigo": "IPI",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Subvenciones para la Incorporación de Personal Innovador al Tejido Productivo",
+        "observaciones": "",
+        "tema": "IDI",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-03-04T13:10:06.317Z",
+        "f_cambio": "2026-03-04T13:10:06.317Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 87,
+    "fields": {
+        "uuid_sistema": "3f26d9ed-626b-405d-9f20-9e1019e6d198",
+        "nombre_sistema": "Formación para incorporación de talento",
+        "organismo": 42158,
+        "codigo": "DIGINNOVA",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Subvenciones destinadas a actuaciones de formación para la incorporación de talento a las empresas y centros de investigación de Canarias, para fomentar la innovación, la sostenibilidad y la transformación digital, cofinanciadas por el FSE plus). Son subvenciones para actuaciones de formación que faciliten la incorporación de talento en empresas y centros de investigación de Canarias.",
+        "observaciones": "",
+        "tema": "TRD",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-03-04T13:12:28.598Z",
+        "f_cambio": "2026-03-04T13:12:28.598Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 88,
+    "fields": {
+        "uuid_sistema": "249d2271-3bc1-44ce-955f-2923dbf68a86",
+        "nombre_sistema": "Subvenciones empresas alta tecnología e intensivas en conocimiento",
+        "organismo": 42158,
+        "codigo": "EATIC",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Subvenciones públicas a empresas de alta tecnología e intensivas en conocimiento para la realización de proyectos que utilicen el conocimiento de excelencia, los resultados de investigación y las capacidades existentes, en las áreas prioritarias de la Estrategia de Especialización Inteligente de Canarias (RIS3)",
+        "observaciones": "",
+        "tema": "TRD",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-03-04T13:14:46.640Z",
+        "f_cambio": "2026-03-04T13:14:46.640Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 89,
+    "fields": {
+        "uuid_sistema": "de6a698b-050c-41ad-a934-6c93ef288fbb",
+        "nombre_sistema": "Subvenciones para proyectos de innovación en áreas prioritarias",
+        "organismo": 42158,
+        "codigo": "EPIRIS",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Gestión virtual de expedientes de la convocatoria de subvenciones a empresas para proyectos de innovación en áreas prioritarias de la estrategia de especialización inteligente y sostenible",
+        "observaciones": "",
+        "tema": "IDI",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-03-04T13:16:56.516Z",
+        "f_cambio": "2026-03-04T13:16:56.516Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 90,
+    "fields": {
+        "uuid_sistema": "5de10f09-58d3-4b8f-9be9-b264606fd0f2",
+        "nombre_sistema": "Ayudas postdoctorales programa Catalina Ruiz",
+        "organismo": 42158,
+        "codigo": "CATALINA",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Ayudas del programa posdoctoral de formación de personal investigador Catalina Ruiz",
+        "observaciones": "",
+        "tema": "IDI",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "UNK",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-03-04T13:19:09.145Z",
+        "f_cambio": "2026-03-04T13:19:09.145Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 91,
+    "fields": {
+        "uuid_sistema": "8f7e1c44-5281-4b39-957c-6b98bc9db6d8",
+        "nombre_sistema": "Proyectos de Innovación Social",
+        "organismo": 42158,
+        "codigo": "PROIS",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Subvenciones a las entidades que desarrollen soluciones innovadoras que contribuyan a resolución de soluciones a los retos de la sociedad en materia sanitaria, demográfica, etc.",
+        "observaciones": "",
+        "tema": "IDI",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-03-04T13:20:26.826Z",
+        "f_cambio": "2026-03-04T13:20:26.826Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 92,
+    "fields": {
+        "uuid_sistema": "af2366a3-8447-47db-97cc-f321d9094c4f",
+        "nombre_sistema": "Proyectos innovadores disruptivos - STARS",
+        "organismo": null,
+        "codigo": "IPROIC_STARS",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Subvenciones para el impulso de proyectos de innovación disruptiva en Canarias",
+        "observaciones": "",
+        "tema": "IDI",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-03-04T13:21:58.520Z",
+        "f_cambio": "2026-03-04T13:21:58.520Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 93,
+    "fields": {
+        "uuid_sistema": "82e513f1-4421-4fad-9b26-9686635b62e4",
+        "nombre_sistema": "Clústeres",
+        "organismo": 42158,
+        "codigo": "CLUSTERES",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Subvenciones de apoyo a agrupaciones empresariales innovadoras o clústeres para la realización de actuaciones de innovación en Canarias",
+        "observaciones": "",
+        "tema": "IDI",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-03-04T13:23:42.941Z",
+        "f_cambio": "2026-03-04T13:23:42.941Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 94,
+    "fields": {
+        "uuid_sistema": "eb2b3f88-5a8e-404f-a3f9-8076d5bf3057",
+        "nombre_sistema": "Subvevenciones para la formación de gestores de la innovación",
+        "organismo": 42158,
+        "codigo": "GESIN",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Gestión de expedientes de subvenciones para la formación de gestores de la innovación",
+        "observaciones": "",
+        "tema": "IDI",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-03-04T13:25:11.257Z",
+        "f_cambio": "2026-03-04T13:25:11.257Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 95,
+    "fields": {
+        "uuid_sistema": "4dc7c21c-37a7-4bce-9bb9-471afa32d6a2",
+        "nombre_sistema": "Proyectos Empresariales de Innovación Social",
+        "organismo": 42158,
+        "codigo": "PEIS",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Proyectos Empresariales de Innovación Social",
+        "observaciones": "",
+        "tema": "IDI",
+        "es_transversal": false,
+        "es_subsistema_de": null,
+        "tiene_especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "f_alta": "2026-03-04T13:27:04.087Z",
+        "f_cambio": "2026-03-04T13:27:04.087Z",
+        "f_baja": null
+    }
+},
+{
     "model": "sistemas.activo",
     "pk": 1,
     "fields": {
@@ -2751,6 +3051,7 @@
         "nombre": "Alfredo Manuel",
         "apellidos": "Bermudez Ferrer",
         "organismo": 42159,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.112Z",
         "f_cambio": "2025-10-06T18:41:34.112Z",
         "f_baja": null
@@ -2764,6 +3065,7 @@
         "nombre": "Antonio Manuel",
         "apellidos": "Cardona Romero",
         "organismo": 39073,
+        "empresa": null,
         "f_alta": "2025-10-16T11:23:53.255Z",
         "f_cambio": "2025-10-16T11:23:53.255Z",
         "f_baja": null
@@ -2777,6 +3079,7 @@
         "nombre": "María Amparo",
         "apellidos": "Díaz Ramírez",
         "organismo": 42119,
+        "empresa": null,
         "f_alta": "2025-11-26T19:25:19.529Z",
         "f_cambio": "2025-11-26T19:25:19.529Z",
         "f_baja": null
@@ -2790,6 +3093,7 @@
         "nombre": "Antonia Rosa",
         "apellidos": "Gil Armas",
         "organismo": 42123,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.412Z",
         "f_cambio": "2025-10-06T18:41:33.412Z",
         "f_baja": null
@@ -2803,6 +3107,7 @@
         "nombre": "Almudena",
         "apellidos": "Alvarado Lozano",
         "organismo": 6564,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.948Z",
         "f_cambio": "2025-10-06T18:41:33.948Z",
         "f_baja": null
@@ -2816,6 +3121,7 @@
         "nombre": "Alexis Jorge",
         "apellidos": "López Puig",
         "organismo": 42123,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.456Z",
         "f_cambio": "2025-10-06T18:41:33.457Z",
         "f_baja": null
@@ -2829,6 +3135,7 @@
         "nombre": "Agustín",
         "apellidos": "Martín Brito",
         "organismo": 6583,
+        "empresa": null,
         "f_alta": "2025-11-07T15:33:45.060Z",
         "f_cambio": "2025-11-07T15:33:45.060Z",
         "f_baja": null
@@ -2842,6 +3149,7 @@
         "nombre": "Antonio",
         "apellidos": "Morales Comalat",
         "organismo": 42154,
+        "empresa": null,
         "f_alta": "2026-02-12T12:14:24.181Z",
         "f_cambio": "2026-02-12T12:14:24.181Z",
         "f_baja": null
@@ -2855,6 +3163,7 @@
         "nombre": "Aniano",
         "apellidos": "Hernández Guerra",
         "organismo": 42104,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.494Z",
         "f_cambio": "2025-10-06T18:41:33.494Z",
         "f_baja": null
@@ -2868,6 +3177,7 @@
         "nombre": "Alicia",
         "apellidos": "Perera García",
         "organismo": 6547,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.916Z",
         "f_cambio": "2025-10-06T18:41:33.916Z",
         "f_baja": null
@@ -2881,6 +3191,7 @@
         "nombre": "Alejandra",
         "apellidos": "Rodríguez Alloza",
         "organismo": 42163,
+        "empresa": null,
         "f_alta": "2025-11-11T08:27:32.715Z",
         "f_cambio": "2025-11-11T08:27:32.715Z",
         "f_baja": null
@@ -2894,6 +3205,7 @@
         "nombre": "Alberto",
         "apellidos": "Santana Monagas",
         "organismo": 42163,
+        "empresa": null,
         "f_alta": "2025-11-11T08:14:20.576Z",
         "f_cambio": "2025-11-11T08:14:20.576Z",
         "f_baja": null
@@ -2907,6 +3219,7 @@
         "nombre": "Alexander",
         "apellidos": "Trujillo Delgado",
         "organismo": 42136,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.814Z",
         "f_cambio": "2025-10-06T18:41:33.814Z",
         "f_baja": null
@@ -2920,6 +3233,7 @@
         "nombre": "Agustina",
         "apellidos": "Méndez Perera",
         "organismo": 41854,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.879Z",
         "f_cambio": "2025-10-06T18:41:33.879Z",
         "f_baja": null
@@ -2933,6 +3247,7 @@
         "nombre": "Alicia",
         "apellidos": "Velduque Ramos",
         "organismo": 42163,
+        "empresa": null,
         "f_alta": "2025-11-11T08:34:03.100Z",
         "f_cambio": "2025-11-11T08:34:03.100Z",
         "f_baja": null
@@ -2946,6 +3261,7 @@
         "nombre": "Badayco",
         "apellidos": "Armas Díaz",
         "organismo": 42122,
+        "empresa": null,
         "f_alta": "2025-10-07T10:10:33.463Z",
         "f_cambio": "2025-10-07T10:10:33.463Z",
         "f_baja": null
@@ -2959,6 +3275,7 @@
         "nombre": "Blas Jacinto",
         "apellidos": "Fumero Fernández",
         "organismo": 42119,
+        "empresa": null,
         "f_alta": "2025-10-07T10:25:55.193Z",
         "f_cambio": "2025-10-07T10:25:55.193Z",
         "f_baja": null
@@ -2972,6 +3289,7 @@
         "nombre": "Beatriz Beata",
         "apellidos": "Hernández Afonso",
         "organismo": 42150,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.274Z",
         "f_cambio": "2025-10-06T18:41:34.274Z",
         "f_baja": null
@@ -2985,6 +3303,7 @@
         "nombre": "Carolina",
         "apellidos": "Hernández Ramos",
         "organismo": 41567,
+        "empresa": null,
         "f_alta": "2025-10-07T10:33:21.971Z",
         "f_cambio": "2025-10-07T10:33:21.971Z",
         "f_baja": null
@@ -2998,6 +3317,7 @@
         "nombre": "María Carolina",
         "apellidos": "Perera García",
         "organismo": 6583,
+        "empresa": null,
         "f_alta": "2025-11-07T15:36:38.661Z",
         "f_cambio": "2025-11-07T15:36:38.661Z",
         "f_baja": null
@@ -3011,6 +3331,7 @@
         "nombre": "Carlos",
         "apellidos": "Pérez Luis",
         "organismo": 41567,
+        "empresa": null,
         "f_alta": "2025-10-07T11:35:32.839Z",
         "f_cambio": "2025-10-07T11:42:26.039Z",
         "f_baja": null
@@ -3024,6 +3345,7 @@
         "nombre": "Claudio Alberto",
         "apellidos": "Rivero Lezcano",
         "organismo": 42119,
+        "empresa": null,
         "f_alta": "2025-10-02T08:12:31Z",
         "f_cambio": "2025-10-06T11:31:16.565Z",
         "f_baja": null
@@ -3037,6 +3359,7 @@
         "nombre": "Celso",
         "apellidos": "Sampedro Fervenza",
         "organismo": 42122,
+        "empresa": null,
         "f_alta": "2025-10-07T11:44:13.336Z",
         "f_cambio": "2025-10-07T11:44:13.336Z",
         "f_baja": null
@@ -3050,6 +3373,7 @@
         "nombre": "Daniel",
         "apellidos": "Marrero Sánchez",
         "organismo": 41854,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.830Z",
         "f_cambio": "2025-10-06T18:41:33.830Z",
         "f_baja": null
@@ -3063,6 +3387,7 @@
         "nombre": "Dolores Isabel",
         "apellidos": "Nolasco Suárez",
         "organismo": 42086,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.508Z",
         "f_cambio": "2025-10-06T18:41:33.508Z",
         "f_baja": null
@@ -3076,6 +3401,7 @@
         "nombre": "David",
         "apellidos": "Suárez Perera",
         "organismo": 42165,
+        "empresa": null,
         "f_alta": "2025-10-06T12:58:36.190Z",
         "f_cambio": "2025-10-06T12:58:36.190Z",
         "f_baja": null
@@ -3089,6 +3415,7 @@
         "nombre": "José Enrique",
         "apellidos": "Castellano Alayón",
         "organismo": 42093,
+        "empresa": null,
         "f_alta": "2025-10-07T12:04:15.941Z",
         "f_cambio": "2025-10-07T12:04:15.941Z",
         "f_baja": null
@@ -3102,6 +3429,7 @@
         "nombre": "María Elena",
         "apellidos": "Fernández Aguirre",
         "organismo": 42118,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.631Z",
         "f_cambio": "2025-10-06T18:41:33.631Z",
         "f_baja": null
@@ -3115,6 +3443,7 @@
         "nombre": "Estefanía Margarita",
         "apellidos": "González Nuñez",
         "organismo": 42085,
+        "empresa": null,
         "f_alta": "2025-11-10T10:16:12.820Z",
         "f_cambio": "2025-11-10T10:16:12.820Z",
         "f_baja": null
@@ -3128,6 +3457,7 @@
         "nombre": "Ehedey",
         "apellidos": "Sosa Pérez",
         "organismo": 42128,
+        "empresa": null,
         "f_alta": "2025-11-10T12:39:29.409Z",
         "f_cambio": "2025-11-10T12:39:29.409Z",
         "f_baja": null
@@ -3141,6 +3471,7 @@
         "nombre": "Federico J.",
         "apellidos": "Artiles Jorge",
         "organismo": 42086,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.525Z",
         "f_cambio": "2025-10-06T18:41:33.525Z",
         "f_baja": null
@@ -3154,6 +3485,7 @@
         "nombre": "Fátima",
         "apellidos": "Bezares Carretero",
         "organismo": 42119,
+        "empresa": null,
         "f_alta": "2025-10-02T08:12:31Z",
         "f_cambio": "2025-10-06T11:29:07.166Z",
         "f_baja": null
@@ -3167,6 +3499,7 @@
         "nombre": "Francisca Teresa",
         "apellidos": "Caballero Hernández",
         "organismo": 42135,
+        "empresa": null,
         "f_alta": "2025-11-10T12:33:47.243Z",
         "f_cambio": "2025-11-10T12:33:47.243Z",
         "f_baja": null
@@ -3180,6 +3513,7 @@
         "nombre": "Francisco José",
         "apellidos": "Espino Sosa",
         "organismo": 42122,
+        "empresa": null,
         "f_alta": "2025-11-24T12:55:02.533Z",
         "f_cambio": "2025-11-24T12:55:02.534Z",
         "f_baja": null
@@ -3193,6 +3527,7 @@
         "nombre": "Francisco José",
         "apellidos": "Eugenio Baute",
         "organismo": 42091,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.701Z",
         "f_cambio": "2025-10-06T18:41:33.701Z",
         "f_baja": null
@@ -3206,6 +3541,7 @@
         "nombre": "Francisca",
         "apellidos": "Fernández Martínez",
         "organismo": 42123,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.431Z",
         "f_cambio": "2025-10-06T18:41:33.431Z",
         "f_baja": null
@@ -3219,6 +3555,7 @@
         "nombre": "Francisco Miguel",
         "apellidos": "Merino Boada",
         "organismo": 42093,
+        "empresa": null,
         "f_alta": "2025-11-11T11:23:41Z",
         "f_cambio": "2025-11-11T11:23:41Z",
         "f_baja": null
@@ -3232,6 +3569,7 @@
         "nombre": "Fátima Mercedes",
         "apellidos": "Ojeda Chirino",
         "organismo": 42091,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.718Z",
         "f_cambio": "2025-10-06T18:41:33.718Z",
         "f_baja": null
@@ -3245,6 +3583,7 @@
         "nombre": "Gustavo",
         "apellidos": "Ojeda Zamora",
         "organismo": 42124,
+        "empresa": null,
         "f_alta": "2025-11-05T20:17:11.181Z",
         "f_cambio": "2025-11-05T20:17:11.181Z",
         "f_baja": null
@@ -3258,6 +3597,7 @@
         "nombre": "Domingo Guzmán",
         "apellidos": "Palacios Arazuri",
         "organismo": 42136,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.801Z",
         "f_cambio": "2025-10-06T18:41:33.801Z",
         "f_baja": null
@@ -3271,6 +3611,7 @@
         "nombre": "Héctor",
         "apellidos": "García García",
         "organismo": 41854,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.860Z",
         "f_cambio": "2025-10-06T18:41:33.860Z",
         "f_baja": null
@@ -3284,6 +3625,7 @@
         "nombre": "Hector Javier",
         "apellidos": "González Ortega",
         "organismo": 38691,
+        "empresa": null,
         "f_alta": "2026-02-26T10:28:36.392Z",
         "f_cambio": "2026-02-26T10:28:36.392Z",
         "f_baja": null
@@ -3297,6 +3639,7 @@
         "nombre": "Iván",
         "apellidos": "González Carro",
         "organismo": 42128,
+        "empresa": null,
         "f_alta": "2025-11-10T13:35:54.803Z",
         "f_cambio": "2025-11-10T13:35:54.803Z",
         "f_baja": null
@@ -3310,6 +3653,7 @@
         "nombre": "Ildefonso Mauro",
         "apellidos": "Trujillo Bosa",
         "organismo": 37815,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.539Z",
         "f_cambio": "2025-10-06T18:41:33.539Z",
         "f_baja": null
@@ -3323,6 +3667,7 @@
         "nombre": "José Javier",
         "apellidos": "Aldunate Ruano",
         "organismo": 42121,
+        "empresa": null,
         "f_alta": "2026-01-27T09:50:01.095Z",
         "f_cambio": "2026-01-27T09:50:01.095Z",
         "f_baja": null
@@ -3336,6 +3681,7 @@
         "nombre": "Jenaro",
         "apellidos": "Bejarano García",
         "organismo": 6594,
+        "empresa": null,
         "f_alta": "2025-11-17T13:13:46.022Z",
         "f_cambio": "2025-11-17T13:13:46.022Z",
         "f_baja": null
@@ -3349,6 +3695,7 @@
         "nombre": "Juan Félix",
         "apellidos": "Rosa Martín",
         "organismo": 39166,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.160Z",
         "f_cambio": "2025-10-06T18:41:34.160Z",
         "f_baja": null
@@ -3362,6 +3709,7 @@
         "nombre": "Jesús Manuel",
         "apellidos": "García Benítez",
         "organismo": 42149,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.014Z",
         "f_cambio": "2025-10-06T18:41:34.014Z",
         "f_baja": null
@@ -3375,6 +3723,7 @@
         "nombre": "Juan Pedro",
         "apellidos": "Gómez Marrero",
         "organismo": 42123,
+        "empresa": null,
         "f_alta": "2025-11-05T19:50:46.856Z",
         "f_cambio": "2025-11-05T19:50:46.856Z",
         "f_baja": null
@@ -3388,6 +3737,7 @@
         "nombre": "Jorge Luis",
         "apellidos": "González Pérez",
         "organismo": 6583,
+        "empresa": null,
         "f_alta": "2025-11-07T15:24:50.171Z",
         "f_cambio": "2025-11-07T15:24:50.171Z",
         "f_baja": null
@@ -3401,6 +3751,7 @@
         "nombre": "Jesús Alberto",
         "apellidos": "González Yanes",
         "organismo": 37829,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.556Z",
         "f_cambio": "2025-10-06T18:41:33.556Z",
         "f_baja": null
@@ -3414,6 +3765,7 @@
         "nombre": "Juan José",
         "apellidos": "Hernández Cruz",
         "organismo": 42085,
+        "empresa": null,
         "f_alta": "2025-11-10T10:24:00.103Z",
         "f_cambio": "2025-11-10T10:24:00.103Z",
         "f_baja": null
@@ -3427,6 +3779,7 @@
         "nombre": "Javier josé",
         "apellidos": "García Carballo",
         "organismo": 42163,
+        "empresa": null,
         "f_alta": "2025-11-11T08:16:32.125Z",
         "f_cambio": "2025-11-11T08:16:32.125Z",
         "f_baja": null
@@ -3440,6 +3793,7 @@
         "nombre": "Francisco Javier",
         "apellidos": "Machín Godoy",
         "organismo": 42154,
+        "empresa": null,
         "f_alta": "2026-02-12T12:16:01.824Z",
         "f_cambio": "2026-02-12T12:16:01.824Z",
         "f_baja": null
@@ -3453,6 +3807,7 @@
         "nombre": "José Javier",
         "apellidos": "Martín del Castillo",
         "organismo": 41567,
+        "empresa": null,
         "f_alta": "2025-11-24T11:17:18.508Z",
         "f_cambio": "2025-11-24T11:17:18.509Z",
         "f_baja": null
@@ -3466,6 +3821,7 @@
         "nombre": "José Ramón",
         "apellidos": "Moreira Romero",
         "organismo": 6547,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.934Z",
         "f_cambio": "2025-10-06T18:41:33.934Z",
         "f_baja": null
@@ -3479,6 +3835,7 @@
         "nombre": "Juan José",
         "apellidos": "Pacheco Lara",
         "organismo": 42122,
+        "empresa": null,
         "f_alta": "2025-11-26T10:31:30.588Z",
         "f_cambio": "2025-11-26T10:31:30.588Z",
         "f_baja": null
@@ -3492,6 +3849,7 @@
         "nombre": "José Luis",
         "apellidos": "De los Reyes Almeida",
         "organismo": 42122,
+        "empresa": null,
         "f_alta": "2025-11-24T12:56:30.625Z",
         "f_cambio": "2025-11-24T12:56:30.625Z",
         "f_baja": null
@@ -3505,6 +3863,7 @@
         "nombre": "Jesús Pedro",
         "apellidos": "Robayna Perez",
         "organismo": 42165,
+        "empresa": null,
         "f_alta": "2025-10-06T13:06:19.213Z",
         "f_cambio": "2025-10-06T13:06:19.213Z",
         "f_baja": null
@@ -3518,8 +3877,23 @@
         "nombre": "Juan Ignacio",
         "apellidos": "Rodríguez de Leon",
         "organismo": 42093,
+        "empresa": null,
         "f_alta": "2025-10-02T08:12:31Z",
         "f_cambio": "2025-10-07T09:24:50.928Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jrodriguez_itc",
+    "fields": {
+        "email": "jrodriguez@itccanarias.org",
+        "nombre": "Juan Francisco",
+        "apellidos": "Rodríguez Alvarado",
+        "organismo": null,
+        "empresa": 1,
+        "f_alta": "2026-03-04T12:48:36.764Z",
+        "f_cambio": "2026-03-04T12:48:36.764Z",
         "f_baja": null
     }
 },
@@ -3531,6 +3905,7 @@
         "nombre": "Juan Carlos",
         "apellidos": "Del Rosario Pérez",
         "organismo": 42127,
+        "empresa": null,
         "f_alta": "2025-11-10T12:35:18.029Z",
         "f_cambio": "2025-11-10T12:35:18.030Z",
         "f_baja": null
@@ -3544,6 +3919,7 @@
         "nombre": "Javier",
         "apellidos": "Serrano Sánchez",
         "organismo": 42093,
+        "empresa": null,
         "f_alta": "2025-10-07T12:08:59.011Z",
         "f_cambio": "2025-10-07T12:08:59.011Z",
         "f_baja": null
@@ -3557,6 +3933,7 @@
         "nombre": "José Alfonso",
         "apellidos": "Tarife Delgado",
         "organismo": 42135,
+        "empresa": null,
         "f_alta": "2025-11-05T19:59:45.597Z",
         "f_cambio": "2025-11-05T19:59:45.597Z",
         "f_baja": null
@@ -3570,6 +3947,7 @@
         "nombre": "José",
         "apellidos": "Trejo Sánchez",
         "organismo": 42149,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.039Z",
         "f_cambio": "2025-10-06T18:41:34.039Z",
         "f_baja": null
@@ -3583,6 +3961,7 @@
         "nombre": "Luis",
         "apellidos": "Barrera Quintero",
         "organismo": 42085,
+        "empresa": null,
         "f_alta": "2026-02-12T08:45:35.896Z",
         "f_cambio": "2026-02-12T08:45:35.896Z",
         "f_baja": null
@@ -3596,6 +3975,7 @@
         "nombre": "Fidelina",
         "apellidos": "Galvez Revilla",
         "organismo": 42091,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.751Z",
         "f_cambio": "2025-10-06T18:41:33.751Z",
         "f_baja": null
@@ -3609,6 +3989,7 @@
         "nombre": "Luis",
         "apellidos": "Juan Rijo",
         "organismo": 7400,
+        "empresa": null,
         "f_alta": "2025-11-20T10:46:17.658Z",
         "f_cambio": "2025-11-20T10:46:17.658Z",
         "f_baja": null
@@ -3622,6 +4003,7 @@
         "nombre": "Lidia del Pino",
         "apellidos": "Rodríguez Falcón",
         "organismo": 42143,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.227Z",
         "f_cambio": "2025-10-06T18:41:34.227Z",
         "f_baja": null
@@ -3635,6 +4017,7 @@
         "nombre": "María Candelaria",
         "apellidos": "Alonso Suárez",
         "organismo": 42093,
+        "empresa": null,
         "f_alta": "2025-10-02T08:12:31Z",
         "f_cambio": "2025-10-02T14:45:08.853Z",
         "f_baja": null
@@ -3648,6 +4031,7 @@
         "nombre": "María",
         "apellidos": "Álvarez Martín",
         "organismo": 6547,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.899Z",
         "f_cambio": "2025-10-06T18:41:33.899Z",
         "f_baja": null
@@ -3661,6 +4045,7 @@
         "nombre": "Manuel",
         "apellidos": "Blanco Bautista",
         "organismo": 42138,
+        "empresa": null,
         "f_alta": "2025-11-10T14:30:24.693Z",
         "f_cambio": "2025-11-10T14:30:24.693Z",
         "f_baja": null
@@ -3674,6 +4059,7 @@
         "nombre": "Mercedes",
         "apellidos": "Cabrera Peña",
         "organismo": 41567,
+        "empresa": null,
         "f_alta": "2025-11-26T10:23:53.555Z",
         "f_cambio": "2025-11-26T10:23:53.555Z",
         "f_baja": null
@@ -3687,6 +4073,7 @@
         "nombre": "Miguel Ángel",
         "apellidos": "Cabrera Pérez",
         "organismo": 42162,
+        "empresa": null,
         "f_alta": "2025-11-11T14:16:08.181Z",
         "f_cambio": "2025-11-11T14:16:08.181Z",
         "f_baja": null
@@ -3700,6 +4087,7 @@
         "nombre": "María Asunción",
         "apellidos": "Delgado Luzardo",
         "organismo": 42162,
+        "empresa": null,
         "f_alta": "2025-11-11T09:23:18.591Z",
         "f_cambio": "2025-11-11T09:23:18.591Z",
         "f_baja": null
@@ -3713,6 +4101,7 @@
         "nombre": "Marta",
         "apellidos": "Diaz Ascanio",
         "organismo": 42119,
+        "empresa": null,
         "f_alta": "2025-11-26T13:04:02.183Z",
         "f_cambio": "2025-11-26T13:04:02.183Z",
         "f_baja": null
@@ -3726,6 +4115,7 @@
         "nombre": "María Loreto",
         "apellidos": "Fuertes Díaz",
         "organismo": 42085,
+        "empresa": null,
         "f_alta": "2026-02-12T09:01:18.625Z",
         "f_cambio": "2026-02-12T09:01:18.625Z",
         "f_baja": null
@@ -3739,6 +4129,7 @@
         "nombre": "Miguel Agustín",
         "apellidos": "García Rodríguez",
         "organismo": 42084,
+        "empresa": null,
         "f_alta": "2025-10-06T12:55:23.386Z",
         "f_cambio": "2025-10-06T12:55:23.386Z",
         "f_baja": null
@@ -3752,6 +4143,7 @@
         "nombre": "Montserrat",
         "apellidos": "González Jorge",
         "organismo": 42143,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.193Z",
         "f_cambio": "2025-10-06T18:41:34.193Z",
         "f_baja": null
@@ -3765,6 +4157,7 @@
         "nombre": "Marta",
         "apellidos": "González Martín",
         "organismo": 6564,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.964Z",
         "f_cambio": "2025-10-06T18:41:33.964Z",
         "f_baja": null
@@ -3778,6 +4171,7 @@
         "nombre": "Miguel Ángel",
         "apellidos": "Hormiga Amador",
         "organismo": 42118,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.684Z",
         "f_cambio": "2025-10-06T18:41:33.684Z",
         "f_baja": null
@@ -3791,6 +4185,7 @@
         "nombre": "Mateo José",
         "apellidos": "Garrido Sanahuja",
         "organismo": 42159,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.066Z",
         "f_cambio": "2025-10-06T18:41:34.066Z",
         "f_baja": null
@@ -3804,6 +4199,7 @@
         "nombre": "Miguel Jesús Martínez",
         "apellidos": "Carrasco Fernández",
         "organismo": 42165,
+        "empresa": null,
         "f_alta": "2025-10-06T12:56:11.542Z",
         "f_cambio": "2025-10-06T12:56:11.542Z",
         "f_baja": null
@@ -3817,6 +4213,7 @@
         "nombre": "María Cristina",
         "apellidos": "Mayor Cáceres",
         "organismo": 42125,
+        "empresa": null,
         "f_alta": "2025-11-05T20:20:46.868Z",
         "f_cambio": "2025-11-05T20:21:10.259Z",
         "f_baja": null
@@ -3830,6 +4227,7 @@
         "nombre": "María Jesús",
         "apellidos": "Millán Muñoz",
         "organismo": 6652,
+        "empresa": null,
         "f_alta": "2025-12-18T08:15:48.059Z",
         "f_cambio": "2025-12-18T08:15:48.059Z",
         "f_baja": null
@@ -3843,6 +4241,7 @@
         "nombre": "Miguel",
         "apellidos": "Navarro Frias",
         "organismo": 42121,
+        "empresa": null,
         "f_alta": "2026-01-27T09:46:44.229Z",
         "f_cambio": "2026-01-27T09:46:44.229Z",
         "f_baja": null
@@ -3856,6 +4255,7 @@
         "nombre": "María Teresa",
         "apellidos": "Navarro Hernández",
         "organismo": 42159,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.136Z",
         "f_cambio": "2025-10-06T18:41:34.136Z",
         "f_baja": null
@@ -3869,6 +4269,7 @@
         "nombre": "Montserrat",
         "apellidos": "García Santana",
         "organismo": 42150,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.247Z",
         "f_cambio": "2025-10-06T18:41:34.247Z",
         "f_baja": null
@@ -3882,6 +4283,7 @@
         "nombre": "Manuel",
         "apellidos": "Peinado Bosch",
         "organismo": 42123,
+        "empresa": null,
         "f_alta": "2025-11-05T19:52:47.102Z",
         "f_cambio": "2025-11-05T19:52:47.102Z",
         "f_baja": null
@@ -3895,6 +4297,7 @@
         "nombre": "María Antonia",
         "apellidos": "Pérez Bejarano",
         "organismo": 42129,
+        "empresa": null,
         "f_alta": "2025-11-05T20:14:25.730Z",
         "f_cambio": "2025-11-05T20:14:25.730Z",
         "f_baja": null
@@ -3908,6 +4311,7 @@
         "nombre": "María del Carmen",
         "apellidos": "Rodríguez Batista",
         "organismo": 42114,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.575Z",
         "f_cambio": "2025-10-06T18:41:33.575Z",
         "f_baja": null
@@ -3921,6 +4325,7 @@
         "nombre": "Marcos Francisco",
         "apellidos": "Rodríguez Bravo",
         "organismo": 42124,
+        "empresa": null,
         "f_alta": "2025-11-05T20:23:55.873Z",
         "f_cambio": "2025-11-05T20:23:55.873Z",
         "f_baja": null
@@ -3934,6 +4339,7 @@
         "nombre": "María Pilar",
         "apellidos": "Rodrigo Lavandera",
         "organismo": 42085,
+        "empresa": null,
         "f_alta": "2025-11-10T10:20:29.416Z",
         "f_cambio": "2025-11-10T10:20:29.416Z",
         "f_baja": null
@@ -3947,6 +4353,7 @@
         "nombre": "Miguel José",
         "apellidos": "Sosa Lacruz",
         "organismo": 6583,
+        "empresa": null,
         "f_alta": "2025-11-07T15:28:31.259Z",
         "f_cambio": "2025-11-07T15:28:57.516Z",
         "f_baja": null
@@ -3960,6 +4367,7 @@
         "nombre": "María Sheila",
         "apellidos": "Pérez González",
         "organismo": 42123,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.475Z",
         "f_cambio": "2025-10-06T18:41:33.475Z",
         "f_baja": null
@@ -3973,6 +4381,7 @@
         "nombre": "María Cristina",
         "apellidos": "Suarez Colomer",
         "organismo": 42114,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.594Z",
         "f_cambio": "2025-10-06T18:41:33.594Z",
         "f_baja": null
@@ -3986,6 +4395,7 @@
         "nombre": "María Victoria",
         "apellidos": "Toral Hernández",
         "organismo": 42093,
+        "empresa": null,
         "f_alta": "2025-11-12T13:28:01.483Z",
         "f_cambio": "2025-11-12T13:28:01.483Z",
         "f_baja": null
@@ -3999,6 +4409,7 @@
         "nombre": "Mária Ángles",
         "apellidos": "Trujillo Ledesma",
         "organismo": 42118,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.649Z",
         "f_cambio": "2025-10-06T18:41:33.649Z",
         "f_baja": null
@@ -4012,6 +4423,7 @@
         "nombre": "María Candelaria",
         "apellidos": "Valido Hernández",
         "organismo": 37152,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.612Z",
         "f_cambio": "2025-10-06T18:41:33.612Z",
         "f_baja": null
@@ -4025,6 +4437,7 @@
         "nombre": "Nayra",
         "apellidos": "Fernández Zamora",
         "organismo": 39166,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.180Z",
         "f_cambio": "2025-10-06T18:41:34.180Z",
         "f_baja": null
@@ -4038,6 +4451,7 @@
         "nombre": "Natalia E.",
         "apellidos": "De Luis Yanes",
         "organismo": 6594,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.987Z",
         "f_cambio": "2025-10-06T18:41:33.987Z",
         "f_baja": null
@@ -4051,6 +4465,7 @@
         "nombre": "Ofelia",
         "apellidos": "Betancourt Curbelo",
         "organismo": 42118,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.668Z",
         "f_cambio": "2025-10-06T18:41:33.668Z",
         "f_baja": null
@@ -4064,6 +4479,7 @@
         "nombre": "Octavio Jesús",
         "apellidos": "Caraballo de León",
         "organismo": 42094,
+        "empresa": null,
         "f_alta": "2025-11-27T10:50:27.086Z",
         "f_cambio": "2025-11-27T10:50:27.086Z",
         "f_baja": null
@@ -4077,6 +4493,7 @@
         "nombre": "Óscar José",
         "apellidos": "Marrero Ramírez",
         "organismo": 42143,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.207Z",
         "f_cambio": "2025-10-06T18:41:34.207Z",
         "f_baja": null
@@ -4090,6 +4507,7 @@
         "nombre": "Pedro Juan",
         "apellidos": "Baquero Pérez",
         "organismo": 42118,
+        "empresa": null,
         "f_alta": "2025-10-07T09:55:55.735Z",
         "f_cambio": "2025-10-07T09:56:17.353Z",
         "f_baja": null
@@ -4103,6 +4521,7 @@
         "nombre": "Pablo",
         "apellidos": "Betancor Ortiz",
         "organismo": 37829,
+        "empresa": null,
         "f_alta": "2025-11-07T08:49:52.445Z",
         "f_cambio": "2025-11-07T08:49:52.445Z",
         "f_baja": null
@@ -4116,6 +4535,7 @@
         "nombre": "Pablo Antonio",
         "apellidos": "Cano Pérez",
         "organismo": 42093,
+        "empresa": null,
         "f_alta": "2025-10-02T08:12:31Z",
         "f_cambio": "2025-10-07T12:41:18.984Z",
         "f_baja": null
@@ -4129,6 +4549,7 @@
         "nombre": "Pedro Wladimir",
         "apellidos": "Cova Fuentes",
         "organismo": 37152,
+        "empresa": null,
         "f_alta": "2025-11-10T13:04:54.659Z",
         "f_cambio": "2025-11-10T13:08:43.041Z",
         "f_baja": null
@@ -4142,6 +4563,7 @@
         "nombre": "Patricia",
         "apellidos": "Oramas Gallar",
         "organismo": 41854,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.843Z",
         "f_cambio": "2025-10-06T18:41:33.843Z",
         "f_baja": null
@@ -4155,6 +4577,7 @@
         "nombre": "Patricia",
         "apellidos": "Ruiz de Galarreta Tovar",
         "organismo": 42119,
+        "empresa": null,
         "f_alta": "2025-11-26T13:01:44.529Z",
         "f_cambio": "2025-11-26T13:01:44.529Z",
         "f_baja": null
@@ -4168,6 +4591,7 @@
         "nombre": "Rebeca",
         "apellidos": "Cruz González",
         "organismo": 38691,
+        "empresa": null,
         "f_alta": "2026-02-26T10:34:35.961Z",
         "f_cambio": "2026-02-26T10:34:35.961Z",
         "f_baja": null
@@ -4181,6 +4605,7 @@
         "nombre": "Ricardo",
         "apellidos": "González González",
         "organismo": 39060,
+        "empresa": null,
         "f_alta": "2025-11-10T09:54:17.765Z",
         "f_cambio": "2025-11-10T09:54:17.765Z",
         "f_baja": null
@@ -4194,6 +4619,7 @@
         "nombre": "Rosa Nieves",
         "apellidos": "Muñoz Campos",
         "organismo": 42093,
+        "empresa": null,
         "f_alta": "2025-10-02T08:12:31Z",
         "f_cambio": "2025-10-06T11:33:35.470Z",
         "f_baja": null
@@ -4207,6 +4633,7 @@
         "nombre": "Rafael",
         "apellidos": "del Rosario Verdú",
         "organismo": 7268,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.780Z",
         "f_cambio": "2025-10-06T18:41:33.780Z",
         "f_baja": null
@@ -4220,6 +4647,7 @@
         "nombre": "Ruth Esther",
         "apellidos": "Tejera Chico",
         "organismo": 42165,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:33.395Z",
         "f_cambio": "2025-10-06T18:41:33.395Z",
         "f_baja": null
@@ -4233,6 +4661,7 @@
         "nombre": "Sonia",
         "apellidos": "Martín de Abreu",
         "organismo": 42162,
+        "empresa": null,
         "f_alta": "2025-11-11T09:28:27.025Z",
         "f_cambio": "2025-11-11T09:28:27.025Z",
         "f_baja": null
@@ -4246,6 +4675,7 @@
         "nombre": "Tomás",
         "apellidos": "Lorente Arencibia",
         "organismo": 42159,
+        "empresa": null,
         "f_alta": "2025-10-06T18:41:34.090Z",
         "f_cambio": "2025-10-06T18:41:34.090Z",
         "f_baja": null
@@ -4259,6 +4689,7 @@
         "nombre": "Victor Manuel",
         "apellidos": "Almeida Martín",
         "organismo": 42163,
+        "empresa": null,
         "f_alta": "2025-11-11T08:29:14.987Z",
         "f_cambio": "2025-11-11T08:29:14.987Z",
         "f_baja": null
@@ -4272,6 +4703,7 @@
         "nombre": "Vita Concepción",
         "apellidos": "Fernández López",
         "organismo": 42124,
+        "empresa": null,
         "f_alta": "2025-11-05T20:12:09.547Z",
         "f_cambio": "2025-11-05T20:12:09.547Z",
         "f_baja": null
@@ -4285,6 +4717,7 @@
         "nombre": "Victor Manuel",
         "apellidos": "Reverón Barroso",
         "organismo": 42162,
+        "empresa": null,
         "f_alta": "2025-11-11T09:24:36.608Z",
         "f_cambio": "2025-11-11T09:24:36.608Z",
         "f_baja": null
@@ -4298,8 +4731,23 @@
         "nombre": "Yeray",
         "apellidos": "Sánchez Alonso",
         "organismo": 42084,
+        "empresa": null,
         "f_alta": "2025-10-06T12:55:54.890Z",
         "f_cambio": "2025-10-06T12:55:54.890Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "yviccab",
+    "fields": {
+        "email": "yviccab@gobiernodecanarias.org",
+        "nombre": "Yaiza",
+        "apellidos": "Vicente Cabañas",
+        "organismo": 42158,
+        "empresa": null,
+        "f_alta": "2026-03-04T10:24:57.004Z",
+        "f_cambio": "2026-03-04T10:24:57.004Z",
         "f_baja": null
     }
 },
@@ -6331,6 +6779,294 @@
         "sistema": 21,
         "f_alta": "2026-02-26T10:39:15.404Z",
         "f_cambio": "2026-02-26T10:39:15.404Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 137,
+    "fields": {
+        "usuario": "yviccab",
+        "cometido": "FUN",
+        "sistema": 84,
+        "f_alta": "2026-03-04T10:25:07.537Z",
+        "f_cambio": "2026-03-04T10:25:07.537Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 138,
+    "fields": {
+        "usuario": "yviccab",
+        "cometido": "FUN",
+        "sistema": 85,
+        "f_alta": "2026-03-04T12:08:30.919Z",
+        "f_cambio": "2026-03-04T12:08:34.750Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 139,
+    "fields": {
+        "usuario": "jrodriguez_itc",
+        "cometido": "TEC",
+        "sistema": 84,
+        "f_alta": "2026-03-04T12:49:14.900Z",
+        "f_cambio": "2026-03-04T12:59:24.255Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 140,
+    "fields": {
+        "usuario": "jrodriguez_itc",
+        "cometido": "TEC",
+        "sistema": 85,
+        "f_alta": "2026-03-04T13:06:34.329Z",
+        "f_cambio": "2026-03-04T13:06:34.329Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 141,
+    "fields": {
+        "usuario": "yviccab",
+        "cometido": "FUN",
+        "sistema": 86,
+        "f_alta": "2026-03-04T13:10:55.738Z",
+        "f_cambio": "2026-03-04T13:10:55.738Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 142,
+    "fields": {
+        "usuario": "jrodriguez_itc",
+        "cometido": "TEC",
+        "sistema": 86,
+        "f_alta": "2026-03-04T13:11:09.758Z",
+        "f_cambio": "2026-03-04T13:11:09.758Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 143,
+    "fields": {
+        "usuario": "yviccab",
+        "cometido": "FUN",
+        "sistema": 87,
+        "f_alta": "2026-03-04T13:13:07.693Z",
+        "f_cambio": "2026-03-04T13:13:07.693Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 144,
+    "fields": {
+        "usuario": "jrodriguez_itc",
+        "cometido": "TEC",
+        "sistema": 87,
+        "f_alta": "2026-03-04T13:13:31.303Z",
+        "f_cambio": "2026-03-04T13:13:31.303Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 145,
+    "fields": {
+        "usuario": "yviccab",
+        "cometido": "FUN",
+        "sistema": 88,
+        "f_alta": "2026-03-04T13:15:28.723Z",
+        "f_cambio": "2026-03-04T13:15:28.723Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 146,
+    "fields": {
+        "usuario": "jrodriguez_itc",
+        "cometido": "TEC",
+        "sistema": 88,
+        "f_alta": "2026-03-04T13:15:39.332Z",
+        "f_cambio": "2026-03-04T13:15:39.332Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 147,
+    "fields": {
+        "usuario": "yviccab",
+        "cometido": "FUN",
+        "sistema": 89,
+        "f_alta": "2026-03-04T13:17:32.142Z",
+        "f_cambio": "2026-03-04T13:17:32.142Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 148,
+    "fields": {
+        "usuario": "jrodriguez_itc",
+        "cometido": "TEC",
+        "sistema": 89,
+        "f_alta": "2026-03-04T13:17:43.419Z",
+        "f_cambio": "2026-03-04T13:17:43.419Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 149,
+    "fields": {
+        "usuario": "yviccab",
+        "cometido": "FUN",
+        "sistema": 90,
+        "f_alta": "2026-03-04T13:19:18.386Z",
+        "f_cambio": "2026-03-04T13:19:18.386Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 150,
+    "fields": {
+        "usuario": "jrodriguez_itc",
+        "cometido": "TEC",
+        "sistema": 90,
+        "f_alta": "2026-03-04T13:19:30.672Z",
+        "f_cambio": "2026-03-04T13:19:30.672Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 151,
+    "fields": {
+        "usuario": "yviccab",
+        "cometido": "FUN",
+        "sistema": 91,
+        "f_alta": "2026-03-04T13:21:06.188Z",
+        "f_cambio": "2026-03-04T13:21:06.188Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 152,
+    "fields": {
+        "usuario": "jrodriguez_itc",
+        "cometido": "TEC",
+        "sistema": 91,
+        "f_alta": "2026-03-04T13:21:15.544Z",
+        "f_cambio": "2026-03-04T13:21:15.544Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 153,
+    "fields": {
+        "usuario": "yviccab",
+        "cometido": "FUN",
+        "sistema": 92,
+        "f_alta": "2026-03-04T13:22:24.964Z",
+        "f_cambio": "2026-03-04T13:22:24.964Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 154,
+    "fields": {
+        "usuario": "jrodriguez_itc",
+        "cometido": "TEC",
+        "sistema": 92,
+        "f_alta": "2026-03-04T13:22:36.069Z",
+        "f_cambio": "2026-03-04T13:22:36.069Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 155,
+    "fields": {
+        "usuario": "yviccab",
+        "cometido": "FUN",
+        "sistema": 93,
+        "f_alta": "2026-03-04T13:24:04.481Z",
+        "f_cambio": "2026-03-04T13:24:04.481Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 156,
+    "fields": {
+        "usuario": "jrodriguez_itc",
+        "cometido": "TEC",
+        "sistema": 93,
+        "f_alta": "2026-03-04T13:24:16.904Z",
+        "f_cambio": "2026-03-04T13:24:16.904Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 157,
+    "fields": {
+        "usuario": "yviccab",
+        "cometido": "FUN",
+        "sistema": 94,
+        "f_alta": "2026-03-04T13:25:35.156Z",
+        "f_cambio": "2026-03-04T13:25:35.156Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 158,
+    "fields": {
+        "usuario": "jrodriguez_itc",
+        "cometido": "TEC",
+        "sistema": 94,
+        "f_alta": "2026-03-04T13:25:47.576Z",
+        "f_cambio": "2026-03-04T13:25:47.576Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 159,
+    "fields": {
+        "usuario": "yviccab",
+        "cometido": "FUN",
+        "sistema": 95,
+        "f_alta": "2026-03-04T13:27:28.328Z",
+        "f_cambio": "2026-03-04T13:27:28.328Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 160,
+    "fields": {
+        "usuario": "jrodriguez_itc",
+        "cometido": "TEC",
+        "sistema": 95,
+        "f_alta": "2026-03-04T13:27:41.416Z",
+        "f_cambio": "2026-03-04T13:27:41.416Z",
         "f_baja": null
     }
 },

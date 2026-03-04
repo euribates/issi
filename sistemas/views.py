@@ -565,7 +565,7 @@ def bar_sistemas2():
 
 @login_required
 def listado_entes(request):
-    chart = bar_sistemas2()
+    chart = bar_sistemas2(request)
     return render(request, 'sistemas/listado-entes.html', {
         'titulo': 'Entes',
         'breadcrumbs': bc.bc_entes(),
