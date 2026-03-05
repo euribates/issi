@@ -16,7 +16,6 @@ from django.core.validators import (
 )
 from django.db import models
 from django.db.models import Max, Count
-# from django.db.models.constraints import CheckConstraint
 from django.db.models import Q, F
 from django.db.models.functions import Coalesce
 from django.utils.timezone import localtime
@@ -519,16 +518,12 @@ class Usuario(models.Model):
 
     class Meta:
         ordering = ["nombre", "apellidos"]
-        # constraints = [
-        #     CheckConstraint(
-        #         condition=Q(empresa__isnull=True) & Q(organismo__isnull=False),
-        #         name='empresa_mandatory_if_not_organismo',
-        #         ),
-        #     CheckConstraint(
-        #         condition=Q(empresa__isnull=False) & Q(organismo__isnull=True),
-        #         name='organismo_mandatory_if_not_empresa',
-        #         ),
-        #     ]
+        constraints = [
+            models.CheckConstraint(
+                condition=~(Q(empresa=None) & Q(organismo=None)),
+                name='empresa_or_organismo_is_mandatory',
+                ),
+            ]
 
     login = models.CharField(max_length=32, primary_key=True)
     email = models.CharField(max_length=384, unique=True)
