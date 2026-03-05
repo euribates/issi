@@ -1,6 +1,35 @@
 {% extends "comun/base.html" %}
-{% load comun_filters %}
+{% load comun_filters cards %}
+
 {% block content %}
+
+{% card "Añadir un nuevo usuario" %}
+
+  <div class="container text-center">
+      <div class="row">
+            <div class="col">
+                <a href="{% url 'sistemas:alta_usuario_interno' %}"
+                   class="btn btn-info"
+                   role="button">
+                    <i class="bi bi-person-add"></i>
+                Interno
+                (Consejerías y organismos dependientes)
+                </a>
+            </div>
+            <div class="col">
+                <a href="{% url 'sistemas:alta_usuario_externo' %}"
+                   class="btn btn-info"
+                   role="button">
+                    <i class="bi bi-person-add"></i>
+                Externo
+                (Empresas y otras instituciones)
+                </a>
+            </div>
+      </div>
+  </div>  
+
+{% end_card %}
+
 
 <div class="card">
 
@@ -10,77 +39,6 @@
 
   <div class="card-body">
 
-  <form method="POST" action=".">
-  {% csrf_token %}
-  {{ form.errors }}  
-
-  <div class="d-flex p-2 bd-highlight">
-    <fieldset class="flex-fill">     
-    <legend>Datos personales</legend>
-
-
-    <div class="m-2">
-      <label for="id_login" class="form-label">Username / Login</label>
-      {{ form.login }}
-      {% if form.login.errors %}<ul class="form-errors">
-        {% for err in form.login.errors %}
-          <li>{{ err }}</li> 
-        {% endfor %}
-        </ul>{% endif %}
-    </div>
-
-    <div class="m-2">
-      <label for="id_nombre" class="form-label">{{ form.nombre.label }}</label>
-      {{ form.nombre }}
-      {% if form.nombre.errors %}<ul class="form-errors">
-        {% for err in form.nombre.errors %}
-          <li>{{ err }}</li> 
-        {% endfor %}
-        </ul>{% endif %}
-    </div>
-
-    <div class="m-2">
-      <label for="id_apellidos" class="form-label">{{ form.apellidos.label }}</label>
-      {{ form.apellidos }}
-      {% if form.apellidos.errors %}<ul class="form-errors">
-        {% for err in form.apellidos.errors %}
-          <li>{{ err }}</li> 
-        {% endfor %}
-        </ul>{% endif %}
-    </div>
-    </fieldset>
-
-    <fieldset style="max-width: 50%;">
-
-      <legend>Dirección General / Organismp</legend>
-
-      <div class="m-2">
-       <label for="id_codigo" class="form-label">Organismo
-           <span class="badge rounded-pill bg-info">
-           <div id="contador">0</div>
-           </span>
-       </label>
-           <button 
-               type="button"
-               data-on:load="@get('/sistemas/patch/organismos/')"
-               data-on:click="@get('/sistemas/patch/organismos/')">
-           filtrar por
-           </button>
-
-           <input type="text" name="query" value="" data-bind="query">
-           <div id="control_organismos">
-           </div>
-      </div>
-    </fieldset>    
-  </div>
-
-  <div class="commands">
-    <button type="submit" class="btn btn-primary">
-        Añadir usuario
-    </button>
-  </div>
-
-  </form>
   </div>
 </div>  
 

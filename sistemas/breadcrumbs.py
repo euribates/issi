@@ -100,13 +100,27 @@ def bc_conmutar_campo(sistema: models.Sistema, field_name: str, verbose_name: st
 
 
 def bc_usuarios() -> BreadCrumb:
-    return bc_issi().step('bc_usuarios', links.a_usuarios())
+    return bc_issi().step('Usuarios', links.a_usuarios())
 
 
 def bc_alta_usuario() -> BreadCrumb:
     return bc_usuarios().step(
         'Alta',
         links.a_alta_usuario(),
+        )
+
+
+def bc_alta_usuario_interno() -> BreadCrumb:
+    return bc_alta_usuario().step(
+        'Interno',
+        links.a_alta_usuario_interno(),
+        )
+
+
+def bc_alta_usuario_externo() -> BreadCrumb:
+    return bc_alta_usuario().step(
+        'Externo',
+        links.a_alta_usuario_externo(),
         )
 
 

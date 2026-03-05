@@ -33,7 +33,7 @@ class SistemaConverter:
 
 class UserNameConverter:
 
-    regex = '[a-z][a-z0-9-._]+'
+    regex = '[a-zA-Z][a-zA-Z0-9-._@]+'
 
     def to_python(self, value):
         if isinstance(value, Usuario):

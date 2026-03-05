@@ -3,6 +3,7 @@
 from django.urls import path
 
 from . import views
+from . import patches
 from . import converters  # noqa: F401
 
 app_name = 'sistemas'
@@ -39,6 +40,8 @@ urlpatterns = [
     tie('usuario/', views.listado_usuarios),
     tie('usuario/buscar/', views.buscar_usuarios),
     tie('usuario/alta/', views.alta_usuario),
+    tie('usuario/alta/interno/', views.alta_usuario_interno),
+    tie('usuario/alta/externo/', views.alta_usuario_externo),
     tie('usuario/<usr:usuario>/', views.detalle_usuario),
     tie('temas/', views.listado_temas),
     tie('temas/<tema:tema>/', views.detalle_tema),
@@ -56,7 +59,8 @@ urlpatterns = [
     tie('exportar/<ent:ente>/', views.exportar_sistemas_por_ente),
     tie('exportar/todos/', views.exportar_sistemas_todos),
     tie('importar/', views.importar_sistemas),
-    tie("patch/organismos/", views.patch_organismos),
-    tie("patch/usuarios/", views.patch_usuarios),
-    tie("patch/sistemas/", views.patch_sistemas),
+    tie("patch/organismos/", patches.patch_organismos),
+    tie("patch/empresas/", patches.patch_empresas),
+    tie("patch/usuarios/", patches.patch_usuarios),
+    tie("patch/sistemas/", patches.patch_sistemas),
     ]

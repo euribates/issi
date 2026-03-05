@@ -525,7 +525,7 @@ class Usuario(models.Model):
                 ),
             ]
 
-    login = models.CharField(max_length=32, primary_key=True)
+    login = models.CharField(max_length=96, primary_key=True)
     email = models.CharField(max_length=384, unique=True)
     nombre = models.CharField(
         max_length=96,
@@ -586,7 +586,7 @@ class Usuario(models.Model):
             | Q(email__icontains=query)
             | Q(nombre__icontains=query)
             | Q(apellidos__icontains=query)
-        )
+            )
 
     def save(self, *args, **kwargs):
         if not self.email:
@@ -610,6 +610,7 @@ class Usuario(models.Model):
 
     def url_detalle_usuario(self):
         return links.a_detalle_usuario(self)
+
 
 class Interlocutor(models.Model):
     class Meta:

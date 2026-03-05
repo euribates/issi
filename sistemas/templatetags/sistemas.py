@@ -31,14 +31,14 @@ def as_nombre_sistema(sistema):
 
 
 @register.filter
-def as_descripcion(sistema):
-    if not sistema.descripcion:
+def as_descripcion(descripcion):
+    if not descripcion:
         return mark_safe(
             '<i class="bi bi-exclamation-diamond"></i>'
             '&nbsp;'
             '<i>Falta la descripción</i>'
             )
-    return as_markdown(sistema.descripcion)
+    return as_markdown(descripcion)
 
 
 @register.filter

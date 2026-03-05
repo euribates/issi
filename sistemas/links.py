@@ -83,6 +83,14 @@ def a_alta_usuario() -> str:
     return _a('sistemas:alta_usuario')
 
 
+def a_alta_usuario_interno() -> str:
+    return _a('sistemas:alta_usuario_interno')
+
+
+def a_alta_usuario_externo() -> str:
+    return _a('sistemas:alta_usuario_externo')
+
+
 def a_detalle_usuario(usuario) -> str:
     return _a('sistemas:detalle_usuario', usuario=usuario)
 

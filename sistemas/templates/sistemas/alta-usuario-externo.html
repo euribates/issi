@@ -1,0 +1,88 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+{% block content %}
+
+<div class="card">
+
+  <div class="card-header">
+    Añadir un nuevo usuario interno
+  </div>
+
+  <div class="card-body">
+
+  <form method="POST" action=".">
+  {% csrf_token %}
+  {{ form.errors }}  
+
+  <div class="d-flex p-2 bd-highlight">
+    <fieldset class="flex-fill">     
+    <legend>Datos personales</legend>
+
+
+    <div class="m-2">
+      <label for="id_login" class="form-label">Username / Login</label>
+      {{ form.login }}
+      {% if form.login.errors %}<ul class="form-errors">
+        {% for err in form.login.errors %}
+          <li>{{ err }}</li> 
+        {% endfor %}
+        </ul>{% endif %}
+    </div>
+
+    <div class="m-2">
+      <label for="id_nombre" class="form-label">{{ form.nombre.label }}</label>
+      {{ form.nombre }}
+      {% if form.nombre.errors %}<ul class="form-errors">
+        {% for err in form.nombre.errors %}
+          <li>{{ err }}</li> 
+        {% endfor %}
+        </ul>{% endif %}
+    </div>
+
+    <div class="m-2">
+      <label for="id_apellidos" class="form-label">{{ form.apellidos.label }}</label>
+      {{ form.apellidos }}
+      {% if form.apellidos.errors %}<ul class="form-errors">
+        {% for err in form.apellidos.errors %}
+          <li>{{ err }}</li> 
+        {% endfor %}
+        </ul>{% endif %}
+    </div>
+    </fieldset>
+
+    <fieldset style="max-width: 50%;">
+
+      <legend>Empresa / institución</legend>
+
+      <div class="m-2">
+        <span class="badge rounded-pill bg-info">
+          <div id="contador">0</div>
+        </span>
+       </label>
+       <button 
+         type="button"
+         data-init="@get('/sistemas/patch/empresas/')"
+         data-on:click="@get('/sistemas/patch/empresas/')"
+         data-on:input__debounce.250ms="@get('/sistemas/patch/sistemas/')"
+         >
+       filtrar por
+       </button>
+
+        <input type="text" name="query" value="" data-bind="query">
+           <div id="control_empresas">
+           </div>
+      </div>
+    </fieldset>    
+  </div>
+
+  <div class="commands">
+    <button type="submit" class="btn btn-primary">
+        Añadir usuario
+    </button>
+  </div>
+
+  </form>
+  </div>
+</div>  
+
+{% endblock content %}

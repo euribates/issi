@@ -24,7 +24,7 @@
     <td>
       <big>{{ sistema|as_codigo }}</big>
       <b>{{ sistema.nombre_sistema }}</b><br>
-      {{ sistema|as_descripcion }}<br>
+      {{ sistema.finalidad|as_finalidad }}<br>
       {{ sistema.tema|as_tema }}
       {% if sistema.es_transversal %}
         <span class="badge text-bg-info">Transversal</span>

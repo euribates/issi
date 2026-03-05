@@ -3,7 +3,6 @@
 from functools import cache
 from collections import defaultdict
 import io
-import json
 
 from django.contrib import messages
 from django.http import HttpResponse
@@ -25,7 +24,7 @@ from comun.commands import Command
 from comun.funcop import agrupa
 from comun import graficas
 
-from directorio.models import Organismo
+from directorio.models import Organismo, Empresa
 from sistemas import filtersets
 from sistemas.models import Ente
 from sistemas.models import importar_sistemas_desde_fichero
@@ -215,10 +214,9 @@ def editar_descripcion(request, sistema):
     if request.method == "POST":
         form = forms.EditarDescripcionForm(request.POST, instance=sistema)
         if form.is_valid():
-            descripcion = form.cleaned_data['descripcion']
-            if descripcion != sistema.descripcion:
-                sistema.save(update_fields=['descripcion'])
-                Bus(request).sistema_editar_descripcion(sistema, descripcion)
+            sistema.descripcion = form.cleaned_data['descripcion']
+            sistema.save(update_fields=['descripcion'])
+            Bus(request).sistema_editar_descripcion(sistema, sistema.descripcion)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.EditarDescripcionForm(instance=sistema)
@@ -487,17 +485,44 @@ def buscar_usuarios(request):
 
 @login_required
 def alta_usuario(request, *args, **kwargs):
+    return render(request, 'sistemas/alta-usuario.html', {
+        'titulo': 'Dar de alta un nuevo usuario',
+        'breadcrumbs': bc.bc_alta_usuario(),
+        'tab': 'usuarios',
+        })
+
+
+@login_required
+def alta_usuario_interno(request, *args, **kwargs):
     if request.method == 'POST':
-        form = forms.AltaUsuarioForm(request.POST)
+        form = forms.AltaUsuarioInternoForm(request.POST)
         if form.is_valid():
             usuario = form.save()
             Bus(request).nuevo_usuario(usuario)
             return redirect(links.a_detalle_usuario(usuario.pk))
     else:
-        form = forms.AltaUsuarioForm()
-    return render(request, 'sistemas/alta-usuario.html', {
-        'titulo': 'Dar de alta un nuevo usuario',
-        'breadcrumbs': bc.bc_usuarios(),
+        form = forms.AltaUsuarioInternoForm()
+    return render(request, 'sistemas/alta-usuario-interno.html', {
+        'titulo': 'Dar de alta un nuevo usuario (Interno)',
+        'breadcrumbs': bc.bc_alta_usuario_interno(),
+        'tab': 'usuarios',
+        'form': form,
+        })
+
+
+@login_required
+def alta_usuario_externo(request, *args, **kwargs):
+    if request.method == 'POST':
+        form = forms.AltaUsuarioExternoForm(request.POST)
+        if form.is_valid():
+            usuario = form.save()
+            Bus(request).nuevo_usuario(usuario)
+            return redirect(links.a_detalle_usuario(usuario.pk))
+    else:
+        form = forms.AltaUsuarioExternoForm()
+    return render(request, 'sistemas/alta-usuario-externo.html', {
+        'titulo': 'Dar de alta un nuevo usuario (Externo)',
+        'breadcrumbs': bc.bc_alta_usuario_externo(),
         'tab': 'usuarios',
         'form': form,
         })
@@ -766,98 +791,6 @@ def sistemas_sin_tema(request):
         'tab': 'sistemas',
         'sistemas': sistemas,
         })
-
-
-# Patchs for datastar
-
-
-@login_required
-def get_datastar_parameter(request, name: str, default=None) -> str|None:
-    datastar = request.GET.get('datastar', '')
-    if datastar:
-        params = json.loads(datastar)
-        if name in params:
-            return params[name]
-    return default
-
-
-@login_required
-def patch_organismos(request):
-    query = get_datastar_parameter(request, 'query')
-    if query:
-        organismos = Organismo.search_organismos(query)
-    else:
-        organismos = Organismo.objects.all()
-    buff = [
-        '<select name="organismo"'
-        ' size="17"'
-        ' class="form-control">',
-        '<option value="">Sin asignar</option>'
-        ]
-    selected = ' selected'
-    contador = organismos.count()
-    for org in organismos:
-        buff.append(
-            f'<option value="{org.pk}"{selected}>'
-            f'{org.nombre_organismo} {org.dir3}'
-            '</option>'
-            )
-        selected = ''
-    buff.append('</select>')
-    result = '\n'.join(buff)
-    return HttpResponse(
-        f'<div id="control_organismos">{result}</div>'
-        f'<div id="contador">{contador}<div>'
-        )
-
-
-@login_required
-def patch_sistemas(request):
-    sistemas = Sistema.objects.all()
-    total_sistemas = num_sistemas = sistemas.count()
-    query = get_datastar_parameter(request, 'query')
-    if query:
-        sistemas = sistemas.filter(
-            Q(nombre_sistema__icontains=query)
-            | Q(codigo__icontains=query)
-            | Q(tema__nombre_tema__icontains=query)
-            )
-        num_sistemas = sistemas.count()
-    return render(request, 'sistemas/includes/listado-sistemas.html', {
-        'sistemas': sistemas,
-        'num_sistemas': num_sistemas,
-        'total_sistemas': total_sistemas,
-        })
-
-
-@login_required
-def patch_usuarios(request):
-    query = get_datastar_parameter(request, 'query')
-    if query:
-        usuarios = Usuario.search_usuarios(query)
-    else:
-        usuarios = Usuario.objects.all()[0:100]
-    buff = [
-        '<select name="usuario"'
-        ' size="7"'
-        ' class="form-control">',
-        '<option value="">Sin asignar</option>'
-        ]
-    selected = ' selected'
-    contador = usuarios.count()
-    for usr in usuarios:
-        buff.append(
-            f'<option value="{usr.pk}"{selected}>'
-            f'{usr}'
-            '</option>'
-            )
-        selected = ''
-    buff.append('</select>')
-    result = '\n'.join(buff)
-    return HttpResponse(
-        f'<div id="control_usuarios">{result}</div>'
-        f'<div id="contador">{contador}<div>'
-        )
 
 
 
