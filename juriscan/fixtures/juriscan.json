@@ -201,6 +201,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 77300,
+    "fields": {
+        "titulo": "Decreto 98/2018, 2 julio, por el que se modifica el Decreto 127/2014, 23 diciembre (BOC 253, 31.12.2014), de aprobación e implantación del sistema de información económico-financiera y logística de la Comunidad Autónoma de Canarias, con la denominación SEFLOGIC",
+        "created": "2026-03-09T09:50:31.528Z",
+        "updated": "2026-03-09T09:50:31.528Z",
+        "checked": "2026-03-09T09:50:31.526Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 77865,
     "fields": {
         "titulo": "Ley 5/2019, 9 abril, de la Presidencia del Gobierno, de la lectura y de las bibliotecas de Canarias",

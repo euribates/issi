@@ -3101,6 +3101,20 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "ajcabsan",
+    "fields": {
+        "email": "ajcabsan@gobiernodecanarias.org",
+        "nombre": "Antonio Juan",
+        "apellidos": "Caballero Santiago",
+        "organismo": 42088,
+        "empresa": null,
+        "f_alta": "2026-03-09T20:32:11.328Z",
+        "f_cambio": "2026-03-09T20:32:11.328Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "almudena.alvarado",
     "fields": {
         "email": "almudena.alvarado@essscan.es",
@@ -3549,6 +3563,20 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "fgonsan",
+    "fields": {
+        "email": "fgonsan@gobiernodecanarias.org",
+        "nombre": "Fernando José",
+        "apellidos": "González Sánchez",
+        "organismo": 42088,
+        "empresa": null,
+        "f_alta": "2026-03-09T22:21:37.469Z",
+        "f_cambio": "2026-03-09T22:21:37.469Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "fmerboa",
     "fields": {
         "email": "fmerboa@gobiernodecanarias.org",
@@ -3824,6 +3852,20 @@
         "empresa": null,
         "f_alta": "2025-10-06T18:41:33.934Z",
         "f_cambio": "2025-10-06T18:41:33.934Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jojenuej",
+    "fields": {
+        "email": "jojenuej@gobiernodecanarias.org",
+        "nombre": "Jesús Rafael",
+        "apellidos": "Ojeda Nuez",
+        "organismo": 42088,
+        "empresa": null,
+        "f_alta": "2026-03-09T20:26:36.958Z",
+        "f_cambio": "2026-03-09T20:26:36.958Z",
         "f_baja": null
     }
 },
@@ -4496,6 +4538,20 @@
         "empresa": null,
         "f_alta": "2025-10-06T18:41:34.207Z",
         "f_cambio": "2025-10-06T18:41:34.207Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "oviealm",
+    "fields": {
+        "email": "oviealm@gobiernodecanarias.org",
+        "nombre": "Oliver",
+        "apellidos": "Almond Viera",
+        "organismo": 37849,
+        "empresa": null,
+        "f_alta": "2026-03-09T20:30:54.999Z",
+        "f_cambio": "2026-03-09T20:30:54.999Z",
         "f_baja": null
     }
 },

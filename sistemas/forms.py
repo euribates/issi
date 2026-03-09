@@ -44,9 +44,9 @@ class EstaSeguroForm(BootstrapForm, forms.Form):
         )
 
 
-class CVSFileForm(BootstrapForm, forms.Form):
-    archivo =forms.FileField(
-        label='Archivo CVS',
+class ODSFileForm(BootstrapForm, forms.Form):
+    archivo = forms.FileField(
+        label='Archivo .ODS (LibreOffice Calc)',
         )
 
 

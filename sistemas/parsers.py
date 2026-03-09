@@ -15,6 +15,7 @@ from uuid import UUID
 from typing import Sequence
 
 import pandas as pd
+import numpy as np
 
 from caches.temas import temas
 from comun.funcop import first
@@ -24,6 +25,7 @@ from directorio.models import Organismo
 from juriscan.models import Juriscan
 from sistemas.models import Tema
 from sistemas.models import Usuario
+from sistemas.models import Sistema
 
 #: Dominio por defecto para los correos electrónicos.
 DEFAULT_DOMAIN = 'gobiernodecanarias.org'
@@ -49,7 +51,19 @@ pat_url_juriscan = re.compile(
     )
 
 #: Patron para detectar UUID
-pat_uuid = re.compile(r'[\da-f]{8}-([\da-f]{4}-){3}[\da-f]{12}$', re.IGNORECASE)
+PAT_UUID = re.compile(r'[\da-f]{8}-([\da-f]{4}-){3}[\da-f]{12}$', re.IGNORECASE)
+
+PAT_CODIGO_INTERNO = re.compile(r'[A-Z_][0-9A-Z_\\][0-9A-Z_\\]+$')
+
+def clean_text(text: str) -> str|None:
+    """Limpia el texto de entrada.
+    """
+    if text == '' or text is None or text is np.nan:
+        return None
+    text = text.strip()
+    if text[0] == text[-1] == '"':
+        text = text[1:-1]
+    return text or None
 
 
 def parse_nombre_sistema(texto: str, n_linea=None) -> Result:
@@ -62,9 +76,9 @@ def parse_nombre_sistema(texto: str, n_linea=None) -> Result:
 
         >>> rs = parse_nombre_del_sistema('')
         >>> assert rs.is_failure()
-        >>> rs = parse_nombre_del_sistema('Ares.')
+        >>> rs = parse_nombre_del_sistema('King Guidora.')
         >>> assert rs.is_success()
-        >>> assert rs.value = 'Ares'
+        >>> assert rs.value = 'King Guidora'
 
     Parameters:
 
@@ -76,8 +90,8 @@ def parse_nombre_sistema(texto: str, n_linea=None) -> Result:
           ``Failure`` en caso contrario.
 
     """
+    texto = clean_text(texto)
     if texto:
-        texto = texto.strip()
         if texto[-1] == '.':
             texto = texto[:-1]
         if len(texto) > 3:
@@ -88,16 +102,12 @@ def parse_nombre_sistema(texto: str, n_linea=None) -> Result:
 def parse_codigo_interno(codigo: str, n_linea=None) -> Result:
     '''devuelve el código identificativo interno (CII) del sistema.
     '''
-    if codigo is None or pd.isna(codigo):
-        return Failure(errors.EI0003(n_linea=n_linea))
-    codigo = codigo.strip()
+    codigo = clean_text(codigo)
     if not codigo:
         return Failure(errors.EI0003(n_linea=n_linea))
-    pat_codigo_interno = re.compile(r'[A-Z_][0-9A-Z_][0-9A-Z_]+$')
-    _match = pat_codigo_interno.match(codigo)
-    if not _match:
-        return Failure(errors.EI0002(codigo, n_linea=n_linea))
-    return Success(codigo)
+    if PAT_CODIGO_INTERNO.match(codigo):
+        return Success(codigo)
+    return Failure(errors.EI0002(codigo, n_linea=n_linea))
 
 
 def parse_finalidad(texto, n_linea=None) -> Result:
@@ -147,11 +157,10 @@ def parse_materia_competencial(materia: str | None, n_linea=None) -> Result:
 
     Si no se especifica, devuelve la materia ``UNK``.
     '''
+    materia = clean_text(materia)
     if materia is None:
         return Success(Tema.load_tema('UNK'))
     materia = materia.strip()
-    if materia == '':
-        return Success(Tema.load_tema('UNK'))
     if materia in temas:
         return Success(Tema.load_tema(materia))
     for codigo, descripcion in temas.items():
@@ -238,28 +247,29 @@ def parse_juriscan(text: str|None, n_linea=None) -> Result|Failure:
 
 
 def parse_uuid(value: str, n_linea=None) -> Result:
-    if not value or pd.isna(value):
+    value = clean_text(value)
+    if value is None:
         return Success(None)
-    if value:
-        value = value.strip()
-        match = pat_uuid.match(value)
-        if match:
-            return Success(UUID(value))
+    if PAT_UUID.match(value):
+        uuid = UUID(value)
+        sistema = Sistema.load_sistema_por_uuid(uuid)
+        return Success(sistema)
     return Failure(errors.EI0005(value))
 
 
 
-def parse_row(tupla: Sequence, n_linea=None) -> dict:
+def parse_row(items: Sequence, n_linea=None) -> dict:
+    items = list(items)
     result = {}
-    result['nombre_sistema'] = parse_nombre_sistema(tupla[0], n_linea=n_linea)
-    result['codigo'] = parse_codigo_interno(tupla[1], n_linea=n_linea)
-    result['finalidad'] = parse_finalidad(tupla[2], n_linea=n_linea)
-    result['descripcion'] = parse_descripcion(tupla[2], n_linea=n_linea)
-    result['tema'] = parse_materia_competencial(tupla[3], n_linea=n_linea)
-    result['organismo'] = parse_dir3(tupla[4], n_linea=n_linea)
-    result['responsables_tecnologicos'] = parse_users(tupla[5], n_linea=n_linea)
-    result['responsables_funcionales'] = parse_users(tupla[6], n_linea=n_linea)
-    result['juriscan'] = parse_juriscan(tupla[7], n_linea=n_linea)
-    result['comentarios'] = parse_comentarios(tupla[8], n_linea=n_linea)
-    result['uuid'] = parse_uuid(tupla[9], n_linea=n_linea)
+    result['nombre_sistema'] = parse_nombre_sistema(items[0], n_linea=n_linea)
+    result['codigo'] = parse_codigo_interno(items[1], n_linea=n_linea)
+    result['finalidad'] = parse_finalidad(items[2], n_linea=n_linea)
+    result['descripcion'] = parse_descripcion(items[2], n_linea=n_linea)
+    result['tema'] = parse_materia_competencial(items[3], n_linea=n_linea)
+    result['organismo'] = parse_dir3(items[4], n_linea=n_linea)
+    result['responsables_tecnologicos'] = parse_users(items[5], n_linea=n_linea)
+    result['responsables_funcionales'] = parse_users(items[6], n_linea=n_linea)
+    result['juriscan'] = parse_juriscan(items[7], n_linea=n_linea)
+    result['comentarios'] = parse_comentarios(items[8], n_linea=n_linea)
+    result['uuid'] = parse_uuid(items[9], n_linea=n_linea)
     return result

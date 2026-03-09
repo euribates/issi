@@ -107,14 +107,15 @@ errors.register(
     'EI0002',
     "Código Identificador Interno incorrecto",
     desc=(
-        "El valor indicado en el CII no sigue las reglas de "
-        "formato esperadas. Solo son válidos los caracteres "
-        "desde la `A` hasta la `Z`, sin minúsculas, los "
-        "dígitos desde el cero hasta el nueve, y el caracter "
-        "subrayado.\n"
-        "Además, no puede empezar por un dígito, y debe "
-        "tener tres o más caracteres. El valor indicado: "
-        "'{value}', no sigue el formato."
+        "El valor indicado en el CII no sigue las reglas de"
+        " formato esperadas. Solo son válidos los caracteres"
+        " desde la `A` hasta la `Z`, sin minúsculas, los"
+        " dígitos desde el cero hasta el nueve, el caracter"
+        " barra inclinada `\` y el caracter"
+        " subrayado `_`.\n"
+        "\nAdemás, no puede empezar por un dígito, y debe"
+        " tener tres o más caracteres. El valor indicado:"
+        " '{value}', no sigue el formato."
         ),
     refs=['Codigo Identificador Interno <CII>']
     )

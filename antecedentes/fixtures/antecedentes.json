@@ -575,6 +575,28 @@
 },
 {
     "model": "antecedentes.historicousuario",
+    "pk": "2ba0254c-b6d5-4d98-9c51-359b785a6f2f",
+    "fields": {
+        "tipo_evento": "I",
+        "descripcion": "Se ha dado de alta al usuario Oliver Almond Viera",
+        "f_evento": "2026-03-09T20:30:55.041Z",
+        "usuario": "jrodleo",
+        "sujeto": "oviealm"
+    }
+},
+{
+    "model": "antecedentes.historicousuario",
+    "pk": "4cc0ad6e-7d0b-4787-88a5-15e05e294e21",
+    "fields": {
+        "tipo_evento": "I",
+        "descripcion": "Se ha dado de alta al usuario Fernando José González Sánchez",
+        "f_evento": "2026-03-09T22:21:37.521Z",
+        "usuario": "jrodleo",
+        "sujeto": "fgonsan"
+    }
+},
+{
+    "model": "antecedentes.historicousuario",
     "pk": "adbacee4-6cca-4223-8341-003a09aa1ad9",
     "fields": {
         "tipo_evento": "I",
@@ -582,6 +604,28 @@
         "f_evento": "2026-03-04T10:24:57.015Z",
         "usuario": "jrodleo",
         "sujeto": "yviccab"
+    }
+},
+{
+    "model": "antecedentes.historicousuario",
+    "pk": "ede7d7ac-23bc-4cef-9f97-b94d971db49d",
+    "fields": {
+        "tipo_evento": "I",
+        "descripcion": "Se ha dado de alta al usuario Jesús Rafael Ojeda Nuez",
+        "f_evento": "2026-03-09T20:26:36.981Z",
+        "usuario": "jrodleo",
+        "sujeto": "jojenuej"
+    }
+},
+{
+    "model": "antecedentes.historicousuario",
+    "pk": "f2c73c7e-17ff-40d6-8148-ea8093bf5c68",
+    "fields": {
+        "tipo_evento": "I",
+        "descripcion": "Se ha dado de alta al usuario Antonio Juan Caballero Santiago",
+        "f_evento": "2026-03-09T20:32:11.402Z",
+        "usuario": "jrodleo",
+        "sujeto": "ajcabsan"
     }
 }
 ]

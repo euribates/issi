@@ -8,7 +8,6 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
-from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 
 from . import breadcrumbs as bc
@@ -24,12 +23,11 @@ from comun.commands import Command
 from comun.funcop import agrupa
 from comun import graficas
 
-from directorio.models import Organismo, Empresa
+from directorio.models import Organismo
 from sistemas import filtersets
 from sistemas.models import Ente
-from sistemas.models import importar_sistemas_desde_fichero
+from sistemas.importers import importar_sistemas_desde_fichero
 from sistemas.models import Sistema
-from sistemas.models import Usuario
 
 """Vistas de sistemas.
 """
@@ -817,24 +815,21 @@ def verificar_existencia_sistema(payload: dict) -> dict:
 @login_required
 def importar_sistemas(request, *args, **kwargs):
     if request.method == 'POST':
-        form = forms.CVSFileForm(request.POST, request.FILES)
+        form = forms.ODSFileForm(request.POST, request.FILES)
         if form.is_valid():
             archivo = request.FILES["archivo"]
-            stream = io.StringIO(archivo.read().decode('utf-8'))
-            results = [
-                verificar_existencia_sistema(_sis)
-                for _sis in importar_sistemas_desde_fichero(stream)
-                ]
+            stream = archivo.read()
+            sistemas = list(importar_sistemas_desde_fichero(stream))
             return render(request, 'sistemas/importar-sistemas-control.html', {
-                'titulo': 'Importar sistemas',
+                'titulo': 'Importar sistemas - Selección',
                 'commands': cmd_sistemas(),
                 'tab': 'sistemas',
                 'breadcrumbs': bc.bc_importar_sistemas(),
-                'results': results,
+                'sistemas': sistemas,
                 })
 
     else:
-        form = forms.CVSFileForm()
+        form = forms.ODSFileForm()
     return render(request, 'sistemas/importar-sistemas.html', {
         'titulo': 'Importar sistemas',
         'commands': cmd_sistemas(),

@@ -463,16 +463,55 @@ class Sistema(models.Model):
         return f"{label} {s_progress}"
 
 
-def importar_sistemas_desde_fichero(stream):
-    import csv
+# def rename_headers(df):
+    # origin_names = list(df.columns)
+    # if len(origin_names) == 11:
+        # result = df.rename(columns={
+            # origin_names[0]: 'estado',
+            # origin_names[1]: 'departamento',
+            # origin_names[2]: 'nombre_sistema',
+            # origin_names[3]: 'codigo',
+            # origin_names[4]: 'finalidad',
+            # origin_names[5]: 'materia',
+            # origin_names[6]: 'dir3',
+            # origin_names[7]: 'responsables_tecnologicos',
+            # origin_names[8]: 'responsables_funcionales',
+            # origin_names[9]: 'juriscan',
+            # origin_names[10]: 'comentarios',
+            # })
+        # result.insert(11, 'uuid', None)
+        # return result
+    # if len(origin_names) == 12:
+        # return df.rename(columns={
+            # origin_names[0]: 'estado',
+            # origin_names[1]: 'departamento',
+            # origin_names[2]: 'nombre_sistema',
+            # origin_names[3]: 'codigo',
+            # origin_names[4]: 'finalidad',
+            # origin_names[5]: 'materia',
+            # origin_names[6]: 'dir3',
+            # origin_names[7]: 'responsables_tecnologicos',
+            # origin_names[8]: 'responsables_funcionales',
+            # origin_names[9]: 'juriscan',
+            # origin_names[10]: 'comentarios',
+            # origin_names[11]: 'uuid',
+            # })
+    # raise ValueError(
+        # 'Se esperaban 11 o 12 columnas, pero el fichero'
+        # f' tiene {len(origin_names)}'
+        # )
 
-    from . import parsers
-
-    reader = csv.reader(stream, delimiter=",", quotechar='"')
-    _first_line = next(reader)  # Ignoramos la primera fila
-    for n_linea, tupla in enumerate(reader, start=1):
-        payload = parsers.parse_row(tupla, n_linea=n_linea)
-        yield payload
+# def importar_sistemas_desde_fichero(stream):
+    # from tempfile import TemporaryFile
+    # with tempfile.TemporaryFile() as fp:
+        # fp.write(stream)
+        # fp.seek(0)
+        # df = pd.read_excel(fp, engine="odf")
+    # df = rename_headers(df)
+    # for n_linea, tupla in df.iterrows():
+        
+        # payload = parsers.parse_row(tupla, n_linea=n_linea)
+        # yield payload
 
 
 class Activo(models.Model):

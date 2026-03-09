@@ -13,27 +13,63 @@
 
     <table class="table">
       <thead>
-        <th>Sistema</th>
+        <th>Código / Nombre</th>
+        <th>Datos</th>
         <th>Errores</th>
+        <th>Selección</th>
       </thead>
       <tbody>
-      {% for sistema in results %}<tr>
-        <td>
-            <b class="sistema-codigo{% if sistema.errores %} color-red{% endif %}">{{ sistema.codigo }}</b><br>
-            <small class="sistema-nombre"> {{ sistema.nombre_sistema }}</small>
+      {% for index, data, pass_minimun, all_errors in sistemas %}<tr>
+        <th>
+           <b class="sistema-codigo">{{ data.codigo.value }}</b>
+           <br>
+           {{ data.nombre_sistema.value }}
         </td>  
         <td>
-        {% if sistema.errores %}
-          <ul class="error-list">
-          {% for error in sistema.errores %}
-            <li>{{ error.as_html|safe }} </li>
-          {% endfor %}
-          </ul>
-        {% else %}
-        <b class="color-green">Válido<b>
-        {% endif %}  
-
+            <ul>
+                <li>Finalidad: {{ data.finalidad.value }}</li>
+                <li>Materia: {{ data.tema.value }}</li>
+                <li>Organismo: {{ data.organismo.value }}
+                    ({{ data.organismo.value.dir3 }})</li>
+                <li>Responsables tecnológicos:
+                    <dl>{% for user in data.responsables_tecnologicos.value %}
+                        <dt>{{ user }} ({{ user.login }})</dt>
+                        <dd>{{ user.email }}</dd>
+                        {% endfor %}</dl>
+                </li>
+                <li>Responsables funcionales:
+                    <dl>{% for user in data.responsables_funcionales.value %}
+                        <dt>{{ user }} ({{ user.login }})</dt>
+                        <dd>{{ user.email }}</dd>
+                        {% endfor %}</dl>
+                </li>
         </td>
+        <td>
+            <ul class="error-list">{% for error in all_errors %}
+              <li>{{ error }}</li>
+            {% endfor %}</ul>
+        </td>
+
+        <td>
+          <div class="form-check">
+          {% if pass_minimun %}
+            <input class="form-check-input" checked
+                   id="chk_{{ index }}"
+                   name="num" type="checkbox" value="{{ index }}">
+            <label for="chk_{{ index }}" class="color-green">
+                    Válido
+            </label>
+          {% else %}
+            <input class="form-check-input"
+                   id="chk_{{ index }}"
+                   name="num" type="checkbox" value="{{ index }}">
+            <label for="chk_{{ index }}" class="color-red">
+                    Inválido
+            </label>
+          {% endif %}          
+          </div>
+        </td>
+        
       </tr>{% endfor %}    
       </tbody>
 

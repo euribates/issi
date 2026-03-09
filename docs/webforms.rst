@@ -48,10 +48,14 @@ Preguntas sobre fragmentos comunes:
 
 - ¿Hay un versionado de los fragmentos?
 
-- ¿Puedo mezclar campos propios con fragmentos comunes?
+- ¿Puedo mezclar campos propios con fragmentos comunes? ¿O es obligado
+  que todo el formulario esté compuesto solo por fragmentos comunes? En
+  ese último caso, como se incluyen campos propios.
 
 - ¿Están agrupados o clasificados los fragmentos de alguna forma? Por
-  área temática o cualquier otra clasificación?
+  área temática o alguna otra clasificación?
+
+- ¿Se pueden parametrizar los fragmentos?
 
 - ¿Un fragmento común puede contener otros fragmentos comunes?
 
@@ -68,7 +72,7 @@ Preguntas sobre fragmentos comunes:
 - ¿Hay formularios de múltiples pasos? Si es así, ¿dónde se guardan los
   datos del formulario de forma temporal?
   
-- ¿Se puede saber quien está usando qué fragmento?
+- ¿Se puede saber quien está usando qué fragmento? Parece que no.
 
 - ¿Dónde encaja el concepto de Formulario? ¿Es un conjunto de fragmentos
   comunes? ¿Cuantos formularios hay?

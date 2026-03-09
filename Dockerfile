@@ -1,10 +1,11 @@
-FROM python:3.14
+FROM python:3.14-alpine
 RUN mkdir /app
 RUN mkdir /app/logs
 WORKDIR /app
 
-RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install unzip vim vim-doc vim-scripts sqlite3 -y
+RUN apk update \
+        unzip vim vim-doc vim-scripts \
+        sqlite --no-cache
 
 # Set environment variables 
 # Prevents Python from writing pyc files to disk
