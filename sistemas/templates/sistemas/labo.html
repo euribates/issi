@@ -99,10 +99,18 @@ Highcharts.chart('container', {
     
 <h2>Chart.js Demo</h2>
 
+<h3>Gannt Diagram</h3>
+
+<div id="plot_div">
+    {{ plot_div|safe }}
+</div>
+
 <h3>Radar</h3>
 
 <div id="grafica">
-    <canvas id="Chart"></canvas>
+    <canvas id="Chart">
+        {{ chart.as_svg|safe }}
+    </canvas>
 </div>
 
 

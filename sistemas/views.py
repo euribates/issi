@@ -287,16 +287,47 @@ def asignar_icono(request, sistema):
 
 
 def labo(request, *args, **kwargs):
-    from comun.graficas import PolarArea
-    radar = PolarArea('ISC')
-    radar.add_value('Seguridad', 12, '#FF000080')
-    radar.add_value('Calidad', 2.5, '#00FF0080')
-    radar.add_value('Interoperabilidad', 12, '#0000FF80')
-    radar.add_value('Personal', 8, '#00FFFF80')
-    radar.add_value('Matraka', 17, '#FF00FF80')
+    import pandas as pd
+    from plotly.offline import plot
+    import plotly.express as px
+    from datetime import date as Date
+
+    data = [
+        {
+            'Project': 'Alpha Flight',
+            'Start': Date(2026, 3, 1),
+            'Finish': Date(2026, 3, 16),
+            'Responsible': 'Department H',
+        },
+        {
+            'Project': 'Reborn',
+            'Start': Date(2026, 3, 7),
+            'Finish': Date(2026, 4, 6),
+            'Responsible': 'Steve Rogres',
+        },
+        ]
+    df = pd.DataFrame(data)
+    fig = px.timeline(
+        df,
+        x_start="Start",
+        x_end="Finish",
+        y="Project",
+        color="Responsible",
+        )
+    fig.update_yaxes(autorange="reversed")
+    gantt_plot = plot(fig, output_type='div')
+    from comun.graficas import PolarChart
+    radar = PolarChart('ISC')
+    radar.add_axis('Seguridad', label='S')
+    radar.add_axis('Calidad', label='C')
+    radar.add_axis('Interoperabilidad', label='I')
+    radar.add_axis('Personal', label='P')
+    radar.add_axis('Matraka', label='M')
+    radar.add_serie([12, 2.5, 12, 8, 17], label="ISSI")
     return render(request, "sistemas/labo.html", {
         'titulo': 'Labo sistemas',
         'chart': radar,
+        'plot_div': gantt_plot,
         })
 
 
@@ -537,7 +568,7 @@ def detalle_usuario(request, usuario, *args, **kwargs):
 
 
 @login_required
-def bar_sistemas2():
+def bar_sistemas2(request):
     from comun.charts import BarChart
     result = BarChart()
     for ente in Ente.objects.all():
