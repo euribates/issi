@@ -2,7 +2,6 @@
 
 from functools import cache
 from collections import defaultdict
-import io
 
 from django.contrib import messages
 from django.http import HttpResponse

@@ -1,15 +1,12 @@
 #!/usr/bin/env python3
 
 from pathlib import Path
-from textwrap import wrap
 
 from django.core.management.base import BaseCommand
 
-import pandas as pd
 from rich.console import Console
 from rich.table import Table
 
-from sistemas.parsers import parse_row
 from sistemas.models import Sistema
 from sistemas.importers import importar_sistemas_desde_fichero
 
@@ -20,7 +17,7 @@ EPILOG   = 'ISSI - Inventario de sistemas de información'
 
 class Command(BaseCommand):
     help = ABOUT
-importar_sistemas_desde_fichero
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.console = Console(file=self.stdout)
