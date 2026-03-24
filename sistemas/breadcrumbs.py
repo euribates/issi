@@ -90,6 +90,8 @@ def bc_asignar_responsable(sistema: models.Sistema) -> BreadCrumb:
         )
 
 
+
+
 def bc_conmutar_campo(sistema: models.Sistema, field_name: str, verbose_name: str=''):
     if not verbose_name:
         verbose_name = field_name
@@ -152,6 +154,12 @@ def bc_asignar_interlocutor(ente) -> BreadCrumb:
         links.a_asignar_interlocutor(ente.pk),
         )
 
+
+def bc_desasignar_interlocutor(ente, usuario) -> BreadCrumb:
+    return bc_detalle_ente(ente).step(
+        "Desasignar responsable",
+        links.a_desasignar_interlocutor(ente.pk, usuario.pk),
+        )
 
 
 def bc_detalle_organismo(organismo) -> BreadCrumb:

@@ -908,6 +908,19 @@ class Ente(models.Model):
         )
         return interlocutor
 
+    def desasignar_interlocutor(self, usuario):
+        """Libera un usuario como interlocutor del ente
+
+        Es idempotente, si el interlocutor no estaba
+        asignado, no hace nada.
+        """
+        from sistemas.models import Interlocutor
+
+        Interlocutor.objects.filter(
+            organismo=self.organismo,
+            usuario=usuario,
+            ).delete()
+
 
 class EjeManager(models.Manager):
 

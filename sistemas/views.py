@@ -669,6 +669,30 @@ def asignar_interlocutor(request, ente):
 
 
 @login_required
+def desasignar_interlocutor(request, ente, usuario):
+    if request.method == "POST":
+        form = forms.EstaSeguroForm(request.POST)
+        if form.is_valid():
+            Bus(request).success(
+                f"El usuario {usuario}"    
+                " ha dejado de ser interlocutor"
+                f" del ente {ente}"
+                )
+            ente.desasignar_interlocutor(usuario)
+            return redirect(links.a_detalle_ente(ente.pk))
+    else:
+        form = forms.EstaSeguroForm()
+    return render(request, 'sistemas/desasignar-interlocutor.html', {
+        'titulo': f'Desasignar interlocutor a {ente}',
+        'breadcrumbs': bc.bc_desasignar_interlocutor(ente, usuario),
+        'tab': 'entes',
+        'form': form,
+        'ente': ente,
+        'usuario': usuario,
+        })
+
+
+@login_required
 def listado_organismos(request):
     filterset = filtersets.OrganismoFilter(
         request.GET,

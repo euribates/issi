@@ -35,6 +35,7 @@ urlpatterns = [
     tie('entes/', views.listado_entes),
     tie('entes/<ent:ente>/', views.detalle_ente),
     tie('entes/<ent:ente>/asignar/interlocutor/', views.asignar_interlocutor),
+    tie('entes/<ent:ente>/desasignar/interlocutor/<usr:usuario>/', views.desasignar_interlocutor),
     tie('organismo/', views.listado_organismos),
     tie('organismo/<org:organismo>/', views.detalle_organismo),
     tie('usuario/', views.listado_usuarios),

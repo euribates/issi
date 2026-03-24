@@ -111,6 +111,14 @@ def a_asignar_interlocutor(id_ente) -> str:
     return _a('sistemas:asignar_interlocutor', ente=id_ente)
 
 
+def a_desasignar_interlocutor(id_ente, id_usuario) -> str:
+    return _a(
+        'sistemas:desasignar_interlocutor',
+        ente=id_ente,
+        usuario=id_usuario,
+        )
+
+
 def a_detalle_organismo(id_organismo) -> str:
     return _a('sistemas:detalle_organismo', organismo=id_organismo)
 
