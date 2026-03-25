@@ -16,3 +16,4 @@ pandas==3.0.0
 odfpy==1.4.1
 pychart-js==0.3.0
 django-import-export[ods]
+dj-database-url==3.1.2
