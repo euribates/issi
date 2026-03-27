@@ -470,6 +470,16 @@ def isc_chart(sistema):
     return polar
 
 
+@login_required
+def backlog_sistema(request, sistema):
+    return render(request, 'sistemas/backlog-sistema.html', {
+        'titulo': f'Backlog {sistema}',
+        'commands': cmd_sistemas(),
+        'breadcrumbs': bc.bc_backlog_sistema(sistema),
+        'tab': 'sistemas',
+        'sistema': sistema,
+        })
+
 
 
 @login_required

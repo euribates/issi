@@ -27,6 +27,13 @@ def bc_detalle_sistema(sistema) -> BreadCrumb:
         )
 
 
+def bc_backlog_sistema(sistema):
+    return bc_detalle_sistema(sistema).step(
+        'Backlog',
+        links.a_backlog_sistema(sistema.pk),
+        )
+
+
 def bc_cuestionario_sistema(sistema):
     return bc_detalle_sistema(sistema).step(
         'Cuestionario',
