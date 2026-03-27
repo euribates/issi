@@ -1,0 +1,65 @@
+[
+{
+    "model": "omnibus.nivelevento",
+    "pk": "archive",
+    "fields": {
+        "nombre_nivel": "Borrado lógico o archivado"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "debug",
+    "fields": {
+        "nombre_nivel": "Mensajes de depuración"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "delete",
+    "fields": {
+        "nombre_nivel": "Borrado físico de datos"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "error",
+    "fields": {
+        "nombre_nivel": "Mensajes de error"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "info",
+    "fields": {
+        "nombre_nivel": "Mensajes informativos"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "insert",
+    "fields": {
+        "nombre_nivel": "Alta de nuevos datos"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "panic",
+    "fields": {
+        "nombre_nivel": "Mensaje de error crítico"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "update",
+    "fields": {
+        "nombre_nivel": "Modificación de datos"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "warning",
+    "fields": {
+        "nombre_nivel": "Mensajes de aviso"
+    }
+}
+]

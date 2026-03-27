@@ -1,0 +1,37 @@
+{% extends "comun/base-form.html" %}
+{% load comun_filters %}
+
+{% block form %}
+
+<form method="POST" action=".">
+{% csrf_token %}
+
+<div class="card m-4">
+
+  <div class="card-body">
+
+    <h2 class="card-title">
+        Liberación de interlocutor
+    </h2>
+
+    <p class="lead">      
+    Liberar al usuario <b>{{ usuario }}</b>
+        como interlocutor
+        del ente <b>{{ ente }}</b>.
+    </p>
+
+   <div class="m-2">
+
+        {{ form }}
+
+   </div>
+  </div><!-- de card-body -->
+
+  <div class="card-footer d-flex flex-row-reverse">
+  <button type="submit" class="btn btn-primary">Liberar como interlocutor</button>
+  </div>
+
+</div>  
+</form>
+
+{% endblock form %}
