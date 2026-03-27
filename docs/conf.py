@@ -25,11 +25,16 @@ release = '0.1'
 language = 'es'
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
     'sphinx.ext.graphviz',
     'sphinx.ext.napoleon',
     'sphinx.ext.todo',
     'myst_parser',
     ]
+
+intersphinx_mapping = {
+    "python": ("https://docs.python.org/3/", None),
+    }
 
 # templates_path = ['_templates']
 exclude_patterns = []

@@ -6,7 +6,7 @@
 
 <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
   <li class="nav-item" role="presentation">
-      <a class="nav-link"
+      <a class="nav-link active"
          role="button"
          href="{% url 'sistemas:backlog_sistema' sistema=sistema %}">
           <i>Backlog</i>
@@ -30,40 +30,10 @@
 <div class="container">
   <div class="row align-items-start">
 
-    <div class="col col-5">
-      
-      {% include "sistemas/includes/identificacion-sistema.html" %}
-      {% include "sistemas/includes/finalidad.html" %}
-      
-    </div>
-    
-    <div class="col col-7">
 
-    {% include "sistemas/includes/isc.html" %}
-    {% include "sistemas/includes/clasificacion.html" %}
-    {% include "sistemas/includes/responsables.html" %}
-    {% include "sistemas/includes/juriscan.html" %}
-    </div>
-
-  </div>
-  <div class="col-12">
-    {% include "sistemas/includes/diagnostico.html" %}
-  </div>  
-</div>
+      [[ Falta tabla de backlog ]]
 
   </div>
 </div>  
   
 {% endblock content %}
-
-{% block scripts %}
-  {{ block.super }}
-
-<script>
-async function copyClaveExterna() {
-    let text = document.getElementById('clave-externa').innerHTML;
-    await navigator.clipboard.writeText(text);
-    }
-</script>
-    
-{% endblock scripts %}

@@ -8,7 +8,7 @@ Requisitos de calidad de los sistemas
 ------------------------------------------------------------------------
 
 El sistema define tres niveles de calidad, en lo que respecta a los datos
-amacenados para cada sistema:
+almacenados para cada sistema:
 
 - **Calidad Mínima**
 
@@ -59,16 +59,15 @@ amacenados para cada sistema:
       - Se podría incluir que el sistema tenga obligatoriamente
         las respuestas del cuestionario específico.
 
-  Si un sistema no cumple **cualquiera** de estas condiciones,
-  se considera que el sistema está
-  **pendiente de algunos datos**.
-  El icono de estado se mostrará en amarillo.
+  Si un sistema no cumple **cualquiera** de estas condiciones, se
+  considera que el sistema está **pendiente de algunos datos**.  El icono
+  de estado se mostrará en amarillo.
 
 - **Completo**
 
   Si el sistema no presenta **ninguda** de las deficiencias del apartado
-  anterior, se considera **Completo**. 
-  El icono de estado se mostrará en verde.
+  anterior, se considera **Completo**.  El icono de estado se mostrará en
+  verde.
 
 
 Modelos

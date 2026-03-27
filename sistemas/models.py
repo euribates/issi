@@ -771,7 +771,22 @@ class JuriscanSistema(models.Model):
     objects = JuriscanSistemaManager()
 
     def natural_key(self) -> tuple[int, int]:
-        """Devuelve una tupla con los valores de la clave natural."""
+        """Devuelve una tupla con los valores de la clave natural.
+
+        En el caso de ``JuriscanSistema``, la clave natural
+        es la combinación de la clave primaria del sistema
+        y la clave primaria de la ficha de Juriscán.
+
+        Arguments:
+
+            self (Self): La instancia de ``JuriscanSistema``.
+
+        Returns:
+
+            tuple[int, int]: Una tupla con los dos valores de las
+              claves primarias del sistema y de la ficha de juriscán,
+              en ese orden.
+        """
         return (self.sistema.pk, self.juriscan.pk)
 
     @classmethod

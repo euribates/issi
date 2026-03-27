@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'antecedentes',
     'normativa',
     'sistemas',
+    'plan',
     'directorio',
     'juriscan',
     'glosario',
