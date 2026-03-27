@@ -162,10 +162,10 @@ def bc_asignar_interlocutor(ente) -> BreadCrumb:
         )
 
 
-def bc_desasignar_interlocutor(ente, usuario) -> BreadCrumb:
+def bc_liberar_interlocutor(ente, usuario) -> BreadCrumb:
     return bc_detalle_ente(ente).step(
-        "Desasignar responsable",
-        links.a_desasignar_interlocutor(ente.pk, usuario.pk),
+        "Liberar interlocutor",
+        links.a_liberar_interlocutor(ente.pk, usuario.pk),
         )
 
 

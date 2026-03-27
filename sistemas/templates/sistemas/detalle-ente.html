@@ -139,9 +139,10 @@
               </td>
               <td>
                   <a role="button" class="btn btn-danger"
-                      href="{% url 'sistemas:desasignar_interlocutor' ente=ente usuario=interlocutor.usuario %}">
+                     title="Liberar interlocutor" 
+                     href="{% url 'sistemas:liberar_interlocutor' ente=ente usuario=interlocutor.usuario %}">
                   <i class="bi bi-person-dash"></i>
-                  Desasignar
+                  <span class="d-none d-md-inline">Liberar</span>
                   </a>
               </td>
           </tr>  

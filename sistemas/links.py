@@ -115,9 +115,9 @@ def a_asignar_interlocutor(id_ente) -> str:
     return _a('sistemas:asignar_interlocutor', ente=id_ente)
 
 
-def a_desasignar_interlocutor(id_ente, id_usuario) -> str:
+def a_liberar_interlocutor(id_ente, id_usuario) -> str:
     return _a(
-        'sistemas:desasignar_interlocutor',
+        'sistemas:liberar_interlocutor',
         ente=id_ente,
         usuario=id_usuario,
         )

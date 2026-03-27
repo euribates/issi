@@ -10,9 +10,14 @@
 
 <div class="card-header">
 
-  <h2 class="card-title">Asignar interlocutor al ente {{ ente }}.</h2>
-
   <div class="card-body">
+
+  <h2 class="card-title">Asignar interlocutor</h2>
+
+  <p class="lead">
+  Asignar usuario como interlocutor del ente <b>{{ ente }}</b>.
+  </p> 
+
 
   {{ form.errors }}  
 
@@ -35,7 +40,7 @@
   </div><!-- de card-body -->
 
   <div class="card-footer d-flex flex-row-reverse">
-  <button type="submit" class="btn btn-primary">Asignar responsable</button>
+  <button type="submit" class="btn btn-primary">Asignar interlocutor</button>
   </div>
 </div>  
 </form>

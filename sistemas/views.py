@@ -9,24 +9,24 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 
-from . import breadcrumbs as bc
-from . import diagnosis
-from . import forms
-from . import links
-from . import models
-from . import serializers
-
 from comun.error import errors
-from comun.bus import Bus
 from comun.commands import Command
 from comun.funcop import agrupa
 from comun import graficas
+from omnibus.bus import Bus
 
 from directorio.models import Organismo
 from sistemas import filtersets
 from sistemas.models import Ente
 from sistemas.importers import importar_sistemas_desde_fichero
 from sistemas.models import Sistema
+
+from . import breadcrumbs as bc
+from . import diagnosis
+from . import forms
+from . import links
+from . import models
+from . import serializers
 
 """Vistas de sistemas.
 """
@@ -172,7 +172,7 @@ def asignar_familia(request, sistema):
         form = forms.AsignarFamiliaForm(request.POST, instance=sistema)
         if form.is_valid():
             familia = sistema.asignar_familia(form.cleaned_data['familia'])
-            Bus(request).sistema_asignado_familia(sistema, familia)
+            Bus(request).pub_sistema_asignado_familia(sistema, familia)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.AsignarFamiliaForm(instance=sistema)
@@ -193,7 +193,7 @@ def editar_finalidad(request, sistema):
             finalidad = form.cleaned_data['finalidad']
             if finalidad != sistema.finalidad:
                 sistema.save(update_fields=['finalidad'])
-                Bus(request).sistema_editar_finalidad(sistema, finalidad)
+                Bus(request).pub_sistema_editar_finalidad(sistema, finalidad)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.EditarFinalidadForm(instance=sistema)
@@ -213,7 +213,7 @@ def editar_descripcion(request, sistema):
         if form.is_valid():
             sistema.descripcion = form.cleaned_data['descripcion']
             sistema.save(update_fields=['descripcion'])
-            Bus(request).sistema_editar_descripcion(sistema, sistema.descripcion)
+            Bus(request).pub_sistema_editar_descripcion(sistema, sistema.descripcion)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.EditarDescripcionForm(instance=sistema)
@@ -234,7 +234,7 @@ def asignar_responsable(request, sistema):
             cometido = form.cleaned_data['cometido']
             usuario = form.cleaned_data['usuario']
             perfil = sistema.asignar_responsable(cometido, usuario)
-            Bus(request).sistema_asignar_responsable(sistema, perfil)
+            Bus(request).pub_sistema_asignar_responsable(sistema, perfil)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.AsignarResponsableForm()
@@ -253,7 +253,7 @@ def asignar_tema(request, sistema):
         form = forms.AsignarTemaForm(request.POST, instance=sistema)
         if form.is_valid():
             tema = sistema.asignar_tema(form.cleaned_data['tema'])
-            Bus(request).sistema_asignar_materia(sistema, tema)
+            Bus(request).pub_sistema_asignar_materia(sistema, tema)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.AsignarTemaForm(instance=sistema)
@@ -272,7 +272,7 @@ def asignar_icono(request, sistema):
         form = forms.AsignarIconoForm(request.POST, request.FILES, instance=sistema)
         if form.is_valid():
             form.save()
-            Bus(request).sistema_asignar_icono(sistema)
+            Bus(request).pub_sistema_asignar_icono(sistema)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.AsignarIconoForm(instance=sistema)
@@ -403,7 +403,7 @@ def conmutar_campo(request, sistema, campo: str):
         if form.is_valid():
             setattr(sistema, campo, not getattr(sistema, campo))
             sistema.save()
-            Bus(request).sistema_conmutar_campo(sistema, campo)
+            Bus(request).pub_sistema_conmutar_campo(sistema, campo)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.EstaSeguroForm()
@@ -443,7 +443,7 @@ def borrar_perfil(request, id_perfil: int):
     if perfil:
         id_sistema = perfil.sistema.pk
         perfil.delete()
-        Bus(request).perfil_borrado(perfil)
+        Bus(request).pub_perfil_borrado(perfil)
         return redirect(links.a_detalle_sistema(id_sistema))
     return redirect(links.a_sistemas())
 
@@ -536,7 +536,7 @@ def alta_usuario_interno(request, *args, **kwargs):
         form = forms.AltaUsuarioInternoForm(request.POST)
         if form.is_valid():
             usuario = form.save()
-            Bus(request).nuevo_usuario(usuario)
+            Bus(request).pub_nuevo_usuario(usuario)
             return redirect(links.a_detalle_usuario(usuario.pk))
     else:
         form = forms.AltaUsuarioInternoForm()
@@ -554,7 +554,7 @@ def alta_usuario_externo(request, *args, **kwargs):
         form = forms.AltaUsuarioExternoForm(request.POST)
         if form.is_valid():
             usuario = form.save()
-            Bus(request).nuevo_usuario(usuario)
+            Bus(request).pub_nuevo_usuario(usuario)
             return redirect(links.a_detalle_usuario(usuario.pk))
     else:
         form = forms.AltaUsuarioExternoForm()
@@ -661,10 +661,9 @@ def asignar_interlocutor(request, ente):
         if form.is_valid():
             usuario = form.cleaned_data['usuario']
             interlocutor = ente.asignar_interlocutor(usuario)
-            Bus(request).success(
-                f"El usuario {interlocutor.usuario}"    
-                " ha sido asignado como interlocutor"
-                f" del ente {ente}"
+            Bus(request).pub_interlocutor_asignado(
+                interlocutor.usuario,
+                ente
                 )
             return redirect(links.a_detalle_ente(ente.pk))
     else:
@@ -679,22 +678,18 @@ def asignar_interlocutor(request, ente):
 
 
 @login_required
-def desasignar_interlocutor(request, ente, usuario):
+def liberar_interlocutor(request, ente, usuario):
     if request.method == "POST":
         form = forms.EstaSeguroForm(request.POST)
         if form.is_valid():
-            Bus(request).success(
-                f"El usuario {usuario}"    
-                " ha dejado de ser interlocutor"
-                f" del ente {ente}"
-                )
-            ente.desasignar_interlocutor(usuario)
+            Bus(request).pub_interlocutor_liberado(usuario, ente)
+            ente.liberar_interlocutor(usuario)
             return redirect(links.a_detalle_ente(ente.pk))
     else:
         form = forms.EstaSeguroForm()
-    return render(request, 'sistemas/desasignar-interlocutor.html', {
-        'titulo': f'Desasignar interlocutor a {ente}',
-        'breadcrumbs': bc.bc_desasignar_interlocutor(ente, usuario),
+    return render(request, 'sistemas/liberar-interlocutor.html', {
+        'titulo': f'Liberar interlocutor a {ente}',
+        'breadcrumbs': bc.bc_liberar_interlocutor(ente, usuario),
         'tab': 'entes',
         'form': form,
         'ente': ente,

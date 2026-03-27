@@ -66,9 +66,13 @@ def as_tema(tema):
         icon = ''
         klass = 'badge bg-info text-white'
     return mark_safe(
+        f'<span title="{txt} ({tema.pk})">'
         f'{icon}<span class="{klass}">'
         f'<a class="link-light text-decoration-none"'
-        f' href="{url}">{txt}</a>'
+        f' href="{url}">'
+        f'<span class="d-none d-md-inline">{txt}</span>'
+        f'<span class="d-sm-inline d-md-none">{tema.pk}</span>'
+        '</a>'
         '</span>')
 
 
