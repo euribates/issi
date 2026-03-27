@@ -3,9 +3,6 @@
 from dataclasses import dataclass
 import pytest
 
-from django.db import models
-
-
 from omnibus.bus import Bus, Evento
 from unittest.mock import Mock
 
@@ -77,7 +74,6 @@ def test_bus_publica(dummy_bus):
         )
     assert dummy_bus.messages.last_level == 'debug'
     event = Evento.objects.filter(sujeto=1, nombre_clase='FakeModel')
-    from icecream import ic; ic(event)
     assert event.exists()
 
 if __name__ == "__main__":
