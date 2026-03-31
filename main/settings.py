@@ -114,29 +114,25 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DEFAULT_DATABASE = config(
+DEFAULT_DATABASE = dj_database_url.parse(config(
     'DEFAULT_DATABASE',
     default=str(f"sqlite:///{BASE_DIR / 'db.sqlite3'}"),
-    )
+    ))
 
-TEST_DATABASE = config(
+# from icecream import ic; ic(DEFAULT_DATABASE)
+# from icecream import ic; ic(type(DEFAULT_DATABASE))
+# DEFAULT_DATABASE['TEST'] = 'test'
+# from icecream import ic; ic(DEFAULT_DATABASE['TEST'])
+
+TEST_DATABASE = dj_database_url.parse(config(
     'TEST_DATABASE',
     default=str(f"sqlite:///{BASE_DIR / 'test_db.sqlite3'}"),
-    )
-
+    ))
 
 DATABASES = {
-    'default': dj_database_url.parse(DEFAULT_DATABASE),
-    'test_default': dj_database_url.parse(TEST_DATABASE),
-    # {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        # 'TEST': {
-            # 'NAME': BASE_DIR / 'test_db.sqlite3',
-            # },
-    # }
-}
-
+    'default': DEFAULT_DATABASE,
+    'test_default': TEST_DATABASE,
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators

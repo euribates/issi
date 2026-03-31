@@ -2,40 +2,21 @@
 
 from django.db import migrations
 
-NIVELES = {
-    'debug': "Mensajes de depuración",
-    'info': "Mensajes informativos",
-    'insert': "Alta de nuevos datos",
-    'update': "Modificación de datos",
-    'delete': "Borrado físico de datos",
-    'archive': "Borrado lógico o archivado",
-    'warning': "Mensajes de aviso",
-    'error': "Mensajes de error",
-    'panic': "Mensaje de error crítico",
-    }
+do_statements = [
+    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('debug', 'Mensajes de depuración');",
+    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('info', 'Mensajes informativos');",
+    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('insert', 'Alta de nuevos datos');",
+    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('update', 'Modificación de datos');",
+    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('delete', 'Borrado físico de datos');",
+    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('archive', 'Borrado lógico o archivado');",
+    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('warning', 'Mensajes de aviso');",
+    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('error', 'Mensajes de error');",
+    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('panic', 'Mensaje de error crítico');",
+    ]
 
-
-def add_levels(apps, schema_editor):
-    NivelEvento = apps.get_model("omnibus", "NivelEvento")
-    for id_nivel_evento, nombre_nivel in NIVELES.items():
-        try:
-            nivel = NivelEvento.objects.get(id_nivel_evento=id_nivel_evento)
-            if nivel.nombre_nivel != nombre_nivel:
-                nivel.nombre_nivel = nombre_nivel
-                nivel.save()
-        except NivelEvento.DoesNotExist:
-            nivel = NivelEvento(
-                id_nivel_evento=id_nivel_evento,
-                nombre_nivel=nombre_nivel,
-                )
-            nivel.save()
-
-
-def remove_levels(apps, schema_editor):
-    NivelEvento = apps.get_model("omnibus", "NivelEvento")
-    for nivel in NivelEvento.objects.all():
-        if nivel.pk in NIVELES:
-            nivel.delete()
+undo_statements = [
+    "DELETE FROM obus_nivel_evento;",
+    ]
 
 
 class Migration(migrations.Migration):
@@ -45,5 +26,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(add_levels, remove_levels),
+        migrations.RunSQL(sql=do_statements, reverse_sql=undo_statements),
     ]
