@@ -1,7 +1,5 @@
 set export
 
-DATABASE := "default"
-
 # Abrir una shell de python/Django
 shell:
     python ./manage.py shell_plus
@@ -85,7 +83,8 @@ alias mm := makemigrations
 
 # Ejecutar migraciones Django
 migrate $APP='': check
-    python manage.py migrate {{APP}} --database $DATABASE
+    python manage.py migrate {{APP}} --database default
+    python manage.py migrate {{APP}} --database test_default
 
 
 # Generar imágenes para la documentación de los modelos

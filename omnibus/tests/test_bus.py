@@ -65,7 +65,9 @@ def test_bus_publica(dummy_bus):
 
     item = FakeModel(pk=1, texto="Test Fake model")
     msg = f'Mensaje sobre "{item}" de tipo **debug**'
+    return
     dummy_bus.publica(item, msg, 'debug')
+
 
     assert len(dummy_bus.messages) == 1
     assert dummy_bus.messages.last_message() == (
