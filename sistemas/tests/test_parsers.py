@@ -164,10 +164,11 @@ def test_parse_uuid_bad():
     assert parsers.parse_uuid('María tenía un corderito').is_failure()
 
 
+@pytest.mark.django_db
 def test_parse_uuid():
     expected = UUID('20f5484b-88ae-49b0-8af0-3a389b4917dd')
     r = parsers.parse_uuid('20f5484b-88ae-49b0-8af0-3a389b4917dd')
-    assert r.is_success() and r.value == expected
+    assert r.is_success() and r.value is None
 
 
 # ---------------------------[ Tests para parse_materia_competencial ]--
@@ -236,7 +237,7 @@ def test_parse_row():
     assert data['responsables_funcionales'].value == set([malosua])
     assert data['juriscan'].value == set([juriscan_5559])
     assert data['comentarios'].value == 'Este es el comentario'
-    assert data['uuid'].value == UUID('2b4c67ad-cf08-11f0-bdf7-38d5470ea667')
+    assert data['uuid'].value.uuid_sistema == UUID('2b4c67ad-cf08-11f0-bdf7-38d5470ea667')
 
 
 if __name__ == '__main__':

@@ -10,7 +10,7 @@ jupyterlab
 myst-parser
 myst-nb
 pydot==4.0.1
-pytest-django==4.11.1
+pytest-django==4.12.0
 pytest==9.0.1
 ruff
 sphinx==8.2.3

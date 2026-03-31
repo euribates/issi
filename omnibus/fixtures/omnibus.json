@@ -1,0 +1,221 @@
+[
+{
+    "model": "omnibus.nivelevento",
+    "pk": "archive",
+    "fields": {
+        "nombre_nivel": "Borrado lógico o archivado"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "debug",
+    "fields": {
+        "nombre_nivel": "Mensajes de depuración"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "delete",
+    "fields": {
+        "nombre_nivel": "Borrado físico de datos"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "error",
+    "fields": {
+        "nombre_nivel": "Mensajes de error"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "info",
+    "fields": {
+        "nombre_nivel": "Mensajes informativos"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "insert",
+    "fields": {
+        "nombre_nivel": "Alta de nuevos datos"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "panic",
+    "fields": {
+        "nombre_nivel": "Mensaje de error crítico"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "update",
+    "fields": {
+        "nombre_nivel": "Modificación de datos"
+    }
+},
+{
+    "model": "omnibus.nivelevento",
+    "pk": "warning",
+    "fields": {
+        "nombre_nivel": "Mensajes de aviso"
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "00dea3b1-2846-11f1-9959-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"PAPJS\"",
+        "nombre_clase": "Ente",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido liberado del cargo de interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
+        "momento": "2026-03-25T12:27:35.262Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "00e0362e-2846-11f1-8cab-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodleo\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido liberado del cargo de interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
+        "momento": "2026-03-25T12:27:35.271Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "5335f5b0-2846-11f1-952b-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"PAPJS\"",
+        "nombre_clase": "Ente",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido asignado como interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
+        "momento": "2026-03-25T12:29:53.406Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "533683c5-2846-11f1-a8bd-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodleo\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido asignado como interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
+        "momento": "2026-03-25T12:29:53.410Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "5a885f3a-2846-11f1-a01e-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"PAPJS\"",
+        "nombre_clase": "Ente",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido liberado del cargo de interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
+        "momento": "2026-03-25T12:30:05.691Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "5a899f33-2846-11f1-82e9-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodleo\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido liberado del cargo de interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
+        "momento": "2026-03-25T12:30:05.699Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b2046aeb-2843-11f1-b8a7-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"PAPJS\"",
+        "nombre_clase": "Ente",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido asignado como interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
+        "momento": "2026-03-25T12:11:03.975Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b2067239-2843-11f1-a4cd-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodleo\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido asignado como interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
+        "momento": "2026-03-25T12:11:03.990Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b91945c7-2843-11f1-a775-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"PAPJS\"",
+        "nombre_clase": "Ente",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido liberado del cargo de interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
+        "momento": "2026-03-25T12:11:15.855Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b919e13f-2843-11f1-aef7-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodleo\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido liberado del cargo de interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
+        "momento": "2026-03-25T12:11:15.860Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f15780b3-2843-11f1-b527-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"PAPJS\"",
+        "nombre_clase": "Ente",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido asignado como interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
+        "momento": "2026-03-25T12:12:50.216Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f158cd1b-2843-11f1-9dc0-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodleo\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido asignado como interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
+        "momento": "2026-03-25T12:12:50.224Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+}
+]

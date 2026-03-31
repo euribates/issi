@@ -1,0 +1,16 @@
+[
+{
+    "model": "plan.backlog",
+    "pk": 1,
+    "fields": {
+        "sistema": 1,
+        "titulo": "Alta de enlace a Juriscan",
+        "explicacion": "Incluir enlaces a Juriscán, para asociar normativa vinculada con el sistema de información",
+        "estimacion": 25,
+        "prioridad": 30,
+        "f_creacion": "2026-03-31T18:59:46.895Z",
+        "f_modificacion": "2026-03-31T18:59:46.895Z",
+        "f_finalizacion": null
+    }
+}
+]

@@ -5,6 +5,7 @@ python -Xutf8 ./manage.py dumpdata normativa --indent 4 > normativa/fixtures/nor
 python -Xutf8 ./manage.py dumpdata directorio --indent 4 > directorio/fixtures/directorio.json
 python -Xutf8 ./manage.py dumpdata juriscan --indent 4 > juriscan/fixtures/juriscan.json
 python -Xutf8 ./manage.py dumpdata sistemas --indent 4 > sistemas/fixtures/sistemas.json
-python -Xutf8 ./manage.py dumpdata antecedentes --indent 4 > antecedentes/fixtures/antecedentes.json
+python -Xutf8 ./manage.py dumpdata plan --indent 4 > plan/fixtures/plan.json
+python -Xutf8 ./manage.py dumpdata omnibus --indent 4 > omnibus/fixtures/omnibus.json
 
 zip  -r uploads.zip uploads/
