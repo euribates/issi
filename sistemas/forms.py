@@ -4,6 +4,7 @@ from django import forms
 from django.forms import widgets
 
 from . import models
+from plan.models import Backlog
 
 
 class BootstrapForm(forms.Form):
@@ -220,5 +221,35 @@ class AltaOpcionForm(BootstrapForm, forms.ModelForm):
         instance = super().save(commit=False)
         instance.pregunta = self.pregunta
         instance.orden = instance.get_next_orden()
+        instance = super().save(commit=commit)
+        return instance
+
+
+
+class CrearBacklogForm(BootstrapForm, forms.ModelForm):
+
+    class Meta:
+        model = Backlog
+        fields = [
+            'titulo',
+            'explicacion',
+            'estimacion',
+            'prioridad',
+            ]
+        widgets = {
+            'explicacion': forms.Textarea(attrs={
+                'class': "form-control",
+                'cols': 70,
+                'rows': 5,
+                }),
+        }
+
+    def __init__(self, *args, **kwargs):
+        self.sistema = kwargs.pop('sistema')
+        super().__init__(*args, **kwargs)
+
+    def save(self, commit=True):
+        instance = super().save(commit=False)
+        instance.sistema = self.sistema
         instance = super().save(commit=commit)
         return instance

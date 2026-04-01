@@ -311,7 +311,7 @@ class Sistema(models.Model):
             return None
 
     def __str__(self):
-        return self.nombre_sistema
+        return f'{self.nombre_sistema} ({self.codigo})'
 
     def touch(self):
         self.f_cambio = localtime()

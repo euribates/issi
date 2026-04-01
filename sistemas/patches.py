@@ -127,5 +127,3 @@ def patch_usuarios(request):
         f'<div id="control_usuarios">{result}</div>'
         f'<div id="contador">{contador}<div>'
         )
-
-

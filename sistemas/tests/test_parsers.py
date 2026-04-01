@@ -166,7 +166,6 @@ def test_parse_uuid_bad():
 
 @pytest.mark.django_db
 def test_parse_uuid():
-    expected = UUID('20f5484b-88ae-49b0-8af0-3a389b4917dd')
     r = parsers.parse_uuid('20f5484b-88ae-49b0-8af0-3a389b4917dd')
     assert r.is_success() and r.value is None
 

@@ -472,12 +472,27 @@ def isc_chart(sistema):
 
 @login_required
 def backlog_sistema(request, sistema):
+    form = forms.CrearBacklogForm(sistema=sistema)
     return render(request, 'sistemas/backlog-sistema.html', {
         'titulo': f'Backlog {sistema}',
         'commands': cmd_sistemas(),
         'breadcrumbs': bc.bc_backlog_sistema(sistema),
         'tab': 'sistemas',
         'sistema': sistema,
+        'form': form,
+        })
+
+
+@login_required
+def crear_backlog(request, sistema):
+    form = forms.CrearBacklogForm(sistema=sistema)
+    return render(request, 'sistemas/crear-backlog.html', {
+        'titulo': f'Añadir item al Backlog de {sistema}',
+        'commands': cmd_sistemas(),
+        'breadcrumbs': bc.bc_crear_backlog(sistema),
+        'tab': 'sistemas',
+        'sistema': sistema,
+        'form': form,
         })
 
 

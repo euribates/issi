@@ -1,0 +1,71 @@
+{% load cards %}
+
+<form method="POST"
+      action="{% url 'sistemas:crear_backlog' sistema=sistema %}">
+{% csrf_token %}
+
+<div class="card">
+  <div class="card-body m-3">
+    <h2 class="card-title h4">
+    Añade tarea al <i>backlog</i>
+    de {{ sistema }}
+    </h2>
+  </div>
+
+  <div class="m-2">
+    <label for="id_titulo">{{ form.titulo.label }}</label>
+    {{ form.titulo }}
+    {% if form.titulo.errors %}<ul class="form-errors">
+      {% for error_message in form.titulo.errors %}
+      <li>{{ error_message }}</li>
+      {% endfor %}
+    </ul>{% endif %}
+   </div>
+
+  <div class="m-2">
+    <label for="id_titulo">{{ form.explicacion.label }}</label>
+    {{ form.explicacion }}
+    {% if form.explicacion.errors %}<ul class="form-errors">
+      {% for error_message in form.explicacion.errors %}
+      <li>{{ error_message }}</li>
+      {% endfor %}
+    </ul>{% endif %}
+   </div>
+
+  <div class="row">
+    <div class="col">
+
+      <div class="m-2">
+        <label for="id_titulo">{{ form.prioridad.label }}</label>
+        {{ form.prioridad }}
+        {% if form.prioridad.errors %}<ul class="form-errors">
+          {% for error_message in form.prioridad.errors %}
+          <li>{{ error_message }}</li>
+          {% endfor %}
+        </ul>{% endif %}
+      </div>
+
+    </div>
+    <div class="col">
+
+        <div class="m-2">
+          <label for="id_titulo">{{ form.estimacion.label }}</label>
+          {{ form.estimacion }}
+          {% if form.estimacion.errors %}<ul class="form-errors">
+            {% for error_message in form.estimacion.errors %}
+            <li>{{ error_message }}</li>
+            {% endfor %}
+          </ul>{% endif %}
+        </div>
+
+    </div>
+    <div class="m-2">
+      <input type="submit" value="Añadir tarea" name="submit">
+    </div>  
+
+  </div>
+
+
+
+</div>
+</form>

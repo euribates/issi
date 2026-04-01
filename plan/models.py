@@ -59,12 +59,12 @@ class Backlog(models.Model):
     estimacion = models.SmallIntegerField(
         'Estimación',
         choices=Estimacion,
-        default=Estimacion.SM,
+        default=Estimacion.MD,
         )
     prioridad = models.SmallIntegerField(
         'Prioridad',
         choices=Prioridad,
-        default=Prioridad.BAJA,
+        default=Prioridad.MEDIA,
         )
     f_creacion = models.DateTimeField(auto_now_add=True, editable=False)
     f_modificacion = models.DateTimeField(auto_now=True, editable=False)
@@ -86,4 +86,3 @@ class Backlog(models.Model):
 
     def impacto(self):
         return self.prioridad / self.estimacion
-    
