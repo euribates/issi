@@ -92,16 +92,16 @@
 },
 {
     "model": "sistemas.familia",
-    "pk": "UNK",
+    "pk": "_NA",
     "fields": {
-        "nombre_familia": "Pendiente de definir"
+        "nombre_familia": "No aplicable"
     }
 },
 {
     "model": "sistemas.familia",
-    "pk": "_NA",
+    "pk": "UNK",
     "fields": {
-        "nombre_familia": "No aplicable"
+        "nombre_familia": "Pendiente de definir"
     }
 },
 {
@@ -669,7 +669,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo-issi.png",
         "f_alta": "2025-11-24T10:20:18.231Z",
-        "f_cambio": "2026-02-27T21:03:16.583Z",
+        "f_cambio": "2026-04-03T21:48:16.117Z",
         "f_baja": null
     }
 },

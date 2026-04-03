@@ -26,19 +26,19 @@ class Backlog(models.Model):
         verbose_name_plural = 'Backlogs'
 
     class Estimacion(models.IntegerChoices):
-        XS = (5, "Muy pequeña")
-        SM = (10, "Pequeña")
-        MD = (25, "Mediana")
-        LG = (50, "Grande")
-        XL = (100, "Muy grande")
+        XS = (5, "Trivial")
+        SM = (12, "Fácil")
+        MD = (30, "Normal")
+        LG = (70, "Complicada")
+        XL = (150, "Muy difícil")
 
     class Prioridad(models.IntegerChoices):
 
         MUY_BAJA = (5, "Muy baja")
-        BAJA = (15, "Baja")
+        BAJA = (12, "Baja")
         MEDIA = (30, "Media")
-        ALTA = (60, "Alta")
-        CRITICA = (100, "Crítica")
+        ALTA = (70, "Alta")
+        CRITICA = (150, "Crítica")
 
     id_backlog = models.BigAutoField(primary_key=True)
     sistema = models.ForeignKey(
@@ -57,7 +57,7 @@ class Backlog(models.Model):
         blank=True,
         )
     estimacion = models.SmallIntegerField(
-        'Estimación',
+        'Estimación de la complejidad',
         choices=Estimacion,
         default=Estimacion.MD,
         )

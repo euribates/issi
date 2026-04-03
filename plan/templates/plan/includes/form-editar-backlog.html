@@ -1,20 +1,15 @@
 {% load cards %}
 
 <form method="POST"
-      action="{% url 'sistemas:crear_backlog' sistema=sistema %}">
+      action="{% url 'plan:editar_backlog' backlog=backlog %}">
 {% csrf_token %}
 
 <div class="card">
   <div class="card-header">
     <h2 class="card-title h4">
-    {% if backlog %}
       Editar entrada {{ backlog.pk }}
       del <i>backlog</i> de {{ sistema }}:
       {{backlog}}
-    {% else %}
-      Añade tarea al <i>backlog</i>
-      de {{ sistema }}
-    {% endif %}
     </h2>
   </div>
 
@@ -66,11 +61,7 @@
 
     </div>
     <div class="m-2">
-      {% if backlog %}
         <input type="submit" value="Editar tarea" name="submit">
-      {% else %}
-        <input type="submit" value="Añadir tarea" name="submit">
-      {% endif %}  
     </div>  
 
   </div>

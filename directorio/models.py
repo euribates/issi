@@ -150,7 +150,7 @@ class Organismo(models.Model):
         '''
         self.f_cambio = timezone.now()
         self.save(update_fields=['f_cambio'])
-        if self.depende_de.exists():
+        if self.depende_de:
             self.depende_de.touch()
 
 

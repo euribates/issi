@@ -226,7 +226,7 @@ class AltaOpcionForm(BootstrapForm, forms.ModelForm):
 
 
 
-class CrearBacklogForm(BootstrapForm, forms.ModelForm):
+class BacklogForm(BootstrapForm, forms.ModelForm):
 
     class Meta:
         model = Backlog

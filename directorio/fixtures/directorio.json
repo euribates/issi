@@ -12,7 +12,7 @@
         "ruta": "/",
         "url": null,
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2025-11-27T13:28:21.256Z",
+        "f_cambio": "2026-04-03T21:48:16.146Z",
         "f_baja": null
     }
 },
@@ -318,7 +318,7 @@
         "ruta": "/1/42091/7268",
         "url": "http://www.gobiernodecanarias.org/presidencia/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2025-11-27T13:28:21.256Z",
+        "f_cambio": "2026-04-03T21:48:16.132Z",
         "f_baja": null
     }
 },
@@ -1134,7 +1134,7 @@
         "ruta": "/1/42091",
         "url": "http://www.gobiernodecanarias.org/presidencia/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2025-11-27T13:28:21.256Z",
+        "f_cambio": "2026-04-03T21:48:16.140Z",
         "f_baja": null
     }
 },
@@ -1168,7 +1168,7 @@
         "ruta": "/1/42091/7268/42093",
         "url": "https://www.gobiernodecanarias.org/transformaciondigital",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2025-11-27T13:28:21.256Z",
+        "f_cambio": "2026-04-03T21:48:16.126Z",
         "f_baja": null
     }
 },

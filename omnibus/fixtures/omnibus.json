@@ -90,6 +90,58 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "41525c7d-2f5f-11f1-8ae2-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "4",
+        "nombre_clase": "Backlog",
+        "descripcion": "Se ha añadido la tarea 4: Añadir una tarea al backlog de un sistema al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T13:15:58.951Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "41547802-2f5f-11f1-a1db-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "1",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha añadido la tarea 4: Añadir una tarea al backlog de un sistema al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T13:15:58.965Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "521e7b5f-2f9f-11f1-a9a4-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "7",
+        "nombre_clase": "Backlog",
+        "descripcion": "Se ha añadido la tarea 7: Editar tarea al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T20:54:34.923Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "522031d6-2f9f-11f1-bf94-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "1",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha añadido la tarea 7: Editar tarea al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T20:54:34.934Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "5335f5b0-2846-11f1-952b-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -142,6 +194,84 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "8c0951b0-2fa6-11f1-8ea9-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "9",
+        "nombre_clase": "Backlog",
+        "descripcion": "Se ha añadido la tarea 9: Marcar una tarea del backlog como terminada al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T21:46:18.574Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8c0fee7a-2fa6-11f1-8600-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "1",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha añadido la tarea 9: Marcar una tarea del backlog como terminada al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T21:46:18.612Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9cafbe27-2f60-11f1-b0ca-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "5",
+        "nombre_clase": "Backlog",
+        "descripcion": "Se ha añadido la tarea 5: Borrar una entrada en el backlog al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T13:25:41.732Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9cb037fe-2f60-11f1-a053-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "1",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha añadido la tarea 5: Borrar una entrada en el backlog al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T13:25:41.736Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a2862a84-2fa5-11f1-9772-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "8",
+        "nombre_clase": "Backlog",
+        "descripcion": "Se ha añadido la tarea 8: Marcar una tarea del backlog como terminada al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T21:39:46.801Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a2878eab-2fa5-11f1-80bd-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "1",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha añadido la tarea 8: Marcar una tarea del backlog como terminada al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T21:39:46.810Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "b2046aeb-2843-11f1-b8a7-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -188,6 +318,45 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido liberado del cargo de interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
         "momento": "2026-03-25T12:11:15.860Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "d21e7c6b-2fa6-11f1-9fcd-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "6",
+        "nombre_clase": "Backlog",
+        "descripcion": "Se ha modificado la tarea 6: Marcar una tarea del backlog como terminada correspondiente al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T21:48:16.149Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "d6c08b0a-2f9e-11f1-ab18-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "6",
+        "nombre_clase": "Backlog",
+        "descripcion": "Se ha añadido la tarea 6: Marcar una tarea del backlog como terminada al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T20:51:07.948Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "d6c4dca5-2f9e-11f1-a31a-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "1",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha añadido la tarea 6: Marcar una tarea del backlog como terminada al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-03T20:51:07.976Z",
         "usuario": "jrodleo",
         "payload": null
     }

@@ -41,6 +41,13 @@ def bc_crear_backlog(sistema):
         )
 
 
+def bc_editar_backlog(backlog):
+    return bc_backlog_sistema(backlog.sistema).step(
+        f'Editar tarea {backlog.pk}',
+        links.a_editar_backlog(backlog.pk),
+        )
+
+
 def bc_cuestionario_sistema(sistema):
     return bc_detalle_sistema(sistema).step(
         'Cuestionario',

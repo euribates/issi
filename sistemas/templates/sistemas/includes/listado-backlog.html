@@ -1,0 +1,47 @@
+{% load comun_filters fechas %}
+<table class="table table-striped table-hover" style="border: 1px solid red">
+  <thead>
+      <tr>
+          <th>Id.</th>
+          <th>Título</th>
+          <th>Prioridad</th>
+          <th>Estimación</th>
+          <th>P/E</th>
+          <th>Creado hace</th>
+          <th>Editar</th>
+      </tr>
+  </thead>
+  <tbody>{% for task in sistema.backlog.all %}
+      <tr>
+          <td>{{ task.pk }}</td>
+          <td>
+              <big>{{ task.titulo }}</big><br>
+              <small>{{ task.explicacion|as_markdown }}</small>
+          </td>
+          <td>{{ task.get_prioridad_display }}</td>
+          <td>{{ task.get_estimacion_display }}</td>
+          <td>{{ task.impacto }}</td>
+          <td>{{ task.f_creacion|as_pasado }}</td>
+          <td>
+              <a role="button" class="btn btn-warning"
+                href="{% url 'plan:editar_backlog' backlog=task %}"
+                >
+                <i class="bi bi-pencil-fill"></i>
+                Editar
+              </a>
+          </td>
+      </tr>
+  {% endfor %}
+  <tr>
+      <td colspan="6"></td>
+      <td>
+        <a role="button" class="btn btn-warning"
+           href="{% url 'sistemas:crear_backlog' sistema=sistema %}"
+           >
+          <i class="bi bi-plus-circle"></i>
+          Añadir tarea
+        </a>
+      </td>
+  </tr>
+  </tbody>
+</table>

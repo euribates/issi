@@ -47,6 +47,7 @@ urlpatterns = [
     path("sistemas/", include('sistemas.urls')),
     path("directorio/", include('directorio.urls')),
     path("juriscan/", include('juriscan.urls')),
+    path("plan/", include('plan.urls')),
     path('admin/', admin.site.urls),
     path('docs/', include('docs.urls')),
 

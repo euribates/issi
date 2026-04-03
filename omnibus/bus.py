@@ -154,3 +154,20 @@ class Bus:
             )
         self.publica(ente, msg, 'update')
         self.publica(usuario, msg, 'update', user_feedback=False)
+
+    ## Backlog
+
+    def pub_alta_backlog(self, tarea):
+        msg = (
+            f'Se ha añadido la tarea {tarea.pk}: {tarea.titulo}'
+            f' al S.I. {tarea.sistema}'
+            )
+        self.publica(tarea, msg, 'insert')
+        self.publica(tarea.sistema, msg, 'update', user_feedback=False)
+
+    def pub_backlog_modificado(self, tarea):
+        msg = (
+            f'Se ha modificado la tarea {tarea.pk}: {tarea.titulo}'
+            f' correspondiente al S.I. {tarea.sistema}'
+            )
+        self.publica(tarea, msg, 'update')

@@ -1,14 +1,6 @@
 [
 {
     "model": "normativa.rango",
-    "pk": "_na",
-    "fields": {
-        "nombre_rango": "No aplica",
-        "peso": 0
-    }
-},
-{
-    "model": "normativa.rango",
     "pk": "a",
     "fields": {
         "nombre_rango": "Acuerdo",
@@ -85,6 +77,14 @@
     "fields": {
         "nombre_rango": "Ley Orgánica",
         "peso": 500
+    }
+},
+{
+    "model": "normativa.rango",
+    "pk": "_na",
+    "fields": {
+        "nombre_rango": "No aplica",
+        "peso": 0
     }
 },
 {

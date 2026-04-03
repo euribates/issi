@@ -40,6 +40,10 @@ def a_crear_backlog(id_sistema: int) -> str:
     return _a('sistemas:crear_backlog', sistema=id_sistema)
 
 
+def a_editar_backlog(id_backlog: int) -> str:
+    return _a('plan:editar_backlog', backlog=id_backlog)
+
+
 def a_editar_sistema(id_sistema: int) -> str:
     return _a('sistemas:editar_sistema', sistema=id_sistema)
 
