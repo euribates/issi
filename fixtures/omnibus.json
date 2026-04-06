@@ -194,6 +194,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "6b7810b1-31b9-11f1-84f5-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"jsanace\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Jacob Sánchez Acedo",
+        "momento": "2026-04-06T13:06:26.694Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "8c0951b0-2fa6-11f1-8ea9-38d5470ea667",
     "fields": {
         "nivel_evento": "insert",
@@ -240,6 +253,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha añadido la tarea 5: Borrar una entrada en el backlog al S.I. Inventario de Sistemas de Información (ISSI)",
         "momento": "2026-04-03T13:25:41.736Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9f7f41c4-31b9-11f1-a3f9-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"pfueher\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Pedro Fuentes Hernández",
+        "momento": "2026-04-06T13:07:53.982Z",
         "usuario": "jrodleo",
         "payload": null
     }

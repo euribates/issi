@@ -3927,6 +3927,20 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "jsanace",
+    "fields": {
+        "email": "jsanace@gobiernodecanarias.org",
+        "nombre": "Jacob",
+        "apellidos": "Sánchez Acedo",
+        "organismo": 37815,
+        "empresa": null,
+        "f_alta": "2026-04-06T13:06:26.660Z",
+        "f_cambio": "2026-04-06T13:06:26.660Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "jsersanp",
     "fields": {
         "email": "jsersanp@gobiernodecanarias.org",
@@ -4566,6 +4580,20 @@
         "empresa": null,
         "f_alta": "2025-11-10T13:04:54.659Z",
         "f_cambio": "2025-11-10T13:08:43.041Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "pfueher",
+    "fields": {
+        "email": "pfueher@gobiernodecanarias.org",
+        "nombre": "Pedro",
+        "apellidos": "Fuentes Hernández",
+        "organismo": 37815,
+        "empresa": null,
+        "f_alta": "2026-04-06T13:07:53.975Z",
+        "f_cambio": "2026-04-06T13:07:53.975Z",
         "f_baja": null
     }
 },
