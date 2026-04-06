@@ -1,11 +1,23 @@
 #!/usr/bin/env bash
 
-python -Xutf8 ./manage.py dumpdata glosario --indent 4 > glosario/fixtures/glosario.json
-python -Xutf8 ./manage.py dumpdata normativa --indent 4 > normativa/fixtures/normativa.json
-python -Xutf8 ./manage.py dumpdata directorio --indent 4 > directorio/fixtures/directorio.json
-python -Xutf8 ./manage.py dumpdata juriscan --indent 4 > juriscan/fixtures/juriscan.json
-python -Xutf8 ./manage.py dumpdata sistemas --indent 4 > sistemas/fixtures/sistemas.json
-python -Xutf8 ./manage.py dumpdata plan --indent 4 > plan/fixtures/plan.json
-python -Xutf8 ./manage.py dumpdata omnibus --indent 4 > omnibus/fixtures/omnibus.json
 
-zip  -r uploads.zip uploads/
+function dumpdata () {
+    echo -n "Dumping $1";
+    python -Xutf8 ./manage.py dumpdata --indent 4 $1 > ./fixtures/$1.json;
+    echo -e " [\033[1;32mOK\033[0m]";
+}
+
+
+dumpdata "auth"
+dumpdata "admin"
+dumpdata "contenttypes"
+dumpdata "glosario"
+dumpdata "normativa"
+dumpdata "directorio"
+dumpdata "juriscan"
+dumpdata "sistemas"
+dumpdata "plan"
+dumpdata "omnibus"
+
+zip -r fixtures.zip fixtures/
+zip -r uploads.zip uploads/
