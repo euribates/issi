@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 
-from django.urls import register_converter
-
 from . import models
 
 
