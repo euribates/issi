@@ -3006,7 +3006,7 @@
         "nombre_activo": "Sistemas de información",
         "descripcion": "Relación de los sistemas de información utilizados en la AP del Gobierno de Canarias y organismos dependientes.",
         "es_prioritario": false,
-        "esta_georeferenciado": false,
+        "georeferenciado": false,
         "datos_personales": "NO",
         "f_alta": "2025-11-24T07:50:48.774Z",
         "f_cambio": "2025-11-24T07:50:48.792Z",
@@ -3021,7 +3021,7 @@
         "nombre_activo": "Activo",
         "descripcion": "Los activos de datos más relevantes utilizados por cada sistema de información",
         "es_prioritario": false,
-        "esta_georeferenciado": false,
+        "georeferenciado": false,
         "datos_personales": "NO",
         "f_alta": "2025-11-24T07:50:48.774Z",
         "f_cambio": "2025-11-24T07:50:48.792Z",
@@ -3036,11 +3036,479 @@
         "nombre_activo": "Indicadores comunes",
         "descripcion": "Indicadores comunes",
         "es_prioritario": true,
-        "esta_georeferenciado": false,
+        "georeferenciado": false,
         "datos_personales": "NO",
         "f_alta": "2025-11-24T07:50:48.774Z",
         "f_cambio": "2025-11-24T07:50:48.792Z",
         "f_baja": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 1,
+    "fields": {
+        "tipo": "int",
+        "espacio": "",
+        "funcion": "pk",
+        "descripcion": "Clave primaria. Identificador único de un activo",
+        "created": "2026-04-10T19:16:30.639Z",
+        "updated": "2026-04-10T19:16:30.639Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 2,
+    "fields": {
+        "tipo": "int",
+        "espacio": "",
+        "funcion": "fk",
+        "descripcion": "Clave foránea. Un valor de la clave primaria de otra tabla, almacenada en esta",
+        "created": "2026-04-10T19:17:31.583Z",
+        "updated": "2026-04-10T19:17:31.583Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 3,
+    "fields": {
+        "tipo": "int",
+        "espacio": "",
+        "funcion": "counter",
+        "descripcion": "Contador. Si se refiere a contar el número  de elementos en un sistema de almacenaje, se recomienda usar `int/stock`",
+        "created": "2026-04-10T19:18:26.206Z",
+        "updated": "2026-04-10T19:18:26.206Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 4,
+    "fields": {
+        "tipo": "int",
+        "espacio": "",
+        "funcion": "index",
+        "descripcion": "Índice",
+        "created": "2026-04-10T19:18:55.746Z",
+        "updated": "2026-04-10T19:18:55.746Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 5,
+    "fields": {
+        "tipo": "int",
+        "espacio": "",
+        "funcion": "stock",
+        "descripcion": "Cantidad de elementos en un inventario",
+        "created": "2026-04-10T19:19:30.525Z",
+        "updated": "2026-04-10T19:19:30.525Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 6,
+    "fields": {
+        "tipo": "str",
+        "espacio": "",
+        "funcion": "name",
+        "descripcion": "Nombre (En general). Para nombres de personas, mejor usar `str/person/name` y `str/person/surname`",
+        "created": "2026-04-10T19:20:32.310Z",
+        "updated": "2026-04-10T19:20:32.310Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 7,
+    "fields": {
+        "tipo": "str",
+        "espacio": "person",
+        "funcion": "name",
+        "descripcion": "Nombre (De persona)",
+        "created": "2026-04-10T19:20:56.297Z",
+        "updated": "2026-04-10T19:21:03.305Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 8,
+    "fields": {
+        "tipo": "str",
+        "espacio": "person",
+        "funcion": "surname",
+        "descripcion": "Apellidos (De persona)",
+        "created": "2026-04-10T19:21:22.797Z",
+        "updated": "2026-04-10T19:21:22.797Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 9,
+    "fields": {
+        "tipo": "str",
+        "espacio": "",
+        "funcion": "email",
+        "descripcion": "Dirección de correo electrónico",
+        "created": "2026-04-10T19:21:38.824Z",
+        "updated": "2026-04-10T19:21:38.824Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 10,
+    "fields": {
+        "tipo": "str",
+        "espacio": "",
+        "funcion": "url",
+        "descripcion": "Dirección de una página web. Debe empezar por `http://` o `https://`",
+        "created": "2026-04-10T19:22:28.668Z",
+        "updated": "2026-04-10T19:22:28.668Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 11,
+    "fields": {
+        "tipo": "int",
+        "espacio": "",
+        "funcion": "seconds",
+        "descripcion": "Cantidad de tiempo, en segundos",
+        "created": "2026-04-10T19:23:08.001Z",
+        "updated": "2026-04-10T19:23:12.874Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 12,
+    "fields": {
+        "tipo": "int",
+        "espacio": "",
+        "funcion": "minutes",
+        "descripcion": "Cantidad de tiempo, en minutos",
+        "created": "2026-04-10T19:23:28.177Z",
+        "updated": "2026-04-10T19:23:28.178Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 13,
+    "fields": {
+        "tipo": "int",
+        "espacio": "",
+        "funcion": "hours",
+        "descripcion": "Cantidad de tiempo, en horas",
+        "created": "2026-04-10T19:23:50.962Z",
+        "updated": "2026-04-10T19:23:50.962Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 14,
+    "fields": {
+        "tipo": "int",
+        "espacio": "",
+        "funcion": "days",
+        "descripcion": "Cantidad de tiempo, en días",
+        "created": "2026-04-10T19:24:06.171Z",
+        "updated": "2026-04-10T19:24:07.739Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 15,
+    "fields": {
+        "tipo": "int",
+        "espacio": "currency",
+        "funcion": "eur",
+        "descripcion": "Importe monetario, en euros",
+        "created": "2026-04-10T19:24:25.906Z",
+        "updated": "2026-04-10T19:29:17.754Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 16,
+    "fields": {
+        "tipo": "float",
+        "espacio": "",
+        "funcion": "eur",
+        "descripcion": "Importe monetario, en Euros",
+        "created": "2026-04-10T19:24:54.424Z",
+        "updated": "2026-04-10T19:24:58.423Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 17,
+    "fields": {
+        "tipo": "int",
+        "espacio": "currency",
+        "funcion": "eur_subunit",
+        "descripcion": "Importe monetario, en céntimos de euro",
+        "created": "2026-04-10T19:29:04.489Z",
+        "updated": "2026-04-10T19:30:07.948Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 18,
+    "fields": {
+        "tipo": "int",
+        "espacio": "currency",
+        "funcion": "gbp",
+        "descripcion": "Importe monetario, en libras esterlinas",
+        "created": "2026-04-10T19:30:36.141Z",
+        "updated": "2026-04-10T19:30:36.141Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 19,
+    "fields": {
+        "tipo": "int",
+        "espacio": "currency",
+        "funcion": "gbp_subunit",
+        "descripcion": "Importe montario, en peniques de libra esterlina",
+        "created": "2026-04-10T19:31:15.855Z",
+        "updated": "2026-04-10T19:31:15.855Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 20,
+    "fields": {
+        "tipo": "int",
+        "espacio": "currency",
+        "funcion": "usd",
+        "descripcion": "Importe monetario, en dolares norteamericanos",
+        "created": "2026-04-10T19:32:36.412Z",
+        "updated": "2026-04-10T19:32:36.412Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 21,
+    "fields": {
+        "tipo": "int",
+        "espacio": "currency",
+        "funcion": "usd_subunit",
+        "descripcion": "Importe monetario, en céntimos de dolar norteamericano",
+        "created": "2026-04-10T19:33:18.595Z",
+        "updated": "2026-04-10T19:33:18.595Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 22,
+    "fields": {
+        "tipo": "float",
+        "espacio": "currency",
+        "funcion": "eur",
+        "descripcion": "Importe monetario, en euros, con decimales",
+        "created": "2026-04-10T19:34:36.349Z",
+        "updated": "2026-04-10T19:34:36.349Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 23,
+    "fields": {
+        "tipo": "float",
+        "espacio": "currency",
+        "funcion": "usd",
+        "descripcion": "Importe monetario, en dolares norteamericanos, con decimales",
+        "created": "2026-04-10T19:35:24.255Z",
+        "updated": "2026-04-10T19:35:24.255Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 24,
+    "fields": {
+        "tipo": "float",
+        "espacio": "currency",
+        "funcion": "gbp",
+        "descripcion": "Importe monetario, en libras esterlinas, con decimales",
+        "created": "2026-04-10T19:37:05.641Z",
+        "updated": "2026-04-10T19:37:05.641Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 25,
+    "fields": {
+        "tipo": "float",
+        "espacio": "geo",
+        "funcion": "lat",
+        "descripcion": "Latitud geográfica, en grados",
+        "created": "2026-04-10T19:39:32.587Z",
+        "updated": "2026-04-10T19:39:32.587Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 26,
+    "fields": {
+        "tipo": "float",
+        "espacio": "geo",
+        "funcion": "long",
+        "descripcion": "Longitud geográfica, en grados",
+        "created": "2026-04-10T19:39:56.300Z",
+        "updated": "2026-04-10T19:39:56.300Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 27,
+    "fields": {
+        "tipo": "date",
+        "espacio": "person",
+        "funcion": "birthdate",
+        "descripcion": "Fecha de nacimiento de una persona",
+        "created": "2026-04-10T19:41:15.645Z",
+        "updated": "2026-04-10T19:47:51.986Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 28,
+    "fields": {
+        "tipo": "date",
+        "espacio": "",
+        "funcion": "start",
+        "descripcion": "Fecha de inicio de plazo. No se especifica la hora, por lo que se entiende que el plazo empieza a las 00:00:00. Si hiciera falta especificar la hora se recomienda usar `datetime/start`",
+        "created": "2026-04-10T19:42:54.264Z",
+        "updated": "2026-04-10T19:44:34.746Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 29,
+    "fields": {
+        "tipo": "date",
+        "espacio": "",
+        "funcion": "end",
+        "descripcion": "Fecha de fin de plazo. No se especifica la hora, por lo que se entiende que el plazo termina a las 23:50:59. Si hiciera falta especificar la hora se recomienda usar `datetime/end`",
+        "created": "2026-04-10T19:44:46.883Z",
+        "updated": "2026-04-10T19:44:46.883Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 30,
+    "fields": {
+        "tipo": "date",
+        "espacio": "",
+        "funcion": "archived",
+        "descripcion": "Fecha en la que se archivó o se realizó el borrado lógico de algún activo de datos",
+        "created": "2026-04-10T19:46:04.189Z",
+        "updated": "2026-04-10T19:46:04.189Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 31,
+    "fields": {
+        "tipo": "datetime",
+        "espacio": "person",
+        "funcion": "birthdate",
+        "descripcion": "Fecha y hora de nacimiento de una persona",
+        "created": "2026-04-10T19:47:18.074Z",
+        "updated": "2026-04-10T19:48:19.431Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 32,
+    "fields": {
+        "tipo": "datetime",
+        "espacio": "",
+        "funcion": "created",
+        "descripcion": "Fecha y hora de creación de un activo",
+        "created": "2026-04-10T19:49:05.957Z",
+        "updated": "2026-04-10T19:49:05.957Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 33,
+    "fields": {
+        "tipo": "bool",
+        "espacio": "",
+        "funcion": "auth",
+        "descripcion": "Autorización o permiso. Verdadero si está autorizado",
+        "created": "2026-04-10T19:53:48.492Z",
+        "updated": "2026-04-10T19:53:48.492Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 34,
+    "fields": {
+        "tipo": "bool",
+        "espacio": "",
+        "funcion": "forbbiden",
+        "descripcion": "Prohibición. Verdadero si está prohibido",
+        "created": "2026-04-10T19:54:23.268Z",
+        "updated": "2026-04-10T19:54:23.268Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 35,
+    "fields": {
+        "tipo": "bool",
+        "espacio": "",
+        "funcion": "active",
+        "descripcion": "Marca de recurso activo. El valor verdadero indica que está activo",
+        "created": "2026-04-10T19:55:52.047Z",
+        "updated": "2026-04-10T19:55:52.047Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 36,
+    "fields": {
+        "tipo": "bool",
+        "espacio": "",
+        "funcion": "inactive",
+        "descripcion": "Marca de recurso inactivo. El valor verdadero indica que está inactivo",
+        "created": "2026-04-10T19:56:24.935Z",
+        "updated": "2026-04-10T19:56:24.935Z",
+        "deleted": null
     }
 },
 {

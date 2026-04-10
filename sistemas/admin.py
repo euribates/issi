@@ -156,3 +156,17 @@ class OpcionAdmin(admin.ModelAdmin):
         ]
 
 admin.site.register(models.Opcion, OpcionAdmin)
+
+
+class ArquetipoAdmin(admin.ModelAdmin):
+    list_display = [
+        '__str__',
+        'descripcion',
+        ]
+    list_filter = [
+        'tipo',
+        'espacio',
+        'funcion',
+        ]
+
+admin.site.register(models.Arquetipo, ArquetipoAdmin)

@@ -558,6 +558,89 @@ class Activo(models.Model):
         self.sistema.touch()
 
 
+class TipoDatos(models.Model):
+
+    tipo = models.CharField(max_length=8, primary_key=True)
+    nombre_tipo = models.CharField(max_length=22, unique=True)
+
+    def __str__(self):
+        return self.nombre_tipo
+
+
+class ArquetipoManager(models.Manager):
+    """Gestor para el modelo Arquetipo.
+
+    Define la clave natural formada por la combinación
+    de tipo, espacio y función.
+    """
+
+    def get_by_natural_key(self, tipo: str, espacio: str, funcion: str):
+        return self.get(
+            tipo=tipo,
+            espacio=espacio,
+            funcion=funcion,
+            )
+
+
+class Arquetipo(models.Model):
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['tipo', 'espacio', 'funcion'],
+                name="arquetipo_clave_natural"),
+            ]
+
+    id_arquetipo = models.BigAutoField(primary_key=True)
+    tipo = models.ForeignKey(TipoDatos, on_delete=models.PROTECT)
+    espacio = models.CharField(max_length=12, blank=True, default='')
+    funcion = models.CharField(max_length=16)
+    descripcion = models.CharField(max_length=740)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    deleted = models.DateTimeField(
+        default=None,
+        blank=True,
+        null=True,
+    )
+
+    objects = ArquetipoManager()
+
+    def natural_key(self):
+        '''Devuelve una tupla con los valores de la clave
+        natural, en el mismo orden es que las espera
+        el método `get_by_natural_key` del Manager.
+        '''
+        return (
+            self.tipo,
+            self.espacio,
+            self.funcion,
+            )
+
+    def __str__(self):
+        if self.espacio:
+            return f'{self.tipo.pk}/{self.espacio}/{self.funcion}'
+        return f'{self.tipo.pk}/{self.funcion}'
+
+
+
+# class Campo(models.Model):
+    
+    # id_campo = models.BigAutoField(primary_key=True)
+    # activo = models.ForeignKey(
+        # Activo,
+        # related_name="campos",
+        # on_delete=models.CASCADE,
+    # )
+    # nombre_campo = models.CharField(max_length=288)
+    # descripcion = models.TextField()
+    # arquetipo = models.ForeignKey(
+        # Arquetipo,
+        # related_name='campos',
+        # on_delete=models.PROTECT,
+        # )
+
+
 class Usuario(models.Model):
 
     class Meta:

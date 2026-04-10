@@ -45,163 +45,237 @@ Notas de diseño:
 
 - Quizá más que subtipo, deberíamos llamarlo ``uso`` o ``usage``?
 
+
 Tipos y casos de uso
 ------------------------------------------------------------------------
 
+Cadenas de texto (``str``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- ``str``   Cadenas de texto
+- ``str/name``  
 
-  - ``str/name``    Nombre (En general). Para nombres de personas, mejor
-                    usr ``str/person/name`` y ``str/person/surname``.
+  Nombre (En general). Para nombres de personas, mejor
+  usar ``str/person/name`` y ``str/person/surname``.
 
-  - ``str/person/name``     Nombre (de persona)
+- ``str/person/name``
 
-  - ``str/person/surname``  Apellidos (de persona)
+  Nombre (de persona)
 
-  - ``str/email``   Dirección de correo electrónico
+- ``str/person/surname``
 
-  - ``str/url``   Dirección página web. Debe empezar por ``http://``
-                  o ``https://``.
+  Apellidos (de persona)
+
+- ``str/email``
+
+  Dirección de correo electrónico
+
+- ``str/url``
+
+  Dirección página web. Debe empezar por ``http://`` o ``https://``.
 
 
-- ``int``   Números enteros.
+Números enteros (``int``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  - ``int/pk``      Clave primaria. Identificador único de un activo.
+- ``int/pk``
 
-  - ``int/fk``      Clave foránea. Un valor de la clave primaria de
-                    otra tabla, almacenada en esta. Es el mecanismo
-                    usado en bases de datos relacionales para almacenar
-                    relaciones de 1 a N o de N a N.
+  Clave primaria. Identificador único de un recurso
 
-  - ``int/counter`` Contador. Si se refiere a contar el número
-                    de elementos en un sistema de almacenaje, se 
-                    recomienda usar ``int/stock``.
+- ``int/fk``    
 
-  - ``int/index``   Índice
+  Clave foránea. Un valor de la clave primaria de otra tabla, almacenada
+  en esta. Es el mecanismo usado en bases de datos relacionales para
+  almacenar relaciones de 1 a N o de N a N.
 
-  - ``int/stock``   Cantidad de elementos en un inventario
+- ``int/counter``
 
-  - ``int/seconds``   Cantidad de tiempo, en segundos
+  Contador. Si se refiere a contar el número de elementos en un sistema
+  de almacenaje, se recomienda usar ``int/stock``.
 
-  - ``int/minutes``   Cantidad de tiempo, en minutos
+- ``int/index``
 
-  - ``int/hours``   Cantidad de tiempo, en horas
+  Índice
 
-  - ``int/eur``    Importe, en euros.
+- ``int/stock``
+
+  Cantidad de elementos en un inventario
+
+- ``int/seconds``
+
+  Cantidad de tiempo, en segundos
+
+- ``int/minutes``
+
+  Cantidad de tiempo, en minutos
+
+- ``int/hours``
+
+  Cantidad de tiempo, en horas
+
+- ``int/days``
+
+  Cantidad de tiempo, en días
+
+- ``int/currency/eur``    Importe, en euros.
     
-                Los códigos para cada moneda y sus subunidades
-                , si las hubiera, están sacados de la 
-                `ISO 4217`_.
+.. note:: 
 
-  - ``int/eur/subunit``  Importe, en céntimos de euro. Un euro
-                     (int/eur) equivale a 100 céntimos
-                     (int/eur/subunit)
+    Los códigos para cada moneda y sus subunidades, si las hubiera,
+    están sacados de la `ISO 4217`_.
 
+- ``int/currency/eur_subunit``
 
-  - ``int/usd``     Importe, en dolares norteamericanos
-
-  - ``int/usd/subunit`` Importe, en céntimos de dolar. Un dolar
-                    norteamericano
-                     (``int/usd``) equivale a 100 céntimos
-                     (``int/usd/subunit``)
+  Importe monetario, en céntimos de euro. Un euro (``int/currency/eur``)
+  equivale a 100 céntimos (``int/currency/eur_subunit)
 
 
-  - ``int/gbp`` Importe, en libras esterlinas
+- ``int/currency/usd`` 
 
-  - ``int/gbp/subunit`` Importe, en peniques de libras esterlinas. Una
-        libra (``int/gbp``) equivale a 100 peniques 
-        (``int/gbp/subunit``)
+  Importe monetario, en dolares norteamericanos
+
+- ``int/currency/usd_subunit``
+
+  Importe monetario, en céntimos de dolar. Un dolar
+  norteamericano (``int/currency/usd``) equivale a 100 céntimos
+  (``int/currency/usd_subunit``)
 
 
-- ``float``
+- ``int/currency/gbp``
 
-  - ``float/eur``    Importe, en euros, con decimales
+  Importe monetario, en libras esterlinas
+
+- ``int/currency/gbp_subunit``
+
+  Importe monetario, en peniques de libras esterlinas. Una
+  libra (``int/currency/gbp``) equivale a 100 peniques 
+  (``int/currency/gbp_subunit``)
+
+
+Número decimales o en coma flotante (``float``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- ``float/currency/eur``
+
+  Importe monetario, en euros, con decimales
     
-  - ``float/usd``    Importe, en dolares norteamericanos, con decimales
+- ``float/currency/usd``
 
-  - ``float/gbp``    Importe, en libras esterlinas, con decimales
+  Importe monetario, en dolares norteamericanos, con decimales
 
-  - ``float/lat``    Latitud geográfica, en grados.
+- ``float/currency/gbp``
 
-  - ``float/long``   Longitud geográfica, en grados.
+  Importe monetario, en libras esterlinas, con decimales
 
+- ``float/geo/lat``
 
-- ``date``
+  Latitud geográfica, en grados.
 
-  - ``date/birdhday``   Fecha de nacimiento
+- ``float/geo/long``
 
-  - ``date/start``      Fecha de inicio de plazo. No se especifica la hora.
-                    En principio, habría que entender que el plazo
-                    empieza a las 00:00:00. Si hiciera falta especificar
-                    la hora se recomienda usar ``datetime/start``.
-
-  - ``date/end``        Fecha de fin de plazo.  No se especifica la hora.
-                    En principio, habría que entender que el plazo
-                    termina a las 23:50:59. Si hiciera falta especificar
-                    la hora se recomienda usar ``datetime/end``.
-
-  - ``data/archived``   Fecha en la que se archivo o se realiza el
-                    borrado lógico de algún activo de datos.
+  Longitud geográfica, en grados.
 
 
+Fechas (``date``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- ``date/person/birdhdate``
+
+  Fecha de nacimiento
+
+- ``date/start``
+
+  Fecha de inicio de plazo. No se especifica la hora.  En principio,
+  se considera que el plazo empieza a las 00:00:00. Si hiciera
+  falta especificar la hora se recomienda usar ``datetime/start``.
+
+- ``date/end``        
+
+Fecha de fin de plazo. No se especifica la hora, por lo que se entiende
+que el plazo termina a las 23:50:59. Si hiciera falta especificar la
+hora se recomienda usar `datetime/end`
+
+- ``date/archived``   
+
+Fecha en la que se archivó o se realizó el borrado lógico de algún activo de datos.
 
 
-- ``datetime`` Fecha y hora. Se representará, si se puede, como tipo
-          de datos nativo, y preferentemente se almacenará incluyendo
-          la marca de zona temporal. En caso de no poder usar un tipo
-          de datos nativo, se recomienda para su almacenamiento y/o
-          intercambio representarla en forma
-          de texto usando el formato `ISO 8601`_.
+Fechas y horas (``datetime``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-          Para Canarias, el identificador de zona es
-          ``Atlantic/Canary``, y se siguen el huso horario de Europa
-          occidental, ``UTC+0`` (``WET``) en invierno y ``UTC+1``
-          (``WEST``) en verano. El cambio a horario de verano ocurre
-          a las ``01:00`` de la madrugada,
-          el último domingo de marzo, cuando los
-          relojes adelantan una hora, y el último domingo de octubre,
-          donde se atrasan (Ver Directiva `2000/84/CE`_ del Parlamento
-          Europeo Y del consejo de 19 de enero de 2001, relativa a las
-          disposiciones sobre la hora de verano).
+Un valor que almacena a la vez una Fecha y hora. Se representará, si se
+puede, como tipo de datos nativo, y preferentemente se almacenará
+incluyendo la marca de zona temporal. En caso de no poder usar un tipo
+de datos nativo, se recomienda para su almacenamiento y/o intercambio
+representarla en forma de texto usando el formato `ISO 8601`_.
+
+Para Canarias, el identificador de zona es ``Atlantic/Canary``, y se
+siguen el huso horario de Europa occidental, ``UTC+0`` (``WET``) en
+invierno y ``UTC+1`` (``WEST``) en verano. El cambio a horario de verano
+ocurre a las ``01:00`` de la madrugada, el último domingo de marzo,
+cuando los relojes adelantan una hora, y el último domingo de octubre,
+donde se atrasan (Ver Directiva `2000/84/CE`_ del Parlamento Europeo Y
+del consejo de 19 de enero de 2001, relativa a las disposiciones sobre
+la hora de verano).
 
 
-  - ``datetime/birdhday``   Fecha y hora de nacimiento.
+- ``datetime/person/birdhdate``
 
-  - ``datetime/start``      Fecha y hora de inicio de plazo.
+  Fecha y hora de nacimiento.
 
-  - ``datetime/end``      Fecha y hora de fin de plazo
+- ``datetime/start``
 
-  - ``datetime/create``      Fecha y hora de creación de un activo
+  Fecha y hora de inicio de plazo.
 
-  - ``datetime/update``      Fecha y hora de modificación de un activo
+- ``datetime/end``
+
+  Fecha y hora de fin de plazo
+
+- ``datetime/created``
+
+  Fecha y hora de creación de un recurso
+
+- ``datetime/updated``
+
+  Fecha y hora de modificación de un recurso
   
-  - ``datetime/delete``      Fecha y hora de borrado físico de un 
-                            activo. Para un borrado lógico es
-                            preferible usar ``datetime/archive``.
+- ``datetime/archived`` 
 
-  - ``datetime/archive``      Fecha y hora de borrado lógico o
-                           archivado de un activo. Para borrados
-                           físicos es preferible usar
-                           ``datetime/delete``.
+  Fecha y hora de borrado lógico o archivado de un recurso. Para
+  borrados físicos es preferible usar ``datetime/deleted``.
 
+- ``datetime/deleted``
 
-- ``bool``    Se representará en la base de datos como tipo booleano nativo,
-        si la base de datos y/o el lenguaje lo permite. Si no lo permite, se
-        usará un entero de 1 byte, restringido a los valores ``0`` y ``1``.
-        Cualquier otro valor debe rechazarse y producir el error.
+  Fecha y hora de borrado físico de un activo. Para un borrado lógico es
+  preferible usar ``datetime/archive``.
 
 
-  - ``bool/auth`` Autorización o permiso. Verdadero si está autorizado, 
-              falso en caso contrario
--
--  - ``bool/forbbiden``   Prohibición. Verdadero si está prohibido, falso en
--                    caso contrario
+Valores lógicos (``bool``)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  - ``bool/active``     Marca de activo. El valor verdadero indica que está
-                    activo
+Los valores booleanos se representará en la base de datos como tipo
+booleano nativo, si la base de datos y el lenguaje lo permiten. Si no
+lo permite, se recomienda usar un entero de 1 byte, restringido sus
+valores posibles a ``0`` y ``1``. Cualquier otro valor debe rechazarse
+y producir el error.
 
-  - ``bool/inactive``   Marca de inactivo. El valor verdadero indica que
-                    está inactivo
+
+- ``bool/auth``
+
+  Autorización o permiso. Verdadero si está autorizado, falso en caso
+  contrario
+
+- ``bool/forbbiden``
+
+  Prohibición. Verdadero si está prohibido, falso en caso contrario
+
+- ``bool/active``
+
+  Marca de activo. El valor verdadero indica que el recurso está activo
+
+- ``bool/inactive``
+
+  Marca de recurso inactivo. El valor verdadero indica que el recurso
+  está inactivo
 
 
 
