@@ -70,8 +70,13 @@ class Familia(models.Model):
 
 
 class TemaManager(models.Manager):
+    """Gestor para el modelo Tema.
+    """
+
     def with_counts(self):
-        return self.annotate(num_sistemas=Coalesce(models.Count("sistemas"), 0))
+        return self.annotate(
+            num_sistemas=Coalesce(models.Count("sistemas"), 0)
+            )
 
 
 class Tema(models.Model):
@@ -530,7 +535,7 @@ class Activo(models.Model):
     nombre_activo = models.CharField(max_length=288)
     descripcion = models.TextField()
     es_prioritario = models.BooleanField(default=False)
-    esta_georeferenciado = models.BooleanField(default=False)
+    georeferenciado = models.BooleanField(default=False)
     datos_personales = models.CharField(
         max_length=2,
         choices=NIVELES_DATOS_PERSONALES,

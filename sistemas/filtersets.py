@@ -57,7 +57,12 @@ class ActivoFilter(django_filters.FilterSet):
             'nombre_activo',
             'descripcion',
             'es_prioritario',
-            'esta_georeferenciado',
+            'georeferenciado',
+            ]
+        filters = [
+            'es_prioritario',
+            'georeferenciado',
+            'datos_personales',
             ]
 
     nombre_activo = django_filters.CharFilter(lookup_expr='icontains')
