@@ -21,5 +21,6 @@ Documentación.
    apps/caches
    apps/normativa
    materias
+   subtipos
    glosario
    FAQ
