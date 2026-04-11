@@ -158,6 +158,16 @@ class OpcionAdmin(admin.ModelAdmin):
 admin.site.register(models.Opcion, OpcionAdmin)
 
 
+class TipoDatosAdmin(admin.ModelAdmin):
+    list_display = [
+        'tipo',
+        'nombre_tipo',
+        ]
+
+admin.site.register(models.TipoDatos, TipoDatosAdmin)
+
+
+
 class ArquetipoAdmin(admin.ModelAdmin):
     list_display = [
         '__str__',
@@ -170,3 +180,17 @@ class ArquetipoAdmin(admin.ModelAdmin):
         ]
 
 admin.site.register(models.Arquetipo, ArquetipoAdmin)
+
+
+class CampoAdmin(admin.ModelAdmin):
+    list_display = [
+        'nombre_campo',
+        'descripcion',
+        'activo',
+        'arquetipo',
+        ]
+    list_filter = [
+        'activo',
+        ]
+
+admin.site.register(models.Campo, CampoAdmin)

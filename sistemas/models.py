@@ -40,6 +40,7 @@ if not TEMP_DIR.is_dir():
 
 
 class FamiliaManager(models.Manager):
+
     def with_counts(self):
         return self.annotate(num_sistemas=Coalesce(models.Count("sistemas"), 0))
 
@@ -191,7 +192,7 @@ class Sistema(models.Model):
         related_name="subsistemas",
         on_delete=models.PROTECT,
         )
-    tiene_especial_importancia = models.BooleanField(
+    especial_importancia = models.BooleanField(
         default=False,
         help_text="Este S.I. contiene activos de datos de especial importancia",
         )
@@ -560,6 +561,11 @@ class Activo(models.Model):
 
 class TipoDatos(models.Model):
 
+    class Meta:
+
+        verbose_name = 'Tipo de datos'
+        verbose_name_plural = 'Tipos de datos'
+
     tipo = models.CharField(max_length=8, primary_key=True)
     nombre_tipo = models.CharField(max_length=22, unique=True)
 
@@ -624,21 +630,24 @@ class Arquetipo(models.Model):
 
 
 
-# class Campo(models.Model):
+class Campo(models.Model):
     
-    # id_campo = models.BigAutoField(primary_key=True)
-    # activo = models.ForeignKey(
-        # Activo,
-        # related_name="campos",
-        # on_delete=models.CASCADE,
-    # )
-    # nombre_campo = models.CharField(max_length=288)
-    # descripcion = models.TextField()
-    # arquetipo = models.ForeignKey(
-        # Arquetipo,
-        # related_name='campos',
-        # on_delete=models.PROTECT,
-        # )
+    id_campo = models.BigAutoField(primary_key=True)
+    activo = models.ForeignKey(
+        Activo,
+        related_name="campos",
+        on_delete=models.CASCADE,
+    )
+    nombre_campo = models.CharField(max_length=288)
+    descripcion = models.TextField()
+    arquetipo = models.ForeignKey(
+        Arquetipo,
+        related_name='campos',
+        on_delete=models.PROTECT,
+        )
+
+    def __str__(self):
+        return self.nombre_campo
 
 
 class Usuario(models.Model):
