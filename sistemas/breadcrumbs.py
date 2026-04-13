@@ -83,6 +83,13 @@ def bc_editar_finalidad(sistema: models.Sistema) -> BreadCrumb:
         )
 
 
+def bc_editar_codigo(sistema: models.Sistema) -> BreadCrumb:
+    return bc_detalle_sistema(sistema).step(
+        "Editar código",
+        links.a_editar_codigo(sistema.pk),
+        )
+
+
 def bc_editar_descripcion(sistema: models.Sistema) -> BreadCrumb:
     return bc_detalle_sistema(sistema).step(
         "Editar descripcion",

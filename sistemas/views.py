@@ -120,7 +120,7 @@ def editar_sistema(request, sistema):
         if form.is_valid():
             diffs = form.diff_with(sistema)
             form.save()
-            Bus(request).sistema_modificado(sistema, **diffs)
+            Bus(request).pub_sistema_modificado(sistema, **diffs)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.EditarSistemaForm(instance=sistema)
@@ -200,6 +200,25 @@ def editar_finalidad(request, sistema):
     return render(request, 'sistemas/editar-finalidad.html', {
         'titulo': f'Editar finalidad de {sistema}',
         'breadcrumbs': bc.bc_editar_finalidad(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
+@login_required
+def editar_codigo(request, sistema):
+    if request.method == "POST":
+        form = forms.EditarCodigoForm(request.POST, instance=sistema)
+        if form.is_valid():
+            sistema.codigo = form.cleaned_data['codigo']
+            sistema.save(update_fields=['codigo'])
+            Bus(request).pub_sistema_editar_codigo(sistema, sistema.codigo)
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.EditarCodigoForm(instance=sistema)
+    return render(request, 'sistemas/editar-codigo.html', {
+        'titulo': f'Editar código de {sistema}',
+        'breadcrumbs': bc.bc_editar_codigo(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,

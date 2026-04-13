@@ -143,6 +143,13 @@ class EditarFinalidadForm(BootstrapForm, forms.ModelForm):
         )
 
 
+class EditarCodigoForm(BootstrapForm, forms.ModelForm):
+
+    class Meta:
+        model = models.Sistema
+        fields = ['codigo']
+
+
 class EditarDescripcionForm(BootstrapForm, forms.ModelForm):
 
     class Meta:

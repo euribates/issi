@@ -88,6 +88,16 @@ class Bus:
             )
         self.publica(sistema, msg, 'update')
 
+    def pub_sistema_editar_codigo(self, sistema, codigo: str):
+        msg = (
+            f"El código del sistema {sistema}"
+            f" ha sido actualizada a {codigo!r}.\n"
+            " Tenga en cuenta que este cambio afecta"
+            " a las dirección de la página web del sistema"
+            )
+        self.publica(sistema, msg, 'update')
+
+
     def pub_sistema_editar_descripcion(self, sistema, descripcion: str):
         msg = (
             f"La descripción del sistema {sistema}"

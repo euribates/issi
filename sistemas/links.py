@@ -64,6 +64,10 @@ def a_editar_finalidad(id_sistema: int) -> str:
     return _a('sistemas:editar_finalidad', sistema=id_sistema)
 
 
+def a_editar_codigo(id_sistema: int) -> str:
+    return _a('sistemas:editar_codigo', sistema=id_sistema)
+
+
 def a_editar_descripcion(id_sistema: int) -> str:
     return _a('sistemas:editar_descripcion', sistema=id_sistema)
 

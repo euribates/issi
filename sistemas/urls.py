@@ -21,6 +21,7 @@ urlpatterns = [
     tie('sistema/<si:sistema>/backlog/', views.backlog_sistema),
     tie('sistema/<si:sistema>/backlog/crear/', views.crear_backlog),
     tie('sistema/<si:sistema>/editar/', views.editar_sistema),
+    tie('sistema/<si:sistema>/editar/codigo/', views.editar_codigo),
     tie('sistema/<si:sistema>/editar/tema/', views.asignar_tema),
     tie('sistema/<si:sistema>/editar/familia/', views.asignar_familia),
     tie('sistema/<si:sistema>/editar/finalidad/', views.editar_finalidad),
