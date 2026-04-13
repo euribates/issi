@@ -22,10 +22,12 @@
 
  {% include "comun/includes/toasts.html" %}
 
-  <div class="container">
-   {% include "comun/header.html" %}
-   {% include "comun/breadcrumbs.html" %}
-   {% include "comun/navbar.html" %}
+ {% include "comun/header.html" %}
+ {% include "comun/breadcrumbs.html" %}
+   {% comment %}{% include "comun/navbar.html" %}{% endcomment %}
+
+{% block container %}
+<div class="container">
    {% include "comun/includes/commands.html" %}
 
    <main id="content">
@@ -38,9 +40,11 @@
      {% include "comun/sidebar.html" %}
    {% endif %}
 
-  {% include "comun/pie.html" %}
 
-  </div>
+</div>
+{% endblock container %}
+  
+{% include "comun/pie.html" %}
 
  {% block libs %}
  <script src="{% static 'js/datastar.js' %}" type="module"></script>

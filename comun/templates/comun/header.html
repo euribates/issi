@@ -1,4 +1,5 @@
 {% load static %}
+{% spaceless %}
 
 <div id="header">
 
@@ -12,19 +13,35 @@
              >
       </a>           
   </div>
+  
+  <div class="flex flex-column">
 
+    <div id="top-menu" class="no-print">
+        <a href="http://www.gobiernodecanarias.org/principal/accesibilidad.html"
+        accesskey="a"
+        title="Accesibilidad">
+        Accesibilidad</a>
+        <a href="mapa_web.html"
+        title="Mapa web">Mapa web</a>
+        <a href="https://www.gobiernodecanarias.org/aplicaciones/sirvete/principal/"
+        title="Contacto">Contacto</a>
+    </div>
 
-  <div id="top-menu" class="no-print">
-    <a href="http://www.gobiernodecanarias.org/principal/accesibilidad.html"
-       accesskey="a"
-       title="Accesibilidad">
-      Accesibilidad</a> |
-    <a href="mapa_web.html"
-       title="Mapa web">Mapa web</a> | 
-    <a href="https://www.gobiernodecanarias.org/aplicaciones/sirvete/principal/"
-       title="Contacto">Contacto</a>
-  </div>
-
+    <div class="m-1">
+    {% if titulo %}
+      <h2 class="titulo">{{ titulo }}
+      {% if subtitulo %}
+      <br><small class="subtitulo">{{ subtitulo }}</small>
+      {% endif %}
+      </h2>
+   {% else %}
+      <h2 class="text-danger">
+      No se ha definido el título de la página - ISSI
+      </h2>     
+   {% endif %}
+    </div>
+  </div>  
 
 </div>
+{% endspaceless %}
 

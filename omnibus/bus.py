@@ -97,6 +97,21 @@ class Bus:
             )
         self.publica(sistema, msg, 'update')
 
+    def pub_sistema_editar_nombre(self, sistema, nombre: str):
+        msg = (
+            f"El nombre del sistema {sistema}"
+            f" ha sido actualizada a {nombre!r}.\n"
+            )
+        self.publica(sistema, msg, 'update')
+
+
+    def pub_sistema_editar_url(self, sistema, url: str):
+        msg = (
+            f"La URL de entrada al sistema {sistema}"
+            f" ha sido actualizada a {url!r}.\n"
+            )
+        self.publica(sistema, msg, 'update')
+
 
     def pub_sistema_editar_descripcion(self, sistema, descripcion: str):
         msg = (

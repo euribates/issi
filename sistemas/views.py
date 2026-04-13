@@ -101,7 +101,7 @@ def alta_sistema(request):
                 organismo=data['organismo'],
                 tema=data['tema'],
                 )
-            Bus(request).nuevo_sistema(sistema)
+            Bus(request).pub_nuevo_sistema(sistema)
             return redirect(sistema.url_detalle_sistema())
     else:
         form = forms.AltaSistemaForm()
@@ -219,6 +219,46 @@ def editar_codigo(request, sistema):
     return render(request, 'sistemas/editar-codigo.html', {
         'titulo': f'Editar código de {sistema}',
         'breadcrumbs': bc.bc_editar_codigo(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
+
+@login_required
+def editar_nombre(request, sistema):
+    if request.method == "POST":
+        form = forms.EditarNombreForm(request.POST, instance=sistema)
+        if form.is_valid():
+            sistema.nombre_sistema = form.cleaned_data['nombre_sistema']
+            sistema.save(update_fields=['nombre_sistema'])
+            Bus(request).pub_sistema_editar_nombre(sistema, sistema.nombre)
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.EditarNombreForm(instance=sistema)
+    return render(request, 'sistemas/editar-nombre.html', {
+        'titulo': f'Editar nombre de {sistema}',
+        'breadcrumbs': bc.bc_editar_nombre(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
+
+@login_required
+def editar_url(request, sistema):
+    if request.method == "POST":
+        form = forms.EditarURLForm(request.POST, instance=sistema)
+        if form.is_valid():
+            sistema.url = form.cleaned_data['url']
+            sistema.save(update_fields=['url'])
+            Bus(request).pub_sistema_editar_url(sistema, sistema.url)
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.EditarURLForm(instance=sistema)
+    return render(request, 'sistemas/editar-url.html', {
+        'titulo': f'Editar URL de {sistema}',
+        'breadcrumbs': bc.bc_editar_url(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,

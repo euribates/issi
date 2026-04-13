@@ -150,6 +150,20 @@ class EditarCodigoForm(BootstrapForm, forms.ModelForm):
         fields = ['codigo']
 
 
+class EditarNombreForm(BootstrapForm, forms.ModelForm):
+
+    class Meta:
+        model = models.Sistema
+        fields = ['nombre_sistema']
+
+
+class EditarURLForm(BootstrapForm, forms.ModelForm):
+
+    class Meta:
+        model = models.Sistema
+        fields = ['url']
+
+
 class EditarDescripcionForm(BootstrapForm, forms.ModelForm):
 
     class Meta:

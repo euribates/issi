@@ -10,7 +10,7 @@ def bc_issi() -> BreadCrumb:
 
 
 def bc_sistemas() -> BreadCrumb:
-    return bc_issi().step('bc_sistemas', links.a_sistemas())
+    return bc_issi().step('Sistemas', links.a_sistemas())
 
 
 def bc_alta_sistema() -> BreadCrumb:
@@ -71,7 +71,7 @@ def bc_asignar_familia(sistema: models.Sistema) -> BreadCrumb:
 
 def bc_asignar_tema(sistema: models.Sistema) -> BreadCrumb:
     return bc_detalle_sistema(sistema).step(
-        "Asignar bc_tema",
+        "Asignar tema",
         links.a_asignar_tema(sistema.pk),
         )
 
@@ -87,6 +87,20 @@ def bc_editar_codigo(sistema: models.Sistema) -> BreadCrumb:
     return bc_detalle_sistema(sistema).step(
         "Editar código",
         links.a_editar_codigo(sistema.pk),
+        )
+
+
+def bc_editar_nombre(sistema: models.Sistema) -> BreadCrumb:
+    return bc_detalle_sistema(sistema).step(
+        "Editar nombre",
+        links.a_editar_nombre(sistema.pk),
+        )
+
+
+def bc_editar_url(sistema: models.Sistema) -> BreadCrumb:
+    return bc_detalle_sistema(sistema).step(
+        "Editar URL",
+        links.a_editar_url(sistema.pk),
         )
 
 
@@ -162,11 +176,11 @@ def bc_detalle_usuario(usuario: models.Usuario) -> BreadCrumb:
 
 
 def bc_organismos() -> BreadCrumb:
-    return bc_issi().step('bc_organismos', links.a_organismos())
+    return bc_issi().step('Organismos', links.a_organismos())
 
 
 def bc_entes() -> BreadCrumb:
-    return bc_issi().step('bc_entes', links.a_entes())
+    return bc_issi().step('Entes', links.a_entes())
 
 
 def bc_detalle_ente(ente) -> BreadCrumb:
@@ -198,7 +212,7 @@ def bc_detalle_organismo(organismo) -> BreadCrumb:
 
 
 def bc_temas() -> BreadCrumb:
-    return bc_issi().step('bc_temas', links.a_temas())
+    return bc_issi().step('Temas', links.a_temas())
 
 
 def bc_tema(t) -> BreadCrumb:
@@ -206,7 +220,10 @@ def bc_tema(t) -> BreadCrumb:
 
 
 def bc_familias() -> BreadCrumb:
-    return bc_issi().step('bc_familias', links.a_familias())
+    return bc_issi().step(
+        'Familias',
+        links.a_familias(),
+        )
 
 
 def bc_detalle_familia(familia: models.Familia) -> BreadCrumb:
@@ -217,19 +234,22 @@ def bc_detalle_familia(familia: models.Familia) -> BreadCrumb:
 
 
 def bc_activos() -> BreadCrumb:
-    return bc_sistemas().step('bc_activos', links.a_activos())
-
-
-def bc_penientes() -> BreadCrumb:
     return bc_sistemas().step(
-        'bc_penientes',
+        'Activos',
+        links.a_activos(),
+        )
+
+
+def bc_pendientes() -> BreadCrumb:
+    return bc_sistemas().step(
+        'Pendientes',
         links.a_pendientes(),
         )
 
 
 def bc_sistemas_sin_tema() -> BreadCrumb:
-    return bc_penientes().step(
-        'Sin bc_tema asignado',
+    return bc_pendientes().step(
+        'Sin tema asignado',
         links.a_sistemas_sin_tema(),
         )
 

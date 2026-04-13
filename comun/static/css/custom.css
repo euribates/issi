@@ -2,9 +2,8 @@
   --bs-breadcrumb-font-size: 0.85em;
   --bs-breadcrumb-bg: #101030;
   --bs-breadcrumb-divider: "❭";
-
+  --bs-breadcrumb-divider-color: #A2A2BB;
   --font-size-base: 16px;
-
   --color-subtitulo: #8C8C8C;
 }
 
@@ -20,12 +19,14 @@
 
 #header {
   display: flex;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   border: 0px solid red;
   min-height: 80px;
   justify-content: space-between;
+  background-color: white;
   align-items: flex-start;
-  padding: 2.5px;
+  padding: 0;
+  margin-bottom: 0;
   }
 
 #pie {
@@ -34,7 +35,8 @@
 
 .titulo {
   text-align: right;
-  font-size: 120%;
+  font-size: 105%;
+  font-weight: 700;
 }
 
 .subtitulo {
@@ -48,34 +50,66 @@
 
 #logo {
   border: 0px dashed red;
-  max-width: 200px;
+  max-width: 152px;
+  max-height: 80px;
   }
 
 #top-menu {
-  font-size: 0.8em;
+  text-align: right;
+  font-size: 0.9em;
   color: #535353;
-  border: 0px dashed green;
-  padding-right: 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 0px;
+  margin-bottom: 0;
 }
 
 #top-menu a {
-  color: #535353!important;
-  text-decoration: none!important;
-  }
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background-color: silver;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#top-menu a:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+#top-menu a:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
 
 #top-menu a:hover {
-  color: #535353!important;
+  background-color: grey;
+  color: white!important;
   text-decoration: underline!important;
   }
 
+#top-menu a {
+  color: #282828;
+  text-decoration: none;
+  }
 
 #top-menu ul {
   list-style-type: none;
   }
 
 #breadcrumbs {
-  background-color: #D6D6E0;
+  padding-left: 1rem;
+  background-color: #262626;
+  color: white;
 }
+
+#breadcrumbs a {
+  color: white;
+  text-decoration: none;
+  }
 
 img.card-top-logo {
   vertical-align: middle;
@@ -94,8 +128,8 @@ img.card-top-logo {
 }
 
 #content {
-  /*background-color: #C0C0C0;*/
-  padding-top: 20pxsistema.;
+  background-color: #C0C0C0;
+  padding-top: 20px;
 }
 
 .right-float-menu {
@@ -233,8 +267,8 @@ img.card-top-logo {
 }
 
 .clave-externa {
-  padding: 4px;
-  font-size: 90%;
+  padding: 2px;
+  font-size: 85%;
   font-family: monospace;
   color: #303030;
   border: 1px solid silver;

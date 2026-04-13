@@ -6,7 +6,7 @@
   </div>  
   <div class="card-body">
 
-    <div class="d-flex flex-row justify-content-between align-items-center">  
+    <div class="d-flex flex-row justify-content-between align-items-center mb-2">  
       <h3>
         {{ sistema.codigo }}
       </h3>
@@ -15,53 +15,65 @@
       </div>
     </div>  
 
-    <div class="d-flex flex-row justify-content-between align-items-center">  
+    <div class="d-flex flex-row justify-content-between align-items-center mb-2">  
       <h4>{{ sistema.nombre_sistema }}</h4>
       <div class="control">
-        {% include "sistemas/includes/pb-editar-codigo.html" %}
+        {% include "sistemas/includes/pb-editar-nombre.html" %}
       </div>
     </div>  
 
-    <dl>
-      <dt>Clave interna</dt>
-      <dd>
-        <code class="clave-primaria">
-        {{ sistema.pk }}
-        </code>
-      </dd>
+    {% comment %}<div class="d-flex flex-row justify-content-between align-items-center">  {% endcomment %}
+      {% comment %}<h6>Clave interna</h6>{% endcomment %}
+      {% comment %}<div class="control">{% endcomment %}
+        {% comment %}<code class="clave-primaria">{% endcomment %}
+        {% comment %}{{ sistema.pk }}{% endcomment %}
+        {% comment %}</code>{% endcomment %}
+      {% comment %}</div>{% endcomment %}
+    {% comment %}</div>  {% endcomment %}
 
-      <dt>Clave externa</dt>
-      <dd>
+    <div class="d-flex flex-row justify-content-between align-items-center mb-2">  
+      <h6>UUID</h6>
+      <div class="control">
         <code class="clave-externa">
         <span id="clave-externa">{{ sistema.uuid_sistema }}</span>
         </code>  
-        <button class="btn" onclick="copyClaveExterna()">
+        <button class="btn btn-info btn-sm" onclick="copyClaveExterna()">
             <i class="bi bi-clipboard-plus"></i>    
         </button>
-      </dd>
-    </dl>
+      </div>
+    </div>
                   
-    <dt>Descripción</dt>
-    <dd><br>{{ sistema.descripcion|as_descripcion }}</dd>
+    <div class="d-flex flex-row justify-content-between align-items-center mb-2">  
+      <h6>Descripción</h6>
+      <div class="control">
+        {% include "sistemas/includes/pb-editar-descripcion.html" %}
+      </div>
+    </div>
+    {% if sistema.descripcion %}  
+      <div class="alert alert-info m-3">
+    {% else %}
+      <div class="alert alert-danger m-3">
+    {% endif %}
+      {{ sistema.descripcion|as_descripcion }}
+    </div>
 
-    <dd>
-        <a class="btn btn-warning"
-           href="{% url 'sistemas:editar_descripcion' sistema=sistema %}"
-           title="Editar descripción">
-        Editar descripción
-        </a>
-    </dd>
 
-    </dd>
+    <div class="d-flex flex-row justify-content-between align-items-center mb-2">  
+      <h6>URL entrada</h6>
+      <div class="control">
+        {% include "sistemas/includes/pb-editar-url.html" %}
+      </div>
+    </div>
 
-    <dt>URL principal</th>
-      <dd>
-        {% if sistema.url %}
-          <a href="{{ sistema.url }}">{{ sistema.url }}</a>  
-        {% else %}
-          No definido / No aplica  
-        {% endif %}  
-      </dd>
+  {% if sistema.url %}  
+    <div class="alert alert-info m-3">
+      <a href="{{ sistema.url }}">{{ sistema.url }}</a>  
+    </div>  
+  {% else %}
+    <div class="alert alert-danger m-3">
+      No definido / No aplica
+    </div>  
+  {% endif %}
 
     <dt>Logotipo</dt>
     <dd>
