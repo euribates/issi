@@ -111,7 +111,7 @@ errors.register(
         " formato esperadas. Solo son válidos los caracteres"
         " desde la `A` hasta la `Z`, sin minúsculas, los"
         " dígitos desde el cero hasta el nueve, el caracter"
-        " barra inclinada `\` y el caracter"
+        " barra inclinada `\\` y el caracter"
         " subrayado `_`.\n"
         "\nAdemás, no puede empezar por un dígito, y debe"
         " tener tres o más caracteres. El valor indicado:"
