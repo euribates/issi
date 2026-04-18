@@ -3,15 +3,15 @@
 from django.db import migrations
 
 do_statements = [
-    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('debug', 'Mensajes de depuración');",
-    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('info', 'Mensajes informativos');",
-    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('insert', 'Alta de nuevos datos');",
-    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('update', 'Modificación de datos');",
-    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('delete', 'Borrado físico de datos');",
-    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('archive', 'Borrado lógico o archivado');",
-    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('warning', 'Mensajes de aviso');",
-    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('error', 'Mensajes de error');",
-    "INSERT OR REPLACE INTO obus_nivel_evento VALUES ('panic', 'Mensaje de error crítico');",
+    "INSERT INTO obus_nivel_evento VALUES ('debug', 'Mensajes de depuración');",
+    "INSERT INTO obus_nivel_evento VALUES ('info', 'Mensajes informativos');",
+    "INSERT INTO obus_nivel_evento VALUES ('insert', 'Alta de nuevos datos');",
+    "INSERT INTO obus_nivel_evento VALUES ('update', 'Modificación de datos');",
+    "INSERT INTO obus_nivel_evento VALUES ('delete', 'Borrado físico de datos');",
+    "INSERT INTO obus_nivel_evento VALUES ('archive', 'Borrado lógico o archivado');",
+    "INSERT INTO obus_nivel_evento VALUES ('warning', 'Mensajes de aviso');",
+    "INSERT INTO obus_nivel_evento VALUES ('error', 'Mensajes de error');",
+    "INSERT INTO obus_nivel_evento VALUES ('panic', 'Mensaje de error crítico');",
     ]
 
 undo_statements = [
