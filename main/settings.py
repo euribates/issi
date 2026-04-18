@@ -36,6 +36,7 @@ ALLOWED_HOSTS = [
     'nova',
     'picara',
     '188.86.150.172',
+    'bifrost', '168.119.174.219',
     ]
 
 
