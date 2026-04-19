@@ -24,8 +24,7 @@ DOCS_ACCESS = 'public'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&psyk$2du$m(cp64y_!2)%vpf_!5ru8apzt$5(avt@sx36^34='
+SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', cast=config.boolean, default=False)
 
@@ -93,6 +92,8 @@ ROOT_URLCONF = 'main.urls'
 
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
+
+SESSION_COOKIE_SECURE = True
 
 TEMPLATES = [
     {
