@@ -26,6 +26,8 @@ DOCS_ACCESS = 'public'
 
 SECRET_KEY = config('SECRET_KEY')
 
+SECURE_SSL_REDIRECT = False
+
 DEBUG = config('DEBUG', cast=config.boolean, default=False)
 
 ALLOWED_HOSTS = [
@@ -35,7 +37,7 @@ ALLOWED_HOSTS = [
     'nova',
     'picara',
     '188.86.150.172',
-    'bifrost', '168.119.174.219',
+    'bifrost', '168.119.174.219', 'issi.euribates.eu',
     ]
 
 
@@ -93,7 +95,7 @@ ROOT_URLCONF = 'main.urls'
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 
-SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = False
 
 TEMPLATES = [
     {
