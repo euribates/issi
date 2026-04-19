@@ -24,9 +24,9 @@ DOCS_ACCESS = 'public'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
-SECRET_KEY = config('SECRET_KEY')
-
 SECURE_SSL_REDIRECT = False
+
+SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG', cast=config.boolean, default=False)
 
