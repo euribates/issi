@@ -26,7 +26,7 @@
         {{ filterset.form.es_prioritario }}
       </th>
       <th>
-        {{ filterset.form.esta_geor/referenciado }}
+        {{ filterset.form.georreferenciado }}
       </th>
       <th>
         <input type="submit" value="🔍" />
@@ -51,7 +51,7 @@
           </small>
       </td>
       <td>{{ activo.es_prioritario|as_boolean }}</td>
-      <td>{{ activo.esta_georreferenciado|as_boolean }}</td>
+      <td>{{ activo.georreferenciado|as_boolean }}</td>
       <td></td>
     </tr>{% endfor %}
   
