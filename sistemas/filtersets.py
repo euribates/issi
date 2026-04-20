@@ -57,11 +57,11 @@ class ActivoFilter(django_filters.FilterSet):
             'nombre_activo',
             'descripcion',
             'es_prioritario',
-            'georeferenciado',
+            'georreferenciado',
             ]
         filters = [
             'es_prioritario',
-            'georeferenciado',
+            'georreferenciado',
             'datos_personales',
             ]
 

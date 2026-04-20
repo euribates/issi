@@ -536,7 +536,7 @@ class Activo(models.Model):
     nombre_activo = models.CharField(max_length=288)
     descripcion = models.TextField()
     es_prioritario = models.BooleanField(default=False)
-    georeferenciado = models.BooleanField(default=False)
+    georreferenciado = models.BooleanField(default=False)
     datos_personales = models.CharField(
         max_length=2,
         choices=NIVELES_DATOS_PERSONALES,

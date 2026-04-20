@@ -30,12 +30,12 @@ class ActivoAdmin(admin.ModelAdmin):
         "id_activo",
         "nombre_activo",
         "es_prioritario",
-        "georeferenciado",
+        "georreferenciado",
         "datos_personales",
         ]
     list_filter = [
         "es_prioritario",
-        "georeferenciado",
+        "georreferenciado",
         "datos_personales",
         ]
 
