@@ -11,6 +11,7 @@ class Command:
     text: str
     klass: str = 'primary'
     disabled: bool = False
+    icon: str = ''
 
     def __str__(self):
         return mark_safe(

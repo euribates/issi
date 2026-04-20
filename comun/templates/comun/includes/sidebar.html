@@ -1,0 +1,83 @@
+{% load static %}
+<div class="flex justify-content-between p-4">
+  <button
+    id="hamburger"  
+    class="toggle-btn border-0" type="button">
+  <i id="chevron" class="bi bi-chevron-double-right"></i>
+  </button>
+
+  <ul class="sidebar-nav">
+
+    <li class="sidebar-item">
+      <a class="sidebar-link"
+         href="{% url 'sistemas:index' %}">
+        <i class="bi bi-box"></i>
+        {% if tab == 'sistemas' %}
+          <span class="selected">
+        {% else %}
+          <span>
+        {% endif %}
+          Sistemas
+        </span>
+      </a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link"
+         href="{% url 'sistemas:listado_activos' %}">
+        <i class="bi bi-boxes"></i>
+        <span>Activos</span>
+      </a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link"
+         href="{% url 'directorio:index' %}">
+         <i class="bi bi-share-fill"></i>
+        <span>Organigrama CAC</span>
+      </a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link"
+         href="{% url 'sistemas:listado_usuarios' %}">
+        <i class="bi bi-people-fill"></i>
+        <span>Usuarios</span>
+      </a>
+    </li>
+
+    <li class="sidebar-item">
+      <a class="sidebar-link{% if tab == 'temas' %} active{% endif %}"
+         aria-current="Temas" 
+         href="{% url 'sistemas:listado_temas' %}">
+        <img src="{% static 'icons/tema.svg' %}">&nbsp;
+        <span>Temas</span>
+      </a>
+    </li>  
+
+    <li class="sidebar-item">
+      <a class="sidebar-link{% if tab == 'familias' %} active{% endif %}"
+         aria-current="Familias" 
+         href="{% url 'sistemas:listado_familias' %}">
+        <img src="{% static 'icons/familia.svg' %}">
+      </a><a class="sidebar-link"
+         aria-current="Familias" 
+         href="{% url 'sistemas:listado_familias' %}">
+        <span>Familias</span>
+      </a>
+    </li>  
+
+    {% if user.is_authenticated %}
+    <li class="sidebar-item">
+      <a  class="sidebar-link"
+          aria-current="Log out"
+          href="{% url 'logout_view' %}" title="Log out">
+        <i class="bi bi-box-arrow-right"></i>
+        <span>Log out</span>
+     </a>
+    </li>
+    {% endif %}
+
+  </ul>
+
+</div>

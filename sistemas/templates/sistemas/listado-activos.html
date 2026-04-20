@@ -1,4 +1,4 @@
-{% extends "comun/dashboard.html" %}
+{% extends "comun/base.html" %}
 {% load comun_filters %}
 
 {% block content %}
@@ -37,7 +37,9 @@
   <tbody>
     {% for activo in filterset.qs.all %}<tr>
       <td>
+        <a href="{% url 'sistemas:detalle_activo' activo=activo %}">
           <b>{{ activo.nombre_activo }}</b>
+        </a>  
       </td>
       <td>
           {{ activo.descripcion }}<br>

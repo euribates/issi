@@ -86,6 +86,8 @@ def homepage(request):
             good=stats['green'],
             regular=stats['yellow'],
             bad=stats['red'],
+            width=128,
+            height=128,
             ),
         })
 
@@ -163,19 +165,21 @@ def doughnut(request):
 
 def logout_view(request):
     logout(request)
-    redirect('/intranet/')
+    return redirect('/intranet/')
 
 
 def login_view(request):
-    form = forms.LoginForm()
     next_url = request.GET.get('next', links.a_sistemas())
     if request.method == 'POST':
+        print('Es POST')
         form = forms.LoginForm(request.POST)
         if form.is_valid():
+            print(form.as_dict())
             user = authenticate(
                 username=form.cleaned_data['username'],
                 password=form.cleaned_data['password'],
                 )
+            print(f'user is {user}')
             if user is not None:
                 login(request, user)
                 return redirect(next_url)

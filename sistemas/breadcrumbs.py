@@ -240,6 +240,13 @@ def bc_activos() -> BreadCrumb:
         )
 
 
+def bc_detalle_activo(activo) -> BreadCrumb:
+    return bc_activos().step(
+        str(activo),
+        links.a_detalle_activo(activo.pk),
+        )
+
+
 def bc_pendientes() -> BreadCrumb:
     return bc_sistemas().step(
         'Pendientes',

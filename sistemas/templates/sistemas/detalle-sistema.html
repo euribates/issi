@@ -1,4 +1,4 @@
-{% extends "comun/dashboard.html" %}
+{% extends "comun/base.html" %}
 {% load comun_filters sistemas static %}
 
 {% block content %}
@@ -24,6 +24,8 @@
 </div>
 
 <div class="col-12">
+    {% include "sistemas/includes/activos.html" %}
+    4
     {% include "sistemas/includes/diagnostico.html" %}
     {% include "sistemas/includes/backlog.html" %}
 </div>  

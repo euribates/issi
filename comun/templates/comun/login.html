@@ -1,12 +1,86 @@
 {% extends 'comun/base.html' %}
+{% load static %}
 
-{% block content %}
+{% block styles %}
+  {{ block.super }}
+  <link media="all" href="{% static 'css/login.css' %}" rel="stylesheet">  
+{% endblock styles %}
 
-    <form method="post">
-    {% csrf_token %}
+{% block scripts %}
+<script type="text/javascript">
+
+var global_show_password = false;
+
+
+function toggle_password_field(evt) {
+   evt.preventDefault();
+   var imgEye = document.getElementById('eye_icon');
+   var field = document.getElementById('id_password');
+   if (global_show_password) {
+      imgEye.src = "{% static 'icons/eye-slash.svg' %}";
+      field.type = 'password'
+   } else {
+      imgEye.src = "{% static 'icons/eye.svg' %}";
+      field.type = 'text';
+      }
+   global_show_password = ! global_show_password;
+   return false;
+   }
+
+var eye_icon = document.getElementById('eye_icon');
+var login = document.getElementById('login');
+eye_icon.addEventListener("click", toggle_password_field);
+login.focus();
+
+</script>
+{% endblock scripts %}
+
+
+{% block container %}
+
+<div class="login-panel">
+    <img src="{% static 'img/logo.svg' %}"
+         width="280"
+         alt="Gobierno de Canarias" id="logo-gobcan">
+  <form method="post">
+  {% csrf_token %}
     
-    {{ form.as_p }}
-    <button type="submit" >Submit</button>
+  <div class="m-2">  
+    <label for="id_username" class="form-label">
+        {{ form.username.label }}
+    </label>
+    {{ form.username }}
+    {% if form.username.errors %}<ul class="form-errors">
+        {% for error in form.username.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>{% endif %}
+  </div>
+
+  <div class="m-2">  
+    <label for="id_password" class="form-label">
+    {{ form.password.label }}
+    </label>
+    <div class="input-group">
+      {{ form.password }}
+      <span class="input-group-text" id="basic-addon1">
+        <img id="eye_icon" src="{% static 'icons/eye-slash.svg' %}" height="24px">
+      </span>
+    </div>
+
+    {% if form.password.errors %}<ul class="form-errors">
+        {% for error in form.password.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>{% endif %}
+  </div>
+
+    <br>
+
+    <input role="button" class="form-control btn btn-primary"
+        type="submit" value="Login">
+
     </form>
+</div>
     
-{% endblock content %}
+{% endblock container %}

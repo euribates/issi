@@ -8,76 +8,138 @@
 
 {% block content %}
 
-    
 
-<div class="container text-center">
+<div class="row">
 
-  <div class="row">
+  <div class="col-sm-12 col-md-6 col-xl-4">
 
-    <div class="col">
+      <div class="panel">
+        <div class="panel-header">
+          <img src="{% static 'icons/box.svg' %}" width="32">
+           <a href="{% url 'sistemas:index' %}">Sistemas de Informacion</a>  
+        </div>  
+        <div class="panel-body">
+          <div class="counter">95</div>
+            <p class="small">
+            Inventario de sistemas de información 
+            gestionados por las AAPP del Gobierno de Canarias
+            (Consejerías y organismos dependientes)
+            </p>
+        </div>
+        <div class="panel-footer">
+          <a href="{% url 'sistemas:alta_sistema' %}">⊕ Ańadir</a>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="col-sm-12 col-md-6 col-xl-4">
+
+    <div class="panel">
+      <div class="panel-header">
+        Sistemas según estado 
+      </div>  
+      <div class="panel-body">
+        <div> {{ sistemas_chart.as_html }} </div>
+      </div>
+    </div>
+
+  </div><!-- de col -->
   
-      <div class="card">
-        <div class="card-header">
-         
-        <h3 class="card-title">
-          <a href="{% url 'sistemas:index' %}">
-            Sistemas de información
-          </a>
-        </h3>
 
-       </div>
-       <div class="card-body">
 
-         <div> {{ sistemas_chart.as_html }} </div>
-
-       <p class="card-text">
-        Conjunto organizado de elementos interrelacionados (personas,
-        procesos, datos, tecnología y recursos) que trabajan juntos para
-        recopilar, procesar, almacenar, distribuir y gestionar
-        información con el fin de apoyar la toma de decisiones, la
-        coordinación operativa y el control dentro de una organización.
-        </p>
-    
-        </div>
-        <div class="card-footer">
-          <a href="{% url 'sistemas:index' %}" class="btn btn-info">Ver sistemas</a>
-          <a href="{% url 'sistemas:alta_sistema' %}" class="btn btn-primary">⊕ Ańadir</a>
+  <div class="col-sm-12 col-md-6 col-xl-4">
+      
+      <div class="panel">
+        <div class="panel-header">
+          <img src="{% static 'icons/boxes.svg' %}" width="32">
+           <a href="{% url 'sistemas:index' %}">Activos de datos</a>  
+        </div>  
+        <div class="panel-body">
+          <div class="counter">4</div>
+            <p class="small">
+            Recurso que contiene información valiosa para una
+            organización. Estos incluyen datos, documentos, correos
+            electrónicos, software, sistemas, redes, dispositivos
+            y bases de datos.
+            </p>
         </div>
       </div>
-    </div>
 
-    <div class="col">
-      <div class="card">
-       <div class="card-header">
-        <h3 class="card-title">
-        Activos de datos
-        </h3>
-       </div>
-       <div class="card-body">
-         <p class="card-text">
-    
-        <div id="container" style="width:100%; height:400px;">
-        </div>
+  </div>
 
+  <div class="col-sm-12 col-md-6 col-xl-4">
 
-         Es cualquier recurso de datos con valor para el desarrollo de
-         las funciones de una organización, que puede ser comprendido y
-         tratado como una única unidad a efectos de gestión, uso,
-         protección e intercambio.
-         </p>
-         <a href="{% url 'sistemas:index' %}" class="btn
-             btn-primary">Ver activos de datos</a>
-
+      <div class="panel">
+        <div class="panel-header">
+          <img src="{% static 'icons/share-fill.svg' %}" width="32">
+           <a href="{% url 'sistemas:index' %}">Organismos</a>  
+        </div>  
+        <div class="panel-body">
+          <div class="counter">149</div>
+            <p class="small">
+            Incluye tanto organismos autónomos como consejerías (Información
+            sacada de DIRCAC).
+            </p>
         </div>
       </div>
-    </div>
 
-    <div class="col">
-      {% include "comun/sidebar.html" %}  
-    </div>
+  </div>
 
-  </div><!-- de row -->
-</div>
+  <div class="col-sm-12 col-md-6 col-xl-4">
+      <div class="panel">
+        <div class="panel-header">
+          <img src="{% static 'icons/people-fill.svg' %}" width="32">
+           <a href="{% url 'sistemas:index' %}">Usuarios</a>  
+        </div>  
+        <div class="panel-body">
+          <div class="counter">126</div>
+            <p class="small">
+            Usuarios activos en el sistema
+            </p>
+        </div>
+      </div>
+  </div>
+
+  <div class="col-sm-12 col-md-6 col-xl-4">
+      <div class="panel">
+        <div class="panel-header">
+          <img src="{% static 'icons/tema.svg' %}" width="32">
+           <a href="{% url 'sistemas:index' %}">Áreas competenciales</a>  
+        </div>  
+        <div class="panel-body">
+          <div class="counter">68</div>
+            <p class="small">
+            Todos los sistemas se clasifican en un área competencial
+            </p>
+        </div>
+      </div>
+  </div>
+
+  <div class="col-sm-12 col-md-6 col-xl-4">
+      <div class="panel">
+        <div class="panel-header">
+          <img src="{% static 'icons/familia.svg' %}" width="32">
+           <a href="{% url 'sistemas:index' %}">Familias</a>  
+        </div>  
+        <div class="panel-body">
+          <div class="counter">15</div>
+            <p class="small">
+            Algunos sistemas se agrupan en familias
+            </p>
+        </div>
+      </div>
+  </div>
+
+  <div class="col-sm-12 col-md-6 col-xl-4">
+     {% include "comun/sidebar.html" %}  
+  </div>
+
+<div><!-- row ends -->
+
+    
+
+
 
 
 

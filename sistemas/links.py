@@ -167,6 +167,10 @@ def a_activos() -> str:
     return _a('sistemas:listado_activos')
 
 
+def a_detalle_activo(pk: int) -> str:
+    return _a('sistemas:detalle_activo', activo=pk)
+
+
 def a_pendientes() -> str:
     return _a('sistemas:pendientes')
 

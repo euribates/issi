@@ -128,8 +128,10 @@ img.card-top-logo {
 }
 
 #content {
-  background-color: #C0C0C0;
+  background-color: #E9E9E9;
   padding-top: 20px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 .right-float-menu {

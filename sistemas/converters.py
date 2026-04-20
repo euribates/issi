@@ -3,6 +3,7 @@
 from django.urls import register_converter
 
 from directorio.models import Organismo
+from sistemas.models import Activo
 from sistemas.models import Ente
 from sistemas.models import Familia
 from sistemas.models import Sistema
@@ -27,6 +28,27 @@ class SistemaConverter:
             return str(value.id_sistema)
         raise ValueError(
             "Se necesita una instancia de la clase Sistema, pero"
+            " me pasan una instancia de {value.__class__.__name__}."
+            )
+
+
+class ActivoConverter:
+
+    regex = '[0-9]+'
+
+    def to_python(self, value) -> Activo:
+        activo = Activo.load_activo(int(value))
+        if not activo:
+            raise ValueError("El activo especificado es incorrecto")
+        return activo
+
+    def to_url(self, value) -> str:
+        if isinstance(value, int):
+            return str(value)
+        if isinstance(value, Activo):
+            return str(value.id_activo)
+        raise ValueError(
+            "Se necesita una instancia de la clase Activo, pero"
             " me pasan una instancia de {value.__class__.__name__}."
             )
 
@@ -141,6 +163,7 @@ class FamiliaConverter:
 register_converter(FamiliaConverter, 'fam')
 register_converter(OrganismoConverter, 'org')
 register_converter(SistemaConverter, 'si')
+register_converter(ActivoConverter, 'act')
 register_converter(TemaConverter, 'tema')
 register_converter(UserNameConverter, 'usr')
 register_converter(EnteConverter, 'ent')

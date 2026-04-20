@@ -99,3 +99,71 @@ ul.sidebar-nav li.sidebar-item {
   background-color: rgba(255, 255, 255, .075);
   border-left: 3px solid #3B7DDD;
 }
+
+.selected {
+  background-color: white;
+  color: bkack;
+  border: 2px solid yellow;
+
+}
+
+
+
+.panel {
+  min-width: 320px;
+  border: 0px dotted green;
+  margin: 5px;
+  }
+
+.panel .panel-header {
+  padding: 5px;
+  font-size: 22px;
+  line-height: 28px;
+  background-color: #143a61;
+  color: white;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  }
+
+.panel .panel-header img {
+  filter: invert(1);
+  }
+
+.panel .panel-header a {
+  color: white;
+  text-decoration: none!important;
+  }
+
+.panel .panel-header a:visited {
+  color: white;
+  text-decoration: none!important;
+  }
+
+
+.panel .panel-header a:hover {
+  text-decoration: underline;
+}
+
+
+.panel .panel-body {
+  display: flex;
+  flex-direction: row;
+  background-color: #c1d6ed;
+  padding: 5px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  }
+
+.panel .counter {
+  min-width: 100px;
+  font-size: 38pt;
+  letter-spacing: -2.5px;
+  font-weight: bolder;
+  text-align: center;
+  border: 0px solid red;
+}
+
+.panel .small {
+  font-size: 11pt;
+  color: #5A5A3A;
+}

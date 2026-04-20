@@ -3,7 +3,7 @@
  <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ titulo }} - ISSI</title>
+  <title>{{ titulo }}{% if subtitulo %} - {{ subtitulo }}{% endif %} - ISSI</title>
   <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}" >
   <link media="screen" href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
   <link media="screen" href="{% static 'img/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
@@ -11,6 +11,7 @@
   <link media="all" href="{% static 'css/custom.css' %}" rel="stylesheet">
   <link media="all" href="{% static 'css/toasts.css' %}" rel="stylesheet">
   <link media="all" href="{% static 'css/controles.css' %}" rel="stylesheet">
+  <link media="all" href="{% static 'css/dashboard.css' %}" rel="stylesheet">
   <link media="print" href="{% static 'css/print.css' %}" rel="stylesheet">
   <!-- estilos especificos de cada página -->
   {% block styles %}
@@ -27,22 +28,24 @@
    {% comment %}{% include "comun/navbar.html" %}{% endcomment %}
 
 {% block container %}
-<div class="container">
-   {% include "comun/includes/commands.html" %}
 
-   <main id="content">
-   {% block content %}
-          
-   {% endblock content %}
-   </main>
-   
-   {% if sidebar %}  
-     {% include "comun/sidebar.html" %}
-   {% endif %}
+<div class="wrapper">
+  <aside id="sidebar">
+    {% include "comun/includes/sidebar.html" with tab=tab %} 
 
+  </aside>
+  
+    <main id="content" class="container-fluid">
+      {% include "comun/includes/commands.html" %}
+      {% block content %}
+        
+      {% endblock content %}
+    </main>
 
-</div>
+  </div>
+
 {% endblock container %}
+
   
 {% include "comun/pie.html" %}
 
@@ -51,6 +54,7 @@
  <script src="{% static 'js/bootstrap.js' %}"></script>
  <script src="{% static 'js/chart.js' %}"></script>
  <script src="{% static 'js/sidebar.js' %}"></script>
+ <script src="{% static 'js/dashboard.js' %}"></script>
  {% endblock libs %}
 
  {% block scripts %}

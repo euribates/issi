@@ -35,6 +35,7 @@
           dominant-baseline="middle"
           text-anchor="middle"
           class="value"
+          font-size="30"
           fill="#333333">
     {{ total|stringformat:"d" }}
     </text>

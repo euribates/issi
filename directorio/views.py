@@ -7,6 +7,7 @@ from . import breadcrumbs as bc
 def index(request):
     return render(request, 'directorio/index.html', {
         'titulo': 'Directorio',
+        'subtitulo': 'Organismos de primer nivel (Consejerías y organismos dependientes)',
         'organismos': models.Organismo.objects.filter(depende_de=1),
         'breadcrumbs': bc.directorio(),
         })

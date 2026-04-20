@@ -35,21 +35,21 @@ from . import serializers
 def cmd_sistemas():
     return [
         Command(
-            links.a_importar_sistemas(),
-            '<i class="bi bi-file-arrow-up"></i>'
-            '&nbsp;Importar',
+            url=links.a_importar_sistemas(),
+            text='Importar',
             klass='info',
+            icon='<i class="bi bi-file-arrow-up"></i>',
             ),
         Command(
-            links.a_exportar_sistemas(),
-            '<i class="bi bi-file-arrow-down"></i>'
-            '&nbsp;Exportar',
+            url=links.a_exportar_sistemas(),
+            text='Exportar',
             klass='info',
+            icon='<i class="bi bi-file-arrow-down"></i>',
             ),
         Command(
-            links.a_alta_sistema(),
-            '<i class="bi bi-plus-circle-fill"></i>'
-            '&nbsp;Alta sistema',
+            url=links.a_alta_sistema(),
+            icon='<i class="bi bi-plus-circle-fill"></i>',
+            text='Alta sistema',
             klass='warning',
             ),
         ]
@@ -61,6 +61,17 @@ def cmd_usuarios():
             links.a_alta_usuario(),
             '⊞ Alta usuario',
             klass='warning',
+            ),
+        ]
+
+
+@cache
+def cmd_activos():
+    return [
+        Command(
+            links.a_activos(),
+            'Listado',
+            klass='info',
             ),
         ]
 
@@ -900,6 +911,18 @@ def listado_activos(request):
         'breadcrumbs': bc.bc_activos(),
         'tab': 'activos',
         "filterset": filterset,
+        })
+
+
+@login_required
+def detalle_activo(request, activo):
+    return render(request, 'sistemas/detalle-activo.html', {
+        'titulo': f'Detalles activo {activo}//{activo.sistema.codigo}',
+        'subtitulo': activo.descripcion,
+        'commands': cmd_activos(),
+        'breadcrumbs': bc.bc_detalle_activo(activo),
+        'tab': 'activos',
+        'activo': activo,
         })
 
 

@@ -1,0 +1,42 @@
+{% load comun_filters %}
+<div class="card m-2">
+  <div class="card-header">  
+    <h5 class="card-title">Activos de datos asociados a este sistema</h5>
+  </div>  
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Prioritario</th>
+          <th>Georreferenciado</th>
+          <th>¿Almacena datos personales?</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for activo in sistema.activos.all %}<tr>
+          <td>
+            <code>
+              <a href="{% url 'sistemas:detalle_activo' activo=activo %}">
+              {{ activo.nombre_activo}}
+              </a>
+            </code>
+          </td>
+          <td>
+            {{ activo.descripcion|as_markdown }}
+          </td>
+          <td>
+            {{ activo.es_prioritario|as_boolean }}
+          </td>
+          <td>
+            {{ activo.georefernciado|as_boolean }}
+          </td>
+          <td>
+            {{ activo.get_datos_personales_display }}
+          </td>
+        </tr>{% endfor %}
+      </tbody>
+    </table>
+  </div><!-- de card-body -->
+</div>  

@@ -59,6 +59,7 @@ urlpatterns = [
     tie('cuestionario/<int:id_pregunta>/alta/opcion/', views.alta_opcion),
 
     tie('activos/', views.listado_activos),
+    tie('activos/<act:activo>/', views.detalle_activo),
     tie('pendientes/', views.pendientes),
     tie('pendientes/temas/', views.sistemas_sin_tema),
     tie('exportar/', views.exportar_sistemas),

@@ -3,27 +3,38 @@
 
 {% block content %}
 
-<div class="card m-3">
 
-  <div class="card-header">
+<div class="shadow rounded col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6">
+
+  <div class="card m-3">
+
+    <div class="card-header">
     Importar sistemas de información en bloque
-  </div>
-
-  <div class="card-body">
-
-<form method="POST" action="."  enctype="multipart/form-data">
-{% csrf_token %}
-
-<div class="row">
-    <div class="col-2">{{ form.archivo.label }}</div>
-    <div class="col-8">{{ form.archivo }}</div>
-    <div class="col-2">
-        <input type="submit" name="pb_import" value="Importar fichero">
     </div>
-</div>
 
-</form>
+    <div class="card-body">
 
+    <form method="POST" action="."  enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <label for="id_archivo" class="form-label">
+        {{ form.archivo.label }}
+    </label>
+    {{ form.archivo }}
+    {% if form.archivo.errors %}<ul class="form-errors">
+        {% for error in form.archivo.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>{% endif %}
+
+    <br>
+    
+    <input type="submit" 
+           role="button"    
+           class="btn btn-primary"
+           name="pb_import"
+           value="Importar fichero">
+    </form>
   </div>
 </div>  
 {% endblock content %}

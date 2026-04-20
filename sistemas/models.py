@@ -550,10 +550,33 @@ class Activo(models.Model):
         null=True,
     )
 
-    def __str__(self):
+    @classmethod
+    def load_activo(cls, pk: int):
+        """Obtener un activo de datos a partir de su clave primaria.
+
+        Parameters:
+
+            pk (int): Clave primaria del activo
+
+        Returns:
+
+            La instancia, si existe el registro correspondiente
+            en la base de datos, o ``None`` en caso contrario.
+
+        """
+        try:
+            return cls.objects.get(id_activo=pk)
+        except cls.DoesNotExist:
+            return None
+
+    def __str__(self) -> str:
+        """Representación textual del activo de datos.
+        """
         return self.nombre_activo
 
-    def touch(self):
+    def touch(self) -> None:
+        """Marca el registro como recién modificado.
+        """
         self.f_cambio = localtime()
         self.save()
         self.sistema.touch()
@@ -627,6 +650,12 @@ class Arquetipo(models.Model):
         if self.espacio:
             return f'{self.tipo.pk}/{self.espacio}/{self.funcion}'
         return f'{self.tipo.pk}/{self.funcion}'
+
+    def es_clave_primaria(self):
+        return self.funcion == 'pk'
+
+    def es_clave_foranea(self):
+        return self.funcion == 'fk'
 
 
 
