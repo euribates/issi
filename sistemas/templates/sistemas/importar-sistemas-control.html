@@ -45,9 +45,13 @@
                 </li>
         </td>
         <td>
+          {% if all_errors %}
             <ul class="error-list">{% for error in all_errors %}
               <li>{{ error }}</li>
             {% endfor %}</ul>
+          {% else %}
+              Sin errores
+          {% endif %}
         </td>
 
         <td>
@@ -59,6 +63,8 @@
             <label for="chk_{{ index }}" class="color-green">
                     Válido
             </label>
+            2
+            {% include 'sistemas/includes/pb-importar-sistema.html' with sistema=data %}
           {% else %}
             <input class="form-check-input"
                    id="chk_{{ index }}"

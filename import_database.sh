@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+./manage.py check
+./manage.py migrate
+
 ./manage.py loaddata fixtures/auth.json
 # ./manage.py loaddata fixtures/auth.json --database test_default
 

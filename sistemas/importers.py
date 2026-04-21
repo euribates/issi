@@ -36,7 +36,7 @@ def rename_headers(df):
             })
     else:
         raise ValueError(
-            'Se esperaban 11 o 12 columnas, pero el fichero'
+            'Se esperaban 9 o 10 columnas, pero el fichero'
             f' tiene {len(origin_names)}'
             )
     return result

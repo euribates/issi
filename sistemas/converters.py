@@ -16,7 +16,7 @@ class SistemaConverter:
     regex = '[0-9]+'
 
     def to_python(self, value) -> Sistema:
-        sistema = Sistema.load_sistema(int(value))
+        sistema = await Sistema.load_sistema(int(value))
         if not sistema:
             raise ValueError("El sistema especificado es incorrecto")
         return sistema

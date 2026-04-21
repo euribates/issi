@@ -13,6 +13,7 @@ from health_check.views import HealthCheckView
 
 from comun.views import homepage, labo
 from comun.views import login_view, logout_view
+from .api import api
 
 
 def tie(ruta, vista, name=None):
@@ -50,6 +51,7 @@ urlpatterns = [
     path("plan/", include('plan.urls')),
     path('admin/', admin.site.urls),
     path('docs/', include('docs.urls')),
+    path('api/', api.urls),
 
 ]
 

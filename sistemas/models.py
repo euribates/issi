@@ -619,6 +619,11 @@ class Arquetipo(models.Model):
                 fields=['tipo', 'espacio', 'funcion'],
                 name="arquetipo_clave_natural"),
             ]
+        ordering = [
+            'tipo',
+            'espacio',
+            'funcion',
+            ]
 
     id_arquetipo = models.BigAutoField(primary_key=True)
     tipo = models.ForeignKey(TipoDatos, on_delete=models.PROTECT)
