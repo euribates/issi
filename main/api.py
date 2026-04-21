@@ -42,6 +42,28 @@ class SistemaSchema(Schema):
     organismo: OrganismoSchema
     
 
+class SistemaSchema(Schema):
+    id_sistema: int
+    uuid_sistema: str
+    nombre_sistema: str
+    organismo: int
+    codigo: str
+    url: str
+    descripcion: str
+    finalidad: str
+    observaciones: str
+    tema: str
+    juriscan: List[int]
+    responsables_funcionales: List[str]
+    responsables_texnicos: List[str]
+
+
+@api.post('/sistemas/alta/')
+def api_sistemas(request, payload):
+    
+    return sistemas.models.Sistema.objects.all()
+
+
 @api.get('/sistemas/', response=List[SimpleSistemaSchema])
 @paginate(LimitOffsetPagination)
 def api_sistemas(request):

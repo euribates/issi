@@ -273,5 +273,4 @@ def parse_row(items: Sequence, n_linea=None) -> dict:
     result['juriscan'] = parse_juriscan(items[7], n_linea=n_linea)
     result['comentarios'] = parse_comentarios(items[8], n_linea=n_linea)
     result['uuid'] = parse_uuid(items[9], n_linea=n_linea)
-    print("UUID:", result['uuid'])
     return result

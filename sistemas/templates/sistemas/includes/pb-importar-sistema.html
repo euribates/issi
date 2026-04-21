@@ -1,10 +1,25 @@
 {% spaceless %}
 
-{{ sistema|pprint }}
+<form action="/api/sistemas/alta/" method="POST" accept-charset="utf-8">
+<input type="hidden" value="{{ sistema.nombre_sistema.value }}" name="nombre_sistema">
+<input type="hidden" value="{{ sistema.codigo.value }}" name="codigo">
+<input type="hidden" value="{{ sistema.descripcion.value }}" name="descripcion">
+<input type="hidden" value="{{ sistema.comentarios.value }}" name="comentarios">
+<input type="hidden" value="{{ sistema.finalidad.value }}" name="finalidad">
+<input type="hidden" value="{{ sistema.uuid.value }}" name="uuid">
+<input type="hidden" value="{{ sistema.tema.value }}" name="tema">
+<input type="hidden" value="{{ sistema.organismo.value }}" name="organismo">
+{% for usuario in sistema.responsables_funcionales.value %}
+<input type="hidden" value="{{ usuario.login }}" name="responsables_funcionales">
+{% endfor %}]
+{% for usuario in sistema.responsables_tecnologicos.value %}
+<input type="hidden" value="{{ usuario.login }}" name="responsables_tecnologicos">
+{% endfor %}]
+{% for juriscan in sistema.juriscan.value %}
+<input type="hidden" value="{{ juriscan.pk }}" name="juriscan">
+{% endfor %}]
 
-<p>codigo = {{ sistema.codigo.value }}</p>
-<p>UUID: {{ sistema.uuid.value }}</p>
-<p>nombre_sistema = {{ sistema.nombre_sistema.value }}</p>
-
+<input type="submit" name="pb_upsert" value="Añadir / Actualizar">
+</form>
 
 {% endspaceless %}
