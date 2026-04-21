@@ -179,9 +179,9 @@ class Sistema(models.Model):
         default="UNK",
         on_delete=models.PROTECT,
         )
-    es_transversal = models.BooleanField(
+    es_corporativo = models.BooleanField(
         default=False,
-        help_text="Este S.I. es horizontal a todos los departamentos.",
+        help_text="Este S.I. es corporativo",
         )   
     es_subsistema_de = models.ForeignKey(
         "Sistema",

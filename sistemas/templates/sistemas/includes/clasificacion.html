@@ -84,13 +84,13 @@
     </tr>
 
     <tr>
-      <th>Es transversal</th>
-      <td>{{ sistema.es_transversal|as_boolean }} </td>
+      <th>Es corporativo</th>
+      <td>{{ sistema.es_corporativo|as_boolean }} </td>
       <td>
         <a class="btn btn-warning"
-           href="{% url 'sistemas:conmutar_campo' sistema=sistema campo='es_transversal' %}"
+           href="{% url 'sistemas:conmutar_campo' sistema=sistema campo='es_corporativo' %}"
             title="Conmutar valor">
-        {% if sistema.es_transversal %}
+        {% if sistema.es_corporativo %}
           <i class="bi bi-toggle-on"></i>
         {% else %}
           <i class="bi bi-toggle-off"></i>

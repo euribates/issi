@@ -9,9 +9,9 @@ class SistemaAdmin(admin.ModelAdmin):
         "nombre_sistema",
         "descripcion",
         "tema",
-        "es_transversal",
+        "es_corporativo",
         ]
-    list_filter = ['tema', "es_transversal"]
+    list_filter = ['tema', "es_corporativo"]
     exclude = [
         'icono_width',
         'icono_height',
@@ -51,7 +51,9 @@ admin.site.register(models.Tema, TemaAdmin)
 class PerfilAdmin(admin.ModelAdmin):
     list_display = ["id_perfil", "usuario", "cometido"]
 
+
 admin.site.register(models.Perfil, PerfilAdmin)
+
 
 class UsuarioAdmin(admin.ModelAdmin):
     list_display = ["login", "nombre_completo", "organismo"]
@@ -78,6 +80,7 @@ class InterlocutorAdmin(admin.ModelAdmin):
         'usuario__email',
         'organismo__nombre_organismo',
         ]
+
 
 admin.site.register(models.Interlocutor, InterlocutorAdmin)
 
