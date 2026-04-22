@@ -42,7 +42,7 @@ class SistemaSchema(Schema):
     organismo: OrganismoSchema
     
 
-class SistemaSchema(Schema):
+class AltaSistemaSchema(Schema):
     id_sistema: int
     uuid_sistema: str
     nombre_sistema: str
@@ -59,9 +59,9 @@ class SistemaSchema(Schema):
 
 
 @api.post('/sistemas/alta/')
-def api_sistemas(request, payload):
-    
-    return sistemas.models.Sistema.objects.all()
+def alta_sistema(request, payload: AltaSistemaSchema):
+    print(payload)
+    return {'status': 'ok'}
 
 
 @api.get('/sistemas/', response=List[SimpleSistemaSchema])
