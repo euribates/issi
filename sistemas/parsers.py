@@ -18,14 +18,16 @@ import pandas as pd
 import numpy as np
 
 from caches.temas import temas
+from comun import filters
+from comun.error import errors
 from comun.funcop import first
 from comun.results import Result, Success, Failure
-from comun.error import errors
 from directorio.models import Organismo
 from juriscan.models import Juriscan
+from sistemas.models import Sistema
 from sistemas.models import Tema
 from sistemas.models import Usuario
-from sistemas.models import Sistema
+
 
 #: Dominio por defecto para los correos electrónicos.
 DEFAULT_DOMAIN = 'gobiernodecanarias.org'
@@ -105,6 +107,9 @@ def parse_codigo_interno(codigo: str, n_linea=None) -> Result:
     codigo = clean_text(codigo)
     if not codigo:
         return Failure(errors.EI0003(n_linea=n_linea))
+    codigo = filters.codigos_renombrados(codigo)
+    codigo = filters.slugify(codigo)
+    codigo = codigo.upper()
     if PAT_CODIGO_INTERNO.match(codigo):
         return Success(codigo)
     return Failure(errors.EI0002(codigo, n_linea=n_linea))

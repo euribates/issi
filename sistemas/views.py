@@ -164,7 +164,7 @@ def asignar_organismo(request, sistema):
         if form.is_valid():
             organismo = form.cleaned_data['organismo']
             sistema.asignar_organismo(organismo)
-            Bus(request).sistema_asignado_organismo(sistema, organismo)
+            Bus(request).pub_sistema_asignado_organismo(sistema, organismo)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.AsignarOrganismoForm(instance=sistema)
@@ -241,9 +241,10 @@ def editar_nombre(request, sistema):
     if request.method == "POST":
         form = forms.EditarNombreForm(request.POST, instance=sistema)
         if form.is_valid():
-            sistema.nombre_sistema = form.cleaned_data['nombre_sistema']
+            nuevo_nombre = form.cleaned_data['nombre_sistema']
+            sistema.nombre_sistema = nuevo_nombre
             sistema.save(update_fields=['nombre_sistema'])
-            Bus(request).pub_sistema_editar_nombre(sistema, sistema.nombre)
+            Bus(request).pub_sistema_editar_nombre( sistema, nuevo_nombre)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
         form = forms.EditarNombreForm(instance=sistema)
@@ -323,6 +324,8 @@ def asignar_tema(request, sistema):
         form = forms.AsignarTemaForm(request.POST, instance=sistema)
         if form.is_valid():
             tema = sistema.asignar_tema(form.cleaned_data['tema'])
+            sistema.tema = tema
+            sistema.save(update_fields=['tema'])
             Bus(request).pub_sistema_asignar_materia(sistema, tema)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
