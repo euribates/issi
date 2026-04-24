@@ -1,104 +1,83 @@
-{% load sistemas %} 
+{% load sistemas comun_filters %} 
 
 <div class="card m-1">
-  <div class="card-header">
+  <div class="card-header bg-info">
     <h3 class="card-title">Identificación</h3>
   </div>  
   <div class="card-body">
-
-    <div class="d-flex flex-row justify-content-between align-items-center mb-2">  
-      <h3>
-        {{ sistema.codigo }}
-      </h3>
-      <div class="control">
-        {% include "sistemas/includes/pb-editar-codigo.html" %}
-      </div>
-    </div>  
-
-    <div class="d-flex flex-row justify-content-between align-items-center mb-2">  
-      <h4>{{ sistema.nombre_sistema }}</h4>
-      <div class="control">
-        {% include "sistemas/includes/pb-editar-nombre.html" %}
-      </div>
-    </div>  
-
-    {% comment %}<div class="d-flex flex-row justify-content-between align-items-center">  {% endcomment %}
-      {% comment %}<h6>Clave interna</h6>{% endcomment %}
-      {% comment %}<div class="control">{% endcomment %}
-        {% comment %}<code class="clave-primaria">{% endcomment %}
-        {% comment %}{{ sistema.pk }}{% endcomment %}
-        {% comment %}</code>{% endcomment %}
-      {% comment %}</div>{% endcomment %}
-    {% comment %}</div>  {% endcomment %}
-
-    <div class="d-flex flex-row justify-content-between align-items-center mb-2">  
-      <h6>UUID</h6>
-      <div class="control">
-        <code class="clave-externa">
-        <span id="clave-externa">{{ sistema.uuid_sistema }}</span>
-        </code>  
-        <button class="btn btn-info btn-sm" onclick="copyClaveExterna()">
+  <table class="table">
+    <tr>
+        <th class="text-end">UUID</th>
+        <td><span id="clave-externa">{{ sistema.uuid_sistema }}</span></td>
+        <td>
+          <button class="btn btn-info btn-sm" onclick="copyClaveExterna()">
             <i class="bi bi-clipboard-plus"></i>    
-        </button>
-      </div>
-    </div>
-                  
-    <div class="d-flex flex-row justify-content-between align-items-center mb-2">  
-      <h6>Descripción</h6>
-      <div class="control">
-        {% include "sistemas/includes/pb-editar-descripcion.html" %}
-      </div>
-    </div>
-    {% if sistema.descripcion %}  
-      <div class="alert alert-info m-3">
-    {% else %}
-      <div class="alert alert-danger m-3">
-    {% endif %}
-      {{ sistema.descripcion|as_descripcion }}
-    </div>
+          </button>
+        </td>
+    </tr>
+    <tr>
+        <th class="text-end">Descripción</th>
+        <td>
+          {% if sistema.descripcion %}  
+            {{ sistema.descripcion|as_descripcion }}
+          {% else %}
+             Falta la descripción
+          {% endif %}  
+        </td>
+        <td>
+          {% include "sistemas/includes/pb-editar-descripcion.html" %}
+        </td>
+    </tr>
+
+    <tr>
+        <th class="text-end">URL</th>
+        <td>
+          {% if sistema.url %}
+            <a href="{{ sistema.url }}">{{ sistema.url }}</a>  
+          {% else %}
+            <abbr title="No definido / No aplica">N/A</abbr>
+          {% endif %}
+        </td>
+        <td>
+          {% include "sistemas/includes/pb-editar-url.html" %}
+        </td>
+    </tr>
+        
+    <tr>
+        <th class="text-end">Es corporativo</th>
+        <td>{{ sistema.es_corporativo|as_boolean }}</td>
+        <td>
+          <a class="btn btn-warning"
+             href="{% url 'sistemas:conmutar_campo' sistema=sistema campo='es_corporativo' %}"
+              title="Conmutar valor">
+          {% if sistema.es_corporativo %}
+            <i class="bi bi-toggle-on"></i>
+          {% else %}
+            <i class="bi bi-toggle-off"></i>
+          {% endif %}
+          </a>
+        </td>
+    </tr>
+
+    <tr>
+        <th class="text-end">Especial importancia</th>
+        <td>{{ sistema.especial_importancia|as_boolean }}</td>
+        <td>
+          <a class="btn btn-warning"
+             href="{% url 'sistemas:conmutar_campo' sistema=sistema campo='especial_importancia' %}"
+              title="Conmutar valor">
+          {% if sistema.especial_importancia %}
+            <i class="bi bi-toggle-on"></i>
+          {% else %}
+            <i class="bi bi-toggle-off"></i>
+          {% endif %}
+          </a>
+        </td>
+    </tr>
+
+  </table>
 
 
-    <div class="d-flex flex-row justify-content-between align-items-center mb-2">  
-      <h6>URL entrada</h6>
-      <div class="control">
-        {% include "sistemas/includes/pb-editar-url.html" %}
-      </div>
-    </div>
-
-  {% if sistema.url %}  
-    <div class="alert alert-info m-3">
-      <a href="{{ sistema.url }}">{{ sistema.url }}</a>  
-    </div>  
-  {% else %}
-    <div class="alert alert-danger m-3">
-      No definido / No aplica
-    </div>  
-  {% endif %}
-
-    <dt>Logotipo</dt>
-    <dd>
-        {% if sistema.icono %}
-        <img width="256" height="256"
-            src="{{ sistema.icono.url }}"
-            alt="{{ sistema }}">
-        {% else %}
-        <i class="bi bi-exclamation-diamond"></i>
-        Pendiente de asignar icono
-        {% endif %} 
-        <p>
-        <a href="{% url 'sistemas:asignar_icono' sistema=sistema %}"
-           class="btn btn-{% if sistema.icono %}danger{% else %}warning{% endif %}"
-           title="Asignar icono"
-           >
-           <i class="bi bi-image"></i>
-        </a>
-        </p>
-    </dd>
-
-
-    {% if sistema.es_corporativo %}
-    <span class="badge text-bg-info">Corporativo</span>
-    {% endif %}
     {% if sistema.es_subsistema_de %}
     <span class="badge text-bg-warning" title="de {{ sistema.es_subsistema_de }}">
         Subsistema

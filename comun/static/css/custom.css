@@ -310,7 +310,7 @@ a.email:hover {
 }
 
 
-.form-errors {
+.lista_errores, .form-errors {
   color: #aa4400;
   font-weight: bolder;
   font-size: 110%;

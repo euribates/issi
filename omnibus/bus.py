@@ -120,6 +120,13 @@ class Bus:
             )
         self.publica(sistema, msg, 'update')
 
+    def pub_sistema_editar_observaciones(self, sistema):
+        msg = (
+            "Se ha actualizado el texto de las observaciones"
+            f" del sistema {sistema}"
+            )
+        self.publica(sistema, msg, 'update')
+
     def pub_sistema_asignar_responsable(self, sistema, perfil):
         msg = (
             f"El usuario {perfil.usuario}"    

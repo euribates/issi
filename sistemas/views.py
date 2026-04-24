@@ -9,7 +9,6 @@ from django.shortcuts import redirect
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 
-from comun.error import errors
 from comun.commands import Command
 from comun.funcop import agrupa
 from comun import graficas
@@ -84,7 +83,7 @@ def index(request, *args, **kwargs):
         models.Sistema.objects
         .select_related('tema')
         .select_related('organismo')
-        .order_by('-f_cambio')
+        .order_by('-updated')
         )
     total_sistemas = num_sistemas = sistemas.count()
     return render(request, 'sistemas/index.html', {
@@ -203,6 +202,7 @@ def editar_finalidad(request, sistema):
         if form.is_valid():
             finalidad = form.cleaned_data['finalidad']
             if finalidad != sistema.finalidad:
+                sistema.finalidad = finalidad
                 sistema.save(update_fields=['finalidad'])
                 Bus(request).pub_sistema_editar_finalidad(sistema, finalidad)
             return redirect(links.a_detalle_sistema(sistema.pk))
@@ -291,6 +291,27 @@ def editar_descripcion(request, sistema):
     return render(request, 'sistemas/editar-descripcion.html', {
         'titulo': f'Editar finalidad de {sistema}',
         'breadcrumbs': bc.bc_editar_finalidad(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
+
+
+@login_required
+def editar_observaciones(request, sistema):
+    if request.method == "POST":
+        form = forms.GranTextoForm(request.POST)
+        if form.is_valid():
+            observaciones = form.get_texto()
+            sistema.observaciones = observaciones
+            sistema.save(update_fields=['observaciones'])
+            Bus(request).pub_sistema_editar_observaciones(sistema)
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.GranTextoForm(sistema.observaciones)
+    return render(request, 'sistemas/editar-observaciones.html', {
+        'titulo': f'Editar observaciones de {sistema}',
+        'breadcrumbs': bc.bc_editar_observaciones(sistema),
         'tab': 'sistemas',
         'form': form,
         'sistema': sistema,
@@ -958,27 +979,6 @@ def sistemas_sin_tema(request):
         })
 
 
-
-def verificar_existencia_sistema(payload: dict) -> dict:
-    '''Verifica si los datos a importar son consistentes con la BD.
-    '''
-    # Si indica UUID, este debe existir en la base de datos
-    uuid_sistema = payload.get('uuid_sistema')
-    if uuid_sistema:
-        sistema = Sistema.load_sistema_por_uuid(uuid_sistema)
-        if sistema:
-            payload['sistema'] = sistema
-        else:
-            payload['errores'].append(errors.EI0010(uuid_sistema))
-    ## El código debe ser único
-    codigo = payload['codigo']
-    sistema = Sistema.load_sistema_por_codigo(codigo)
-    if sistema:
-        payload['sistema'] = sistema
-        payload['errores'].append(errors.EI0011(codigo))
-    return payload
-
-
 @login_required
 def importar_sistemas(request, *args, **kwargs):
     if request.method == 'POST':
@@ -987,12 +987,16 @@ def importar_sistemas(request, *args, **kwargs):
             archivo = request.FILES["archivo"]
             stream = archivo.read()
             sistemas = list(importar_sistemas_desde_fichero(stream))
+            sistemas_correctos = [s for s in sistemas if not s['errores']]
             return render(request, 'sistemas/importar-sistemas-control.html', {
                 'titulo': 'Importar sistemas - Selección',
                 'commands': cmd_sistemas(),
                 'tab': 'sistemas',
                 'breadcrumbs': bc.bc_importar_sistemas(),
                 'sistemas': sistemas,
+                'num_sistemas': len(sistemas),
+                'sistemas_correctos': sistemas_correctos,
+                'num_sistemas_correctos': len(sistemas_correctos),
                 })
 
     else:

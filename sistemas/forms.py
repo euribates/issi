@@ -26,6 +26,23 @@ class ODSFileForm(BootstrapForm, forms.Form):
         )
 
 
+class GranTextoForm(BootstrapForm, forms.Form):
+
+    texto = forms.CharField(
+        widget=widgets.Textarea(attrs={"cols": "40", "rows": 12}),
+        required=False,
+        )
+
+    def __init__(selt, texto_inicial='', **kwargs):
+        if 'initial' not in kwargs:
+            kwargs['initial'] = dict()
+        kwargs['initial']['texto'] = texto_inicial
+        super().__init__(**kwargs)
+
+    def get_texto(self):
+        return self.cleaned_data['texto']
+
+
 # ---------------------------------------[ Formularios para modelos ]--
 
 

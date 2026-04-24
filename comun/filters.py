@@ -202,7 +202,7 @@ def slugify(texto: str) -> str:
 def codigos_renombrados(codigo):
     tabla = {
         'Registro de Plantaciones de Viñedo': 'REGPLANVID',
-        'Registro de Sociedades Agrarias de Transformación de Canarias': 'REGSOCAGR',
+        'Registro de Sociedades Agrarias de Transformación de Canarias': 'REG_SATC',
         'APP Móvil': 'APP_MOVIL_CAPGA',
         'LicenciasPesca': 'LICENCIAS_PESCA',
         'Plataforma de Interoperabildad CAGPA': 'INTEROP_CAGPA',

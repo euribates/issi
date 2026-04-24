@@ -1,25 +1,76 @@
 {% spaceless %}
 
-<form action="/api/sistemas/alta/" method="POST" accept-charset="utf-8">
-<input type="hidden" value="{{ sistema.nombre_sistema.value }}" name="nombre_sistema">
-<input type="hidden" value="{{ sistema.codigo.value }}" name="codigo">
-<input type="hidden" value="{{ sistema.descripcion.value }}" name="descripcion">
-<input type="hidden" value="{{ sistema.comentarios.value }}" name="comentarios">
-<input type="hidden" value="{{ sistema.finalidad.value }}" name="finalidad">
-<input type="hidden" value="{{ sistema.uuid.value }}" name="uuid">
-<input type="hidden" value="{{ sistema.tema.value }}" name="tema">
-<input type="hidden" value="{{ sistema.organismo.value }}" name="organismo">
-{% for usuario in sistema.responsables_funcionales.value %}
-<input type="hidden" value="{{ usuario.login }}" name="responsables_funcionales">
-{% endfor %}]
-{% for usuario in sistema.responsables_tecnologicos.value %}
-<input type="hidden" value="{{ usuario.login }}" name="responsables_tecnologicos">
-{% endfor %}]
-{% for juriscan in sistema.juriscan.value %}
-<input type="hidden" value="{{ juriscan.pk }}" name="juriscan">
-{% endfor %}]
 
-<input type="submit" name="pb_upsert" value="Añadir / Actualizar">
-</form>
+{% if sistema.sistema_db %}
+
+  {% comment %}<pre>{{% endcomment %}
+    {% comment %}{% for name,value in sistema.delta.items %} {{ name|pprint }}: {{ value|pprint }},{% endfor %}{% endcomment %}
+  {% comment %}}</code>{% endcomment %}
+
+  <form action="/api/sistemas/actualizar/{{sistema.sistema_db.pk}}/"
+        method="POST"
+        accept-charset="utf-8">
+  {% csrf_token %}
+  {% for name,value in sistema.delta.items %}
+    {% if name == 'juriscan' %}
+      {% for id_juriscan in value %}
+        <input name="{{ name }}" value="{{ id_juriscan }}" type="hidden">  
+        &lt;input name="{{ name }}" value="{{ id_juriscan }}" type="hidden"&gt;
+      {% endfor %} 
+    {% elif name == 'responsables_funcionales' %}
+      {% for persona in value %}
+        <input name="{{ name }}" value="{{ persona }}" type="hidden">  
+        &lt;input name="{{ name }}" value="{{ persona }}" type="hidden"&gt;
+      {% endfor %} 
+    {% elif name == 'responsables_tecnologicos' %}
+      {% for persona in value %}
+        <input name="{{ name }}" value="{{ persona.login }}" type="hidden">  
+        &lt;input name="{{ name }}" value="{{ persona.login }}" type="hidden"&gt;
+      {% endfor %} 
+    {% elif name == 'tema' %}
+        <input name="{{ name }}" value="{{ tema.pk }}" type="hidden">  
+        &lt;input name="{{ name }}" value="{{ tema.pk }}" type="hidden"&gt;
+    {% else %}
+        <input name="{{ name }}" value="{{ value }}" type="hidden">  
+        &lt;input name="{{ name }}" value="{{ value }}" type="hidden"&gt;
+    {% endif %}
+  {% endfor %}  
+
+  <input type="submit" name="pb_update"
+      {% if sistema.errores or not sistema.necesita_actualizacion %}disabled{% endif %}
+      value="Actualizar sistema">
+  </form>
+
+{% else %}
+  
+  <form action="/api/sistemas/alta/" method="POST" accept-charset="utf-8">
+  {% csrf_token %}
+  <input name="nombre_sistema" value="{{ sistema.nombre_sistema }}" type="hidden">
+  <input name="codigo" value="{{ sistema.codigo }}" type="hidden">
+  <input name="descripcion" value="{{ sistema.descripcion }}" type="hidden">
+  <input name="comentarios" value="{{ sistema.comentarios }}" type="hidden">
+  <input name="finalidad" value="{{ sistema.finalidad }}" type="hidden">
+  <input name="observaciones" value="{{ sistema.observaciones }}" type="hidden">
+  <input name="tema" type="hidden" value="{{ sistema.tema.pk }}">
+  <input name="organismo" type="hidden" value="{{ sistema.organismo.pk }}">
+  {% for juriscan in sistema.juriscan %}
+  <input name="juriscan" value="{{ juriscan.pk }}" type="hidden">
+  {% endfor %}
+  
+
+  {% for persona in sistema.responsables_funcionales %}
+  <input name="responsables_funcionales" value="{{ persona.login }}" type="hidden">
+
+  <code>{{ usuario.login|pprint }}</code>
+  
+  {% endfor %}
+  {% for usuario in sistema.responsables_tecnologicos %}
+  <input name="responsables_tecnologicos" value="{{ usuario.login }}" type="hidden">
+  {% endfor %}
+  <input type="submit" name="pb_upsert"
+      {% if sistema.errores or not sistema.necesita_actualizacion %}disabled{% endif %}
+      value="Añadir sistema">
+  </form>
+{% endif %}
 
 {% endspaceless %}

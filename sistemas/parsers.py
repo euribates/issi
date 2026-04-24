@@ -3,16 +3,17 @@
 
 """
 Todas las funciones definidas en este módulo
-deben devolver o bien un pbjeto de la clase
+deben devolver o bien un objeto de la clase
 ``Success`` o uno de la clase ``Failure``.
 
 El valor devuelto dentro de ``Success`` deberia
-ser del tipo más cercanbo posible al esperado.
+ser del tipo correspondiente al esperado. Por ejemplo, ``parse_uuid``
+no devuelve la cadena de texto pasada, sino una instancia
+de la clase ``uuid.UUID``.
 """
 
 import re
 from uuid import UUID
-from typing import Sequence
 
 import pandas as pd
 import numpy as np
@@ -60,9 +61,11 @@ PAT_CODIGO_INTERNO = re.compile(r'[A-Z_][0-9A-Z_\\][0-9A-Z_\\]+$')
 def clean_text(text: str) -> str|None:
     """Limpia el texto de entrada.
     """
-    if text == '' or text is None or text is np.nan:
+    if (text is None) or (text is np.nan):
         return None
-    text = text.strip()
+    text = str(text).strip()
+    if text == '':
+        return None
     if text[0] == text[-1] == '"':
         text = text[1:-1]
     return text or None
@@ -92,7 +95,7 @@ def parse_nombre_sistema(texto: str, n_linea=None) -> Result:
           ``Failure`` en caso contrario.
 
     """
-    texto = clean_text(texto)
+    texto = clean_text(str(texto))
     if texto:
         if texto[-1] == '.':
             texto = texto[:-1]
@@ -135,7 +138,7 @@ def parse_descripcion(texto, n_linea=None) -> Result:
     return Success('')
 
 
-def parse_comentarios(texto, n_linea=None) -> Result:
+def parse_observaciones(texto, n_linea=None) -> Result:
     if texto is None or pd.isna(texto):
         return Success('')
     texto = texto.strip()
@@ -261,21 +264,3 @@ def parse_uuid(value: str, n_linea=None) -> Result:
         if sistema:
             return Success(value)
     return Failure(errors.EI0005(value))
-
-
-
-def parse_row(items: Sequence, n_linea=None) -> dict:
-    items = list(items)
-    result = {}
-    result['nombre_sistema'] = parse_nombre_sistema(items[0], n_linea=n_linea)
-    result['codigo'] = parse_codigo_interno(items[1], n_linea=n_linea)
-    result['finalidad'] = parse_finalidad(items[2], n_linea=n_linea)
-    result['descripcion'] = parse_descripcion(items[2], n_linea=n_linea)
-    result['tema'] = parse_materia_competencial(items[3], n_linea=n_linea)
-    result['organismo'] = parse_dir3(items[4], n_linea=n_linea)
-    result['responsables_tecnologicos'] = parse_users(items[5], n_linea=n_linea)
-    result['responsables_funcionales'] = parse_users(items[6], n_linea=n_linea)
-    result['juriscan'] = parse_juriscan(items[7], n_linea=n_linea)
-    result['comentarios'] = parse_comentarios(items[8], n_linea=n_linea)
-    result['uuid'] = parse_uuid(items[9], n_linea=n_linea)
-    return result

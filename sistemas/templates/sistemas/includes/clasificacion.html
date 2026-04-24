@@ -83,38 +83,6 @@
       </td>
     </tr>
 
-    <tr>
-      <th>Es corporativo</th>
-      <td>{{ sistema.es_corporativo|as_boolean }} </td>
-      <td>
-        <a class="btn btn-warning"
-           href="{% url 'sistemas:conmutar_campo' sistema=sistema campo='es_corporativo' %}"
-            title="Conmutar valor">
-        {% if sistema.es_corporativo %}
-          <i class="bi bi-toggle-on"></i>
-        {% else %}
-          <i class="bi bi-toggle-off"></i>
-        {% endif %}
-        </a>
-      </td>
-    </tr>
-      
-    <tr>
-      <th>Es de especial importancia</th>
-      <td>{{ sistema.tiene_especial_importancia|as_boolean }}</td>
-      <td>
-        <a class="btn btn-warning"
-            href="{% url 'sistemas:conmutar_campo' sistema=sistema campo='tiene_especial_importancia' %}"
-            title="Conmutar valor"
-            >
-        {% if sistema.tiene_especial_importancia %}
-          <i class="bi bi-toggle-on"></i>
-        {% else %}
-          <i class="bi bi-toggle-off"></i>
-        {% endif %}
-        </a>
-      </td>
-    </tr>
       
 {% if sistema.es_subsistema_de %}
     <tr>

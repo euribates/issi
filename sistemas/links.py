@@ -76,6 +76,10 @@ def a_editar_descripcion(id_sistema: int) -> str:
     return _a('sistemas:editar_descripcion', sistema=id_sistema)
 
 
+def a_editar_observaciones(id_sistema: int) -> str:
+    return _a('sistemas:editar_observaciones', sistema=id_sistema)
+
+
 def a_editar_url(id_sistema: int) -> str:
     return _a('sistemas:editar_url', sistema=id_sistema)
 

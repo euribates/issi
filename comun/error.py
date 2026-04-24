@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import copy
 from html import escape
 from dataclasses import dataclass
 
@@ -19,19 +20,17 @@ class ErrorMessage():
         buff.append(self.message)
         if self.context:
             for _name, _val in self.context.items():
-                buff.append(f' - {_name}: {escape(str(_val))}')
+                buff.append(f' - {_name}: {_val}')
         return '\n'.join(buff)
 
     def as_html(self):
         '''Descripción del error en formato HTML.
         '''
         buff = [
-            '<div class="error-message">',
-            '<p>',
             f'<code class="codigo-error">{self.code}</code>:'
             f' <b class="nombre-error">{self.name}<b>.',
             f'{self.message}',
-            '</p>',
+            f'self.context: <pre>{self.context!r}</pre>',
             ]
         if self.context:
             buff.append('<dl>')
@@ -39,19 +38,8 @@ class ErrorMessage():
                 buff.append(f'<dt>{_name}</dt>')
                 buff.append(f' <dd>{escape(repr(_val))}</dd>')
             buff.append('</dl>')
-        buff.append('</div>')
         return '\n'.join(buff)
 
-    def __call__(self, value=None, **context):
-        message = self.message
-        if value:
-            message = message.format(value=escape(str(value)))
-        return ErrorMessage(
-            self.code,
-            self.name,
-            message,
-            context.copy(),
-            )
 
 
 class ErrorCatalog:
@@ -59,11 +47,23 @@ class ErrorCatalog:
     def __init__(self):
         self.kernel = {}
 
+    @classmethod
+    def as_error_handler(cls, code, name, desc, refs):
+        def internal_handler(value, **context):
+            message = desc
+            if value:
+                message = message.format(value=escape(str(value)))
+            ctx = copy.deepcopy(context)
+            return ErrorMessage(code, name, message, context=ctx)
+        return internal_handler
+
     def register(self, code, name, desc='', refs=None):
         '''Decorador para registar una clase de error en el catálogo.
         '''
         refs = list(refs) if refs else []
-        self.kernel[code] = ErrorMessage(code, name, desc, refs)
+        # self.kernel[code] = ErrorMessage(code, name, desc, refs)
+        self.kernel[code] = self.__class__.as_error_handler(code, name, desc, refs)
+
 
     def __len__(self):
         return len(self.kernel)
@@ -224,3 +224,16 @@ errors.register(
         " como mínimo 3 caracteres. '{value}' no es un nombre válido"
         ),
     )
+
+
+errors.register(
+    'EI0014',
+    "El código y el UUID especificados no coinciden con el esperado",
+    desc=(
+        "Si se especifica el campo UUID en el fichero de importación,"
+        " este debe coincider con el de un sistema ya existente en"
+        " la base de datos y, además, el codigo interno de ambos"
+        " registros debe coincidir, pero no es el caso.\n"
+        ),
+    )
+

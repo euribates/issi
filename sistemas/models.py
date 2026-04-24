@@ -182,7 +182,7 @@ class Sistema(models.Model):
     es_corporativo = models.BooleanField(
         default=False,
         help_text="Este S.I. es corporativo",
-        )   
+        )
     es_subsistema_de = models.ForeignKey(
         "Sistema",
         null=True,
@@ -214,9 +214,9 @@ class Sistema(models.Model):
         width_field="icono_width",
         max_length=512,
     )
-    f_alta = models.DateTimeField(auto_now_add=True)
-    f_cambio = models.DateTimeField(auto_now=True)
-    f_baja = models.DateTimeField(
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+    archived = models.DateTimeField(
         default=None,
         blank=True,
         null=True,
@@ -225,39 +225,164 @@ class Sistema(models.Model):
     objects = models.Manager()
 
     @classmethod
-    def alta_sistema(
-        cls,
-        nombre_sistema: str,
-        codigo: str,
-        finalidad: str,
-        organismo: Organismo,
-        tema=None,
-    ):
+    def alta_sistema(cls, **kwargs):
         """Dar de alta un nuevo sistema.
 
         Parameters:
 
-            - nombre_sistema (str): Nombre del sistema
-            - codigo (str): Código identificador del sistema
-            - finalidad (str): Finalidad del sistema
+            - nombre_sistema (str): Nombre del sistema. Obligatorio
+
+            - codigo (str): Código identificador del sistema.
+              Obligatorio.
+            
+            - finalidad (str): Finalidad del sistema. Obligatorio.
+
             - organismo (Organismo): Instancia del organismo al que
-                está asociado el sistema.
+                está asociado el sistema. Obligatorio.
+
             - tema (Tema|None): Instacia del tema, o `None`
 
+            - Descripcion (str): descripción del sistema
+
+            - Observaciones (str): Observaciones acerca del sistema
+
+            - responsables_funcionales (List[str]): Lista de 
+                identificadores de usuario (``login``) de las
+                personas responables funcionales del sistema.
+
+            - responsables_tecnologicos (List[str]): Lista de 
+                identificadores de usuario (``login``) de las
+                personas responables tecnológicas del sistema.
+
+            - juriscan (List[int]): Lista de códigos Juriscan sociados
+              al sistema.
+            
         Returns:
 
             La instancia de Sistema, ya almacenada
             en la base de datos.
         """
+        nombre_sistema = kwargs.pop('nombre_sistema')
+        codigo = kwargs.pop('codigo')
+        finalidad = kwargs.pop('finalidad')
+        organismo = kwargs.pop('organismo')
         sistema = Sistema(
             nombre_sistema=nombre_sistema,
             codigo=codigo,
             finalidad=finalidad,
             organismo=organismo,
-            tema=tema,
-        )
-        sistema.save()
+            )
+        if tema := kwargs.pop('tema', None):
+            sistema.asignar_tema(tema, commit=False)
+        sistema.descripcion = kwargs.pop('descripcion', '')
+        sistema.observaciones = kwargs.pop('observaciones', '')
+        sistema.save(commit=True)
+        # Actualizamos entidades debiles
+        if juriscan := kwargs.pop('juriscan', []):
+            for id_juriscan in juriscan:
+                sistema.asignar_juriscan(id_juriscan)
+        for persona in kwargs.pop('resposables_funcionales', []):
+            sistema.asignar_responsable('FUN', persona)
+        for persona in kwargs.pop('resposables_tecnologicos', []):
+            sistema.asignar_responsable('TEC', persona)
+        assert not kwargs, "No debería quedar ningún parámetro"
         return sistema
+
+    def actualizar_sistema(self, **kwargs):
+        """Actualiza los datos de un sistema ya existente
+        en la base de datos.
+
+        Parameters:
+
+            - self (Self): La instancia de la clase Sistema
+
+            - nombre_sistema (str): Nombre del sistema. Obligatorio
+
+            - finalidad (str): Finalidad del sistema. Obligatorio.
+
+            - organismo (Organismo): Instancia del organismo al que
+                está asociado el sistema. Obligatorio.
+
+            - tema (Tema|None): Instacia del tema, o `None`
+
+            - Descripcion (str): descripción del sistema
+
+            - Observaciones (str): Observaciones acerca del sistema
+
+            - responsables_funcionales (List[str]): Lista de 
+                identificadores de usuario (``login``) de las
+                personas responables funcionales del sistema.
+
+            - responsables_tecnologicos (List[str]): Lista de 
+                identificadores de usuario (``login``) de las
+                personas responables tecnológicas del sistema.
+
+            - juriscan (List[int]): Lista de códigos Juriscan sociados
+              al sistema.
+            
+            - url (str): URL principal del S.I.
+            
+        Returns:
+
+            La instancia de Sistema, ya almacenada
+            en la base de datos.
+        """
+        update_fields = []
+        parameters = kwargs.copy()
+
+        def _update_field(name):
+            if name in kwargs:
+                value = parameters.pop(name, None)
+                if getattr(self, name) != value:
+                    setattr(self, name, value)
+                    update_fields.append(name)
+
+        _update_field('nombre_sistema')
+        _update_field('finalidad')
+        _update_field('observaciones')
+        _update_field('descripcion')
+        _update_field('url')
+        _update_field('es_corporativo')
+        _update_field('es_subsistema_de')
+        _update_field('especial_importancia')
+        _update_field('familia')
+        from icecream import ic; ic(update_fields)
+
+        # Actualizamos claves foraneas
+        if 'organismo' in parameters:
+            organismo = kwargs.pop('organismo')
+            self.asignar_organismo(organismo, commit=False)
+            update_fields.append('organismo')
+        if 'tema' in parameters:
+            tema = kwargs.pop('tema')
+            self.asignar_tema(tema, commit=False)
+            update_fields.append('tema')
+        if 'familia' in parameters:
+            familia = kwargs.pop('familia')
+            self.asignar_familia(familia, commit=False)
+            update_fields.append('familia')
+        # Actualizamos entidades debiles
+        if tema := parameters.pop('tema', None):
+            self.asignar_tema(tema, commit=False)
+
+        if juriscan := parameters.pop('juriscan', []):
+            for id_juriscan in juriscan:
+                self.asignar_juriscan(id_juriscan)
+
+        responsables_funcionales = parameters.pop('responsables_funcionales', [])
+        if responsables_funcionales:
+            for persona in responsables_funcionales:
+                self.asignar_responsable('FUN', persona)
+
+        responsables_tecnologicos = parameters.pop('responsables_tecnologicos', [])
+        if responsables_tecnologicos:
+            for persona in responsables_tecnologicos:
+                self.asignar_responsable('TEC', persona)
+        assert not parameters, (
+            "No debería quedar ningún parámetro"
+            f" pero kwargs = {kwargs!r}"
+            )
+        self.save(update_fields=update_fields)
 
     @classmethod
     def load_sistema(cls, pk: int):
@@ -293,7 +418,8 @@ class Sistema(models.Model):
 
         """
         try:
-            return cls.objects.get(uuid_sistema=uuid)
+            sistema = cls.objects.get(uuid_sistema=uuid)
+            return sistema
         except cls.DoesNotExist:
             return None
 
@@ -320,8 +446,8 @@ class Sistema(models.Model):
         return f'{self.nombre_sistema} ({self.codigo})'
 
     def touch(self):
-        self.f_cambio = localtime()
-        self.save(update_fields=["f_cambio"])
+        self.updated = localtime()
+        self.save(update_fields=["updated"])
         self.organismo.touch()
 
     def url_detalle_sistema(self):
@@ -344,7 +470,7 @@ class Sistema(models.Model):
             return "yellow"
         return "red"
 
-    def asignar_tema(self, tema: Tema | str) -> Tema:
+    def asignar_tema(self, tema: Tema|None|str, commit=True) -> Tema:
         """Asignar un tema a un S.I. usando el código.
 
         El cambio se registra inmediatamente en la base de datos.
@@ -353,6 +479,10 @@ class Sistema(models.Model):
 
             tema (Tema|str): Una instancia de tema, o la clave
                 primaria del tema.
+
+            commit (bool): Si es verdadero, se almacena
+                inmediatamente el cambio en la base de 
+                datos. El valor por defecto es Verdadero.    
 
         Returns:
 
@@ -363,27 +493,33 @@ class Sistema(models.Model):
             Eleva una excepción de tipo `ValueError` si el código
             de tema no existe en la base de datos.
         """
-        if not isinstance(tema, Tema):
+        if tema is None:
+            tema = Tema.load_tema('UNK')
+        elif not isinstance(tema, Tema):
             tema = Tema.load_tema(tema)
-            if not tema:
-                raise ValueError(
-                    f"El código de tema indicado: {escape(repr(tema))} no es válido"
+        if not tema:
+            raise ValueError(
+                f"El tema indicado: {escape(repr(tema))} no es válido"
                 )
         if tema != self.tema:
             self.tema = tema
-            self.save(update_fields=["tema"])
-            return tema
+            if commit:
+                self.save(update_fields=["tema"])
         return tema
 
-    def asignar_familia(self, familia: Familia | str) -> Familia:
+    def asignar_familia(self, familia: Familia | str, commit=True) -> Familia:
         """Asignar una familia a un S.I. usando el código o la familia.
 
         El cambio se registra inmediatamente en la base de datos.
 
         Parameters:
 
-            `familia` (str|Familia): Una instancia de la familia, o la
+            familia (str|Familia): Una instancia de la familia, o la
             clave primaria de la familia.
+
+            commit (bool): Si es verdadero, se almacena
+                inmediatamente el cambio en la base de 
+                datos. El valor por defecto es Verdadero.    
 
         Returns:
 
@@ -401,11 +537,13 @@ class Sistema(models.Model):
                     "El código de familia indicado:"
                     f" {escape(repr(familia))} no es válido"
                 )
-        self.familia = familia
-        self.save(update_fields=["familia"])
+        if self.familia != familia:
+            self.familia = familia
+            if commit:
+                self.save(update_fields=["familia"])
         return familia
 
-    def asignar_organismo(self, organismo: Organismo | int) -> Organismo:
+    def asignar_organismo(self, organismo: Organismo | int, commit=True) -> Organismo:
         """Asignar un S.I. a un organismo.
 
         El cambio se registra inmediatamente en la base de datos.
@@ -414,6 +552,10 @@ class Sistema(models.Model):
 
             organismo (Organismo|int): Una instancioa de tema, o La clave
                 primaria del tema
+
+            commit (bool): Si está verdadero, se almacena
+                inmediatamente el cambio en la base de 
+                datos. El valor por defecto es Verdadero.
 
         Returns:
 
@@ -425,8 +567,10 @@ class Sistema(models.Model):
         """
         if not isinstance(organismo, Organismo):
             organismo = Organismo.load_organismo(organismo)
-        self.organismo = organismo
-        self.save(update_fields=["organismo"])
+        if self.organismo != organismo:
+            self.organismo = organismo
+            if commit:
+                self.save(update_fields=["organismo"])
         return organismo
 
     def asignar_responsable(self, cometido, usuario):
@@ -437,12 +581,17 @@ class Sistema(models.Model):
         Es idempotente, si el resposable ya estaba
         creado, no hace nada.
         """
+        if not isinstance(usuario, Usuario):
+            usuario = Usuario.load_usuario(usuario)
         perfil, _created = Perfil.upsert(
             sistema=self,
             cometido=cometido,
             usuario=usuario,
-        )
+            )
         return perfil
+
+    def asignar_juriscan(self, id_juriscan):
+        JuriscanSistema.upsert(self.pk, int(id_juriscan))
 
     def estado_cuestionario(self):
         num_respuestas = Respuesta.objects.filter(sistema=self).count()
@@ -468,56 +617,31 @@ class Sistema(models.Model):
         s_progress = ''.join(buff)
         return f"{label} {s_progress}"
 
+    def get_responsables_funcionales(self):
+        """Conjunto de usuarios responsables funcionales.
+        """
+        return set([
+            p.usuario
+            for p in self.perfiles.all()
+            if p.cometido == 'FUN'
+            ])
 
-# def rename_headers(df):
-    # origin_names = list(df.columns)
-    # if len(origin_names) == 11:
-        # result = df.rename(columns={
-            # origin_names[0]: 'estado',
-            # origin_names[1]: 'departamento',
-            # origin_names[2]: 'nombre_sistema',
-            # origin_names[3]: 'codigo',
-            # origin_names[4]: 'finalidad',
-            # origin_names[5]: 'materia',
-            # origin_names[6]: 'dir3',
-            # origin_names[7]: 'responsables_tecnologicos',
-            # origin_names[8]: 'responsables_funcionales',
-            # origin_names[9]: 'juriscan',
-            # origin_names[10]: 'comentarios',
-            # })
-        # result.insert(11, 'uuid', None)
-        # return result
-    # if len(origin_names) == 12:
-        # return df.rename(columns={
-            # origin_names[0]: 'estado',
-            # origin_names[1]: 'departamento',
-            # origin_names[2]: 'nombre_sistema',
-            # origin_names[3]: 'codigo',
-            # origin_names[4]: 'finalidad',
-            # origin_names[5]: 'materia',
-            # origin_names[6]: 'dir3',
-            # origin_names[7]: 'responsables_tecnologicos',
-            # origin_names[8]: 'responsables_funcionales',
-            # origin_names[9]: 'juriscan',
-            # origin_names[10]: 'comentarios',
-            # origin_names[11]: 'uuid',
-            # })
-    # raise ValueError(
-        # 'Se esperaban 11 o 12 columnas, pero el fichero'
-        # f' tiene {len(origin_names)}'
-        # )
-
-# def importar_sistemas_desde_fichero(stream):
-    # from tempfile import TemporaryFile
-    # with tempfile.TemporaryFile() as fp:
-        # fp.write(stream)
-        # fp.seek(0)
-        # df = pd.read_excel(fp, engine="odf")
-    # df = rename_headers(df)
-    # for n_linea, tupla in df.iterrows():
-        
-        # payload = parsers.parse_row(tupla, n_linea=n_linea)
-        # yield payload
+    def get_responsables_tecnologicos(self):
+        """Conjunto de usuarios responsables tecnológicos.
+        """
+        return set([
+            p.usuario
+            for p in self.perfiles.all()
+            if p.cometido == 'TEC'
+            ])
+    
+    def get_juriscan(self):
+        """Conjunto de fichas de Juriscan vinculadas al sistema.
+        """
+        return set([
+            f.juriscan
+            for f in self.fichas_juriscan.all()
+            ])
 
 
 class Activo(models.Model):

@@ -3,6 +3,9 @@
 
 {% block content %}
 
+<h3>Se han intentado importar {{ num_sistemas }} sistemas</h3>
+<h3>De estos, {{ num_sistemas_correctos }} no presentan problemas</h3>
+
 <div class="card m-3">
 
   <div class="card-header">
@@ -13,75 +16,64 @@
 
     <table class="table">
       <thead>
-        <th>Código / Nombre</th>
-        <th>Datos</th>
+        <th>Código / Nombre / UUID</th>
+        <th>Necesita actualizar / Datos</th>
+        <th>En DB</th>
+        <th>Acción</th>
         <th>Errores</th>
-        <th>Selección</th>
       </thead>
       <tbody>
-      {% for index, data, pass_minimun, all_errors in sistemas %}<tr>
-        <th>
-           <b class="sistema-codigo">
-               {% if data.codigo.is_success %}
-                 {{ data.codigo.value }}
+      {% for sistema in sistemas %}<tr>
+        <td>
+           <b class="sistema-codigo"> {{ sistema.codigo }} </b>
+           <br>{{ sistema.nombre_sistema }}
+           <br>{% if sistema.uuid %}
+                <code>{{ sistema.uuid }}</code>
                {% else %}
-                 {{ data.codigo }}
-               {% endif %}
-           </b>
-           <br>
-           {% comment %}{{ data.nombre_sistema.value }}{% endcomment %}
+                <i class="error">No tiene UUID</i>
+               {% endif %}   
         </td>  
         <td>
-            {% comment %}<ul>{% endcomment %}
-                {% comment %}<li>Finalidad: {{ data.finalidad.value }}</li>{% endcomment %}
-                {% comment %}<li>Materia: {{ data.tema.value }}</li>{% endcomment %}
-                {% comment %}<li>Organismo: {{ data.organismo.value }}{% endcomment %}
-                    {% comment %}({{ data.organismo.value.dir3 }})</li>{% endcomment %}
-                {% comment %}<li>Responsables tecnológicos:{% endcomment %}
-                    {% comment %}<dl>{% for user in data.responsables_tecnologicos.value %}{% endcomment %}
-                        {% comment %}<dt>{{ user }} ({{ user.login }})</dt>{% endcomment %}
-                        {% comment %}<dd>{{ user.email }}</dd>{% endcomment %}
-                        {% comment %}{% endfor %}</dl>{% endcomment %}
-                {% comment %}</li>{% endcomment %}
-                {% comment %}<li>Responsables funcionales:{% endcomment %}
-                    {% comment %}<dl>{% for user in data.responsables_funcionales.value %}{% endcomment %}
-                        {% comment %}<dt>{{ user }} ({{ user.login }})</dt>{% endcomment %}
-                        {% comment %}<dd>{{ user.email }}</dd>{% endcomment %}
-                        {% comment %}{% endfor %}</dl>{% endcomment %}
-                {% comment %}</li>{% endcomment %}
-            {% comment %}</ul>    {% endcomment %}
-        </td>
-        <td>
-          {% if all_errors %}
-            <ul class="error-list">{% for error in all_errors %}
-              <li>{{ error }}</li>
-            {% endfor %}</ul>
+          {% if sistema.necesita_actualizacion %}
+            <b class="green-red">Si</b>
+              <dl>{% for name,value in sistema.delta.items %}
+                <dt>{{ name }}</dt>
+                <dd>Nuevo valor: {{ value }}</dd>
+                {% endfor %}</dl>
           {% else %}
-              Sin errores
+            <b class="green-color">No</b>
+          {% endif %}
+        </td>
+        
+        <td>
+          {% if sistema.sistema_db %}
+            <b class="color-green">
+                {{sistema.sistema_db.pk}}
+            </b>
+          {% else %}
+            <b class="color-red">NO</b>
           {% endif %}
         </td>
 
         <td>
-          {% comment %}<div class="form-check">{% endcomment %}
-          {% comment %}{% if not all_errors %}{% endcomment %}
-            {% comment %}<input class="form-check-input" checked{% endcomment %}
-                   {% comment %}id="chk_{{ index }}"{% endcomment %}
-                   {% comment %}name="num" type="checkbox" value="{{ index }}">{% endcomment %}
-            {% comment %}<label for="chk_{{ index }}" class="color-green">{% endcomment %}
-                    {% comment %}Válido{% endcomment %}
-            {% comment %}</label>{% endcomment %}
-            {% comment %}2{% endcomment %}
-            {% comment %}{% include 'sistemas/includes/pb-importar-sistema.html' with sistema=data %}{% endcomment %}
-          {% comment %}{% else %}{% endcomment %}
-            {% comment %}<input class="form-check-input"{% endcomment %}
-                   {% comment %}id="chk_{{ index }}"{% endcomment %}
-                   {% comment %}name="num" type="checkbox" value="{{ index }}">{% endcomment %}
-            {% comment %}<label for="chk_{{ index }}" class="color-red">{% endcomment %}
-                    {% comment %}Inválido{% endcomment %}
-            {% comment %}</label>{% endcomment %}
-          {% comment %}{% endif %}          {% endcomment %}
-          {% comment %}</div>{% endcomment %}
+
+            10
+          {% include 'sistemas/includes/pb-importar-sistema.html' with sistema=sistema %}  
         </td>
+
+        <td>
+          {% if sistema.errores %}
+            <b class="red-color">{{ sistema.errores|length }} errores</b>
+            <ul class="lista-errores">
+              {% for error in sistema.errores %}
+                <li>{{ error.as_html|safe }}</li>   
+              {% endfor %}
+            </ul>
+          {% else %}
+            <b class="color-green">Sin errores</b>
+          {% endif %}
+        </td>
+
         
       </tr>{% endfor %}    
       </tbody>

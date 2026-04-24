@@ -1,0 +1,27 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+{% block content %}
+
+<div class="card col-md-8 offset-md-2">
+
+  <div class="card-header">
+      Editar observaciones del sistema {{ sistema }}
+  </div>
+
+  <div class="card-body">
+
+  <form method="POST" action=".">
+  {% csrf_token %}
+  {{ form.errors }}  
+
+  {{ form }}
+
+  <p class="mt-4">
+  <button type="submit" class="btn btn-primary">Editar observaciones</button>
+  </p>
+
+  </form>
+  </div>
+</div>  
+
+{% endblock content %}
