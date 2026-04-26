@@ -82,5 +82,19 @@
         "f_modificacion": "2026-04-10T21:25:03.993Z",
         "f_finalizacion": null
     }
+},
+{
+    "model": "plan.backlog",
+    "pk": 12,
+    "fields": {
+        "sistema": 1,
+        "titulo": "Archivo (Borrado lógico de una tarea)",
+        "explicacion": "Quizá se podría incluir información de si se da de baja porque la funcionalidad se implantó, o por que se descartó.",
+        "estimacion": 30,
+        "prioridad": 30,
+        "f_creacion": "2026-04-20T12:37:59.832Z",
+        "f_modificacion": "2026-04-20T12:37:59.832Z",
+        "f_finalizacion": null
+    }
 }
 ]

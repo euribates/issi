@@ -90,6 +90,58 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "14e6c457-3f12-11f1-a7f3-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "21",
+        "nombre_clase": "Sistema",
+        "descripcion": "La finalidad del sistema Sigestein (SIGESTEIN) ha sido actualizada a 'Gestionar los expedientes del departamento.'",
+        "momento": "2026-04-23T12:43:51.783Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "17094185-3e84-11f1-a8a2-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"msilbet\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Marta Da Silva Bethencourt",
+        "momento": "2026-04-22T19:47:26.828Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "1b1440a4-3e84-11f1-8a2c-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Marta Da Silva Bethencourt ha sido asignado como Responsable funcional del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
+        "momento": "2026-04-22T19:47:33.611Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "1b14a7de-3e84-11f1-acf7-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"msilbet\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Marta Da Silva Bethencourt ha sido asignado como Responsable funcional del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
+        "momento": "2026-04-22T19:47:33.614Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "202d2560-371c-11f1-9c66-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -103,6 +155,58 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "2551c9e4-3f0b-11f1-bddc-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "36",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Registro  vitícola comunitario (REGPLANVID) ha sido actualizada a 'REGPLANVID'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-04-23T11:54:12.850Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "27eb9207-4198-11f1-b7aa-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"iboscan\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Íñigo Bosch Canals",
+        "momento": "2026-04-26T17:48:38.578Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "28f11e7c-3e85-11f1-a383-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"rgalrod\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Rosa María Galindo Rodríguez",
+        "momento": "2026-04-22T19:55:06.366Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "2d482d01-4197-11f1-a99b-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "37",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha desasingado la entrada nº 5559 al sistema Registro de Sociedades Agrarias de Transformación de Canarias (REG_SATC)",
+        "momento": "2026-04-26T17:41:38.077Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "2d9ad72c-3709-11f1-b81f-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -110,6 +214,45 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema de información Gestión administrativa y académica en los centros educativos (PINCEL) ha sido modificado:",
         "momento": "2026-04-13T07:19:58.455Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "30780335-3e85-11f1-ab69-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Rosa María Galindo Rodríguez ha sido asignado como Responsable técnico del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
+        "momento": "2026-04-22T19:55:18.994Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "30793aee-3e85-11f1-bd5f-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"rgalrod\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Rosa María Galindo Rodríguez ha sido asignado como Responsable técnico del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
+        "momento": "2026-04-22T19:55:19.002Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "38a73383-3e83-11f1-b761-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "La finalidad del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA) ha sido actualizada a 'Gestionar expedientes de perros de asistencia'",
+        "momento": "2026-04-22T19:41:13.731Z",
         "usuario": "jrodleo",
         "payload": null
     }
@@ -142,6 +285,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "418502a5-3e86-11f1-9cf9-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "4",
+        "nombre_clase": "Sistema",
+        "descripcion": "La finalidad del sistema Sistema de información de recursos humanos (SIRHUS) ha sido actualizada a 'Gestión informatizada y registro de los expedientes del personal, provisión de puestos y gestión de las relaciones de puestos de trabajo, gestión y determinación de los partícipes a los que se les realizará el abono de las contribuciones del Plan de Pensiones de la Administración Pública de la Comunidad Autónoma de Canarias correspondiente a cada ejercicio, gestión de las ayudas de acción social, gestión de la póliza de seguro de vida del personal, gestión de las incompatibilidades, gestión del crédito horario sindical, gestión de las relaciones sindicales, gestión de las elecciones sindicales y gestión de la prestación de servicios en la modalidad de teletrabajo.'",
+        "momento": "2026-04-22T20:02:57.097Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "41ca2999-371c-11f1-b762-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -149,6 +305,45 @@
         "nombre_clase": "Sistema",
         "descripcion": "La URL de entrada al sistema Gestión administrativa y académica en los centros educativos (PINCEL) ha sido actualizada a 'https://www.gobiernodecanarias.org/educacion/PEKWEB/Ekade/'.\n",
         "momento": "2026-04-13T09:36:32.758Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "4407443a-3f12-11f1-bea6-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "21",
+        "nombre_clase": "Sistema",
+        "descripcion": "La finalidad del sistema Sigestein (SIGESTEIN) ha sido actualizada a 'Gestionar los expedientes del departamento.'",
+        "momento": "2026-04-23T12:45:10.848Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "447af730-3e89-11f1-b74e-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "3",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Javier Serrano Sánchez ha sido asignado como Responsable técnico del sistema BBDD de legislación y jurisprudencia relativa a la APCAC (JURISCAN)",
+        "momento": "2026-04-22T20:24:30.555Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "447dabcf-3e89-11f1-a33b-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jsersanp\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Javier Serrano Sánchez ha sido asignado como Responsable técnico del sistema BBDD de legislación y jurisprudencia relativa a la APCAC (JURISCAN)",
+        "momento": "2026-04-22T20:24:30.572Z",
         "usuario": "jrodleo",
         "payload": null
     }
@@ -207,6 +402,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "5a2ff5c9-3e84-11f1-88e7-38d5470ea667",
+    "fields": {
+        "nivel_evento": "delete",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Ruth Esther Tejera Chico ha dejado de ser Responsable técnico del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
+        "momento": "2026-04-22T19:49:19.489Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "5a312ce1-3e84-11f1-aeed-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"rtejchi\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Ruth Esther Tejera Chico ha dejado de ser Responsable técnico del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
+        "momento": "2026-04-22T19:49:19.497Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "5a885f3a-2846-11f1-a01e-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -233,6 +454,58 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "5c95532c-3e84-11f1-bbbb-38d5470ea667",
+    "fields": {
+        "nivel_evento": "delete",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Marta Da Silva Bethencourt ha dejado de ser Responsable funcional del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
+        "momento": "2026-04-22T19:49:23.509Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "5c95f667-3e84-11f1-afd3-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"msilbet\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Marta Da Silva Bethencourt ha dejado de ser Responsable funcional del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
+        "momento": "2026-04-22T19:49:23.514Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "5e1f497d-3e83-11f1-a636-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA) ha sido asignado al organismo Dirección General de Discapacidad",
+        "momento": "2026-04-22T19:42:16.594Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "5e23ce51-3e83-11f1-b83f-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "42171",
+        "nombre_clase": "Organismo",
+        "descripcion": "El sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA) ha sido asignado al organismo Dirección General de Discapacidad",
+        "momento": "2026-04-22T19:42:16.624Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "605576bc-371b-11f1-81d2-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -240,6 +513,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "El código del sistema Gestión académica (GESACA) ha sido actualizada a 'GESACA'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
         "momento": "2026-04-13T09:30:14.506Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "65c63bda-3db4-11f1-9310-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "1",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Inventario de Sistemas de Información (ISSI) ha cambiado su valor es_corporativo, ahora vale **falso**",
+        "momento": "2026-04-21T19:00:43.609Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "6735c56c-419a-11f1-ae6e-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"fsanriv\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Felipe Sánchez Rivero",
+        "momento": "2026-04-26T18:04:43.759Z",
         "usuario": "jrodleo",
         "payload": null
     }
@@ -272,6 +571,110 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "74a87d0f-3e86-11f1-9f63-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "4",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Mercedes Cabrera Peña ha sido asignado como Responsable funcional del sistema Sistema de información de recursos humanos (SIRHUS)",
+        "momento": "2026-04-22T20:04:22.893Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "74a956d1-3e86-11f1-a4d3-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mcabpen\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Mercedes Cabrera Peña ha sido asignado como Responsable funcional del sistema Sistema de información de recursos humanos (SIRHUS)",
+        "momento": "2026-04-22T20:04:22.899Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7a6733e4-4025-11f1-93e4-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "37",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Registro de Sociedades Agrarias de Transformación de Canarias (REG_SATC) ha cambiado su valor es_corporativo, ahora vale **verdadero**",
+        "momento": "2026-04-24T21:35:13.675Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7a9c0c28-3e84-11f1-9cde-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA) ha sido asignado a la materia competencial Bienestar Social",
+        "momento": "2026-04-22T19:50:13.885Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7b87dc63-3e86-11f1-9f29-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "4",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Mercedes Cabrera Peña ha sido asignado como Responsable técnico del sistema Sistema de información de recursos humanos (SIRHUS)",
+        "momento": "2026-04-22T20:04:34.424Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7b88b6ca-3e86-11f1-97c4-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mcabpen\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Mercedes Cabrera Peña ha sido asignado como Responsable técnico del sistema Sistema de información de recursos humanos (SIRHUS)",
+        "momento": "2026-04-22T20:04:34.429Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7dac1cba-3e85-11f1-96f9-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"evbetveg\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Eva María Betencort Vega",
+        "momento": "2026-04-22T19:57:28.520Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7e556ab2-4025-11f1-ad86-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "37",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Registro de Sociedades Agrarias de Transformación de Canarias (REG_SATC) ha cambiado su valor es_corporativo, ahora vale **falso**",
+        "momento": "2026-04-24T21:35:20.269Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "8071991c-3713-11f1-a5d3-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -285,6 +688,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "82096a4d-3e85-11f1-9072-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Eva María Betencort Vega ha sido asignado como Responsable funcional del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
+        "momento": "2026-04-22T19:57:35.842Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8209f16a-3e85-11f1-b7d9-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"evbetveg\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Eva María Betencort Vega ha sido asignado como Responsable funcional del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
+        "momento": "2026-04-22T19:57:35.846Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "8853858e-3709-11f1-93ab-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -292,6 +721,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Gestión administrativa y académica en los centros educativos (PINCEL) ha sido asignado a la familia {familia}",
         "momento": "2026-04-13T07:22:30.661Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8880a668-3e84-11f1-9713-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA) ha sido asignado a la materia competencial Bienestar Social",
+        "momento": "2026-04-22T19:50:37.195Z",
         "usuario": "jrodleo",
         "payload": null
     }
@@ -337,6 +779,45 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "8e125d39-3e83-11f1-bf1e-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Ruth Esther Tejera Chico ha sido asignado como Responsable técnico del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
+        "momento": "2026-04-22T19:43:37.040Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8e136ef3-3e83-11f1-8387-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"rtejchi\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Ruth Esther Tejera Chico ha sido asignado como Responsable técnico del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
+        "momento": "2026-04-22T19:43:37.047Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9c709e1c-419b-11f1-994b-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"agonherp\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Antonio González Hernández",
+        "momento": "2026-04-26T18:13:22.556Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "9cafbe27-2f60-11f1-b0ca-38d5470ea667",
     "fields": {
         "nivel_evento": "insert",
@@ -357,6 +838,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha añadido la tarea 5: Borrar una entrada en el backlog al S.I. Inventario de Sistemas de Información (ISSI)",
         "momento": "2026-04-03T13:25:41.736Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9e3c6228-3e89-11f1-a2e6-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"mrisdia\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario María Luisa Risueño Díaz",
+        "momento": "2026-04-22T20:27:01.140Z",
         "usuario": "jrodleo",
         "payload": null
     }
@@ -402,6 +896,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "a3060f94-3e89-11f1-a5c5-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "3",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Luisa Risueño Díaz ha sido asignado como Responsable funcional del sistema BBDD de legislación y jurisprudencia relativa a la APCAC (JURISCAN)",
+        "momento": "2026-04-22T20:27:09.173Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a3072291-3e89-11f1-857d-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mrisdia\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Luisa Risueño Díaz ha sido asignado como Responsable funcional del sistema BBDD de legislación y jurisprudencia relativa a la APCAC (JURISCAN)",
+        "momento": "2026-04-22T20:27:09.179Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "a6ab2001-3724-11f1-825d-38d5470ea667",
     "fields": {
         "nivel_evento": "insert",
@@ -423,6 +943,19 @@
         "descripcion": "El sistema Gestión administrativa y académica en los centros educativos (PINCEL) ha sido asignado a la materia competencial Educación",
         "momento": "2026-04-13T09:32:15.333Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "ab3161fc-3e81-11f1-bbfe-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "20",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Justicia Juvenil (JUSTICIA_JUVENIL) ha sido actualizada a 'JUSTICIA_JUVENIL'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-04-22T19:30:06.904Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -506,6 +1039,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "b7794b0f-3e84-11f1-a077-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA) ha sido asignado a la materia competencial Bienestar Social",
+        "momento": "2026-04-22T19:51:55.999Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "b91945c7-2843-11f1-a775-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -532,6 +1078,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "bb616787-3e89-11f1-8945-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "3",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema BBDD de legislación y jurisprudencia relativa a la APCAC (JURISCAN) ha sido asignado a la familia {familia}",
+        "momento": "2026-04-22T20:27:50.037Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "bb62bbaf-401f-11f1-ba92-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "21",
+        "nombre_clase": "Sistema",
+        "descripcion": "La finalidad del sistema Sigestein (SIGESTEIN) ha sido actualizada a 'Gestionar los expedientes del departamento'",
+        "momento": "2026-04-24T20:54:05.717Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "bcce3e8b-3717-11f1-abc7-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -539,6 +1111,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Gestión de centros e infraestructuras (GESTCENTROS) ha sido actualizada a 'Gestión de centros e infraestructuras educativas'",
         "momento": "2026-04-13T09:04:11.662Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "bcda9fcc-3e82-11f1-821f-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El nombre del sistema Registro de perros de asistencia (RPG) ha sido actualizada a 'Registro de perros de asistencia'.\n",
+        "momento": "2026-04-22T19:37:46.031Z",
         "usuario": "jrodleo",
         "payload": null
     }
@@ -610,6 +1195,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "c37f5aba-401f-11f1-bd4f-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "21",
+        "nombre_clase": "Sistema",
+        "descripcion": "La finalidad del sistema Sigestein (SIGESTEIN) ha sido actualizada a 'Gestionar los expedientes del departamento.'",
+        "momento": "2026-04-24T20:54:19.327Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "c3bb2920-3724-11f1-bd19-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -617,6 +1215,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Arquitectura y explotación de datos (EXPDAT) ha sido asignado a la familia {familia}",
         "momento": "2026-04-13T10:37:26.738Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c3f2c44e-3cb5-11f1-a8a7-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "12",
+        "nombre_clase": "Backlog",
+        "descripcion": "Se ha añadido la tarea 12: Archivo (Borrado lógico de una tarea) al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-20T12:37:59.941Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c3f7e0b2-3cb5-11f1-9e83-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "1",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha añadido la tarea 12: Archivo (Borrado lógico de una tarea) al S.I. Inventario de Sistemas de Información (ISSI)",
+        "momento": "2026-04-20T12:37:59.974Z",
         "usuario": "jrodleo",
         "payload": null
     }
@@ -688,6 +1312,45 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "d7caa31f-3e82-11f1-9e88-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA) ha sido actualizada a 'REG_PERROS_ASISTENCIA'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-04-22T19:38:31.225Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "da90b158-3cb5-11f1-92ad-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "1",
+        "nombre_clase": "Sistema",
+        "descripcion": "La URL de entrada al sistema Inventario de Sistemas de Información (ISSI) ha sido actualizada a 'http://issi.euribates.eu/sistemas/'.\n",
+        "momento": "2026-04-20T12:38:37.886Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "da992f36-3e84-11f1-907d-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA) ha sido asignado a la materia competencial Bienestar Social",
+        "momento": "2026-04-22T19:52:54.927Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "ddd6832c-3722-11f1-aa56-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -714,6 +1377,45 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "e778808c-419a-11f1-9435-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"rpesper\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Rosa Delia Pestana Pérez",
+        "momento": "2026-04-26T18:08:18.940Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "e92de109-3e84-11f1-a036-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "19",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA) ha sido asignado a la familia {familia}",
+        "momento": "2026-04-22T19:53:19.391Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "ef2ca63f-419e-11f1-a9a7-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"abarcab\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Ana Isabel Barrera Cacrera",
+        "momento": "2026-04-26T18:37:09.851Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "f15780b3-2843-11f1-b527-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -734,6 +1436,32 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido asignado como interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
         "momento": "2026-03-25T12:12:50.224Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f4b865f3-3f11-11f1-bf12-38d5470ea667",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "21",
+        "nombre_clase": "Sistema",
+        "descripcion": "La finalidad del sistema Sigestein (SIGESTEIN) ha sido actualizada a 'Gestionar los expedientes del departamento.'",
+        "momento": "2026-04-23T12:42:57.792Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f73948f2-4194-11f1-9391-38d5470ea667",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"alopperj\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario * *",
+        "momento": "2026-04-26T17:25:48.389Z",
         "usuario": "jrodleo",
         "payload": null
     }

@@ -12,7 +12,7 @@
         "ruta": "/",
         "url": null,
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-04-10T21:25:04.021Z",
+        "f_cambio": "2026-04-26T17:41:38.067Z",
         "f_baja": null
     }
 },
@@ -318,7 +318,7 @@
         "ruta": "/1/42091/7268",
         "url": "http://www.gobiernodecanarias.org/presidencia/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-04-10T21:25:04.012Z",
+        "f_cambio": "2026-04-20T12:37:59.890Z",
         "f_baja": null
     }
 },
@@ -777,7 +777,7 @@
         "ruta": "/1/42084/39053",
         "url": "https://www.gobiernodecanarias.org/agpsa/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2025-11-27T13:28:21.256Z",
+        "f_cambio": "2026-04-26T17:41:38.033Z",
         "f_baja": null
     }
 },
@@ -794,7 +794,7 @@
         "ruta": "/1/42084/39053/39060",
         "url": "https://www.gobiernodecanarias.org/agpsa/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2025-11-27T13:28:21.256Z",
+        "f_cambio": "2026-04-24T20:55:02.877Z",
         "f_baja": null
     }
 },
@@ -1015,7 +1015,7 @@
         "ruta": "/1/42084",
         "url": "https://www.gobiernodecanarias.org/agpsa/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2025-11-27T13:28:21.256Z",
+        "f_cambio": "2026-04-26T17:41:38.053Z",
         "f_baja": null
     }
 },
@@ -1134,7 +1134,7 @@
         "ruta": "/1/42091",
         "url": "http://www.gobiernodecanarias.org/presidencia/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-04-10T21:25:04.016Z",
+        "f_cambio": "2026-04-20T12:37:59.909Z",
         "f_baja": null
     }
 },
@@ -1168,7 +1168,7 @@
         "ruta": "/1/42091/7268/42093",
         "url": "https://www.gobiernodecanarias.org/transformaciondigital",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-04-10T21:25:04.005Z",
+        "f_cambio": "2026-04-20T12:37:59.860Z",
         "f_baja": null
     }
 },

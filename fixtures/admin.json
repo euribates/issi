@@ -1038,5 +1038,213 @@
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2026-04-20T10:54:03.602Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "jrodleo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2026-04-20T18:43:01.343Z",
+        "user": 2,
+        "content_type": 36,
+        "object_id": "15",
+        "object_repr": "id_activo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2026-04-20T18:56:35.736Z",
+        "user": 2,
+        "content_type": 36,
+        "object_id": "16",
+        "object_repr": "sistema",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2026-04-20T18:57:27.118Z",
+        "user": 2,
+        "content_type": 36,
+        "object_id": "17",
+        "object_repr": "nombre_activo",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2026-04-20T18:58:23.908Z",
+        "user": 2,
+        "content_type": 36,
+        "object_id": "18",
+        "object_repr": "descripicion",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2026-04-20T18:58:37.529Z",
+        "user": 2,
+        "content_type": 36,
+        "object_id": "18",
+        "object_repr": "descripcion",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Nombre campo\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2026-04-20T18:59:39.565Z",
+        "user": 2,
+        "content_type": 36,
+        "object_id": "19",
+        "object_repr": "es_prioritario",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2026-04-20T19:01:54.288Z",
+        "user": 2,
+        "content_type": 36,
+        "object_id": "20",
+        "object_repr": "georeferenciado",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2026-04-20T19:03:44.088Z",
+        "user": 2,
+        "content_type": 36,
+        "object_id": "21",
+        "object_repr": "datos_personales",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2026-04-20T19:20:41.698Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "sistemas_sistema",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Nombre activo\", \"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2026-04-20T19:21:09.194Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "2",
+        "object_repr": "sistemas_activo",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Nombre activo\", \"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2026-04-20T19:24:39.674Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "1",
+        "object_repr": "sistemas_sistema",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Descripcion\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+        "action_time": "2026-04-20T19:27:57.504Z",
+        "user": 2,
+        "content_type": 12,
+        "object_id": "4",
+        "object_repr": "sistemas_tema",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+        "action_time": "2026-04-20T19:28:53.644Z",
+        "user": 2,
+        "content_type": 36,
+        "object_id": "22",
+        "object_repr": "id_tema",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+        "action_time": "2026-04-20T19:29:15.483Z",
+        "user": 2,
+        "content_type": 36,
+        "object_id": "23",
+        "object_repr": "nombre_tema",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+        "action_time": "2026-04-20T19:30:06.337Z",
+        "user": 2,
+        "content_type": 36,
+        "object_id": "24",
+        "object_repr": "transversal",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
 }
 ]

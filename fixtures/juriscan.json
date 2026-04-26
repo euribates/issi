@@ -81,6 +81,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 32069,
+    "fields": {
+        "titulo": "Decreto 236/1998, 18 diciembre, por el que se regulan las condiciones de acceso y los criterios para el pago del servicio en centros de alojamiento y estancia para personas mayores, públicos y privados, con participación de la Comunidad Autónoma en su financiación",
+        "created": "2026-04-26T19:30:27.744Z",
+        "updated": "2026-04-26T19:30:27.744Z",
+        "checked": "2026-04-26T19:30:27.742Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 37650,
     "fields": {
         "titulo": "Decreto 154/2001, 23 julio, por el que se establece el procedimiento para la puesta en funcionamiento de industrias e instalaciones industriales",
