@@ -16,6 +16,7 @@
 
     <table class="table">
       <thead>
+        <th>Orden</th>
         <th>Código / Nombre / UUID</th>
         <th>Necesita actualizar / Datos</th>
         <th>En DB</th>
@@ -24,6 +25,7 @@
       </thead>
       <tbody>
       {% for sistema in sistemas %}<tr>
+          <th>{{ forloop.counter }}</th>  
         <td>
            <b class="sistema-codigo"> {{ sistema.codigo }} </b>
            <br>{{ sistema.nombre_sistema }}
@@ -57,7 +59,6 @@
 
         <td>
 
-            10
           {% include 'sistemas/includes/pb-importar-sistema.html' with sistema=sistema %}  
         </td>
 

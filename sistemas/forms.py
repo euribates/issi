@@ -185,6 +185,19 @@ class AsignarInterlocutorForm(BootstrapForm, forms.ModelForm):
         fields = ['usuario']
 
 
+class EditarUsuarioForm(BootstrapForm, forms.ModelForm):
+
+    class Meta:
+        model = models.Usuario
+        fields = [
+            'nombre',
+            'apellidos',
+            'organismo',
+            'login',
+            'email',
+            ]
+
+
 class AltaUsuarioInternoForm(BootstrapForm, forms.ModelForm):
 
     class Meta:

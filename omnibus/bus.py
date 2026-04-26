@@ -187,6 +187,20 @@ class Bus:
         self.publica(ente, msg, 'update')
         self.publica(usuario, msg, 'update', user_feedback=False)
 
+    def pub_sistema_asignar_juriscan(self, sistema, juriscan):
+        msg = (
+            f"Se ha asignado la entrada Juriscán nº {juriscan}"
+            f" al sistema {sistema}"
+            )
+        self.publica(sistema, msg, 'update')
+
+    def pub_sistema_desasignar_juriscan(self, sistema, juriscan):
+        msg = (
+            f"Se ha desasingado la entrada nº {juriscan}"
+            f" al sistema {sistema}"
+            )
+        self.publica(sistema, msg, 'update')
+
     ## Backlog
 
     def pub_alta_backlog(self, tarea):

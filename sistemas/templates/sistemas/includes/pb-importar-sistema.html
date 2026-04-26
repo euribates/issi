@@ -1,11 +1,12 @@
 {% spaceless %}
 
-
 {% if sistema.sistema_db %}
 
-  {% comment %}<pre>{{% endcomment %}
-    {% comment %}{% for name,value in sistema.delta.items %} {{ name|pprint }}: {{ value|pprint }},{% endfor %}{% endcomment %}
-  {% comment %}}</code>{% endcomment %}
+{% if not sistema.errores and sistema.necesita_actualizacion %}
+  <pre>{
+    {% for name,value in sistema.delta.items %} {{ name|pprint }}: {{ value|pprint }},{% endfor %}
+  }</pre>
+{% endif %}
 
   <form action="/api/sistemas/actualizar/{{sistema.sistema_db.pk}}/"
         method="POST"
@@ -24,12 +25,15 @@
       {% endfor %} 
     {% elif name == 'responsables_tecnologicos' %}
       {% for persona in value %}
-        <input name="{{ name }}" value="{{ persona.login }}" type="hidden">  
-        &lt;input name="{{ name }}" value="{{ persona.login }}" type="hidden"&gt;
+        <input name="{{ name }}" value="{{ persona }}" type="hidden">  
+        &lt;input name="{{ name }}" value="{{ persona }}" type="hidden"&gt;
       {% endfor %} 
     {% elif name == 'tema' %}
-        <input name="{{ name }}" value="{{ tema.pk }}" type="hidden">  
-        &lt;input name="{{ name }}" value="{{ tema.pk }}" type="hidden"&gt;
+        <input name="{{ name }}" value="{{ .sistema.tema.pk }}" type="hidden">  
+        &lt;input name="{{ name }}" value="{{ sistema.tema.pk }}" type="hidden"&gt;
+    {% elif name == 'organismo' %}
+        <input name="{{ name }}" value="{{ sistema.organismo.pk }}" type="hidden">  
+        &lt;input name="{{ name }}" value="{{ sistema.organismo.pk }}" type="hidden"&gt;
     {% else %}
         <input name="{{ name }}" value="{{ value }}" type="hidden">  
         &lt;input name="{{ name }}" value="{{ value }}" type="hidden"&gt;
@@ -48,7 +52,6 @@
   <input name="nombre_sistema" value="{{ sistema.nombre_sistema }}" type="hidden">
   <input name="codigo" value="{{ sistema.codigo }}" type="hidden">
   <input name="descripcion" value="{{ sistema.descripcion }}" type="hidden">
-  <input name="comentarios" value="{{ sistema.comentarios }}" type="hidden">
   <input name="finalidad" value="{{ sistema.finalidad }}" type="hidden">
   <input name="observaciones" value="{{ sistema.observaciones }}" type="hidden">
   <input name="tema" type="hidden" value="{{ sistema.tema.pk }}">
@@ -57,16 +60,20 @@
   <input name="juriscan" value="{{ juriscan.pk }}" type="hidden">
   {% endfor %}
   
-
+{% if sistema.responsables_funcionales %}
   {% for persona in sistema.responsables_funcionales %}
   <input name="responsables_funcionales" value="{{ persona.login }}" type="hidden">
-
-  <code>{{ usuario.login|pprint }}</code>
-  
+  <code>FUN: {{ persona.login|pprint }}</code>
   {% endfor %}
+{% endif %}
+
+{% if sistema.responsables_tecnologicos %}
   {% for usuario in sistema.responsables_tecnologicos %}
   <input name="responsables_tecnologicos" value="{{ usuario.login }}" type="hidden">
+  <code>TEC: {{ persona.login|pprint }}</code>
   {% endfor %}
+{% endif %}
+
   <input type="submit" name="pb_upsert"
       {% if sistema.errores or not sistema.necesita_actualizacion %}disabled{% endif %}
       value="Añadir sistema">

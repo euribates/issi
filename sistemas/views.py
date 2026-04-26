@@ -146,14 +146,15 @@ def editar_sistema(request, sistema):
 @login_required
 def asignar_normativa(request, sistema):
     from django.http import HttpResponse
+    # Bus(request).pub_sistema_asignar_juriscan(sistema, juriscan)
     return HttpResponse(" no implementado", content_type="text/plain")
 
 
 @login_required
 def desasignar_normativa(request, sistema, juriscan: int):
-    from django.http import HttpResponse
-    return HttpResponse(" no implementado", content_type="text/plain")
-
+    sistema.desasignar_juriscan(juriscan)
+    Bus(request).pub_sistema_desasignar_juriscan(sistema, juriscan)
+    return redirect(links.a_detalle_sistema(sistema.pk))
 
 
 @login_required
@@ -689,6 +690,23 @@ def detalle_usuario(request, usuario, *args, **kwargs):
         'titulo': f'Detalles usuario {usuario}',
         'breadcrumbs': bc.bc_detalle_usuario(usuario),
         'tab': 'usuarios',
+        'usuario': usuario,
+        })
+
+@login_required
+def editar_usuario(request, usuario):
+    if request.method == "POST":
+        form = forms.EditarUsuarioForm(request.POST, instance=usuario)
+        if form.is_valid():
+            usuario = form.save()
+            return redirect(links.a_detalle_usuario(usuario.pk))
+    else:
+        form = forms.EditarUsuarioForm(instance=usuario)
+    return render(request, 'sistemas/editar-usuario.html', {
+        'titulo': f'Editar usuario {usuario}',
+        'breadcrumbs': bc.bc_editar_usuario(usuario),
+        'tab': 'usuarios',
+        'form': form,
         'usuario': usuario,
         })
 

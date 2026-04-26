@@ -39,7 +39,6 @@ class AltaSistemaSchema(Schema):
     nombre_sistema: str
     codigo: str
     descripcion: str = ""
-    comentario: str = ""
     finalidad: str = ""
     observaciones: str = ""
     organismo: int
@@ -58,14 +57,16 @@ def alta_sistema(request, payload: Form[AltaSistemaSchema]):
             'result': {
                 'id_sistema': sistema.pk,
                 'codigo': sistema.codigo,
-                'uuid': sistema.uuid,
+                'uuid_sistema': sistema.uuid_sistema,
                 'created': sistema.created,
                 }
             }
     except Exception as err:
+        lines = traceback.format_exception(err)
         return {
             'status': 'error',
             'message': escape(str(err)),
+            'traceback': lines,
             }
 
 

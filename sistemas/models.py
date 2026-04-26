@@ -262,30 +262,39 @@ class Sistema(models.Model):
             La instancia de Sistema, ya almacenada
             en la base de datos.
         """
-        nombre_sistema = kwargs.pop('nombre_sistema')
-        codigo = kwargs.pop('codigo')
-        finalidad = kwargs.pop('finalidad')
-        organismo = kwargs.pop('organismo')
+        parameters = kwargs.copy()
+        nombre_sistema = parameters.pop('nombre_sistema')
+        codigo = parameters.pop('codigo')
+        finalidad = parameters.pop('finalidad')
+        descripcion = parameters.pop('descripcion', '')
+        observaciones = parameters.pop('observaciones', '')
         sistema = Sistema(
             nombre_sistema=nombre_sistema,
             codigo=codigo,
             finalidad=finalidad,
-            organismo=organismo,
+            descripcion=descripcion,
+            observaciones=observaciones,
+            uuid_sistema=uuid4(),
             )
-        if tema := kwargs.pop('tema', None):
+        if tema := parameters.pop('tema', None):
             sistema.asignar_tema(tema, commit=False)
-        sistema.descripcion = kwargs.pop('descripcion', '')
-        sistema.observaciones = kwargs.pop('observaciones', '')
-        sistema.save(commit=True)
+        if organismo := parameters.pop('organismo', None):
+            sistema.asignar_organismo(organismo, commit=False)
+        sistema.save()
         # Actualizamos entidades debiles
-        if juriscan := kwargs.pop('juriscan', []):
+        if juriscan := parameters.pop('juriscan', []):
             for id_juriscan in juriscan:
                 sistema.asignar_juriscan(id_juriscan)
-        for persona in kwargs.pop('resposables_funcionales', []):
-            sistema.asignar_responsable('FUN', persona)
-        for persona in kwargs.pop('resposables_tecnologicos', []):
-            sistema.asignar_responsable('TEC', persona)
-        assert not kwargs, "No debería quedar ningún parámetro"
+        if 'responsables_funcionales' in parameters: 
+            for persona in parameters.pop('responsables_funcionales', []):
+                sistema.asignar_responsable('FUN', persona)
+        if 'responsables_tecnologicos' in parameters: 
+            for persona in parameters.pop('responsables_tecnologicos', []):
+                sistema.asignar_responsable('TEC', persona)
+        assert not parameters, (
+            "No debería quedar ningún parámetro"
+            f" pero parameters = {parameters!r}"
+            )
         return sistema
 
     def actualizar_sistema(self, **kwargs):
@@ -346,19 +355,18 @@ class Sistema(models.Model):
         _update_field('es_subsistema_de')
         _update_field('especial_importancia')
         _update_field('familia')
-        from icecream import ic; ic(update_fields)
 
         # Actualizamos claves foraneas
         if 'organismo' in parameters:
-            organismo = kwargs.pop('organismo')
+            organismo = parameters.pop('organismo')
             self.asignar_organismo(organismo, commit=False)
             update_fields.append('organismo')
         if 'tema' in parameters:
-            tema = kwargs.pop('tema')
+            tema = parameters.pop('tema')
             self.asignar_tema(tema, commit=False)
             update_fields.append('tema')
         if 'familia' in parameters:
-            familia = kwargs.pop('familia')
+            familia = parameters.pop('familia')
             self.asignar_familia(familia, commit=False)
             update_fields.append('familia')
         # Actualizamos entidades debiles
@@ -573,7 +581,7 @@ class Sistema(models.Model):
                 self.save(update_fields=["organismo"])
         return organismo
 
-    def asignar_responsable(self, cometido, usuario):
+    def asignar_responsable(self, cometido, usuario_o_login):
         """Asigna a un sistema un responsable
 
         Un responsable es una persona con un cometido determinado.
@@ -581,8 +589,19 @@ class Sistema(models.Model):
         Es idempotente, si el resposable ya estaba
         creado, no hace nada.
         """
-        if not isinstance(usuario, Usuario):
-            usuario = Usuario.load_usuario(usuario)
+        if not usuario_o_login:
+            return
+        if not isinstance(usuario_o_login, Usuario):
+            usuario = Usuario.load_usuario(usuario_o_login)
+        if not usuario:
+            usuario = Usuario(
+                login=usuario_o_login,
+                email=f'{usuario_o_login}@{EMAIL_DOMAIN}',
+                nombre='*',
+                apellidos='*',
+                organismo_id=1,
+                )
+            usuario.save()
         perfil, _created = Perfil.upsert(
             sistema=self,
             cometido=cometido,
@@ -592,6 +611,14 @@ class Sistema(models.Model):
 
     def asignar_juriscan(self, id_juriscan):
         JuriscanSistema.upsert(self.pk, int(id_juriscan))
+        self.touch()
+
+    def desasignar_juriscan(self, id_juriscan):
+        JuriscanSistema.objects.filter(
+            sistema=self,
+            juriscan_id=int(id_juriscan),
+            ).delete()
+        self.touch()
 
     def estado_cuestionario(self):
         num_respuestas = Respuesta.objects.filter(sistema=self).count()

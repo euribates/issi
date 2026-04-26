@@ -1,0 +1,99 @@
+{% extends "comun/base.html" %}
+{% load comun_filters %}
+
+{% block content %}
+<div class="card">
+
+  <div class="card-header">
+    Editar usuario
+  </div>
+
+  <div class="card-body">
+
+  <form method="POST" action=".">
+  {% csrf_token %}
+
+    
+  <div class="m-2">
+    <label for="id_login" class="form-label">Username / Login</label>
+    {{ form.login }}
+    {% if form.login.errors %}<ul class="form-errors">
+      {% for err in form.login.errors %}
+        <li>{{ err }}</li> 
+      {% endfor %}
+      </ul>{% endif %}
+  </div>
+
+  <div class="m-2">
+    <label for="id_email" class="form-label">
+        {{ form.email.label }}
+    </label>
+    {{ form.email }}
+    {% if form.email.errors %}<ul class="form-errors">
+        {% for error in form.email.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>{% endif %}
+  </div>
+
+  <div class="m-2">
+      <label for="id_nombre" class="form-label">
+          {{ form.nombre.label }}
+      </label>
+      {{ form.nombre }}
+      {% if form.nombre.errors %}<ul class="form-errors">
+          {% for error in form.nombre.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+      </ul>{% endif %}
+  </div>
+
+  <div class="m-2">
+    <label for="id_apellidos" class="form-label">
+        {{ form.apellidos.label }}
+    </label>
+    {{ form.apellidos }}
+    {% if form.apellidos.errors %}<ul class="form-errors">
+        {% for error in form.apellidos.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>{% endif %}
+  </div>
+
+    <fieldset style="max-width: 50%;">
+      <legend>Dirección General / organismo</legend>
+
+      <div class="m-2">
+        <span class="badge rounded-pill bg-info">
+          <div id="contador">0</div>
+        </span>
+       </label>
+       <button 
+         type="button"
+         data-init="@get('/sistemas/patch/organismos/')"
+         data-on:click="@get('/sistemas/patch/organismos/')"
+         >
+       filtrar por
+       </button>
+
+        <input type="text" name="query" value="" 
+               data-bind="query"
+               data-on:input__debounce.250ms="@get('/sistemas/patch/organismos/')"
+               >
+           <div id="control_organismos">
+           </div>
+      </div>
+    </fieldset>    
+  </div>
+
+  <div class="m-2">
+    <button type="submit" class="btn btn-primary">
+        Modificar usuario
+    </button>
+  </div>
+
+  </form>
+  </div>
+</div>  
+
+{% endblock content %}

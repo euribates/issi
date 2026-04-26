@@ -50,6 +50,7 @@ urlpatterns = [
     tie('usuario/alta/interno/', views.alta_usuario_interno),
     tie('usuario/alta/externo/', views.alta_usuario_externo),
     tie('usuario/<usr:usuario>/', views.detalle_usuario),
+    tie('usuario/<usr:usuario>/editar/', views.editar_usuario),
     tie('temas/', views.listado_temas),
     tie('temas/<tema:tema>/', views.detalle_tema),
     tie('familias/', views.listado_familias),

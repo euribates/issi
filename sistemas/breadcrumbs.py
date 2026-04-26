@@ -183,6 +183,13 @@ def bc_detalle_usuario(usuario: models.Usuario) -> BreadCrumb:
         )
 
 
+def bc_editar_usuario(usuario: models.Usuario) -> BreadCrumb:
+    return bc_detalle_usuario(usuario).step(
+        "Editar usuario",
+        links.a_editar_usuario(usuario.pk),
+        )
+
+
 def bc_organismos() -> BreadCrumb:
     return bc_issi().step('Organismos', links.a_organismos())
 

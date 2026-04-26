@@ -5,7 +5,6 @@ from tempfile import TemporaryFile
 
 import pandas as pd
 
-from comun.results import Result
 from comun.error import errors
 from . import parsers
 from . import models
@@ -48,7 +47,6 @@ def rename_headers(df):
 
 
 def _necesita_actualizacion(sistema, payload) -> dict:
-    from icecream import ic; ic()
     result = dict()
 
     def chk(nombre):
@@ -106,7 +104,6 @@ def _necesita_actualizacion(sistema, payload) -> dict:
 def _verificar_existencia_sistema(payload: dict) -> dict:
     '''Verifica si los datos a importar son consistentes con la BD.
     '''
-    from icecream import ic; ic()
     payload['necesita_actualizacion'] = True
     
     codigo = payload['codigo']
@@ -140,7 +137,6 @@ def _verificar_existencia_sistema(payload: dict) -> dict:
 
 
 def importar_fila(items: Sequence, n_linea=None) -> dict:
-    from icecream import ic; ic()
     items = list(items)
     payload = {
         'errores': []
@@ -177,5 +173,5 @@ def importar_sistemas_desde_fichero(stream):
     for _index, row in df.iterrows():
         payload = importar_fila(row, n_linea=_index + 1)
         yield payload
-        if _index >= 3:
+        if _index >= 40:
             break

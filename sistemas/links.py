@@ -123,6 +123,10 @@ def a_detalle_usuario(usuario) -> str:
     return _a('sistemas:detalle_usuario', usuario=usuario)
 
 
+def a_editar_usuario(usuario) -> str:
+    return _a('sistemas:editar_usuario', usuario=usuario)
+
+
 def a_organismos() -> str:
     return _a('sistemas:listado_organismos')
     
