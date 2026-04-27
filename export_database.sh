@@ -16,6 +16,7 @@ dumpdata "normativa"
 dumpdata "directorio"
 dumpdata "juriscan"
 dumpdata "sistemas"
+dumpdata "familias"
 dumpdata "plan"
 dumpdata "omnibus"
 

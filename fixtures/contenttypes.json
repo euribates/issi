@@ -286,5 +286,13 @@
         "app_label": "sistemas",
         "model": "campo"
     }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 37,
+    "fields": {
+        "app_label": "familias",
+        "model": "familia"
+    }
 }
 ]

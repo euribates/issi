@@ -1,0 +1,107 @@
+[
+{
+    "model": "familias.familia",
+    "pk": "F01",
+    "fields": {
+        "nombre_familia": "Autorizaciones, licencias, permisos, comunicaciones previas y declaraciones responsables"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "F02",
+    "fields": {
+        "nombre_familia": "Infracciones y sanciones"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "F03",
+    "fields": {
+        "nombre_familia": "Revisión de actos, recursos administrativos y reclamaciones previas"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "F04",
+    "fields": {
+        "nombre_familia": "Responsabilidad patrimonial"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "F05",
+    "fields": {
+        "nombre_familia": "Subvenciones, premios y becas"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "F06",
+    "fields": {
+        "nombre_familia": "Gestión de personal"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "F10",
+    "fields": {
+        "nombre_familia": "Certificaciones"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "F11",
+    "fields": {
+        "nombre_familia": "Registros administrativos"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "F12",
+    "fields": {
+        "nombre_familia": "Expropiación forzosa"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "F13",
+    "fields": {
+        "nombre_familia": "Gobierno y dirección"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "F14",
+    "fields": {
+        "nombre_familia": "Prestaciones sociales y sanitarias"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "F17",
+    "fields": {
+        "nombre_familia": "Sugerencias y reclamaciones"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "F19",
+    "fields": {
+        "nombre_familia": "Inspectora"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "_NA",
+    "fields": {
+        "nombre_familia": "No aplicable"
+    }
+},
+{
+    "model": "familias.familia",
+    "pk": "UNK",
+    "fields": {
+        "nombre_familia": "Pendiente de definir"
+    }
+}
+]

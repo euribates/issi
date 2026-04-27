@@ -1246,5 +1246,44 @@
         "action_flag": 1,
         "change_message": "[{\"added\": {}}]"
     }
+},
+{
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+        "action_time": "2026-04-27T15:18:22.034Z",
+        "user": 2,
+        "content_type": 25,
+        "object_id": "3",
+        "object_repr": "Triskell Software",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+        "action_time": "2026-04-27T15:20:55.592Z",
+        "user": 2,
+        "content_type": 24,
+        "object_id": "eschweich@triskellsoftware.com",
+        "object_repr": "Estefanía Schweich",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+        "action_time": "2026-04-27T15:23:34.840Z",
+        "user": 2,
+        "content_type": 22,
+        "object_id": "11",
+        "object_repr": "Sistema de Dirección por Objetivos (TRISKELL)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Observaciones\"]}}]"
+    }
 }
 ]

@@ -21,6 +21,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 2046,
+    "fields": {
+        "titulo": "Ley 2/1987, 30 marzo, de la Función Pública Canaria",
+        "created": "2026-04-27T15:06:33.800Z",
+        "updated": "2026-04-27T15:06:33.800Z",
+        "checked": "2026-04-27T15:06:33.798Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 4643,
     "fields": {
         "titulo": "Ley 8/1991, 30 abril, de protección de los animales",
@@ -51,12 +61,32 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 8812,
+    "fields": {
+        "titulo": "Decreto 63/1986, 4 abril, por el que se constituye y regula el Registro Regional de Entidades Colaboradoras en la Prestación de Servicios Sociales",
+        "created": "2026-04-27T10:45:13.169Z",
+        "updated": "2026-04-27T10:45:13.169Z",
+        "checked": "2026-04-27T10:45:13.166Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 9374,
     "fields": {
         "titulo": "Decreto 77/1988, 21 abril, sobre creación del Centro de Contratación de Canarias",
         "created": "2026-02-11T11:22:44.109Z",
         "updated": "2026-02-11T11:22:44.109Z",
         "checked": "2026-02-11T11:22:44.109Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 20134,
+    "fields": {
+        "titulo": "Ley 7/1995, 6 abril, de Ordenación del Turismo de Canarias",
+        "created": "2026-04-27T10:04:22.636Z",
+        "updated": "2026-04-27T10:04:22.636Z",
+        "checked": "2026-04-27T10:04:22.635Z"
     }
 },
 {
@@ -101,6 +131,26 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 40841,
+    "fields": {
+        "titulo": "Orden, 25 jun 2002, de la Consejería de Presidencia e Innovación Tecnológica, por la que se aprueba la aplicación informática del sistema intercomunicado de registro de entrada y salida de documentos de la Administración Pública de la Comunidad Autónoma de Canarias",
+        "created": "2026-04-27T11:01:47.553Z",
+        "updated": "2026-04-27T11:01:47.553Z",
+        "checked": "2026-04-27T11:01:47.550Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 41666,
+    "fields": {
+        "titulo": "Orden, 10 dic 2002, de la Consejería de Presidencia e Innovación Tecnológica, por la que se aprueba la aplicación del sistema de información de recursos humanos (SIRHUS) para la gestión de los procedimientos en materia de personal, así como para la gestión del registro general de personal",
+        "created": "2026-04-27T15:10:36.312Z",
+        "updated": "2026-04-27T15:10:36.312Z",
+        "checked": "2026-04-27T15:10:36.310Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 42017,
     "fields": {
         "titulo": "Decreto 201/2002, 20 diciembre, por el que se establece la regulación de horarios comerciales en la Comunidad Autónoma de Canarias",
@@ -121,12 +171,32 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 46083,
+    "fields": {
+        "titulo": "Decreto 1/2004, 13 enero, por el que se establece el precio máximo de venta y la renta máxima inicial anual de las viviendas protegidas de promoción pública",
+        "created": "2026-04-27T14:51:22.171Z",
+        "updated": "2026-04-27T14:51:22.171Z",
+        "checked": "2026-04-27T14:51:22.169Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 53183,
     "fields": {
         "titulo": "Ley 6/2006,  de 17 de julio, del Patrimonio de la Comunidad Autónoma de Canarias",
         "created": "2026-02-12T10:58:06.869Z",
         "updated": "2026-02-12T10:58:06.869Z",
         "checked": "2026-02-12T10:58:06.869Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 57177,
+    "fields": {
+        "titulo": "Decreto 78/2007, 18 abril, por el que se fija la jornada y el horario de trabajo del personal al servicio de la Administración Pública de la Comunidad Autónoma de Canarias y se establece el sistema de gestión de los mismos",
+        "created": "2026-04-27T15:06:34.570Z",
+        "updated": "2026-04-27T15:06:34.570Z",
+        "checked": "2026-04-27T15:06:34.568Z"
     }
 },
 {
@@ -141,12 +211,42 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 60984,
+    "fields": {
+        "titulo": "Decreto 36/2009, 31 marzo, por el que se establece el régimen general de subvenciones de la Comunidad Autónoma de Canarias",
+        "created": "2026-04-27T11:01:46.470Z",
+        "updated": "2026-04-27T11:01:46.470Z",
+        "checked": "2026-04-27T11:01:46.468Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 61601,
+    "fields": {
+        "titulo": "Orden, 31 jul 2009, de la Consejería de Presidencia, Justicia y Seguridad, por la que se aprueba la aplicación del Sistema Integral de Control Horario (SICHO) para la gestión de la jornada y horario de trabajo del personal al servicio de la Administración Pública de la Comunidad Autónoma de Canarias, como sistema auxiliar y complementario del Sistema de Información de Recursos Humanos (SIRHUS)",
+        "created": "2026-04-27T15:06:35.058Z",
+        "updated": "2026-04-27T15:06:35.058Z",
+        "checked": "2026-04-27T15:06:35.057Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 61849,
     "fields": {
         "titulo": "Orden, 24 sep 2009, de la Consejería de Bienestar Social, Juventud y Vivienda, por la que se regula el régimen de inscripción, funcionamiento y estructura del Registro Público de Demandantes de Vivienda Protegida de Canarias",
         "created": "2026-02-12T10:58:06.329Z",
         "updated": "2026-02-12T10:58:06.329Z",
         "checked": "2026-02-12T10:58:06.328Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 63774,
+    "fields": {
+        "titulo": "Decreto 84/2010, 15 julio, por el que se regula el sistema de información turística, el Registro General Turístico y el sistema informático que les da soporte",
+        "created": "2026-04-27T10:04:19.663Z",
+        "updated": "2026-04-27T10:04:19.663Z",
+        "checked": "2026-04-27T10:04:19.659Z"
     }
 },
 {
@@ -287,6 +387,26 @@
         "created": "2026-02-12T10:58:07.246Z",
         "updated": "2026-02-12T10:58:07.246Z",
         "checked": "2026-02-12T10:58:07.245Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 79054,
+    "fields": {
+        "titulo": "ORDEN de 22 de abril de 2022, por la que se aprueban las bases reguladoras de subvenciones destinadas al fomento de la adquisición de vivienda por parte de las personas jóvenes canarias.",
+        "created": "2026-04-27T12:44:10.131Z",
+        "updated": "2026-04-27T12:44:10.131Z",
+        "checked": "2026-04-27T12:44:10.130Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 79253,
+    "fields": {
+        "titulo": "DECRETO 88/2023, de 25 de mayo, por el que se establece el modelo de referencia de planificación y gestión estratégica y dirección por objetivos de la Administración Pública de la Comunidad Autónoma de Canarias y de sus organismos autónomos, y por el que se modifica el Decreto 69/2004, de 25 de mayo, por el que se regula la organización, competencias y funcionamiento de la Comisión de Coordinación y Planificación.",
+        "created": "2026-04-27T15:42:02.370Z",
+        "updated": "2026-04-27T15:42:02.370Z",
+        "checked": "2026-04-27T15:42:02.367Z"
     }
 },
 {
