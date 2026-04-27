@@ -12,6 +12,11 @@ from comun import forms
 from sistemas import breadcrumbs
 from sistemas import links
 from sistemas.models import Sistema
+from sistemas.models import Activo
+from sistemas.models import Tema
+from sistemas.models import Familia
+from sistemas.models import Usuario
+from directorio.models import Organismo
 
 from comun.graficas import PolarChart
 
@@ -74,6 +79,12 @@ def get_stats_sistemas() -> dict:
     stats = Counter()
     for s in Sistema.objects.all():
         stats[s.get_estado()] += 1
+        stats['sistemas'] += 1
+    stats['activos'] = Activo.objects.count()
+    stats['usuarios'] = Usuario.objects.count()
+    stats['organismos'] = Organismo.objects.count()
+    stats['temas'] = Tema.objects.count()
+    stats['familias'] = Familia.objects.count()
     return stats
 
 
@@ -82,6 +93,7 @@ def homepage(request):
     return render(request, "comun/homepage.html", {
         "titulo": "Inventario de sistemas de información",
         'breadcrumbs': breadcrumbs.bc_issi(),
+        "stats": stats,
         "sistemas_chart": Doughnut(
             good=stats['green'],
             regular=stats['yellow'],

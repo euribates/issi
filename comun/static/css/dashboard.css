@@ -155,12 +155,13 @@ ul.sidebar-nav li.sidebar-item {
   }
 
 .panel .counter {
-  min-width: 100px;
+  min-width: 110px;
   font-size: 38pt;
   letter-spacing: -2.5px;
   font-weight: bolder;
   text-align: center;
   border: 0px solid red;
+  padding-right: 5px;
 }
 
 .panel .small {

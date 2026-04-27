@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'docs',
     'django_filters',
     'comun',
+    'familias',
     'omnibus',
     'normativa',
     'sistemas',

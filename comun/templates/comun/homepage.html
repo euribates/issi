@@ -8,7 +8,6 @@
 
 {% block content %}
 
-
 <div class="row">
 
   <div class="col-sm-12 col-md-6 col-xl-4">
@@ -19,7 +18,7 @@
            <a href="{% url 'sistemas:index' %}">Sistemas de Informacion</a>  
         </div>  
         <div class="panel-body">
-          <div class="counter">95</div>
+            <div class="counter">{{ stats.sistemas }}</div>
             <p class="small">
             Inventario de sistemas de información 
             gestionados por las AAPP del Gobierno de Canarias
@@ -56,7 +55,7 @@
            <a href="{% url 'sistemas:index' %}">Activos de datos</a>  
         </div>  
         <div class="panel-body">
-          <div class="counter">4</div>
+            <div class="counter">{{ stats.activos }}</div>
             <p class="small">
             Recurso que contiene información valiosa para una
             organización. Estos incluyen datos, documentos, correos
@@ -76,7 +75,7 @@
            <a href="{% url 'sistemas:index' %}">Organismos</a>  
         </div>  
         <div class="panel-body">
-          <div class="counter">149</div>
+            <div class="counter">{{ stats.organismos }}</div>
             <p class="small">
             Incluye tanto organismos autónomos como consejerías (Información
             sacada de DIRCAC).
@@ -93,7 +92,7 @@
            <a href="{% url 'sistemas:index' %}">Usuarios</a>  
         </div>  
         <div class="panel-body">
-          <div class="counter">126</div>
+            <div class="counter">{{ stats.usuarios }}</div>
             <p class="small">
             Usuarios activos en el sistema
             </p>
@@ -108,7 +107,7 @@
            <a href="{% url 'sistemas:index' %}">Áreas competenciales</a>  
         </div>  
         <div class="panel-body">
-          <div class="counter">68</div>
+            <div class="counter">{{ stats.temas }}</div>
             <p class="small">
             Todos los sistemas se clasifican en un área competencial
             </p>
@@ -120,10 +119,10 @@
       <div class="panel">
         <div class="panel-header">
           <img src="{% static 'icons/familia.svg' %}" width="32">
-           <a href="{% url 'sistemas:index' %}">Familias</a>  
+           <a href="{% url 'familias:index' %}">Familias</a>  
         </div>  
         <div class="panel-body">
-          <div class="counter">15</div>
+            <div class="counter">{{ stats.familias }}</div>
             <p class="small">
             Algunos sistemas se agrupan en familias
             </p>
@@ -136,7 +135,6 @@
   </div>
 
 <div><!-- row ends -->
-
     
 
 

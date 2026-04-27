@@ -1,0 +1,10 @@
+{% extends 'comun/base.html' %}
+
+{% block content %}
+  <ul>
+    {% for familia in familias %}
+    <li>{{ familia }} ({{ familia.num_sistemas }})</li>
+    {% endfor %}
+
+  </ul>
+{% endblock content %}
