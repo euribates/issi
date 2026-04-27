@@ -1,0 +1,43 @@
+{% extends "comun/base-form.html" %}
+{% load comun_filters %}
+
+{% block form %}
+  <form method="POST" action=".">
+  {% csrf_token %}
+
+  {{ form.errors }}  
+
+  <div class="card">
+  
+    <div class="card-header">
+      <h2 class="card tittle">
+      Asignar normativa al S.I. {{ sistema }}
+      </h2>
+    </div>
+  
+    <div class="card-body">
+    
+    </div><!-- de card-body -->
+
+    <label for="id_id_juriscan" class="form-label">
+        {{ form.id_juriscan.label }}
+    </label>
+
+    
+    {{ form.id_juriscan }}
+
+    {% if form.id_juriscan.errors %}<ul class="form-errors">
+        {% for error in form.id_juriscan.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>{% endif %}
+
+    <div class="card-footer d-flex flex-row-reverse">
+      <button type="submit" class="btn btn-primary">Asignar normativa</button>
+    </div>
+  
+  </div>  
+  </form>
+
+</div>  
+{% endblock form %}

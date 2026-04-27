@@ -110,6 +110,7 @@ def parse_codigo_interno(codigo: str, n_linea=None) -> Result:
     codigo = clean_text(codigo)
     if not codigo:
         return Failure(errors.EI0003(n_linea=n_linea))
+    codigo = codigo.replace('-', '_')
     codigo = filters.codigos_renombrados(codigo)
     codigo = filters.slugify(codigo)
     codigo = codigo.upper()
@@ -178,6 +179,7 @@ def parse_materia_competencial(materia: str | None, n_linea=None) -> Result:
 
 
 def _parse_one_user(text: str, n_linea: int) -> Success|Failure:
+    text = text.lower()
     if match := pat_full.match(text):
         nombre = match.group(1)
         email = match.group(2)

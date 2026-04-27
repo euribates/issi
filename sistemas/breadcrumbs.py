@@ -90,6 +90,13 @@ def bc_editar_observaciones(sistema: models.Sistema) -> BreadCrumb:
         )
 
 
+def bc_asignar_normativa(sistema: models.Sistema) -> BreadCrumb:
+    return bc_detalle_sistema(sistema).step(
+        "Asignar normativa",
+        links.a_asignar_normativa(sistema.pk),
+        )
+
+
 
 def bc_editar_codigo(sistema: models.Sistema) -> BreadCrumb:
     return bc_detalle_sistema(sistema).step(

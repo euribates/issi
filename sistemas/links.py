@@ -56,6 +56,10 @@ def a_asignar_tema(id_sistema: int) -> str:
     return _a('sistemas:asignar_tema', sistema=id_sistema)
 
 
+def a_asignar_normativa(id_sistema: int) -> str:
+    return _a('sistemas:asignar_normativa', sistema=id_sistema)
+
+
 def a_asignar_icono(id_sistema: int) -> str:
     return _a('sistemas:asignar_icono', sistema=id_sistema)
 
@@ -164,11 +168,11 @@ def a_tema(id_tema:str) -> str:
 
 
 def a_familias() -> str:
-    return _a('sistemas:listado_familias')
+    return _a('familias:index')
 
 
 def a_detalle_familia(familia: str) -> str:
-    return _a('sistemas:detalle_familia', familia=familia)
+    return _a('familias:detalle_familia', familia=familia)
 
 
 def a_activos() -> str:

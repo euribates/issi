@@ -145,9 +145,22 @@ def editar_sistema(request, sistema):
 
 @login_required
 def asignar_normativa(request, sistema):
-    from django.http import HttpResponse
-    # Bus(request).pub_sistema_asignar_juriscan(sistema, juriscan)
-    return HttpResponse(" no implementado", content_type="text/plain")
+    if request.method == 'POST':
+        form = forms.NormativaForm(request.POST)
+        if form.is_valid():
+            id_juriscan = int(form.cleaned_data['id_juriscan'])
+            sistema.asignar_juriscan(id_juriscan)
+            Bus(request).pub_sistema_asignar_juriscan(sistema, id_juriscan)
+            return redirect(links.a_detalle_sistema(sistema.pk))
+    else:
+        form = forms.NormativaForm()
+    return render(request, "sistemas/asignar-normativa.html", {
+        'titulo': 'Asigna normativa aplicable al sistema {sistema}',
+        'breadcrumbs': bc.bc_asignar_normativa(sistema),
+        'tab': 'sistemas',
+        'form': form,
+        'sistema': sistema,
+        })
 
 
 @login_required
@@ -858,7 +871,7 @@ def detalle_organismo(request, organismo: Organismo):
 
 @login_required
 def listado_temas(request):
-    temas = models.Tema.objects.with_counts().all()
+    temas = models.Tema.objects.with_counts().order_by('nombre_tema').all()
     return render(request, 'sistemas/listado-temas.html', {
         'titulo': 'Listado de temas (Áreas temáticas)',
         'breadcrumbs': bc.bc_temas(),
@@ -876,26 +889,6 @@ def detalle_tema(request, tema):
         'tema': tema,
         })
 
-
-@login_required
-def listado_familias(request):
-    familias = models.Familia.objects.with_counts().all()
-    return render(request, 'sistemas/listado-familias.html', {
-        'titulo': 'Listado de familias (Áreas temáticas)',
-        'breadcrumbs': bc.bc_familias(),
-        'tab': 'familias',
-        'familias': familias,
-        })
-
-
-@login_required
-def detalle_familia(request, familia):
-    return render(request, 'sistemas/detalle-familia.html', {
-        'titulo': str(familia),
-        'breadcrumbs': bc.bc_detalle_familia(familia),
-        'tab': 'familias',
-        'familia': familia,
-        })
 
 
 @login_required
@@ -1013,7 +1006,6 @@ def importar_sistemas(request, *args, **kwargs):
                 'breadcrumbs': bc.bc_importar_sistemas(),
                 'sistemas': sistemas,
                 'num_sistemas': len(sistemas),
-                'sistemas_correctos': sistemas_correctos,
                 'num_sistemas_correctos': len(sistemas_correctos),
                 })
 

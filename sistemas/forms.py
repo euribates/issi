@@ -251,6 +251,10 @@ class AltaOpcionForm(BootstrapForm, forms.ModelForm):
         return instance
 
 
+class NormativaForm(forms.Form):
+
+    id_juriscan = forms.IntegerField()
+
 
 class BacklogForm(BootstrapForm, forms.ModelForm):
 

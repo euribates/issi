@@ -26,12 +26,12 @@ def test_link_a_conmutar_campo():
 
 
 def test_link_a_familias():
-    expected = '/sistemas/familias/'
+    expected = '/familias/'
     assert links.a_familias() == expected
 
 
 def test_link_a_detalle_familia():
-    expected = '/sistemas/familias/F01/'
+    expected = '/familias/F01/'
     assert links.a_detalle_familia('F01') == expected
 
 

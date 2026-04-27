@@ -2,6 +2,7 @@
 
 from django.urls import path
 
+from sistemas import converters  # noqa: F401
 from . import views
 
 app_name = 'familias'
@@ -13,4 +14,5 @@ def tie(ruta, vista, name=None):
 
 urlpatterns = [
     tie('', views.index),
+    tie('<fam:familia>/', views.detalle_familia),
     ]

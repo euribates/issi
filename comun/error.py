@@ -49,7 +49,7 @@ class ErrorCatalog:
 
     @classmethod
     def as_error_handler(cls, code, name, desc, refs):
-        def internal_handler(value, **context):
+        def internal_handler(value=None, **context):
             message = desc
             if value:
                 message = message.format(value=escape(str(value)))

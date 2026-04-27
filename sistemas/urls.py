@@ -53,8 +53,6 @@ urlpatterns = [
     tie('usuario/<usr:usuario>/editar/', views.editar_usuario),
     tie('temas/', views.listado_temas),
     tie('temas/<tema:tema>/', views.detalle_tema),
-    tie('familias/', views.listado_familias),
-    tie('familias/<fam:familia>/', views.detalle_familia),
 
     tie('cuestionario/', views.listado_preguntas),
     tie('cuestionario/<int:not_impid_pregunta>/', views.ver_pregunta),

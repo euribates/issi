@@ -22,6 +22,7 @@ from django.utils.timezone import localtime
 
 from directorio.models import Organismo
 from directorio.models import Empresa
+from familias.models import Familia
 from juriscan.models import Juriscan
 
 from . import diagnosis, links
@@ -39,35 +40,6 @@ if not TEMP_DIR.is_dir():
     TEMP_DIR.mkdir()
 
 
-class FamiliaManager(models.Manager):
-
-    def with_counts(self):
-        return self.annotate(num_sistemas=Coalesce(models.Count("sistemas"), 0))
-
-
-class Familia(models.Model):
-    class Meta:
-        ordering = [
-            "id_familia",
-        ]
-
-    id_familia = models.CharField(max_length=3, primary_key=True)
-    nombre_familia = models.CharField(max_length=128)
-
-    objects = FamiliaManager()
-
-    @classmethod
-    def load_familia(cls, pk: str):
-        try:
-            return cls.objects.get(id_familia=pk)
-        except cls.DoesNotExist:
-            return None
-
-    def __str__(self) -> str:
-        return str(self.nombre_familia)
-
-    def no_definida(self) -> bool:
-        return self.pk == "UNK"
 
 
 class TemaManager(models.Manager):
@@ -285,11 +257,13 @@ class Sistema(models.Model):
         if juriscan := parameters.pop('juriscan', []):
             for id_juriscan in juriscan:
                 sistema.asignar_juriscan(id_juriscan)
-        if 'responsables_funcionales' in parameters: 
-            for persona in parameters.pop('responsables_funcionales', []):
+        if 'responsables_funcionales' in parameters:
+            personas = parameters.pop('responsables_funcionales') or []
+            for persona in personas:
                 sistema.asignar_responsable('FUN', persona)
-        if 'responsables_tecnologicos' in parameters: 
-            for persona in parameters.pop('responsables_tecnologicos', []):
+        if 'responsables_tecnologicos' in parameters:
+            personas = parameters.pop('responsables_tecnologicos') or []
+            for persona in personas:
                 sistema.asignar_responsable('TEC', persona)
         assert not parameters, (
             "No debería quedar ningún parámetro"
@@ -585,13 +559,15 @@ class Sistema(models.Model):
         """Asigna a un sistema un responsable
 
         Un responsable es una persona con un cometido determinado.
-
+https://www.gobiernodecanarias.org/libroazul/pdf/46083.pdf
         Es idempotente, si el resposable ya estaba
         creado, no hace nada.
         """
         if not usuario_o_login:
             return
-        if not isinstance(usuario_o_login, Usuario):
+        if isinstance(usuario_o_login, Usuario):
+            usuario = usuario_o_login
+        else:
             usuario = Usuario.load_usuario(usuario_o_login)
         if not usuario:
             usuario = Usuario(
@@ -610,7 +586,8 @@ class Sistema(models.Model):
         return perfil
 
     def asignar_juriscan(self, id_juriscan):
-        JuriscanSistema.upsert(self.pk, int(id_juriscan))
+        juriscan = Juriscan.load_or_create(id_juriscan)
+        JuriscanSistema.upsert(self.pk, juriscan.pk)
         self.touch()
 
     def desasignar_juriscan(self, id_juriscan):

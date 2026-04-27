@@ -106,7 +106,9 @@ def _verificar_existencia_sistema(payload: dict) -> dict:
     '''
     payload['necesita_actualizacion'] = True
     
-    codigo = payload['codigo']
+    codigo = payload.get('codigo')
+    if not codigo:
+        return payload
     uuid_sistema = payload['uuid_sistema']
     # Si indica UUID, este debe existir en la base de datos
     if uuid_sistema:
@@ -172,6 +174,5 @@ def importar_sistemas_desde_fichero(stream):
     df = rename_headers(df)
     for _index, row in df.iterrows():
         payload = importar_fila(row, n_linea=_index + 1)
-        yield payload
-        if _index >= 40:
-            break
+        if payload['errores'] or payload['necesita_actualizacion']:
+            yield payload
