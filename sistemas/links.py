@@ -32,16 +32,24 @@ def a_detalle_sistema(id_sistema: int) -> str:
     return _a('sistemas:detalle_sistema', sistema=id_sistema)
 
 
-def a_backlog_sistema(id_sistema: int) -> str:
-    return _a('sistemas:backlog_sistema', sistema=id_sistema)
+def a_tareas_sistema(id_sistema: int) -> str:
+    return _a('sistemas:tareas_sistema', sistema=id_sistema)
 
 
 def a_crear_backlog(id_sistema: int) -> str:
     return _a('sistemas:crear_backlog', sistema=id_sistema)
 
 
-def a_editar_backlog(id_backlog: int) -> str:
-    return _a('plan:editar_backlog', backlog=id_backlog)
+def a_detalle_tarea(id_tarea: int) -> str:
+    return _a('plan:detalle_tarea', tarea=id_tarea)
+
+
+def a_editar_tarea(id_tarea: int) -> str:
+    return _a('plan:editar_tarea', tarea=id_tarea)
+
+
+def a_cerrar_tarea(id_tarea: int) -> str:
+    return _a('plan:cerrar_tarea', tarea=id_tarea)
 
 
 def a_editar_sistema(id_sistema: int) -> str:

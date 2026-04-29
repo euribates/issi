@@ -18,5 +18,7 @@ def tie(ruta, vista, name=None):
 
 urlpatterns = [
     tie('', views.index),
-    tie('backlog/<blg:backlog>/', views.editar_backlog),
+    tie('backlog/<blg:tarea>/', views.detalle_tarea),
+    tie('backlog/<blg:tarea>/editar/', views.editar_tarea),
+    tie('backlog/<blg:tarea>/cerrar/', views.cerrar_tarea),
     ]

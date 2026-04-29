@@ -34,3 +34,15 @@ class LoginForm(BootstrapForm, forms.Form):
     username = forms.CharField(max_length=63)
     password = forms.CharField(max_length=63, widget=forms.PasswordInput)
 
+
+class EstaSeguroForm(BootstrapForm, forms.Form):
+    """Formulario para autorizar operaciones críticas.
+
+    Solo será válido si se ha marcado el checkbox.
+    """
+    seguro = forms.BooleanField(
+        required=True,
+        initial=False,
+        label="Confirme la operación",
+        )
+

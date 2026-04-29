@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+import sys
+import locale
 from pathlib import Path
 
 from prettyconf import config
@@ -81,6 +83,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]   
 
 if DEBUG:
@@ -162,13 +165,16 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'es-ES'
-
-TIME_ZONE = 'UTC'
-
+LANGUAGE_CODE = 'es-es'
+TIME_ZONE = 'Atlantic/Canary'
 USE_I18N = True
-
+USE_L18N = True
 USE_TZ = True
+
+if sys.platform == 'win32':
+    locale.setlocale(locale.LC_ALL, 'Spanish')
+else:
+    locale.setlocale(locale.LC_ALL, 'es_ES.UTF-8')
 
 
 # Static files (CSS, JavaScript, Images)

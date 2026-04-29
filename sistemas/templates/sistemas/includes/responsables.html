@@ -1,6 +1,8 @@
 <div class="card m-1">
-  <div class="card-header">  
-    <h5 class="card-title">Responsables</h5>
+  <div class="card-header bg-info">  
+    <h5 class="card-title">Responsables
+      <span class="badge bg-primary">{{ sistema.perfiles.count }}</span>
+    </h5>
   </div>  
   <div class="card-body">
 
@@ -13,6 +15,9 @@
     <table class="table">
     {% for perfil in sistema.perfiles.all %}
       <tr>
+          <th>
+            <code>{{ perfil.usuario.login }}</code>
+          </th>
         <td>
           <span class="title" title="{{ perfil.usuario.email }}">
             <a href="{{ perfil.usuario.url_detalle_usuario }}">
@@ -22,10 +27,10 @@
         </td>  
         <td>{{ perfil.get_cometido_display }}</td>  
         <td>
-         <a class="btn btn-danger" 
+         <a class="btn btn-danger btn-sm" 
             href="{% url 'sistemas:borrar_perfil' id_perfil=perfil.pk %}"
             title="Borrar perfil">
-            <i class="bi bi-person-dash-fill"></i>
+            <i class="bi bi-x-square"></i>
          </a>   
         </td>
       </tr>   

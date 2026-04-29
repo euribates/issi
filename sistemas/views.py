@@ -12,6 +12,7 @@ from django.contrib.auth.decorators import login_required
 from comun.commands import Command
 from comun.funcop import agrupa
 from comun import graficas
+from comun.forms import EstaSeguroForm
 from omnibus.bus import Bus
 
 from directorio.models import Organismo
@@ -19,6 +20,7 @@ from sistemas import filtersets
 from sistemas.models import Ente
 from sistemas.importers import importar_sistemas_desde_fichero
 from sistemas.models import Sistema
+from plan.forms import TareaForm
 
 from . import breadcrumbs as bc
 from . import diagnosis
@@ -507,14 +509,14 @@ def conmutar_campo(request, sistema, campo: str):
     """Conmutar el estado de un campo lógico.
     """
     if request.method == 'POST':
-        form = forms.EstaSeguroForm(request.POST)
+        form = EstaSeguroForm(request.POST)
         if form.is_valid():
             setattr(sistema, campo, not getattr(sistema, campo))
             sistema.save()
             Bus(request).pub_sistema_conmutar_campo(sistema, campo)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
-        form = forms.EstaSeguroForm()
+        form = EstaSeguroForm()
     _field = Sistema._meta.get_field(campo)
     verbose_name = _field.verbose_name
     help_text = _field.help_text
@@ -579,12 +581,12 @@ def isc_chart(sistema):
 
 
 @login_required
-def backlog_sistema(request, sistema):
-    form = forms.BacklogForm(sistema=sistema)
-    return render(request, 'sistemas/backlog-sistema.html', {
-        'titulo': f'Backlog {sistema}',
+def tareas_sistema(request, sistema):
+    form = TareaForm(sistema=sistema)
+    return render(request, 'sistemas/tareas-sistema.html', {
+        'titulo': f'Tareas {sistema}',
         'commands': cmd_sistemas(),
-        'breadcrumbs': bc.bc_backlog_sistema(sistema),
+        'breadcrumbs': bc.bc_tareas_sistema(sistema),
         'tab': 'sistemas',
         'sistema': sistema,
         'form': form,
@@ -592,20 +594,20 @@ def backlog_sistema(request, sistema):
 
 
 @login_required
-def crear_backlog(request, sistema):
+def crear_tarea(request, sistema):
     if request.method == 'POST':
-        form = forms.BacklogForm(request.POST, sistema=sistema)
+        form = TareaForm(request.POST, sistema=sistema)
         if form.is_valid():
-            task = form.save()
+            tarea = form.save()
             sistema.touch()
-            Bus(request).pub_alta_backlog(task)
+            Bus(request).pub_alta_tarea(tarea)
             return redirect(links.a_detalle_sistema(sistema.pk))
     else:
-        form = forms.BacklogForm(sistema=sistema)
-    return render(request, 'sistemas/crear-backlog.html', {
-        'titulo': f'Añadir item al Backlog de {sistema}',
+        form = TareaForm(sistema=sistema)
+    return render(request, 'sistemas/crear-tarea.html', {
+        'titulo': f'Añadir tarea al Backlog de {sistema}',
         'commands': cmd_sistemas(),
-        'breadcrumbs': bc.bc_crear_backlog(sistema),
+        'breadcrumbs': bc.bc_crear_tarea(sistema),
         'tab': 'sistemas',
         'sistema': sistema,
         'form': form,
@@ -828,13 +830,13 @@ def asignar_interlocutor(request, ente):
 @login_required
 def liberar_interlocutor(request, ente, usuario):
     if request.method == "POST":
-        form = forms.EstaSeguroForm(request.POST)
+        form = EstaSeguroForm(request.POST)
         if form.is_valid():
             Bus(request).pub_interlocutor_liberado(usuario, ente)
             ente.liberar_interlocutor(usuario)
             return redirect(links.a_detalle_ente(ente.pk))
     else:
-        form = forms.EstaSeguroForm()
+        form = EstaSeguroForm()
     return render(request, 'sistemas/liberar-interlocutor.html', {
         'titulo': f'Liberar interlocutor a {ente}',
         'breadcrumbs': bc.bc_liberar_interlocutor(ente, usuario),

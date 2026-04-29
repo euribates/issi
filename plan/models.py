@@ -1,4 +1,7 @@
+from datetime import datetime as DateTime
+
 from django.db import models
+from django.utils import timezone
 
 from sistemas.models import Sistema
 
@@ -77,12 +80,23 @@ class Backlog(models.Model):
         except cls.DoesNotExist:
             return None
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.titulo
 
-    def touch(self):
-        self.save(update_fields=['f_notificacion'])
-        self.sistema.touch()
+    def touch(self, updated_at: DateTime|None=None):
+        ahora = timezone.now() if updated_at is None else updated_at
+        self.f_modificacion = updated_at
+        self.save(update_fields=['f_modificacion'])
+        self.sistema.touch(ahora)
 
-    def impacto(self):
+    def archive(self):
+        """Marca la tarea como finalizada o descartada.
+        """
+        ahora = timezone.now()
+        self.f_modificacion = ahora
+        self.f_finalizacion = ahora
+        self.save(update_fields=['f_modificacion', 'f_finalizacion'])
+        self.sistema.touch(ahora)
+
+    def impacto(self) -> float:
         return self.prioridad / self.estimacion

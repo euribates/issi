@@ -11,6 +11,21 @@ register = template.Library()
 
 
 @register.filter
+def as_isoformat(dt):
+    return dt.strftime('%Y-%m-%dT%H:%M:%S%z')
+
+
+@register.filter
+def as_fecha(dt: DateTime) -> str:
+    return dt.strftime('%A, %d/%B/%Y, a las %H:%M:%S %Z')
+
+
+@register.filter
+def es_datetime(dt: DateTime):
+    return mark_safe(f'<time datetime="{as_isoformat(dt)}">{as_fecha(dt)}</time>')
+
+
+@register.filter
 def as_pasado(fecha: DateTime) -> str:
     """Retorna una representación textual aproximada del intervalo
     de tiempo, considerado desde el pasado.
@@ -24,7 +39,6 @@ def as_pasado(fecha: DateTime) -> str:
         (str) Descripción del intervalo de tiempo.
 
     """
-    str_date = fecha.strftime('%Y-%m-%dT%H:%M:%S')
     delta = timezone.now() - fecha
     days = delta.days
     seconds = delta.seconds
@@ -56,13 +70,18 @@ def as_pasado(fecha: DateTime) -> str:
                 case _:
                     legend = f'{seconds} segundos'
     return mark_safe(
-        f'<span class="as_pasado" title="{str_date}">{legend}</span>'
+        f'<span class="as_pasado" title="{as_fecha(fecha)}">'
+        f'<time datetime="{as_isoformat(fecha)}">'
+        f'{legend}'
+        '</time></span>'
         )
+
+
 
 
 @register.filter
 def as_created(dt: DateTime) -> str:
-    str_date = dt.strftime('%Y-%m-%dT%H:%M:%S')
+    str_date = dt.strftime('%Y-%m-%dT%H:%M:%S%z')
     return mark_safe(
         f'Creada el'
         f' <time datetime="{str_date}" title="{str_date}">'
@@ -72,7 +91,7 @@ def as_created(dt: DateTime) -> str:
 
 @register.filter
 def as_updated(dt: DateTime) -> str:
-    str_date = dt.strftime('%Y-%m-%dT%H:%M:%S')
+    str_date = dt.strftime('%Y-%m-%dT%H:%M:%S%z')
     return mark_safe(
         f'Modificado el'
         f' <time datetime="{str_date}" title="{str_date}">'

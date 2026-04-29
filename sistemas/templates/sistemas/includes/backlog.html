@@ -1,9 +1,10 @@
 <div class="card m-2">
-  <div class="card-header">  
-    <h5 class="card-title"><i>Backlog</i></h5>
+  <div class="card-header bg-info">  
+    <h5 class="card-title"><i>Backlog</i>
+        <span class="badge bg-primary">{{ sistema.backlog.count }}</span>
+    </h5>
   </div>  
   <div class="card-body">
-    {% include "sistemas/includes/listado-backlog.html" %}
+    {% include "sistemas/includes/listado-tareas.html" %}
   </div>
 </div>  
-  

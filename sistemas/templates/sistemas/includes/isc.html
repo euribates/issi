@@ -2,7 +2,7 @@
 
 {% if isc %}
 <div class="card m-2">
-  <div class="card-header">  
+  <div class="card-header bg-info">  
     <h5 class="card-title">Índice Subjetivo de Calidad</h5>
   </div>  
   <div class="card-body">
@@ -28,6 +28,17 @@
               </td>
             </tr>
           {% endfor %}
+    <tr>
+      <th>Cuestionario específico</th>
+      <td>{{ sistema.estado_cuestionario|safe }}</td>
+      <td>
+          <a href="{% url 'sistemas:cuestionario_sistema' sistema=sistema %}">
+          <i class="bi bi-list-check"></i>
+          Contestar
+          </a>
+      </td>
+    </tr>
+
           </table>
           {% endwith %}
         </div>

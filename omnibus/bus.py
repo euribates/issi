@@ -205,15 +205,24 @@ class Bus:
 
     def pub_alta_backlog(self, tarea):
         msg = (
-            f'Se ha añadido la tarea {tarea.pk}: {tarea.titulo}'
+            f'Se ha añadido la tarea #{tarea.pk}: {tarea.titulo}'
             f' al S.I. {tarea.sistema}'
             )
         self.publica(tarea, msg, 'insert')
         self.publica(tarea.sistema, msg, 'update', user_feedback=False)
 
-    def pub_backlog_modificado(self, tarea):
+    def pub_tarea_modificada(self, tarea):
         msg = (
-            f'Se ha modificado la tarea {tarea.pk}: {tarea.titulo}'
+            f'Se ha modificado la tarea #{tarea.pk}: {tarea.titulo}'
             f' correspondiente al S.I. {tarea.sistema}'
             )
         self.publica(tarea, msg, 'update')
+        self.publica(tarea.sistema, msg, 'update', user_feedback=False)
+
+    def pub_tarea_cerrada(self, tarea):
+        msg = (
+            f'Se ha cerrado la tarea #{tarea.pk}: {tarea.titulo}'
+            f' correspondiente al S.I. {tarea.sistema}'
+            )
+        self.publica(tarea, msg, 'archive')
+        self.publica(tarea.sistema, msg, 'update', user_feedback=False)

@@ -27,26 +27,39 @@ def bc_detalle_sistema(sistema) -> BreadCrumb:
         )
 
 
-def bc_backlog_sistema(sistema):
+def bc_tareas_sistema(sistema):
     return bc_detalle_sistema(sistema).step(
-        'Backlog',
-        links.a_backlog_sistema(sistema.pk),
+        'Tareas',
+        links.a_tareas_sistema(sistema.pk),
         )
 
 
 def bc_crear_backlog(sistema):
-    return bc_backlog_sistema(sistema).step(
+    return bc_tareas_sistema(sistema).step(
         'Añadir tarea',
         links.a_crear_backlog(sistema.pk),
         )
 
 
-def bc_editar_backlog(backlog):
-    return bc_backlog_sistema(backlog.sistema).step(
-        f'Editar tarea {backlog.pk}',
-        links.a_editar_backlog(backlog.pk),
+def bc_detalle_tarea(tarea):
+    return bc_tareas_sistema(tarea.sistema).step(
+        f'Tarea #{tarea.pk}',
+        links.a_detalle_tarea(tarea.pk),
         )
 
+
+def bc_editar_tarea(tarea):
+    return bc_detalle_tarea(tarea).step(
+        'Editar tarea',
+        links.a_editar_tarea(tarea.pk),
+        )
+
+
+def bc_cerrar_tarea(tarea):
+    return bc_backlog_sistema(tarea.sistema).step(
+        'Cerrar tarea',
+        links.a_cerrar_tarea(tarea.pk),
+        )
 
 def bc_cuestionario_sistema(sistema):
     return bc_detalle_sistema(sistema).step(

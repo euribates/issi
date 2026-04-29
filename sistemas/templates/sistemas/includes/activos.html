@@ -1,7 +1,9 @@
 {% load comun_filters %}
 <div class="card m-2">
-  <div class="card-header">  
-    <h5 class="card-title">Activos de datos asociados a este sistema</h5>
+  <div class="card-header bg-info">  
+    <h5 class="card-title">Activos de datos asociados a este sistema
+        <span class="badge bg-primary">{{ sistema.acticvos.count }}</span>
+    </h5>
   </div>  
   <div class="card-body">
     <table class="table">

@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
+from datetime import datetime as DateTime
+
 from django.db import models
 from django.db.models import Q
 from django.utils import timezone
 
 from . import links
-
 
 
 class Organismo(models.Model):
@@ -142,16 +143,18 @@ class Organismo(models.Model):
         for hijo in self.organismos_dependientes.all():
             yield from hijo.iter_jerarquia(nivel+1)
 
-    def touch(self):
+
+    def touch(self, updated_at: DateTime|None = None):
         '''Marcar el sistema como modificado.
 
         Todos los sistemas jerarquicamenete superiores
         son marcados también como modificados.
         '''
-        self.f_cambio = timezone.now()
+        ahora = timezone.now() if updated_at is None else updated_at
+        self.f_cambio = ahora
         self.save(update_fields=['f_cambio'])
         if self.depende_de:
-            self.depende_de.touch()
+            self.depende_de.touch(ahora)
 
 
 

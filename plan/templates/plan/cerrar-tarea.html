@@ -1,0 +1,35 @@
+{% extends "comun/base-form.html" %}
+{% load comun_filters %}
+
+{% block form %}
+
+<form method="POST" action=".">
+{% csrf_token %}
+
+<div class="card m-4">
+
+  <div class="card-body">
+
+    <h2 class="card-title">
+      Cerrar tarea
+    </h2>
+
+    <p class="lead">      
+    Marcar la tarea #{{ tarea.pk }}:{{ tarea.titulo }} como implementada o
+    descartada, con lo cual desaparecera del <i>backlog</i>.
+
+   <div class="m-2">
+
+        {{ form }}
+
+   </div>
+  </div><!-- de card-body -->
+
+  <div class="card-footer d-flex flex-row-reverse">
+  <button type="submit" class="btn btn-primary">Cerrar tarea</button>
+  </div>
+
+</div>  
+</form>
+
+{% endblock form %}

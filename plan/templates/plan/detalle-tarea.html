@@ -1,0 +1,60 @@
+{% extends "comun/base.html" %}
+{% load fechas %}
+
+{% block content %}
+
+<table class="table">
+    <tr>
+        <th>Id. Tarea</th>
+        <td>{{ tarea.pk }}</td>
+    </tr>
+    <tr>
+        <th>Sistema</th>
+        <td>{{ tarea.sistema }}</td>
+    </tr>
+
+  <tr>
+      <th>Título</th>
+      <td>{{ tarea.titulo }}</td>
+  </tr>
+
+  <tr>
+      <th>Estimación</th>
+      <td> {{ tarea.get_estimacion_display }}</td>
+  </tr>
+  <tr>
+      <th>Prioridad</th>
+      <td>{{ tarea.get_prioridad_display }}</td>
+  </tr>
+  <tr>
+      <th>Impacto</th>
+      <td>{{ impacto }}</td>
+  </tr>
+  <tr>
+      <th>Creada el</th>
+      <td>{{ tarea.f_creacion|as_pasado }}</td>
+  </tr>
+  <tr>
+      <th>Última modificación</th>
+      <td>{{ tarea.f_modificacion|as_fecha }}</td>
+  </tr>
+  {% if tarea.f_finalizacion %}
+  <tr>
+      <th>Cerrada el</th>
+      <td>{{ tarea.f_finalizacion|as_fecha }}</td>
+  </tr>
+  {% endif %}
+
+    <tr>
+        <th></th>
+        <td>
+            <a role="button" class="btn btn-info"
+            href="{% url 'plan:editar_tarea' tarea=tarea %}"
+            >
+            Editar tarea
+            </a>
+        </td>
+    </tr>
+</table>
+
+{% endblock content %}

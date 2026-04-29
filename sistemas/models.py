@@ -8,17 +8,16 @@ from urllib.request import urlretrieve
 from uuid import UUID, uuid4
 
 from bs4 import BeautifulSoup
+
 from django.conf import settings
-from django.core.validators import (
-    DecimalValidator,
-    MaxValueValidator,
-    MinValueValidator,
-)
+from django.core.validators import DecimalValidator
+from django.core.validators import MaxValueValidator
+from django.core.validators import MinValueValidator
 from django.db import models
 from django.db.models import Max, Count
 from django.db.models import Q, F
 from django.db.models.functions import Coalesce
-from django.utils.timezone import localtime
+from django.utils import timezone
 
 from directorio.models import Organismo
 from directorio.models import Empresa
@@ -427,10 +426,11 @@ class Sistema(models.Model):
     def __str__(self):
         return f'{self.nombre_sistema} ({self.codigo})'
 
-    def touch(self):
-        self.updated = localtime()
+    def touch(self, updated_at: DateTime|None = None):
+        ahora = timezone.now() if updated_at is None else updated_at
+        self.updated = ahora
         self.save(update_fields=["updated"])
-        self.organismo.touch()
+        self.organismo.touch(ahora)
 
     def url_detalle_sistema(self):
         """URL de detalle del sistema."""
@@ -701,12 +701,13 @@ class Activo(models.Model):
         """
         return self.nombre_activo
 
-    def touch(self) -> None:
+    def touch(self, updated_at: DateTime|None = None) -> None:
         """Marca el registro como recién modificado.
         """
-        self.f_cambio = localtime()
-        self.save()
-        self.sistema.touch()
+        ahora = timezone.now() if updated_at is None else updated_at
+        self.f_cambio = ahora
+        self.save(update_field=['f_cambio'])
+        self.sistema.touch(ahora)
 
 
 class TipoDatos(models.Model):
