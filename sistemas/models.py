@@ -519,10 +519,9 @@ class Sistema(models.Model):
                     "El código de familia indicado:"
                     f" {escape(repr(familia))} no es válido"
                 )
-        if self.familia != familia:
-            self.familia = familia
-            if commit:
-                self.save(update_fields=["familia"])
+        self.familia = familia
+        if commit:
+            self.save(update_fields=["familia"])
         return familia
 
     def asignar_organismo(self, organismo: Organismo | int, commit=True) -> Organismo:
