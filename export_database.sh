@@ -8,9 +8,7 @@ function dumpdata () {
 }
 
 
-dumpdata "auth"
-dumpdata "admin"
-dumpdata "contenttypes"
+dumpdata "auth.user"
 dumpdata "glosario"
 dumpdata "normativa"
 dumpdata "directorio"
