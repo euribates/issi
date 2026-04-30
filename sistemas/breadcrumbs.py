@@ -56,7 +56,7 @@ def bc_editar_tarea(tarea):
 
 
 def bc_cerrar_tarea(tarea):
-    return bc_backlog_sistema(tarea.sistema).step(
+    return bc_tareas_sistema(tarea.sistema).step(
         'Cerrar tarea',
         links.a_cerrar_tarea(tarea.pk),
         )
