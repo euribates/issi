@@ -1,0 +1,92 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$OTI9K4YwUPrw4tv5xJvvRE$2nfmhLGkbKwrfNkh2IuDc/BtKuvnR+YrFBP3YMrARDA=",
+        "last_login": "2026-04-29T09:20:28.694Z",
+        "is_superuser": true,
+        "username": "root",
+        "first_name": "Root",
+        "last_name": "",
+        "email": "euribates+issi@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-19T19:14:32Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$JtWkImghGjcV76LuwedjLr$9KOFwcug4qOql5elmKmVm1AGByh5Az7BNfiWWC6KedE=",
+        "last_login": "2026-04-28T09:46:54Z",
+        "is_superuser": true,
+        "username": "jrodleo",
+        "first_name": "Juan Ignacio",
+        "last_name": "Rodríguez de León",
+        "email": "euribates@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-19T19:16:42Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$34DDVoiOXaL8gFYAf77mzJ$rb9Wpr6hKQ4yhzJOAjxFGX4Tp8bsnZUweDndNt5taHk=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "malosua",
+        "first_name": "Maria Candelaria",
+        "last_name": "Alonso Suárez",
+        "email": "malosua@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-21T18:42:19Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$GuT33EIRaveA9Pnz4Z4LB1$Oez8PsqWvcjt9X0BSApxgbiv+8GgVWFY76aRO656Ln4=",
+        "last_login": "2026-04-29T09:28:48.458Z",
+        "is_superuser": true,
+        "username": "ext-njorcam",
+        "first_name": "Nicolás",
+        "last_name": "Jorge Camacho",
+        "email": "njorcam@arte-consultores.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-29T09:26:17Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$8cQyhLaTBCKBJ9nzgyDnVn$vOsE1IhmXJaltaxF6WTtZMRgaNcgOEqgSjV87cGQ6xY=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "ext-mbenpad",
+        "first_name": "Maria Mercedes",
+        "last_name": "Bento Padrón",
+        "email": "mbenpad@arte-consultores.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-29T09:29:54Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]
