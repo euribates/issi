@@ -12,12 +12,12 @@ from . import models
 
 def _rename_headers(df):
     origin_names = list(df.columns)
-    if len(origin_names) < 9:
+    if len(origin_names) < 10:
         raise ValueError(
-            'Se esperaban 9 más columnas, pero el fichero'
+            'Se esperaban 10 más columnas, pero el fichero'
             f' tiene {len(origin_names)}'
             )
-    if len(origin_names) == 9:
+    if len(origin_names) == 10:
         result = df.rename(columns={
             origin_names[1]: 'nombre_sistema',
             origin_names[2]: 'codigo',
