@@ -186,12 +186,9 @@ def login_view(request):
         print('Es POST')
         form = forms.LoginForm(request.POST)
         if form.is_valid():
-            print(form.as_dict())
-            user = authenticate(
-                username=form.cleaned_data['username'],
-                password=form.cleaned_data['password'],
-                )
-            print(f'user is {user}')
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(username, password)
             if user is not None:
                 login(request, user)
                 return redirect(next_url)
@@ -203,4 +200,10 @@ def login_view(request):
         })
 
 
+def reset_password(request, *args, **kwargs):
+    form = forms.EmailForm()
+    return render(request, 'comun/reset-password.html', {
+        'titulo': "Solicitud de recuperación de contraseña",
+        'form': form,
+        })
 

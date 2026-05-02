@@ -99,7 +99,7 @@ def parse_nombre_sistema(texto: str, n_linea=None) -> Result:
     if texto:
         if texto[-1] == '.':
             texto = texto[:-1]
-        if len(texto) > 3:
+        if len(texto) >= 3:
             return Success(texto)
     return Failure(errors.EI0013(texto, n_linea=n_linea))
 

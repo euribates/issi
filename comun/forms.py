@@ -46,3 +46,8 @@ class EstaSeguroForm(BootstrapForm, forms.Form):
         label="Confirme la operación",
         )
 
+
+class EmailForm(BootstrapForm, forms.Form):
+    """Formulario para solicitar un correo electrónico.
+    """
+    email = forms.EmailField(label="Correo electrónico")

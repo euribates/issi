@@ -13,6 +13,7 @@ from health_check.views import HealthCheckView
 
 from comun.views import homepage, labo
 from comun.views import login_view, logout_view
+from comun.views import reset_password
 from .api import api
 
 
@@ -28,6 +29,7 @@ urlpatterns = [
     tie("", homepage),
     tie('login/', login_view),
     tie('logout/', logout_view),
+    tie('reset-password/', reset_password),
     path("health/", HealthCheckView.as_view(checks=[
             "health_check.Cache",
             "health_check.Database",

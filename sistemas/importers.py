@@ -10,39 +10,39 @@ from . import parsers
 from . import models
 
 
-def rename_headers(df):
+def _rename_headers(df):
     origin_names = list(df.columns)
-    if len(origin_names) == 9:
-        result = df.rename(columns={
-            origin_names[0]: 'nombre_sistema',
-            origin_names[1]: 'codigo',
-            origin_names[2]: 'finalidad',
-            origin_names[3]: 'materia',
-            origin_names[4]: 'dir3',
-            origin_names[5]: 'responsables_tecnologicos',
-            origin_names[6]: 'responsables_funcionales',
-            origin_names[7]: 'juriscan',
-            origin_names[8]: 'comentarios',
-            })
-        result.insert(9, 'uuid_sistema', None)
-    elif len(origin_names) == 10:
-        result = df.rename(columns={
-            origin_names[0]: 'nombre_sistema',
-            origin_names[1]: 'codigo',
-            origin_names[2]: 'finalidad',
-            origin_names[3]: 'materia',
-            origin_names[4]: 'dir3',
-            origin_names[5]: 'responsables_tecnologicos',
-            origin_names[6]: 'responsables_funcionales',
-            origin_names[7]: 'juriscan',
-            origin_names[8]: 'comentarios',
-            origin_names[9]: 'uuid_sistema',
-            })
-    else:
+    if len(origin_names) < 9:
         raise ValueError(
-            'Se esperaban 9 o 10 columnas, pero el fichero'
+            'Se esperaban 9 más columnas, pero el fichero'
             f' tiene {len(origin_names)}'
             )
+    if len(origin_names) == 9:
+        result = df.rename(columns={
+            origin_names[1]: 'nombre_sistema',
+            origin_names[2]: 'codigo',
+            origin_names[3]: 'finalidad',
+            origin_names[4]: 'materia',
+            origin_names[5]: 'dir3',
+            origin_names[6]: 'responsables_tecnologicos',
+            origin_names[7]: 'responsables_funcionales',
+            origin_names[8]: 'juriscan',
+            origin_names[9]: 'comentarios',
+            })
+        result.insert(10, 'uuid_sistema', None)
+    else:
+        result = df.rename(columns={
+            origin_names[1]: 'nombre_sistema',
+            origin_names[2]: 'codigo',
+            origin_names[3]: 'finalidad',
+            origin_names[4]: 'materia',
+            origin_names[5]: 'dir3',
+            origin_names[6]: 'responsables_tecnologicos',
+            origin_names[7]: 'responsables_funcionales',
+            origin_names[8]: 'juriscan',
+            origin_names[9]: 'comentarios',
+            origin_names[10]: 'uuid_sistema',
+            })
     return result
 
 
@@ -151,17 +151,17 @@ def importar_fila(items: Sequence, n_linea=None) -> dict:
         else:
             payload['errores'].append(result.error_message)
 
-    chk('nombre_sistema', parsers.parse_nombre_sistema, items[0], n_linea)
-    chk('codigo', parsers.parse_codigo_interno, items[1], n_linea)
-    chk('finalidad', parsers.parse_finalidad, items[2], n_linea)
-    chk('descripcion', parsers.parse_descripcion, items[2], n_linea)
-    chk('tema', parsers.parse_materia_competencial, items[3], n_linea)
-    chk('organismo', parsers.parse_dir3, items[4], n_linea)
-    chk('responsables_tecnologicos', parsers.parse_users, items[5], n_linea)
-    chk('responsables_funcionales', parsers.parse_users, items[6], n_linea)
-    chk('juriscan', parsers.parse_juriscan,items[7], n_linea)
-    chk('observaciones', parsers.parse_observaciones, items[8], n_linea)
-    chk('uuid_sistema', parsers.parse_uuid,items[9], n_linea)
+    chk('nombre_sistema', parsers.parse_nombre_sistema, items[1], n_linea)
+    chk('codigo', parsers.parse_codigo_interno, items[2], n_linea)
+    chk('finalidad', parsers.parse_finalidad, items[3], n_linea)
+    chk('descripcion', parsers.parse_descripcion, items[3], n_linea)
+    chk('tema', parsers.parse_materia_competencial, items[4], n_linea)
+    chk('organismo', parsers.parse_dir3, items[5], n_linea)
+    chk('responsables_tecnologicos', parsers.parse_users, items[6], n_linea)
+    chk('responsables_funcionales', parsers.parse_users, items[7], n_linea)
+    chk('juriscan', parsers.parse_juriscan,items[8], n_linea)
+    chk('observaciones', parsers.parse_observaciones, items[9], n_linea)
+    chk('uuid_sistema', parsers.parse_uuid,items[10], n_linea)
     payload = _verificar_existencia_sistema(payload)
     return payload
 
@@ -171,7 +171,10 @@ def importar_sistemas_desde_fichero(stream):
         fp.write(stream)
         fp.seek(0)
         df = pd.read_excel(fp, engine="odf")
-    df = rename_headers(df)
+
+    df = df.drop(['Alfresco', 'Departamento'], axis=1)
+    df = _rename_headers(df)
+    df = df[df['Estado'] == 'Completo']
     for _index, row in df.iterrows():
         payload = importar_fila(row, n_linea=_index + 1)
         if payload['errores'] or payload['necesita_actualizacion']:

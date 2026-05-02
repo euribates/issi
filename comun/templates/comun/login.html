@@ -38,6 +38,12 @@ login.focus();
 
 {% block container %}
 
+{% if form.errors %}
+    <p class="lead">Hay errores en el formulario</p>
+    <ul class="errors">{% for err in form.errors %}
+        <li>{{ err }}</li> 
+    </ul>{% endfor %}
+{% endif %}
 <div class="login-panel">
     <img src="{% static 'img/logo.svg' %}"
          width="280"
@@ -81,6 +87,9 @@ login.focus();
         type="submit" value="Login">
 
     </form>
-</div>
+
+<p class="lead text-center mt-4"><a href="{% url 'reset_password' %}">Pulse aquí si no recuerda su
+    contraseña</a></p>
     
+</div>
 {% endblock container %}
