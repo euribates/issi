@@ -12,37 +12,26 @@ from . import models
 
 def _rename_headers(df):
     origin_names = list(df.columns)
-    if len(origin_names) < 10:
+    from icecream import ic; ic(origin_names)
+    from icecream import ic; ic(len(origin_names))
+    if len(origin_names) < 11:
         raise ValueError(
-            'Se esperaban 10 más columnas, pero el fichero'
+            'Se esperaban 11 o más columnas, pero el fichero'
             f' tiene {len(origin_names)}'
             )
-    if len(origin_names) == 10:
-        result = df.rename(columns={
-            origin_names[1]: 'nombre_sistema',
-            origin_names[2]: 'codigo',
-            origin_names[3]: 'finalidad',
-            origin_names[4]: 'materia',
-            origin_names[5]: 'dir3',
-            origin_names[6]: 'responsables_tecnologicos',
-            origin_names[7]: 'responsables_funcionales',
-            origin_names[8]: 'juriscan',
-            origin_names[9]: 'comentarios',
-            })
-        result.insert(10, 'uuid_sistema', None)
-    else:
-        result = df.rename(columns={
-            origin_names[1]: 'nombre_sistema',
-            origin_names[2]: 'codigo',
-            origin_names[3]: 'finalidad',
-            origin_names[4]: 'materia',
-            origin_names[5]: 'dir3',
-            origin_names[6]: 'responsables_tecnologicos',
-            origin_names[7]: 'responsables_funcionales',
-            origin_names[8]: 'juriscan',
-            origin_names[9]: 'comentarios',
-            origin_names[10]: 'uuid_sistema',
-            })
+    result = df.rename(columns={
+        origin_names[0]: 'estado',
+        origin_names[1]: 'nombre_sistema',
+        origin_names[2]: 'codigo',
+        origin_names[3]: 'finalidad',
+        origin_names[4]: 'materia',
+        origin_names[5]: 'dir3',
+        origin_names[6]: 'responsables_tecnologicos',
+        origin_names[7]: 'responsables_funcionales',
+        origin_names[8]: 'juriscan',
+        origin_names[9]: 'comentarios',
+        origin_names[10]: 'uuid_sistema',
+        })
     return result
 
 
@@ -109,7 +98,7 @@ def _verificar_existencia_sistema(payload: dict) -> dict:
     codigo = payload.get('codigo')
     if not codigo:
         return payload
-    uuid_sistema = payload['uuid_sistema']
+    uuid_sistema = payload.get('uuid_sistema')
     # Si indica UUID, este debe existir en la base de datos
     if uuid_sistema:
         sistema = models.Sistema.load_sistema_por_uuid(uuid_sistema)
@@ -174,7 +163,7 @@ def importar_sistemas_desde_fichero(stream):
 
     df = df.drop(['Alfresco', 'Departamento'], axis=1)
     df = _rename_headers(df)
-    df = df[df['Estado'] == 'Completo']
+    df = df[df['estado'] == 'Completo']
     for _index, row in df.iterrows():
         payload = importar_fila(row, n_linea=_index + 1)
         if payload['errores'] or payload['necesita_actualizacion']:

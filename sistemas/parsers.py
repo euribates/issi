@@ -261,8 +261,5 @@ def parse_uuid(value: str, n_linea=None) -> Result:
     if value is None:
         return Success(None)
     if PAT_UUID.match(value):
-        uuid = UUID(value)
-        sistema = Sistema.load_sistema_por_uuid(uuid)
-        if sistema:
-            return Success(value)
+        return Success(UUID(value))
     return Failure(errors.EI0005(value))
