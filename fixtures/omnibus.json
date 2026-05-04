@@ -90,6 +90,45 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "0329106a-472d-11f1-a612-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "397",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Registro de Objeción a aplicar la Eutanasia (REGOB_REOBEU) ha sido actualizada a 'REGOB_REOBEU'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-03T20:16:47.732Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "0737116c-472f-11f1-8e7a-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"cberafo\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Ceferino Bermejo Afonso",
+        "momento": "2026-05-03T20:31:13.528Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "0e8987a0-4734-11f1-aa03-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "76",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 73119 al sistema Red de Observadores del Medio Marino en Canarias (RED_PROMAR)",
+        "momento": "2026-05-03T21:07:13.296Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "14e6c457-3f12-11f1-a7f3-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -163,6 +202,32 @@
         "descripcion": "El usuario Marta Da Silva Bethencourt ha sido asignado como Responsable funcional del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
         "momento": "2026-04-22T19:47:33.614Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "1f14fde7-4735-11f1-9040-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "433",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Federico J. Artiles Jorge ha sido asignado como Responsable técnico del sistema Reporta (REPORTA)",
+        "momento": "2026-05-03T21:14:50.550Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "1f157e05-4735-11f1-8614-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"fartjor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Federico J. Artiles Jorge ha sido asignado como Responsable técnico del sistema Reporta (REPORTA)",
+        "momento": "2026-05-03T21:14:50.554Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -246,6 +311,45 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "2740d380-4735-11f1-b605-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "433",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Fernando Akhenaton Manero Martínez ha sido asignado como Responsable funcional del sistema Reporta (REPORTA)",
+        "momento": "2026-05-03T21:15:04.259Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "27413cb9-4735-11f1-a8be-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"fmanmarp\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Fernando Akhenaton Manero Martínez ha sido asignado como Responsable funcional del sistema Reporta (REPORTA)",
+        "momento": "2026-05-03T21:15:04.262Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "278a9f2e-4730-11f1-a68a-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "241",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Parque móvil (PARQUE_MOVIL) ha sido actualizada a 'PARQUE_MOVIL'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-03T20:39:17.259Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "27eb9207-4198-11f1-b7aa-38d5470ea667",
     "fields": {
         "nivel_evento": "insert",
@@ -298,6 +402,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "2f19f0e8-4732-11f1-92cb-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "419",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Aplicación para tramitación de las preguntas parlamentarias. (HIPATIA)",
+        "momento": "2026-05-03T20:53:48.936Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "30780335-3e85-11f1-ab69-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -324,6 +441,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "322aa515-4735-11f1-834f-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "433",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Fernando José González Sánchez ha sido asignado como Responsable funcional del sistema Reporta (REPORTA)",
+        "momento": "2026-05-03T21:15:22.569Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "322b4069-4735-11f1-99ce-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"fgonsan\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Fernando José González Sánchez ha sido asignado como Responsable funcional del sistema Reporta (REPORTA)",
+        "momento": "2026-05-03T21:15:22.573Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "389690f6-42f6-11f1-a340-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -345,6 +488,58 @@
         "descripcion": "La finalidad del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA) ha sido actualizada a 'Gestionar expedientes de perros de asistencia'",
         "momento": "2026-04-22T19:41:13.731Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "391c1be0-4732-11f1-8fa1-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "419",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Miguel Navarro Frias ha sido asignado como Responsable técnico del sistema Aplicación para tramitación de las preguntas parlamentarias. (HIPATIA)",
+        "momento": "2026-05-03T20:54:05.728Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "391c9543-4732-11f1-bd66-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mnavfri\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Miguel Navarro Frias ha sido asignado como Responsable técnico del sistema Aplicación para tramitación de las preguntas parlamentarias. (HIPATIA)",
+        "momento": "2026-05-03T20:54:05.731Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3a7e8204-4735-11f1-8c91-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "433",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Federico J. Artiles Jorge ha sido asignado como Responsable funcional del sistema Reporta (REPORTA)",
+        "momento": "2026-05-03T21:15:36.540Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3a7ed252-4735-11f1-9d7c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"fartjor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Federico J. Artiles Jorge ha sido asignado como Responsable funcional del sistema Reporta (REPORTA)",
+        "momento": "2026-05-03T21:15:36.542Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -480,6 +675,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "4a5f6e3f-472e-11f1-8d9c-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "416",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de Información para la Gestión de los Registros Administrativos de Distribuidores de Seguros (SIGRE)",
+        "momento": "2026-05-03T20:25:56.703Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "4d437d52-42f6-11f1-ae60-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -488,6 +696,19 @@
         "descripcion": "El sistema Sistema de información para la gestión de inspecciones de pesca de la Comunidad Autónoma de Canarias (PARGO) ha sido asignado a la familia {familia}",
         "momento": "2026-04-28T11:35:05.085Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "4db5b3e4-4733-11f1-8c7d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "65",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Proyectos PTCTA (REDMINE_PTCTA) ha sido actualizada a 'REDMINE_PTCTA'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-03T21:01:49.785Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -727,6 +948,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "663fbca3-472e-11f1-85e1-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "416",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Jesús Rafael Ojeda Nuez ha sido asignado como Responsable técnico del sistema Sistema de Información para la Gestión de los Registros Administrativos de Distribuidores de Seguros (SIGRE)",
+        "momento": "2026-05-03T20:26:43.472Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "6640a8bf-472e-11f1-b7fc-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jojenuej\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Jesús Rafael Ojeda Nuez ha sido asignado como Responsable técnico del sistema Sistema de Información para la Gestión de los Registros Administrativos de Distribuidores de Seguros (SIGRE)",
+        "momento": "2026-05-03T20:26:43.478Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "6735c56c-419a-11f1-ae6e-38d5470ea667",
     "fields": {
         "nivel_evento": "insert",
@@ -766,6 +1013,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "68eb12ad-4732-11f1-a8b0-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"mdiamen\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario María del Cristo Díaz Méndez",
+        "momento": "2026-05-03T20:55:25.937Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "6b7810b1-31b9-11f1-84f5-38d5470ea667",
     "fields": {
         "nivel_evento": "insert",
@@ -779,6 +1039,45 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "6dfeb1b9-472e-11f1-85cb-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "416",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Federico J. Artiles Jorge ha sido asignado como Responsable técnico del sistema Sistema de Información para la Gestión de los Registros Administrativos de Distribuidores de Seguros (SIGRE)",
+        "momento": "2026-05-03T20:26:56.467Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "6dff50fa-472e-11f1-8173-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"fartjor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Federico J. Artiles Jorge ha sido asignado como Responsable técnico del sistema Sistema de Información para la Gestión de los Registros Administrativos de Distribuidores de Seguros (SIGRE)",
+        "momento": "2026-05-03T20:26:56.471Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "6e9dd49f-4732-11f1-b4f0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "419",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María del Cristo Díaz Méndez ha sido asignado como Responsable funcional del sistema Aplicación para tramitación de las preguntas parlamentarias. (HIPATIA)",
+        "momento": "2026-05-03T20:55:35.497Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "6e9def5f-3709-11f1-b10e-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -787,6 +1086,19 @@
         "descripcion": "El sistema Gestión administrativa y académica en los centros educativos (PINCEL) ha sido asignado a la materia competencial Educación",
         "momento": "2026-04-13T07:21:47.528Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "6e9e4b30-4732-11f1-bedd-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdiamen\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María del Cristo Díaz Méndez ha sido asignado como Responsable funcional del sistema Aplicación para tramitación de las preguntas parlamentarias. (HIPATIA)",
+        "momento": "2026-05-03T20:55:35.500Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -839,6 +1151,19 @@
         "descripcion": "El usuario Mercedes Cabrera Peña ha sido asignado como Responsable funcional del sistema Sistema de información de recursos humanos (SIRHUS)",
         "momento": "2026-04-22T20:04:22.899Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7892689a-4732-11f1-86c2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "419",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 79417 al sistema Aplicación para tramitación de las preguntas parlamentarias. (HIPATIA)",
+        "momento": "2026-05-03T20:55:52.199Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -943,6 +1268,19 @@
         "descripcion": "El sistema Registro de Sociedades Agrarias de Transformación de Canarias (REG_SATC) ha cambiado su valor es_corporativo, ahora vale **falso**",
         "momento": "2026-04-24T21:35:20.269Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7ff57f8e-4732-11f1-9bd5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "419",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 79254 al sistema Aplicación para tramitación de las preguntas parlamentarias. (HIPATIA)",
+        "momento": "2026-05-03T20:56:04.593Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -1247,6 +1585,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "a61e33dc-4734-11f1-a49a-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "261",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Business Intelligence (SEFLOGIC_BI) ha sido actualizada a 'SEFLOGIC_BI'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-03T21:11:27.606Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "a6ab2001-3724-11f1-825d-38d5470ea667",
     "fields": {
         "nivel_evento": "insert",
@@ -1255,6 +1606,19 @@
         "descripcion": "Se ha dado de alta al usuario Ricardo Del Reguero Rodríguez",
         "momento": "2026-04-13T10:36:37.978Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a7518552-4733-11f1-b038-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "65",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Proyectos PTCTA (Temprana) ha sido actualizada a 'Temprana'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-03T21:04:20.124Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -1351,6 +1715,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "af93fe2f-472f-11f1-ab9c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "416",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Ceferino Bermejo Afonso ha sido asignado como Responsable funcional del sistema Sistema de Información para la Gestión de los Registros Administrativos de Distribuidores de Seguros (SIGRE)",
+        "momento": "2026-05-03T20:35:55.994Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "af9488dd-472f-11f1-b929-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"cberafo\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Ceferino Bermejo Afonso ha sido asignado como Responsable funcional del sistema Sistema de Información para la Gestión de los Registros Administrativos de Distribuidores de Seguros (SIGRE)",
+        "momento": "2026-05-03T20:35:55.998Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "b2046aeb-2843-11f1-b8a7-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -1359,6 +1749,32 @@
         "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha sido asignado como interlocutor del ente Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (PAPJS)",
         "momento": "2026-03-25T12:11:03.975Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b204bedd-4730-11f1-8501-920007977582",
+    "fields": {
+        "nivel_evento": "delete",
+        "sujeto": "21",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha dejado de ser Responsable funcional del sistema Sigestein (SIGESTEIN)",
+        "momento": "2026-05-03T20:43:09.585Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b205623b-4730-11f1-a6cc-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodleo\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha dejado de ser Responsable funcional del sistema Sigestein (SIGESTEIN)",
+        "momento": "2026-05-03T20:43:09.589Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -1450,6 +1866,19 @@
         "descripcion": "El usuario * * ha dejado de ser Responsable funcional del sistema Gestión de Formación del ICAP (GESFORCOR)",
         "momento": "2026-04-27T14:38:13.074Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b852b1ff-4735-11f1-acff-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"ajcabsan\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Antonio Juan Caballero Santiago",
+        "momento": "2026-05-03T21:19:07.646Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -1650,6 +2079,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "c4d572db-4733-11f1-9df9-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "74",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Red Canaria de Alerta Temprana de Especies Exóticas Invasoras (RED_EXOS) ha sido actualizada a 'RED_EXOS'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-03T21:05:09.642Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "c7c9b90e-4231-11f1-9bc9-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -1671,6 +2113,32 @@
         "descripcion": "El código del sistema Adopciones (ADOPCIONES) ha sido actualizada a 'ADOPCIONES'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
         "momento": "2026-04-27T09:38:01.923Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c96b2917-4735-11f1-b21f-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "433",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Antonio Juan Caballero Santiago ha sido asignado como Responsable técnico del sistema Reporta (REPORTA)",
+        "momento": "2026-05-03T21:19:36.328Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c96bb4db-4735-11f1-baaa-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"ajcabsan\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Antonio Juan Caballero Santiago ha sido asignado como Responsable técnico del sistema Reporta (REPORTA)",
+        "momento": "2026-05-03T21:19:36.331Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -2014,6 +2482,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "f5f1e4a3-4733-11f1-8eb1-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "76",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Red de Observadores del Medio Marino en Canarias (RED_PROMAR) ha sido actualizada a 'RED_PROMAR'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-03T21:06:32.037Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "f73948f2-4194-11f1-9391-38d5470ea667",
     "fields": {
         "nivel_evento": "insert",
@@ -2035,6 +2516,19 @@
         "descripcion": "El sistema FIANZAS (FIANZAS) ha sido asignado a la familia {familia}",
         "momento": "2026-04-27T13:57:04.845Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "feeaea99-4734-11f1-9f8b-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "433",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Reporta (REPORTA)",
+        "momento": "2026-05-03T21:13:56.587Z",
+        "usuario": "root",
         "payload": null
     }
 }
