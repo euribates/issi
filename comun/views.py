@@ -201,6 +201,13 @@ def login_view(request):
 
 
 def reset_password(request, *args, **kwargs):
+    if request.method == 'POST':
+        form = forms.EmailForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            token = Token(email=email)
+            
+
     form = forms.EmailForm()
     return render(request, 'comun/reset-password.html', {
         'titulo': "Solicitud de recuperación de contraseña",
