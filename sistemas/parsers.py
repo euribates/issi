@@ -25,7 +25,6 @@ from comun.funcop import first
 from comun.results import Result, Success, Failure
 from directorio.models import Organismo
 from juriscan.models import Juriscan
-from sistemas.models import Sistema
 from sistemas.models import Tema
 from sistemas.models import Usuario
 

@@ -12,8 +12,6 @@ from . import models
 
 def _rename_headers(df):
     origin_names = list(df.columns)
-    from icecream import ic; ic(origin_names)
-    from icecream import ic; ic(len(origin_names))
     if len(origin_names) < 11:
         raise ValueError(
             'Se esperaban 11 o más columnas, pero el fichero'
