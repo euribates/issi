@@ -17,8 +17,7 @@ class Norma(models.Model):
     id_norma = models.BigAutoField(primary_key=True)
     nombre_norma = models.TextField(max_length=620, unique=True)
     sobrenombre = models.CharField(max_length=32, blank=True)
-    rango = models.ForeignKey(
-        Rango,
+    rango = models.ForeignKey(Rango,
         default='_na',
         related_name='normas',
         on_delete=models.PROTECT,

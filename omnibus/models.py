@@ -119,9 +119,9 @@ class Evento(models.Model):
         default=uuid.uuid1,
         editable=False,
         )
-    nivel_evento = models.ForeignKey(
-        NivelEvento,
+    nivel_evento = models.ForeignKey(NivelEvento,
         on_delete=models.PROTECT,
+        related_name='eventos'
         )
     sujeto = models.CharField(max_length=MAX_LENGTH_FOR_PRIMARY_KEY)
     nombre_clase = models.CharField(max_length=MAX_LENGTH_FOR_CLASS_NAME)

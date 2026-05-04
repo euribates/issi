@@ -44,8 +44,7 @@ class Organismo(models.Model):
         null=True,
         default=None,
         )
-    depende_de = models.ForeignKey(
-        'Organismo',
+    depende_de = models.ForeignKey('Organismo',
         related_name='organismos_dependientes',
         blank=True,
         null=True,

@@ -44,8 +44,7 @@ class Backlog(models.Model):
         CRITICA = (150, "Crítica")
 
     id_backlog = models.BigAutoField(primary_key=True)
-    sistema = models.ForeignKey(
-        Sistema, 
+    sistema = models.ForeignKey(Sistema, 
         related_name='backlog',
         on_delete=models.CASCADE,
         )

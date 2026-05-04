@@ -110,8 +110,7 @@ class Sistema(models.Model):
         unique=True,
         help_text="Nombre del sistema",
         )
-    organismo = models.ForeignKey(
-        Organismo,
+    organismo = models.ForeignKey(Organismo,
         related_name="sistemas",
         on_delete=models.PROTECT,
         blank=True,
@@ -144,8 +143,7 @@ class Sistema(models.Model):
         default="",
         verbose_name="Observaciones",
         )
-    tema = models.ForeignKey(
-        Tema,
+    tema = models.ForeignKey(Tema,
         related_name="sistemas",
         default="UNK",
         on_delete=models.PROTECT,
@@ -154,8 +152,7 @@ class Sistema(models.Model):
         default=False,
         help_text="Este S.I. es corporativo",
         )
-    es_subsistema_de = models.ForeignKey(
-        "Sistema",
+    es_subsistema_de = models.ForeignKey("Sistema",
         null=True,
         blank=True,
         default=None,
@@ -167,8 +164,7 @@ class Sistema(models.Model):
         default=False,
         help_text="Este S.I. contiene activos de datos de especial importancia",
         )
-    familia = models.ForeignKey(
-        Familia,
+    familia = models.ForeignKey(Familia,
         default="UNK",
         help_text="Indica la familia, si procede",
         related_name="sistemas",
@@ -655,8 +651,7 @@ class Activo(models.Model):
     ]
 
     id_activo = models.BigAutoField(primary_key=True)
-    sistema = models.ForeignKey(
-        Sistema,
+    sistema = models.ForeignKey(Sistema,
         related_name="activos",
         on_delete=models.PROTECT,
     )
@@ -754,7 +749,10 @@ class Arquetipo(models.Model):
             ]
 
     id_arquetipo = models.BigAutoField(primary_key=True)
-    tipo = models.ForeignKey(TipoDatos, on_delete=models.PROTECT)
+    tipo = models.ForeignKey(TipoDatos,
+        on_delete=models.PROTECT,
+        related_name='arquetipos',
+        )
     espacio = models.CharField(max_length=12, blank=True, default='')
     funcion = models.CharField(max_length=16)
     descripcion = models.CharField(max_length=740)
@@ -795,15 +793,13 @@ class Arquetipo(models.Model):
 class Campo(models.Model):
     
     id_campo = models.BigAutoField(primary_key=True)
-    activo = models.ForeignKey(
-        Activo,
+    activo = models.ForeignKey(Activo,
         related_name="campos",
         on_delete=models.CASCADE,
     )
     nombre_campo = models.CharField(max_length=288)
     descripcion = models.TextField()
-    arquetipo = models.ForeignKey(
-        Arquetipo,
+    arquetipo = models.ForeignKey(Arquetipo,
         related_name='campos',
         on_delete=models.PROTECT,
         )
@@ -837,16 +833,14 @@ class Usuario(models.Model):
         null=True,
         default=None,
     )
-    organismo = models.ForeignKey(
-        Organismo,
+    organismo = models.ForeignKey(Organismo,
         related_name="usuarios",
         on_delete=models.PROTECT,
         blank=True,
         null=True,
         default=None,
     )
-    empresa = models.ForeignKey(
-        Empresa,
+    empresa = models.ForeignKey(Empresa,
         related_name="usuarios",
         on_delete=models.PROTECT,
         blank=True,
@@ -916,13 +910,11 @@ class Interlocutor(models.Model):
         verbose_name_plural = "Interlocutores"
 
     id_interlocutor = models.BigAutoField(primary_key=True)
-    usuario = models.ForeignKey(
-        Usuario,
+    usuario = models.ForeignKey(Usuario,
         related_name="interlocutor_de",
         on_delete=models.CASCADE,
     )
-    organismo = models.ForeignKey(
-        Organismo,
+    organismo = models.ForeignKey(Organismo,
         related_name="interlocutores",
         on_delete=models.PROTECT,
     )
@@ -955,14 +947,12 @@ class Perfil(models.Model):
         ("INT", "Interlocutor"),
     ]
     id_perfil = models.BigAutoField(primary_key=True)
-    usuario = models.ForeignKey(
-        Usuario,
+    usuario = models.ForeignKey(Usuario,
         related_name="perfiles",
         on_delete=models.CASCADE,
     )
     cometido = models.CharField(max_length=3, choices=COMETIDOS)
-    sistema = models.ForeignKey(
-        Sistema,
+    sistema = models.ForeignKey(Sistema,
         related_name="perfiles",
         on_delete=models.CASCADE,
     )
@@ -1016,13 +1006,11 @@ class JuriscanSistema(models.Model):
         ]
 
     id = models.BigAutoField(primary_key=True)
-    sistema = models.ForeignKey(
-        Sistema,
+    sistema = models.ForeignKey(Sistema,
         related_name="fichas_juriscan",
         on_delete=models.CASCADE,
     )
-    juriscan = models.ForeignKey(
-        Juriscan,
+    juriscan = models.ForeignKey(Juriscan,
         related_name="sistemas",
         on_delete=models.CASCADE,
     )
@@ -1261,8 +1249,7 @@ class Pregunta(models.Model):
 
     id_pregunta = models.BigAutoField(primary_key=True)
     texto_pregunta = models.CharField(max_length=1024, unique=True)
-    eje = models.ForeignKey(
-        Eje,
+    eje = models.ForeignKey(Eje,
         related_name="preguntas",
         on_delete=models.PROTECT,
     )
@@ -1288,8 +1275,7 @@ class Opcion(models.Model):
         verbose_name_plural = "Opciones"
 
     id_opcion = models.BigAutoField(primary_key=True)
-    pregunta = models.ForeignKey(
-        Pregunta,
+    pregunta = models.ForeignKey(Pregunta,
         related_name="opciones",
         on_delete=models.CASCADE,
     )
@@ -1383,13 +1369,11 @@ class Respuesta(models.Model):
             ]
 
     id_respuesta = models.BigAutoField(primary_key=True)
-    sistema = models.ForeignKey(
-        Sistema,
+    sistema = models.ForeignKey(Sistema,
         related_name="respuestas",
         on_delete=models.CASCADE,
     )
-    opcion = models.ForeignKey(
-        Opcion,
+    opcion = models.ForeignKey(Opcion,
         related_name="respuestas",
         on_delete=models.CASCADE,
         )
