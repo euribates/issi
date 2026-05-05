@@ -203,12 +203,3 @@ class Empresa(models.Model):
             return cls.objects.get(nif=nif)
         except cls.DoesNotExist:
             return None
-
-    @classmethod
-    def search_empresas(cls, query):
-        return (
-            cls.objects.filter(
-                Q(nombre_empresa__icontains=query) |
-                Q(nif__icontains=query)
-                )
-            )

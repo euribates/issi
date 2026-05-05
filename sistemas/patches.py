@@ -10,6 +10,8 @@ from django.db.models import Q
 from directorio.models import Empresa
 from directorio.models import Organismo
 from sistemas.models import Usuario
+from comun.searchers import search_sistemas
+from comun.searchers import search_empresas
 from sistemas.models import Sistema
 
 
@@ -19,24 +21,22 @@ def get_datastar_parameter(request, name: str, default=None) -> str|None:
     if datastar:
         params = json.loads(datastar)
         if name in params:
-            return params[name]
+            return params[name].strip()
     return default
 
 
 @login_required
 def patch_empresas(request):
     query = get_datastar_parameter(request, 'query')
-    if query:
-        empresas = Empresa.search_empresas(query)
-    else:
-        empresas = Empresa.objects.all()
+    empresas = search_empresas(query)
+    num_empresas = empresas.count()
+    size = min(15, num_empresas)
     buff = [
         '<select name="empresa"'
-        ' size="17"'
+        f' size="{size}"'
         ' class="form-control">',
         ]
-    contador = empresas.count()
-    selected = ' selected="selected"' if contador == 1 else ''
+    selected = ' selected="selected"' if num_empresas == 1 else ''
     for empresa in empresas:
         buff.append(
             f'<option value="{empresa.pk}"{selected}>'
@@ -48,8 +48,9 @@ def patch_empresas(request):
     result = '\n'.join(buff)
     return HttpResponse(
         f'<div id="control_empresas">{result}</div>'
-        f'<div id="contador">{contador}<div>'
+        f'<div id="contador">{num_empresas}<div>'
         )
+
 
 @login_required
 def patch_organismos(request):
@@ -82,16 +83,10 @@ def patch_organismos(request):
 
 @login_required
 def patch_sistemas(request):
-    sistemas = Sistema.objects.all()
-    total_sistemas = num_sistemas = sistemas.count()
     query = get_datastar_parameter(request, 'query')
-    if query:
-        sistemas = sistemas.filter(
-            Q(nombre_sistema__icontains=query)
-            | Q(codigo__icontains=query)
-            | Q(tema__nombre_tema__icontains=query)
-            )
-        num_sistemas = sistemas.count()
+    sistemas = search_sistemas(query)
+    num_sistemas = sistemas.count()
+    total_sistemas = Sistema.objects.all().count()
     return render(request, 'sistemas/includes/listado-sistemas.html', {
         'sistemas': sistemas,
         'num_sistemas': num_sistemas,

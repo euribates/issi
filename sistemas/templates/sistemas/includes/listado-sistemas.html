@@ -6,15 +6,14 @@
     <tr>
       <th colspan="4">
         <p class="text-center">  
-        Se muestran {{ num_sistemas }} de {{ total_sistemas }}
+        Se muestran {{ num_sistemas }} de {{ total_sistemas }} sistemas
         </p>
       </th>
     </tr>  
     <tr>
-        <th>CII / Nombre / Materia</th>
+        <th>CII / Nombre / Finalidad</th>
         <th>Organismo</th>
         <th>Icono</th>
-        <th>Estado</th>
     </tr>
   </thead>  
   <tbody>
@@ -31,7 +30,9 @@
       {% endif %}
     </td>  
     <td>
-      <p>{{ sistema.organismo }}</p>
+      <p>{{ sistema.organismo }}
+      <br><code class="dir3">{{ sistema.organismo.dir3 }}</code>
+      </p>
     </td>
 
     <td style="max-width: 128px">
@@ -47,12 +48,6 @@
             title="Logo {{ sistema }}"
             >
      </a>
-      
-    </td>
-    <td>
-      <img src="{% static sistema.get_estado|as_status_icon %}"
-           title="{{ sistema.get_estado|as_status_desc }}"
-           alt="{{ sistema.get_estado|as_status_desc }}">
     </td>
   </tr>
 {% endfor %}

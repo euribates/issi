@@ -643,6 +643,7 @@ https://www.gobiernodecanarias.org/libroazul/pdf/46083.pdf
             ])
 
 
+
 class Activo(models.Model):
     NIVELES_DATOS_PERSONALES = [
         ("NO", "No contiene datos personales"),

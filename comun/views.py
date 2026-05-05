@@ -9,6 +9,7 @@ from django.contrib.auth import login, logout
 from django.contrib.auth import authenticate
 
 from comun import forms
+from comun.models import EmailToken
 from sistemas import breadcrumbs
 from sistemas import links
 from sistemas.models import Sistema
@@ -205,7 +206,7 @@ def reset_password(request, *args, **kwargs):
         form = forms.EmailForm(request.POST)
         if form.is_valid():
             email = form.cleaned_data['email']
-            token = Token(email=email)
+            _token = EmailToken(email=email)
             
 
     form = forms.EmailForm()
