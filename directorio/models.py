@@ -9,6 +9,9 @@ from django.utils import timezone
 from . import links
 
 
+alias_is_not_blank = ~Q(alias="")
+
+
 class Organismo(models.Model):
 
     class Meta:
@@ -29,12 +32,22 @@ class Organismo(models.Model):
                 condition=(Q(id_sirhus__isnull=False) & ~Q(dir3="")),
                 name="unique_together_dir3_id_sirhus",
                 ),
+            models.UniqueConstraint(
+                fields=["alias"],
+                condition=alias_is_not_blank,
+                name="unique_alias_if_defined",
+                )
             ]
 
     id_organismo = models.BigIntegerField(primary_key=True)
     nombre_organismo = models.CharField(
         max_length=144,
         unique=True,
+        )
+    alias = models.SlugField(
+        max_length=12,
+        blank=True,
+        default='',
         )
     dir3 = models.CharField(max_length=9, blank=True)
     id_sirhus = models.IntegerField(blank=True)
@@ -110,15 +123,6 @@ class Organismo(models.Model):
                 return True
         return False
 
-    @classmethod
-    def search_organismos(cls, query):
-        return (
-            cls.objects.filter(
-                Q(nombre_organismo__icontains=query) |
-                Q(categoria__icontains=query) |
-                Q(dir3__icontains=query)
-                )
-            )
 
     def url_detalle_organismo(self) -> str:
         return links.a_detalle_organismo(self.pk)

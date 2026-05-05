@@ -863,11 +863,17 @@ def listado_organismos(request):
 
 @login_required
 def detalle_organismo(request, organismo: Organismo):
+    sistemas = Sistema.sistemas_por_organismo(organismo)
+    num_sistemas = sistemas.count()
+    total_sistemas = Sistema.objects.all().count()
     return render(request, 'sistemas/detalle-organismo.html', {
         'titulo': f'Detalles organismo {organismo}',
         'breadcrumbs': bc.bc_detalle_organismo(organismo),
         'tab': 'organismos',
         'organismo': organismo,
+        'sistemas': sistemas,
+        'num_sistemas': num_sistemas,
+        'total_sistemas': total_sistemas,
         })
 
 

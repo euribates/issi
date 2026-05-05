@@ -16,7 +16,7 @@
     {% for organismo in organismos.all %}
     <tr>
       <td>
-          <a href="{% url 'directorio:detalle_organismo' organismo=organismo %}">
+          <a href="{% url 'sistemas:detalle_organismo' organismo=organismo %}">
           <b>{{ organismo.nombre_organismo }}</b>
           </a>
       </td>

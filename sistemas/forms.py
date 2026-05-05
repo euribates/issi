@@ -5,7 +5,7 @@ from django.forms import widgets
 
 from . import models
 from comun.forms import BootstrapForm
-
+from comun.searchers import search_organismos
 
 class ODSFileForm(BootstrapForm, forms.Form):
     archivo = forms.FileField(
@@ -46,7 +46,7 @@ class AltaSistemaForm(BootstrapForm, forms.ModelForm):
             ]
 
     def organismos_filtrados(self, query: str):
-        return models.Organismo.search(query)
+        return search_organismos(query)
 
 
 
@@ -86,7 +86,7 @@ class AsignarOrganismoForm(BootstrapForm, forms.ModelForm):
         fields = ['organismo']
 
     def organismos_filtrados(self, query: str):
-        return models.Organismo.search_organismos(query)
+        return search_organismos(query)
 
 
 class AsignarTemaForm(BootstrapForm, forms.ModelForm):

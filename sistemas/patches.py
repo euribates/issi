@@ -5,13 +5,11 @@ import json
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
-from django.db.models import Q
 
-from directorio.models import Empresa
-from directorio.models import Organismo
 from sistemas.models import Usuario
 from comun.searchers import search_sistemas
 from comun.searchers import search_empresas
+from comun.searchers import search_organismos
 from sistemas.models import Sistema
 
 
@@ -55,17 +53,14 @@ def patch_empresas(request):
 @login_required
 def patch_organismos(request):
     query = get_datastar_parameter(request, 'query')
-    if query:
-        organismos = Organismo.search_organismos(query)
-    else:
-        organismos = Organismo.objects.all()
+    organismos = search_organismos(query)
     buff = [
         '<select name="organismo"'
         ' size="17"'
         ' class="form-control">',
         ]
-    contador = organismos.count()
-    selected = ' selected="selected"' if contador == 1 else ''
+    num_organismos = organismos.count()
+    selected = ' selected="selected"' if num_organismos == 1 else ''
     for org in organismos:
         buff.append(
             f'<option value="{org.pk}"{selected}>'
@@ -77,7 +72,7 @@ def patch_organismos(request):
     result = '\n'.join(buff)
     return HttpResponse(
         f'<div id="control_organismos">{result}</div>'
-        f'<div id="contador">{contador}<div>'
+        f'<div id="contador">{num_organismos}<div>'
         )
 
 

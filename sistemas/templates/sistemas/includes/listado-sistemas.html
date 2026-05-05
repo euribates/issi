@@ -24,15 +24,14 @@
       <big>{{ sistema|as_codigo }}</big>
       <b>{{ sistema.nombre_sistema }}</b><br>
       {{ sistema.finalidad|as_finalidad }}<br>
-      {{ sistema.tema|as_tema }}
-      {% if sistema.es_corporativo %}
-        <span class="badge text-bg-info">Corporativo</span>
-      {% endif %}
     </td>  
     <td>
       <p>{{ sistema.organismo }}
       <br><code class="dir3">{{ sistema.organismo.dir3 }}</code>
       </p>
+      {% if sistema.es_corporativo %}
+        <span class="badge text-bg-info">Corporativo</span>
+      {% endif %}
     </td>
 
     <td style="max-width: 128px">

@@ -147,9 +147,11 @@
         <div class="card-header">
             <h4 class="card-title">Sistemas de información
             </h4>
+            <h3 class="subtitle">Asignados a este organismo o a
+                organismos dependientes</h3>
         </div>
         <div class="card-body">
-          {% include "sistemas/includes/listado-sistemas.html" with sistemas=organismo.sistemas.all %}  
+          {% include "sistemas/includes/listado-sistemas.html" with sistemas=sistemas %}  
         </div>
       </div>
     </section>

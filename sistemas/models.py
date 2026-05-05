@@ -642,6 +642,12 @@ https://www.gobiernodecanarias.org/libroazul/pdf/46083.pdf
             for f in self.fichas_juriscan.all()
             ])
 
+    @classmethod
+    def sistemas_por_organismo(cls, organismo):
+        qs = Organismo.objects.filter(ruta__startswith=organismo.ruta)
+        subtree = { _.pk for _ in qs.all() }
+        return cls.objects.filter(organismo__in=subtree).all()
+
 
 
 class Activo(models.Model):
