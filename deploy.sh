@@ -3,4 +3,4 @@
 source .venv/bin/activate
 git pull
 just check
-systemctl restart nginx gunicorn
+sudo systemctl restart nginx gunicorn
