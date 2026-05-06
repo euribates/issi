@@ -10,7 +10,7 @@ from sistemas.parsers import parse_uuid
 
     
 
-def search_empresas(cls, query):
+def search_empresas(query):
     qs = Empresa.objects.all()
     if query:
         qs = qs.filter(
@@ -20,8 +20,8 @@ def search_empresas(cls, query):
     return qs
 
 
-def search_organismos(cls, query):
-    qs = Organismo.objecs.all()
+def search_organismos(query):
+    qs = Organismo.objects.all()
     if query:
         qs = qs.filter(
             Q(nombre_organismo__icontains=query) |
