@@ -20,15 +20,6 @@ class GranTextoForm(BootstrapForm, forms.Form):
         required=False,
         )
 
-    def __init__(selt, texto_inicial='', **kwargs):
-        if 'initial' not in kwargs:
-            kwargs['initial'] = dict()
-        kwargs['initial']['texto'] = texto_inicial
-        super().__init__(**kwargs)
-
-    def get_texto(self):
-        return self.cleaned_data['texto']
-
 
 # ---------------------------------------[ Formularios para modelos ]--
 

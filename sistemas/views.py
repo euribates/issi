@@ -318,13 +318,18 @@ def editar_observaciones(request, sistema):
     if request.method == "POST":
         form = forms.GranTextoForm(request.POST)
         if form.is_valid():
-            observaciones = form.get_texto()
+            from icecream import ic; ic('es váłido')
+            observaciones = form.cleaned_data['texto']
             sistema.observaciones = observaciones
             sistema.save(update_fields=['observaciones'])
             Bus(request).pub_sistema_editar_observaciones(sistema)
             return redirect(links.a_detalle_sistema(sistema.pk))
+        else:
+            from icecream import ic; ic('NO es váłido')
     else:
-        form = forms.GranTextoForm(sistema.observaciones)
+        form = forms.GranTextoForm(initial={
+            'texto': sistema.observaciones,
+            })
     return render(request, 'sistemas/editar-observaciones.html', {
         'titulo': f'Editar observaciones de {sistema}',
         'breadcrumbs': bc.bc_editar_observaciones(sistema),

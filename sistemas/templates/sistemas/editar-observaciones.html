@@ -11,10 +11,18 @@
   <div class="card-body">
 
   <form method="POST" action=".">
-  {% csrf_token %}
-  {{ form.errors }}  
 
-  {{ form }}
+  {% csrf_token %}
+
+    <label for="id_texto" class="form-label">
+        {{ form.texto.label }}
+    </label>
+    {{ form.texto }}
+    {% if form.texto.errors %}<ul class="form-errors">
+        {% for error in form.texto.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>{% endif %}
 
   <p class="mt-4">
   <button type="submit" class="btn btn-primary">Editar observaciones</button>
