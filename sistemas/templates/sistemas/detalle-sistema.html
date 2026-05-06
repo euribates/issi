@@ -9,6 +9,10 @@
   <img width="96" height="96" class="d-block mx-auto mb-4"
        src="{{ sistema.icono.url }}"
        alt="{{ sistema }}">
+  {% else %}
+  <a href="{% url 'sistemas:asignar_icono' sistema=sistema %}">
+      Asignar icono
+  </a>
   {% endif %}
 
   <h1 class="display-5 fw-bold">{{ sistema.codigo }}
