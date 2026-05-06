@@ -150,7 +150,6 @@ class Organismo(models.Model):
 
     @classmethod
     def sub_tree(cls, list_of_parents) -> dict:
-        from icecream import ic; ic("sub_tree starts")
         result = {}
         if list_of_parents:
             id_current = list_of_parents.pop(0)

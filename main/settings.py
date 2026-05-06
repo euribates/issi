@@ -128,10 +128,7 @@ DEFAULT_DATABASE = dj_database_url.parse(config(
     default=str(f"sqlite:///{BASE_DIR / 'db.sqlite3'}"),
     ))
 
-# from icecream import ic; ic(DEFAULT_DATABASE)
-# from icecream import ic; ic(type(DEFAULT_DATABASE))
 # DEFAULT_DATABASE['TEST'] = 'test'
-# from icecream import ic; ic(DEFAULT_DATABASE['TEST'])
 
 TEST_DATABASE = dj_database_url.parse(config(
     'TEST_DATABASE',
