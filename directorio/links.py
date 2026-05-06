@@ -2,7 +2,6 @@
 
 from functools import cache
 
-from django.urls import reverse_lazy
 
 GOBCAN = 'www.gobiernodecanarias.org'
 
