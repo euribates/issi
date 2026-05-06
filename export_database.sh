@@ -8,7 +8,7 @@ function dumpdata () {
 }
 
 
-dumpdata "auth.user"
+# dumpdata "auth.user"
 dumpdata "glosario"
 dumpdata "normativa"
 dumpdata "directorio"
