@@ -44,6 +44,8 @@ urlpatterns = [
     tie('entes/<ent:ente>/liberar/interlocutor/<usr:usuario>/', views.liberar_interlocutor),
     tie('organismo/', views.listado_organismos),
     tie('organismo/<org:organismo>/', views.detalle_organismo),
+    tie('organismo/<org:organismo>/estudio/', views.estudio_organismo),
+
     tie('usuario/', views.listado_usuarios),
     tie('usuario/buscar/', views.buscar_usuarios),
     tie('usuario/alta/', views.alta_usuario),

@@ -11,6 +11,8 @@ La función privada _a es una ayuda para escribir las funciones.
 
 """
 
+from functools import cache
+
 from django.urls import reverse_lazy
 
 
@@ -18,6 +20,21 @@ def _a(name: str, **kwargs) -> str:
     '''Azucar sintactico para definir funciones a_*.
     '''
     return str(reverse_lazy(name, kwargs=kwargs))
+
+
+@cache
+def a_directorio() -> str:
+    return str(reverse_lazy('sistemas:listado_organismos'))
+
+
+@cache
+def a_detalle_organismo(id_organismo) -> str:
+    return _a('sistemas:detalle_organismo', organismo=id_organismo)
+
+
+@cache
+def a_estudio_organismo(id_organismo: int) -> str:
+    return _a('sistemas:estudio_organismo', organismo=id_organismo)
 
 
 def a_sistemas() -> str:
@@ -162,9 +179,6 @@ def a_liberar_interlocutor(id_ente, id_usuario) -> str:
         usuario=id_usuario,
         )
 
-
-def a_detalle_organismo(id_organismo) -> str:
-    return _a('sistemas:detalle_organismo', organismo=id_organismo)
 
 
 def a_temas() -> str:

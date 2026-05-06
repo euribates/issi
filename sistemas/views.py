@@ -849,15 +849,17 @@ def liberar_interlocutor(request, ente, usuario):
 
 @login_required
 def listado_organismos(request):
-    filterset = filtersets.OrganismoFilter(
-        request.GET,
-        queryset=Organismo.objects.all(),
-        )
+    entes = Ente.objects.all()
+    # filterset = filtersets.OrganismoFilter(
+        # request.GET,
+        # queryset=Organismo.objects.all(),
+        # )
     return render(request, 'sistemas/listado-organismos.html', {
         'titulo': 'Organismos',
         'breadcrumbs': bc.bc_organismos(),
         'tab': 'organismos',
-        "filterset": filterset,
+        'entes': entes,
+        # "filterset": filterset,
         })
 
 
@@ -866,6 +868,12 @@ def detalle_organismo(request, organismo: Organismo):
     sistemas = Sistema.sistemas_por_organismo(organismo)
     num_sistemas = sistemas.count()
     total_sistemas = Sistema.objects.all().count()
+    parents = [
+        models.Organismo.load_organismo(int(pk))
+        for pk in organismo.ruta.split('/')
+        if pk
+        ]
+    tree = organismo.get_full_tree()
     return render(request, 'sistemas/detalle-organismo.html', {
         'titulo': f'Detalles organismo {organismo}',
         'breadcrumbs': bc.bc_detalle_organismo(organismo),
@@ -874,6 +882,19 @@ def detalle_organismo(request, organismo: Organismo):
         'sistemas': sistemas,
         'num_sistemas': num_sistemas,
         'total_sistemas': total_sistemas,
+        'parents': parents,
+        'tree': tree,
+        })
+
+
+@login_required
+def estudio_organismo(request, organismo):
+    return render(request, 'sistemas/estudio_organismo.html', {
+        'titulo': f'Informe {organismo.nombre_organismo}',
+        'breadcrumbs': bc.bc_estudio_organismo(organismo),
+        'organismo': organismo,
+        'dependientes': organismo.organismos_dependientes.all(),
+        'jerarquia': list(organismo.iter_jerarquia()),
         })
 
 

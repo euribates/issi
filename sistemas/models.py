@@ -91,7 +91,7 @@ class Sistema(models.Model):
     """Modelo Sistemas de Información."""
 
     class Meta:
-        """Opciones para modelo Sistema."""
+        """Opciones para modelotree.keys Sistema."""
 
         ordering = [
             F("es_subsistema_de").desc(nulls_first=True),
@@ -1136,6 +1136,8 @@ class Ente(models.Model):
         return Sistema.objects.select_related("organismo").filter(
             organismo__ruta__startswith=self.organismo.ruta
         )
+
+
 
     def descargar_datos(self, url, force=False):
         slug = url.rsplit("/", 1)[1]

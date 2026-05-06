@@ -3,51 +3,27 @@
 
 {% block content %}
 
-<form method="get">
-
 <table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Código DIR3</th>
-      <th colspan="2">Categoría</th>
-    </tr>  
-
-    <tr>
-      <th>
-        {{ filterset.form.nombre_organismo }}
-      </th>  
-      <th>
-        {{ filterset.form.dir3 }}
-      </th>
-      <th>
-        {{ filterset.form.categoria }}
-      </th>
-      <th>
-        <input type="submit" value="🔍" />
-      </th>
-    </tr> 
-    
-  </thead> 
   <tbody>
-    {% for organismo in filterset.qs.all %}<tr>
+    {% for ente in entes %}<tr>
+      <th>{{ ente.pk}}</th>  
       <td>
-          <a href="{% url 'sistemas:detalle_organismo' organismo=organismo %}">
+          <a href="{% url 'sistemas:detalle_organismo' organismo=ente.organismo %}">
           <b>
-          {{ organismo.nombre_organismo }}
+          {{ ente.organismo.nombre_organismo }}
           </b>
           </a>
       </td>
       <td>
           <span class="dir3">
-            {{ organismo.dir3 }}
+            {{ ente.organismo.dir3 }}
           </span>    
       </td>
       <td colspan="2">
-        {{ organismo.categoria }}
+        {{ ente.organismo.categoria }}
       </td>
     </tr>{% endfor %}
   </tbody>
 </table>  
-</form>
+
 {% endblock content %}

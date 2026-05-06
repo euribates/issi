@@ -72,7 +72,7 @@
       <div class="panel">
         <div class="panel-header">
           <img src="{% static 'icons/share-fill.svg' %}" width="32">
-           <a href="{% url 'sistemas:index' %}">Organismos</a>  
+           <a href="{% url 'sistemas:listado_organismos' %}">Organismos</a>  
         </div>  
         <div class="panel-body">
             <div class="counter">{{ stats.organismos }}</div>
@@ -89,7 +89,7 @@
       <div class="panel">
         <div class="panel-header">
           <img src="{% static 'icons/people-fill.svg' %}" width="32">
-           <a href="{% url 'sistemas:index' %}">Usuarios</a>  
+           <a href="{% url 'sistemas:listado_usuarios' %}">Usuarios</a>  
         </div>  
         <div class="panel-body">
             <div class="counter">{{ stats.usuarios }}</div>
@@ -104,7 +104,7 @@
       <div class="panel">
         <div class="panel-header">
           <img src="{% static 'icons/tema.svg' %}" width="32">
-           <a href="{% url 'sistemas:index' %}">Áreas competenciales</a>  
+           <a href="{% url 'sistemas:listado_temas' %}">Áreas competenciales</a>  
         </div>  
         <div class="panel-body">
             <div class="counter">{{ stats.temas }}</div>
@@ -136,9 +136,4 @@
 
 <div><!-- row ends -->
     
-
-
-
-
-
 {% endblock content %}

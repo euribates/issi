@@ -3,14 +3,15 @@
 
 {% block content %}
 
-<div class="row">
+
+
+<div class="row pt-2">
   
-  <section class="col col-8">
+  <section class="col col-sm-12 col-md-7 mb-2">
 
     <div class="card">
       <div class="card-header bg-info bg-gradient">
-          <h4 class="card-title">Detalles del organismo
-          </h4>
+          <h5>Detalles del organismo</h5>
       </div>
       <div class="card-body">
       <table class="table">
@@ -52,124 +53,94 @@
     </div>
 
   </section>  
-  <section class="col col-4">
+
+  <section class="col col-sm-12 col-md-5 mb-2" >
 
     <div class="card">
       <div class="card-header bg-info bg-gradient">
-        Depende de
+        <h5 class="card-title">Organigrama</h5>
       </div>
       <div class="card-body">
-      <ul class="list-group list-group-flush">
-        {% if organismo.es_primer_nivel %}
-        <li class="list-group-item">
-          <b>Gobierno de Canarias</b>
-        </li>
-
-        {% else %}      
-          <li class="list-group-item">
-              <a href="{% url 'sistemas:detalle_organismo' organismo=organismo.depende_de %}">
-              {{ organismo.depende_de.nombre_organismo }}
-              </a>
-          </li>
-        {% endif %}  
-      </ul>
+      {% include "sistemas/includes/tree-branch.html" with branch=tree %}
       </div>
     </div>  
 
-    <div class="card mt-2">
-      <div class="card-header bg-info bg-gradient">
-        Organismos Dependientes
-        <span class="badge">{{ organismo.organismos_dependientes.count }}<span>
-      </div>
-      <div class="card-body">
-      <ul class="list-group list-group-flush">
-        {% for org in organismo.organismos_dependientes.all %}
-          <li class="list-group-item">
-              <a href="{% url 'sistemas:detalle_organismo' organismo=org %}">  
-              {{ org.nombre_organismo }}
-              </a>
-          </li>
-        {% endfor %}  
-      </ul>
-
-      </div>
-    </div>
-  </div>
-
   </section>
 
-  <div class="row">
-
-    <section class="col col-12">
-      <div class="card mt-2">
-        <div class="card-header">
-          <h4 class="card-title">Interlocutores
-            <span class="badge rounded-pill bg-secondary">
-            {{ organismo.interlocutores.count }}
-            </span>
-          </h4>
-        </div>
-        <div class="card-body">
-        <table class="table m-2">
-          <thead>
-            <tr>
-              <th>
-              Nombre y apellidos
-              </th>
-              <th>
-              Identificador
-              </th>
-              <th>
-              Correo electrónico
-              </th>
-            </tr>
-          </thead>
-        {% for interlocutor in organismo.interlocutores.all %}
+  <section class="col col-12">
+    <div class="card mt-2">
+      <div class="card-header">
+        <h4 class="card-title">Interlocutores
+          <span class="badge rounded-pill bg-secondary">
+          {{ organismo.interlocutores.count }}
+          </span>
+        </h4>
+      </div>
+      <div class="card-body">
+      <table class="table m-2">
+        <thead>
           <tr>
-              <td>{{ interlocutor.usuario }}</td>
-              <td>
-                <pre>{{ interlocutor.usuario.pk }}</pre>
-              </td>
-              <td>
-                  <a href="mailto:{{ interlocutor.usuario.email }}">
-                      {{ interlocutor.usuario.email }}
-                  </a>    
-              </td>
-          </tr>  
-        {% endfor %}  
-        </table>
-        </div>
+            <th>
+            Nombre y apellidos
+            </th>
+            <th>
+            Identificador
+            </th>
+            <th>
+            Correo electrónico
+            </th>
+          </tr>
+        </thead>
+      {% for interlocutor in organismo.interlocutores.all %}
+        <tr>
+            <td>{{ interlocutor.usuario }}</td>
+            <td>
+              <pre>{{ interlocutor.usuario.pk }}</pre>
+            </td>
+            <td>
+                <a href="mailto:{{ interlocutor.usuario.email }}">
+                    {{ interlocutor.usuario.email }}
+                </a>    
+            </td>
+        </tr>  
+      {% endfor %}  
+      </table>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="col col-12">
-      <div class="card mt-2">
-        <div class="card-header">
-            <h4 class="card-title">Sistemas de información
-            </h4>
-            <h3 class="subtitle">Asignados a este organismo o a
-                organismos dependientes</h3>
-        </div>
-        <div class="card-body">
-          {% include "sistemas/includes/listado-sistemas.html" with sistemas=sistemas %}  
-        </div>
+  <section class="col col-12">
+    <div class="card mt-2">
+      <div class="card-header">
+          <h5 class="card-title">Sistemas de información
+          <span class="badge rounded-pill bg-secondary">
+          {{ num_sistemas }}
+          </span>
+          <br><small>
+          Asignados a este organismo o a
+              organismos dependientes</small>
+          </h5>
       </div>
-    </section>
+      <div class="card-body">
+        {% include "sistemas/includes/listado-sistemas.html" with sistemas=sistemas %}  
+      </div>
+    </div>
+  </section>
 
-    <section class="col col-12">
-      <div class="card mt-2">
-        <div class="card-header">
-            <h4 class="card-title">Competencias
-            </h4>
-        </div>
-        <div class="card-body">
-            {{ organismo.competencias|as_markdown }}
-        </div>
+  <section class="col col-12">
+    <div class="card mt-2">
+      <div class="card-header">
+          <h4 class="card-title">Competencias
+          </h4>
       </div>
-    </section>
+      <div class="card-body">
+          {{ organismo.competencias|as_markdown }}
+      </div>
+    </div>
+  </section>
 
   </div>
 
-</div>
+</div><!-- de row -->
 
 {% endblock content %}

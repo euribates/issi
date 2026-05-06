@@ -49,7 +49,6 @@ urlpatterns = [
     path("normativa/", include('normativa.urls')),
     path("familias/", include('familias.urls')),
     path("sistemas/", include('sistemas.urls')),
-    path("directorio/", include('directorio.urls')),
     path("juriscan/", include('juriscan.urls')),
     path("plan/", include('plan.urls')),
     path('admin/', admin.site.urls),

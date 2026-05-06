@@ -35,14 +35,15 @@ class SistemaFilter(django_filters.FilterSet):
             )
 
 
-class OrganismoFilter(django_filters.FilterSet):
+class EnteFilter(django_filters.FilterSet):
 
     class Meta:
-        model = models.Organismo
+        model = models.Ente
         fields = [
-            'nombre_organismo',
-            'dir3',
-            'categoria',
+            'id_ente',
+            'organismo__nombre_organismo',
+            'organismo__dir3',
+            'organismo__categoria',
             ]
 
     nombre_organismo = django_filters.CharFilter(lookup_expr='icontains')

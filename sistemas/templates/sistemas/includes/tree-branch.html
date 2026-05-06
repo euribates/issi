@@ -1,0 +1,37 @@
+{% spaceless %}
+
+<ul class="tree-branch">
+  {% for id_organismo, dupla in branch.items %}
+    {% with sub_organismo=dupla.0 hijos=dupla.1 %}
+      <li>
+      {% if sub_organismo.pk == organismo.pk %}
+        <b>{{ sub_organismo.nombre_organismo }}</b>
+
+        {% if organismo.organismos_dependientes.exists %}
+          <ul>
+          {% for org in organismo.organismos_dependientes.all %}
+          
+          <li class="tree-branch">
+              <a href="{% url 'sistemas:detalle_organismo' organismo=org %}">
+              {{ org.nombre_organismo }}
+              </a>
+          </li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+
+      {% else %}
+        <a href="{{ sub_organismo.url_detalle_organismo }}">
+        {{ sub_organismo.nombre_organismo }}
+        </a>
+      {% endif %}
+
+      {% if hijos %}
+        {% include "sistemas/includes/tree-branch.html" with branch=hijos %}
+      {% endif %}
+      </li>  
+    {% endwith %}
+  {% endfor %}
+</ul>
+
+{% endspaceless %}

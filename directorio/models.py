@@ -6,7 +6,7 @@ from django.db import models
 from django.db.models import Q
 from django.utils import timezone
 
-from . import links
+from sistemas import links
 
 
 alias_is_not_blank = ~Q(alias="")
@@ -123,7 +123,6 @@ class Organismo(models.Model):
                 return True
         return False
 
-
     def url_detalle_organismo(self) -> str:
         return links.a_detalle_organismo(self.pk)
 
@@ -141,11 +140,44 @@ class Organismo(models.Model):
             return True
         return self.depende_de.pk == 1
 
+    @classmethod
+    def organismos_de_primer_nivel(cls):
+        ds = (
+            Organismo.objects
+            .filter(depende_de=1)
+            )
+        return ds
+
+    @classmethod
+    def sub_tree(cls, list_of_parents) -> dict:
+        from icecream import ic; ic("sub_tree starts")
+        result = {}
+        if list_of_parents:
+            id_current = list_of_parents.pop(0)
+            current = cls.load_organismo(id_current)
+            for sibling in current.siblings():
+                if sibling.pk == current.pk:
+                    result[sibling.pk] = (sibling, current.sub_tree(list_of_parents))
+                else:
+                    result[sibling.pk] = (sibling, {})
+        return result
+
+    def get_full_tree(self) -> dict:
+        id_parents = [ int(pk) for pk in self.ruta.split('/') if pk ]
+        id_parents.pop(0)  # Eliminamos la raiz
+        return Organismo.sub_tree(id_parents)
+
     def iter_jerarquia(self, nivel=0):
         yield self, nivel
         for hijo in self.organismos_dependientes.all():
             yield from hijo.iter_jerarquia(nivel+1)
 
+    def siblings(self):
+        ds = (
+            Organismo.objects
+            .filter(depende_de=self.depende_de)
+            )
+        return ds
 
     def touch(self, updated_at: DateTime|None = None):
         '''Marcar el sistema como modificado.

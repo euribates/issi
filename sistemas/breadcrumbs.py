@@ -9,6 +9,22 @@ def bc_issi() -> BreadCrumb:
     return APPS.step('ISSI', '/',)
 
 
+def bc_directorio():
+    return bc_issi().step('Directorio', links.a_directorio())
+
+
+def bc_detalle_organismo(organismo):
+    return bc_directorio().step(
+        organismo.nombre_organismo,
+        links.a_detalle_organismo(organismo.pk),
+        )
+
+def bc_estudio_organismo(organismo):
+    return bc_detalle_organismo(organismo).step(
+        'Estudio',
+        links.a_estudio_organismo(organismo.pk),
+        )
+
 def bc_sistemas() -> BreadCrumb:
     return bc_issi().step('Sistemas', links.a_sistemas())
 
@@ -237,13 +253,6 @@ def bc_liberar_interlocutor(ente, usuario) -> BreadCrumb:
     return bc_detalle_ente(ente).step(
         "Liberar interlocutor",
         links.a_liberar_interlocutor(ente.pk, usuario.pk),
-        )
-
-
-def bc_detalle_organismo(organismo) -> BreadCrumb:
-    return bc_organismos().step(
-        organismo.nombre_organismo,
-        links.a_detalle_organismo(organismo.pk),
         )
 
 
