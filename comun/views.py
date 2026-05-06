@@ -207,9 +207,10 @@ def reset_password(request, *args, **kwargs):
         if form.is_valid():
             email = form.cleaned_data['email']
             _token = EmailToken(email=email)
-            
-
-    form = forms.EmailForm()
+            # Enviar email
+            # redirigir a la página explicativa
+    else:        
+        form = forms.EmailForm()
     return render(request, 'comun/reset-password.html', {
         'titulo': "Solicitud de recuperación de contraseña",
         'form': form,
