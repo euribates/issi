@@ -599,7 +599,7 @@
     "fields": {
         "uuid_sistema": "2b4c67ad-cf08-11f0-bdf7-38d5470ea667",
         "nombre_sistema": "BBDD de legislación y jurisprudencia relativa a la APCAC",
-        "organismo": null,
+        "organismo": 42093,
         "codigo": "JURISCAN",
         "url": "https://www3.gobiernodecanarias.org/juriscan/",
         "descripcion": "",
@@ -727,7 +727,7 @@
         "organismo": 37905,
         "codigo": "SEFLOGIC",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Sistema de información económico-financiera y logística",
         "finalidad": "Sistema de información económico-financiera y logística del Gobierno de Canarias",
         "observaciones": "",
         "tema": "EPR",
@@ -784,7 +784,7 @@
         "es_corporativo": true,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo-hiperreg.png",
@@ -828,18 +828,18 @@
         "codigo": "DIRCAC",
         "url": null,
         "descripcion": "Gestionar la estructura jerárquica, organización e  información de las unidades administrativas, oficinas de registro y de atención a la ciudadanía, facilitando la gestión interna de la administración y el acceso de la ciudadanía a sus servicios y la presentación de documentos.",
-        "finalidad": "Gestión centralizada de la estructura jerárquica, organización e  información de las unidades administrativa.",
-        "observaciones": "",
+        "finalidad": "Inventario de información de las unidades administrativas, oficinas de registro y de atención a la ciudadanía que proporciona información centralizada y actualizada sobre las distintas unidades orgánicas y oficinas de atención al público, facilitando tanto la gestión interna de la administración como el acceso de la ciudadanía a sus servicios y la presentación de documentos.",
+        "observaciones": "DECRETO 108/2024, de 31 de julio, por el que se aprueba el Reglamento Orgánico de la Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad (art. 83) https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=79417",
         "tema": "TEC",
         "es_corporativo": true,
         "es_subsistema_de": null,
         "especial_importancia": true,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/dircac-logo.png",
         "created": "2025-11-24T10:20:18.231Z",
-        "updated": "2025-12-01T22:57:22.357Z",
+        "updated": "2026-05-07T19:45:22.655Z",
         "archived": null
     }
 },
@@ -927,7 +927,7 @@
         "organismo": 42167,
         "codigo": "SITA_RCC",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de expedientes de Renta Canaria Ciudadana",
         "finalidad": "Gestionar expedientes de Renta Canaria Ciudadana",
         "observaciones": "RCC es demasiado corto para el campo nombre",
         "tema": "BIS",
@@ -977,7 +977,7 @@
         "organismo": 42167,
         "codigo": "IMV",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión Ingreso Mínimo Vital",
         "finalidad": "Gestionar Ingreso Mínimo Vital",
         "observaciones": "",
         "tema": "BIS",
@@ -1027,7 +1027,7 @@
         "organismo": 42169,
         "codigo": "JUSTICIA_JUVENIL",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de medidas judiciales de menores",
         "finalidad": "Gestionar las Medidas Judiciales de Menores",
         "observaciones": "",
         "tema": "BIS",
@@ -1075,21 +1075,21 @@
         "uuid_sistema": "61a978c6-58cb-45e3-9657-a5e7977d0a82",
         "nombre_sistema": "Programa de gestión de cursos",
         "organismo": 6564,
-        "codigo": "PGC",
+        "codigo": "PROGESCUR",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de cursos",
         "finalidad": "En este sistema se gestiona actualmente todo el proceso de realización y seguimiento de los cursos desde que se crean a partir de un código hasta que finalizan con la entrega al alumno de la correspondiente certificación.",
-        "observaciones": "",
+        "observaciones": "Actualmente la Escuela está trabajando en la implantación de un sistema integral de gestión, que centralice la gestión de su actividad y consiga una conectividad eficaz y eficiencia de todos sus sistemas.",
         "tema": "EDU",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
         "created": "2025-11-24T10:20:18.231Z",
-        "updated": "2025-11-24T10:20:18.254Z",
+        "updated": "2026-05-07T10:45:43.543Z",
         "archived": null
     }
 },
@@ -1098,7 +1098,7 @@
     "pk": 23,
     "fields": {
         "uuid_sistema": "d9fded6d-cd3f-4306-885f-b96f28336c65",
-        "nombre_sistema": "SISTEMA DE FICHAJES ESSSCAN",
+        "nombre_sistema": "Sistema de fichajes de ESSSCAN",
         "organismo": 6564,
         "codigo": "TIMEVIEW",
         "url": null,
@@ -1114,7 +1114,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/TimeView-logo.png",
         "created": "2025-11-24T10:20:18.231Z",
-        "updated": "2025-11-24T10:20:18.254Z",
+        "updated": "2026-05-07T10:55:27.480Z",
         "archived": null
     }
 },
@@ -1134,7 +1134,7 @@
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F06",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/gpd-logo.png",
@@ -1159,7 +1159,7 @@
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F06",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/gpnd-logo.png",
@@ -1429,7 +1429,7 @@
         "url": null,
         "descripcion": "",
         "finalidad": "El Registro de Plantaciones de Viñedo es el censo de todas las parcelas con viñedo.",
-        "observaciones": "Gestionada por GRAFCAN. El usuario alopperj no aparece en las páginas blancas.",
+        "observaciones": "Gestionada por GRAFCAN. El usuario `alopperj ` no aparece en las páginas blancas. ¿Puede ser `aaloperj`, Amilcar Alonso López?",
         "tema": "AGR",
         "es_corporativo": false,
         "es_subsistema_de": null,
@@ -1464,7 +1464,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2026/reg_satc.png",
         "created": "2025-11-24T10:20:18.231Z",
-        "updated": "2026-05-03T20:45:42.356Z",
+        "updated": "2026-05-06T14:24:28.395Z",
         "archived": null
     }
 },
@@ -1652,14 +1652,14 @@
         "organismo": 42169,
         "codigo": "CENTROS_MENORES",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de de centros de menores y habilitación de entidades colaboradoras",
         "finalidad": "Mantenimiento de centros de menores y habilitación de entidades colaboradoras",
         "observaciones": "",
         "tema": "BIS",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/centros-menores-logo.png",
@@ -1677,7 +1677,7 @@
         "organismo": 42169,
         "codigo": "EXP_FAMILIAS_NUMEROSAS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestionar expedientes de Familia Numerosa",
         "finalidad": "Gestionar expedientes de Familia Numerosa",
         "observaciones": "",
         "tema": "BIS",
@@ -1702,14 +1702,14 @@
         "organismo": 42172,
         "codigo": "GPORTA",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Firma electrónica",
         "finalidad": "Sistema de circuito de firma para procedimientos y comunicaciones internas.",
         "observaciones": "",
         "tema": "BIS",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -1756,31 +1756,6 @@
         "finalidad": "Informe acreditativo de esfuerzo de integración de extranjeros. Informe acreditativo del arraigo social de extranjeros. Informe acreditativo sobre la adecuación de la vivienda de extranjeros reagrupantes.",
         "observaciones": "",
         "tema": "BIS",
-        "es_corporativo": false,
-        "es_subsistema_de": null,
-        "especial_importancia": false,
-        "familia": "UNK",
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": "",
-        "created": "2025-11-24T10:20:18.231Z",
-        "updated": "2025-11-24T10:20:18.254Z",
-        "archived": null
-    }
-},
-{
-    "model": "sistemas.sistema",
-    "pk": 50,
-    "fields": {
-        "uuid_sistema": "0aa531f4-a65b-4492-9aec-d05c6b12a1f7",
-        "nombre_sistema": "Entidades",
-        "organismo": null,
-        "codigo": "ENTIDADES",
-        "url": null,
-        "descripcion": "",
-        "finalidad": "Registro de Entidades",
-        "observaciones": "",
-        "tema": "UNK",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
@@ -1852,14 +1827,14 @@
         "organismo": 42172,
         "codigo": "INTEROP_MINISTERIO",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Envío de datos al Ministerio",
         "finalidad": "Envío de datos al Ministerio, incluye el 990, el TSD, estadísticas de prestaciones, etc.",
         "observaciones": "",
         "tema": "BIS",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F13",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -1877,14 +1852,14 @@
         "organismo": 42172,
         "codigo": "SUBVENCIONES_ITC",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de subvenciones ITC",
         "finalidad": "Sistema de información para la gestión de las convocatorias y concesión de subvenciones destinadas a proyectos de interés general del Tercer Sector en Canarias, financiadas con la asignación tributaria del 0,7% del IRPF y del Impuesto sobre Sociedades, dirigidas a la atención de personas en situación de pobreza, exclusión o especial vulnerabilidad.",
         "observaciones": "",
         "tema": "BIS",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F05",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -1950,21 +1925,21 @@
         "uuid_sistema": "889805b6-4eae-448e-aefc-085b029ff1d7",
         "nombre_sistema": "Programa Económico Actividad ESSSCAN",
         "organismo": 6564,
-        "codigo": "ESSSCAN_ECO",
+        "codigo": "PROECO",
         "url": null,
-        "descripcion": "",
-        "finalidad": "Gestión del registro contable, la gestión financiera-económica, el control de costes y los datos vinculados con las nóminas de los trabajadores de la Escuela.",
+        "descripcion": "Gestión del registro contable, la gestión financiera-económica, el control de costes y los datos vinculados con las nóminas de los trabajadores de la Escuela.",
+        "finalidad": "Sistema que integra el registro contable, con la gestión financiera-económica, el control de costes y los datos vinculados con las nóminas de los trabajadores de la Escuela.",
         "observaciones": "",
         "tema": "CTB",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F06",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
         "created": "2025-11-24T10:20:18.231Z",
-        "updated": "2025-11-24T10:20:18.254Z",
+        "updated": "2026-05-07T10:51:31.625Z",
         "archived": null
     }
 },
@@ -1975,21 +1950,21 @@
         "uuid_sistema": "11f66c9f-fb9b-4dcd-8908-7fdef108180d",
         "nombre_sistema": "Share ESSSCAN",
         "organismo": 6564,
-        "codigo": "ESSSCAN_SHARE",
+        "codigo": "SHARE_ESSSCAN",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de proyectos formativos",
         "finalidad": "Sistema que administra todo el contenido relacionado con los proyectos formativos gestionados por la Entidad, al que tiene acceso toda la organización al constituir un almacenamiento compartido en la nube.",
         "observaciones": "",
-        "tema": "SAN",
+        "tema": "UNK",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
         "created": "2025-11-24T10:20:18.231Z",
-        "updated": "2025-11-24T10:20:18.254Z",
+        "updated": "2026-05-07T10:59:48.117Z",
         "archived": null
     }
 },
@@ -1998,9 +1973,9 @@
     "pk": 59,
     "fields": {
         "uuid_sistema": "44a2ad30-9073-4eef-b0a8-42b1f597ec37",
-        "nombre_sistema": "Precio máximo de privada - Servicio de promoción privada",
+        "nombre_sistema": "Precio máximo de venta publica-servicio de promoción publica",
         "organismo": 37152,
-        "codigo": "PMPRIV",
+        "codigo": "PRECIO_MAX_PUB",
         "url": null,
         "descripcion": "",
         "finalidad": "Precio de venta de una vivienda privada protegida",
@@ -2014,7 +1989,7 @@
         "icono_width": 0,
         "icono": "",
         "created": "2025-11-24T10:20:18.231Z",
-        "updated": "2025-11-24T10:20:18.254Z",
+        "updated": "2026-05-07T14:22:22.887Z",
         "archived": null
     }
 },
@@ -2059,7 +2034,7 @@
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/justiniano-logo.png",
@@ -2150,7 +2125,7 @@
         "uuid_sistema": "9e8ea2e4-7cce-4113-8c7a-5e9817d92818",
         "nombre_sistema": "Proyectos PTCTA",
         "organismo": 42138,
-        "codigo": "Temprana",
+        "codigo": "REDMINE_PTCTA",
         "url": null,
         "descripcion": "Redmine PTCTA",
         "finalidad": "Control de proyectos de soporte o gestión con empresas proveedoras",
@@ -2159,7 +2134,7 @@
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -2384,12 +2359,12 @@
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 512,
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/redexos-logo.png",
         "created": "2025-11-24T10:20:18.231Z",
-        "updated": "2025-11-24T10:20:18.254Z",
+        "updated": "2026-05-05T11:18:17.108Z",
         "archived": null
     }
 },
@@ -2577,7 +2552,7 @@
         "organismo": 38691,
         "codigo": "MOODLE",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Plataforma habilitada por la ACCUEE donde se le da acceso a los solicitantes a los datos.",
         "finalidad": "Plataforma habilitada por la ACCUEE donde se le da acceso a los solicitantes a los datos.",
         "observaciones": "",
         "tema": "EDU",
@@ -3259,7 +3234,7 @@
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F11",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -3277,14 +3252,14 @@
         "organismo": 42085,
         "codigo": "REINTEGROS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "GEstión de Reintegros de Subvenciones / ayudas",
         "finalidad": "Reintegros de Subvenciones / ayudas",
         "observaciones": "",
         "tema": "CTB",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F05",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -3427,14 +3402,14 @@
         "organismo": 32738,
         "codigo": "TECYC",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Registro de Operadores de Productos de Agricultura Ecológica de Canarias",
         "finalidad": "Obtención de los certificados de Operadores Ecológicos",
         "observaciones": "En el proceso de pase a producción de la nueva aplicación. ICCA",
         "tema": "AGR",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F11",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -3452,14 +3427,14 @@
         "organismo": 39153,
         "codigo": "TITULACIONES_NAUTICAS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Sistema de gestión de las titulaciones de patrón de embarcación",
         "finalidad": "Sistemas de gestión de las titulaciones de patrón de embarcación",
         "observaciones": "En el proceso de pase a producción de la nueva aplicación",
         "tema": "PES",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F10",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -3577,14 +3552,14 @@
         "organismo": 42172,
         "codigo": "AYUDAS_DIRECTAS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestionar expedientes de ayudas directas (La Palma, Emigrantes venezolanos retornados, Bono Social Térmico)",
         "finalidad": "Gestionar expedientes de ayudas directas (La Palma, Emigrantes venezolanos retornados, Bono Social Térmico)",
         "observaciones": "",
         "tema": "BIS",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F05",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -3827,7 +3802,7 @@
         "organismo": 42166,
         "codigo": "FONDOS_EUROPEOS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de fondos europeos",
         "finalidad": "Gestionar Fondos Europeos. Plataforma de Contratación",
         "observaciones": "No existe usuario jplanmen, parece que es una errara, porque existe jplamen (Juan Manuel Plasencia Mensoza) en la viceconsejeria de bienestar social",
         "tema": "BIS",
@@ -3852,7 +3827,7 @@
         "organismo": 42172,
         "codigo": "GESTOR_INCIDENCIAS_BS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de incidencias (Redmine)",
         "finalidad": "Sistema para gestionar incidencias (RedMine) del SMNT",
         "observaciones": "",
         "tema": "BIS",
@@ -3877,14 +3852,14 @@
         "organismo": 42166,
         "codigo": "INSPECCION_CENTROS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Autorización, acreditación, inspección y control de centros y servicios del ámbito de los servicios sociales",
         "finalidad": "Gestionar y tramitar electrónicamente de los procedimientos de autorización, acreditación, inspección y control de centros y servicios del ámbito de los servicios sociales, incluyendo comunicaciones, declaraciones responsables, informes técnicos, quejas y subvenciones asociadas.",
         "observaciones": "",
         "tema": "BIS",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F19",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -3900,9 +3875,9 @@
         "uuid_sistema": "b2128cd0-ae05-49c9-b0d9-9a8eea15995b",
         "nombre_sistema": "Pensiones",
         "organismo": 42170,
-        "codigo": "EXP_PENSIONES",
+        "codigo": "EXP_PENSIONES_NC",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de expedientes de pensiones no contributivas",
         "finalidad": "Gestionar expedientes de Pensiones No Contributivas (por Jubilación o Invalidez)",
         "observaciones": "",
         "tema": "BIS",
@@ -3927,14 +3902,14 @@
         "organismo": 42172,
         "codigo": "PERSONAL_BS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Llamamiento de personal laboral para puestos delegados en la Consejería",
         "finalidad": "Llamamiento de personal laboral para puestos delegados en la Consejería",
         "observaciones": "",
         "tema": "BIS",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F06",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -3952,14 +3927,14 @@
         "organismo": 42165,
         "codigo": "SUBVENCIONES_BS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de subvenciones (BS)",
         "finalidad": "Gestionar subvenciones (Plan Concertado, LGTBI, conciliación, …)",
         "observaciones": "La normativa era: Ley de Subvenciones, la de Canarias, la de cada subvención dictada por cada centro directivo. Se cambio por el código Juriscan de la ley de subvenciones (60984)",
         "tema": "BIS",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F05",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -3984,7 +3959,7 @@
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F05",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -4002,14 +3977,14 @@
         "organismo": 42135,
         "codigo": "APLISOP",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Aplicaciones transversales de la arquitectura informática de la consejería",
         "finalidad": "Aplicaciones transversales de la arquitectura informática de la consejería",
         "observaciones": "",
         "tema": "EDU",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -4100,16 +4075,16 @@
         "uuid_sistema": "b46b31e1-f64e-4ad8-b5f6-9b4477a4da80",
         "nombre_sistema": "EntidadesBS",
         "organismo": 42167,
-        "codigo": "REG_ENTIDADES",
+        "codigo": "REG_ENTIDADES_BS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Registro de Entidades públicas/privadas/sin ánimo de lucro",
         "finalidad": "Registro de Entidades (Público, Privado, Sin ánimo de lucro)",
         "observaciones": "En normativa solo pone 63/1986",
         "tema": "BIS",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F11",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -4127,14 +4102,14 @@
         "organismo": 42172,
         "codigo": "REG_SIBS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Registro Sistemas de información",
         "finalidad": "Registro Sistemas de información",
         "observaciones": "",
         "tema": "BIS",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -4152,7 +4127,7 @@
         "organismo": 42169,
         "codigo": "REG_MENORES",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de expedientes de menores",
         "finalidad": "Gestionar expedientes de menores (tutela, extutelados, desamparo, acogimiento, aplicación de medidas, guarda voluntaria, seguimiento del menor)",
         "observaciones": "",
         "tema": "BIS",
@@ -4202,14 +4177,14 @@
         "organismo": 42110,
         "codigo": "LICENCIAS_COMERCIALES",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de licencias comerciales",
         "finalidad": "Gestionar la actividad comercial, de la distribución y equipamiento comercial, de determinadas modalidades de ventas específicas con la finalidad de ordenar la actividad de este sector, de la autorización de la actividad de los grandes establecimientos comerciales y de los centros comerciales, y la regulación de la licencia comercial. (PLATEA)",
         "observaciones": "https://sede.gobiernodecanarias.org/sede/procedimientos_servicios/tramites/5345\r\n\r\nhttps://sede.gobiernodecanarias.org/sede/procedimientos_servicios/tramites/2715",
         "tema": "COM",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F01",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -4277,14 +4252,14 @@
         "organismo": 42109,
         "codigo": "REGINDUS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Registro integrado de industrias",
         "finalidad": "Registro integrado de industrias. (SINERGIA)",
         "observaciones": "https://sede.gobiernodecanarias.org/sede/procedimientos_servicios/tramites/3384",
         "tema": "IND",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F11",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -4302,14 +4277,14 @@
         "organismo": 42109,
         "codigo": "REA",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Inventario de los operadores del régimen específico",
         "finalidad": "Registrar y mantener inventario de los operadores del régimen específico. (SINERGIA)",
         "observaciones": "https://sede.gobiernodecanarias.org/sede/procedimientos_servicios/tramites/1256",
         "tema": "IND",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F11",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -4352,14 +4327,14 @@
         "organismo": 42109,
         "codigo": "CATALOGO",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Catálogo de productos industriales desarrollados",
         "finalidad": "Gestionar el catálogo de productos industriales desarrollados.",
         "observaciones": "https://www3.gobiernodecanarias.org/ceicc/industria/catalogoindustrial/portal/modules_pub.php?file=vercatalogo\r\n\r\nhttps://sede.gobiernodecanarias.org/sede/procedimientos_servicios/tramites/6927\r\n\r\nhttps://www3.gobiernodecanarias.org/ceicc/industria/censosueloind/portal/modules_pub2021.php?file=listado2023",
         "tema": "IND",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F11",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -4427,14 +4402,14 @@
         "organismo": 42110,
         "codigo": "INSPECCIONES_CONSUMO",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestionar las inspecciones realizadas en relación a consumo",
         "finalidad": "Gestionar las inspecciones realizadas en relación a consumo. (INDCOM)",
         "observaciones": "Real Decreto Legislativo 1/2007, de 16 de noviembre, por el que se aprueba el texto refundido de la Ley General para la Defensa de los Consumidores y Usuarios y otras leyes complementarias.",
         "tema": "CON",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F19",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -4452,14 +4427,14 @@
         "organismo": 42110,
         "codigo": "DENUNCIAS_CONSUMO",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de las denuncias realizadas en relación a consumo",
         "finalidad": "Gestionar las denuncias realizadas en relación a consumo. (INDCOM)",
         "observaciones": "https://sede.gobiernodecanarias.org/sede/procedimientos_servicios/tramites/6488",
         "tema": "CON",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F02",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -4478,7 +4453,7 @@
         "codigo": "RDVPC",
         "url": null,
         "descripcion": "",
-        "finalidad": "REGISTRO DE SOLICITANTES DE VIVIENDA",
+        "finalidad": "Registro de solicitantes de vivienda",
         "observaciones": "",
         "tema": "VIV",
         "es_corporativo": false,
@@ -4498,18 +4473,18 @@
     "pk": 175,
     "fields": {
         "uuid_sistema": "65087460-08b1-4891-aec4-0eb58fa92331",
-        "nombre_sistema": "PATRIMONIO",
+        "nombre_sistema": "Patrimonio",
         "organismo": 37152,
         "codigo": "PATRIMONIOVVDA",
         "url": null,
-        "descripcion": "",
-        "finalidad": "GESTIÓN PROPIEDADES INMOBILIARIAS DEL ICV",
+        "descripcion": "Gestión de propiedades inmobiliarias del ICV",
+        "finalidad": "Gestión de propiedades inmobiliarias del ICV",
         "observaciones": "https://www.gobiernodecanarias.org/cmsgob1/export/sites/transparencia/temas/economica-financiera/patrimonio/bienes-inmuebles/doc/bienes-inmuebles-propios-04-02-2025.pdf",
         "tema": "VIV",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -4534,7 +4509,7 @@
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -4548,12 +4523,12 @@
     "pk": 177,
     "fields": {
         "uuid_sistema": "d9de1698-05a7-4fbf-aeaf-65381ea6c98a",
-        "nombre_sistema": "REGISTROAGENTESINMOBILIARIOS",
+        "nombre_sistema": "Registro Agentes Inmobiliarios",
         "organismo": 37152,
         "codigo": "RAI",
         "url": null,
         "descripcion": "",
-        "finalidad": "REGISTRO AGENTES INMOBILIARIOS",
+        "finalidad": "Registro de agentes inmobiliarios",
         "observaciones": "",
         "tema": "VIV",
         "es_corporativo": false,
@@ -4600,10 +4575,10 @@
         "uuid_sistema": "b97bea6f-e44c-4728-b35c-f11ab6d909cc",
         "nombre_sistema": "FIANZAS",
         "organismo": 37152,
-        "codigo": "FIANZAS",
+        "codigo": "Fianzas",
         "url": null,
         "descripcion": "",
-        "finalidad": "DEPÓSITO DE  LAS FIANZAS POR ALQUILER DE INMUEBLES",
+        "finalidad": "Depósito de las fianzas por alquiler de inmuebles",
         "observaciones": "",
         "tema": "VIV",
         "es_corporativo": false,
@@ -5184,7 +5159,7 @@
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -5202,14 +5177,14 @@
         "organismo": 41588,
         "codigo": "ELECCIONES_2019",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Resultados electorales 2019",
         "finalidad": "Reglamento Orgánico de la CPAPJS, Art.63. Competencias en materia de procesos electorales. Se alojarán los resultados definitivos de las elecciones 2019 que actualmente están publicados en un portal externo.",
         "observaciones": "",
         "tema": "PAC",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -5277,14 +5252,14 @@
         "organismo": 41588,
         "codigo": "ELECCIONES_2023",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Resultados electorales 2023",
         "finalidad": "Reglamento Orgánico de la CPAPJS, Art.63. Competencias en materia de procesos electorales. Se alojarán los resultados definitivos de las elecciones 2023 que actualmente están publicados en un portal externo.",
         "observaciones": "",
         "tema": "PAC",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -5414,7 +5389,7 @@
         "icono_width": 0,
         "icono": "",
         "created": "2026-04-27T12:49:18.432Z",
-        "updated": "2026-04-27T12:49:18.459Z",
+        "updated": "2026-05-06T15:17:50.277Z",
         "archived": null
     }
 },
@@ -5852,14 +5827,14 @@
         "organismo": 42110,
         "codigo": "HORARIOS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Registro de los horarios comerciales",
         "finalidad": "Registro de los horarios comerciales de los establecimientos. (LOCAL)",
         "observaciones": "",
         "tema": "COM",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F11",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -5902,7 +5877,7 @@
         "organismo": 42110,
         "codigo": "PREBIESRV",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de los precios de bienes y servicios",
         "finalidad": "Gestionar los precios de bienes y servicios.",
         "observaciones": "",
         "tema": "COM",
@@ -5927,14 +5902,14 @@
         "organismo": 37849,
         "codigo": "CASEWARE_IDEA",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Herramienta de analítica financiera",
         "finalidad": "Herramienta de análisis de datos para auditores, profesionales de la contabilidad y analistas financieros",
         "observaciones": "",
         "tema": "FIS",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -5952,14 +5927,14 @@
         "organismo": 37905,
         "codigo": "UNIFICA",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Sistema de Información Económica-Financiera, cartográfica y encuestas de infraestructuras y equipamientos",
         "finalidad": "Nuevo Sistema de Información Económica-Financiera, cartográfica y Encuesta de Infraestructuras y Equipamientos del Sector Público Local de Canarias",
         "observaciones": "",
         "tema": "PPE",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -5977,14 +5952,14 @@
         "organismo": 37905,
         "codigo": "SIGFE",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Justificación de fondos europeos",
         "finalidad": "Justificación de fondos europeos.",
         "observaciones": "",
         "tema": "PPE",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -6002,14 +5977,14 @@
         "organismo": 37916,
         "codigo": "PARQUE_MOVIL",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de parque móvil",
         "finalidad": "Movilidad Institucional",
         "observaciones": "",
         "tema": "GRH",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -6027,14 +6002,14 @@
         "organismo": 37905,
         "codigo": "PEFAC",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Facturación electrónica",
         "finalidad": "Punto de entrada de facturas electrónicas del Gobierno de Canarias, para presentación y seguimiento de las mismas por parte de los proveedores",
         "observaciones": "",
         "tema": "EPR",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -6052,7 +6027,7 @@
         "organismo": 42086,
         "codigo": "GLPISGT",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestor de incidencias",
         "finalidad": "Gestor de incidencias de mantenimiento del edificio Consejería Hacienda",
         "observaciones": "",
         "tema": "TEC",
@@ -6077,14 +6052,14 @@
         "organismo": 42086,
         "codigo": "INVENTARIO_INF_HAC",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Inventario de equipamiento informático",
         "finalidad": "Aplicativo para gestión del inventario del parque de equipos de usuario en la Consejería de Hacienda",
         "observaciones": "",
         "tema": "TEC",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -6102,14 +6077,14 @@
         "organismo": 37916,
         "codigo": "EMPRESAS_CLASIFICADAS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Consulta de empresas clasificadas por la Junta Consultiva de Contratación Administrativa",
         "finalidad": "Consulta general de empresas clasificadas por la Junta Consultiva de Contratación Administrativa de la Comunidad Autónoma de Canarias.",
         "observaciones": "",
         "tema": "PAT",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -6127,14 +6102,14 @@
         "organismo": 37916,
         "codigo": "CLAEMP",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Aplicación para la Clasificación de Empresas en grupos y subgrupos de actividades",
         "finalidad": "Aplicación para la Clasificación de Empresas en grupos y subgrupos de actividades",
         "observaciones": "",
         "tema": "PAT",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -6152,14 +6127,14 @@
         "organismo": 37905,
         "codigo": "EGEASY",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestor de tareas",
         "finalidad": "Gestor interno de tareas de la Dirección General de Planificación y Presupuesto y de la Intervención General",
         "observaciones": "",
         "tema": "PPE",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -6177,14 +6152,14 @@
         "organismo": 42086,
         "codigo": "GESTCONT",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión Contratos Informática Hacienda",
         "finalidad": "Gestión Contratos Informática Hacienda",
         "observaciones": "",
         "tema": "CNT",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -6227,14 +6202,14 @@
         "organismo": 42086,
         "codigo": "REDMINE_HAC",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Herramienta de gestión y seguimiento de los proyectos (Redmine)",
         "finalidad": "Herramienta de gestión y seguimiento de los proyectos para dar respuesta a las solicitudes en MANTIS.",
         "observaciones": "",
         "tema": "EOA",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -6275,16 +6250,16 @@
         "uuid_sistema": "83e22505-1068-4466-a038-0a18fce783c3",
         "nombre_sistema": "Logística",
         "organismo": 37905,
-        "codigo": "SEFLOGIC__LOGISTICA",
+        "codigo": "SEFLOGIC_LOGISTICA",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de almacenes SCS",
         "finalidad": "Gestión almacenes SCS",
         "observaciones": "",
         "tema": "EPR",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -6300,9 +6275,9 @@
         "uuid_sistema": "baa67e00-0161-4e6f-82a3-3e4b489c4ede",
         "nombre_sistema": "Extrapresupuestaria",
         "organismo": 37905,
-        "codigo": "SEFLOGIC__FIGL",
+        "codigo": "SEFLOGIC_FIGL",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Registros contables y financieros extrapresupuestarios",
         "finalidad": "Registros contables y financieros que no están vinculados directamente a una partida presupuestaria específica del presupuesto de gastos o ingresos del ejercicio",
         "observaciones": "",
         "tema": "EPR",
@@ -6325,16 +6300,16 @@
         "uuid_sistema": "4a136951-16be-42ae-9e3b-e4cdb8b108ff",
         "nombre_sistema": "Contratación Electrónica",
         "organismo": 37905,
-        "codigo": "SEFLOGIC__GECE",
+        "codigo": "SEFLOGIC_GECE",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de contratos",
         "finalidad": "Gestion de contratos",
         "observaciones": "",
         "tema": "EPR",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F13",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -6350,7 +6325,7 @@
         "uuid_sistema": "44c683f7-c0d5-4349-909b-eb17c44a44a7",
         "nombre_sistema": "Empresas Públicas",
         "organismo": 37905,
-        "codigo": "SEFLOGIC__EMPU",
+        "codigo": "SEFLOGIC_EMPU",
         "url": null,
         "descripcion": "",
         "finalidad": "Gestionar y centralizar los procesos internos, como finanzas, logística y compras de las empreas públicas",
@@ -6375,16 +6350,16 @@
         "uuid_sistema": "797a1d05-d7ae-41a6-a4e8-fdc8f069f6ae",
         "nombre_sistema": "Contabilidad Analítica",
         "organismo": 37905,
-        "codigo": "SEFLOGIC__COCO",
+        "codigo": "SEFLOGIC_COCO",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Análisis y control de costes",
         "finalidad": "desglosar, analizar y controlar los costes de la administración más allá de la contabilidad financiera obligatoria",
         "observaciones": "",
         "tema": "EPR",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F13",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -6400,9 +6375,9 @@
         "uuid_sistema": "90e132b6-39e2-4ede-8ec9-9bbb5aa6081b",
         "nombre_sistema": "Presupuestos",
         "organismo": 37905,
-        "codigo": "SEFLOGIC__PRESUPUESTO",
+        "codigo": "SEFLOGIC_PRESUPUESTO",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de presupuestos",
         "finalidad": "Elaboración y gestión de los presupuestos",
         "observaciones": "",
         "tema": "EPR",
@@ -6425,9 +6400,9 @@
         "uuid_sistema": "ead657fe-0664-4a8e-90c0-96ae95ba81e6",
         "nombre_sistema": "Central de Información",
         "organismo": 37905,
-        "codigo": "SEFLOGIC__CI",
+        "codigo": "SEFLOGIC_CI",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Plataforma de inteligencia de negocio que unifica información financiera, presupuestaria y operativa",
         "finalidad": "Centro de inteligencia de negocio que unifica información financiera, presupuestaria y operativa de las distintas consejerías y entidades públicas",
         "observaciones": "",
         "tema": "EPR",
@@ -6450,7 +6425,7 @@
         "uuid_sistema": "ebc2692d-c398-420a-8282-10c451097ce6",
         "nombre_sistema": "Cuenta General",
         "organismo": 37905,
-        "codigo": "SEFLOGIC__CUENTA_GENERAL",
+        "codigo": "SEFLOGIC_CG",
         "url": null,
         "descripcion": "",
         "finalidad": "Documento contable y financiero que recoge toda la gestión económica, presupuestaria y patrimonial durante un ejercicio",
@@ -7102,14 +7077,14 @@
         "organismo": 42109,
         "codigo": "INSPECCIONES_INDUSTRIALES",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestionar inspecciones industriales",
         "finalidad": "Gestionar los expedientes relacionados con las inspecciones industriales. (SINERGIA)",
         "observaciones": "https://www.gobiernodecanarias.org/industria/temas/RII/Real Decreto 559/2010, de 7 de mayo, por el que se aprueba el Reglamento del Registro Integrado Industrial. https://www.boe.es/buscar/act.php?id=BOE-A-2010-8189%20 (art. 4)Presentación de inspecciones de establecimientos industriales - Sede electrónica del Gobierno de Canarias",
         "tema": "IND",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F19",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -7234,7 +7209,7 @@
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F17",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -7277,14 +7252,14 @@
         "organismo": 41588,
         "codigo": "REGASOCAN",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Registro de Asociaciones de Canarias. Incluye asociaciones, fundaciones, colegios profesionales, academias y reales academias.",
         "finalidad": "Reglamento Orgánico de la CPAPJS, Art.70. Competencias en materia de colegios profesionales, asociaciones, fundaciones y Reales Academias y academias de Canarias",
         "observaciones": "",
         "tema": "PAC",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F11",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -7452,19 +7427,19 @@
         "organismo": 42093,
         "codigo": "WEBFORMS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Herramienta para la creación y normalización de formularios correspondiente a procedimientos administrativos",
         "finalidad": "Facilitar a los Departamentos la creación y normalización de los formularios correspondiente a los procedimientos de su competencia.",
         "observaciones": "",
         "tema": "TRD",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
-        "icono_height": 0,
-        "icono_width": 0,
-        "icono": "",
+        "familia": "_NA",
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2026/webforms-logo.png",
         "created": "2026-05-03T19:21:20.581Z",
-        "updated": "2026-05-03T19:21:20.581Z",
+        "updated": "2026-05-06T14:04:40.357Z",
         "archived": null
     }
 },
@@ -7702,14 +7677,14 @@
         "organismo": 42093,
         "codigo": "RESCAN",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Sistema de comunicación para situaciones de emergencia",
         "finalidad": "Sistema de comunicación para situaciones de emergencia.",
         "observaciones": "",
         "tema": "TRD",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -8077,14 +8052,14 @@
         "organismo": 6636,
         "codigo": "SIES",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de expedientes sancionadores",
         "finalidad": "Sistema de información de expedientes sancionadores que se pueden generar, en caso de requerir sanción, a partir de las inspecciones que realiza Salud Pública a diferentes tipos de establecimientos",
         "observaciones": "",
         "tema": "SAN",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F02",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -9029,7 +9004,7 @@
         "url": null,
         "descripcion": "",
         "finalidad": "Registro de fabricantes de productos sanitarios a medida.",
-        "observaciones": "",
+        "observaciones": "¿Puede ser que el usuario `jcascue`, que no se encuentra, sea en realidad `jcascuy`?",
         "tema": "SAN",
         "es_corporativo": false,
         "es_subsistema_de": null,
@@ -9752,19 +9727,19 @@
         "organismo": 6687,
         "codigo": "EERR",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Base de conocimiento de Enfermedades Raras de Canarias",
         "finalidad": "Enfermedades raras. Recoge la información de Enfermedades Raras de Canarias. Enfermedad rara es aquella cuya prevalencia es inferior a 5 casos por cada 10.000 personas en la Comunidad Europea.",
         "observaciones": "",
         "tema": "SAN",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "_NA",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
         "created": "2026-05-03T20:17:49.115Z",
-        "updated": "2026-05-03T20:17:49.115Z",
+        "updated": "2026-05-06T14:16:07.093Z",
         "archived": null
     }
 },
@@ -9927,14 +9902,14 @@
         "organismo": 37894,
         "codigo": "SIGRE",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de los Registros Administrativos de Distribuidores de Seguros",
         "finalidad": "Gestión de los Registros Administrativos de Distribuidores de Seguros",
         "observaciones": "",
         "tema": "TPF",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
-        "familia": "UNK",
+        "familia": "F11",
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
@@ -9948,7 +9923,7 @@
     "pk": 419,
     "fields": {
         "uuid_sistema": "ac2f5479-a35c-418b-88f6-d435d8a46d53",
-        "nombre_sistema": "Aplicación para tramitación de las preguntas parlamentarias.",
+        "nombre_sistema": "Aplicación para tramitación de las preguntas parlamentarias",
         "organismo": 41518,
         "codigo": "HIPATIA",
         "url": null,
@@ -10127,10 +10102,60 @@
         "organismo": 42086,
         "codigo": "REPORTA",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestor de tareas",
         "finalidad": "Aplicativo de reporte de horas dedicadas a tareas en Mantis",
         "observaciones": "",
         "tema": "EOA",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-03T21:13:56.582Z",
+        "updated": "2026-05-03T21:13:56.582Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 434,
+    "fields": {
+        "uuid_sistema": "19f03f72-b93f-46a5-9112-63b40d7c590f",
+        "nombre_sistema": "STEVI",
+        "organismo": 37152,
+        "codigo": "STEVI",
+        "url": null,
+        "descripcion": "Sistema de gestión de ayudas y subvenciones para alquiler y rehabilitación",
+        "finalidad": "Ayudas y subvenciones para alquiler y rehabilitación",
+        "observaciones": "Tecnologías *Back end*:\r\n\r\n- Java\r\n- SQL Server\r\n- Hibernate\r\n- JBoss\r\n-  Subversion",
+        "tema": "VIV",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2026/stevi-logo.png",
+        "created": "2026-05-06T14:28:06.969Z",
+        "updated": "2026-05-06T14:37:25.353Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 435,
+    "fields": {
+        "uuid_sistema": "03f27cc8-aeed-42e9-b3f7-394cb3356634",
+        "nombre_sistema": "Academia de seguridad",
+        "organismo": 42173,
+        "codigo": "ACADEMIA",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Gestión de formación al Sistema Canario de Seguridad y Emergencias",
+        "observaciones": "",
+        "tema": "SEG",
         "es_corporativo": false,
         "es_subsistema_de": null,
         "especial_importancia": false,
@@ -10138,8 +10163,808 @@
         "icono_height": 0,
         "icono_width": 0,
         "icono": "",
-        "created": "2026-05-03T21:13:56.582Z",
-        "updated": "2026-05-03T21:13:56.582Z",
+        "created": "2026-05-06T15:15:07.409Z",
+        "updated": "2026-05-06T15:15:07.409Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 436,
+    "fields": {
+        "uuid_sistema": "a6b52dbb-7807-41fd-b82c-85af43ebbcd6",
+        "nombre_sistema": "Publicación del portal Boletín Oficial de Canarias",
+        "organismo": 42121,
+        "codigo": "PUBLICACION_BOC",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Aplicación de publicación del BOC.",
+        "observaciones": "",
+        "tema": "TRD",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "UNK",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-06T15:16:50.768Z",
+        "updated": "2026-05-06T15:16:50.847Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 437,
+    "fields": {
+        "uuid_sistema": "31c97685-561a-4993-ae68-c05abb0d6b31",
+        "nombre_sistema": "Pretramitación del Juego",
+        "organismo": 41545,
+        "codigo": "GESJUEGO",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Se trata de un sistema que, con carácter previo a PLATEA, servía para gestionar los cambios requeridos y relacionados con máquinas (alta, cambio, canje, baja, etc.). A través del programa Gesjuego, se asignaba un número de referencia que iba la Registro del Juego. Este sistema se conserva a la fecha.",
+        "observaciones": "http://www.gobiernodecanarias.org/boc/2012/080/001.html",
+        "tema": "JUE",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "UNK",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-06T15:18:19.690Z",
+        "updated": "2026-05-06T15:18:19.733Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 438,
+    "fields": {
+        "uuid_sistema": "b89dcd84-8eed-45fc-bbbb-2dda9e1460be",
+        "nombre_sistema": "SEDE electrónica",
+        "organismo": 42093,
+        "codigo": "SEDE_ELECTRONICA",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Proporcionar a la ciudadanía un portal para que pueda acceder a información, servicios y trámites electrónicos que le competen.",
+        "observaciones": "ORDEN de 25 de febrero de 2021, por la que se aprueba la puesta en funcionamiento de la sede electrónica de la Administración Pública de la Comunidad Autónoma de Canarias, bajo el dominio https://sede.gobcan.es.\r\n\r\nOrden de 9 de mayo de 2016, por la que se regula el sistema de notificación electrónica mediante comparecencia en sedes electrónicas en el ámbito de la Administración Pública de la Comunidad Autónoma de Canarias y sus organismos públicos dependientes. (BOC núm. 95, de 18 de mayo de 2016).\r\n\r\nhttps://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=78761",
+        "tema": "TRD",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "UNK",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-06T15:31:56.840Z",
+        "updated": "2026-05-06T15:31:56.942Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 439,
+    "fields": {
+        "uuid_sistema": "b1ec8ebd-69be-44c9-86e1-f8c841cc167f",
+        "nombre_sistema": "Sistema automatizado de gestión de ingresos del sistema tributario canario",
+        "organismo": 37815,
+        "codigo": "MAGIN",
+        "url": null,
+        "descripcion": "Sistema automatizado de gestión de ingresos del sistema tributario canario",
+        "finalidad": "M@GIN es el sistema corporativo que permite la gestión integral de los ingresos tributarios de la Comunidad Autónoma de Canarias. Integra funciones gestoras, inspectoras, contables y recaudatorias, orientadas a la tramitación electrónica y a la modernización de los procedimientos tributarios.",
+        "observaciones": "1. Decreto 135/2006, de 3 de octubre, por el que se aprueba el sistema automatizado de gestión de ingresos del sistema tributario canario con la denominación de M@GIN https://www.gobiernodecanarias.org/boc/2006/200/pda/001.html \r\n\r\n2. Orden de 27 de mayo de 2010, por la que se establece el procedimiento de ingreso a través de entidades de depósito de las deudas tributarias gestionadas a través de la aplicación M@GIN https://noticias.juridicas.com/base_datos/CCAA/ic-o270510-eha.html",
+        "tema": "TRI",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-06T15:56:26.136Z",
+        "updated": "2026-05-06T16:01:33.304Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 440,
+    "fields": {
+        "uuid_sistema": "caca6b10-5c64-4b4b-8c35-b8923b4d1752",
+        "nombre_sistema": "Sede Electrónica de la Agencia Tributaria Canaria",
+        "organismo": 37815,
+        "codigo": "SEDE_ELECTRONICA_ATC",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Plataforma digital que permite a los contribuyentes realizar trámites tributarios de forma telemática, incluyendo presentación de declaraciones, pagos, consultas y recepción de notificaciones electrónicas.",
+        "observaciones": "",
+        "tema": "TRI",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "UNK",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-06T16:05:54.614Z",
+        "updated": "2026-05-06T16:08:36.066Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 441,
+    "fields": {
+        "uuid_sistema": "8283cd31-84bb-42d9-a816-100dd98c0c93",
+        "nombre_sistema": "Sistema de gestión del Plan de Prevención y Lucha contra el Fraude",
+        "organismo": 37815,
+        "codigo": "PLF",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Herramienta corporativa para la implementación, seguimiento y control del Plan de Medidas Antifraude en el marco del Plan de Recuperación, Transformación y Resiliencia (PRTR). Permite la autoevaluación, gestión de riesgos, declaración de ausencia de conflicto de intereses, canal ético y trazabilidad de medidas preventivas, de detección y corrección del fraude.",
+        "observaciones": "",
+        "tema": "TRI",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "UNK",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-06T16:10:53.401Z",
+        "updated": "2026-05-06T16:10:53.401Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 442,
+    "fields": {
+        "uuid_sistema": "d3faf446-07b6-4d96-96b9-4e250af17fb2",
+        "nombre_sistema": "Portal de Información de la ATC",
+        "organismo": 37815,
+        "codigo": "PORTAL_ATC",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Plataforma web que centraliza la publicación de información tributaria, normativa, procedimientos, estadísticas y servicios de asistencia al contribuyente. Su objetivo es garantizar la transparencia, la accesibilidad y la difusión de contenidos relacionados con la gestión tributaria autonómica, incluyendo guías, modelos, preguntas frecuentes y acceso a herramientas de cálculo.",
+        "observaciones": "1. Ley 7/2014, de la Agencia Tributaria Canaria (art. 4 y 17) [https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=63918]\r\n\r\n2. Ley 19/2013, de transparencia, acceso a la información pública y buen gobierno [https://www.boe.es/buscar/doc.php?id=BOE-A-2013-12887]\r\n\r\n3. Normativa autonómica sobre transparencia y sede electrónica",
+        "tema": "TRI",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "UNK",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-06T16:20:01.255Z",
+        "updated": "2026-05-06T16:23:27.639Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 443,
+    "fields": {
+        "uuid_sistema": "e2af7393-21f3-406e-84b9-983e05312300",
+        "nombre_sistema": "Plataforma de formación Moodle",
+        "organismo": 6564,
+        "codigo": "MOODLE_ESSSCAN",
+        "url": null,
+        "descripcion": "Plataforma de aprendizaje",
+        "finalidad": "Este sistema permite la configuración y supervisión del entorno de aprendizaje y la evaluación del mismo, partiendo de la diversidad de las acciones formativas gestionadas por la Escuela y sus diferentes alcances y características",
+        "observaciones": "",
+        "tema": "EDU",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "UNK",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T10:23:48.666Z",
+        "updated": "2026-05-07T10:42:57.485Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 444,
+    "fields": {
+        "uuid_sistema": "854f2ea9-3253-4cfc-abc2-6a3142bbe92e",
+        "nombre_sistema": "Programa de reconocimiento de oficialidad",
+        "organismo": 6564,
+        "codigo": "PRORECOFI",
+        "url": null,
+        "descripcion": "Reconocimiento de oficialidad de los cursos en materia de sanidad y asuntos sociales",
+        "finalidad": "Sistema desde el que se gestiona y se realiza el seguimiento de otra de las actividades que la ESSSCAN tiene asignada por Ley: el Reconocimiento de Oficialidad de los cursos en materia de sanidad y asuntos sociales celebrados en la Comunidad Autónoma de Canarias.",
+        "observaciones": "",
+        "tema": "EDU",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "F10",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T11:02:11.390Z",
+        "updated": "2026-05-07T11:03:53.580Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 445,
+    "fields": {
+        "uuid_sistema": "b3dfb9bf-9cfe-430c-9eb5-22f7b04be427",
+        "nombre_sistema": "Consulta de Terceros",
+        "organismo": 37894,
+        "codigo": "CTERCEROS",
+        "url": null,
+        "descripcion": "Consulta de la base de datos de terceros",
+        "finalidad": "Consulta de los datos identificativos de la base de datos de terceros acreedores, así como los datos bancarios de la cuenta",
+        "observaciones": "",
+        "tema": "TPF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T12:16:22.154Z",
+        "updated": "2026-05-07T12:16:22.154Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 446,
+    "fields": {
+        "uuid_sistema": "ab568df5-7012-48aa-8a2d-a221eb2a4fc5",
+        "nombre_sistema": "Certificado de Retenciones",
+        "organismo": 37894,
+        "codigo": "CERTRET",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Consulta sede para la obtención de Certificados de Retenciones e Ingreso a cuenta del Impuesto sobre la Renta de las Personas Físicas,del Impuesto sobre Sociedades y del Impuesto sobre la Renta de no Residentes",
+        "observaciones": "",
+        "tema": "TPF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T12:20:20.174Z",
+        "updated": "2026-05-07T12:20:20.175Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 447,
+    "fields": {
+        "uuid_sistema": "a9d5e04e-9931-464e-8686-c61700755d4a",
+        "nombre_sistema": "Caja Depósitos",
+        "organismo": 37894,
+        "codigo": "CDEPOSITO",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Constitución de Garantías en Metálico / Depósitos",
+        "observaciones": "",
+        "tema": "TPF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "UNK",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T12:23:03.849Z",
+        "updated": "2026-05-07T12:23:03.849Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 448,
+    "fields": {
+        "uuid_sistema": "c96f3c74-c28b-4426-8dfd-970697737796",
+        "nombre_sistema": "Intercambio ficheros cuaderno 34 y 42 con entidades bancarias",
+        "organismo": 37894,
+        "codigo": "EDITRAN",
+        "url": null,
+        "descripcion": "Intercambio de documentación electrónica con entidades bancarias",
+        "finalidad": "Intercambio seguro de ficheros del cuaderno 34 y 42 con entidades bancarias para la ejecución de pagos y embargos",
+        "observaciones": "",
+        "tema": "TPF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T12:25:51.352Z",
+        "updated": "2026-05-07T12:25:51.352Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 449,
+    "fields": {
+        "uuid_sistema": "e26bd95c-93c6-44ca-abb9-bb4a9bf9964e",
+        "nombre_sistema": "Embargos",
+        "organismo": 37894,
+        "codigo": "EMBARGOS",
+        "url": null,
+        "descripcion": "Gestión de Embargos. Aplicación desarrollada por Grecasa.",
+        "finalidad": "Gestión de Embargos AAPP.\r\n\r\nAplicación desarrollada por Grecasa",
+        "observaciones": "**GRECASA** (Gestión Recaudatoria de Canarias, S.A)  es una empresa pública de la Comunidad Autónoma de Canarias, constituyendo su objeto social las actividades de asistencia técnica, asesoramiento, consultoría y prestación o gestión de servicios en materia tributaria y de recaudación.\r\n\r\n- [http://www.grecasa.org/](http://www.grecasa.org/)",
+        "tema": "TPF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T13:23:10.819Z",
+        "updated": "2026-05-07T13:23:10.819Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 450,
+    "fields": {
+        "uuid_sistema": "b5b5731c-96f1-4514-8ecd-b13dc0e8d036",
+        "nombre_sistema": "Modelos AEAT",
+        "organismo": 37894,
+        "codigo": "MODELOS_AEAT",
+        "url": null,
+        "descripcion": "Gestión de Modelos Tributarios 347 y 190",
+        "finalidad": "Aplicación para la Gestión de Modelos Tributarios (Modelos 347 y 190)",
+        "observaciones": "",
+        "tema": "TPF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T13:35:04.382Z",
+        "updated": "2026-05-07T13:35:04.382Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 451,
+    "fields": {
+        "uuid_sistema": "4943f5f6-6df1-4f72-8100-4b84aa17abc6",
+        "nombre_sistema": "Pagos facturas y depositos",
+        "organismo": 37894,
+        "codigo": "PAGOS",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Nuevas consultas sede de pagos, facturas y depósitos de la sede",
+        "observaciones": "",
+        "tema": "TPF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "UNK",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T13:39:29.532Z",
+        "updated": "2026-05-07T13:39:29.532Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 452,
+    "fields": {
+        "uuid_sistema": "6e5ec8cb-954e-406f-88f9-4411aa139fc4",
+        "nombre_sistema": "PICCAC",
+        "organismo": 37894,
+        "codigo": "PICCAC",
+        "url": null,
+        "descripcion": "Gestión de deuda",
+        "finalidad": "Aplicación para Contraído Previo (gestión de las deudas tributarias antiguas y no tributarias), Fiscalización antigua (SICOIN), Clasificación de empresas (CLAEMP) y consulta histórica (1988-2009) de información económico-financiera de la APCAC",
+        "observaciones": "",
+        "tema": "TPF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T13:43:17.597Z",
+        "updated": "2026-05-07T13:43:17.597Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 453,
+    "fields": {
+        "uuid_sistema": "3cf3d5fe-a73e-4cf2-9b2e-d77305dd7e8f",
+        "nombre_sistema": "Sociedades de garantía recíproca",
+        "organismo": 37894,
+        "codigo": "SISGAR",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Sistema de información para la gestión de la información de las sociedades de garantía recíproca de Canarias.",
+        "observaciones": "",
+        "tema": "TPF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T13:47:30.519Z",
+        "updated": "2026-05-07T13:47:30.519Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 454,
+    "fields": {
+        "uuid_sistema": "32e7abc1-80ac-499c-ac73-7d5736d0715c",
+        "nombre_sistema": "TayA",
+        "organismo": 37894,
+        "codigo": "TAYA",
+        "url": null,
+        "descripcion": "Gestión de Tesorería",
+        "finalidad": "Aplicación de Gestión de Tesorería. Instancia para cuentas de Gobierno",
+        "observaciones": "",
+        "tema": "TPF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T13:52:22.887Z",
+        "updated": "2026-05-07T13:52:22.887Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 455,
+    "fields": {
+        "uuid_sistema": "3b6e48db-1e61-420f-b8db-e3799a0d0e3e",
+        "nombre_sistema": "IAUDIT",
+        "organismo": 37894,
+        "codigo": "IAUDIT",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Aplicación de control financiero y auditoría del sector público",
+        "observaciones": "",
+        "tema": "TPF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T13:59:21.064Z",
+        "updated": "2026-05-07T13:59:21.064Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 456,
+    "fields": {
+        "uuid_sistema": "f039b1ea-486f-4a2f-a3d7-d6ca53fc7865",
+        "nombre_sistema": "Documenta Hacienda",
+        "organismo": 42086,
+        "codigo": "DOCUMENTA_HACIENDA",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Gestor de documentación / wiki del Servicio de Informática en BookStack",
+        "observaciones": "",
+        "tema": "UNK",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T14:02:44.362Z",
+        "updated": "2026-05-07T14:02:44.362Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 457,
+    "fields": {
+        "uuid_sistema": "9dc6e361-d205-4330-8d9d-4ee07a6b6bfc",
+        "nombre_sistema": "Ayudas económicas de carácter de emergencia destrucción total La Palma - Servicio de promoción privada",
+        "organismo": 37152,
+        "codigo": "AYUDASVVDALAPALMA",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Ayudas económicas de carácter de emergencia destrucción total La Palma - Servicio de promoción privada",
+        "observaciones": "",
+        "tema": "VIV",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T14:27:18.021Z",
+        "updated": "2026-05-07T14:31:54.564Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 459,
+    "fields": {
+        "uuid_sistema": "29792122-b531-4cac-9196-17b0dec129e4",
+        "nombre_sistema": "Gestión cambio de titularidad promoción publica",
+        "organismo": 37152,
+        "codigo": "TITULARIDAD",
+        "url": null,
+        "descripcion": "Gestionar el cambio de titularidad promoción publica",
+        "finalidad": "Gestionar el cambio de titularidad \r\npromoción publica",
+        "observaciones": "",
+        "tema": "VIV",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T14:51:27.809Z",
+        "updated": "2026-05-07T14:51:27.809Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 460,
+    "fields": {
+        "uuid_sistema": "3cdfd909-c3f9-4891-81ba-d23ed0741d6e",
+        "nombre_sistema": "Ayudas al Alquiler de Vivienda por Covid19",
+        "organismo": 37152,
+        "codigo": "SITA_COVID",
+        "url": null,
+        "descripcion": "Ayudas al Alquiler de Vivienda por Covid19",
+        "finalidad": "Ayudas al Alquiler de Vivienda por Covid19",
+        "observaciones": "http://www.gobiernodecanarias.org/boc/2009/068/001.html",
+        "tema": "VIV",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T15:28:59.456Z",
+        "updated": "2026-05-07T15:30:09.849Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 461,
+    "fields": {
+        "uuid_sistema": "76c1cd16-d276-4b8f-a972-417079643b7a",
+        "nombre_sistema": "Ayudas de Vivienda por Vulnerabilidad Sobrevenida",
+        "organismo": 37152,
+        "codigo": "SITA_VULNERA",
+        "url": null,
+        "descripcion": "Ayudas de Vivienda por Vulnerabilidad Sobrevenida",
+        "finalidad": "Ayudas de Vivienda por Vulnerabilidad Sobrevenida",
+        "observaciones": "",
+        "tema": "VIV",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T15:32:09.612Z",
+        "updated": "2026-05-07T15:32:09.612Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 462,
+    "fields": {
+        "uuid_sistema": "b7665c73-8e78-4939-91df-be2edc78e351",
+        "nombre_sistema": "Subvención directa destinada a combatir la despoblación del medio rural del Plan de Vivienda de Canarias.FECAM",
+        "organismo": 37152,
+        "codigo": "PLATEA_FECAM",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Subvención directa destinada a combatir la despoblación del medio rural del Plan de Vivienda de Canarias.FECAM",
+        "observaciones": "https://www.gobiernodecanarias.org/vivienda/temas/Plan_de_Vivienda/",
+        "tema": "VIV",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T15:42:05.597Z",
+        "updated": "2026-05-07T15:42:05.597Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 463,
+    "fields": {
+        "uuid_sistema": "6630e53c-294d-4cec-b7c7-bec0a8020200",
+        "nombre_sistema": "Fondos Europeos - Programas del 1 al 6",
+        "organismo": 37152,
+        "codigo": "PLATEA_FONDOS_EUROPEOS",
+        "url": null,
+        "descripcion": "Ayudas para la eficiencia energética de las viviendas en nueva construcción o ya construidas",
+        "finalidad": "Ayudas para la eficiencia energética de las viviendas en nueva construcción o ya construidas",
+        "observaciones": "- Real Decreto 853/2021, de 5 de octubre, por el que se regulan los programas de ayuda en materia de rehabilitación residencial y vivienda social del Plan de Recuperación, Transformación y Resiliencia.\r\n\r\n- Real Decreto 903/2022, de 25 de octubre, por el que se modifica el Real Decreto 42/2022, de 18 de enero, por el que se regula el Bono Alquiler Joven y el Plan Estatal para el acceso a la vivienda 2022-2025\r\n\r\n- Real Decreto 106/2018, de 9 de marzo, por el que se regula el Plan Estatal de Vivienda 2018-2021\r\n\r\n- Real Decreto 853/2021, de 5 de octubre, por el que se regulan los programas de ayuda en materia de rehabilitación residencial y vivienda social del Plan de Recuperación, Transformación y Resiliencia.",
+        "tema": "VIV",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "F05",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T15:46:28.254Z",
+        "updated": "2026-05-07T15:46:28.254Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 464,
+    "fields": {
+        "uuid_sistema": "b1780fd7-b694-4956-af2c-5ce22894afec",
+        "nombre_sistema": "Gestión contrato de arrendamiento o acceso diferido de vivienda de promoción pública propiedad del ICV",
+        "organismo": 37152,
+        "codigo": "GESTCONTRATO",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Gestión contrato de arrendamiento o acceso diferido de vivienda de promoción pública propiedad del ICV",
+        "observaciones": "https://www.gobiernodecanarias.org/libroazul/pdf/57403.pdf",
+        "tema": "VIV",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T15:51:50.883Z",
+        "updated": "2026-05-07T15:53:07.911Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 465,
+    "fields": {
+        "uuid_sistema": "a913e7f1-0566-4ad7-a9df-000a7cc807bc",
+        "nombre_sistema": "Gestión de archivo eSPERIA",
+        "organismo": 42119,
+        "codigo": "ESPERIA",
+        "url": null,
+        "descripcion": "Sistema de archivado electrónico",
+        "finalidad": "Aplicación que da soporte al sistema de gestión documental integral de la Comunidad Autónoma de Canarias, cuya misión principal es garantizar el correcto tratamiento, la conservación y la accesibilidad de los documentos y expedientes en fase de archivo en todos sus soportes: nativos digitales, conversos y en papel. Cumple las funciones de Archivo Electrónico Único y Archivo General Digital.",
+        "observaciones": "https://www.gobiernodecanarias.org/administracionespublicas/modernizacion/archivos/legislacion.html",
+        "tema": "TRD",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T16:01:13.828Z",
+        "updated": "2026-05-07T16:10:07.335Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 466,
+    "fields": {
+        "uuid_sistema": "bdea0d08-c8fc-4a58-89a7-417c8efbe9c7",
+        "nombre_sistema": "Registro de animales peligrosos",
+        "organismo": 42122,
+        "codigo": "REGANIMALES",
+        "url": null,
+        "descripcion": "Registro de animales potencialmente peligrosos",
+        "finalidad": "Disponer de un sistema de identificación, localización y censo de todos los animales PP domésticos o de compañía o utilizados como tales, clasificados por especies, que residan en la CAC. Recoger la relación de las personas adiestradoras en posesión de certificados de capacitación, de los centros o establecimientos dedicados al adiestramiento. Tener constancia de los datos relativos a infracciones cometidas y sanciones impuestas a las personas tenedoras.",
+        "observaciones": "Arts. 11 al 17 del Decreto 30/2018, de 5 de marzo, por el que se regula el régimen jurídico de la tenencia de animales potencialmente peligrosos en la Comunidad Autónoma de Canarias (BOC n.º 51, de 13-03-2018).\r\n\r\nNo aparece en Juriscán.",
+        "tema": "SEG",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "F11",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T19:17:44.122Z",
+        "updated": "2026-05-07T19:17:44.122Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 467,
+    "fields": {
+        "uuid_sistema": "d410fed3-6a56-4edb-abf2-3a55c6a69550",
+        "nombre_sistema": "Ayudas de acción social",
+        "organismo": 42093,
+        "codigo": "AYASOC",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Gestión de las ayudas de acción social de los empleados públicos",
+        "observaciones": "Artículo 80.- Competencias en materia de acción social.\r\n\r\nEn materia de acción social, corresponde a la Dirección General de la Función Pública:\r\n\r\na) La elaboración y propuesta de aprobación de las bases que han de regir las convocatorias de los procedimientos de reconocimiento de ayudas de acción social, la coordinación entre los órganos gestores y el ejercicio de las competencias que en la materia le atribuya la ley de presupuestos generales de la Comunidad Autónoma de Canarias.\r\n\r\nb) La formulación al Consejero o Consejera de la propuesta de distribución de los fondos de acción social anualmente integrados en los Presupuestos Generales de la Comunidad Autónoma, consignados en la sección 19 con destino al personal de la Administración Pública de la Comunidad Autónoma y sus organismos públicos.",
+        "tema": "TRD",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "F06",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T19:47:08.334Z",
+        "updated": "2026-05-07T19:50:17.990Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 468,
+    "fields": {
+        "uuid_sistema": "bff0cff5-696e-43c9-96ab-46790df78de7",
+        "nombre_sistema": "Libro Azul gestión",
+        "organismo": 42121,
+        "codigo": "LIBRO_AZUL",
+        "url": null,
+        "descripcion": "",
+        "finalidad": "Gestión del compendio de leyes y reglamentos de la Comunidad Autónoma de Canarias.",
+        "observaciones": "Reglamento Orgánico de la Consejería de Presidencia, Administraciones Públicas, Justicia y Seguridad, aprobado por Decreto 108/2024, de 31 de julio\r\n(https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=79417)\r\n\r\nLey 12/2014, 26 diciembre, de transparencia y de acceso a la información pública \r\n(https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=71248)\r\n\r\nLey 4/2023, de 23 de marzo, de la Presidencia y del Gobierno de Canarias \r\n(https://www3.gobiernodecanarias.org/juriscan/ficha.jsp?id=79226)",
+        "tema": "TRD",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-05-07T19:54:01.233Z",
+        "updated": "2026-05-07T20:04:28.630Z",
         "archived": null
     }
 },
@@ -11092,15 +11917,29 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "aaloperj",
+    "fields": {
+        "email": "aaloperj@gobiernodecanarias.org",
+        "nombre": "Amilcar",
+        "apellidos": "Alonso Pérez",
+        "organismo": 39060,
+        "empresa": null,
+        "f_alta": "2026-05-07T13:15:48.310Z",
+        "f_cambio": "2026-05-07T13:15:48.310Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "aartrodc",
     "fields": {
         "email": "aartrodc@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Alejandro",
+        "apellidos": "Arteaga Rodríguez",
+        "organismo": 42112,
         "empresa": null,
         "f_alta": "2026-05-03T20:02:54.316Z",
-        "f_cambio": "2026-05-03T20:02:54.316Z",
+        "f_cambio": "2026-05-05T08:07:30.144Z",
         "f_baja": null
     }
 },
@@ -11109,12 +11948,12 @@
     "pk": "aaznpal",
     "fields": {
         "email": "aaznpal@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Ana",
+        "apellidos": "Aznar Palenzuela",
+        "organismo": 42119,
         "empresa": null,
         "f_alta": "2026-05-03T19:20:20.511Z",
-        "f_cambio": "2026-05-03T19:20:20.511Z",
+        "f_cambio": "2026-05-05T10:06:38.326Z",
         "f_baja": null
     }
 },
@@ -11288,6 +12127,20 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "aherhoz",
+    "fields": {
+        "email": "aherhoz@gobiernodecanarias.org",
+        "nombre": "Antonio",
+        "apellidos": "Hernández de la Hoz",
+        "organismo": 37152,
+        "empresa": null,
+        "f_alta": "2026-05-07T14:44:27.776Z",
+        "f_cambio": "2026-05-07T14:44:27.776Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "aherver",
     "fields": {
         "email": "aherver@gobiernodecanarias.org",
@@ -11362,11 +12215,11 @@
     "fields": {
         "email": "alopperj@gobiernodecanarias.org",
         "nombre": "*",
-        "apellidos": "*",
+        "apellidos": "_",
         "organismo": 39060,
         "empresa": null,
         "f_alta": "2026-04-26T17:25:48.382Z",
-        "f_cambio": "2026-04-26T17:25:48.382Z",
+        "f_cambio": "2026-05-07T13:15:04.552Z",
         "f_baja": null
     }
 },
@@ -11423,6 +12276,20 @@
         "empresa": null,
         "f_alta": "2026-02-12T12:14:24.181Z",
         "f_cambio": "2026-02-12T12:14:24.181Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "anarodriguez@essscan.es",
+    "fields": {
+        "email": "anarodriguez@essscan.es",
+        "nombre": "Ana María",
+        "apellidos": "Rodríguez",
+        "organismo": null,
+        "empresa": 4,
+        "f_alta": "2026-05-07T10:30:36.313Z",
+        "f_cambio": "2026-05-07T10:30:36.313Z",
         "f_baja": null
     }
 },
@@ -11515,12 +12382,12 @@
     "pk": "atejmon",
     "fields": {
         "email": "atejmon@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Ana Esperanza",
+        "apellidos": "Tejera Monzón",
+        "organismo": 6652,
         "empresa": null,
         "f_alta": "2026-05-03T20:02:57.225Z",
-        "f_cambio": "2026-05-03T20:02:57.225Z",
+        "f_cambio": "2026-05-05T09:17:58.143Z",
         "f_baja": null
     }
 },
@@ -11529,12 +12396,12 @@
     "pk": "atorlan",
     "fields": {
         "email": "atorlan@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Álvaro Luis",
+        "apellidos": "Torres Lana",
+        "organismo": 6636,
         "empresa": null,
         "f_alta": "2026-05-03T20:02:59.549Z",
-        "f_cambio": "2026-05-03T20:02:59.549Z",
+        "f_cambio": "2026-05-05T07:42:52.283Z",
         "f_baja": null
     }
 },
@@ -11571,12 +12438,12 @@
     "pk": "avallop",
     "fields": {
         "email": "avallop@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Alfredo Eugenio",
+        "apellidos": "del Valle López",
+        "organismo": 6594,
         "empresa": null,
         "f_alta": "2026-05-03T20:03:09.858Z",
-        "f_cambio": "2026-05-03T20:03:09.858Z",
+        "f_cambio": "2026-05-07T13:01:19.838Z",
         "f_baja": null
     }
 },
@@ -11627,12 +12494,12 @@
     "pk": "bgarjor",
     "fields": {
         "email": "bgarjor@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Beatriz",
+        "apellidos": "García de Celis Jorge",
+        "organismo": 6652,
         "empresa": null,
         "f_alta": "2026-05-03T20:03:39.919Z",
-        "f_cambio": "2026-05-03T20:03:39.919Z",
+        "f_cambio": "2026-05-06T14:23:01.344Z",
         "f_baja": null
     }
 },
@@ -11641,12 +12508,12 @@
     "pk": "bgonmar",
     "fields": {
         "email": "bgonmar@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Beatriz Candelaria",
+        "apellidos": "González Marrero",
+        "organismo": 42096,
         "empresa": null,
         "f_alta": "2026-05-03T19:22:21.151Z",
-        "f_cambio": "2026-05-03T19:22:21.151Z",
+        "f_cambio": "2026-05-05T10:03:54.812Z",
         "f_baja": null
     }
 },
@@ -11697,12 +12564,12 @@
     "pk": "cacobria",
     "fields": {
         "email": "cacobria@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Carlos Hugo",
+        "apellidos": "Acosta Brito",
+        "organismo": 42119,
         "empresa": null,
         "f_alta": "2026-05-03T18:56:33.390Z",
-        "f_cambio": "2026-05-03T18:56:33.390Z",
+        "f_cambio": "2026-05-06T14:07:30.952Z",
         "f_baja": null
     }
 },
@@ -11739,12 +12606,12 @@
     "pk": "ccruram",
     "fields": {
         "email": "ccruram@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Carmen Delia",
+        "apellidos": "Cruz Ramírez",
+        "organismo": 6652,
         "empresa": null,
         "f_alta": "2026-05-03T20:04:55.650Z",
-        "f_cambio": "2026-05-03T20:04:55.650Z",
+        "f_cambio": "2026-05-05T09:29:51.566Z",
         "f_baja": null
     }
 },
@@ -11753,12 +12620,12 @@
     "pk": "cevocab",
     "fields": {
         "email": "cevocab@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Clara Eugenia",
+        "apellidos": "Évora Cabrera",
+        "organismo": 6636,
         "empresa": null,
         "f_alta": "2026-05-03T20:04:58.435Z",
-        "f_cambio": "2026-05-03T20:04:58.435Z",
+        "f_cambio": "2026-05-05T08:04:21.214Z",
         "f_baja": null
     }
 },
@@ -11823,12 +12690,12 @@
     "pk": "cherroi",
     "fields": {
         "email": "cherroi@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Carolina",
+        "apellidos": "Hernández Roig",
+        "organismo": 42119,
         "empresa": null,
         "f_alta": "2026-05-03T19:19:32.065Z",
-        "f_cambio": "2026-05-03T19:19:32.065Z",
+        "f_cambio": "2026-05-05T09:28:40.186Z",
         "f_baja": null
     }
 },
@@ -11852,11 +12719,11 @@
     "fields": {
         "email": "cpargar@gobiernodecanarias.org",
         "nombre": "*",
-        "apellidos": "*",
+        "apellidos": "_",
         "organismo": 1,
         "empresa": null,
         "f_alta": "2026-04-27T13:22:36.839Z",
-        "f_cambio": "2026-04-27T13:22:36.839Z",
+        "f_cambio": "2026-05-07T13:12:34.489Z",
         "f_baja": null
     }
 },
@@ -11907,12 +12774,12 @@
     "pk": "cramaco",
     "fields": {
         "email": "cramaco@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Carmen Luisa",
+        "apellidos": "Ramos Acosta",
+        "organismo": 6644,
         "empresa": null,
         "f_alta": "2026-05-03T20:05:03.084Z",
-        "f_cambio": "2026-05-03T20:05:03.084Z",
+        "f_cambio": "2026-05-07T12:42:23.541Z",
         "f_baja": null
     }
 },
@@ -11977,12 +12844,12 @@
     "pk": "ctoscub",
     "fields": {
         "email": "ctoscub@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Carmen Elvira",
+        "apellidos": "Toste Cubas",
+        "organismo": 6644,
         "empresa": null,
         "f_alta": "2026-05-03T20:06:47.086Z",
-        "f_cambio": "2026-05-03T20:06:47.086Z",
+        "f_cambio": "2026-05-05T09:27:45.340Z",
         "f_baja": null
     }
 },
@@ -12005,12 +12872,12 @@
     "pk": "dcammel",
     "fields": {
         "email": "dcammel@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Dámaso",
+        "apellidos": "Campos Melián",
+        "organismo": 6644,
         "empresa": null,
         "f_alta": "2026-05-03T20:06:52.222Z",
-        "f_cambio": "2026-05-03T20:06:52.222Z",
+        "f_cambio": "2026-05-05T07:39:04.743Z",
         "f_baja": null
     }
 },
@@ -12019,12 +12886,26 @@
     "pk": "dfernak",
     "fields": {
         "email": "dfernak@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Dulce María",
+        "apellidos": "Fernández Nakoura",
+        "organismo": 42083,
         "empresa": null,
         "f_alta": "2026-05-03T20:07:00.478Z",
-        "f_cambio": "2026-05-03T20:07:00.478Z",
+        "f_cambio": "2026-05-05T13:28:26.752Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "diego.moguel@essscan.es",
+    "fields": {
+        "email": "diego.moguel@essscan.es",
+        "nombre": "Diego",
+        "apellidos": "Moguel",
+        "organismo": null,
+        "empresa": 4,
+        "f_alta": "2026-05-07T10:31:01.569Z",
+        "f_cambio": "2026-05-07T10:31:01.569Z",
         "f_baja": null
     }
 },
@@ -12100,6 +12981,20 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "edenis",
+    "fields": {
+        "email": "edenis@gobiernodecanarias.org",
+        "nombre": "Elisa",
+        "apellidos": "de Herrera Nistal",
+        "organismo": 37894,
+        "empresa": null,
+        "f_alta": "2026-05-07T13:49:30.927Z",
+        "f_cambio": "2026-05-07T13:49:30.927Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "eferagu",
     "fields": {
         "email": "eferagu@gobiernodecanarias.org",
@@ -12131,12 +13026,12 @@
     "pk": "ehergony",
     "fields": {
         "email": "ehergony@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Elizabeth",
+        "apellidos": "Hernández González",
+        "organismo": 42083,
         "empresa": null,
         "f_alta": "2026-05-03T20:07:02.753Z",
-        "f_cambio": "2026-05-03T20:07:02.753Z",
+        "f_cambio": "2026-05-05T08:00:43.304Z",
         "f_baja": null
     }
 },
@@ -12145,12 +13040,12 @@
     "pk": "elopvil",
     "fields": {
         "email": "elopvil@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Elena",
+        "apellidos": "López Villarubia",
+        "organismo": 6636,
         "empresa": null,
         "f_alta": "2026-05-03T20:08:40.638Z",
-        "f_cambio": "2026-05-03T20:08:40.638Z",
+        "f_cambio": "2026-05-05T07:59:19.220Z",
         "f_baja": null
     }
 },
@@ -12159,12 +13054,12 @@
     "pk": "emorfar",
     "fields": {
         "email": "emorfar@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Elizabeth",
+        "apellidos": "Mereau Faria",
+        "organismo": 42093,
         "empresa": null,
         "f_alta": "2026-05-03T19:20:52.664Z",
-        "f_cambio": "2026-05-03T19:20:52.664Z",
+        "f_cambio": "2026-05-05T09:15:53.263Z",
         "f_baja": null
     }
 },
@@ -12173,12 +13068,12 @@
     "pk": "epuecas",
     "fields": {
         "email": "epuecas@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Alberto Eugenio",
+        "apellidos": "Puerta del Castillo",
+        "organismo": 6687,
         "empresa": null,
         "f_alta": "2026-05-03T19:35:21.333Z",
-        "f_cambio": "2026-05-03T19:35:21.333Z",
+        "f_cambio": "2026-05-05T09:50:34.910Z",
         "f_baja": null
     }
 },
@@ -12425,12 +13320,12 @@
     "pk": "fmatbat",
     "fields": {
         "email": "fmatbat@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Francisco",
+        "apellidos": "Mateos Batista",
+        "organismo": 42112,
         "empresa": null,
         "f_alta": "2026-05-03T20:12:42.733Z",
-        "f_cambio": "2026-05-03T20:12:42.733Z",
+        "f_cambio": "2026-05-05T09:37:19.085Z",
         "f_baja": null
     }
 },
@@ -12604,6 +13499,20 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "ignaciodepaz@essscan.es",
+    "fields": {
+        "email": "ignaciodepaz@essscan.es",
+        "nombre": "Ignacio",
+        "apellidos": "de Paz",
+        "organismo": null,
+        "empresa": 4,
+        "f_alta": "2026-05-07T10:29:48.671Z",
+        "f_cambio": "2026-05-07T10:29:48.671Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "igoncar",
     "fields": {
         "email": "igoncar@gobiernodecanarias.org",
@@ -12621,12 +13530,12 @@
     "pk": "iloppuep",
     "fields": {
         "email": "iloppuep@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Ignacio Carlos",
+        "apellidos": "López Puech",
+        "organismo": 6687,
         "empresa": null,
         "f_alta": "2026-05-03T19:35:26.698Z",
-        "f_cambio": "2026-05-03T19:35:26.698Z",
+        "f_cambio": "2026-05-05T09:58:42.586Z",
         "f_baja": null
     }
 },
@@ -12720,11 +13629,25 @@
     "fields": {
         "email": "jcascue@gobiernodecanarias.org",
         "nombre": "*",
-        "apellidos": "*",
+        "apellidos": "_",
         "organismo": 1,
         "empresa": null,
         "f_alta": "2026-05-03T20:14:31.923Z",
-        "f_cambio": "2026-05-03T20:14:31.923Z",
+        "f_cambio": "2026-05-07T13:06:48.839Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "jcascuy",
+    "fields": {
+        "email": "jcascuy@gobiernodecanarias.org",
+        "nombre": "Javier",
+        "apellidos": "Casado Cuyas",
+        "organismo": 42109,
+        "empresa": null,
+        "f_alta": "2026-05-07T13:04:06.930Z",
+        "f_cambio": "2026-05-07T13:04:06.930Z",
         "f_baja": null
     }
 },
@@ -12733,12 +13656,12 @@
     "pk": "jemarrod",
     "fields": {
         "email": "jemarrod@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Jesús",
+        "apellidos": "Martín de Bernardo Rodríguez",
+        "organismo": 6594,
         "empresa": null,
         "f_alta": "2026-05-03T19:35:24.252Z",
-        "f_cambio": "2026-05-03T19:35:24.252Z",
+        "f_cambio": "2026-05-05T13:30:33.412Z",
         "f_baja": null
     }
 },
@@ -12775,12 +13698,12 @@
     "pk": "jferqui",
     "fields": {
         "email": "jferqui@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "José Damián",
+        "apellidos": "Ferrer Quintana",
+        "organismo": 42093,
         "empresa": null,
         "f_alta": "2026-05-03T19:24:24.458Z",
-        "f_cambio": "2026-05-03T19:24:24.458Z",
+        "f_cambio": "2026-05-05T09:52:47.558Z",
         "f_baja": null
     }
 },
@@ -12804,11 +13727,11 @@
     "fields": {
         "email": "jgaralb@gobiernodecanarias.org",
         "nombre": "*",
-        "apellidos": "*",
+        "apellidos": "_",
         "organismo": 1,
         "empresa": null,
         "f_alta": "2026-05-03T19:19:32.092Z",
-        "f_cambio": "2026-05-03T19:19:32.092Z",
+        "f_cambio": "2026-05-07T13:10:31.754Z",
         "f_baja": null
     }
 },
@@ -12968,15 +13891,29 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "jleoman",
+    "fields": {
+        "email": "jleoman@gobiernodecanarias.org",
+        "nombre": "José Francisco",
+        "apellidos": "León Mañas",
+        "organismo": 42088,
+        "empresa": null,
+        "f_alta": "2026-05-07T12:30:09.884Z",
+        "f_cambio": "2026-05-07T12:30:09.884Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "jlobgon",
     "fields": {
         "email": "jlobgon@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Javier",
+        "apellidos": "Lobato González",
+        "organismo": 6687,
         "empresa": null,
         "f_alta": "2026-05-03T20:14:37.239Z",
-        "f_cambio": "2026-05-03T20:14:37.239Z",
+        "f_cambio": "2026-05-05T09:39:36.686Z",
         "f_baja": null
     }
 },
@@ -13027,12 +13964,12 @@
     "pk": "jmenper",
     "fields": {
         "email": "jmenper@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Juan Manuel",
+        "apellidos": "Méndez Pérez",
+        "organismo": 6636,
         "empresa": null,
         "f_alta": "2026-05-03T20:14:44.522Z",
-        "f_cambio": "2026-05-03T20:14:44.522Z",
+        "f_cambio": "2026-05-07T13:11:40.093Z",
         "f_baja": null
     }
 },
@@ -13097,12 +14034,12 @@
     "pk": "jpermir",
     "fields": {
         "email": "jpermir@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "José",
+        "apellidos": "Pereira Miragaia",
+        "organismo": 42082,
         "empresa": null,
         "f_alta": "2026-05-03T20:14:46.850Z",
-        "f_cambio": "2026-05-03T20:14:46.850Z",
+        "f_cambio": "2026-05-05T09:16:54.267Z",
         "f_baja": null
     }
 },
@@ -13290,6 +14227,34 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "juvenrod",
+    "fields": {
+        "email": "juvenrod@gobiernodecanarias.org",
+        "nombre": "Juan",
+        "apellidos": "Ventura Rodríguez",
+        "organismo": 41567,
+        "empresa": null,
+        "f_alta": "2026-05-07T19:49:50.714Z",
+        "f_cambio": "2026-05-07T19:49:50.714Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "ksangut",
+    "fields": {
+        "email": "ksangut@gobiernodecanarias.org",
+        "nombre": "Kevin",
+        "apellidos": "Sanchéz Gutiérrez",
+        "organismo": 37894,
+        "empresa": null,
+        "f_alta": "2026-05-07T13:31:39.257Z",
+        "f_cambio": "2026-05-07T13:31:39.257Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "lbarqui",
     "fields": {
         "email": "lbarqui@gobiernodecanarias.org",
@@ -13346,6 +14311,20 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "llopart",
+    "fields": {
+        "email": "llopart@gobiernodecanarias.org",
+        "nombre": "Luisa Margarita",
+        "apellidos": "López Arteaga",
+        "organismo": 42122,
+        "empresa": null,
+        "f_alta": "2026-05-07T19:22:39.222Z",
+        "f_cambio": "2026-05-07T19:22:39.222Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "lrodfaln",
     "fields": {
         "email": "lrodfaln@gobiernodecanarias.org",
@@ -13363,12 +14342,12 @@
     "pk": "lsalvaz",
     "fields": {
         "email": "lsalvaz@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Lucia",
+        "apellidos": "Salas Vázquez",
+        "organismo": 6679,
         "empresa": null,
         "f_alta": "2026-05-03T20:14:54.219Z",
-        "f_cambio": "2026-05-03T20:14:54.219Z",
+        "f_cambio": "2026-05-05T09:42:44.213Z",
         "f_baja": null
     }
 },
@@ -13391,12 +14370,12 @@
     "pk": "lsanrodf",
     "fields": {
         "email": "lsanrodf@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Lidia Esther",
+        "apellidos": "Sánchez Rodríguez",
+        "organismo": 6652,
         "empresa": null,
         "f_alta": "2026-05-03T20:14:58.569Z",
-        "f_cambio": "2026-05-03T20:14:58.569Z",
+        "f_cambio": "2026-05-05T09:38:14.567Z",
         "f_baja": null
     }
 },
@@ -13699,12 +14678,12 @@
     "pk": "mherartp",
     "fields": {
         "email": "mherartp@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Manuel Francisco",
+        "apellidos": "Herrera Artiles",
+        "organismo": 6636,
         "empresa": null,
         "f_alta": "2026-05-03T20:15:02.589Z",
-        "f_cambio": "2026-05-03T20:15:02.589Z",
+        "f_cambio": "2026-05-07T12:39:22.635Z",
         "f_baja": null
     }
 },
@@ -13752,6 +14731,20 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "mleogonk",
+    "fields": {
+        "email": "mleogonk@gobiernodecanarias.org",
+        "nombre": "María Lourdes",
+        "apellidos": "León González",
+        "organismo": 41545,
+        "empresa": null,
+        "f_alta": "2026-05-07T19:24:52.282Z",
+        "f_cambio": "2026-05-07T19:24:52.282Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "mlomaras",
     "fields": {
         "email": "mlomaras@gobiernodecanarias.org",
@@ -13766,6 +14759,20 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "mmarbar",
+    "fields": {
+        "email": "mmarbar@gobiernodecanarias.org",
+        "nombre": "María Isabel",
+        "apellidos": "Marante Barreto",
+        "organismo": 41545,
+        "empresa": null,
+        "f_alta": "2026-05-06T15:18:19.752Z",
+        "f_cambio": "2026-05-07T12:41:01.400Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "mmarferc",
     "fields": {
         "email": "mmarferc@gobiernodecanarias.org",
@@ -13775,6 +14782,20 @@
         "empresa": null,
         "f_alta": "2025-10-06T12:56:11.542Z",
         "f_cambio": "2025-10-06T12:56:11.542Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mmarmarf",
+    "fields": {
+        "email": "mmarmarf@gobiernodecanarias.org",
+        "nombre": "María Pilar",
+        "apellidos": "Martín Martín",
+        "organismo": 42121,
+        "empresa": null,
+        "f_alta": "2026-05-07T19:57:17.557Z",
+        "f_cambio": "2026-05-07T19:58:20.349Z",
         "f_baja": null
     }
 },
@@ -13965,12 +14986,12 @@
     "pk": "mprigam",
     "fields": {
         "email": "mprigam@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "María Elena",
+        "apellidos": "Prieto Gámez",
+        "organismo": 42093,
         "empresa": null,
         "f_alta": "2026-05-03T19:18:31.576Z",
-        "f_cambio": "2026-05-03T19:18:31.576Z",
+        "f_cambio": "2026-05-05T07:58:03.946Z",
         "f_baja": null
     }
 },
@@ -14064,11 +15085,11 @@
     "fields": {
         "email": "mromban@gobiernodecanarias.org",
         "nombre": "*",
-        "apellidos": "*",
+        "apellidos": "_",
         "organismo": 1,
         "empresa": null,
         "f_alta": "2026-05-03T21:11:55.381Z",
-        "f_cambio": "2026-05-03T21:11:55.381Z",
+        "f_cambio": "2026-05-07T13:18:19.349Z",
         "f_baja": null
     }
 },
@@ -14077,12 +15098,12 @@
     "pk": "mromcash",
     "fields": {
         "email": "mromcash@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Montserrat",
+        "apellidos": "Román Casamartina",
+        "organismo": 42141,
         "empresa": null,
         "f_alta": "2026-05-03T19:24:10.038Z",
-        "f_cambio": "2026-05-03T19:24:10.038Z",
+        "f_cambio": "2026-05-05T09:44:59.033Z",
         "f_baja": null
     }
 },
@@ -14091,12 +15112,12 @@
     "pk": "mrrodpere",
     "fields": {
         "email": "mrrodpere@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "María Ángeles",
+        "apellidos": "Rodríguez Pérez",
+        "organismo": 42156,
         "empresa": null,
         "f_alta": "2026-05-03T19:22:14.447Z",
-        "f_cambio": "2026-05-03T19:22:14.447Z",
+        "f_cambio": "2026-05-05T13:27:10.619Z",
         "f_baja": null
     }
 },
@@ -14119,12 +15140,12 @@
     "pk": "msersanf",
     "fields": {
         "email": "msersanf@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "María Luisa",
+        "apellidos": "Serrano Sánchez",
+        "organismo": 6652,
         "empresa": null,
         "f_alta": "2026-05-03T20:15:22.919Z",
-        "f_cambio": "2026-05-03T20:15:22.919Z",
+        "f_cambio": "2026-05-05T09:33:08.233Z",
         "f_baja": null
     }
 },
@@ -14200,6 +15221,20 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "mtherbor",
+    "fields": {
+        "email": "mtherbor@gobiernodecanarias.org",
+        "nombre": "María Teresa",
+        "apellidos": "Hernández Borges",
+        "organismo": 42122,
+        "empresa": null,
+        "f_alta": "2026-05-07T19:26:31.338Z",
+        "f_cambio": "2026-05-07T19:26:31.338Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "mtorher1",
     "fields": {
         "email": "mtorherl@gobiernodecanarias.org",
@@ -14245,12 +15280,12 @@
     "pk": "mvegpri",
     "fields": {
         "email": "mvegpri@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Mariola",
+        "apellidos": "de la Vega Prieto",
+        "organismo": 6687,
         "empresa": null,
         "f_alta": "2026-05-03T20:15:37.091Z",
-        "f_cambio": "2026-05-03T20:15:37.091Z",
+        "f_cambio": "2026-05-05T09:24:58.584Z",
         "f_baja": null
     }
 },
@@ -14259,12 +15294,12 @@
     "pk": "nbanmorw",
     "fields": {
         "email": "nbanmorw@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Nuria",
+        "apellidos": "Bañón Morón",
+        "organismo": 6687,
         "empresa": null,
         "f_alta": "2026-05-03T20:15:51.352Z",
-        "f_cambio": "2026-05-03T20:15:51.353Z",
+        "f_cambio": "2026-05-06T14:03:29.954Z",
         "f_baja": null
     }
 },
@@ -14301,12 +15336,12 @@
     "pk": "nsangil",
     "fields": {
         "email": "nsangil@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Nicolás José",
+        "apellidos": "Santana Gil",
+        "organismo": 6652,
         "empresa": null,
         "f_alta": "2026-05-03T20:17:42.071Z",
-        "f_cambio": "2026-05-03T20:17:42.071Z",
+        "f_cambio": "2026-05-05T10:10:37.902Z",
         "f_baja": null
     }
 },
@@ -14371,12 +15406,12 @@
     "pk": "pagonmora",
     "fields": {
         "email": "pagonmora@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Patricia",
+        "apellidos": "Moreno González",
+        "organismo": 6652,
         "empresa": null,
         "f_alta": "2026-05-03T20:17:45.810Z",
-        "f_cambio": "2026-05-03T20:17:45.810Z",
+        "f_cambio": "2026-05-05T09:51:34.005Z",
         "f_baja": null
     }
 },
@@ -14427,12 +15462,12 @@
     "pk": "pcaroje",
     "fields": {
         "email": "pcaroje@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Patricia",
+        "apellidos": "Carrillo Ojeda",
+        "organismo": 6594,
         "empresa": null,
         "f_alta": "2026-05-03T20:17:49.122Z",
-        "f_cambio": "2026-05-03T20:17:49.122Z",
+        "f_cambio": "2026-05-06T14:09:17.916Z",
         "f_baja": null
     }
 },
@@ -14456,11 +15491,11 @@
     "fields": {
         "email": "pendiente@gobiernodecanarias.org",
         "nombre": "*",
-        "apellidos": "*",
+        "apellidos": "_",
         "organismo": 1,
         "empresa": null,
         "f_alta": "2026-05-03T19:24:21.830Z",
-        "f_cambio": "2026-05-03T19:24:21.830Z",
+        "f_cambio": "2026-05-07T13:00:01.786Z",
         "f_baja": null
     }
 },
@@ -14469,12 +15504,12 @@
     "pk": "pferher",
     "fields": {
         "email": "pferher@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Pablo J.",
+        "apellidos": "Fernández Hernández",
+        "organismo": 42093,
         "empresa": null,
         "f_alta": "2026-05-03T19:21:20.600Z",
-        "f_cambio": "2026-05-03T19:21:20.600Z",
+        "f_cambio": "2026-05-05T10:00:24.347Z",
         "f_baja": null
     }
 },
@@ -14497,12 +15532,12 @@
     "pk": "pgarcar",
     "fields": {
         "email": "pgarcar@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "María Paloma",
+        "apellidos": "García de Carlos",
+        "organismo": 6687,
         "empresa": null,
         "f_alta": "2026-05-03T20:17:55.458Z",
-        "f_cambio": "2026-05-03T20:17:55.458Z",
+        "f_cambio": "2026-05-07T13:08:53.078Z",
         "f_baja": null
     }
 },
@@ -14694,11 +15729,11 @@
     "fields": {
         "email": "rmedsos@gobiernodecanarias.org",
         "nombre": "*",
-        "apellidos": "*",
+        "apellidos": "_",
         "organismo": 1,
         "empresa": null,
         "f_alta": "2026-05-03T18:56:56.380Z",
-        "f_cambio": "2026-05-03T18:56:56.380Z",
+        "f_cambio": "2026-05-07T13:07:59.577Z",
         "f_baja": null
     }
 },
@@ -14721,12 +15756,12 @@
     "pk": "rnegdia",
     "fields": {
         "email": "rnegdia@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Rita María",
+        "apellidos": "Negrín Díaz",
+        "organismo": 6644,
         "empresa": null,
         "f_alta": "2026-05-03T20:18:03.580Z",
-        "f_cambio": "2026-05-03T20:18:03.580Z",
+        "f_cambio": "2026-05-05T09:43:53.146Z",
         "f_baja": null
     }
 },
@@ -14735,12 +15770,12 @@
     "pk": "rperlopf",
     "fields": {
         "email": "rperlopf@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Ricardo Germán",
+        "apellidos": "Pérez López",
+        "organismo": 6644,
         "empresa": null,
         "f_alta": "2026-05-03T20:18:06.767Z",
-        "f_cambio": "2026-05-03T20:18:06.767Z",
+        "f_cambio": "2026-05-07T12:59:03.532Z",
         "f_baja": null
     }
 },
@@ -15057,12 +16092,12 @@
     "pk": "ybarcor",
     "fields": {
         "email": "ybarcor@gobiernodecanarias.org",
-        "nombre": "*",
-        "apellidos": "*",
-        "organismo": 1,
+        "nombre": "Yeray Jacobo",
+        "apellidos": "Barreiro Cortés",
+        "organismo": 42119,
         "empresa": null,
         "f_alta": "2026-05-03T18:56:49.864Z",
-        "f_cambio": "2026-05-03T18:56:49.864Z",
+        "f_cambio": "2026-05-05T09:26:46.366Z",
         "f_baja": null
     }
 },
@@ -15119,6 +16154,20 @@
         "empresa": null,
         "f_alta": "2026-03-04T10:24:57.004Z",
         "f_cambio": "2026-03-04T10:24:57.004Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "zoilofalcon@essscan.es",
+    "fields": {
+        "email": "zoilofalcon@essscan.es",
+        "nombre": "Zoilo",
+        "apellidos": "Falcón",
+        "organismo": null,
+        "empresa": 4,
+        "f_alta": "2026-05-07T10:31:41.644Z",
+        "f_cambio": "2026-05-07T10:31:41.644Z",
         "f_baja": null
     }
 },
@@ -25230,19 +26279,959 @@
     }
 },
 {
+    "model": "sistemas.perfil",
+    "pk": 827,
+    "fields": {
+        "usuario": "mmespad",
+        "cometido": "TEC",
+        "sistema": 434,
+        "f_alta": "2026-05-06T14:30:57.943Z",
+        "f_cambio": "2026-05-06T14:30:57.943Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 828,
+    "fields": {
+        "usuario": "jpaclar",
+        "cometido": "FUN",
+        "sistema": 435,
+        "f_alta": "2026-05-06T15:15:07.421Z",
+        "f_cambio": "2026-05-06T15:15:07.421Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 829,
+    "fields": {
+        "usuario": "csamfer",
+        "cometido": "TEC",
+        "sistema": 435,
+        "f_alta": "2026-05-06T15:15:07.431Z",
+        "f_cambio": "2026-05-06T15:15:07.431Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 830,
+    "fields": {
+        "usuario": "jaldrua",
+        "cometido": "FUN",
+        "sistema": 436,
+        "f_alta": "2026-05-06T15:16:50.870Z",
+        "f_cambio": "2026-05-06T15:16:50.870Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 831,
+    "fields": {
+        "usuario": "mnavfri",
+        "cometido": "TEC",
+        "sistema": 436,
+        "f_alta": "2026-05-06T15:16:50.880Z",
+        "f_cambio": "2026-05-06T15:16:50.880Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 832,
+    "fields": {
+        "usuario": "mmarbar",
+        "cometido": "FUN",
+        "sistema": 437,
+        "f_alta": "2026-05-06T15:18:19.759Z",
+        "f_cambio": "2026-05-06T15:18:19.759Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 833,
+    "fields": {
+        "usuario": "mrodher10",
+        "cometido": "FUN",
+        "sistema": 437,
+        "f_alta": "2026-05-06T15:18:19.767Z",
+        "f_cambio": "2026-05-06T15:18:19.767Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 834,
+    "fields": {
+        "usuario": "mruifue",
+        "cometido": "TEC",
+        "sistema": 437,
+        "f_alta": "2026-05-06T15:18:19.776Z",
+        "f_cambio": "2026-05-06T15:18:19.776Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 835,
+    "fields": {
+        "usuario": "cherroi",
+        "cometido": "FUN",
+        "sistema": 438,
+        "f_alta": "2026-05-06T15:31:56.964Z",
+        "f_cambio": "2026-05-06T15:31:56.964Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 836,
+    "fields": {
+        "usuario": "mtorher1",
+        "cometido": "TEC",
+        "sistema": 438,
+        "f_alta": "2026-05-06T15:31:56.971Z",
+        "f_cambio": "2026-05-06T15:31:56.971Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 837,
+    "fields": {
+        "usuario": "jgaralb",
+        "cometido": "TEC",
+        "sistema": 438,
+        "f_alta": "2026-05-06T15:31:56.979Z",
+        "f_cambio": "2026-05-06T15:31:56.979Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 838,
+    "fields": {
+        "usuario": "itrubos",
+        "cometido": "TEC",
+        "sistema": 439,
+        "f_alta": "2026-05-06T15:57:04.553Z",
+        "f_cambio": "2026-05-06T15:57:04.553Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 839,
+    "fields": {
+        "usuario": "itrubos",
+        "cometido": "TEC",
+        "sistema": 440,
+        "f_alta": "2026-05-06T16:09:05.404Z",
+        "f_cambio": "2026-05-06T16:09:05.404Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 840,
+    "fields": {
+        "usuario": "itrubos",
+        "cometido": "TEC",
+        "sistema": 441,
+        "f_alta": "2026-05-06T16:11:19.023Z",
+        "f_cambio": "2026-05-06T16:11:19.023Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 843,
+    "fields": {
+        "usuario": "zoilofalcon@essscan.es",
+        "cometido": "TEC",
+        "sistema": 22,
+        "f_alta": "2026-05-07T10:44:49.580Z",
+        "f_cambio": "2026-05-07T10:44:49.580Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 844,
+    "fields": {
+        "usuario": "ignaciodepaz@essscan.es",
+        "cometido": "FUN",
+        "sistema": 22,
+        "f_alta": "2026-05-07T10:45:05.773Z",
+        "f_cambio": "2026-05-07T10:45:05.773Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 845,
+    "fields": {
+        "usuario": "anarodriguez@essscan.es",
+        "cometido": "FUN",
+        "sistema": 443,
+        "f_alta": "2026-05-07T10:48:02.441Z",
+        "f_cambio": "2026-05-07T10:48:02.441Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 846,
+    "fields": {
+        "usuario": "diego.moguel@essscan.es",
+        "cometido": "FUN",
+        "sistema": 443,
+        "f_alta": "2026-05-07T10:48:20.825Z",
+        "f_cambio": "2026-05-07T10:48:20.825Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 847,
+    "fields": {
+        "usuario": "almudena.alvarado",
+        "cometido": "FUN",
+        "sistema": 57,
+        "f_alta": "2026-05-07T10:51:54.370Z",
+        "f_cambio": "2026-05-07T10:51:54.370Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 848,
+    "fields": {
+        "usuario": "ignaciodepaz@essscan.es",
+        "cometido": "FUN",
+        "sistema": 23,
+        "f_alta": "2026-05-07T10:54:44.590Z",
+        "f_cambio": "2026-05-07T10:54:44.590Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 849,
+    "fields": {
+        "usuario": "zoilofalcon@essscan.es",
+        "cometido": "TEC",
+        "sistema": 58,
+        "f_alta": "2026-05-07T11:00:04.470Z",
+        "f_cambio": "2026-05-07T11:00:04.470Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 850,
+    "fields": {
+        "usuario": "mgonmar10",
+        "cometido": "FUN",
+        "sistema": 444,
+        "f_alta": "2026-05-07T11:04:13.080Z",
+        "f_cambio": "2026-05-07T11:04:13.080Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 851,
+    "fields": {
+        "usuario": "zoilofalcon@essscan.es",
+        "cometido": "TEC",
+        "sistema": 444,
+        "f_alta": "2026-05-07T11:04:31.101Z",
+        "f_cambio": "2026-05-07T11:04:31.101Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 852,
+    "fields": {
+        "usuario": "mgonmar10",
+        "cometido": "FUN",
+        "sistema": 58,
+        "f_alta": "2026-05-07T11:06:06.178Z",
+        "f_cambio": "2026-05-07T11:06:06.178Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 853,
+    "fields": {
+        "usuario": "fgonsan",
+        "cometido": "TEC",
+        "sistema": 445,
+        "f_alta": "2026-05-07T12:16:47.695Z",
+        "f_cambio": "2026-05-07T12:16:47.695Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 854,
+    "fields": {
+        "usuario": "fartjor",
+        "cometido": "TEC",
+        "sistema": 445,
+        "f_alta": "2026-05-07T12:17:09.472Z",
+        "f_cambio": "2026-05-07T12:17:09.472Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 855,
+    "fields": {
+        "usuario": "crrodrodv",
+        "cometido": "FUN",
+        "sistema": 445,
+        "f_alta": "2026-05-07T12:17:31.268Z",
+        "f_cambio": "2026-05-07T12:17:31.268Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 856,
+    "fields": {
+        "usuario": "fgonsan",
+        "cometido": "TEC",
+        "sistema": 446,
+        "f_alta": "2026-05-07T12:20:45.382Z",
+        "f_cambio": "2026-05-07T12:20:45.382Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 857,
+    "fields": {
+        "usuario": "fartjor",
+        "cometido": "TEC",
+        "sistema": 446,
+        "f_alta": "2026-05-07T12:20:57.751Z",
+        "f_cambio": "2026-05-07T12:20:57.751Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 858,
+    "fields": {
+        "usuario": "jhersank",
+        "cometido": "FUN",
+        "sistema": 446,
+        "f_alta": "2026-05-07T12:21:24.000Z",
+        "f_cambio": "2026-05-07T12:21:24.000Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 859,
+    "fields": {
+        "usuario": "jhersank",
+        "cometido": "FUN",
+        "sistema": 447,
+        "f_alta": "2026-05-07T12:23:25.203Z",
+        "f_cambio": "2026-05-07T12:23:25.203Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 860,
+    "fields": {
+        "usuario": "fgonsan",
+        "cometido": "TEC",
+        "sistema": 447,
+        "f_alta": "2026-05-07T12:23:40.993Z",
+        "f_cambio": "2026-05-07T12:23:40.993Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 861,
+    "fields": {
+        "usuario": "fartjor",
+        "cometido": "TEC",
+        "sistema": 447,
+        "f_alta": "2026-05-07T12:23:54.818Z",
+        "f_cambio": "2026-05-07T12:23:54.818Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 862,
+    "fields": {
+        "usuario": "jleoman",
+        "cometido": "TEC",
+        "sistema": 448,
+        "f_alta": "2026-05-07T12:30:27.106Z",
+        "f_cambio": "2026-05-07T12:30:27.106Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 863,
+    "fields": {
+        "usuario": "fgonsan",
+        "cometido": "TEC",
+        "sistema": 449,
+        "f_alta": "2026-05-07T13:30:14.140Z",
+        "f_cambio": "2026-05-07T13:30:14.140Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 864,
+    "fields": {
+        "usuario": "ksangut",
+        "cometido": "FUN",
+        "sistema": 449,
+        "f_alta": "2026-05-07T13:33:30.965Z",
+        "f_cambio": "2026-05-07T13:33:30.965Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 865,
+    "fields": {
+        "usuario": "jojenuej",
+        "cometido": "TEC",
+        "sistema": 450,
+        "f_alta": "2026-05-07T13:36:00.144Z",
+        "f_cambio": "2026-05-07T13:36:00.144Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 866,
+    "fields": {
+        "usuario": "fartjor",
+        "cometido": "TEC",
+        "sistema": 450,
+        "f_alta": "2026-05-07T13:36:08.207Z",
+        "f_cambio": "2026-05-07T13:36:08.207Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 867,
+    "fields": {
+        "usuario": "jhersank",
+        "cometido": "FUN",
+        "sistema": 450,
+        "f_alta": "2026-05-07T13:36:21.673Z",
+        "f_cambio": "2026-05-07T13:36:21.673Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 868,
+    "fields": {
+        "usuario": "fgonsan",
+        "cometido": "TEC",
+        "sistema": 451,
+        "f_alta": "2026-05-07T13:39:48.845Z",
+        "f_cambio": "2026-05-07T13:39:48.845Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 869,
+    "fields": {
+        "usuario": "fartjor",
+        "cometido": "TEC",
+        "sistema": 451,
+        "f_alta": "2026-05-07T13:39:57.832Z",
+        "f_cambio": "2026-05-07T13:39:57.832Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 870,
+    "fields": {
+        "usuario": "allalag",
+        "cometido": "FUN",
+        "sistema": 451,
+        "f_alta": "2026-05-07T13:40:09.673Z",
+        "f_cambio": "2026-05-07T13:40:09.673Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 871,
+    "fields": {
+        "usuario": "mpeigar",
+        "cometido": "FUN",
+        "sistema": 451,
+        "f_alta": "2026-05-07T13:40:21.092Z",
+        "f_cambio": "2026-05-07T13:40:21.092Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 872,
+    "fields": {
+        "usuario": "jhersank",
+        "cometido": "FUN",
+        "sistema": 451,
+        "f_alta": "2026-05-07T13:40:29.288Z",
+        "f_cambio": "2026-05-07T13:40:29.288Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 873,
+    "fields": {
+        "usuario": "fgonsan",
+        "cometido": "TEC",
+        "sistema": 452,
+        "f_alta": "2026-05-07T13:44:11.296Z",
+        "f_cambio": "2026-05-07T13:44:11.296Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 874,
+    "fields": {
+        "usuario": "fartjor",
+        "cometido": "TEC",
+        "sistema": 452,
+        "f_alta": "2026-05-07T13:44:20.415Z",
+        "f_cambio": "2026-05-07T13:44:20.415Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 875,
+    "fields": {
+        "usuario": "allalag",
+        "cometido": "FUN",
+        "sistema": 452,
+        "f_alta": "2026-05-07T13:44:29.782Z",
+        "f_cambio": "2026-05-07T13:44:29.782Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 876,
+    "fields": {
+        "usuario": "mpeigar",
+        "cometido": "FUN",
+        "sistema": 452,
+        "f_alta": "2026-05-07T13:44:38.033Z",
+        "f_cambio": "2026-05-07T13:44:38.034Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 877,
+    "fields": {
+        "usuario": "jhersank",
+        "cometido": "FUN",
+        "sistema": 452,
+        "f_alta": "2026-05-07T13:44:48.023Z",
+        "f_cambio": "2026-05-07T13:44:48.023Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 878,
+    "fields": {
+        "usuario": "jojenuej",
+        "cometido": "TEC",
+        "sistema": 453,
+        "f_alta": "2026-05-07T13:47:43.142Z",
+        "f_cambio": "2026-05-07T13:47:43.142Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 879,
+    "fields": {
+        "usuario": "cberafo",
+        "cometido": "FUN",
+        "sistema": 453,
+        "f_alta": "2026-05-07T13:48:17.492Z",
+        "f_cambio": "2026-05-07T13:48:17.492Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 880,
+    "fields": {
+        "usuario": "edenis",
+        "cometido": "FUN",
+        "sistema": 453,
+        "f_alta": "2026-05-07T13:49:36.564Z",
+        "f_cambio": "2026-05-07T13:49:36.564Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 881,
+    "fields": {
+        "usuario": "crrodrodv",
+        "cometido": "FUN",
+        "sistema": 454,
+        "f_alta": "2026-05-07T13:54:12.212Z",
+        "f_cambio": "2026-05-07T13:54:12.212Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 882,
+    "fields": {
+        "usuario": "fartjor",
+        "cometido": "TEC",
+        "sistema": 454,
+        "f_alta": "2026-05-07T13:54:27.509Z",
+        "f_cambio": "2026-05-07T13:54:27.509Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 883,
+    "fields": {
+        "usuario": "oviealm",
+        "cometido": "FUN",
+        "sistema": 455,
+        "f_alta": "2026-05-07T13:59:50.654Z",
+        "f_cambio": "2026-05-07T13:59:50.654Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 884,
+    "fields": {
+        "usuario": "oviealm",
+        "cometido": "TEC",
+        "sistema": 455,
+        "f_alta": "2026-05-07T13:59:59.648Z",
+        "f_cambio": "2026-05-07T13:59:59.648Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 885,
+    "fields": {
+        "usuario": "fgonsan",
+        "cometido": "TEC",
+        "sistema": 455,
+        "f_alta": "2026-05-07T14:00:09.777Z",
+        "f_cambio": "2026-05-07T14:00:09.777Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 886,
+    "fields": {
+        "usuario": "ajcabsan",
+        "cometido": "TEC",
+        "sistema": 456,
+        "f_alta": "2026-05-07T14:02:57.342Z",
+        "f_cambio": "2026-05-07T14:02:57.342Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 887,
+    "fields": {
+        "usuario": "fmanmarp",
+        "cometido": "FUN",
+        "sistema": 456,
+        "f_alta": "2026-05-07T14:03:11.940Z",
+        "f_cambio": "2026-05-07T14:03:11.940Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 888,
+    "fields": {
+        "usuario": "pcovfue",
+        "cometido": "TEC",
+        "sistema": 457,
+        "f_alta": "2026-05-07T14:28:35.044Z",
+        "f_cambio": "2026-05-07T14:28:35.044Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 889,
+    "fields": {
+        "usuario": "prodpadn",
+        "cometido": "FUN",
+        "sistema": 457,
+        "f_alta": "2026-05-07T14:28:47.048Z",
+        "f_cambio": "2026-05-07T14:28:47.048Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 892,
+    "fields": {
+        "usuario": "mvalher",
+        "cometido": "TEC",
+        "sistema": 459,
+        "f_alta": "2026-05-07T14:52:04.800Z",
+        "f_cambio": "2026-05-07T14:52:04.800Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 893,
+    "fields": {
+        "usuario": "mvalher",
+        "cometido": "TEC",
+        "sistema": 460,
+        "f_alta": "2026-05-07T15:29:51.474Z",
+        "f_cambio": "2026-05-07T15:29:51.474Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 894,
+    "fields": {
+        "usuario": "mvalher",
+        "cometido": "TEC",
+        "sistema": 461,
+        "f_alta": "2026-05-07T15:32:31.169Z",
+        "f_cambio": "2026-05-07T15:32:31.169Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 895,
+    "fields": {
+        "usuario": "mvalher",
+        "cometido": "TEC",
+        "sistema": 462,
+        "f_alta": "2026-05-07T15:42:46.068Z",
+        "f_cambio": "2026-05-07T15:42:46.068Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 896,
+    "fields": {
+        "usuario": "mvalher",
+        "cometido": "TEC",
+        "sistema": 463,
+        "f_alta": "2026-05-07T15:47:10.190Z",
+        "f_cambio": "2026-05-07T15:47:10.190Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 897,
+    "fields": {
+        "usuario": "mvalher",
+        "cometido": "TEC",
+        "sistema": 464,
+        "f_alta": "2026-05-07T15:52:26.642Z",
+        "f_cambio": "2026-05-07T15:52:26.642Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 898,
+    "fields": {
+        "usuario": "rgalrod",
+        "cometido": "TEC",
+        "sistema": 465,
+        "f_alta": "2026-05-07T16:01:42.839Z",
+        "f_cambio": "2026-05-07T16:01:42.839Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 899,
+    "fields": {
+        "usuario": "pruitov",
+        "cometido": "FUN",
+        "sistema": 465,
+        "f_alta": "2026-05-07T16:02:02.705Z",
+        "f_cambio": "2026-05-07T16:02:02.705Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 900,
+    "fields": {
+        "usuario": "llopart",
+        "cometido": "TEC",
+        "sistema": 466,
+        "f_alta": "2026-05-07T19:22:49.305Z",
+        "f_cambio": "2026-05-07T19:22:49.305Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 901,
+    "fields": {
+        "usuario": "mleogonk",
+        "cometido": "FUN",
+        "sistema": 466,
+        "f_alta": "2026-05-07T19:24:58.079Z",
+        "f_cambio": "2026-05-07T19:24:58.079Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 902,
+    "fields": {
+        "usuario": "mtherbor",
+        "cometido": "FUN",
+        "sistema": 466,
+        "f_alta": "2026-05-07T19:26:45.280Z",
+        "f_cambio": "2026-05-07T19:26:45.280Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 903,
+    "fields": {
+        "usuario": "ecasala",
+        "cometido": "TEC",
+        "sistema": 467,
+        "f_alta": "2026-05-07T19:47:55.932Z",
+        "f_cambio": "2026-05-07T19:47:55.932Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 904,
+    "fields": {
+        "usuario": "jsersanp",
+        "cometido": "TEC",
+        "sistema": 467,
+        "f_alta": "2026-05-07T19:48:15.324Z",
+        "f_cambio": "2026-05-07T19:48:15.324Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 905,
+    "fields": {
+        "usuario": "juvenrod",
+        "cometido": "FUN",
+        "sistema": 467,
+        "f_alta": "2026-05-07T19:50:04.370Z",
+        "f_cambio": "2026-05-07T19:50:04.370Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 906,
+    "fields": {
+        "usuario": "jaldrua",
+        "cometido": "FUN",
+        "sistema": 468,
+        "f_alta": "2026-05-07T19:55:05.142Z",
+        "f_cambio": "2026-05-07T19:58:51.142Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 907,
+    "fields": {
+        "usuario": "mmarmarf",
+        "cometido": "FUN",
+        "sistema": 468,
+        "f_alta": "2026-05-07T19:58:30.902Z",
+        "f_cambio": "2026-05-07T19:58:30.902Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 908,
+    "fields": {
+        "usuario": "mnavfri",
+        "cometido": "TEC",
+        "sistema": 468,
+        "f_alta": "2026-05-07T19:59:07.254Z",
+        "f_cambio": "2026-05-07T19:59:07.254Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 909,
+    "fields": {
+        "usuario": "jsersanp",
+        "cometido": "TEC",
+        "sistema": 468,
+        "f_alta": "2026-05-07T19:59:20.814Z",
+        "f_cambio": "2026-05-07T19:59:20.814Z",
+        "f_baja": null
+    }
+},
+{
     "model": "sistemas.juriscansistema",
     "pk": 1,
     "fields": {
         "sistema": 37,
         "juriscan": 22137
-    }
-},
-{
-    "model": "sistemas.juriscansistema",
-    "pk": 2,
-    "fields": {
-        "sistema": 37,
-        "juriscan": 5559
     }
 },
 {
@@ -25699,6 +27688,414 @@
     "fields": {
         "sistema": 76,
         "juriscan": 73119
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 61,
+    "fields": {
+        "sistema": 74,
+        "juriscan": 78655
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 62,
+    "fields": {
+        "sistema": 400,
+        "juriscan": 65885
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 63,
+    "fields": {
+        "sistema": 436,
+        "juriscan": 62312
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 64,
+    "fields": {
+        "sistema": 436,
+        "juriscan": 79417
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 65,
+    "fields": {
+        "sistema": 216,
+        "juriscan": 77728
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 66,
+    "fields": {
+        "sistema": 216,
+        "juriscan": 71905
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 67,
+    "fields": {
+        "sistema": 437,
+        "juriscan": 67186
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 68,
+    "fields": {
+        "sistema": 438,
+        "juriscan": 78761
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 69,
+    "fields": {
+        "sistema": 438,
+        "juriscan": 74583
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 73,
+    "fields": {
+        "sistema": 439,
+        "juriscan": 55118
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 74,
+    "fields": {
+        "sistema": 439,
+        "juriscan": 63448
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 75,
+    "fields": {
+        "sistema": 440,
+        "juriscan": 63915
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 76,
+    "fields": {
+        "sistema": 440,
+        "juriscan": 63916
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 77,
+    "fields": {
+        "sistema": 440,
+        "juriscan": 63917
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 79,
+    "fields": {
+        "sistema": 442,
+        "juriscan": 70783
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 80,
+    "fields": {
+        "sistema": 443,
+        "juriscan": 7066
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 81,
+    "fields": {
+        "sistema": 443,
+        "juriscan": 3432
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 82,
+    "fields": {
+        "sistema": 443,
+        "juriscan": 18464
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 83,
+    "fields": {
+        "sistema": 443,
+        "juriscan": 66653
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 84,
+    "fields": {
+        "sistema": 22,
+        "juriscan": 7066
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 85,
+    "fields": {
+        "sistema": 22,
+        "juriscan": 3432
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 86,
+    "fields": {
+        "sistema": 22,
+        "juriscan": 18464
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 87,
+    "fields": {
+        "sistema": 22,
+        "juriscan": 66653
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 88,
+    "fields": {
+        "sistema": 57,
+        "juriscan": 7066
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 89,
+    "fields": {
+        "sistema": 57,
+        "juriscan": 3432
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 90,
+    "fields": {
+        "sistema": 57,
+        "juriscan": 18464
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 91,
+    "fields": {
+        "sistema": 57,
+        "juriscan": 66653
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 92,
+    "fields": {
+        "sistema": 23,
+        "juriscan": 7066
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 93,
+    "fields": {
+        "sistema": 23,
+        "juriscan": 3432
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 94,
+    "fields": {
+        "sistema": 23,
+        "juriscan": 18464
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 95,
+    "fields": {
+        "sistema": 23,
+        "juriscan": 66653
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 96,
+    "fields": {
+        "sistema": 58,
+        "juriscan": 7066
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 97,
+    "fields": {
+        "sistema": 58,
+        "juriscan": 3432
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 98,
+    "fields": {
+        "sistema": 58,
+        "juriscan": 18464
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 99,
+    "fields": {
+        "sistema": 58,
+        "juriscan": 66653
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 100,
+    "fields": {
+        "sistema": 444,
+        "juriscan": 26852
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 101,
+    "fields": {
+        "sistema": 444,
+        "juriscan": 72854
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 102,
+    "fields": {
+        "sistema": 59,
+        "juriscan": 46083
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 103,
+    "fields": {
+        "sistema": 457,
+        "juriscan": 79047
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 104,
+    "fields": {
+        "sistema": 460,
+        "juriscan": 60984
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 105,
+    "fields": {
+        "sistema": 464,
+        "juriscan": 57403
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 106,
+    "fields": {
+        "sistema": 465,
+        "juriscan": 55422
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 107,
+    "fields": {
+        "sistema": 465,
+        "juriscan": 68902
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 108,
+    "fields": {
+        "sistema": 465,
+        "juriscan": 69764
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 109,
+    "fields": {
+        "sistema": 465,
+        "juriscan": 72173
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 110,
+    "fields": {
+        "sistema": 465,
+        "juriscan": 58182
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 111,
+    "fields": {
+        "sistema": 12,
+        "juriscan": 79417
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 112,
+    "fields": {
+        "sistema": 467,
+        "juriscan": 79350
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 113,
+    "fields": {
+        "sistema": 468,
+        "juriscan": 79417
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 115,
+    "fields": {
+        "sistema": 468,
+        "juriscan": 79226
+    }
+},
+{
+    "model": "sistemas.juriscansistema",
+    "pk": 117,
+    "fields": {
+        "sistema": 468,
+        "juriscan": 71248
     }
 },
 {

@@ -41,6 +41,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 3432,
+    "fields": {
+        "titulo": "Decreto 200/1993, 9 julio, sobre adscripción de la Escuela de Servicios Sanitarios y Sociales de Canarias",
+        "created": "2026-05-07T10:42:37.751Z",
+        "updated": "2026-05-07T10:42:37.751Z",
+        "checked": "2026-05-07T10:42:37.749Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 4643,
     "fields": {
         "titulo": "Ley 8/1991, 30 abril, de protección de los animales",
@@ -57,6 +67,16 @@
         "created": "2026-02-12T08:18:17Z",
         "updated": "2026-02-12T08:18:17Z",
         "checked": "2026-02-12T08:18:17Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 7066,
+    "fields": {
+        "titulo": "Ley 1/1993, 26 marzo, de creación y regulación de la Escuela de Servicios Sanitarios y Sociales de Canarias",
+        "created": "2026-05-07T10:42:27.872Z",
+        "updated": "2026-05-07T10:42:27.872Z",
+        "checked": "2026-05-07T10:42:27.869Z"
     }
 },
 {
@@ -91,6 +111,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 18464,
+    "fields": {
+        "titulo": "Decreto 5/1994, 14 enero, por el que se aprueba el Reglamento de Organización y Funcionamiento de la Escuela de Servicios Sanitarios y Sociales de Canarias",
+        "created": "2026-05-07T10:42:47.489Z",
+        "updated": "2026-05-07T10:42:47.489Z",
+        "checked": "2026-05-07T10:42:47.487Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 20134,
     "fields": {
         "titulo": "Ley 7/1995, 6 abril, de Ordenación del Turismo de Canarias",
@@ -117,6 +147,16 @@
         "created": "2026-02-12T08:26:06Z",
         "updated": "2026-02-12T08:26:06Z",
         "checked": "2026-02-12T08:26:06Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 26852,
+    "fields": {
+        "titulo": "Orden, 16 ene 97, de la Consejería de Sanidad y Consumo, por la que se regula el reconocimiento de oficialidad de los cursos que en materia de sanidad y asuntos sociales se celebren en la Comunidad Autónoma de Canarias",
+        "created": "2026-05-07T11:03:41.393Z",
+        "updated": "2026-05-07T11:03:41.393Z",
+        "checked": "2026-05-07T11:03:41.391Z"
     }
 },
 {
@@ -231,12 +271,52 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 55118,
+    "fields": {
+        "titulo": "Decreto 135/2006, 3 octubre, por el que se aprueba el sistema automatizado de gestión de ingresos del sistema tributario canario con la denominación de M@GIN",
+        "created": "2026-05-06T16:01:05.824Z",
+        "updated": "2026-05-06T16:01:05.824Z",
+        "checked": "2026-05-06T16:01:05.822Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 55422,
+    "fields": {
+        "titulo": "Decreto 160/2006, 8 noviembre, por el que se aprueba el Reglamento del Sistema de gestión documental y organización de los archivos dependientes de la Administración Pública de la Comunidad Autónoma de Canarias",
+        "created": "2026-05-07T16:04:05.058Z",
+        "updated": "2026-05-07T16:04:05.058Z",
+        "checked": "2026-05-07T16:04:05.054Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 57177,
     "fields": {
         "titulo": "Decreto 78/2007, 18 abril, por el que se fija la jornada y el horario de trabajo del personal al servicio de la Administración Pública de la Comunidad Autónoma de Canarias y se establece el sistema de gestión de los mismos",
         "created": "2026-04-27T15:06:34.570Z",
         "updated": "2026-04-27T15:06:34.570Z",
         "checked": "2026-04-27T15:06:34.568Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 57403,
+    "fields": {
+        "titulo": "Decreto 138/2007, 24 mayo, por el que se establece el régimen de adjudicación de las viviendas protegidas de promoción pública de titularidad del Instituto Canario de la Vivienda",
+        "created": "2026-05-07T15:53:07.881Z",
+        "updated": "2026-05-07T15:53:07.881Z",
+        "checked": "2026-05-07T15:53:07.880Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 58182,
+    "fields": {
+        "titulo": "Resolución, 20 nov 2007, de la Inspección General de Servicios de la Consejería de Presidencia, Justicia y Seguridad, por la que se publica el Protocolo para la coordinación del procedimiento de identificación, valoración, expurgo y eliminacion de series documentales específicas",
+        "created": "2026-05-07T16:10:07.297Z",
+        "updated": "2026-05-07T16:10:07.297Z",
+        "checked": "2026-05-07T16:10:07.294Z"
     }
 },
 {
@@ -281,12 +361,72 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 62312,
+    "fields": {
+        "titulo": "Decreto 160/2009, 21 diciembre, por el que se aprueba el Reglamento del Boletín Oficial de Canarias (BOC)",
+        "created": "2026-05-06T14:23:32.465Z",
+        "updated": "2026-05-06T14:23:32.465Z",
+        "checked": "2026-05-06T14:23:32.464Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 63448,
+    "fields": {
+        "titulo": "Orden, 27 may 2010, de la Consejería de Economía y Hacienda, por la que se establece el procedimiento de ingreso a través de entidades de depósito de las deudas tributarias gestionadas a través de la aplicación M@GIN y se modifica la Orden de 24 de mayo de 1999 (BOC 78, 16.6.99), sobre colaboración de las entidades de depósito en la gestión recaudatoria",
+        "created": "2026-05-06T16:01:33.270Z",
+        "updated": "2026-05-06T16:01:33.270Z",
+        "checked": "2026-05-06T16:01:33.268Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 63774,
     "fields": {
         "titulo": "Decreto 84/2010, 15 julio, por el que se regula el sistema de información turística, el Registro General Turístico y el sistema informático que les da soporte",
         "created": "2026-04-27T10:04:19.663Z",
         "updated": "2026-04-27T10:04:19.663Z",
         "checked": "2026-04-27T10:04:19.659Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 63915,
+    "fields": {
+        "titulo": "Orden, 18 ago 2010, de la Consejería de Empleo, Industria y Comercio, por la que se efectúa convocatoria para el año 2010 de concesión de subvenciones para infraestructura y equipamiento industrial en suelo industrial, cofinanciadas en un 75% por el Fondo Europeo de Desarrollo Regional (FEDER)",
+        "created": "2026-05-06T15:58:07.587Z",
+        "updated": "2026-05-06T15:58:07.587Z",
+        "checked": "2026-05-06T15:58:07.585Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 63916,
+    "fields": {
+        "titulo": "Orden, 18 ago 2010, de la Consejería de Empleo, Industria y Comercio, por la que se convoca el concurso escolar 2009/2010: Consumopolis6, sobre Consumo Responsable «Tú puedes elegir: ¿sabes cuanto cuesta lo que consumes?», en la Comunidad Autónoma de Canarias",
+        "created": "2026-05-06T15:58:16.600Z",
+        "updated": "2026-05-06T15:58:16.600Z",
+        "checked": "2026-05-06T15:58:16.597Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 63917,
+    "fields": {
+        "titulo": "Resolución, 17 ago 2010, del Director de la Agencia Canaria de Investigación, Innovación y Sociedad de la Información de la Presidencia del Gobierno, por la que se aprueban con vigencia indefinida las bases reguladoras que han de regir en la concesión de subvenciones para la incorporación de personal innovador al tejido productivo, y se efectúa la convocatoria para 2010",
+        "created": "2026-05-06T15:58:25.404Z",
+        "updated": "2026-05-06T15:58:25.405Z",
+        "checked": "2026-05-06T15:58:25.402Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 63918,
+    "fields": {
+        "titulo": "Orden, 20 ago 2010, de la Consejería de Empleo, Industria y Comercio, por la que se aprueban las bases reguladoras para la concesión de subvenciones a Federaciones y Asociaciones de Consumidores y Usuarios de la Comunidad Autónoma de Canarias",
+        "created": "2026-05-06T16:22:10.146Z",
+        "updated": "2026-05-06T16:22:10.146Z",
+        "checked": "2026-05-06T16:22:10.143Z"
     }
 },
 {
@@ -301,12 +441,62 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 65885,
+    "fields": {
+        "titulo": "Orden, 1 ago 2011, de la Consejería de Sanidad, por la que se crea el fichero de datos de carácter personal Registro Poblacional de Defectos Congénitos y Enfermedades Raras de la Comunidad Autónoma de Canarias",
+        "created": "2026-05-06T14:16:07.056Z",
+        "updated": "2026-05-06T14:16:07.056Z",
+        "checked": "2026-05-06T14:16:07.053Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 66653,
+    "fields": {
+        "titulo": "Decreto 339/2011, 29 diciembre, por el que se modifica el Reglamento de organización y funcionamiento de la Escuela de Servicios Sanitarios y Sociales de Canarias, aprobado por el Decreto 5/1994, 14 enero (BOC 15, 4.2.94)",
+        "created": "2026-05-07T10:42:57.455Z",
+        "updated": "2026-05-07T10:42:57.455Z",
+        "checked": "2026-05-07T10:42:57.454Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 67186,
+    "fields": {
+        "titulo": "Decreto 26/2012, 30 marzo, por el que se aprueba el Reglamento de Máquinas Recreativas y de Azar de la Comunidad Autónoma de Canarias",
+        "created": "2026-05-06T14:23:35.203Z",
+        "updated": "2026-05-06T14:23:35.203Z",
+        "checked": "2026-05-06T14:23:35.202Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 67192,
     "fields": {
         "titulo": "Decreto-legislativo 1/2012, 21 abril, por el que se aprueba el Texto Refundido de las Leyes de Ordenación de la Actividad Comercial de Canarias y reguladora de la licencia comercial",
         "created": "2026-02-11T11:22:42.575Z",
         "updated": "2026-02-11T11:22:42.575Z",
         "checked": "2026-02-11T11:22:42.574Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 68902,
+    "fields": {
+        "titulo": "Orden, 23 abr 2013, de la Consejería de Presidencia, Justicia e Igualdad, por la que se aprueba el Protocolo de Digitalización de documentos de la Administración Pública de la Comunidad Autónoma de Canarias",
+        "created": "2026-05-07T16:06:50.333Z",
+        "updated": "2026-05-07T16:06:50.333Z",
+        "checked": "2026-05-07T16:06:50.331Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 69764,
+    "fields": {
+        "titulo": "Orden, 21 nov 2013, de la Consejería de Presidencia, Justicia e Igualdad, por la que se aprueba el esquema de metadatos en el ámbito de la administración electrónica de la Administración Pública de la Comunidad Autónoma de Canarias",
+        "created": "2026-05-07T16:07:40.639Z",
+        "updated": "2026-05-07T16:07:40.639Z",
+        "checked": "2026-05-07T16:07:40.636Z"
     }
 },
 {
@@ -321,12 +511,42 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 70783,
+    "fields": {
+        "titulo": "Ley 7/2014, 30 julio, de la Agencia Tributaria Canaria",
+        "created": "2026-05-06T16:23:12.979Z",
+        "updated": "2026-05-06T16:23:12.979Z",
+        "checked": "2026-05-06T16:23:12.976Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 71248,
     "fields": {
-        "titulo": "Ley 3/1997, 8 mayo, de Incompatibilidades de los miembros del Gobierno y altos cargos de la Administración Pública de la Comunidad Autónoma de Canarias",
+        "titulo": "Ley 12/2014, 26 diciembre, de transparencia y de acceso a la información pública",
         "created": "2026-02-12T08:18:17Z",
-        "updated": "2026-02-12T08:18:17Z",
+        "updated": "2026-05-07T20:08:42.845Z",
         "checked": "2026-02-12T08:18:17Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 71905,
+    "fields": {
+        "titulo": "Ley 8/2015, 1 abril, de cabildos insulares",
+        "created": "2026-05-06T14:23:33.525Z",
+        "updated": "2026-05-06T14:23:33.525Z",
+        "checked": "2026-05-06T14:23:33.520Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 72173,
+    "fields": {
+        "titulo": "Orden, 23 feb 2015, de la Consejería de Presidencia, Justicia e Igualdad, por la que se aprueba la Política de gestión de documentos electrónicos y archivo electrónico de la Administración Pública de la Comunidad Autónoma de Canarias",
+        "created": "2026-05-07T16:09:10.004Z",
+        "updated": "2026-05-07T16:09:10.004Z",
+        "checked": "2026-05-07T16:09:10.002Z"
     }
 },
 {
@@ -347,6 +567,16 @@
         "created": "2026-05-03T20:40:43.708Z",
         "updated": "2026-05-03T20:40:43.708Z",
         "checked": "2026-05-03T20:40:43.706Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 72854,
+    "fields": {
+        "titulo": "Orden, 19 may 2015, de la Consejería de Sanidad, por la que se modifica la Orden de 16 de enero de 1997 (BOC 12, 27.1.97), de la Consejería de Sanidad y Consumo, por la que se regula el reconocimiento de oficialidad de los cursos que en materia de sanidad y asuntos sociales se celebren en la Comunidad Autónoma de Canarias",
+        "created": "2026-05-07T11:03:53.549Z",
+        "updated": "2026-05-07T11:03:53.549Z",
+        "checked": "2026-05-07T11:03:53.547Z"
     }
 },
 {
@@ -387,6 +617,16 @@
         "created": "2026-03-09T09:50:31.528Z",
         "updated": "2026-03-09T09:50:31.528Z",
         "checked": "2026-03-09T09:50:31.526Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 77728,
+    "fields": {
+        "titulo": "Ley 2/2019, 30 enero, de la Presidencia del Gobierno, para la Aplicación del Régimen Especial de Organización de los Cabildos Insulares Canarios previsto en la Disposición Adicional Decimocuarta de la Ley 7/1985, de 2 de abril, Reguladora de las Bases del Régimen Local, al Cabildo Insular de Fuerteventura.",
+        "created": "2026-05-06T14:23:34.126Z",
+        "updated": "2026-05-06T14:23:34.126Z",
+        "checked": "2026-05-06T14:23:34.124Z"
     }
 },
 {
@@ -481,6 +721,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 79047,
+    "fields": {
+        "titulo": "ORDEN de 19 de abril de 2022, de la Consejería de Obras Púiblicas, Transportes y Vivienda, por la que se aprueban las bases reguladoras de la línea de ayudas económicas, con carácter de emergencia, para el alquiler de vivienda habitual, destinadas a las unidades familiares o de convivencia afectadas por las erupciones volcánicas en la isla de La Palma.",
+        "created": "2026-05-07T14:31:54.534Z",
+        "updated": "2026-05-07T14:31:54.534Z",
+        "checked": "2026-05-07T14:31:54.532Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 79054,
     "fields": {
         "titulo": "ORDEN de 22 de abril de 2022, por la que se aprueban las bases reguladoras de subvenciones destinadas al fomento de la adquisición de vivienda por parte de las personas jóvenes canarias.",
@@ -497,6 +747,16 @@
         "created": "2026-05-03T20:40:48.154Z",
         "updated": "2026-05-03T20:40:48.154Z",
         "checked": "2026-05-03T20:40:48.153Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 79226,
+    "fields": {
+        "titulo": "LEY 4/2023, de 23 de marzo, de la Presidencia y del Gobierno de Canarias.",
+        "created": "2026-05-07T20:00:09.421Z",
+        "updated": "2026-05-07T20:00:09.421Z",
+        "checked": "2026-05-07T20:00:09.418Z"
     }
 },
 {
