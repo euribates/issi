@@ -39,6 +39,7 @@ def search_sistemas(query):
             Q(codigo__icontains=query) |
             Q(finalidad__icontains=query) |
             Q(descripcion__icontains=query) |
+            Q(observaciones__icontains=query) |
             Q(organismo__nombre_organismo__icontains=query) |
             Q(organismo__dir3__istartswith=query) 
             )
