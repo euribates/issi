@@ -544,10 +544,9 @@ class Sistema(models.Model):
         """
         if not isinstance(organismo, Organismo):
             organismo = Organismo.load_organismo(organismo)
-        if self.organismo != organismo:
-            self.organismo = organismo
-            if commit:
-                self.save(update_fields=["organismo"])
+        self.organismo = organismo
+        if commit:
+            self.save(update_fields=["organismo"])
         return organismo
 
     def asignar_responsable(self, cometido, usuario_o_login):
