@@ -21,6 +21,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 1712,
+    "fields": {
+        "titulo": "Decreto 57/1998, 28 abril, por el que se regulan la composicion y el funcionamiento de las Comisiones de Asistencia Jurídica Gratuita de Canarias, así como el procedimiento para el reconocimiento de la misma",
+        "created": "2026-05-08T08:07:23.735Z",
+        "updated": "2026-05-08T08:07:23.735Z",
+        "checked": "2026-05-08T08:07:23.733Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 1787,
     "fields": {
         "titulo": "Ley 1/1999, 29 enero, de Residuos de Canarias",
@@ -131,6 +141,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 20199,
+    "fields": {
+        "titulo": "Decreto-legislativo 1/1994, 29 julio, por el que se aprueba el Texto Refundido de las disposiciones legales vigentes en materia de tasas y precios públicos de la Comunidad Autónoma de Canarias",
+        "created": "2026-05-08T11:13:12.458Z",
+        "updated": "2026-05-08T11:13:12.458Z",
+        "checked": "2026-05-08T11:13:12.456Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 21483,
     "fields": {
         "titulo": "Decreto 12/1995, 27 enero, por el que se crea el Registro de Operadores del Régimen Específico de Abastecimiento de las islas Canarias",
@@ -151,12 +171,42 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 22394,
+    "fields": {
+        "titulo": "Decreto 117/1995, 11 mayo, por el que se aprueba el Reglamento de la Ley 8/1991, 30 abril (BOC 62, 13.5.91; BOE 152, 26.6.91), de Protección de los Animales y se desarrollan otros aspectos relacionados con los mismos",
+        "created": "2026-05-08T08:16:01.134Z",
+        "updated": "2026-05-08T08:16:01.134Z",
+        "checked": "2026-05-08T08:16:01.132Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 25214,
+    "fields": {
+        "titulo": "Ley 6/1997, 4 julio, de Coordinación de Policías Locales de Canarias",
+        "created": "2026-05-08T10:54:15.797Z",
+        "updated": "2026-05-08T10:54:15.797Z",
+        "checked": "2026-05-08T10:54:15.795Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 26852,
     "fields": {
         "titulo": "Orden, 16 ene 97, de la Consejería de Sanidad y Consumo, por la que se regula el reconocimiento de oficialidad de los cursos que en materia de sanidad y asuntos sociales se celebren en la Comunidad Autónoma de Canarias",
         "created": "2026-05-07T11:03:41.393Z",
         "updated": "2026-05-07T11:03:41.393Z",
         "checked": "2026-05-07T11:03:41.391Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 30490,
+    "fields": {
+        "titulo": "Decreto 42/1998, 2 abril, por el que se aprueba el Reglamento de homologación del material de juego y de organización y funcionamiento del Registro del Juego de la Comunidad Autónoma de Canarias",
+        "created": "2026-05-08T11:36:20.869Z",
+        "updated": "2026-05-08T11:36:20.869Z",
+        "checked": "2026-05-08T11:36:20.867Z"
     }
 },
 {
@@ -177,6 +227,36 @@
         "created": "2026-02-11T11:22:44.279Z",
         "updated": "2026-02-11T11:22:44.279Z",
         "checked": "2026-02-11T11:22:44.278Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 38456,
+    "fields": {
+        "titulo": "Decreto 204/2001, 3 diciembre, por el que se aprueba el Reglamento de Casinos de Juego de la Comunidad Autónoma de Canarias",
+        "created": "2026-05-08T11:30:36.430Z",
+        "updated": "2026-05-08T11:30:36.430Z",
+        "checked": "2026-05-08T11:30:36.428Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 38695,
+    "fields": {
+        "titulo": "Decreto 3/2002, 21 enero, por el que se modifica el Reglamento de Homologación del material de juego y de organización y funcionamiento del Registro del Juego de la Comunidad Autónoma de Canarias aprobado por Decreto 42/1998, 2 abril (BOC 49, 22.4.98)",
+        "created": "2026-05-08T11:36:46.583Z",
+        "updated": "2026-05-08T11:36:46.583Z",
+        "checked": "2026-05-08T11:36:46.581Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 39312,
+    "fields": {
+        "titulo": "Ley 15/2003, 8 abril, de la mediación familiar",
+        "created": "2026-05-08T07:39:52.831Z",
+        "updated": "2026-05-08T07:39:52.831Z",
+        "checked": "2026-05-08T07:39:52.828Z"
     }
 },
 {
@@ -217,6 +297,16 @@
         "created": "2026-02-11T11:22:57.376Z",
         "updated": "2026-02-11T11:22:57.376Z",
         "checked": "2026-02-11T11:22:57.375Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 45881,
+    "fields": {
+        "titulo": "Decreto 299/2003, 22 diciembre, por el que se planifican los juegos y apuestas en Canarias",
+        "created": "2026-05-08T11:47:25.697Z",
+        "updated": "2026-05-08T11:47:25.697Z",
+        "checked": "2026-05-08T11:47:25.696Z"
     }
 },
 {
@@ -291,6 +381,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 55955,
+    "fields": {
+        "titulo": "Ley 9/2007, 13 abril, del Sistema Canario de Seguridad y Emergencias y de modificación de la Ley 6/1997, 4 julio (BOC 91, 16.7.97, corrección 94, 23.7.97; BOE 181, 30.7.97), de Coordinación de las Policías Locales de Canarias",
+        "created": "2026-05-08T10:54:25.722Z",
+        "updated": "2026-05-08T10:54:25.722Z",
+        "checked": "2026-05-08T10:54:25.720Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 57177,
     "fields": {
         "titulo": "Decreto 78/2007, 18 abril, por el que se fija la jornada y el horario de trabajo del personal al servicio de la Administración Pública de la Comunidad Autónoma de Canarias y se establece el sistema de gestión de los mismos",
@@ -317,6 +417,16 @@
         "created": "2026-05-07T16:10:07.297Z",
         "updated": "2026-05-07T16:10:07.297Z",
         "checked": "2026-05-07T16:10:07.294Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 58433,
+    "fields": {
+        "titulo": "Ley 2/2008, 28 mayo, del Cuerpo General de la Policía Canaria",
+        "created": "2026-05-08T10:47:21.578Z",
+        "updated": "2026-05-08T10:47:21.578Z",
+        "checked": "2026-05-08T10:47:21.577Z"
     }
 },
 {
@@ -387,6 +497,16 @@
         "created": "2026-04-27T10:04:19.663Z",
         "updated": "2026-04-27T10:04:19.663Z",
         "checked": "2026-04-27T10:04:19.659Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 63777,
+    "fields": {
+        "titulo": "Ley 8/2010, 15 julio, de los Juegos y Apuestas",
+        "created": "2026-05-08T11:46:34.371Z",
+        "updated": "2026-05-08T11:46:34.371Z",
+        "checked": "2026-05-08T11:46:34.369Z"
     }
 },
 {
@@ -571,6 +691,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 72714,
+    "fields": {
+        "titulo": "Decreto 77/2015, 7 mayo, por el que se aprueba el Reglamento del juego del bingo en la Comunidad Autónoma de Canarias",
+        "created": "2026-05-08T11:30:47.205Z",
+        "updated": "2026-05-08T11:30:47.205Z",
+        "checked": "2026-05-08T11:30:47.202Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 72854,
     "fields": {
         "titulo": "Orden, 19 may 2015, de la Consejería de Sanidad, por la que se modifica la Orden de 16 de enero de 1997 (BOC 12, 27.1.97), de la Consejería de Sanidad y Consumo, por la que se regula el reconocimiento de oficialidad de los cursos que en materia de sanidad y asuntos sociales se celebren en la Comunidad Autónoma de Canarias",
@@ -671,6 +801,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 78683,
+    "fields": {
+        "titulo": "ORDEN de 11 de diciembre de 2020, por la que se regula la selección, el nombramiento y cese del personal funcionario interino de los Cuerpos de Médicos Forenses, Gestión Procesal y Administrativa, Tramitación Procesal y Administrativa y Auxilio Judicial al servicio de la Administración de Justicia en la Comunidad Autónoma de Canarias.",
+        "created": "2026-05-08T09:11:08.513Z",
+        "updated": "2026-05-08T09:11:08.513Z",
+        "checked": "2026-05-08T09:11:08.510Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 78697,
     "fields": {
         "titulo": "DECRETO ley 24/2020, de 23 de diciembre, de medidas extraordinarias y urgentes en los ámbitos de vivienda, transportes y puertos de titularidad de la Comunidad Autónoma de Canarias.",
@@ -697,6 +837,26 @@
         "created": "2026-02-11T11:22:56.312Z",
         "updated": "2026-02-11T11:22:56.312Z",
         "checked": "2026-02-11T11:22:56.311Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 78835,
+    "fields": {
+        "titulo": "DECRETO 46/2021, de 12 de mayo, que modifica el Decreto 89/2019, de 22 de mayo, por el que se regula la creación y organización de las Oficinas de Asistencia a las Víctimas del Delito en el ámbito de la Comunidad Autónoma de Canarias.",
+        "created": "2026-05-08T10:39:43.635Z",
+        "updated": "2026-05-08T10:39:43.635Z",
+        "checked": "2026-05-08T10:39:43.633Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 78933,
+    "fields": {
+        "titulo": "DECRETO ley 14/2021, de 28 de octubre, por el que se regula el marco general para la tramitación de los procedimientos de concesión de ayudas con carácter de emergencia, destinadas a paliar las necesidades derivadas de la situación de emergencia producida por las erupciones volcánicas en la isla de La Palma",
+        "created": "2026-05-08T08:21:46.864Z",
+        "updated": "2026-05-08T08:21:46.864Z",
+        "checked": "2026-05-08T08:21:46.862Z"
     }
 },
 {
@@ -737,6 +897,16 @@
         "created": "2026-04-27T12:44:10.131Z",
         "updated": "2026-04-27T12:44:10.131Z",
         "checked": "2026-04-27T12:44:10.130Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 79085,
+    "fields": {
+        "titulo": "Secretaría General Técnica de la Consejería de Administraciones Públicas, justicia y Seguridad.- Resolución de 20 de mayo de 2022, por la que se dictan instrucciones en relación con la remisión y contenido de documentos para su publicación en el Boletín Oficial de Canarias (BOC) y los Boletines Oficiales de las Provincias (BOP).",
+        "created": "2026-05-08T11:12:54.597Z",
+        "updated": "2026-05-08T11:12:54.597Z",
+        "checked": "2026-05-08T11:12:54.595Z"
     }
 },
 {
@@ -787,6 +957,16 @@
         "created": "2026-02-11T11:22:54.357Z",
         "updated": "2026-02-11T11:22:54.357Z",
         "checked": "2026-02-11T11:22:54.357Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 79381,
+    "fields": {
+        "titulo": "DECRETO 43/2024, de 16 de abril, del Presidente, por el que se regula la Comisión Preparatoria de Asuntos del Gobierno y de las Comisiones Delegadas del Gobierno.",
+        "created": "2026-05-08T11:20:31.203Z",
+        "updated": "2026-05-08T11:20:31.203Z",
+        "checked": "2026-05-08T11:20:31.201Z"
     }
 },
 {
