@@ -118,7 +118,7 @@ class Sistema(models.Model):
         default=None,
         )
     codigo = models.SlugField(
-        max_length=32,
+        max_length=36,
         help_text="Código identificador del sistema (una sola palabra)",
         unique=True,
         )
@@ -643,10 +643,9 @@ https://www.gobiernodecanarias.org/libroazul/pdf/46083.pdf
 
     @classmethod
     def sistemas_por_organismo(cls, organismo):
-        qs = Organismo.objects.filter(ruta__startswith=organismo.ruta)
+        qs = Organismo.objects .filter(ruta__startswith=organismo.ruta)
         subtree = { _.pk for _ in qs.all() }
-        return cls.objects.filter(organismo__in=subtree).all()
-
+        return cls.objects.filter(organismo__in=subtree).all().order_by('codigo')
 
 
 class Activo(models.Model):

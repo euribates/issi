@@ -231,6 +231,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 38071,
+    "fields": {
+        "titulo": "Decreto 161/2001, 30 julio, por el que se aprueba el Plan Integral de Residuos de Canarias",
+        "created": "2026-05-11T18:45:37.289Z",
+        "updated": "2026-05-11T18:45:37.289Z",
+        "checked": "2026-05-11T18:45:37.287Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 38456,
     "fields": {
         "titulo": "Decreto 204/2001, 3 diciembre, por el que se aprueba el Reglamento de Casinos de Juego de la Comunidad Autónoma de Canarias",
