@@ -75,9 +75,8 @@ class Bus:
 
     def pub_sistema_asignado_familia(self, sistema, familia):
         msg = (
-            f'El sistema {sistema}'
-            ' ha sido asignado'
-            ' a la familia {familia}'
+            f'El sistema {sistema} ha sido asignado'
+            f' a la familia {familia}'
             )
         self.publica(sistema, msg, 'update')
 
