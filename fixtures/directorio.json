@@ -13,7 +13,7 @@
         "ruta": "/",
         "url": null,
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-11T18:45:37.333Z",
+        "f_cambio": "2026-05-12T11:55:24.959Z",
         "f_baja": null
     }
 },
@@ -337,7 +337,7 @@
         "ruta": "/1/42091/7268",
         "url": "http://www.gobiernodecanarias.org/presidencia/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-07T19:50:17.998Z",
+        "f_cambio": "2026-05-12T11:55:24.951Z",
         "f_baja": null
     }
 },
@@ -1201,7 +1201,7 @@
         "ruta": "/1/42091",
         "url": "http://www.gobiernodecanarias.org/presidencia/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-07T19:50:18.003Z",
+        "f_cambio": "2026-05-12T11:55:24.955Z",
         "f_baja": null
     }
 },
@@ -1237,7 +1237,7 @@
         "ruta": "/1/42091/7268/42093",
         "url": "https://www.gobiernodecanarias.org/transformaciondigital",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-07T19:50:17.995Z",
+        "f_cambio": "2026-05-12T11:55:24.947Z",
         "f_baja": null
     }
 },
@@ -2101,7 +2101,7 @@
         "ruta": "/1/42143",
         "url": "https://www.gobiernodecanarias.org/turemp/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-04-27T10:04:57.562Z",
+        "f_cambio": "2026-05-12T11:38:54.198Z",
         "f_baja": null
     }
 },
@@ -2209,7 +2209,7 @@
         "ruta": "/1/42143/42149",
         "url": "https://www.gobiernodecanarias.org/empleo/sce/principal",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2025-11-27T13:28:21.256Z",
+        "f_cambio": "2026-05-12T11:38:54.193Z",
         "f_baja": null
     }
 },
@@ -2227,7 +2227,7 @@
         "ruta": "/1/42150",
         "url": "https://www.gobiernodecanarias.org/ucic/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2025-11-27T13:28:21.256Z",
+        "f_cambio": "2026-05-12T08:36:59.855Z",
         "f_baja": null
     }
 },
@@ -2299,7 +2299,7 @@
         "ruta": "/1/42150/42154",
         "url": "https://www.gobiernodecanarias.org/cultura/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2025-11-27T13:28:21.256Z",
+        "f_cambio": "2026-05-12T08:36:59.848Z",
         "f_baja": null
     }
 },
@@ -2317,7 +2317,7 @@
         "ruta": "/1/42150/42154/42155",
         "url": "https://www.gobiernodecanarias.org/cultura/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2025-11-27T13:28:21.256Z",
+        "f_cambio": "2026-05-12T08:36:59.843Z",
         "f_baja": null
     }
 },
@@ -2389,7 +2389,7 @@
         "ruta": "/1/42159",
         "url": "https://www.gobiernodecanarias.org/transicionecologica/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-11T18:45:37.329Z",
+        "f_cambio": "2026-05-12T07:34:51.650Z",
         "f_baja": null
     }
 },
@@ -2407,7 +2407,7 @@
         "ruta": "/1/42159/42160",
         "url": "https://www.gobiernodecanarias.org/transicionecologica/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-11T18:45:37.325Z",
+        "f_cambio": "2026-05-12T07:34:51.645Z",
         "f_baja": null
     }
 },
@@ -2461,7 +2461,7 @@
         "ruta": "/1/42159/42160/42163",
         "url": "https://www.gobiernodecanarias.org/energia/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-03T21:03:25.103Z",
+        "f_cambio": "2026-05-12T07:34:51.640Z",
         "f_baja": null
     }
 },
@@ -2722,6 +2722,39 @@
         "nif": "Q8855009J",
         "f_alta": "2026-05-07T10:27:59.053Z",
         "f_cambio": "2026-05-07T10:27:59.053Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "directorio.empresa",
+    "pk": 5,
+    "fields": {
+        "nombre_empresa": "Instituto Canario de Desarrollo Cultural",
+        "nif": "A35077817",
+        "f_alta": "2026-05-12T08:07:52.823Z",
+        "f_cambio": "2026-05-12T08:07:52.824Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "directorio.empresa",
+    "pk": 6,
+    "fields": {
+        "nombre_empresa": "TAC7 TELEMATICA AVANZADA CANARIA",
+        "nif": "B35588912",
+        "f_alta": "2026-05-12T08:22:25.177Z",
+        "f_cambio": "2026-05-12T08:22:25.177Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "directorio.empresa",
+    "pk": 7,
+    "fields": {
+        "nombre_empresa": "Fundación Canaria para el Fomento del Trabajo (FUNCATRA)",
+        "nif": "G38528220",
+        "f_alta": "2026-05-12T11:35:01.715Z",
+        "f_cambio": "2026-05-12T11:35:01.715Z",
         "f_baja": null
     }
 }

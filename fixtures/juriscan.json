@@ -271,6 +271,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 39552,
+    "fields": {
+        "titulo": "Ley 12/2003, de 4 de abril, del Servicio Canario de Empleo",
+        "created": "2026-05-12T09:12:03.042Z",
+        "updated": "2026-05-12T09:12:03.042Z",
+        "checked": "2026-05-12T09:11:22Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 40841,
     "fields": {
         "titulo": "Orden, 25 jun 2002, de la Consejería de Presidencia e Innovación Tecnológica, por la que se aprueba la aplicación informática del sistema intercomunicado de registro de entrada y salida de documentos de la Administración Pública de la Comunidad Autónoma de Canarias",
@@ -437,6 +447,16 @@
         "created": "2026-05-08T10:47:21.578Z",
         "updated": "2026-05-08T10:47:21.578Z",
         "checked": "2026-05-08T10:47:21.577Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 59548,
+    "fields": {
+        "titulo": "ORDEN de 21 de julio de 2008, de la Consejería de Empleo, Industria y Comercio, por la que se crea el Registro de solicitantes de subvenciones al Servicio Canario de Empleo",
+        "created": "2026-05-12T11:31:30.405Z",
+        "updated": "2026-05-12T11:32:12.959Z",
+        "checked": "2026-05-12T11:31:12Z"
     }
 },
 {
@@ -931,6 +951,16 @@
 },
 {
     "model": "juriscan.juriscan",
+    "pk": 79218,
+    "fields": {
+        "titulo": "DECRETO 34/2023, de 23 de marzo, por el que se modifica parcialmente la estructura orgánica y de funcionamiento del Servicio Canario de Empleo, aprobada mediante Decreto 118/2004, de 29 de julio.",
+        "created": "2026-05-12T11:38:22.679Z",
+        "updated": "2026-05-12T11:38:22.679Z",
+        "checked": "2026-05-12T11:38:09Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
     "pk": 79226,
     "fields": {
         "titulo": "LEY 4/2023, de 23 de marzo, de la Presidencia y del Gobierno de Canarias.",
@@ -1007,6 +1037,16 @@
         "created": "2026-02-12T08:18:17Z",
         "updated": "2026-02-12T08:18:17Z",
         "checked": "2026-02-12T08:18:17Z"
+    }
+},
+{
+    "model": "juriscan.juriscan",
+    "pk": 79586,
+    "fields": {
+        "titulo": "DECRETO 1/2026, de 26 de enero, por el que se aprueba el Reglamento Orgánico de la Consejería de Transición Ecológica y Energía y se crea y regula el Consejo para la transición energética de Canarias",
+        "created": "2026-05-12T07:34:40.920Z",
+        "updated": "2026-05-12T07:34:40.920Z",
+        "checked": "2026-05-12T07:34:06Z"
     }
 }
 ]

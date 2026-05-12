@@ -77,6 +77,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "0044e9af-4dd4-11f1-aee0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "527",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Alberto Santana Monagas ha sido asignado como Responsable técnico del sistema Expedientes subvenciones Energías Renovables (EXP_ENERGIAS_RENOVABLES)",
+        "momento": "2026-05-12T07:27:15.812Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "00458625-4dd4-11f1-80d5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"asanmonx\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Alberto Santana Monagas ha sido asignado como Responsable técnico del sistema Expedientes subvenciones Energías Renovables (EXP_ENERGIAS_RENOVABLES)",
+        "momento": "2026-05-12T07:27:15.816Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "009581a3-4a11-11f1-a34a-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -97,6 +123,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Boletín Oficial de Canarias (BOC) ha sido actualizada a 'Gestionar el Boletín Oficial de Canarias'",
         "momento": "2026-05-11T08:11:24.691Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "00bdbcd8-4ddd-11f1-8e10-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "531",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Inventario Arquitectónico (BIENES_ARQUI) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T08:31:42.074Z",
         "usuario": "root",
         "payload": null
     }
@@ -376,6 +415,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "04235032-4dd9-11f1-b0a7-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "528",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Ángeles Rodríguez Pérez ha sido asignado como Responsable funcional del sistema Agenda Cultural de Canarias (AGENDA_CULTURAL)",
+        "momento": "2026-05-12T08:03:09.786Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "0423e345-4dd9-11f1-9e25-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mrrodpere\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Ángeles Rodríguez Pérez ha sido asignado como Responsable funcional del sistema Agenda Cultural de Canarias (AGENDA_CULTURAL)",
+        "momento": "2026-05-12T08:03:09.790Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "044953cd-4d2b-11f1-9712-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -597,6 +662,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "06b35b78-4de2-11f1-a4bb-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "533",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de información de registro subvenciones personas con discapacidad en empresas (centros especiales de empleo) (CEE)",
+        "momento": "2026-05-12T09:07:39.556Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "06b402b0-4de2-11f1-9871-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de información de registro subvenciones personas con discapacidad en empresas (centros especiales de empleo) (CEE)",
+        "momento": "2026-05-12T09:07:39.560Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "06caffce-4a2a-11f1-a1cd-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -779,6 +870,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "089fc0d9-4de4-11f1-957f-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "535",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de información de formación para desempleados (FORM) ha sido actualizada a 'Gestión de acciones formativas'",
+        "momento": "2026-05-12T09:22:01.776Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "08aabc9d-4d37-11f1-9216-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -838,6 +942,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Ayudas de acción social (AYASOC)",
         "momento": "2026-05-07T19:50:45.082Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "0974e7d7-4e35-11f1-b552-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "508",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado un icono al sistema Cibercentro incidencias (CIBERCENTRO)",
+        "momento": "2026-05-12T19:01:52.409Z",
         "usuario": "root",
         "payload": null
     }
@@ -929,6 +1046,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Plataforma de formación Moodle (MOODLEESSSCAN) ha sido actualizada a 'Plataforma de aprendizaje'",
         "momento": "2026-05-07T10:25:16.194Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "0a4708df-4ddc-11f1-8418-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "529",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Base de datos Bienes insulares (BIENES_INSULARES) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T08:24:48.577Z",
         "usuario": "root",
         "payload": null
     }
@@ -1052,6 +1182,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "0c541d86-4dec-11f1-a7de-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"jaarjhid\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Javier Arjona Hidalgo",
+        "momento": "2026-05-12T10:19:23.966Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "0c9e7756-4d2c-11f1-a004-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -1072,6 +1215,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema EntidadesBS (REG_ENTIDADES_BS) ha sido asignado a la familia {familia}",
         "momento": "2026-05-07T08:59:26.293Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "0de93358-4ddb-11f1-838c-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "529",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Base de datos Bienes insulares (BIENES_INSULARES)",
+        "momento": "2026-05-12T08:17:45.176Z",
         "usuario": "root",
         "payload": null
     }
@@ -1189,6 +1345,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Aino@ (AINOA) ha sido asignado a la familia {familia}",
         "momento": "2026-05-08T07:53:52.920Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "0ec7ec92-4ddd-11f1-8da0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "531",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Inventario Arquitectónico (BIENES_ARQUI) ha sido actualizada a 'Base de datos de bienes arquitectónicos'",
+        "momento": "2026-05-12T08:32:05.629Z",
         "usuario": "root",
         "payload": null
     }
@@ -1338,6 +1507,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "0ff965ba-4dd5-11f1-90b2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "72",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 79586 al sistema Observatorio de la Energía de Canarias (OECAN)",
+        "momento": "2026-05-12T07:34:51.657Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "0ffe5bea-4df5-11f1-aed7-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "545",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de información registro de solicitantes de subvenciones al SCE (SIRSS) ha sido actualizada a 'Registro de solicitantes de subvenciones al SCE'",
+        "momento": "2026-05-12T11:23:55.585Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "103da2d5-4abc-11f1-9877-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -1390,6 +1585,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "10d6765f-4ded-11f1-a823-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "541",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de Información de Orientación Profesional de Canarias (SOPCAN)",
+        "momento": "2026-05-12T10:26:41.027Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "1175a39d-4a4c-11f1-b734-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -1423,6 +1631,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Justificación de fondos europeos (SIGFE) ha sido actualizada a 'Justificación de fondos europeos'",
         "momento": "2026-05-07T13:45:54.663Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "11d1a6e1-4dec-11f1-bad3-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "539",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Javier Arjona Hidalgo ha sido asignado como Responsable funcional del sistema Sistema de Información  de Programas de Colaboración con Corporaciones Locales (PCOL_CCLL)",
+        "momento": "2026-05-12T10:19:33.177Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "11d24188-4dec-11f1-8153-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jaarjhid\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Javier Arjona Hidalgo ha sido asignado como Responsable funcional del sistema Sistema de Información  de Programas de Colaboración con Corporaciones Locales (PCOL_CCLL)",
+        "momento": "2026-05-12T10:19:33.181Z",
         "usuario": "root",
         "payload": null
     }
@@ -1741,6 +1975,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "17d7b69f-4ded-11f1-8f41-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "541",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de Información de Orientación Profesional de Canarias (SOPCAN) ha sido asignado a la familia No aplicable",
+        "momento": "2026-05-12T10:26:52.780Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "17e26621-4dd4-11f1-be22-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "527",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Expedientes subvenciones Energías Renovables (EXP_ENERGIAS_RENOVABLES)",
+        "momento": "2026-05-12T07:27:55.432Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "17ecafb5-4965-11f1-b5da-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -1800,6 +2060,58 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Acreditación de Estudiantes Sanitarios (AES) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T10:20:55.644Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "18db961f-4ddd-11f1-a6d0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "531",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Carlos García Ávila ha sido asignado como Responsable funcional del sistema Inventario Arquitectónico (BIENES_ARQUI)",
+        "momento": "2026-05-12T08:32:22.535Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "18dc3c8f-4ddd-11f1-aa8a-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jgaravi\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Carlos García Ávila ha sido asignado como Responsable funcional del sistema Inventario Arquitectónico (BIENES_ARQUI)",
+        "momento": "2026-05-12T08:32:22.539Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "193ef4b3-4dec-11f1-9c52-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "539",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información  de Programas de Colaboración con Corporaciones Locales (PCOL_CCLL)",
+        "momento": "2026-05-12T10:19:45.637Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "193fa278-4dec-11f1-820e-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información  de Programas de Colaboración con Corporaciones Locales (PCOL_CCLL)",
+        "momento": "2026-05-12T10:19:45.642Z",
         "usuario": "root",
         "payload": null
     }
@@ -1871,6 +2183,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "1a622c89-4dee-11f1-ab35-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "542",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de Información  de Subvenciones (SUBV_EMP) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T10:34:06.539Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "1ade70fc-4ac7-11f1-965a-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -1905,6 +2230,19 @@
         "descripcion": "El usuario Marta Da Silva Bethencourt ha sido asignado como Responsable funcional del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA)",
         "momento": "2026-04-22T19:47:33.614Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "1b1ec630-4deb-11f1-84ec-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"tmolher\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Tamia María Molina Herrera",
+        "momento": "2026-05-12T10:12:39.285Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -2073,6 +2411,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha asignado la entrada Juriscán nº 78655 al sistema Red Canaria de Alerta Temprana de Especies Exóticas Invasoras (RED_EXOS)",
         "momento": "2026-05-05T11:18:17.141Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "1d6431d3-4df7-11f1-ad2a-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "546",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 79218 al sistema Sistema de información Observatorio Canario del Empleo y la Formación Profesional (OBECAN)",
+        "momento": "2026-05-12T11:38:37.056Z",
         "usuario": "root",
         "payload": null
     }
@@ -2248,6 +2599,45 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "20365a12-4ddd-11f1-ab75-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "531",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Mario Acosta ha sido asignado como Responsable técnico del sistema Inventario Arquitectónico (BIENES_ARQUI)",
+        "momento": "2026-05-12T08:32:34.874Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "2036e660-4ddd-11f1-8946-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"marioacosta@tac7.com\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Mario Acosta ha sido asignado como Responsable técnico del sistema Inventario Arquitectónico (BIENES_ARQUI)",
+        "momento": "2026-05-12T08:32:34.878Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "209dbc16-4dd2-11f1-aed7-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "526",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA)",
+        "momento": "2026-05-12T07:13:51.087Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "20aad4ef-49f5-11f1-bdc0-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -2365,6 +2755,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "22d8acfe-4ddc-11f1-af20-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "529",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Base de datos Bienes insulares (BIENES_INSULARES) ha sido actualizada a 'Base de datos Bienes insulares'",
+        "momento": "2026-05-12T08:25:29.797Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "22ec0e43-4acf-11f1-aaf6-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -2411,6 +2814,19 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario Manuel Alexis de los Reyes Darias ha sido asignado como Responsable técnico del sistema Sistema de gestión procesal de justicia con cliente web (ATLANTE_WEB)",
         "momento": "2026-05-08T08:58:53.158Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "2350db78-4df6-11f1-8a5a-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "545",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 59548 al sistema Sistema de información registro de solicitantes de subvenciones al SCE (SIRSS)",
+        "momento": "2026-05-12T11:31:37.499Z",
         "usuario": "root",
         "payload": null
     }
@@ -2489,6 +2905,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Visualización de la Manifestación Anticipada de Voluntad a través de medios telemáticos (VIMAV) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T17:59:23.639Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "24e221ef-4ddf-11f1-a4f2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "133",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de Información Gerencial (CMI_TURISMO) ha sido actualizada a 'Cuadro de mandos de Turismo'",
+        "momento": "2026-05-12T08:47:01.704Z",
         "usuario": "root",
         "payload": null
     }
@@ -2632,6 +3061,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha asignado la entrada Juriscán nº 62312 al sistema Gestión de los usuarios que tendrán acceso a la aplicación GEBOC (GEBOC_USAD)",
         "momento": "2026-05-08T09:34:45.042Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "26270c69-4dd2-11f1-b858-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "526",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T07:14:00.376Z",
         "usuario": "root",
         "payload": null
     }
@@ -2794,6 +3236,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "279d8cc2-4df7-11f1-bec1-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "546",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de información Observatorio Canario del Empleo y la Formación Profesional (OBECAN)",
+        "momento": "2026-05-12T11:38:54.210Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "27c2190f-4a0c-11f1-b136-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -2931,6 +3386,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Horarios comerciales (HORARIOS) ha sido actualizada a 'Registro de los horarios comerciales'",
         "momento": "2026-05-07T09:50:20.511Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "292e5f85-4dec-11f1-b80d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "539",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de Información  de Programas de Colaboración con Corporaciones Locales (PCOL_CCLL)",
+        "momento": "2026-05-12T10:20:12.372Z",
         "usuario": "root",
         "payload": null
     }
@@ -3080,6 +3548,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "2b42916a-4dee-11f1-9733-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "542",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de Información  de Subvenciones (SUBV_EMP) ha sido actualizada a 'Subvenciones sobre Políticas Activas de Empleo'",
+        "momento": "2026-05-12T10:34:34.853Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "2b7a327e-4dd2-11f1-bfd8-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "526",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA) ha sido actualizada a 'Red Canaria de Vigilancia Sanitaria de la Fauna Silvestr'",
+        "momento": "2026-05-12T07:14:09.310Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "2bc70ca1-4d18-11f1-83cb-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -3158,6 +3652,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "2cf2ebde-4dec-11f1-a23c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "539",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de Información  de Programas de Colaboración con Corporaciones Locales (PCOL_CCLL) ha sido asignado a la familia No aplicable",
+        "momento": "2026-05-12T10:20:18.693Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "2d1f717f-4ab2-11f1-bcce-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -3210,6 +3717,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "2dd4d700-4dd5-11f1-8fcf-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "72",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Observatorio de la Energía de Canarias (OECAN) ha sido asignado a la familia No aplicable",
+        "momento": "2026-05-12T07:35:41.756Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "2df210e1-4a0d-11f1-aa43-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -3256,6 +3776,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Elaboración de repertorios de preguntas para la OPE (MECANOPE) ha sido actualizada a 'Aplicación para la elaboración de repertorios de preguntas para la OPE y construcción de modelos de examen'",
         "momento": "2026-05-11T11:33:07.025Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "2e8dfe9d-4de5-11f1-a6c6-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"mmigred\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario María del Mar Miguel Redondo",
+        "momento": "2026-05-12T09:30:14.911Z",
         "usuario": "root",
         "payload": null
     }
@@ -3353,6 +3886,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "2f957574-4ddf-11f1-8b1c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "133",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de Información Gerencial (CMI_TURISMO) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T08:47:19.656Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "2faec490-4859-11f1-98f7-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -3412,6 +3958,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Servicios Electrónicos para la Gestión del Juego (REGISTRO_JUEGO_SERV_ELEC)",
         "momento": "2026-05-08T11:43:54.157Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3120c4ca-4deb-11f1-aded-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "538",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Tamia María Molina Herrera ha sido asignado como Responsable funcional del sistema Sistema de Información  de Prácticas en Empresa (PREM)",
+        "momento": "2026-05-12T10:13:16.208Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "312137cb-4deb-11f1-a183-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"tmolher\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Tamia María Molina Herrera ha sido asignado como Responsable funcional del sistema Sistema de Información  de Prácticas en Empresa (PREM)",
+        "momento": "2026-05-12T10:13:16.211Z",
         "usuario": "root",
         "payload": null
     }
@@ -3678,6 +4250,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "342e9165-4de4-11f1-8dba-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"aojedom\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Antonio Ojeda Domínguez",
+        "momento": "2026-05-12T09:23:14.854Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "34a7483f-4d3b-11f1-800a-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -3750,6 +4335,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Aplicación del Ministerio de Justicia (LEXNET_WEB) ha sido actualizada a 'Aplicación del Ministerio de Justicia para el Intercambio electrónico de información entre órganos judiciales y operadores jurídicos'",
         "momento": "2026-05-08T10:25:16.803Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3511cb5c-4de5-11f1-a2f2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "537",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María del Mar Miguel Redondo ha sido asignado como Responsable funcional del sistema Sistema de Información demanda de empleo del Servicio Público de Empleo de Canarias (SISPECAN- Intermediación) (INTERMEDIACION)",
+        "momento": "2026-05-12T09:30:25.840Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "351250da-4de5-11f1-9326-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mmigred\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María del Mar Miguel Redondo ha sido asignado como Responsable funcional del sistema Sistema de Información demanda de empleo del Servicio Público de Empleo de Canarias (SISPECAN- Intermediación) (INTERMEDIACION)",
+        "momento": "2026-05-12T09:30:25.844Z",
         "usuario": "root",
         "payload": null
     }
@@ -4003,6 +4614,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "38845d3d-4deb-11f1-88db-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "538",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información  de Prácticas en Empresa (PREM)",
+        "momento": "2026-05-12T10:13:28.605Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3884e048-4deb-11f1-b7a7-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información  de Prácticas en Empresa (PREM)",
+        "momento": "2026-05-12T10:13:28.608Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "3889a8ab-4aaf-11f1-8960-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -4102,6 +4739,32 @@
         "descripcion": "La finalidad del sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA) ha sido actualizada a 'Gestionar expedientes de perros de asistencia'",
         "momento": "2026-04-22T19:41:13.731Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "38b799b3-4de4-11f1-bbd8-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "535",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Antonio Ojeda Domínguez ha sido asignado como Responsable funcional del sistema Sistema de información de formación para desempleados (FORM)",
+        "momento": "2026-05-12T09:23:22.463Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "38b82723-4de4-11f1-acde-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"aojedom\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Antonio Ojeda Domínguez ha sido asignado como Responsable funcional del sistema Sistema de información de formación para desempleados (FORM)",
+        "momento": "2026-05-12T09:23:22.467Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -4237,6 +4900,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "3a135db2-4dee-11f1-9282-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "542",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Francisco J. Santana Martín ha sido asignado como Responsable funcional del sistema Sistema de Información  de Subvenciones (SUBV_EMP)",
+        "momento": "2026-05-12T10:34:59.710Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3a140545-4dee-11f1-aa90-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"fsanmarj\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Francisco J. Santana Martín ha sido asignado como Responsable funcional del sistema Sistema de Información  de Subvenciones (SUBV_EMP)",
+        "momento": "2026-05-12T10:34:59.714Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "3a1b2b49-4964-11f1-ad58-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -4354,6 +5043,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "3bcb185e-4ddd-11f1-bec7-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "531",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 485 al sistema Inventario Arquitectónico (BIENES_ARQUI)",
+        "momento": "2026-05-12T08:33:21.147Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "3bd1fd7d-4a4d-11f1-8109-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -4400,6 +5102,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Interrupción Voluntaria del Embarazo (IVE) ha sido actualizada a 'Interrupción Voluntaria del Embarazo'",
         "momento": "2026-05-11T12:30:46.275Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3c9b1790-4de5-11f1-bdf9-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "537",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información demanda de empleo del Servicio Público de Empleo de Canarias (SISPECAN- Intermediación) (INTERMEDIACION)",
+        "momento": "2026-05-12T09:30:38.484Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3c9b7a4a-4de5-11f1-8775-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información demanda de empleo del Servicio Público de Empleo de Canarias (SISPECAN- Intermediación) (INTERMEDIACION)",
+        "momento": "2026-05-12T09:30:38.487Z",
         "usuario": "root",
         "payload": null
     }
@@ -4497,6 +5225,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "3e790f80-4dec-11f1-aed2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "539",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de Información  de Programas de Colaboración con Corporaciones Locales (PCOL_CCLL) ha sido asignado a la familia Subvenciones, premios y becas",
+        "momento": "2026-05-12T10:20:48.094Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "3e982237-4d23-11f1-ba36-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -4549,6 +5290,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "3f658a50-4de3-11f1-aed8-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "534",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de Información Entorno gestión de expedientes. (EGE)",
+        "momento": "2026-05-12T09:16:24.181Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "3fa55f0c-4d35-11f1-b4bc-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -4575,6 +5329,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "4026f61f-4df2-11f1-b438-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "544",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Tamia María Molina Herrera ha sido asignado como Responsable funcional del sistema Sistema de información Becas y Ayudas (BECAS_EMP)",
+        "momento": "2026-05-12T11:03:47.891Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "40276ea1-4df2-11f1-bddf-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"tmolher\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Tamia María Molina Herrera ha sido asignado como Responsable funcional del sistema Sistema de información Becas y Ayudas (BECAS_EMP)",
+        "momento": "2026-05-12T11:03:47.895Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "402a3884-4abc-11f1-a104-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -4582,6 +5362,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Sistema de gestión procesal de justicia con cliente web (ATLANTE_WEB)",
         "momento": "2026-05-08T08:59:41.601Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "40318dc3-4de4-11f1-94c8-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "535",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de información de formación para desempleados (FORM)",
+        "momento": "2026-05-12T09:23:35.007Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "40322893-4de4-11f1-9ee0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de información de formación para desempleados (FORM)",
+        "momento": "2026-05-12T09:23:35.011Z",
         "usuario": "root",
         "payload": null
     }
@@ -4822,6 +5628,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "42a64891-4ddb-11f1-86bd-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"jgaravi\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Juan Carlos García Ávila",
+        "momento": "2026-05-12T08:19:13.657Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "42eabbd3-49fd-11f1-8cd3-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -4965,6 +5784,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "4387c8d2-4de2-11f1-951f-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"mrosher\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario María Mar Rosa Hernández",
+        "momento": "2026-05-12T09:09:21.612Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "438d28a4-4a04-11f1-b7a9-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -5069,6 +5901,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "44beb64b-4df2-11f1-8387-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "544",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de información Becas y Ayudas (BECAS_EMP) ha sido asignado a la familia Subvenciones, premios y becas",
+        "momento": "2026-05-12T11:03:55.597Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "44deeb0a-4d25-11f1-a5f5-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -5076,6 +5921,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Sistema de información de Régimen Jurídico de personal (BICHO) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T10:36:28.978Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "45735e79-4dee-11f1-b0cb-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "542",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información  de Subvenciones (SUBV_EMP)",
+        "momento": "2026-05-12T10:35:18.794Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "4573ea33-4dee-11f1-8d04-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información  de Subvenciones (SUBV_EMP)",
+        "momento": "2026-05-12T10:35:18.798Z",
         "usuario": "root",
         "payload": null
     }
@@ -5147,6 +6018,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "47154b4b-4de2-11f1-b705-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "533",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Mar Rosa Hernández ha sido asignado como Responsable funcional del sistema Sistema de información de registro subvenciones personas con discapacidad en empresas (centros especiales de empleo) (CEE)",
+        "momento": "2026-05-12T09:09:27.572Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "4716085f-4de2-11f1-807c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mrosher\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Mar Rosa Hernández ha sido asignado como Responsable funcional del sistema Sistema de información de registro subvenciones personas con discapacidad en empresas (centros especiales de empleo) (CEE)",
+        "momento": "2026-05-12T09:09:27.577Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "476db645-4d3f-11f1-a3e1-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -5181,6 +6078,32 @@
         "descripcion": "El código del sistema Renta Canaria Ciudadana (SITA_RCC) ha sido actualizada a 'SITA_RCC'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
         "momento": "2026-04-27T12:26:13.341Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "47cf3a66-4ddb-11f1-bf3c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "529",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Carlos García Ávila ha sido asignado como Responsable funcional del sistema Base de datos Bienes insulares (BIENES_INSULARES)",
+        "momento": "2026-05-12T08:19:22.313Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "47cfbc15-4ddb-11f1-9c02-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jgaravi\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Carlos García Ávila ha sido asignado como Responsable funcional del sistema Base de datos Bienes insulares (BIENES_INSULARES)",
+        "momento": "2026-05-12T08:19:22.317Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -5628,6 +6551,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "4dd1f37c-4ddd-11f1-93c7-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "531",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha desasingado la entrada nº 485 al sistema Inventario Arquitectónico (BIENES_ARQUI)",
+        "momento": "2026-05-12T08:33:51.391Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "4de83822-4d3c-11f1-adb1-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -5693,6 +6629,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "4e625957-4dec-11f1-803e-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "539",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de Información  de Programas de Colaboración con Corporaciones Locales (PCOL_CCLL) ha sido actualizada a 'Subvenciones a la contratación de desempleados por parte de corporaciones locales'",
+        "momento": "2026-05-12T10:21:14.788Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "4e8a2acf-4acc-11f1-b8f5-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -5700,6 +6649,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha asignado la entrada Juriscán nº 58433 al sistema Sistema de gestión integral de seguridad canaria (SIGESCA)",
         "momento": "2026-05-08T10:54:37.666Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "4ec533a4-4ddc-11f1-bb42-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "529",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 77902 al sistema Base de datos Bienes insulares (BIENES_INSULARES)",
+        "momento": "2026-05-12T08:26:43.489Z",
         "usuario": "root",
         "payload": null
     }
@@ -5849,6 +6811,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "50b1f3e3-4df4-11f1-88d0-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "545",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de información registro de solicitantes de subvenciones al SCE (SIRSS)",
+        "momento": "2026-05-12T11:18:34.639Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "50e15d06-4d2d-11f1-8cce-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -5921,6 +6896,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Consulta de empresas clasificadas (EMPRESAS_CLASIFICADAS) ha sido actualizada a 'Consulta de empresas clasificadas por la Junta Consultiva de Contratación Administrativa'",
         "momento": "2026-05-07T12:36:06.270Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "516c53d1-4df2-11f1-afc5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "544",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de información Becas y Ayudas (BECAS_EMP)",
+        "momento": "2026-05-12T11:04:16.867Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "516cce32-4df2-11f1-8725-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de información Becas y Ayudas (BECAS_EMP)",
+        "momento": "2026-05-12T11:04:16.870Z",
         "usuario": "root",
         "payload": null
     }
@@ -6311,6 +7312,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Gestión de archivo eSPERIA (ESPERIA)",
         "momento": "2026-05-07T16:11:00.644Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "56f7de24-4de4-11f1-a2fe-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "535",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de información de formación para desempleados (FORM)",
+        "momento": "2026-05-12T09:24:13.216Z",
         "usuario": "root",
         "payload": null
     }
@@ -6811,6 +7825,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "5cedbc0d-4df2-11f1-9964-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "544",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de información Becas y Ayudas (BECAS_EMP) ha sido actualizada a 'Sistema de información Becas y Ayudas'",
+        "momento": "2026-05-12T11:04:36.171Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "5cfabb0e-4dee-11f1-9e71-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "542",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de Información  de Subvenciones (SUBV_EMP)",
+        "momento": "2026-05-12T10:35:58.269Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "5d23a803-4d29-11f1-8fee-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -7032,6 +8072,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "5fba7a72-4ded-11f1-88a9-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "541",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María del Mar Miguel Redondo ha sido asignado como Responsable funcional del sistema Sistema de Información de Orientación Profesional de Canarias (SOPCAN)",
+        "momento": "2026-05-12T10:28:53.384Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "5fbb3225-4ded-11f1-9932-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mmigred\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María del Mar Miguel Redondo ha sido asignado como Responsable funcional del sistema Sistema de Información de Orientación Profesional de Canarias (SOPCAN)",
+        "momento": "2026-05-12T10:28:53.389Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "5fc4b398-4d2a-11f1-8d54-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -7162,6 +8228,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "6194e75f-4df4-11f1-8234-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "545",
+        "nombre_clase": "Sistema",
+        "descripcion": "La finalidad del sistema Sistema de información registro de solicitantes de subvenciones al SCE (SIRSS) ha sido actualizada a 'Gestionar el Registro de solicitantes de subvenciones del SCE.'",
+        "momento": "2026-05-12T11:19:02.970Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "61de5425-4d37-11f1-ae84-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -7175,6 +8254,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "624f1b18-4e33-11f1-a23d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "180",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema FIANZAS (FIANZAS) ha sido actualizada a 'FIANZAS'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-12T18:50:02.485Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "6256d047-4d28-11f1-83b0-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -7182,6 +8274,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Cuadro de mando Centralizado de AP (DATAAP) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T10:58:46.909Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "626f46f1-4de5-11f1-98c0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "537",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de Información demanda de empleo del Servicio Público de Empleo de Canarias (SISPECAN- Intermediación) (INTERMEDIACION)",
+        "momento": "2026-05-12T09:31:41.951Z",
         "usuario": "root",
         "payload": null
     }
@@ -7273,6 +8378,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El nombre del sistema LexNET (Aplicación del Ministerio de Justicia) (LEXNET) ha sido actualizada a 'LexNET (Aplicación del Ministerio de Justicia)'.\n",
         "momento": "2026-05-08T10:26:35.395Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "63f27b1e-4deb-11f1-80b2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "538",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de Información  de Prácticas en Empresa (PREM)",
+        "momento": "2026-05-12T10:14:41.468Z",
         "usuario": "root",
         "payload": null
     }
@@ -7435,6 +8553,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "664e217c-4e33-11f1-9a71-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "180",
+        "nombre_clase": "Sistema",
+        "descripcion": "El nombre del sistema Fianzas (FIANZAS) ha sido actualizada a 'Fianzas'.\n",
+        "momento": "2026-05-12T18:50:09.189Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "66d4b6ad-4a1b-11f1-bc57-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -7533,6 +8664,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Registro oficial de Establecimientos y Servicios Biocidas (ROESB) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T17:18:19.677Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "6820d8b3-4ddd-11f1-92e0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "531",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 77902 al sistema Inventario Arquitectónico (BIENES_ARQUI)",
+        "momento": "2026-05-12T08:34:35.529Z",
         "usuario": "root",
         "payload": null
     }
@@ -7955,6 +9099,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "6c8b2c60-4ded-11f1-9e8a-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "541",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información de Orientación Profesional de Canarias (SOPCAN)",
+        "momento": "2026-05-12T10:29:14.884Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "6c8bae3b-4ded-11f1-b649-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información de Orientación Profesional de Canarias (SOPCAN)",
+        "momento": "2026-05-12T10:29:14.888Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "6ca941ad-4a49-11f1-a516-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -8293,6 +9463,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "71409846-4de1-11f1-bf54-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "533",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de información de registro subvenciones personas con discapacidad en empresas (centros especiales de empleo) (CEE)",
+        "momento": "2026-05-12T09:03:28.824Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "71606190-4d3a-11f1-a31f-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -8313,6 +9496,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El código del sistema Pensiones (EXP_PENSIONES_NC) ha sido actualizada a 'EXP_PENSIONES_NC'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
         "momento": "2026-05-07T09:16:34.672Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "719e2670-4e33-11f1-961c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "180",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Fianzas (FIANZAS) ha sido actualizada a 'Depósito de las fianzas por alquiler de inmuebles'",
+        "momento": "2026-05-12T18:50:28.169Z",
         "usuario": "root",
         "payload": null
     }
@@ -8605,6 +9801,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "76266813-4df9-11f1-a0ca-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "5",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 79417 al sistema Platea Tramitador de expedientes (PLATEA)",
+        "momento": "2026-05-12T11:55:24.962Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "76babe34-4ac0-11f1-861d-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -8677,6 +9886,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Seguimiento de los pacientes drogodependientes (CEDRO) ha sido actualizada a 'Control de las agendas de los centros y seguimiento de los pacientes drogodependientes'",
         "momento": "2026-05-11T10:45:04.809Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7881611a-4e03-11f1-bf86-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "162",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Registro de Comerciantes y  Comercios de Canarias (REG_COMERCIA) ha sido actualizada a 'REG_COMERCIA'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-12T13:07:03.881Z",
         "usuario": "root",
         "payload": null
     }
@@ -8839,6 +10061,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "7b578555-4de4-11f1-a6a4-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "536",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de información de formación para ocupados (FORO)",
+        "momento": "2026-05-12T09:25:14.241Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "7b87dc63-3e86-11f1-9f29-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -8860,6 +10095,32 @@
         "descripcion": "El usuario Mercedes Cabrera Peña ha sido asignado como Responsable técnico del sistema Sistema de información de recursos humanos (SIRHUS)",
         "momento": "2026-04-22T20:04:34.429Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7b94afb9-4df9-11f1-9364-920007977582",
+    "fields": {
+        "nivel_evento": "delete",
+        "sujeto": "5",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Rebeca Cruz González ha dejado de ser Responsable funcional del sistema Platea Tramitador de expedientes (PLATEA)",
+        "momento": "2026-05-12T11:55:34.073Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7b9534ff-4df9-11f1-afaf-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"rcrugon\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Rebeca Cruz González ha dejado de ser Responsable funcional del sistema Platea Tramitador de expedientes (PLATEA)",
+        "momento": "2026-05-12T11:55:34.077Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -9034,6 +10295,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "7dba0b29-4de1-11f1-8a80-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "533",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de información de registro subvenciones personas con discapacidad en empresas (centros especiales de empleo) (CEE) ha sido asignado a la familia Subvenciones, premios y becas",
+        "momento": "2026-05-12T09:03:49.752Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "7e266f60-4a22-11f1-a798-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -9041,6 +10315,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Patrimonio (PATRIMONIOVVDA) ha sido asignado a la familia {familia}",
         "momento": "2026-05-07T14:39:03.099Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7e324f12-4df9-11f1-98b7-920007977582",
+    "fields": {
+        "nivel_evento": "delete",
+        "sujeto": "5",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Hector Javier González Ortega ha dejado de ser Responsable técnico del sistema Platea Tramitador de expedientes (PLATEA)",
+        "momento": "2026-05-12T11:55:38.462Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7e32c093-4df9-11f1-a0de-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"hgonort\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Hector Javier González Ortega ha dejado de ser Responsable técnico del sistema Platea Tramitador de expedientes (PLATEA)",
+        "momento": "2026-05-12T11:55:38.465Z",
         "usuario": "root",
         "payload": null
     }
@@ -9119,6 +10419,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha asignado la entrada Juriscán nº 79047 al sistema Ayudas económicas de carácter de emergencia destrucción total La Palma - Servicio de promoción privada (AYUDASVVDALAPALMA)",
         "momento": "2026-05-07T14:31:54.579Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7ece1a31-4ddf-11f1-a0d4-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "137",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de Información de gestión de Ordenación, Formación y Promoción Turística (BO_INTUR) ha sido actualizada a 'Sistema de Información de gestión de Ordenación, Formación y Promoción Turística'",
+        "momento": "2026-05-12T08:49:32.568Z",
         "usuario": "root",
         "payload": null
     }
@@ -9398,6 +10711,45 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "8322eb51-4e03-11f1-9c42-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "162",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Registro de Comerciantes y  Comercios de Canarias (REG_COMERCIA) ha sido asignado a la familia Registros administrativos",
+        "momento": "2026-05-12T13:07:21.717Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "834ba6dd-4e33-11f1-b971-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "180",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Fianzas (FIANZAS) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T18:50:57.827Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "838e5dcc-4ddc-11f1-bede-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "530",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Base de datos Bienes Muebles (BIENES_MUEBLES)",
+        "momento": "2026-05-12T08:28:12.048Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "83b86280-4a1a-11f1-86fc-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -9444,6 +10796,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Arquitectura de aplicaciones y sistemas de soporte (APLISOP) ha sido actualizada a 'Aplicaciones transversales de la arquitectura informática de la consejería'",
         "momento": "2026-05-07T09:45:45.824Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "858bb483-4de4-11f1-a362-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "536",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Antonio Ojeda Domínguez ha sido asignado como Responsable funcional del sistema Sistema de información de formación para ocupados (FORO)",
+        "momento": "2026-05-12T09:25:31.360Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "858c5b78-4de4-11f1-ad71-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"aojedom\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Antonio Ojeda Domínguez ha sido asignado como Responsable funcional del sistema Sistema de información de formación para ocupados (FORO)",
+        "momento": "2026-05-12T09:25:31.364Z",
         "usuario": "root",
         "payload": null
     }
@@ -9528,6 +10906,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "86a5e09d-4dec-11f1-a900-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "540",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de Información de Programas de Colaboración con Organismos e ISAL (PCOL_ORG)",
+        "momento": "2026-05-12T10:22:49.184Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "8710ae0d-4a10-11f1-8b5d-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -9587,6 +10978,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Registro de información de terapias anticoagulantes (GOTA) ha sido actualizada a 'Registro de información de terapias anticoagulantes'",
         "momento": "2026-05-11T12:18:33.318Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "879150ab-4e03-11f1-a0c3-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "162",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Registro de Comerciantes y  Comercios de Canarias (REG_COMERCIA) ha sido actualizada a 'Registro de Comerciantes y Comercios de Canarias'",
+        "momento": "2026-05-12T13:07:29.152Z",
         "usuario": "root",
         "payload": null
     }
@@ -9679,6 +11083,19 @@
         "descripcion": "El sistema Registro de perros de asistencia (REG_PERROS_ASISTENCIA) ha sido asignado a la materia competencial Bienestar Social",
         "momento": "2026-04-22T19:50:37.195Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "88a32452-4de3-11f1-a317-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"fsanmarj\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Francisco J. Santana Martín",
+        "momento": "2026-05-12T09:18:27.050Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -9892,6 +11309,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "8aac3ac2-4e33-11f1-81ab-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "180",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Fianzas (FIANZAS) ha sido asignado a la familia No aplicable",
+        "momento": "2026-05-12T18:51:10.204Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "8abbdfd8-4d36-11f1-a893-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -9925,6 +11355,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La finalidad del sistema Programa Económico Actividad ESSSCAN (PROECO) ha sido actualizada a 'Sistema que integra el registro contable, con la gestión financiera-económica, el control de costes y los datos vinculados con las nóminas de los trabajadores de la Escuela.'",
         "momento": "2026-05-07T10:50:21.427Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8b83f1d0-4ded-11f1-816f-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "541",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de Información de Orientación Profesional de Canarias (SOPCAN)",
+        "momento": "2026-05-12T10:30:06.846Z",
         "usuario": "root",
         "payload": null
     }
@@ -10087,6 +11530,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "8c652789-4de3-11f1-9600-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "534",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Francisco J. Santana Martín ha sido asignado como Responsable funcional del sistema Sistema de Información Entorno gestión de expedientes. (EGE)",
+        "momento": "2026-05-12T09:18:33.355Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8c65ce73-4de3-11f1-8459-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"fsanmarj\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Francisco J. Santana Martín ha sido asignado como Responsable funcional del sistema Sistema de Información Entorno gestión de expedientes. (EGE)",
+        "momento": "2026-05-12T09:18:33.359Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "8c8a7882-4d3e-11f1-8871-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -10243,6 +11712,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "8ea62e83-4df9-11f1-8cd6-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "5",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Ana Aznar Palenzuela ha sido asignado como Responsable funcional del sistema Platea Tramitador de expedientes (PLATEA)",
+        "momento": "2026-05-12T11:56:06.065Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8ea6cc94-4df9-11f1-95c5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"aaznpal\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Ana Aznar Palenzuela ha sido asignado como Responsable funcional del sistema Platea Tramitador de expedientes (PLATEA)",
+        "momento": "2026-05-12T11:56:06.069Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "8ee5568e-4d5d-11f1-bb2e-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -10276,6 +11771,45 @@
         "nombre_clase": "Sistema",
         "descripcion": "Añadido el sistema de información Consulta de Terceros (CTERCEROS)",
         "momento": "2026-05-07T12:16:22.159Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8f9f98a0-4de1-11f1-ae05-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "533",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de información de registro subvenciones personas con discapacidad en empresas (centros especiales de empleo) (CEE) ha sido actualizada a 'Gestión de subvenciones para personas con discapacidad en empresas'",
+        "momento": "2026-05-12T09:04:19.778Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8fd748cc-4de4-11f1-971b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "536",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de información de formación para ocupados (FORO)",
+        "momento": "2026-05-12T09:25:48.633Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8fd7f7ac-4de4-11f1-bd27-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de información de formación para ocupados (FORO)",
+        "momento": "2026-05-12T09:25:48.637Z",
         "usuario": "root",
         "payload": null
     }
@@ -10425,6 +11959,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "90f33ee4-4deb-11f1-bd72-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "538",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de Información  de Prácticas en Empresa (PREM) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T10:15:56.971Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "9103ba6a-4abc-11f1-891b-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -10464,6 +12011,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "915275d5-4dfb-11f1-9dff-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "312",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Instalaciones Red de Emergencias y Seguridad de Canarias (RESCAN) ha sido asignado al organismo Dirección General de Transformación Digital de los Servicios Públicos",
+        "momento": "2026-05-12T12:10:29.543Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "91534e6d-4dfb-11f1-827a-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "42093",
+        "nombre_clase": "Organismo",
+        "descripcion": "El sistema Instalaciones Red de Emergencias y Seguridad de Canarias (RESCAN) ha sido asignado al organismo Dirección General de Transformación Digital de los Servicios Públicos",
+        "momento": "2026-05-12T12:10:29.548Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "91cb0b69-4d25-11f1-a044-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -10484,6 +12057,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Connecting Europe Facilities (CEF) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T10:45:48.287Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9240f5ad-4ddc-11f1-9730-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "530",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Carlos García Ávila ha sido asignado como Responsable funcional del sistema Base de datos Bienes Muebles (BIENES_MUEBLES)",
+        "momento": "2026-05-12T08:28:36.707Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "92417b7a-4ddc-11f1-a50d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jgaravi\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Carlos García Ávila ha sido asignado como Responsable funcional del sistema Base de datos Bienes Muebles (BIENES_MUEBLES)",
+        "momento": "2026-05-12T08:28:36.710Z",
         "usuario": "root",
         "payload": null
     }
@@ -10614,6 +12213,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Precios de bienes y servicios (PREBIESRV) ha sido actualizada a 'Gestión de los precios de bienes y servicios'",
         "momento": "2026-05-07T09:53:19.299Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "93d1c982-4de3-11f1-aef9-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "534",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información Entorno gestión de expedientes. (EGE)",
+        "momento": "2026-05-12T09:18:45.811Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "93d264a1-4de3-11f1-a240-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información Entorno gestión de expedientes. (EGE)",
+        "momento": "2026-05-12T09:18:45.815Z",
         "usuario": "root",
         "payload": null
     }
@@ -10841,6 +12466,45 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "969b1214-4de4-11f1-ae98-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "536",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de información de formación para ocupados (FORO)",
+        "momento": "2026-05-12T09:25:59.982Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "97102880-4dec-11f1-85c1-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "540",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Javier Arjona Hidalgo ha sido asignado como Responsable funcional del sistema Sistema de Información de Programas de Colaboración con Organismos e ISAL (PCOL_ORG)",
+        "momento": "2026-05-12T10:23:16.723Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "97110b25-4dec-11f1-8fae-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jaarjhid\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Javier Arjona Hidalgo ha sido asignado como Responsable funcional del sistema Sistema de Información de Programas de Colaboración con Organismos e ISAL (PCOL_ORG)",
+        "momento": "2026-05-12T10:23:16.729Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "9720da66-4a29-11f1-a1c7-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -10861,6 +12525,32 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario María Candelaria Valido Hernández ha sido asignado como Responsable técnico del sistema Ayudas al Alquiler de Vivienda por Covid19 (SITA_COVID)",
         "momento": "2026-05-07T15:29:51.486Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "97bad324-4df9-11f1-b198-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "5",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Rosa María Galindo Rodríguez ha sido asignado como Responsable técnico del sistema Platea Tramitador de expedientes (PLATEA)",
+        "momento": "2026-05-12T11:56:21.300Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "97bb68f8-4df9-11f1-9c2f-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"rgalrod\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Rosa María Galindo Rodríguez ha sido asignado como Responsable técnico del sistema Platea Tramitador de expedientes (PLATEA)",
+        "momento": "2026-05-12T11:56:21.303Z",
         "usuario": "root",
         "payload": null
     }
@@ -10900,6 +12590,19 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario José Antonio Muñoz Serradilla ha sido asignado como Responsable funcional del sistema Parte pública de la aplicación de mediación familiar (MEDFAMDGRAJ_PUBLICA)",
         "momento": "2026-05-08T10:35:14.004Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "99176cc7-4dd2-11f1-b04c-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"oayzmas\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Olga Ayza Mascarell",
+        "momento": "2026-05-12T07:17:13.211Z",
         "usuario": "root",
         "payload": null
     }
@@ -10952,6 +12655,45 @@
         "nombre_clase": "Sistema",
         "descripcion": "Añadido el sistema de información Sistema de información de Residuos (GUIRRE)",
         "momento": "2026-05-11T18:24:09.925Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9b3b65b3-4ded-11f1-ae85-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "541",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de Información de Orientación Profesional de Canarias (SOPCAN) ha sido actualizada a 'Gestión del servicio de orientación profesional'",
+        "momento": "2026-05-12T10:30:33.214Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9b6c47bf-4df5-11f1-8bf2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "545",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Antonio Ojeda Domínguez ha sido asignado como Responsable funcional del sistema Sistema de información registro de solicitantes de subvenciones al SCE (SIRSS)",
+        "momento": "2026-05-12T11:27:49.509Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9b6cc733-4df5-11f1-b09c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"aojedom\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Antonio Ojeda Domínguez ha sido asignado como Responsable funcional del sistema Sistema de información registro de solicitantes de subvenciones al SCE (SIRSS)",
+        "momento": "2026-05-12T11:27:49.512Z",
         "usuario": "root",
         "payload": null
     }
@@ -11101,6 +12843,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "9d851496-4de3-11f1-9826-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "534",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de Información Entorno gestión de expedientes. (EGE)",
+        "momento": "2026-05-12T09:19:02.086Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "9db9a669-4d26-11f1-aee6-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -11108,6 +12863,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Connecting Europe Facilities (CEF) ha sido actualizada a 'Intercambio del resumen del paciente en el ámbito de la Comunidad Europea (*Connecting Europe Facilities*)'",
         "momento": "2026-05-11T10:46:07.548Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9dbf8ad1-4dec-11f1-b3f3-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "540",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información de Programas de Colaboración con Organismos e ISAL (PCOL_ORG)",
+        "momento": "2026-05-12T10:23:27.939Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9dc03056-4dec-11f1-80a3-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información de Programas de Colaboración con Organismos e ISAL (PCOL_ORG)",
+        "momento": "2026-05-12T10:23:27.944Z",
         "usuario": "root",
         "payload": null
     }
@@ -11244,6 +13025,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "9efba324-4deb-11f1-bbe7-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "538",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de Información  de Prácticas en Empresa (PREM) ha sido actualizada a 'Gestión de prácticas no obligatorias de los alumnos que finalicen su formación teórica'",
+        "momento": "2026-05-12T10:16:20.514Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "9f044e7f-4d29-11f1-8df6-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -11348,6 +13142,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "a1be7c1e-4df0-11f1-8539-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "543",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de Información Unificado de Seguimiento de Beneficiarios (SEGUI) ha sido actualizada a 'Seguimiento de las personas beneficiarias y registradas en las aplicaciones del SCE'",
+        "momento": "2026-05-12T10:52:12.630Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "a21629ac-4a29-11f1-8668-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -11387,6 +13194,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "a27ea278-4dd2-11f1-8c0d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "526",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Olga Ayza Mascarell ha sido asignado como Responsable funcional del sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA)",
+        "momento": "2026-05-12T07:17:28.987Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a27f1c49-4dd2-11f1-b523-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"oayzmas\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Olga Ayza Mascarell ha sido asignado como Responsable funcional del sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA)",
+        "momento": "2026-05-12T07:17:28.990Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "a2862a84-2fa5-11f1-9772-38d5470ea667",
     "fields": {
         "nivel_evento": "insert",
@@ -11408,6 +13241,19 @@
         "descripcion": "Se ha añadido la tarea 8: Marcar una tarea del backlog como terminada al S.I. Inventario de Sistemas de Información (ISSI)",
         "momento": "2026-04-03T21:39:46.810Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a29df861-4dee-11f1-bab4-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "543",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de Información Unificado de Seguimiento de Beneficiarios (SEGUI)",
+        "momento": "2026-05-12T10:37:55.101Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -11460,6 +13306,19 @@
         "descripcion": "El usuario María Luisa Risueño Díaz ha sido asignado como Responsable funcional del sistema BBDD de legislación y jurisprudencia relativa a la APCAC (JURISCAN)",
         "momento": "2026-04-22T20:27:09.179Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a321e8c5-4e37-11f1-8a60-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "546",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado un icono al sistema Sistema de información Observatorio Canario del Empleo y la Formación Profesional (OBECAN)",
+        "momento": "2026-05-12T19:20:29.227Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -11543,6 +13402,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "a44bede1-4df5-11f1-be11-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "545",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de información registro de solicitantes de subvenciones al SCE (SIRSS)",
+        "momento": "2026-05-12T11:28:04.396Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a44c3ff0-4df5-11f1-91be-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de información registro de solicitantes de subvenciones al SCE (SIRSS)",
+        "momento": "2026-05-12T11:28:04.398Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "a45d9ec6-49ef-11f1-a0bd-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -11615,6 +13500,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Modelos AEAT (MODELOS_AEAT) ha sido actualizada a 'Gestión de Modelos Tributarios 347 y 190'",
         "momento": "2026-05-07T13:35:42.462Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a51e6513-4dec-11f1-a86f-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "540",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de Información de Programas de Colaboración con Organismos e ISAL (PCOL_ORG)",
+        "momento": "2026-05-12T10:23:40.305Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a537c94f-4df0-11f1-bd70-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "543",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de Información Unificado de Seguimiento de Beneficiarios (SEGUI) ha sido asignado a la familia No aplicable",
+        "momento": "2026-05-12T10:52:18.458Z",
         "usuario": "root",
         "payload": null
     }
@@ -11699,6 +13610,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "a6242c3d-4dd2-11f1-9b1b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "526",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Olga Ayza Mascarell ha sido asignado como Responsable técnico del sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA)",
+        "momento": "2026-05-12T07:17:35.106Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a624d175-4dd2-11f1-b2ca-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"oayzmas\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Olga Ayza Mascarell ha sido asignado como Responsable técnico del sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA)",
+        "momento": "2026-05-12T07:17:35.110Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "a661085e-4abe-11f1-8d7b-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -11706,6 +13643,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Control horario (Justicia) (CONTROL_HORARIO_JUSTICIA) ha sido actualizada a 'Sistema de control horario para Justicia'",
         "momento": "2026-05-08T09:16:52.081Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a6a5fc94-4ded-11f1-8686-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "541",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de Información de Orientación Profesional de Canarias (SOPCAN) ha sido asignado a la familia No aplicable",
+        "momento": "2026-05-12T10:30:52.368Z",
         "usuario": "root",
         "payload": null
     }
@@ -11829,6 +13779,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "a814adfa-4de2-11f1-8216-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "533",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de información de registro subvenciones personas con discapacidad en empresas (centros especiales de empleo) (CEE)",
+        "momento": "2026-05-12T09:12:10.307Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a8258e8f-4ddd-11f1-a148-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "532",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Fondo Documental (FONDO_DOCU)",
+        "momento": "2026-05-12T08:36:22.934Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "a85a48c1-371b-11f1-9a38-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -11940,6 +13916,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Alta de Usuarios Comisiones de Servicios (ALTA_UCS) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T17:34:28.741Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a9c4fae6-4ddc-11f1-9cfe-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "530",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Mario Acosta ha sido asignado como Responsable técnico del sistema Base de datos Bienes Muebles (BIENES_MUEBLES)",
+        "momento": "2026-05-12T08:29:16.160Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a9c599fa-4ddc-11f1-ac21-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"marioacosta@tac7.com\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Mario Acosta ha sido asignado como Responsable técnico del sistema Base de datos Bienes Muebles (BIENES_MUEBLES)",
+        "momento": "2026-05-12T08:29:16.164Z",
         "usuario": "root",
         "payload": null
     }
@@ -12102,6 +14104,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "ac6b09e0-4df5-11f1-9a8b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "545",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de información registro de solicitantes de subvenciones al SCE (SIRSS) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T11:28:18.022Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "acbdeca4-4ac0-11f1-9089-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -12109,6 +14124,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Gestión electrónica de los envíos para la publicación en el BOC (GEBOC) ha sido actualizada a 'Gestión electrónica de los envíos para la publicación en el BOC'",
         "momento": "2026-05-08T09:31:21.750Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "ad70dff3-4ddd-11f1-a555-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "532",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Fondo Documental (FONDO_DOCU) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T08:36:31.816Z",
         "usuario": "root",
         "payload": null
     }
@@ -12213,6 +14241,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha asignado la entrada Juriscán nº 45881 al sistema Servicios Electrónicos para la Gestión del Juego (REGISTRO_JUEGO_SERV_ELEC)",
         "momento": "2026-05-08T11:47:25.731Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "af12f54a-4dd2-11f1-9f83-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "526",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA)",
+        "momento": "2026-05-12T07:17:50.092Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "af13ae76-4dd2-11f1-9d7c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA)",
+        "momento": "2026-05-12T07:17:50.097Z",
         "usuario": "root",
         "payload": null
     }
@@ -12343,6 +14397,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha asignado la entrada Juriscán nº 18464 al sistema Programa Económico Actividad ESSSCAN (PROECO)",
         "momento": "2026-05-07T10:51:22.372Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "afe09b7c-4dda-11f1-95a0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "528",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario D. Santos ha sido asignado como Responsable técnico del sistema Agenda Cultural de Canarias (AGENDA_CULTURAL)",
+        "momento": "2026-05-12T08:15:07.414Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "afe129c8-4dda-11f1-a054-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"dsantos@icdcultural.org\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario D. Santos ha sido asignado como Responsable técnico del sistema Agenda Cultural de Canarias (AGENDA_CULTURAL)",
+        "momento": "2026-05-12T08:15:07.417Z",
         "usuario": "root",
         "payload": null
     }
@@ -12505,6 +14585,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "b14b0b3b-4dd2-11f1-bc20-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "526",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA)",
+        "momento": "2026-05-12T07:17:53.815Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b14b8300-4dd2-11f1-aa60-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA)",
+        "momento": "2026-05-12T07:17:53.818Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "b1eea60a-4a1d-11f1-8aa9-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -12630,6 +14736,19 @@
         "descripcion": "Se ha añadido la tarea 11: Dar de alta un activo de datos asociado al sistema de infprmación al S.I. Inventario de Sistemas de Información (ISSI)",
         "momento": "2026-04-10T21:24:47.151Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b345cfba-4ddd-11f1-a52d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "532",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Fondo Documental (FONDO_DOCU) ha sido actualizada a 'Fondo documental del patrimonio cultural de Canarias'",
+        "momento": "2026-05-12T08:36:41.600Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -12778,6 +14897,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "b634fcd8-4de3-11f1-b5fb-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "534",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de Información Entorno gestión de expedientes. (EGE) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T09:19:43.504Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "b685b7c2-4a24-11f1-a56e-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -12812,6 +14944,32 @@
         "descripcion": "El nombre del sistema Gestión de personal no docente (GESPER) ha sido actualizada a 'Gestión de personal no docente'.\n",
         "momento": "2026-04-27T15:13:58.675Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b725b02e-4dee-11f1-8be0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "543",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Francisco J. Santana Martín ha sido asignado como Responsable funcional del sistema Sistema de Información Unificado de Seguimiento de Beneficiarios (SEGUI)",
+        "momento": "2026-05-12T10:38:29.545Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b726339d-4dee-11f1-b1b4-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"fsanmarj\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Francisco J. Santana Martín ha sido asignado como Responsable funcional del sistema Sistema de Información Unificado de Seguimiento de Beneficiarios (SEGUI)",
+        "momento": "2026-05-12T10:38:29.548Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -12980,6 +15138,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Web de consulta de la bolsa de interinos de DGRAJ (WEB_INTERINOS_DGRAJ)",
         "momento": "2026-05-08T10:43:17.122Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b90cbeab-4df0-11f1-b22b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "543",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de Información Unificado de Seguimiento de Beneficiarios (SEGUI)",
+        "momento": "2026-05-12T10:52:51.730Z",
         "usuario": "root",
         "payload": null
     }
@@ -13233,6 +15404,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "bce901ec-4de3-11f1-93fb-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "534",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de Información Entorno gestión de expedientes. (EGE) ha sido actualizada a 'Gestión de expedientes'",
+        "momento": "2026-05-12T09:19:54.750Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "bd26eaef-4b0f-11f1-a964-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -13298,6 +15482,45 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "be286500-4ddd-11f1-a530-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "532",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 485 al sistema Fondo Documental (FONDO_DOCU)",
+        "momento": "2026-05-12T08:36:59.862Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "be38bcef-4dee-11f1-aef8-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "543",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información Unificado de Seguimiento de Beneficiarios (SEGUI)",
+        "momento": "2026-05-12T10:38:41.414Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "be391cdd-4dee-11f1-9b20-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información Unificado de Seguimiento de Beneficiarios (SEGUI)",
+        "momento": "2026-05-12T10:38:41.416Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "be83a811-4a04-11f1-aa69-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -13332,6 +15555,19 @@
         "descripcion": "La descripción del sistema Arquitectura y explotación de datos (EXPDAT) ha sido actualizada a 'Explotación y estructura de datos'",
         "momento": "2026-04-13T10:37:18.106Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "beb88af8-4dec-11f1-9a4a-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "540",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de Información de Programas de Colaboración con Organismos e ISAL (PCOL_ORG) ha sido actualizada a 'Subvenciones a la contratación de desempleados por parte de las Organismos de la CAC'",
+        "momento": "2026-05-12T10:24:23.259Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -13454,6 +15690,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "c08e1732-4dd8-11f1-8876-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "528",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Agenda Cultural de Canarias (AGENDA_CULTURAL)",
+        "momento": "2026-05-12T08:01:16.401Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "c0bdc65e-4ab4-11f1-82f3-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -13487,6 +15736,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Ayudas al Alquiler de Vivienda por Covid19 (SITA_COVID) ha sido actualizada a 'Ayudas al Alquiler de Vivienda por Covid19'",
         "momento": "2026-05-07T15:31:01.354Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c10dbe88-4ddc-11f1-8a48-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "530",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 77902 al sistema Base de datos Bienes Muebles (BIENES_MUEBLES)",
+        "momento": "2026-05-12T08:29:55.227Z",
         "usuario": "root",
         "payload": null
     }
@@ -13766,6 +16028,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "c43e6b18-4dec-11f1-b2df-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "540",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de Información de Programas de Colaboración con Organismos e ISAL (PCOL_ORG) ha sido asignado a la familia Subvenciones, premios y becas",
+        "momento": "2026-05-12T10:24:32.525Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "c47fca0c-4ac9-11f1-aba2-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -13799,6 +16074,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Añadido el sistema de información Historia de atención especializada Drago AE (DRAGO_AE_SELENE)",
         "momento": "2026-05-11T11:23:00.393Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c4bab922-4dd2-11f1-8826-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "526",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA)",
+        "momento": "2026-05-12T07:18:26.424Z",
         "usuario": "root",
         "payload": null
     }
@@ -14039,6 +16327,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "c84c2f51-4dd8-11f1-8a54-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "528",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Agenda Cultural de Canarias (AGENDA_CULTURAL) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T08:01:29.391Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "c8aafb03-4d35-11f1-b70a-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -14163,6 +16464,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Gestión cambio de titularidad promoción publica (TITULARIDAD) ha sido actualizada a 'Gestionar el cambio de titularidad promoción publica'",
         "momento": "2026-05-07T14:55:28.745Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c9d09ef1-4ddd-11f1-98c0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "532",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Carlos García Ávila ha sido asignado como Responsable funcional del sistema Fondo Documental (FONDO_DOCU)",
+        "momento": "2026-05-12T08:37:19.420Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c9d1004a-4ddd-11f1-ae7b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jgaravi\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Carlos García Ávila ha sido asignado como Responsable funcional del sistema Fondo Documental (FONDO_DOCU)",
+        "momento": "2026-05-12T08:37:19.422Z",
         "usuario": "root",
         "payload": null
     }
@@ -14559,6 +16886,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "cede1a88-4dd8-11f1-816e-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "528",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Agenda Cultural de Canarias (AGENDA_CULTURAL) ha sido actualizada a 'Gestionar los eventos, actividades y exposiciones culturales'",
+        "momento": "2026-05-12T08:01:40.413Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "cf416898-4a03-11f1-b0af-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -14871,6 +17211,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "d35b7b1f-4ddd-11f1-a71c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "532",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Mario Acosta ha sido asignado como Responsable técnico del sistema Fondo Documental (FONDO_DOCU)",
+        "momento": "2026-05-12T08:37:35.429Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "d35c2847-4ddd-11f1-8c2b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"marioacosta@tac7.com\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Mario Acosta ha sido asignado como Responsable técnico del sistema Fondo Documental (FONDO_DOCU)",
+        "momento": "2026-05-12T08:37:35.434Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "d35c95e2-4d65-11f1-880e-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -15021,6 +17387,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Agenda de juicios rápidos (AGENDA_JUICIOS_RAPIDOS)",
         "momento": "2026-05-08T07:45:07.218Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "d5595562-4df6-11f1-82f8-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "546",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de información Observatorio Canario del Empleo y la Formación Profesional (OBECAN)",
+        "momento": "2026-05-12T11:36:36.189Z",
         "usuario": "root",
         "payload": null
     }
@@ -15320,6 +17699,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Consulta de Terceros (CTERCEROS) ha sido asignado a la familia {familia}",
         "momento": "2026-05-07T12:18:26.274Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "d982d050-4ddf-11f1-9dd9-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "529",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Base de datos Bienes insulares (BIENES_INSULARES)",
+        "momento": "2026-05-12T08:52:04.747Z",
         "usuario": "root",
         "payload": null
     }
@@ -15716,6 +18108,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "def18fd9-4deb-11f1-abad-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "539",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de Información  de Programas de Colaboración con Corporaciones Locales (PCOL_CCLL)",
+        "momento": "2026-05-12T10:18:07.822Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "def49696-4a22-11f1-9b28-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -15723,6 +18128,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Acceso a la propiedad promoción pública (ACCESO_PROPIEDAD_PROMOPUB) ha sido asignado a la familia {familia}",
         "momento": "2026-05-07T14:41:45.511Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "defdb4f8-4dde-11f1-b33d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "135",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de Información de gestión de la SGT (BO_SGT) ha sido asignado a la familia Gobierno y dirección",
+        "momento": "2026-05-12T08:45:04.444Z",
         "usuario": "root",
         "payload": null
     }
@@ -16197,6 +18615,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "e2f5fe57-4df6-11f1-ad0b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "546",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de información Observatorio Canario del Empleo y la Formación Profesional (OBECAN) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T11:36:59.026Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "e3536e43-4a22-11f1-b025-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -16230,6 +18661,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Hormona del crecimiento (HORCRE) ha sido actualizada a 'Protocolo para la utilización terapéutica de la hormona del crecimiento y sustancias relacionadas'",
         "momento": "2026-05-11T12:21:08.367Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "e3d32bf0-4ddf-11f1-83f0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "531",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Inventario Arquitectónico (BIENES_ARQUI)",
+        "momento": "2026-05-12T08:52:22.051Z",
         "usuario": "root",
         "payload": null
     }
@@ -16412,6 +18856,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha asignado la entrada Juriscán nº 66653 al sistema Programa de gestión de cursos (PROGESCUR)",
         "momento": "2026-05-07T10:45:43.561Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "e5e2b4d8-4dd3-11f1-ad99-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "527",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Expedientes subvenciones Energías Renovables (EXP_ENERGIAS_RENOVABLES)",
+        "momento": "2026-05-12T07:26:31.548Z",
         "usuario": "root",
         "payload": null
     }
@@ -16704,6 +19161,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "e920a69b-4ddb-11f1-9d66-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "528",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Mario Acosta ha sido asignado como Responsable técnico del sistema Agenda Cultural de Canarias (AGENDA_CULTURAL)",
+        "momento": "2026-05-12T08:23:52.960Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "e92133c5-4ddb-11f1-bb2b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"marioacosta@tac7.com\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Mario Acosta ha sido asignado como Responsable técnico del sistema Agenda Cultural de Canarias (AGENDA_CULTURAL)",
+        "momento": "2026-05-12T08:23:52.964Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "e92ce715-4ac5-11f1-b001-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -16847,6 +19330,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "eaecb6ea-4df6-11f1-9ae1-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "546",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de información Observatorio Canario del Empleo y la Formación Profesional (OBECAN) ha sido actualizada a 'Sistema de información Observatorio Canario del Empleo y la Formación Profesional'",
+        "momento": "2026-05-12T11:37:12.387Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "eb11a733-4d5f-11f1-89c9-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -16958,6 +19454,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Encuestas de la Dirección General de Salud Pública (ENCUESTAS_DGSP) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T11:45:34.934Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "ec1bf0d6-4ddf-11f1-bfc1-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "530",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Base de datos Bienes Muebles (BIENES_MUEBLES)",
+        "momento": "2026-05-12T08:52:35.949Z",
         "usuario": "root",
         "payload": null
     }
@@ -17120,6 +19629,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "edd74d1b-4dea-11f1-ac7b-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "538",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de Información  de Prácticas en Empresa (PREM)",
+        "momento": "2026-05-12T10:11:23.319Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "edef7e3d-4ab2-11f1-b952-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -17153,6 +19675,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Renta Canaria Ciudadana (SITA_RCC) ha sido actualizada a 'Gestión de expedientes de Renta Canaria Ciudadana'",
         "momento": "2026-05-07T09:20:03.305Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "ee4f70ee-4df5-11f1-afe0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "545",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Sistema de información registro de solicitantes de subvenciones al SCE (SIRSS)",
+        "momento": "2026-05-12T11:30:08.570Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "ee65a366-4dd3-11f1-8179-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "527",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Expedientes subvenciones Energías Renovables (EXP_ENERGIAS_RENOVABLES) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T07:26:45.827Z",
         "usuario": "root",
         "payload": null
     }
@@ -17276,6 +19824,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "efdfeee9-4df1-11f1-ba7f-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "544",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de información Becas y Ayudas` (BECAS_EMP)",
+        "momento": "2026-05-12T11:01:33.208Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "eff21d55-4a20-11f1-b759-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -17335,6 +19896,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Solicitud de Participación en Procesos Selectivos de Personal Estatutario (SOPASEDE) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T13:33:04.765Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f0797bdd-4de4-11f1-b52d-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "537",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de Información demanda de empleo del Servicio Público de Empleo de Canarias (SISPECAN- Intermediación) (INTERMEDIACION)",
+        "momento": "2026-05-12T09:28:30.757Z",
         "usuario": "root",
         "payload": null
     }
@@ -17478,6 +20052,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Registro de Operadores del Régimen Específico de Abastecimiento (REA) ha sido actualizada a 'Inventario de los operadores del régimen específico'",
         "momento": "2026-05-07T10:03:07.261Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f2444df9-4ddf-11f1-863b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "530",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Base de datos Bienes Muebles (BIENES_MUEBLES) ha sido asignado a la familia {familia}",
+        "momento": "2026-05-12T08:52:46.280Z",
         "usuario": "root",
         "payload": null
     }
@@ -17666,6 +20253,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "f49696e9-4ddb-11f1-b833-920007977582",
+    "fields": {
+        "nivel_evento": "delete",
+        "sujeto": "528",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Mario Acosta ha dejado de ser Responsable técnico del sistema Agenda Cultural de Canarias (AGENDA_CULTURAL)",
+        "momento": "2026-05-12T08:24:12.188Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f4972b6d-4ddb-11f1-8b0b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"marioacosta@tac7.com\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Mario Acosta ha dejado de ser Responsable técnico del sistema Agenda Cultural de Canarias (AGENDA_CULTURAL)",
+        "momento": "2026-05-12T08:24:12.192Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "f4ab02a7-4ac5-11f1-b2b4-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -17673,6 +20286,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Portal que mostrará el escritorio colaborativo para la DGRAJ (ESCRITORIO_JUSTICIA) ha sido actualizada a 'Escritorio colaborativo de Justicia'",
         "momento": "2026-05-08T10:09:09.906Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f4b85418-4df5-11f1-9944-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "545",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 39552 al sistema Sistema de información registro de solicitantes de subvenciones al SCE (SIRSS)",
+        "momento": "2026-05-12T11:30:19.324Z",
         "usuario": "root",
         "payload": null
     }
@@ -17725,6 +20351,19 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario Miguel Navarro Frias ha sido asignado como Responsable técnico del sistema Gestión de los usuarios que tendrán acceso a la aplicación GEBOC (GEBOC_USAD)",
         "momento": "2026-05-08T09:33:23.643Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f5738f5c-4de4-11f1-8417-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "537",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de Información demanda de empleo del Servicio Público de Empleo de Canarias (SISPECAN- Intermediación) (INTERMEDIACION) ha sido asignado a la familia No aplicable",
+        "momento": "2026-05-12T09:28:39.107Z",
         "usuario": "root",
         "payload": null
     }
@@ -17939,6 +20578,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "f7465349-4df1-11f1-93eb-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "544",
+        "nombre_clase": "Sistema",
+        "descripcion": "El nombre del sistema Sistema de información Becas y Ayudas (BECAS_EMP) ha sido actualizada a 'Sistema de información Becas y Ayudas'.\n",
+        "momento": "2026-05-12T11:01:45.623Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "f79c8e5a-4a2b-11f1-b748-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -17946,6 +20598,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Fondos Europeos - Programas del 1 al 6 (PLATEA_FONDOS_EUROPEOS) ha sido asignado a la familia {familia}",
         "momento": "2026-05-07T15:46:52.348Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f7beec9e-4dd8-11f1-b1db-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "528",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Agenda Cultural de Canarias (AGENDA_CULTURAL)",
+        "momento": "2026-05-12T08:02:48.995Z",
         "usuario": "root",
         "payload": null
     }
@@ -17991,6 +20656,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "f811b851-4df6-11f1-bac0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "546",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Luis Prieto ha sido asignado como Responsable funcional del sistema Sistema de información Observatorio Canario del Empleo y la Formación Profesional (OBECAN)",
+        "momento": "2026-05-12T11:37:34.440Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f8125e81-4df6-11f1-b963-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"luisprieto@funcatra.es\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Luis Prieto ha sido asignado como Responsable funcional del sistema Sistema de información Observatorio Canario del Empleo y la Formación Profesional (OBECAN)",
+        "momento": "2026-05-12T11:37:34.445Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "f819c38f-4d2c-11f1-99a2-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -18024,6 +20715,32 @@
         "nombre_clase": "Organismo",
         "descripcion": "El sistema Acceso a la propiedad promoción pública (ACCESO_PROPIEDAD_PROMOPUB) ha sido asignado al organismo Instituto Canario de la Vivienda",
         "momento": "2026-05-07T14:42:27.843Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f8740960-4de3-11f1-a99d-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "535",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de información de formación para desempleados (FORM)",
+        "momento": "2026-05-12T09:21:34.646Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f89e3071-4dd2-11f1-b4d3-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "526",
+        "nombre_clase": "Sistema",
+        "descripcion": "La URL de entrada al sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA) ha sido actualizada a 'https://www3.gobiernodecanarias.org/aplicaciones/redvigiacanarias/'.\n",
+        "momento": "2026-05-12T07:19:53.478Z",
         "usuario": "root",
         "payload": null
     }
@@ -18076,6 +20793,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha asignado la entrada Juriscán nº 79350 al sistema Ayudas de acción social (AYASOC)",
         "momento": "2026-05-07T19:50:18.012Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f961e811-4de1-11f1-b957-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"jherbor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario José Manuel Hernández Borges",
+        "momento": "2026-05-12T09:07:17.212Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f983f758-4ddf-11f1-8615-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "530",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Base de datos Bienes Muebles (BIENES_MUEBLES) ha sido actualizada a 'Base de datos de Bienes Muebles'",
+        "momento": "2026-05-12T08:52:58.442Z",
         "usuario": "root",
         "payload": null
     }
@@ -18199,6 +20942,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "fa15ca42-4ded-11f1-8f94-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "542",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Sistema de Información  de Subvenciones (SUBV_EMP)",
+        "momento": "2026-05-12T10:33:12.351Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "fa53d830-4ad0-11f1-9ba1-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -18212,6 +20968,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "fa7d3df7-4df6-11f1-89fe-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "546",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Luis Prieto ha sido asignado como Responsable técnico del sistema Sistema de información Observatorio Canario del Empleo y la Formación Profesional (OBECAN)",
+        "momento": "2026-05-12T11:37:38.504Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "fa7e472f-4df6-11f1-acee-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"luisprieto@funcatra.es\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Luis Prieto ha sido asignado como Responsable técnico del sistema Sistema de información Observatorio Canario del Empleo y la Formación Profesional (OBECAN)",
+        "momento": "2026-05-12T11:37:38.507Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "fa863bac-4d34-11f1-b349-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -18219,6 +21001,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Intervenciones de Tabaquismo en Enseñanza Secundaria (ITES) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T12:28:56.194Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "fa9bfba7-4dd3-11f1-80e9-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "527",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Alberto Santana Monagas ha sido asignado como Responsable funcional del sistema Expedientes subvenciones Energías Renovables (EXP_ENERGIAS_RENOVABLES)",
+        "momento": "2026-05-12T07:27:06.316Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "fa9d2e83-4dd3-11f1-a5d1-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"asanmonx\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Alberto Santana Monagas ha sido asignado como Responsable funcional del sistema Expedientes subvenciones Energías Renovables (EXP_ENERGIAS_RENOVABLES)",
+        "momento": "2026-05-12T07:27:06.324Z",
         "usuario": "root",
         "payload": null
     }
@@ -18446,6 +21254,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "fcf49032-4ddc-11f1-8d05-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "531",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Inventario Arquitectónico (BIENES_ARQUI)",
+        "momento": "2026-05-12T08:31:35.723Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "fd1b1613-4ab3-11f1-bcd1-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -18453,6 +21274,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Arconte (ARCONTE) ha sido actualizada a 'Sistema de grabación de vistas judiciales en salas de audiencia'",
         "momento": "2026-05-08T08:00:33.121Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "fd4d4fb7-4df9-11f1-b577-920007977582",
+    "fields": {
+        "nivel_evento": "delete",
+        "sujeto": "14",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha dejado de ser Responsable técnico del sistema Pruebas (BORRAME)",
+        "momento": "2026-05-12T11:59:11.710Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "fd4df18b-4df9-11f1-9489-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodleo\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Ignacio Rodríguez de Leon ha dejado de ser Responsable técnico del sistema Pruebas (BORRAME)",
+        "momento": "2026-05-12T11:59:11.714Z",
         "usuario": "root",
         "payload": null
     }
@@ -18537,6 +21384,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "fe224e71-4ddb-11f1-9643-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "529",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Mario Acosta ha sido asignado como Responsable técnico del sistema Base de datos Bienes insulares (BIENES_INSULARES)",
+        "momento": "2026-05-12T08:24:28.203Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "fe22ded8-4ddb-11f1-81e5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"marioacosta@tac7.com\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Mario Acosta ha sido asignado como Responsable técnico del sistema Base de datos Bienes insulares (BIENES_INSULARES)",
+        "momento": "2026-05-12T08:24:28.207Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "fe4efdc2-4abf-11f1-a6d8-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -18583,6 +21456,58 @@
         "nombre_clase": "Sistema",
         "descripcion": "Añadido el sistema de información Reporta (REPORTA)",
         "momento": "2026-05-03T21:13:56.587Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "ff43c02c-4de3-11f1-809e-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "535",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Sistema de información de formación para desempleados (FORM) ha sido asignado a la familia No aplicable",
+        "momento": "2026-05-12T09:21:46.074Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "ff8ca434-4de4-11f1-ad01-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "537",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Sistema de Información demanda de empleo del Servicio Público de Empleo de Canarias (SISPECAN- Intermediación) (INTERMEDIACION) ha sido actualizada a 'Sistema de intermediación de Empleo'",
+        "momento": "2026-05-12T09:28:56.048Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "ffa601d1-4df9-11f1-b07f-920007977582",
+    "fields": {
+        "nivel_evento": "delete",
+        "sujeto": "14",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Candelaria Alonso Suárez ha dejado de ser Responsable funcional del sistema Pruebas (BORRAME)",
+        "momento": "2026-05-12T11:59:15.646Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "ffa66873-4df9-11f1-b036-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"malosua\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Candelaria Alonso Suárez ha dejado de ser Responsable funcional del sistema Pruebas (BORRAME)",
+        "momento": "2026-05-12T11:59:15.649Z",
         "usuario": "root",
         "payload": null
     }
