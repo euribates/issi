@@ -1,0 +1,18 @@
+Revisión por departamentos
+
+ISTAC   5
+OPVM    24
+ATC 6
+PAPJS   33
+ACCUEE  2
+ACPMN   1
+AGPSA   35
+PTCTA   9
+BSIJIF  28
+
+EFPAFD  8 (10 - 2 de ACCUEE)
+EICA    21 (En el inventario no aparece SIGLO?)
+ESSSCAN  6
+HRUE    38 (49 - 5 del ISTAC - 6 de la ATC)
+ICAVI   28
+
