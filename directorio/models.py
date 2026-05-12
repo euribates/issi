@@ -196,10 +196,10 @@ class Empresa(models.Model):
 
     class Meta:
         db_table = 'dir_empresa'
-        verbose_name = 'Empresa externa'
-        verbose_name_plural = 'Empresas externas'
+        verbose_name = 'Empresa'
+        verbose_name_plural = 'Empresas'
 
-    id_empresa = models.BigIntegerField(primary_key=True)
+    id_empresa = models.BigAutoField(primary_key=True)
     nombre_empresa = models.CharField(
         max_length=144,
         unique=True,
