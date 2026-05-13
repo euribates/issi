@@ -49,6 +49,18 @@ def a_detalle_sistema(id_sistema: int) -> str:
     return _a('sistemas:detalle_sistema', sistema=id_sistema)
 
 
+def a_historico_sistema(id_sistema: int) -> str:
+    return _a('sistemas:historico_sistema', sistema=id_sistema)
+
+
+def a_diagnostico_sistema(id_sistema: int) -> str:
+    return _a('sistemas:diagnostico_sistema', sistema=id_sistema)
+
+
+def a_activos_sistema(id_sistema: int) -> str:
+    return _a('sistemas:activos_sistema', sistema=id_sistema)
+
+
 def a_tareas_sistema(id_sistema: int) -> str:
     return _a('sistemas:tareas_sistema', sistema=id_sistema)
 

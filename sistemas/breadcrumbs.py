@@ -43,6 +43,27 @@ def bc_detalle_sistema(sistema) -> BreadCrumb:
         )
 
 
+def bc_historico_sistema(sistema):
+    return bc_detalle_sistema(sistema).step(
+        'Histórico',
+        links.a_historico_sistema(sistema.pk),
+        )
+
+
+def bc_diagnostico_sistema(sistema):
+    return bc_detalle_sistema(sistema).step(
+        'Diagnóstico',
+        links.a_diagnostico_sistema(sistema.pk),
+        )
+
+
+def bc_activos_sistema(sistema):
+    return bc_detalle_sistema(sistema).step(
+        'Activos de datos',
+        links.a_activos_sistema(sistema.pk),
+        )
+
+
 def bc_tareas_sistema(sistema):
     return bc_detalle_sistema(sistema).step(
         'Tareas',

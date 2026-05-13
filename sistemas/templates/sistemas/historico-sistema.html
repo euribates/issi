@@ -1,0 +1,44 @@
+{% extends "comun/base.html" %}
+{% load comun_filters fechas %}
+
+{% block content %}
+
+{% include "sistemas/includes/ficha-sistema.html" %}
+{% include "sistemas/includes/tabs.html" with selected='historico' %}
+
+<div class="card m-2">
+
+  <div class="card-header bg-info">  
+    <h5 class="card-title">
+      Histórico de eventos
+      <span class="badge bg-primary">{{ historico.count }}</span>
+    </h5>
+  </div>  
+  
+  <div class="card-body">
+  
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Nivel</th>
+          <th>Evento</th>
+          <th>Usuario</th>
+        </tr>
+      </thead>  
+      <tbody>
+        {% for evento in historico %}
+        <tr>
+          <td>{{ evento.momento|as_fecha }}</td>
+          <td>{{ evento.nivel_evento }}</td>
+          <td>{{ evento.descripcion }}</td>
+          <td>{{ evento.usuario }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock content %}
+

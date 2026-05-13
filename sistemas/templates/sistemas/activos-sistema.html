@@ -1,0 +1,11 @@
+{% extends "comun/base.html" %}
+{% load comun_filters sistemas static %}
+
+{% block content %}
+
+{% include "sistemas/includes/ficha-sistema.html" %}
+{% include "sistemas/includes/tabs.html" with selected='activos' %}
+
+{% include "sistemas/includes/activos.html" %}
+
+{% endblock content %}

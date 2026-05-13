@@ -1,27 +1,23 @@
-{% if diagnostico %}
-<div class="card m-2">
-  <div class="card-header bg-info">  
-    <h5 class="card-title">Diagnostico</h5>
-  </div>  
-  <div class="card-body">
-    <table class="table">
-    {% for sintoma in diagnostico.evaluaciones %}
-      <tr>
-          <td class="sintoma">{{ sintoma }}</td>  
-      </tr>        
-    {% endfor %}
+{% if diagnostico.count > 0 %}
+<table class="table">
+  {% for sintoma in diagnostico.evaluaciones %}
     <tr>
-    </table>  
-  </div><!-- de card-body -->
-  <div class="card-footer d-flex flex-row-reverse">
-    <a href="#"
-       class="btn btn-warning"
-       title="Reevaluar diagnóstico">
-       <i class="bi bi-check-all"></i>
-       Reevaluar diagnóstico
-    </a>
-  </div>
+        <td class="sintoma">{{ sintoma }}</td>  
+    </tr>        
+  {% endfor %}
+  <tr>
 
-  </div> 
-</div>  
+
+  <td>
+  <a href="#"
+     class="btn btn-warning"
+     title="Reevaluar diagnóstico">
+     <i class="bi bi-check-all"></i>
+     Reevaluar diagnóstico
+  </a>
+  </td>
+</table>  
+
+{% else %}
+  <p class="lead">No se ha detectado ningún problema con este sistema</p>  
 {% endif %}

@@ -1,0 +1,24 @@
+{% extends "comun/base.html" %}
+{% load comun_filters sistemas static %}
+
+{% block content %}
+
+{% include "sistemas/includes/ficha-sistema.html" %}
+
+{% include "sistemas/includes/tabs.html" with selected='diagnostico' %}
+
+<div class="card m-2">
+  <div class="card-header bg-info">  
+    <h5 class="card-title">
+      Diagnóstico
+    </h5>
+  </div>  
+  
+  <div class="card-body">
+
+  {% include "sistemas/includes/diagnostico.html" %}
+  </div>
+</div>  
+
+{% endblock content %}
+

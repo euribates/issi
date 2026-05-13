@@ -3,31 +3,9 @@
 
 {% block content %}
 
-<div class="px-2 py-3 my-3 text-center shadow-sm">
+{% include "sistemas/includes/ficha-sistema.html" %}
 
-  {% if sistema.icono %}
-  <img width="96" height="96" class="d-block mx-auto mb-4"
-       src="{{ sistema.icono.url }}"
-       alt="{{ sistema }}">
-  {% else %}
-  <a href="{% url 'sistemas:asignar_icono' sistema=sistema %}">
-      Asignar icono
-  </a>
-  {% endif %}
-
-  <h1 class="display-5 fw-bold">{{ sistema.codigo }}
-     {% include "sistemas/includes/pb-editar-codigo.html" %}
-  </h1>
-
-  <div class="col-lg-8 mx-auto">
-    <p class="lead mb-3 fw-bold">{{ sistema.nombre_sistema }}
-    {% include "sistemas/includes/pb-editar-nombre.html" %}
-    </p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      {{ sistema.finalidad|as_markdown }}
-    </div>
-  </div>
-</div>    
+{% include "sistemas/includes/tabs.html" with selected='detalles' %}
 
 <div class="row align-items-start">
 
@@ -39,18 +17,12 @@
   </div>
   
   <div class="col col-12-md col-lg-6">
-
     {% include "sistemas/includes/clasificacion.html" %}
     {% include "sistemas/includes/isc.html" %}
     {% include "sistemas/includes/juriscan.html" %}
+    {% include "sistemas/includes/responsables.html" %}
   </div>
 
-  <div class="col-12">
-    {% include "sistemas/includes/responsables.html" %}
-    {% include "sistemas/includes/activos.html" %}
-    {% include "sistemas/includes/diagnostico.html" %}
-    {% include "sistemas/includes/backlog.html" %}
-  </div>
 </div>
 
 {% endblock content %}

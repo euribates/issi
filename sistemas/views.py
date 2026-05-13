@@ -20,6 +20,7 @@ from sistemas import filtersets
 from sistemas.models import Ente
 from sistemas.importers import importar_sistemas_desde_fichero
 from sistemas.models import Sistema
+from omnibus.models import Evento
 from plan.forms import TareaForm
 
 from . import breadcrumbs as bc
@@ -625,8 +626,46 @@ def detalle_sistema(request, sistema):
         'breadcrumbs': bc.bc_detalle_sistema(sistema),
         'tab': 'sistemas',
         'sistema': sistema,
-        'diagnostico': diagnosis.DiagnosticoSistema(sistema),
         'isc': isc_chart(sistema),
+        })
+
+
+def diagnostico_sistema(request, sistema):
+    return render(request, 'sistemas/diagnostico-sistema.html', {
+        'titulo': f'Diagnóstico sistema {sistema}',
+        'commands': cmd_sistemas(),
+        'breadcrumbs': bc.bc_diagnostico_sistema(sistema),
+        'tab': 'sistemas',
+        'sistema': sistema,
+        'diagnostico': diagnosis.DiagnosticoSistema(sistema),
+        })
+
+
+def historico_sistema(request, sistema):
+    historico = (
+        Evento.objects
+        .select_related('nivel_evento')
+        .filter(sujeto=str(sistema.pk))
+        .filter(nombre_clase='Sistema')
+        .order_by('-momento')
+        )
+    return render(request, 'sistemas/historico-sistema.html', {
+        'titulo': f'Detalles {sistema}',
+        'commands': cmd_sistemas(),
+        'breadcrumbs': bc.bc_historico_sistema(sistema),
+        'tab': 'sistemas',
+        'sistema': sistema,
+        'historico': historico,
+        })
+
+
+def activos_sistema(request, sistema):
+    return render(request, 'sistemas/activos-sistema.html', {
+        'titulo': f'Activos de datos de {sistema}',
+        'commands': cmd_sistemas(),
+        'breadcrumbs': bc.bc_activos_sistema(sistema),
+        'tab': 'sistemas',
+        'sistema': sistema,
         })
 
 

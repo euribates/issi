@@ -1,0 +1,63 @@
+<ul class="nav nav-pills">
+  
+  <li class="nav-item">
+    <a aria-current="page"
+    {% if selected == 'detalles' %}
+      class="nav-link active" tabindex="-1"
+    {% else %}
+      class="nav-link"
+    {% endif %}
+       href="{% url 'sistemas:detalle_sistema' sistema=sistema %}">
+      Detalles
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a aria-current="page"
+    {% if selected == 'activos' %}
+      class="nav-link active" tabindex="-1"
+    {% else %}
+      class="nav-link"
+    {% endif %}
+       href="{% url 'sistemas:activos_sistema' sistema=sistema %}">
+      Activos de datos
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a aria-current="page"
+    {% if selected == 'diagnostico' %}
+      class="nav-link active" tabindex="-1"
+    {% else %}
+      class="nav-link"
+    {% endif %}
+       href="{% url 'sistemas:diagnostico_sistema' sistema=sistema %}">
+      Diagnóstico
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a aria-current="page"
+    {% if selected == 'tareas' %}
+      class="nav-link active" tabindex="-1"
+    {% else %}
+      class="nav-link"
+    {% endif %}
+       href="{% url 'sistemas:tareas_sistema' sistema=sistema %}">
+      Tareas
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a aria-current="page"
+    {% if selected == 'historico' %}
+      class="nav-link active" tabindex="-1"
+    {% else %}
+      class="nav-link"
+    {% endif %}
+       href="{% url 'sistemas:historico_sistema' sistema=sistema %}">
+      Histórico
+    </a>
+  </li>
+
+</ul>
