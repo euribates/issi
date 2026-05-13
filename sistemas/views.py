@@ -785,7 +785,7 @@ def listado_entes(request):
         'titulo': 'Entes',
         'breadcrumbs': bc.bc_entes(),
         'tab': 'entes',
-        'entes': Ente.objects.all(),
+        'entes': Ente.objects.all().order_by('id_ente'),
         'chart': chart.as_json(),
         })
 
@@ -851,7 +851,7 @@ def liberar_interlocutor(request, ente, usuario):
 
 @login_required
 def listado_organismos(request):
-    entes = Ente.objects.all()
+    entes = Ente.objects.all().order_by('id_ente')
     # filterset = filtersets.OrganismoFilter(
         # request.GET,
         # queryset=Organismo.objects.all(),
