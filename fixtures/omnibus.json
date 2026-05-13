@@ -3106,6 +3106,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "269d7e25-4ea8-11f1-88ff-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "92",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Proyectos innovadores disruptivos - STARS (IPROIC_STARS) ha sido asignado al organismo Agencia Canaria de Investigación, Innovación y Sociedad de la Información",
+        "momento": "2026-05-13T08:45:53.452Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "269e0557-4ea8-11f1-a48c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "42158",
+        "nombre_clase": "Organismo",
+        "descripcion": "El sistema Proyectos innovadores disruptivos - STARS (IPROIC_STARS) ha sido asignado al organismo Agencia Canaria de Investigación, Innovación y Sociedad de la Información",
+        "momento": "2026-05-13T08:45:53.456Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "2740d380-4735-11f1-b605-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -5017,6 +5043,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "3b1af139-4ea7-11f1-8116-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "84",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema FPI (Tesis y ayudas predoctorales) (catalina) ha sido actualizada a 'catalina'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-13T08:39:18.336Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "3b6e65ce-4d6c-11f1-8a87-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -5297,6 +5336,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Añadido el sistema de información Sistema de Información Entorno gestión de expedientes. (EGE)",
         "momento": "2026-05-12T09:16:24.181Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3f67fea6-4ea7-11f1-871e-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "84",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema FPI (Tesis y ayudas predoctorales) (APCR) ha sido actualizada a 'APCR'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-13T08:39:25.548Z",
         "usuario": "root",
         "payload": null
     }
@@ -5843,6 +5895,19 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario Antonio Llamas Bravo de Laguna ha sido asignado como Responsable funcional del sistema Pagos facturas y depositos (PAGOS)",
         "momento": "2026-05-07T13:40:09.683Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "44619715-4ea7-11f1-a9a2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "84",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema FPI (Tesis y ayudas predoctorales) (FPI) ha sido actualizada a 'FPI'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-13T08:39:33.902Z",
         "usuario": "root",
         "payload": null
     }
@@ -6902,6 +6967,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "51556aea-4ea7-11f1-a298-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "90",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Ayudas postdoctorales programa Catalina Ruiz (APCT) ha sido actualizada a 'APCT'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-13T08:39:55.626Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "516c53d1-4df2-11f1-afc5-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -7195,6 +7273,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Sistema de información de Régimen Jurídico de personal (BICHO) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T10:36:57.161Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "55e03b42-4ea7-11f1-85cf-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "90",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Ayudas postdoctorales programa Catalina Ruiz (APCR) ha sido actualizada a 'APCR'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-13T08:40:03.246Z",
         "usuario": "root",
         "payload": null
     }
@@ -14156,6 +14247,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "adaa7d91-4ea8-11f1-ac09-920007977582",
+    "fields": {
+        "nivel_evento": "delete",
+        "sujeto": "94",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Yaiza Vicente Cabañas ha dejado de ser Responsable funcional del sistema Subvevenciones para la formación de gestores de la innovación (GESIN)",
+        "momento": "2026-05-13T08:49:40.030Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "adab02a5-4ea8-11f1-b1c2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"yviccab\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Yaiza Vicente Cabañas ha dejado de ser Responsable funcional del sistema Subvevenciones para la formación de gestores de la innovación (GESIN)",
+        "momento": "2026-05-13T08:49:40.033Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "adcd19f4-3724-11f1-9c0e-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -14384,6 +14501,32 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario Ceferino Bermejo Afonso ha sido asignado como Responsable funcional del sistema Sistema de Información para la Gestión de los Registros Administrativos de Distribuidores de Seguros (SIGRE)",
         "momento": "2026-05-03T20:35:55.998Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "afa76d8e-4ea8-11f1-800d-920007977582",
+    "fields": {
+        "nivel_evento": "delete",
+        "sujeto": "94",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha dejado de ser Responsable técnico del sistema Subvevenciones para la formación de gestores de la innovación (GESIN)",
+        "momento": "2026-05-13T08:49:43.365Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "afa7e48e-4ea8-11f1-899c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodriguez_itc\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha dejado de ser Responsable técnico del sistema Subvevenciones para la formación de gestores de la innovación (GESIN)",
+        "momento": "2026-05-13T08:49:43.368Z",
         "usuario": "root",
         "payload": null
     }
@@ -20221,6 +20364,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha asignado la entrada Juriscán nº 78933 al sistema Registro de personas afectadas por el volcán de La Palma (RAV) (SITA_RAV)",
         "momento": "2026-05-08T08:21:46.911Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f459c03d-4ea6-11f1-8add-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "84",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema FPI (Tesis y ayudas predoctorales) (FPI) ha sido actualizada a 'FPI'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-13T08:37:19.632Z",
         "usuario": "root",
         "payload": null
     }
