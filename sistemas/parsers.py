@@ -94,12 +94,13 @@ def parse_nombre_sistema(texto: str, n_linea=None) -> Result:
           ``Failure`` en caso contrario.
 
     """
-    texto = clean_text(str(texto))
-    if texto:
-        if texto[-1] == '.':
-            texto = texto[:-1]
-        if len(texto) >= 3:
-            return Success(texto)
+    texto = clean_text(texto)
+    if texto is None:
+        return Failure(errors.EI0013('', n_linea=n_linea))
+    if texto[-1] == '.':
+        texto = texto[:-1]
+    if len(texto) >= 3:
+        return Success(texto)
     return Failure(errors.EI0013(texto, n_linea=n_linea))
 
 

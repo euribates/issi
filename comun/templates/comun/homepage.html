@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block scripts %}
-<script src="https://code.highcharts.com/12/highcharts.js"></script>
+{% comment %}<script src="https://code.highcharts.com/12/highcharts.js"></script>{% endcomment %}
 <script src="{% static 'js/homepage.js' %}"></script>
 {% endblock scripts %}
 
@@ -39,7 +39,7 @@
         Sistemas según estado 
       </div>  
       <div class="panel-body">
-        <div> {{ sistemas_chart.as_html }} </div>
+        <div> {{ sistemas_chart.as_svg }} </div>
       </div>
     </div>
 

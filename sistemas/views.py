@@ -887,6 +887,25 @@ def liberar_interlocutor(request, ente, usuario):
         'usuario': usuario,
         })
 
+def _bar():
+    import pygal
+    config = pygal.Config()
+    config.show_legend = False
+    config.human_readable = True
+    config.fill = True
+    config.show_y_guides = False
+    config.width = 620
+    config.height = 200
+    bar_chart = pygal.Bar(config)
+    bar_chart.title = 'Sistemas por organismo estudiado'
+    for ente in Ente.objects.all():
+        # sons = list(ente.all_sons())
+        # total = sum(son.sistemas.count() for son in sons)
+        # bar_chart.add(ente.pk, total)
+        import random
+        bar_chart.add(ente.pk, random.randrange(3, 87))
+    return bar_chart
+
 
 @login_required
 def listado_organismos(request):
@@ -900,6 +919,7 @@ def listado_organismos(request):
         'breadcrumbs': bc.bc_organismos(),
         'tab': 'organismos',
         'entes': entes,
+        'bar': _bar(),
         # "filterset": filterset,
         })
 
