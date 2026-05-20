@@ -1,6 +1,11 @@
 {% extends "comun/base.html" %}
 {% load comun_filters %}
 
+{% block scripts %}
+{{ block.super }}
+<script type="text/javascript" src="http://kozea.github.com/pygal.js/latest/pygal-tooltips.min.js"></script>
+{% endblock scripts %}
+
 {% block content %}
 
 <div class="hero">

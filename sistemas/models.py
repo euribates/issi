@@ -437,7 +437,12 @@ class Sistema(models.Model):
         self.organismo.touch(ahora)
 
     def asignar_ente(self):
-        pass
+        if self.organismo:
+            for _org in self.organismo.get_parents():
+                if hasattr(_org, 'ente'):
+                    self.ente = _org.ente.id_ente
+                    self.save(update_fields=['ente'])
+                    break
 
     def url_detalle_sistema(self):
         """URL de detalle del sistema."""
@@ -654,7 +659,7 @@ https://www.gobiernodecanarias.org/libroazul/pdf/46083.pdf
 
     @classmethod
     def sistemas_por_organismo(cls, organismo):
-        qs = Organismo.objects .filter(ruta__startswith=organismo.ruta)
+        qs = Organismo.objects.filter(ruta__startswith=organismo.ruta)
         subtree = { _.pk for _ in qs.all() }
         return cls.objects.filter(organismo__in=subtree).all().order_by('codigo')
 

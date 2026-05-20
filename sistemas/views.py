@@ -4,10 +4,11 @@ from functools import cache
 from collections import defaultdict
 
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.db.models import Count
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
 
 from comun.commands import Command
 from comun.funcop import agrupa
@@ -889,27 +890,41 @@ def liberar_interlocutor(request, ente, usuario):
 
 def _bar():
     import pygal
+
+
+    chart = pygal.Bar()
+    chart.add('First', [{'value': 2, 'label': 'This is the first'}])
+    chart.add('Second', [{'value': 4, 'label': 'This is the second'}])
+    chart.add('Third', 7)
+    chart.add('Fourth', [{'value': 5}])
+    chart.add('Fifth', [{'value': 3, 'label': 'This is the fifth'}])
+    return chart
+
+
     config = pygal.Config()
-    config.show_legend = False
-    config.human_readable = True
-    config.fill = True
+    # config.show_legend = False
+    # config.human_readable = True
+    # config.fill = True
     config.show_y_guides = False
     config.width = 620
     config.height = 200
-    bar_chart = pygal.Bar(config)
-    bar_chart.title = 'Sistemas por organismo estudiado'
-    for ente in Ente.objects.all():
-        # sons = list(ente.all_sons())
-        # total = sum(son.sistemas.count() for son in sons)
-        # bar_chart.add(ente.pk, total)
-        import random
-        bar_chart.add(ente.pk, random.randrange(3, 87))
-    return bar_chart
+    chart = pygal.Bar(config)
+    # chart.title = 'Sistemas por organismo estudiado'
+    qs = (
+        Sistema.objects
+        .values('ente')
+        .annotate(num_sistemas=Count('pk'))
+        )
+    for item in qs.all():
+        label = item['ente']
+        value = item['num_sistemas']
+        chart.add(label, [{'value': value, 'label': label}])
+    return chart
 
 
 @login_required
 def listado_organismos(request):
-    entes = Ente.objects.all().order_by('id_ente')
+    entes = Ente.objects.select_related('organismo').order_by('id_ente')
     # filterset = filtersets.OrganismoFilter(
         # request.GET,
         # queryset=Organismo.objects.all(),
