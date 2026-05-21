@@ -30,11 +30,12 @@ class ErrorMessage():
             f'<code class="codigo-error">{self.code}</code>:'
             f' <b class="nombre-error">{self.name}<b>.',
             f'{self.message}',
-            f'self.context: <pre>{self.context!r}</pre>',
             ]
         if self.context:
             buff.append('<dl>')
             for _name, _val in self.context.items():
+                if _val is None:
+                    continue
                 buff.append(f'<dt>{_name}</dt>')
                 buff.append(f' <dd>{escape(repr(_val))}</dd>')
             buff.append('</dl>')

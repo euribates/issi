@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
 import json
+from django.db.models import Count
+from django.views.decorators.cache import cache_page
+from django.shortcuts import render
 
 
 DEFAULT_COLORS = [
@@ -66,6 +69,54 @@ def main():
     result.add_value(137, 'verde', '#3AF220')
     result.add_value(37, 'verde', '#3F22FA')
     print(result.as_json())
+
+
+def lab(request):
+    return render(request, 'comun/lab.html', {
+        'titulo': 'Charts labs',
+        })
+
+
+# @cache_page(60 * 15)
+def organismos(request):
+    import pygal
+    from sistemas.models import Sistema
+    from django.http import HttpResponse
+
+    style = pygal.style.Style(
+        transition='1400ms ease-in',
+        colors=['#323298', '#ffebcd', '#daa520', '#9BC850', '#ffeb44', '#ff00ff'],
+        )
+    config = pygal.Config()
+    config.show_legend = True
+    config.x_label_rotation=-90
+    config.human_readable = True
+    config.fill = True
+    config.show_y_guides = False
+    config.width = 620
+    config.height = 200
+    chart = pygal.Bar(config, style=style)
+    chart.title = 'Sistemas por organismo estudiado'
+    qs = (
+        Sistema.objects
+        .values('ente')
+        .annotate(num_sistemas=Count('pk'))
+        )
+    labels = []
+    values = []
+    for item in qs.all():
+        label = item['ente']
+        value = item['num_sistemas']
+        labels.append(label)
+        values.append(value)
+    chart.add('N. sistemas', values)
+    chart.x_labels = labels
+    chart.show_legend = False
+    return HttpResponse(
+        chart.render(),
+        content_type='image/svg+xml',
+        )
+
 
 
 if __name__ == "__main__":

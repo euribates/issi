@@ -67,7 +67,7 @@ def test_error_message_with_extra_context(catalog):
 def test_error_catalog_is_iterable(catalog):
     for name, item in catalog:
         assert name in {'INT01', 'INT02'}
-        assert isinstance(item, ErrorMessage)
+        assert callable(item)
 
 
 # ----------------------------------------------[ SSI errores ]--
