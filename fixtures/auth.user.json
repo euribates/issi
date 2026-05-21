@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$1200000$OTI9K4YwUPrw4tv5xJvvRE$2nfmhLGkbKwrfNkh2IuDc/BtKuvnR+YrFBP3YMrARDA=",
-        "last_login": "2026-04-29T09:20:28.694Z",
+        "last_login": "2026-05-05T11:13:00.940Z",
         "is_superuser": true,
         "username": "root",
         "first_name": "Root",
@@ -22,7 +22,7 @@
     "pk": 2,
     "fields": {
         "password": "pbkdf2_sha256$1200000$JtWkImghGjcV76LuwedjLr$9KOFwcug4qOql5elmKmVm1AGByh5Az7BNfiWWC6KedE=",
-        "last_login": "2026-04-28T09:46:54Z",
+        "last_login": "2026-05-15T07:46:56.654Z",
         "is_superuser": true,
         "username": "jrodleo",
         "first_name": "Juan Ignacio",
@@ -75,8 +75,8 @@
     "model": "auth.user",
     "pk": 5,
     "fields": {
-        "password": "pbkdf2_sha256$1200000$8cQyhLaTBCKBJ9nzgyDnVn$vOsE1IhmXJaltaxF6WTtZMRgaNcgOEqgSjV87cGQ6xY=",
-        "last_login": null,
+        "password": "pbkdf2_sha256$1200000$xB1yPqfG4qs9VsRceMffGo$l8vW4RMfk75G4AcRR2wu/HYUy3a5Oz6FhfLvEZJagmA=",
+        "last_login": "2026-05-14T06:19:26.674Z",
         "is_superuser": true,
         "username": "ext-mbenpad",
         "first_name": "Maria Mercedes",

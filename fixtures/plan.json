@@ -1,0 +1,114 @@
+[
+{
+    "model": "plan.backlog",
+    "pk": 1,
+    "fields": {
+        "sistema": 1,
+        "titulo": "Alta de enlace a Juriscan",
+        "explicacion": "Incluir enlaces a Juriscán, para asociar normativa vinculada con el sistema de información",
+        "estimacion": 25,
+        "prioridad": 30,
+        "f_creacion": "2026-03-31T18:59:46.895Z",
+        "f_modificacion": "2026-03-31T18:59:46.895Z",
+        "f_finalizacion": null
+    }
+},
+{
+    "model": "plan.backlog",
+    "pk": 4,
+    "fields": {
+        "sistema": 1,
+        "titulo": "Añadir una tarea al backlog de un sistema",
+        "explicacion": "Solo hay que pedir:\r\n\r\n- nombre de la tarea\r\n- explicación (opcional)\r\n- dificultad (estimación de), por defecto \"normal\"\r\n- prioridad (por defecto \"media\")",
+        "estimacion": 10,
+        "prioridad": 30,
+        "f_creacion": "2026-04-03T13:15:58.893Z",
+        "f_modificacion": "2026-04-03T13:15:58.893Z",
+        "f_finalizacion": null
+    }
+},
+{
+    "model": "plan.backlog",
+    "pk": 5,
+    "fields": {
+        "sistema": 1,
+        "titulo": "Borrar una entrada en el backlog",
+        "explicacion": "Previa verificación.",
+        "estimacion": 10,
+        "prioridad": 30,
+        "f_creacion": "2026-04-03T13:25:41.704Z",
+        "f_modificacion": "2026-04-03T13:25:41.704Z",
+        "f_finalizacion": null
+    }
+},
+{
+    "model": "plan.backlog",
+    "pk": 7,
+    "fields": {
+        "sistema": 1,
+        "titulo": "Editar tarea",
+        "explicacion": "Cambiar titulo, explicacion, prioridad y dificultad",
+        "estimacion": 30,
+        "prioridad": 30,
+        "f_creacion": "2026-04-03T20:54:34.836Z",
+        "f_modificacion": "2026-04-03T20:54:34.836Z",
+        "f_finalizacion": null
+    }
+},
+{
+    "model": "plan.backlog",
+    "pk": 10,
+    "fields": {
+        "sistema": 1,
+        "titulo": "Añadir un activo asociado a un S.I.",
+        "explicacion": "Desde la página de detalle del sistema, se debería poder dar de alta activos.",
+        "estimacion": 30,
+        "prioridad": 30,
+        "f_creacion": "2026-04-10T21:21:32.901Z",
+        "f_modificacion": "2026-04-10T21:21:32.901Z",
+        "f_finalizacion": null
+    }
+},
+{
+    "model": "plan.backlog",
+    "pk": 11,
+    "fields": {
+        "sistema": 1,
+        "titulo": "Dar de alta un activo de datos asociado al sistema de información",
+        "explicacion": "",
+        "estimacion": 30,
+        "prioridad": 30,
+        "f_creacion": "2026-04-10T21:24:47.097Z",
+        "f_modificacion": "2026-04-10T21:25:03.993Z",
+        "f_finalizacion": null
+    }
+},
+{
+    "model": "plan.backlog",
+    "pk": 12,
+    "fields": {
+        "sistema": 1,
+        "titulo": "Archivo (Borrado lógico de una tarea)",
+        "explicacion": "Quizá se podría incluir información de si se da de baja porque la funcionalidad se implantó, o por que se descartó.",
+        "estimacion": 30,
+        "prioridad": 30,
+        "f_creacion": "2026-04-20T12:37:59.832Z",
+        "f_modificacion": "2026-04-20T12:37:59.832Z",
+        "f_finalizacion": null
+    }
+},
+{
+    "model": "plan.backlog",
+    "pk": 13,
+    "fields": {
+        "sistema": 1,
+        "titulo": "No funciona la opción de seleccionar familia",
+        "explicacion": "No da error, pero no almacena la información en la base de datos.",
+        "estimacion": 12,
+        "prioridad": 30,
+        "f_creacion": "2026-04-28T13:03:24.921Z",
+        "f_modificacion": "2026-04-28T13:03:24.921Z",
+        "f_finalizacion": null
+    }
+}
+]
