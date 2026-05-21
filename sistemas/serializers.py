@@ -11,7 +11,7 @@ def _responsables(sistema, cometido):
 
 def _normativa(sistema):
     result = ''
-    if sistema.normativa.exists():
+    if hasattr(sistema, 'normativa') and sistema.normativa.exists():
         result = ', '.join([
             str(_.num_juriscan)
             for _ in sistema.normativa.all()
