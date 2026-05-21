@@ -4,38 +4,58 @@
 
 <div class="card">
 
-  <div class="card-header">
-    Añadir un nuevo sistema de información
+  <div class="card-header bg-primary text-white">
+    <h3>Añadir un nuevo sistema de información</h3>
   </div>
 
   <div class="card-body">
 
   <form method="POST" action=".">
   {% csrf_token %}
-  {{ form.errors }}  
+  {{ form.non_field_errors }}  
 
   <div class="d-flex p-2 bd-highlight">
     <fieldset class="flex-fill">
       <legend>Identificación del sistema</legend>
 
+      <div class="m-2">
+        <label for="id_nombre_sistema" class="form-label">
+            {{ form.nombre_sistema.label }}
+        </label>
+        {{ form.nombre_sistema }}
+        {% if form.nombre_sistema.errors %}<ul class="form-errors">
+          {% for error in form.nombre_sistema.errors %}
+          <li>{{ error|safe }}</li>
+          {% endfor %}
+        </ul>{% endif %}
+      </div>
 
-        <div class="m-2">
-         <label for="id_nombre" class="form-label">Nombre del sistema</label>
-         {{ form|as_text_control:"nombre_sistema" }}
-        </div>
+      <div class="m-2">
+        <label for="id_codigo" class="form-label">
+            {{ form.codigo.label }}
+        </label>
+        {{ form.codigo }}
+        {% if form.codigo.errors %}<ul class="form-errors">
+          {% for error in form.codigo.errors %}
+          <li>{{ error|safe }}</li>
+          {% endfor %}
+        </ul>{% endif %}  
+      </div>
 
-        <div class="m-2">
-         <label for="id_codigo" class="form-label">Código</label>
-         {{ form|as_text_control:"codigo" }}
-        </div>
-
-        <div class="m-2">
-         <label for="id_finalidad" class="form-label">Finalidad</label>
-         {{ form.finalidad }}
+      <div class="m-2">
+        <label for="id_proposito" class="form-label">
+            {{ form.finalidad.label }}
+        </label>
+        {{ form.finalidad }}
+        {% if form.finalidad.errors %}<ul class="form-errors">
+          {% for error in form.finalidad.errors %}
+          <li>{{ error|safe }}</li>
+          {% endfor %}
+        </ul>{% endif %}
          <p class="atenuado">Admite <a href="https://www.markdownlang.com/">formato 
              MarkDown</a>.
          </p>
-        </div>
+      </div>
 
 
 
@@ -69,11 +89,9 @@
     </fieldset>    
   </div>
 
-  <div class="commands">
-    <button type="submit" class="btn btn-primary">
-        Añadir sistema
-    </button>
-  </div>
+  <button type="submit" class="btn btn-primary">
+    Añadir sistema
+  </button>
 
     </form>
   </div>

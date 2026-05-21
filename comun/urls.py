@@ -2,7 +2,8 @@
 
 from django.urls import path
 
-from . import views
+# from . import views
+from . import charts
 
 app_name = 'comun'
 
@@ -12,5 +13,7 @@ def tie(ruta, vista, name=None):
 
 
 urlpatterns = [
-    tie('charts/doughnut/', views.doughnut),
+    # tie('charts/doughnut/', views.doughnut),
+    tie('charts/organismos.svg', charts.organismos),
+    tie('lab/', charts.lab),
     ]

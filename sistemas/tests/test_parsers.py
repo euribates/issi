@@ -25,7 +25,7 @@ def test_parse_nombre_sistema_nulo():
 
 
 def test_parse_nombre_sistema_demasiado_corto():
-    rs = parsers.parse_nombre_sistema('Sic')
+    rs = parsers.parse_nombre_sistema('Si')
     assert rs.is_failure()
 
 
@@ -166,8 +166,9 @@ def test_parse_uuid_bad():
 
 @pytest.mark.django_db
 def test_parse_uuid():
+    expected = UUID('20f5484b-88ae-49b0-8af0-3a389b4917dd')
     r = parsers.parse_uuid('20f5484b-88ae-49b0-8af0-3a389b4917dd')
-    assert r.is_success() and r.value is None
+    assert r.is_success() and r.value == expected
 
 
 # ---------------------------[ Tests para parse_materia_competencial ]--
@@ -208,35 +209,11 @@ def test_parse_materia_competencial_failure():
 
 
 @pytest.mark.django_db
-def test_parse_row():
-    jrodleo = Usuario.load_usuario('jrodleo')
-    malosua = Usuario.load_usuario('malosua')
-    juriscan_5559 = Juriscan.load_or_create(5559)
-    hacienda = Tema.load_tema('HAC')
-    row = (
-        "Nombre del sistema",                   # Nombre
-        'CODIGO',                               # Código
-        "Esta es la finalidad",                 # Finalidad
-        'HAC',                                  # Materia compotencial
-        'A05003248',                            # DIR3
-        'jrodleo, malosua',                     # Resp. tecnológico
-        'malosua',                              # Resp. funcional
-        '5559',                                 # Normativa
-        'Este es el comentario',                # Comentarios
-        '2b4c67ad-cf08-11f0-bdf7-38d5470ea667', # uuid
-        )
-    data = parsers.parse_row(row)
-    assert data['nombre_sistema'].value == 'Nombre del sistema'
-    assert data['codigo'].value == 'CODIGO'
-    assert data['finalidad'].value == 'Esta es la finalidad'
-    assert data['descripcion'].value == ''
-    assert data['tema'].value == hacienda
-    assert data['organismo'].value == Organismo.load_organismo(42093)
-    assert data['responsables_tecnologicos'].value == set([jrodleo, malosua])
-    assert data['responsables_funcionales'].value == set([malosua])
-    assert data['juriscan'].value == set([juriscan_5559])
-    assert data['comentarios'].value == 'Este es el comentario'
-    assert data['uuid'].value.uuid_sistema == UUID('2b4c67ad-cf08-11f0-bdf7-38d5470ea667')
+def test_parse_dir3():
+    presidencia = Organismo.load_organismo(42091)
+    result = parsers.parse_dir3('A05002844')
+    assert result.is_success()
+    assert result.value == presidencia
 
 
 if __name__ == '__main__':

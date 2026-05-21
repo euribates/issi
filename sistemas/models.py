@@ -88,10 +88,10 @@ class Tema(models.Model):
 
 
 class Sistema(models.Model):
-    """Modelo Sistemas de Información."""
+    """Modelo Sistema de Información."""
 
     class Meta:
-        """Opciones para modelotree.keys Sistema."""
+        """Opciones para Sistema."""
 
         ordering = [
             F("es_subsistema_de").desc(nulls_first=True),
@@ -108,6 +108,7 @@ class Sistema(models.Model):
     nombre_sistema = models.CharField(
         max_length=220,
         unique=True,
+        verbose_name="Nombre del sistema",
         help_text="Nombre del sistema",
         )
     organismo = models.ForeignKey(Organismo,
@@ -117,8 +118,15 @@ class Sistema(models.Model):
         null=True,
         default=None,
         )
+    ente = models.SlugField(
+        max_length=12,
+        default=None,
+        blank=True,
+        null=True,
+        )
     codigo = models.SlugField(
         max_length=36,
+        verbose_name="Nombre Código",
         help_text="Código identificador del sistema (una sola palabra)",
         unique=True,
         )
@@ -428,6 +436,14 @@ class Sistema(models.Model):
         self.save(update_fields=["updated"])
         self.organismo.touch(ahora)
 
+    def asignar_ente(self):
+        if self.organismo:
+            for _org in self.organismo.get_parents():
+                if hasattr(_org, 'ente'):
+                    self.ente = _org.ente.id_ente
+                    self.save(update_fields=['ente'])
+                    break
+
     def url_detalle_sistema(self):
         """URL de detalle del sistema."""
         return links.a_detalle_sistema(self.pk)
@@ -643,7 +659,7 @@ https://www.gobiernodecanarias.org/libroazul/pdf/46083.pdf
 
     @classmethod
     def sistemas_por_organismo(cls, organismo):
-        qs = Organismo.objects .filter(ruta__startswith=organismo.ruta)
+        qs = Organismo.objects.filter(ruta__startswith=organismo.ruta)
         subtree = { _.pk for _ in qs.all() }
         return cls.objects.filter(organismo__in=subtree).all().order_by('codigo')
 
@@ -1100,6 +1116,10 @@ class Ente(models.Model):
         on_delete=models.PROTECT,
     )
     peso = models.IntegerField(default=100)
+    ruta = models.CharField(
+        max_length=128,
+        default='',
+        )
     url_open_data = models.URLField(
         max_length=384,
         unique=True,
@@ -1134,8 +1154,6 @@ class Ente(models.Model):
         return Sistema.objects.select_related("organismo").filter(
             organismo__ruta__startswith=self.organismo.ruta
         )
-
-
 
     def descargar_datos(self, url, force=False):
         slug = url.rsplit("/", 1)[1]

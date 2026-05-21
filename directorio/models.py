@@ -161,6 +161,12 @@ class Organismo(models.Model):
                     result[sibling.pk] = (sibling, {})
         return result
 
+    def get_parents(self):
+        id_parents = [ int(pk) for pk in self.ruta.split('/') if pk ]
+        id_parents.reverse()
+        for id_organismo in id_parents:
+            yield Organismo.load_organismo(id_organismo)
+
     def get_full_tree(self) -> dict:
         id_parents = [ int(pk) for pk in self.ruta.split('/') if pk ]
         id_parents.pop(0)  # Eliminamos la raiz
@@ -172,11 +178,10 @@ class Organismo(models.Model):
             yield from hijo.iter_jerarquia(nivel+1)
 
     def siblings(self):
-        ds = (
+        return (
             Organismo.objects
             .filter(depende_de=self.depende_de)
             )
-        return ds
 
     def touch(self, updated_at: DateTime|None = None):
         '''Marcar el sistema como modificado.

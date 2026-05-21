@@ -2,10 +2,14 @@
 
 from django import forms
 from django.forms import widgets
+from django.core.exceptions import ValidationError
 
 from . import models
+from . import parsers
+
 from comun.forms import BootstrapForm
 from comun.searchers import search_organismos
+
 
 class ODSFileForm(BootstrapForm, forms.Form):
     archivo = forms.FileField(
@@ -35,10 +39,52 @@ class AltaSistemaForm(BootstrapForm, forms.ModelForm):
             'finalidad',
             'tema',
             ]
+        widgets = {
+            'finalidad': forms.Textarea(attrs={
+                'class': "form-control",
+                'cols': 80,
+                'rows': 5,
+                'placeholder': 'Finalidad del sistema'
+                }),
+            }
 
     def organismos_filtrados(self, query: str):
         return search_organismos(query)
 
+    def clean_nombre_sistema(self):
+        """Validación del nombre del sistema.
+        """
+        nombre_sistema = self.cleaned_data['nombre_sistema']
+        if result := parsers.parse_nombre_sistema(nombre_sistema):
+            nombre_sistema = result.value
+            self.cleaned_data['nombre_sistema'] = nombre_sistema
+        else:
+            raise ValidationError(result.error_message.as_html())
+        _sistema_previo = (
+            models.Sistema
+            .objects.filter(nombre_sistema=nombre_sistema)
+            .first()
+            )
+        if _sistema_previo:
+            raise ValidationError(
+                f"Ya existe un sistema con ese nombre: {_sistema_previo}",
+                )
+        return nombre_sistema
+
+    def clean_codigo(self):
+        """Validación del nombre código del sistema.
+        """
+        codigo = self.cleaned_data['codigo']
+        if result := parsers.parse_codigo_interno(codigo):
+            self.cleaned_data['codigo'] = codigo = result.value
+        else:
+            raise ValidationError(str(result))
+        _sistema_previo = models.Sistema.load_sistema_por_codigo(codigo)
+        if _sistema_previo:
+            raise ValidationError(
+                f"Ya existe un sistema con ese código: {_sistema_previo}",
+                )
+        return codigo
 
 
 class EditarSistemaForm(BootstrapForm, forms.ModelForm):
@@ -52,15 +98,14 @@ class EditarSistemaForm(BootstrapForm, forms.ModelForm):
             'url',
             ]
 
-    def _is_diff(self, sistema, field_name):
+    def _is_diff(self, sistema, field_name) -> dict:
         old_value = getattr(sistema, field_name)
         new_value = self.cleaned_data[field_name]
         if old_value != new_value:
             return { field_name: f'Modificado a {new_value!r}' }
         return {}
 
-
-    def diff_with(self, sistema):
+    def diff_with(self, sistema) -> dict:
         result = dict()
         result.update(self._is_diff(sistema, 'nombre_sistema'))
         result.update(self._is_diff(sistema, 'codigo'))

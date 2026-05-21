@@ -4,10 +4,12 @@ from functools import cache
 from collections import defaultdict
 
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.db.models import Count
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
+import pygal
 
 from comun.commands import Command
 from comun.funcop import agrupa
@@ -887,19 +889,46 @@ def liberar_interlocutor(request, ente, usuario):
         'usuario': usuario,
         })
 
+def _bar():
+    style = pygal.style.Style(
+        transition='400ms ease-in-out',
+        colors=('#E853A0', '#E8537A'),
+        )
+    config = pygal.Config()
+    config.show_legend = False
+    config.x_label_rotation=-90
+    config.human_readable = True
+    config.fill = True
+    config.show_y_guides = False
+    config.width = 620
+    config.height = 200
+    chart = pygal.Bar(config, style=style)
+    chart.title = 'Sistemas por organismo estudiado'
+    qs = (
+        Sistema.objects
+        .values('ente')
+        .annotate(num_sistemas=Count('pk'))
+        )
+    labels = []
+    for item in qs.all():
+        label = item['ente']
+        value = item['num_sistemas']
+        chart.add(label, [{'value': value, 'label': label}])
+        labels.append(label)
+    chart.x_labels = labels
+    return chart
+
 
 @login_required
 def listado_organismos(request):
-    entes = Ente.objects.all().order_by('id_ente')
-    # filterset = filtersets.OrganismoFilter(
-        # request.GET,
-        # queryset=Organismo.objects.all(),
-        # )
+    from sistemas.db_raw import db_entes
+    entes = list(db_entes())
     return render(request, 'sistemas/listado-organismos.html', {
         'titulo': 'Organismos',
         'breadcrumbs': bc.bc_organismos(),
         'tab': 'organismos',
         'entes': entes,
+        'bar': _bar(),
         # "filterset": filterset,
         })
 
