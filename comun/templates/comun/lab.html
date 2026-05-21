@@ -1,0 +1,142 @@
+{% extends "comun/base.html" %}
+{% load static %}
+
+{% block libs %}
+  {{ block.super }}
+  <script src="{% static 'lib/echarts.js' %}"></script>
+{% endblock libs %}
+
+{% block scripts %}
+
+<script type="text/javascript">
+
+function create_barchart() {
+  // Initialize the echarts instance based on the prepared dom
+  var chart = echarts.init(document.getElementById('barchart'));
+  // Specify the configuration items and data for the chart
+  var options = {
+    title: {
+      text: 'ECharts Getting Started Example'
+    },
+    tooltip: {},
+    legend: {
+      data: ['sales']
+    },
+    xAxis: {
+      data: ['Shirts', 'Cardigans', 'Chiffons', 'Pants', 'Heels', 'Socks']
+    },
+    yAxis: {},
+    series: [
+      {
+        name: 'sales',
+        type: 'bar',
+        data: [5, 20, 36, 10, 10, 20]
+      }
+    ]
+  };
+
+  // Display the chart using the configuration and the data defined above.
+  chart.setOption(options);
+  }
+
+function create_doughnut() {
+  var options = {
+    title: {
+      text: 'A Case of Doughnut Chart',
+      left: 'center',
+      top: 'center'
+    },
+    series: [
+      {
+        type: 'pie',
+        data: [
+          {
+            value: 335,
+            name: 'Alpha'
+          },
+          {
+            value: 234,
+            name: 'Bravo'
+          },
+          {
+            value: 1548,
+            name: 'Charlie'
+          },
+          {
+            value: 548,
+            name: 'Delta'
+          },
+        ],
+        radius: ['40%', '70%']
+      }
+    ]
+  };
+  var chart = echarts.init(document.getElementById('doughnout'));
+  chart.setOption(options);
+  }  
+
+function create_radar() {
+  var options = {
+    title: {
+      text: 'ISC del sistema'
+    },
+    legend: {
+      data: ['ISSI', 'Matraka'],
+    },
+    radar: {
+      // shape: 'circle',
+      indicator: [
+        { name: 'Sales', max: 6500 },
+        { name: 'Administration', max: 16000 },
+        { name: 'Information Technology', max: 30000 },
+        { name: 'Customer Support', max: 38000 },
+        { name: 'Development', max: 52000 },
+        { name: 'Marketing', max: 25000 }
+      ]
+    },
+    series: [
+      {
+        name: 'Budget vs spending',
+        type: 'radar',
+        data: [
+          {
+            value: [4200, 3000, 20000, 35000, 50000, 18000],
+            name: 'ISSI'
+          },
+          {
+            value: [5000, 14000, 28000, 26000, 42000, 21000],
+            name: 'Matraka'
+          }
+        ]
+      }
+    ]
+  };
+  var chart = echarts.init(document.getElementById('radar'));
+  chart.setOption(options);
+  }
+
+create_barchart();
+create_doughnut();
+create_radar();
+
+</script>
+
+{% endblock scripts %}
+
+
+{% block content %}
+
+<h3>Barchart</h3>
+<div id="barchart" style="width: 600px;height:400px;"></div>
+
+
+<h3>Doughnut</h3>
+
+<div id="doughnout" style="width: 600px;height:400px;"></div>
+
+<h3>Radar</h3>
+
+<div id="radar" style="width: 600px;height:400px;"></div>
+
+
+{% endblock content %}

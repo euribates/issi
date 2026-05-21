@@ -3,7 +3,7 @@
 from django.db import migrations
 
 SQL_UPDATE_RUTA = """
-    UPDATE sistemas_ente e
+    UPDATE sistemas_ente
        SET ruta = (
            SELECT ruta
              FROM directorio_organismo

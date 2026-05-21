@@ -1,35 +1,39 @@
 {% extends "comun/base.html" %}
-{% load comun_filters %}
+{% load static  comun_filters %}
 
-{% block scripts %}
-{{ block.super }}
-<script type="text/javascript" src="http://kozea.github.com/pygal.js/latest/pygal-tooltips.min.js"></script>
-{% endblock scripts %}
+{% block libs %}
+  {{ block.super }}
+  <script src="{% static 'lib/pygal-tooltips.js' %}"></script>
+{% endblock libs %}
+
 
 {% block content %}
 
 <div class="hero">
-{{ bar.render|safe }}
+  <figure>
+    <img type="image/svg+xml" src="/comun/charts/organismos.svg">
+  </figure>
 </div>
 
 <table class="table table-striped">
   <tbody>
-    {% for ente in entes %}<tr>
-      <th>{{ ente.pk}}</th>  
+    {% for item in entes %}<tr>
+      <th>{{ item.ente }}</th>  
       <td>
-          <a href="{% url 'sistemas:detalle_organismo' organismo=ente.organismo %}">
+          <a href="{% url 'sistemas:detalle_ente' ente=item.ente %}">
           <b>
-          {{ ente.organismo.nombre_organismo }}
+          {{ item.nombre_organismo }}
           </b>
           </a>
       </td>
       <td>
-          <span class="dir3">
-            {{ ente.organismo.dir3 }}
-          </span>    
-      </td>
-      <td colspan="2">
-        {{ ente.organismo.categoria }}
+        {% if item.num_sistemas < 3 %}
+          <span class="badge bg-danger">
+        {% else %}
+          <span class="badge bg-primary txt-white">
+        {% endif %}
+        {{ item.num_sistemas }}
+          </span>
       </td>
     </tr>{% endfor %}
   </tbody>
