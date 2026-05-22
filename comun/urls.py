@@ -2,7 +2,7 @@
 
 from django.urls import path
 
-# from . import views
+from . import views
 from . import charts
 
 app_name = 'comun'
@@ -16,4 +16,8 @@ urlpatterns = [
     # tie('charts/doughnut/', views.doughnut),
     tie('charts/organismos.svg', charts.organismos),
     tie('lab/', charts.lab),
+    tie('reset_password/', views.reset_password),
+    tie('reset_password/ok/', views.reset_password_ok),
+    tie('reset_password/error/', views.reset_password_error),
+    tie('reset_password/check/<str:token>/', views.reset_password_check),
     ]

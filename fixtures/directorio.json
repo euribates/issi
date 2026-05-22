@@ -13,7 +13,7 @@
         "ruta": "/",
         "url": null,
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-13T12:07:28.604Z",
+        "f_cambio": "2026-05-22T09:33:39.717Z",
         "f_baja": null
     }
 },
@@ -2227,7 +2227,7 @@
         "ruta": "/1/42150",
         "url": "https://www.gobiernodecanarias.org/ucic/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-13T12:07:28.599Z",
+        "f_cambio": "2026-05-22T09:33:39.713Z",
         "f_baja": null
     }
 },
@@ -2371,7 +2371,7 @@
         "ruta": "/1/42150/42158",
         "url": "https://www.gobiernodecanarias.org/conocimiento/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-13T12:07:28.593Z",
+        "f_cambio": "2026-05-22T09:33:39.709Z",
         "f_baja": null
     }
 },

@@ -13,7 +13,8 @@ EPILOG   = 'ISSI - Inventario de sistemas de información'
 ALFABETO = 'abcdefghijklmnopqrstuvwxyz'
 NUMBERS  = r'0123456789'
 # SYMBOLS  = r'/\#@:][}{*+-=&%|.;,'
-SYMBOLS  = r'#:][}{*+-=%|.;,'
+# SYMBOLS  = r'#:][}{*+-=%|.;,'
+SYMBOLS  = r'!?*._'
 
 DEFAULT_NUM_PASSWORDS = 1
 DEFAULT_LEN_PASSWORD = 24
