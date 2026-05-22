@@ -255,34 +255,11 @@ if DEBUG:
 
 LC_TIME_SPANISH_LOCALE = config('LC_TIME_SPANISH_LOCALE', default='es_ES.utf8')
 
-<<<<<<< HEAD
 EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_PORT = config('EMAIL_PORT', parser=int, default=582)
 EMAIL_USER = config('EMAIL_USER')
 EMAIL_PASSWORD = config('EMAIL_PASSWORD')
-||||||| parent of 0296770 (Backup DB, Cambios en prod)
-BUGSINK_URL = config(
-    'BUGSINK_URL',
-    default="http://c5bd4b86bc4947099873b0f85711fe39@localhost:8085/1",
-    )
-=======
-# BUGSINK_URL = config(
-#     'BUGSINK_URL',
-#     default="http://c5bd4b86bc4947099873b0f85711fe39@localhost:8085/1",
-#     )
->>>>>>> 0296770 (Backup DB, Cambios en prod)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-||||||| parent of 8638a9f (Pruebas con comun.notificador)
-# RECAPTCHA_PUBLIC_KEY=6Ld6QA4UAAAAAFwIk5umfbGBnf_hkx0sf8niWEsA
-# RECAPTCHA_PRIVATE_KEY=6Ld6QA4UAAAAAJvO7k7QmYh7l9P524_P8Ty5zkJc
-
-# AWS_ACCESS_KEY_ID=AKIA6F2ONGUQMWXPFOGQ
-# AWS_SECRET_ACCESS_KEY=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
-
-=======
->>>>>>> 8638a9f (Pruebas con comun.notificador)
 # BUGSINK_URL = config(
 #     'BUGSINK_URL',
 #     default="http://c5bd4b86bc4947099873b0f85711fe39@localhost:8085/1",
@@ -300,30 +277,3 @@ BUGSINK_URL = config(
 #     send_client_reports=False,
 #     auto_session_tracking=True,
 # )
-||||||| parent of 0296770 (Backup DB, Cambios en prod)
-sentry_sdk.init(BUGSINK_URL,
-    send_default_pii=True,
-    max_request_body_size="always",
-    # Setting up the release is highly recommended. The SDK will try to
-    # infer it, but explicitly setting it is more reliable:
-    # release=...,
-
-    # Don't event types which are not supported by Bugsink:
-    traces_sample_rate=0,
-    send_client_reports=False,
-    auto_session_tracking=True,
-)
-=======
-# sentry_sdk.init(BUGSINK_URL,
-#     send_default_pii=True,
-#     max_request_body_size="always",
-#     # Setting up the release is highly recommended. The SDK will try to
-#     # infer it, but explicitly setting it is more reliable:
-#     # release=...,
-# 
-#     # Don't event types which are not supported by Bugsink:
-#     traces_sample_rate=0,
-#     send_client_reports=False,
-#     auto_session_tracking=True,
-# )
->>>>>>> 0296770 (Backup DB, Cambios en prod)
