@@ -15,7 +15,7 @@ import locale
 from pathlib import Path
 
 from prettyconf import config
-import sentry_sdk
+# import sentry_sdk
 import dj_database_url
 
 
@@ -256,20 +256,20 @@ if DEBUG:
 
 LC_TIME_SPANISH_LOCALE = config('LC_TIME_SPANISH_LOCALE', default='es_ES.utf8')
 
-BUGSINK_URL = config(
-    'BUGSINK_URL',
-    default="http://c5bd4b86bc4947099873b0f85711fe39@localhost:8085/1",
-    )
+# BUGSINK_URL = config(
+#     'BUGSINK_URL',
+#     default="http://c5bd4b86bc4947099873b0f85711fe39@localhost:8085/1",
+#     )
 
-sentry_sdk.init(BUGSINK_URL,
-    send_default_pii=True,
-    max_request_body_size="always",
-    # Setting up the release is highly recommended. The SDK will try to
-    # infer it, but explicitly setting it is more reliable:
-    # release=...,
-
-    # Don't event types which are not supported by Bugsink:
-    traces_sample_rate=0,
-    send_client_reports=False,
-    auto_session_tracking=True,
-)
+# sentry_sdk.init(BUGSINK_URL,
+#     send_default_pii=True,
+#     max_request_body_size="always",
+#     # Setting up the release is highly recommended. The SDK will try to
+#     # infer it, but explicitly setting it is more reliable:
+#     # release=...,
+# 
+#     # Don't event types which are not supported by Bugsink:
+#     traces_sample_rate=0,
+#     send_client_reports=False,
+#     auto_session_tracking=True,
+# )
