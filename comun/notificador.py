@@ -7,7 +7,7 @@ from django.template.loader import get_template
 from django.conf import settings
 
 from comun.results import Failure, Success
-from comun.templatags.comun_filters import as_markdown
+from comun.templatetags.comun_filters import as_markdown
 
 
 def send_message(targets, subject, template, **kwargs):
@@ -23,7 +23,8 @@ def send_message(targets, subject, template, **kwargs):
     message['Subject'] = subject
     message['From'] = sender
     message['To'] = ', '.join(targets)
-    with smtplib.SMTP_SSL(host, port) as smtp_server:
+    with smtplib.SMTP(host, port) as smtp_server:
+        smtp_server.starttls()
         smtp_server.login(sender, password)
         problems = smtp_server.sendmail(
             sender,
