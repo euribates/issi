@@ -6,9 +6,11 @@ from collections import Counter
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from django.contrib.auth import authenticate
+from django.urls import reverse_lazy
 
 from comun import forms
 from comun.models import EmailToken
+from comun.models import load_user_by_email, send_validation_email
 from sistemas import breadcrumbs
 from sistemas import links
 from sistemas.models import Sistema
@@ -100,7 +102,6 @@ def login_view(request):
     """
     next_url = request.GET.get('next', links.a_sistemas())
     if request.method == 'POST':
-        print('Es POST')
         form = forms.LoginForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data['username']
@@ -117,16 +118,40 @@ def login_view(request):
         })
 
 
+def reset_password_ok(request, *args, **kwargs):
+    from django.http import HttpResponse
+    return HttpResponse("reset_password_ok no implementado", content_type="text/plain")
+
+
+def reset_password_error(request, *args, **kwargs):
+    from django.http import HttpResponse
+    return HttpResponse("reset_password_error no implementado", content_type="text/plain")
+
+
+def reset_password_check(request, token: str, **kwargs):
+    from django.http import HttpResponse
+    _token = EmailToken.load_token(token)
+    return HttpResponse(
+        "reset_password_check no implementado. token={_token}",
+        content_type="text/plain",
+        )
+
+
+
 def reset_password(request):
-    """Reset password.
+    """Página para recuperar y cambiar la contraseña del usuario.
     """
     if request.method == 'POST':
         form = forms.EmailForm(request.POST)
         if form.is_valid():
             email = form.cleaned_data['email']
-            _token = EmailToken(email=email)
-            # Enviar email
-            # redirigir a la página explicativa
+            if user := load_user_by_email(email):
+                token = EmailToken(email=email)
+                token.save()
+                send_validation_email(user=user, token=token)
+                return redirect(reverse_lazy('comun:reset_password_ok'))
+            else:
+                return redirect(reverse_lazy('comun:reset_password_error'))
     else:
         form = forms.EmailForm()
     return render(request, 'comun/reset-password.html', {
