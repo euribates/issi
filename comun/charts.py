@@ -2,7 +2,7 @@
 
 import json
 from django.db.models import Count
-from django.views.decorators.cache import cache_page
+# from django.views.decorators.cache import cache_page
 from django.shortcuts import render
 
 

@@ -21,7 +21,7 @@ SELECT ente.id_ente as ente,
   FROM sistemas_ente ente
   LEFT JOIN directorio_organismo org ON ente.organismo_id = org.id_organismo
   LEFT JOIN sistemas_sistema si ON si.ente = ente.id_ente
- GROUP by ente.id_ente, org.nombre_organismo
+ GROUP by ente.id_ente, org.id_organismo, org.nombre_organismo
  ORDER by ente.id_ente;
 """
     with connection.cursor() as cursor:

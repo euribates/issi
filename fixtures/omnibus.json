@@ -168,6 +168,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "00eb4302-55c4-11f1-881c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "548",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Subvenciones para Infraestructuras (FAP) (BORRAME_FAP_SIE) ha sido actualizada a 'BORRAME_FAP_SIE'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-22T09:52:54.256Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "01682fce-4ac6-11f1-9589-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -1247,6 +1260,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "0c7092ae-55bc-11f1-9623-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "553",
+        "nombre_clase": "Sistema",
+        "descripcion": "La URL de entrada al sistema Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026) ha sido actualizada a 'https://sede.gobiernodecanarias.org/aplicaciones/redcide_c202601/login'.\n",
+        "momento": "2026-05-22T08:55:57.611Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "0c9e7756-4d2c-11f1-a004-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -1897,6 +1923,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "1422b402-55c4-11f1-ab59-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "547",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Subvenciones para Infraestructuras (FAP_SIE) ha sido actualizada a 'FAP_SIE'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-22T09:53:26.497Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "145486d1-4d5e-11f1-9ab9-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -2034,6 +2073,19 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario Patricia Ruiz de Galarreta Tovar ha sido asignado como Responsable funcional del sistema Gestión de archivo eSPERIA (ESPERIA)",
         "momento": "2026-05-07T16:02:02.711Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "1649381f-55b8-11f1-879b-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"rfercar\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Rafael Ferrando Carrasco",
+        "momento": "2026-05-22T08:27:36.143Z",
         "usuario": "root",
         "payload": null
     }
@@ -2196,6 +2248,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "185da7fc-55c0-11f1-a653-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "556",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Competencias Digitales para la Ciudadanía (CODECAN)",
+        "momento": "2026-05-22T09:24:55.607Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "185ef1b1-55c1-11f1-af35-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "557",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 78541 al sistema Otorgamiento de licencias para la prestación de servicios de comunicación de Televisión Digital Terrestre de ámbito local en la CCAA de Canarias (TDT_2020)",
+        "momento": "2026-05-22T09:32:05.112Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "186efbcb-4d3e-11f1-9ce2-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -2346,6 +2424,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha asignado la entrada Juriscán nº 39312 al sistema Registro de mediadores de Canarias (REGISTRO_MEDIADORES)",
         "momento": "2026-05-08T07:39:52.890Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "1a2468a7-55c3-11f1-bbf4-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "88",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Subvenciones empresas alta tecnología e intensivas en conocimiento (FAP_EATIC) ha sido actualizada a 'FAP_EATIC'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-22T09:46:27.077Z",
         "usuario": "root",
         "payload": null
     }
@@ -3002,6 +3093,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "22ed0511-55c0-11f1-b39c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "556",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Florencio Blanco Fernández ha sido asignado como Responsable funcional del sistema Competencias Digitales para la Ciudadanía (CODECAN)",
+        "momento": "2026-05-22T09:25:13.324Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "22ed5c6d-55c0-11f1-9c55-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"fblafer\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Florencio Blanco Fernández ha sido asignado como Responsable funcional del sistema Competencias Digitales para la Ciudadanía (CODECAN)",
+        "momento": "2026-05-22T09:25:13.326Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "2334f9a6-4964-11f1-8998-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -3392,6 +3509,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "2704a7f4-55b8-11f1-a093-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "550",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Rafael Ferrando Carrasco ha sido asignado como Responsable funcional del sistema Subvenciones para la realización de acciones de divulgación de la I+D+i en Canarias (apoyo a la realización de congresos y eventos científicos y técnicos) (FAP_DI2026)",
+        "momento": "2026-05-22T08:28:04.216Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "27052a43-55b8-11f1-9dcd-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"rfercar\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Rafael Ferrando Carrasco ha sido asignado como Responsable funcional del sistema Subvenciones para la realización de acciones de divulgación de la I+D+i en Canarias (apoyo a la realización de congresos y eventos científicos y técnicos) (FAP_DI2026)",
+        "momento": "2026-05-22T08:28:04.219Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "2740d380-4735-11f1-b605-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -3412,6 +3555,32 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario Fernando Akhenaton Manero Martínez ha sido asignado como Responsable funcional del sistema Reporta (REPORTA)",
         "momento": "2026-05-03T21:15:04.262Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "27437d6f-55b9-11f1-a84f-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "551",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Rafael Ferrando Carrasco ha sido asignado como Responsable funcional del sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:35:14.124Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "27441f0d-55b9-11f1-b197-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"rfercar\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Rafael Ferrando Carrasco ha sido asignado como Responsable funcional del sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:35:14.128Z",
         "usuario": "root",
         "payload": null
     }
@@ -3782,6 +3951,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "29a32dd6-55c1-11f1-b54c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "557",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha desasingado la entrada nº 78541 al sistema Otorgamiento de licencias para la prestación de servicios de comunicación de Televisión Digital Terrestre de ámbito local en la CCAA de Canarias (TDT_2020)",
+        "momento": "2026-05-22T09:32:34.080Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "29b27781-4a02-11f1-beb4-920007977582",
     "fields": {
         "nivel_evento": "delete",
@@ -3893,6 +4075,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Sistema de Información  de Subvenciones (SUBV_EMP) ha sido actualizada a 'Subvenciones sobre Políticas Activas de Empleo'",
         "momento": "2026-05-12T10:34:34.853Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "2b64d45f-55c0-11f1-ac47-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "556",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Competencias Digitales para la Ciudadanía (CODECAN)",
+        "momento": "2026-05-22T09:25:27.530Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "2b6539f6-55c0-11f1-a6f8-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodriguez_itc\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Competencias Digitales para la Ciudadanía (CODECAN)",
+        "momento": "2026-05-22T09:25:27.533Z",
         "usuario": "root",
         "payload": null
     }
@@ -4237,6 +4445,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "2fa72a1d-55ba-11f1-a46c-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"lruicar\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Laura Ruiz Caramés",
+        "momento": "2026-05-22T08:42:37.696Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "2faec490-4859-11f1-98f7-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -4322,6 +4543,19 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario Tamia María Molina Herrera ha sido asignado como Responsable funcional del sistema Sistema de Información  de Prácticas en Empresa (PREM)",
         "momento": "2026-05-12T10:13:16.211Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "31307681-55c3-11f1-86a2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "89",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Subvenciones para proyectos de innovación en áreas prioritarias de la RIS3 ampliada (FAP_EPIRIS) ha sido actualizada a 'FAP_EPIRIS'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-22T09:47:05.744Z",
         "usuario": "root",
         "payload": null
     }
@@ -4562,6 +4796,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "334990c1-55ba-11f1-89f7-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "551",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Laura Ruiz Caramés ha sido asignado como Responsable funcional del sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:42:43.793Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "334a4795-55ba-11f1-ad71-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"lruicar\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Laura Ruiz Caramés ha sido asignado como Responsable funcional del sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:42:43.798Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "33721f53-4ec2-11f1-a5e2-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -4699,6 +4959,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Gestión de turnos (GDT) ha sido actualizada a 'Gestión de turnos y circulación de pacientes en diferentes centros sanitarios del SCS'",
         "momento": "2026-05-11T12:09:05.450Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "34d9f547-55b8-11f1-82a9-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "550",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Subvenciones para la realización de acciones de divulgación de la I+D+i en Canarias (apoyo a la realización de congresos y eventos científicos y técnicos) (FAP_DI2026)",
+        "momento": "2026-05-22T08:28:27.424Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "34da9fa0-55b8-11f1-9869-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodriguez_itc\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Subvenciones para la realización de acciones de divulgación de la I+D+i en Canarias (apoyo a la realización de congresos y eventos científicos y técnicos) (FAP_DI2026)",
+        "momento": "2026-05-22T08:28:27.428Z",
         "usuario": "root",
         "payload": null
     }
@@ -5004,6 +5290,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "384a3e03-55c0-11f1-88fd-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "556",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Competencias Digitales para la Ciudadanía (CODECAN)",
+        "momento": "2026-05-22T09:25:49.167Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "38845d3d-4deb-11f1-88db-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -5264,6 +5563,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "392c8793-55ba-11f1-9767-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "551",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA) ha sido asignado a la familia Subvenciones, premios y becas",
+        "momento": "2026-05-22T08:42:53.669Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "394cb8f8-4ad7-11f1-8b07-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -5433,6 +5745,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "3ad58a35-55c0-11f1-805d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "556",
+        "nombre_clase": "Sistema",
+        "descripcion": "La URL de entrada al sistema Competencias Digitales para la Ciudadanía (CODECAN) ha sido actualizada a 'https://www.codecan.capacitaciondigital.edu.es/inicio'.\n",
+        "momento": "2026-05-22T09:25:53.435Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "3af8b121-4a15-11f1-a2f2-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -5570,6 +5895,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Interrupción Voluntaria del Embarazo (IVE) ha sido actualizada a 'Interrupción Voluntaria del Embarazo'",
         "momento": "2026-05-11T12:30:46.275Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3c6a010a-55be-11f1-a270-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "553",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026)",
+        "momento": "2026-05-22T09:11:37.092Z",
         "usuario": "root",
         "payload": null
     }
@@ -5817,6 +6155,19 @@
         "nombre_clase": "Usuario",
         "descripcion": "Se ha dado de alta al usuario Antonio Hernández de la Hoz",
         "momento": "2026-05-07T14:44:27.781Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3fb04171-55bf-11f1-a3cc-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"agoncac\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Ana María González Cáceres",
+        "momento": "2026-05-22T09:18:52.082Z",
         "usuario": "root",
         "payload": null
     }
@@ -6343,6 +6694,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "441cc428-55bf-11f1-aeec-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "554",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Ana María González Cáceres ha sido asignado como Responsable funcional del sistema PLATEA Sociedad de la información (PLATEA_SOCIEDADINFO)",
+        "momento": "2026-05-22T09:18:59.505Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "441d8428-55bf-11f1-8e3a-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"agoncac\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Ana María González Cáceres ha sido asignado como Responsable funcional del sistema PLATEA Sociedad de la información (PLATEA_SOCIEDADINFO)",
+        "momento": "2026-05-22T09:18:59.510Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "44619715-4ea7-11f1-a9a2-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -6454,6 +6831,45 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información  de Subvenciones (SUBV_EMP)",
         "momento": "2026-05-12T10:35:18.798Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "45de07a3-55ba-11f1-8c17-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "551",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:43:14.965Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "45de9340-55ba-11f1-9511-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodriguez_itc\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:43:14.969Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "462450d8-55be-11f1-848e-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "553",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 79339 al sistema Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026)",
+        "momento": "2026-05-22T09:11:53.413Z",
         "usuario": "root",
         "payload": null
     }
@@ -6798,6 +7214,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "49cbfbc5-55c3-11f1-9b92-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "85",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Subvenciones para estancias breves (FAP_EST) ha sido actualizada a 'FAP_EST'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-22T09:47:47.029Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "4a5f6e3f-472e-11f1-8d9c-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -6948,6 +7377,19 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario María Teresa Peiró García-Machiñena ha sido asignado como Responsable funcional del sistema Pagos facturas y depositos (PAGOS)",
         "momento": "2026-05-07T13:40:21.101Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "4ae05b7b-55be-11f1-b7a7-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "553",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 79555 al sistema Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026)",
+        "momento": "2026-05-22T09:12:01.356Z",
         "usuario": "root",
         "payload": null
     }
@@ -7149,6 +7591,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "4e172f3e-5537-11f1-b248-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "548",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Subvenciones para Infraestructuras (FAP) (FAP_SIE)",
+        "momento": "2026-05-21T17:05:44.698Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "4e17a996-4d2d-11f1-bbb4-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -7247,6 +7702,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Embargos (EMBARGOS)",
         "momento": "2026-05-07T13:26:09.520Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "4faa658b-55b9-11f1-a488-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"smarlat\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Sonia Martín Latorre",
+        "momento": "2026-05-22T08:36:21.907Z",
         "usuario": "root",
         "payload": null
     }
@@ -7390,6 +7858,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Añadido el sistema de información Sistema de información registro de solicitantes de subvenciones al SCE (SIRSS)",
         "momento": "2026-05-12T11:18:34.639Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "50c2e9ab-55c1-11f1-a6d8-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "557",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 60207 al sistema Otorgamiento de licencias para la prestación de servicios de comunicación de Televisión Digital Terrestre de ámbito local en la CCAA de Canarias (TDT_2020)",
+        "momento": "2026-05-22T09:33:39.719Z",
         "usuario": "root",
         "payload": null
     }
@@ -7656,6 +8137,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "52d016c0-55b9-11f1-a38b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "551",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Sonia Martín Latorre ha sido asignado como Responsable funcional del sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:36:27.188Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "52d0b7f7-55b9-11f1-9957-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"smarlat\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Sonia Martín Latorre ha sido asignado como Responsable funcional del sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:36:27.192Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "532ebd46-4a04-11f1-9afd-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -7767,6 +8274,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Sistema de Facturación a terceros (GFAC3) ha sido actualizada a 'Facturación a terceros del SCS'",
         "momento": "2026-05-11T12:17:08.884Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "553cf3cf-55bf-11f1-9a6c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "554",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema PLATEA Sociedad de la información (PLATEA_SOCIEDADINFO)",
+        "momento": "2026-05-22T09:19:28.237Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "553d62e0-55bf-11f1-9012-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodriguez_itc\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema PLATEA Sociedad de la información (PLATEA_SOCIEDADINFO)",
+        "momento": "2026-05-22T09:19:28.240Z",
         "usuario": "root",
         "payload": null
     }
@@ -9106,6 +9639,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Sistema de gestión procesal de justicia con cliente web (ATLANTE_WEB)",
         "momento": "2026-05-08T09:00:40.035Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "63191342-55be-11f1-a3ac-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "553",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026) ha sido actualizada a 'Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE)'",
+        "momento": "2026-05-22T09:12:41.993Z",
         "usuario": "root",
         "payload": null
     }
@@ -11348,6 +11894,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "7eb88425-55ba-11f1-a3e6-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "552",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Subvenciones para la realización de proyectos de I+D aplicada (modalidad B) para apoyo a la actividad de I+D+i (Proyectos I+D) (FAP_PROID)",
+        "momento": "2026-05-22T08:44:50.350Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "7ebb7727-4a21-11f1-8202-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -11486,6 +12045,32 @@
         "descripcion": "El código del sistema Gestión de centros e infraestructuras (GESTCENTROS) ha sido actualizada a 'GESTCENTROS'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
         "momento": "2026-04-13T08:33:52.403Z",
         "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "812eff44-55b9-11f1-9609-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"csanort\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Criseida Santana Ortega",
+        "momento": "2026-05-22T08:37:44.985Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "81eb7db2-5539-11f1-a501-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"mtorsua\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario María del Cristo Torres Suárez",
+        "momento": "2026-05-21T17:21:30.639Z",
+        "usuario": "root",
         "payload": null
     }
 },
@@ -11673,6 +12258,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "837b8c3d-5537-11f1-894b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "548",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Gonzalo De la Torre de Juan ha sido asignado como Responsable funcional del sistema Subvenciones para Infraestructuras (FAP) (FAP_SIE)",
+        "momento": "2026-05-21T17:07:14.275Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "837d8b6e-5537-11f1-ae77-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"gtorjua\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Gonzalo De la Torre de Juan ha sido asignado como Responsable funcional del sistema Subvenciones para Infraestructuras (FAP) (FAP_SIE)",
+        "momento": "2026-05-21T17:07:14.280Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "838e5dcc-4ddc-11f1-bede-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -11706,6 +12317,58 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Usuarios comisión SSGGTT (COMISIONES_SSGGTT_USUARIOS) ha sido asignado a la familia {familia}",
         "momento": "2026-05-08T11:24:45.039Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "83d1850d-55ba-11f1-8d97-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "552",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Subvenciones para la realización de proyectos de I+D aplicada (modalidad B) para apoyo a la actividad de I+D+i (Proyectos I+D) (FAP_PROID) ha sido asignado a la familia Subvenciones, premios y becas",
+        "momento": "2026-05-22T08:44:58.902Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "840cf1cf-55c3-11f1-8bad-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "84",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Tesis y ayudas predoctorales (FAP_FPI) ha sido actualizada a 'FAP_FPI'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-22T09:49:24.762Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "844ec849-55b9-11f1-af68-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "551",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Criseida Santana Ortega ha sido asignado como Responsable funcional del sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:37:50.226Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "844f7345-55b9-11f1-b6c1-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"csanort\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Criseida Santana Ortega ha sido asignado como Responsable funcional del sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:37:50.231Z",
         "usuario": "root",
         "payload": null
     }
@@ -11810,6 +12473,32 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario Zoilo Falcón ha sido asignado como Responsable técnico del sistema Programa de reconocimiento de oficialidad (PRORECOFI)",
         "momento": "2026-05-07T11:04:31.111Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "85e8a73d-5539-11f1-ad45-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "549",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María del Cristo Torres Suárez ha sido asignado como Responsable funcional del sistema Otorgamiento de la licencia para la prestación de servicios de comunicación radiofónica en ondas métricas con modulación de frecuencia en la localidad de Garafía, frecuencia 100.2 MHz (FM_2020)",
+        "momento": "2026-05-21T17:21:37.331Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "85e94264-5539-11f1-9fc5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mtorsua\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María del Cristo Torres Suárez ha sido asignado como Responsable funcional del sistema Otorgamiento de la licencia para la prestación de servicios de comunicación radiofónica en ondas métricas con modulación de frecuencia en la localidad de Garafía, frecuencia 100.2 MHz (FM_2020)",
+        "momento": "2026-05-21T17:21:37.335Z",
         "usuario": "root",
         "payload": null
     }
@@ -12401,6 +13090,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "8b986f5c-55b2-11f1-ba91-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "550",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Subvenciones para la realización de acciones de divulgación de la I+D+i en Canarias (apoyo a la realización de congresos y eventos científicos y técnicos) (FAP_DI2026)",
+        "momento": "2026-05-22T07:47:55.976Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "8bce1754-4964-11f1-a73f-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -12434,6 +13136,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Registro de información de terapias anticoagulantes (GOTA) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T12:18:40.990Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8be2af9a-55bf-11f1-8792-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "555",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Observatorio Canario de las Telecomunicaciones (OCTSI)",
+        "momento": "2026-05-22T09:20:59.920Z",
         "usuario": "root",
         "payload": null
     }
@@ -12486,6 +13201,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Registro Integrado Industrial (REGINDUS) ha sido asignado a la familia {familia}",
         "momento": "2026-05-07T10:00:16.158Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8c26631d-55bb-11f1-ac40-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "552",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 79397 al sistema Subvenciones para la realización de proyectos de I+D aplicada (modalidad B) para apoyo a la actividad de I+D+i (Proyectos I+D) (FAP_PROID)",
+        "momento": "2026-05-22T08:52:22.377Z",
         "usuario": "root",
         "payload": null
     }
@@ -12551,6 +13279,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Sistema para la realización de consultas médicas a través de videoconferencia (VIDEOCONSULTA) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T13:37:26.639Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8cb2ee6e-55c0-11f1-9b4f-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "557",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Otorgamiento de licencias para la prestación de servicios de comunicación de Televisión Digital Terrestre de ámbito local en la CCAA de Canarias (TDT_2020)",
+        "momento": "2026-05-22T09:28:10.782Z",
         "usuario": "root",
         "payload": null
     }
@@ -12635,6 +13376,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "8dec81f1-5539-11f1-b784-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "549",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Otorgamiento de la licencia para la prestación de servicios de comunicación radiofónica en ondas métricas con modulación de frecuencia en la localidad de Garafía, frecuencia 100.2 MHz (FM_2020)",
+        "momento": "2026-05-21T17:21:50.778Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8decf3ac-5539-11f1-8ab2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodriguez_itc\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Otorgamiento de la licencia para la prestación de servicios de comunicación radiofónica en ondas métricas con modulación de frecuencia en la localidad de Garafía, frecuencia 100.2 MHz (FM_2020)",
+        "momento": "2026-05-21T17:21:50.781Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "8df2d15c-4d37-11f1-8707-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -12694,6 +13461,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Sistema Información Conciertos Hospitalarios (SICH) ha sido actualizada a 'Sistema Información Conciertos Hospitalarios'",
         "momento": "2026-05-11T13:23:10.323Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8e2e9978-5537-11f1-a29b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "548",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Yaiza Vicente Cabañas ha sido asignado como Responsable funcional del sistema Subvenciones para Infraestructuras (FAP) (FAP_SIE)",
+        "momento": "2026-05-21T17:07:32.224Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8e304f4d-5537-11f1-aebe-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"yviccab\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Yaiza Vicente Cabañas ha sido asignado como Responsable funcional del sistema Subvenciones para Infraestructuras (FAP) (FAP_SIE)",
+        "momento": "2026-05-21T17:07:32.229Z",
         "usuario": "root",
         "payload": null
     }
@@ -13051,6 +13844,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "91ff3d8b-55bb-11f1-ae6d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "552",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 79526 al sistema Subvenciones para la realización de proyectos de I+D aplicada (modalidad B) para apoyo a la actividad de I+D+i (Proyectos I+D) (FAP_PROID)",
+        "momento": "2026-05-22T08:52:32.187Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "923e9f94-4d26-11f1-810c-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -13194,6 +14000,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "93568bad-55b2-11f1-9e26-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "550",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Subvenciones para la realización de acciones de divulgación de la I+D+i en Canarias (apoyo a la realización de congresos y eventos científicos y técnicos) (FAP_DI2026) ha sido asignado a la familia Subvenciones, premios y becas",
+        "momento": "2026-05-22T07:48:08.966Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "93598fc5-4ab1-11f1-887a-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -13227,6 +14046,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Precios de bienes y servicios (PREBIESRV) ha sido actualizada a 'Gestión de los precios de bienes y servicios'",
         "momento": "2026-05-07T09:53:19.299Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "93c1a078-55c3-11f1-a9f5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "86",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Programa Tecnólogos / IPI - Incorporación de personal innovador (FAP_IPI) ha sido actualizada a 'FAP_IPI'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-22T09:49:51.112Z",
         "usuario": "root",
         "payload": null
     }
@@ -13272,6 +14104,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "942be91a-55be-11f1-ba6b-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "554",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información PLATEA Sociedad de la información (PLATEA_SOCIEDADINFO)",
+        "momento": "2026-05-22T09:14:04.325Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "944ba47f-4ab7-11f1-b318-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -13292,6 +14137,32 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario Manuel Alexis de los Reyes Darias ha sido asignado como Responsable técnico del sistema Sistema de gestión del archivo de la Administración de Justicia en Canarias (JURISDOC)",
         "momento": "2026-05-08T08:26:15.268Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "94a0a66f-55bf-11f1-896e-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "555",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Florencio Blanco Fernández ha sido asignado como Responsable funcional del sistema Observatorio Canario de las Telecomunicaciones (OCTSI)",
+        "momento": "2026-05-22T09:21:14.587Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "94a112f3-55bf-11f1-82d0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"fblafer\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Florencio Blanco Fernández ha sido asignado como Responsable funcional del sistema Observatorio Canario de las Telecomunicaciones (OCTSI)",
+        "momento": "2026-05-22T09:21:14.589Z",
         "usuario": "root",
         "payload": null
     }
@@ -13610,6 +14481,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "978a8f52-55c0-11f1-9351-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "557",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María del Cristo Torres Suárez ha sido asignado como Responsable funcional del sistema Otorgamiento de licencias para la prestación de servicios de comunicación de Televisión Digital Terrestre de ámbito local en la CCAA de Canarias (TDT_2020)",
+        "momento": "2026-05-22T09:28:28.972Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "978b35fc-55c0-11f1-94a9-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mtorsua\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María del Cristo Torres Suárez ha sido asignado como Responsable funcional del sistema Otorgamiento de licencias para la prestación de servicios de comunicación de Televisión Digital Terrestre de ámbito local en la CCAA de Canarias (TDT_2020)",
+        "momento": "2026-05-22T09:28:28.976Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "97bad324-4df9-11f1-b198-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -13740,6 +14637,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "9af28cc6-55bf-11f1-8e5d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "555",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Observatorio Canario de las Telecomunicaciones (OCTSI) ha sido asignado a la familia No aplicable",
+        "momento": "2026-05-22T09:21:25.190Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "9b3b65b3-4ded-11f1-ae85-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -13799,6 +14709,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Receta Electrónica del Sistema Nacional de Salud (RECETA_ELECTRONICA_SNS) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T13:45:02.066Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9c4b1b8a-5538-11f1-8f4d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "548",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Subvenciones para Infraestructuras (FAP) (FAP_SIE) ha sido asignado al organismo Agencia Canaria de Investigación, Innovación y Sociedad de la Información",
+        "momento": "2026-05-21T17:15:05.390Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9c4bc1d7-5538-11f1-b5fe-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "42158",
+        "nombre_clase": "Organismo",
+        "descripcion": "El sistema Subvenciones para Infraestructuras (FAP) (FAP_SIE) ha sido asignado al organismo Agencia Canaria de Investigación, Innovación y Sociedad de la Información",
+        "momento": "2026-05-21T17:15:05.394Z",
         "usuario": "root",
         "payload": null
     }
@@ -13974,6 +14910,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "9d9b6a0e-55c0-11f1-958b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "557",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Otorgamiento de licencias para la prestación de servicios de comunicación de Televisión Digital Terrestre de ámbito local en la CCAA de Canarias (TDT_2020)",
+        "momento": "2026-05-22T09:28:39.149Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9d9bda7d-55c0-11f1-afb9-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodriguez_itc\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Otorgamiento de licencias para la prestación de servicios de comunicación de Televisión Digital Terrestre de ámbito local en la CCAA de Canarias (TDT_2020)",
+        "momento": "2026-05-22T09:28:39.151Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "9db9a669-4d26-11f1-aee6-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -14046,6 +15008,32 @@
         "nombre_clase": "Usuario",
         "descripcion": "Se ha dado de alta al usuario José Antonio Muñoz Serradilla",
         "momento": "2026-05-08T07:36:24.969Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9e3740b1-5537-11f1-833a-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "548",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Sofía Isabel Martínez Morilla ha sido asignado como Responsable funcional del sistema Subvenciones para Infraestructuras (FAP) (FAP_SIE)",
+        "momento": "2026-05-21T17:07:59.118Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "9e37e771-5537-11f1-910b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"smarmor\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Sofía Isabel Martínez Morilla ha sido asignado como Responsable funcional del sistema Subvenciones para Infraestructuras (FAP) (FAP_SIE)",
+        "momento": "2026-05-21T17:07:59.122Z",
         "usuario": "root",
         "payload": null
     }
@@ -14637,6 +15625,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "a49cd580-55c0-11f1-926a-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "557",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Otorgamiento de licencias para la prestación de servicios de comunicación de Televisión Digital Terrestre de ámbito local en la CCAA de Canarias (TDT_2020) ha sido asignado a la familia Autorizaciones, licencias, permisos, comunicaciones previas y declaraciones responsables",
+        "momento": "2026-05-22T09:28:50.902Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "a4cb41c3-4a19-11f1-8444-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -14702,6 +15703,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "a5b10a46-55b8-11f1-8343-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "550",
+        "nombre_clase": "Sistema",
+        "descripcion": "La URL de entrada al sistema Subvenciones para la realización de acciones de divulgación de la I+D+i en Canarias (apoyo a la realización de congresos y eventos científicos y técnicos) (FAP_DI2026) ha sido actualizada a 'https://sede.gobiernodecanarias.org/aplicaciones/divulga_c202601/login'.\n",
+        "momento": "2026-05-22T08:31:36.738Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "a5e11d1e-4d5d-11f1-b3e3-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -14722,6 +15736,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha asignado la entrada Juriscán nº 39312 al sistema Parte pública de la aplicación de mediación familiar (MEDFAMDGRAJ_PUBLICA)",
         "momento": "2026-05-08T10:35:35.769Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a60e0cf1-55bf-11f1-9518-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "555",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Observatorio Canario de las Telecomunicaciones (OCTSI) ha sido actualizada a 'Instrumento permanente de seguimiento y análisis de las telecomunicaciones y de la sociedad de la información en Canarias'",
+        "momento": "2026-05-22T09:21:43.825Z",
         "usuario": "root",
         "payload": null
     }
@@ -14845,6 +15872,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "a6e96f35-5537-11f1-a221-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "548",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Subvenciones para Infraestructuras (FAP) (FAP_SIE)",
+        "momento": "2026-05-21T17:08:13.707Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a6e9c5ed-5537-11f1-be60-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodriguez_itc\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Subvenciones para Infraestructuras (FAP) (FAP_SIE)",
+        "momento": "2026-05-21T17:08:13.709Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "a749f05b-4d27-11f1-bd65-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -14852,6 +15905,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Sistema de asistencia a los infartos agudos de miocardio (CODICAN) ha sido actualizada a 'Sistema de asistencia a los infartos agudos de miocardio'",
         "momento": "2026-05-11T10:53:33.090Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a74bdb72-55ba-11f1-827d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "552",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Subvenciones para la realización de proyectos de I+D aplicada (modalidad B) para apoyo a la actividad de I+D+i (Proyectos I+D) (FAP_PROID) ha sido actualizada a 'Subvenciones para proyectos de I+D aplicada'",
+        "momento": "2026-05-22T08:45:58.424Z",
         "usuario": "root",
         "payload": null
     }
@@ -15300,6 +16366,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "acd9d184-55c3-11f1-984d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "92",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Proyectos innovadores disruptivos - STARS (FAP_IPROIC_STARS) ha sido actualizada a 'FAP_IPROIC_STARS'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-22T09:50:33.213Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "ad70dff3-4ddd-11f1-a555-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -15404,6 +16483,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "ae842940-55be-11f1-afe0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "554",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema PLATEA Sociedad de la información (PLATEA_SOCIEDADINFO) ha sido asignado a la materia competencial Investigación, Desarrollo e Innovación tecnológica",
+        "momento": "2026-05-22T09:14:48.524Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "aec08f96-4967-11f1-b583-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -15463,6 +16555,32 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Red Canaria de Vigilancia Sanitaria de la Fauna Silvestre (RED_VIGIA)",
         "momento": "2026-05-12T07:17:50.097Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "af230942-55bf-11f1-9ac5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "555",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Observatorio Canario de las Telecomunicaciones (OCTSI)",
+        "momento": "2026-05-22T09:21:59.062Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "af23f273-55bf-11f1-8a90-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodriguez_itc\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Observatorio Canario de las Telecomunicaciones (OCTSI)",
+        "momento": "2026-05-22T09:21:59.068Z",
         "usuario": "root",
         "payload": null
     }
@@ -15911,6 +17029,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "b267dadf-55be-11f1-ad43-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "554",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema PLATEA Sociedad de la información (PLATEA_SOCIEDADINFO) ha sido asignado a la familia No aplicable",
+        "momento": "2026-05-22T09:14:55.049Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "b2b42f83-4d34-11f1-b09b-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -15931,6 +17062,19 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario María Jesús Millán Muñoz ha sido asignado como Responsable técnico del sistema Inspección Electrónica (INSPECCION_SCS)",
         "momento": "2026-05-11T12:26:55.701Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b2ded55b-55b8-11f1-82a4-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "550",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 79568 al sistema Subvenciones para la realización de acciones de divulgación de la I+D+i en Canarias (apoyo a la realización de congresos y eventos científicos y técnicos) (FAP_DI2026)",
+        "momento": "2026-05-22T08:31:58.849Z",
         "usuario": "root",
         "payload": null
     }
@@ -16223,6 +17367,45 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "b779b5a6-55c0-11f1-a2aa-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "557",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Otorgamiento de licencias para la prestación de servicios de comunicación de Televisión Digital Terrestre de ámbito local en la CCAA de Canarias (TDT_2020) ha sido actualizada a 'Licencias televisión digital terrestre (TDT)'",
+        "momento": "2026-05-22T09:29:22.548Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b77f3971-55ba-11f1-8220-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "552",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Rafael Ferrando Carrasco ha sido asignado como Responsable funcional del sistema Subvenciones para la realización de proyectos de I+D aplicada (modalidad B) para apoyo a la actividad de I+D+i (Proyectos I+D) (FAP_PROID)",
+        "momento": "2026-05-22T08:46:25.604Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b77fb5f2-55ba-11f1-b00c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"rfercar\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Rafael Ferrando Carrasco ha sido asignado como Responsable funcional del sistema Subvenciones para la realización de proyectos de I+D aplicada (modalidad B) para apoyo a la actividad de I+D+i (Proyectos I+D) (FAP_PROID)",
+        "momento": "2026-05-22T08:46:25.607Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "b7a01f18-4d3a-11f1-9a0e-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -16360,6 +17543,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Web de consulta de la bolsa de interinos de DGRAJ (WEB_INTERINOS_DGRAJ)",
         "momento": "2026-05-08T10:43:17.122Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b8fd55ab-55be-11f1-ad00-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "554",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema PLATEA Sociedad de la información (PLATEA_SOCIEDADINFO) ha sido asignado al organismo Agencia Canaria de Investigación, Innovación y Sociedad de la Información",
+        "momento": "2026-05-22T09:15:06.095Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b8fdc9a4-55be-11f1-bdc5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "42158",
+        "nombre_clase": "Organismo",
+        "descripcion": "El sistema PLATEA Sociedad de la información (PLATEA_SOCIEDADINFO) ha sido asignado al organismo Agencia Canaria de Investigación, Innovación y Sociedad de la Información",
+        "momento": "2026-05-22T09:15:06.098Z",
         "usuario": "root",
         "payload": null
     }
@@ -16730,6 +17939,45 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "be000563-55ba-11f1-8f5d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "552",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Óscar José Santana Vega ha sido asignado como Responsable funcional del sistema Subvenciones para la realización de proyectos de I+D aplicada (modalidad B) para apoyo a la actividad de I+D+i (Proyectos I+D) (FAP_PROID)",
+        "momento": "2026-05-22T08:46:36.514Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "be009254-55ba-11f1-b78a-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"osanveg\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Óscar José Santana Vega ha sido asignado como Responsable funcional del sistema Subvenciones para la realización de proyectos de I+D aplicada (modalidad B) para apoyo a la actividad de I+D+i (Proyectos I+D) (FAP_PROID)",
+        "momento": "2026-05-22T08:46:36.518Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "be2300f9-55bf-11f1-9c2d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "555",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Observatorio Canario de las Telecomunicaciones (OCTSI)",
+        "momento": "2026-05-22T09:22:24.228Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "be286500-4ddd-11f1-a530-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -16925,6 +18173,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "c05e2a08-55c3-11f1-92c3-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "91",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Proyectos de Innovación Social (FAP_PROIS) ha sido actualizada a 'FAP_PROIS'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-22T09:51:05.958Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "c06de2b5-4ab1-11f1-bab3-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -16945,6 +18206,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Añadido el sistema de información Agenda Cultural de Canarias (AGENDA_CULTURAL)",
         "momento": "2026-05-12T08:01:16.401Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c09731db-55bf-11f1-b198-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "555",
+        "nombre_clase": "Sistema",
+        "descripcion": "La URL de entrada al sistema Observatorio Canario de las Telecomunicaciones (OCTSI) ha sido actualizada a 'https://www.octsi.es/'.\n",
+        "momento": "2026-05-22T09:22:28.345Z",
         "usuario": "root",
         "payload": null
     }
@@ -16997,6 +18271,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha asignado la entrada Juriscán nº 77902 al sistema Base de datos Bienes Muebles (BIENES_MUEBLES)",
         "momento": "2026-05-12T08:29:55.227Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c141f6cc-55c2-11f1-9f01-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "90",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Ayudas postdoctorales programa Catalina Ruiz (FAP_APCR) ha sido actualizada a 'FAP_APCR'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-22T09:43:57.954Z",
         "usuario": "root",
         "payload": null
     }
@@ -17335,6 +18622,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Añadido el sistema de información Historia de atención especializada Drago AE (DRAGO_AE_SELENE)",
         "momento": "2026-05-11T11:23:00.393Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c4b303ae-5539-11f1-b6c7-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "549",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 78541 al sistema Otorgamiento de la licencia para la prestación de servicios de comunicación radiofónica en ondas métricas con modulación de frecuencia en la localidad de Garafía, frecuencia 100.2 MHz (FM_2020)",
+        "momento": "2026-05-21T17:23:22.676Z",
         "usuario": "root",
         "payload": null
     }
@@ -17718,6 +19018,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "c8e5f58a-55be-11f1-89bb-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "554",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema PLATEA Sociedad de la información (PLATEA_SOCIEDADINFO) ha sido actualizada a 'Impulso de la transformación digital e innovadora de Canarias'",
+        "momento": "2026-05-22T09:15:32.786Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "c941704d-4abc-11f1-8715-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -17933,6 +19246,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Registro de animales peligrosos (REGANIMALES)",
         "momento": "2026-05-07T19:27:31.388Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "caf9c354-55bb-11f1-8657-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "553",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026)",
+        "momento": "2026-05-22T08:54:07.781Z",
         "usuario": "root",
         "payload": null
     }
@@ -18206,6 +19532,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Agenda Cultural de Canarias (AGENDA_CULTURAL) ha sido actualizada a 'Gestionar los eventos, actividades y exposiciones culturales'",
         "momento": "2026-05-12T08:01:40.413Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "cef45c7c-55ba-11f1-a876-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "552",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Subvenciones para la realización de proyectos de I+D aplicada (modalidad B) para apoyo a la actividad de I+D+i (Proyectos I+D) (FAP_PROID)",
+        "momento": "2026-05-22T08:47:04.960Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "cef4d04e-55ba-11f1-a8a7-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodriguez_itc\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Subvenciones para la realización de proyectos de I+D aplicada (modalidad B) para apoyo a la actividad de I+D+i (Proyectos I+D) (FAP_PROID)",
+        "momento": "2026-05-22T08:47:04.962Z",
         "usuario": "root",
         "payload": null
     }
@@ -19148,6 +20500,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "da227bc7-55bb-11f1-a071-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "553",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Rafael Ferrando Carrasco ha sido asignado como Responsable funcional del sistema Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026)",
+        "momento": "2026-05-22T08:54:33.213Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "da22defa-55bb-11f1-8041-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"rfercar\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Rafael Ferrando Carrasco ha sido asignado como Responsable funcional del sistema Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026)",
+        "momento": "2026-05-22T08:54:33.216Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "da4cab9b-4964-11f1-b3dd-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -19408,6 +20786,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "dd38a282-55b9-11f1-a672-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"osanveg\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Óscar José Santana Vega",
+        "momento": "2026-05-22T08:40:19.398Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "dd6ecedb-4ac8-11f1-b64a-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -19610,6 +21001,32 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario Fernando Herrera Hernández ha sido asignado como Responsable funcional del sistema Red de Control y Vigilancia de la Calidad del Aire de Canarias (CEICA)",
         "momento": "2026-05-11T18:54:44.443Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "e014b026-55b9-11f1-8bbb-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "551",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Óscar José Santana Vega ha sido asignado como Responsable funcional del sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:40:24.196Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "e015539b-55b9-11f1-bbc2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"osanveg\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Óscar José Santana Vega ha sido asignado como Responsable funcional del sistema PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:40:24.200Z",
         "usuario": "root",
         "payload": null
     }
@@ -19889,6 +21306,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "e225383b-55bb-11f1-a036-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "553",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Mónica Grimón Domínguez ha sido asignado como Responsable funcional del sistema Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026)",
+        "momento": "2026-05-22T08:54:46.653Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "e225ead5-55bb-11f1-9054-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mgridomb\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Mónica Grimón Domínguez ha sido asignado como Responsable funcional del sistema Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026)",
+        "momento": "2026-05-22T08:54:46.658Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "e23f5bca-4ab8-11f1-bceb-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -20110,6 +21553,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "e4460232-55bf-11f1-9b42-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "555",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 50954 al sistema Observatorio Canario de las Telecomunicaciones (OCTSI)",
+        "momento": "2026-05-22T09:23:28.210Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "e45efda7-4d23-11f1-8d68-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -20169,6 +21625,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Registro de animales peligrosos (REGANIMALES)",
         "momento": "2026-05-07T19:35:24.973Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "e5718af5-5539-11f1-8ed5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "549",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Otorgamiento de la licencia para la prestación de servicios de comunicación radiofónica en ondas métricas con modulación de frecuencia en la localidad de Garafía, frecuencia 100.2 MHz (FM_2020) ha sido asignado a la familia No aplicable",
+        "momento": "2026-05-21T17:24:17.612Z",
         "usuario": "root",
         "payload": null
     }
@@ -20286,6 +21755,19 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario José Antonio Muñoz Serradilla ha sido asignado como Responsable funcional del sistema Aino@ (AINOA)",
         "momento": "2026-05-08T07:52:44.968Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "e62837f6-55c2-11f1-8e73-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "93",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Subvenciones para Clústeres (FAP_CLUSTERES) ha sido actualizada a 'FAP_CLUSTERES'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-22T09:44:59.861Z",
         "usuario": "root",
         "payload": null
     }
@@ -20539,6 +22021,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "e865cfad-55b7-11f1-a0db-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"mgridomb\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Mónica Grimón Domínguez",
+        "momento": "2026-05-22T08:26:19.156Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "e8a87777-55ba-11f1-8182-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "552",
+        "nombre_clase": "Sistema",
+        "descripcion": "La URL de entrada al sistema Subvenciones para la realización de proyectos de I+D aplicada (modalidad B) para apoyo a la actividad de I+D+i (Proyectos I+D) (FAP_PROID) ha sido actualizada a 'https://sede.gobiernodecanarias.org/aplicaciones/proyectosimasd_c202601/login'.\n",
+        "momento": "2026-05-22T08:47:48.083Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "e8ff325f-4a4d-11f1-9e9b-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -20546,6 +22054,32 @@
         "nombre_clase": "Usuario",
         "descripcion": "Se ha dado de alta al usuario Juan Ventura Rodríguez",
         "momento": "2026-05-07T19:49:50.717Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "e90a42a8-55bb-11f1-a1b5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "553",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026)",
+        "momento": "2026-05-22T08:54:58.220Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "e90aa915-55bb-11f1-a796-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"jrodriguez_itc\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Juan Francisco Rodríguez Alvarado ha sido asignado como Responsable técnico del sistema Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026)",
+        "momento": "2026-05-22T08:54:58.223Z",
         "usuario": "root",
         "payload": null
     }
@@ -21098,6 +22632,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "edf10e83-55b7-11f1-a8ff-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "550",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Mónica Grimón Domínguez ha sido asignado como Responsable funcional del sistema Subvenciones para la realización de acciones de divulgación de la I+D+i en Canarias (apoyo a la realización de congresos y eventos científicos y técnicos) (FAP_DI2026)",
+        "momento": "2026-05-22T08:26:28.457Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "edf181e1-55b7-11f1-b400-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mgridomb\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Mónica Grimón Domínguez ha sido asignado como Responsable funcional del sistema Subvenciones para la realización de acciones de divulgación de la I+D+i en Canarias (apoyo a la realización de congresos y eventos científicos y técnicos) (FAP_DI2026)",
+        "momento": "2026-05-22T08:26:28.460Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "edf19f1e-49f5-11f1-a0a1-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -21144,6 +22704,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Red de Vigilancia Epidemiológica de Canarias (REVECA) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T13:18:42.502Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "eea08d28-55bb-11f1-a506-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "553",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Subvenciones a centros de innovación y desarrollo empresarial (RED CIDE) (FAP_CIDE2026) ha sido asignado a la familia Subvenciones, premios y becas",
+        "momento": "2026-05-22T08:55:07.594Z",
         "usuario": "root",
         "payload": null
     }
@@ -21475,6 +23048,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "f2073e76-5538-11f1-95e8-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "549",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Otorgamiento de la licencia para la prestación de servicios de comunicación radiofónica en ondas métricas con modulación de frecuencia en la localidad de Garafía, frecuencia 100.2 MHz (FM_2020)",
+        "momento": "2026-05-21T17:17:29.229Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "f21a1f21-49fb-11f1-a5d0-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -21534,6 +23120,19 @@
         "nombre_clase": "Sistema",
         "descripcion": "La descripción del sistema Proyectos innovadores disruptivos - STARS (IPROIC_STARS) ha sido actualizada a 'Subvenciones para el impulso de proyectos de innovación disruptiva en Canarias'",
         "momento": "2026-05-13T11:57:42.516Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f2dac2bf-55b8-11f1-903c-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "551",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información PLATEA - Apoyo a la investigación (PLATEA_APOYOINVESTIGA)",
+        "momento": "2026-05-22T08:33:46.196Z",
         "usuario": "root",
         "payload": null
     }
@@ -22073,6 +23672,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "f7d764c8-55be-11f1-8b5a-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"fblafer\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Florencio Blanco Fernández",
+        "momento": "2026-05-22T09:16:51.543Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "f7f906d9-4abf-11f1-9652-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -22606,6 +24218,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "fbf57460-55c2-11f1-bcce-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "87",
+        "nombre_clase": "Sistema",
+        "descripcion": "El código del sistema Formación para incorporación de talento (FAP_DIGINNOVA) ha sido actualizada a 'FAP_DIGINNOVA'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
+        "momento": "2026-05-22T09:45:36.438Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "fbfef69f-4ad2-11f1-b2b1-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -22639,6 +24264,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "El sistema Analizador estadístico clínico- asistencial CMBD (ALCOR) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T10:27:17.223Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "fc3e826d-55be-11f1-b876-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "554",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Florencio Blanco Fernández ha sido asignado como Responsable funcional del sistema PLATEA Sociedad de la información (PLATEA_SOCIEDADINFO)",
+        "momento": "2026-05-22T09:16:58.930Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "fc3f18db-55be-11f1-8e02-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"fblafer\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Florencio Blanco Fernández ha sido asignado como Responsable funcional del sistema PLATEA Sociedad de la información (PLATEA_SOCIEDADINFO)",
+        "momento": "2026-05-22T09:16:58.933Z",
         "usuario": "root",
         "payload": null
     }
