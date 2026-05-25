@@ -1066,13 +1066,19 @@ def pendientes(request):
     '''
     sin_tema = Sistema.objects.filter(tema='UNK').count()
     con_tema = Sistema.objects.exclude(tema='UNK').count()
-
     return render(request, 'sistemas/pendientes.html', {
         'titulo': "Listado de S.I. pendientes / incompletos",
         'breadcrumbs': bc.bc_pendientes(),
         'sin_tema': sin_tema,
         'con_tema': con_tema,
         'tab': 'sistemas',
+        "sistemas_chart": Doughnut(
+            good=stats['green'],
+            regular=stats['yellow'],
+            bad=stats['red'],
+            width=128,
+            height=128,
+            ),
         })
 
 

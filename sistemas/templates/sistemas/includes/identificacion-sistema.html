@@ -5,50 +5,53 @@
     <h3 class="card-title">Identificación</h3>
   </div>  
   <div class="card-body">
-  <table class="table">
-    <tr>
-        <th class="text-end">UUID</th>
-        <td><span id="clave-externa">{{ sistema.uuid_sistema }}</span></td>
-        <td>
+    <dl>
+        <dt>UUID
+          <span class="float-end">
           <button class="btn btn-info btn-sm" onclick="copyClaveExterna()">
-            <i class="bi bi-clipboard-plus"></i>    
+              <i class="bi bi-clipboard-plus"></i>
+             <span class="d-none d-xl-inline">
+             Copiar UUID
+             </span>
           </button>
-        </td>
-    </tr>
-    <tr>
-        <th class="text-end">Descripción</th>
-        <td>
+          </span>
+        </dt>
+        <dd>
+          <span id="clave-externa">{{ sistema.uuid_sistema }}</span>
+        </dd>
+
+        <dt>Descripción
+          <span class="float-end">
+          {% include "sistemas/includes/pb-editar-descripcion.html" %}
+          </span>
+        </dt>
+        <dd>
           {% if sistema.descripcion %}  
             {{ sistema.descripcion|as_descripcion }}
           {% else %}
              Falta la descripción
           {% endif %}  
-        </td>
-        <td>
-          {% include "sistemas/includes/pb-editar-descripcion.html" %}
-        </td>
-    </tr>
-
-    <tr>
-        <th class="text-end">URL</th>
-        <td>
+        </dd>
+      <dl>
+          <dt>URL
+          <span class="float-end">
+          {% include "sistemas/includes/pb-editar-url.html" %}
+          </span>
+          </dt>
+          <dd>
           {% if sistema.url %}
             <a href="{{ sistema.url }}">{{ sistema.url }}</a>  
           {% else %}
             <abbr title="No definido / No aplica">N/A</abbr>
           {% endif %}
-        </td>
-        <td>
-          {% include "sistemas/includes/pb-editar-url.html" %}
-        </td>
-    </tr>
-        
-    <tr>
-        <th class="text-end">Es corporativo</th>
-        <td>{{ sistema.es_corporativo|as_boolean }}</td>
-        <td>
-          <a class="btn btn-warning"
-             href="{% url 'sistemas:conmutar_campo' sistema=sistema campo='es_corporativo' %}"
+          </dd>
+      </dl>
+
+      <dt>
+        Es corporativo
+        <span class="float-end">
+        <a class="btn btn-warning btn-sm"
+           href="{% url 'sistemas:conmutar_campo' sistema=sistema campo='es_corporativo' %}"
               title="Conmutar valor">
           {% if sistema.es_corporativo %}
             <i class="bi bi-toggle-on"></i>
@@ -56,14 +59,16 @@
             <i class="bi bi-toggle-off"></i>
           {% endif %}
           </a>
-        </td>
-    </tr>
+        </span>  
+      </dt>
+        <dd>
+        {{ sistema.es_corporativo|as_boolean }}
+        </dd>
 
-    <tr>
-        <th class="text-end">Especial importancia</th>
-        <td>{{ sistema.especial_importancia|as_boolean }}</td>
-        <td>
-          <a class="btn btn-warning"
+      <dt>
+        Especial importancia
+        <span class="float-end">
+          <a class="btn btn-warning btn-sm"
              href="{% url 'sistemas:conmutar_campo' sistema=sistema campo='especial_importancia' %}"
               title="Conmutar valor">
           {% if sistema.especial_importancia %}
@@ -72,19 +77,31 @@
             <i class="bi bi-toggle-off"></i>
           {% endif %}
           </a>
-        </td>
-    </tr>
+        </span>
+      </dt>
+      <dd>
+        {{ sistema.especial_importancia|as_boolean }}</td>
+      </dd>
 
   </table>
 
 
     {% if sistema.es_subsistema_de %}
-    <span class="badge text-bg-warning" title="de {{ sistema.es_subsistema_de }}">
-        Subsistema
-    
-    </span>
+    <dt>
+      <span class="badge text-bg-warning" title="de {{ sistema.es_subsistema_de }}">
+      Subsistema
+      </span>
+    </dt>
+    <dd>
+        Es subsistema de <b>{{ sistema.es_subsistema_de }}</b>
+        (<a href="{{ sistema.es_subsistema_de.url_detalle_sistema }}">
+            {{ sistema.es_subsistema_de.codigo }}
+        </a>).
+    </dd>
     {% endif %}
   </div>
+    </dl>
+
   <div class="card-footer d-flex flex-row-reverse">
     <a href="{% url 'sistemas:editar_sistema' sistema=sistema %}"
        class="btn btn-warning"
