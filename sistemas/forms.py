@@ -247,7 +247,7 @@ class AltaUsuarioExternoForm(BootstrapForm, forms.ModelForm):
 
     def save(self, commit=True):
         usuario = super().save(commit=False)
-        usuario.login = first(usuario.email.split('@')).lower()
+        usuario.login = usuario.email
         if commit:
             usuario.save()
         return usuario

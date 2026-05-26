@@ -3,7 +3,6 @@
 from functools import cache
 from collections import defaultdict
 
-from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Count
 from django.http import HttpResponse
