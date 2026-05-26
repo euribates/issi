@@ -1064,6 +1064,7 @@ def detalle_activo(request, activo):
 def pendientes(request):
     '''Dashboard de control de información ausente o incompleta.
     '''
+    from comun.graficas import Doughnut
     sin_tema = Sistema.objects.filter(tema='UNK').count()
     con_tema = Sistema.objects.exclude(tema='UNK').count()
     return render(request, 'sistemas/pendientes.html', {
@@ -1073,9 +1074,9 @@ def pendientes(request):
         'con_tema': con_tema,
         'tab': 'sistemas',
         "sistemas_chart": Doughnut(
-            good=stats['green'],
-            regular=stats['yellow'],
-            bad=stats['red'],
+            good=con_tema,
+            regular=0,
+            bad=sin_tema,
             width=128,
             height=128,
             ),
