@@ -24,15 +24,6 @@ def load_user_by_email(email) -> User|None:
         return None
 
 
-def load_user_by_email(email) -> User|None:
-    """Devuelve el usuario con el email indicado, o ``None``.
-    """
-    try:
-        return User.objects.get(email=email)
-    except User.DoesNotExist:
-        return None
-
-
 class EmailToken(models.Model):
 
     class Meta:
