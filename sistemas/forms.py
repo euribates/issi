@@ -227,6 +227,7 @@ class AltaUsuarioInternoForm(BootstrapForm, forms.ModelForm):
         model = models.Usuario
         fields = [
             'login',
+            'email',
             'nombre',
             'apellidos',
             'organismo',
@@ -238,12 +239,18 @@ class AltaUsuarioExternoForm(BootstrapForm, forms.ModelForm):
     class Meta:
         model = models.Usuario
         fields = [
-            'login',
+            'email',
             'nombre',
             'apellidos',
-            'email',
             'empresa',
             ]
+
+    def save(self, commit=True):
+        usuario = super().save(commit=False)
+        usuario.login = usuario.email
+        if commit:
+            usuario.save()
+        return usuario
 
 
 class AltaOpcionForm(BootstrapForm, forms.ModelForm):

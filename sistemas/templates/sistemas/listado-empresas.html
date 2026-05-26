@@ -1,0 +1,24 @@
+{% extends "comun/base.html" %}
+{% load static comun_filters %}
+
+{% block content %}
+
+<table class="table table-striped">
+  <tbody>
+    {% for empresa in empresas %}<tr>
+      <th>{{ empresa.pk }}</th>  
+      <td>
+          <a href="{% url 'sistemas:detalle_empresa' empresa=empresa.pk %}">
+          <b>
+          {{ empresa.nombre_empresa }}
+          </b>
+          </a>
+      </td>
+      <td>
+        {{ empresa.nif }}
+      </td>  
+    </tr>{% endfor %}
+  </tbody>
+</table>  
+
+{% endblock content %}

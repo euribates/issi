@@ -129,16 +129,15 @@ DEFAULT_DATABASE = dj_database_url.parse(config(
     default=str(f"sqlite:///{BASE_DIR / 'db.sqlite3'}"),
     ))
 
-# DEFAULT_DATABASE['TEST'] = 'test'
-
 TEST_DATABASE = dj_database_url.parse(config(
     'TEST_DATABASE',
     default=str(f"sqlite:///{BASE_DIR / 'test_db.sqlite3'}"),
     ))
 
+DEFAULT_DATABASE['TEST'] = TEST_DATABASE
+
 DATABASES = {
     'default': DEFAULT_DATABASE,
-    'test_default': TEST_DATABASE,
     }
 
 # Password validation

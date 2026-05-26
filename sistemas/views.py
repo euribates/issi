@@ -3,7 +3,6 @@
 from functools import cache
 from collections import defaultdict
 
-from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Count
 from django.http import HttpResponse
@@ -673,17 +672,20 @@ def activos_sistema(request, sistema):
 
 @login_required
 def listado_usuarios(request):
-    messages.add_message(request, messages.INFO, "Hello world.")
-    filterset = filtersets.UsuarioFilter(
-        request.GET,
-        queryset=models.Usuario.objects.all(),
+    usuarios = (
+        models.Usuario.objects
+        .select_related('organismo')
+        .select_related('empresa')
+        .all()
         )
+    filterset = filtersets.UsuarioFilter(request.GET, queryset=usuarios)
     return render(request, 'sistemas/listado-usuarios.html', {
         'titulo': 'Usuarios registrados en el sistema',
         'breadcrumbs': bc.bc_usuarios(),
         'tab': 'usuarios',
         'commands': cmd_usuarios(),
-        "filterset": filterset,
+        'filterset': filterset,
+        'query': request.GET.get('query', ''),
         })
 
 
@@ -934,6 +936,25 @@ def listado_organismos(request):
 
 
 @login_required
+def listado_empresas(request):
+    empresas = models.Empresa.objects.all()
+    return render(request, 'sistemas/listado-empresas.html', {
+        'titulo': 'Empresas externas',
+        'breadcrumbs': bc.bc_empresas(),
+        'tab': 'empresas',
+        'empresas': empresas,
+        })
+
+
+def detalle_empresa(request, empresa):
+    from django.http import HttpResponse
+    return HttpResponse(
+        f'detalle_empresa({empresa!r}) no implmentado',
+        content_type='text/plain',
+        )
+
+
+@login_required
 def detalle_organismo(request, organismo: Organismo):
     sistemas = Sistema.sistemas_por_organismo(organismo)
     num_sistemas = sistemas.count()
@@ -1064,15 +1085,22 @@ def detalle_activo(request, activo):
 def pendientes(request):
     '''Dashboard de control de información ausente o incompleta.
     '''
+    from comun.graficas import Doughnut
     sin_tema = Sistema.objects.filter(tema='UNK').count()
     con_tema = Sistema.objects.exclude(tema='UNK').count()
-
     return render(request, 'sistemas/pendientes.html', {
         'titulo': "Listado de S.I. pendientes / incompletos",
         'breadcrumbs': bc.bc_pendientes(),
         'sin_tema': sin_tema,
         'con_tema': con_tema,
         'tab': 'sistemas',
+        "sistemas_chart": Doughnut(
+            good=con_tema,
+            regular=0,
+            bad=sin_tema,
+            width=128,
+            height=128,
+            ),
         })
 
 

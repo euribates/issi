@@ -256,6 +256,10 @@ def bc_entes() -> BreadCrumb:
     return bc_issi().step('Entes', links.a_entes())
 
 
+def bc_empresas() -> BreadCrumb:
+    return bc_issi().step('Empresas', links.a_empresas())
+
+
 def bc_detalle_ente(ente) -> BreadCrumb:
     return bc_entes().step(
         str(ente.id_ente),

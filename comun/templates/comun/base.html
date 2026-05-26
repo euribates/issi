@@ -9,7 +9,6 @@
   <link media="screen" href="{% static 'img/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
   <link media="screen" href="{% static 'css/estilos.css' %}" rel="stylesheet">
   <link media="all" href="{% static 'css/custom.css' %}" rel="stylesheet">
-  <link media="all" href="{% static 'css/toasts.css' %}" rel="stylesheet">
   <link media="all" href="{% static 'css/controles.css' %}" rel="stylesheet">
   <link media="all" href="{% static 'css/dashboard.css' %}" rel="stylesheet">
   <link media="print" href="{% static 'css/print.css' %}" rel="stylesheet">
@@ -51,6 +50,7 @@
  {% block libs %}
  <script src="{% static 'js/datastar.js' %}" type="module"></script>
  <script src="{% static 'js/bootstrap.js' %}"></script>
+ <script src="{% static 'js/toasts.js' %}"></script>
  <script src="{% static 'js/chart.js' %}"></script>
  <script src="{% static 'js/sidebar.js' %}"></script>
  <script src="{% static 'js/dashboard.js' %}"></script>
@@ -63,13 +63,9 @@
 
 function prepare_toasts() {
     /* console.log('Preparando las tostadas...'); */
-    var option = {
-        'animation': true,
-        'autohide': true,
-        'delay': 5000,
-        };
-    document.querySelectorAll('.toast').forEach(function (elem) {
-         const toast = new bootstrap.Toast(elem, option);
+    var option = { 'animation': true };
+    document.querySelectorAll('#toasts > .toast').forEach(function (elem) {
+        const toast = new bootstrap.Toast(elem, option);
         toast.show();
         });
     /* console.log('... Las tostadas están listas.'); */

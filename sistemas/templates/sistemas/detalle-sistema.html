@@ -9,20 +9,38 @@
 
 <div class="row align-items-start">
 
-  <div class="col col-12-md col-lg-6">
+  <div class="col col-xs-12 col-md-6">
     {% include "sistemas/includes/identificacion-sistema.html" %}
     {% include "sistemas/includes/finalidad.html" %}
     {% include "sistemas/includes/observaciones.html" %}
     
   </div>
   
-  <div class="col col-12-md col-lg-6">
+  <div class="col col-xs-12 col-sm-6">
     {% include "sistemas/includes/clasificacion.html" %}
     {% include "sistemas/includes/isc.html" %}
+  </div>
+  
+  <div class="col col-12">
     {% include "sistemas/includes/responsables.html" %}
     {% include "sistemas/includes/juriscan.html" %}
   </div>
 
+</div>
+
+<div class="toast-container position-fixed top-0 end-0 p-3"
+     style="z-index: 10000;">
+  <div class="toast bg-info hide" role="alert" id="copyToast">
+    <div class="toast-header">
+      <i class="bi bi-clipboard-check" class="m-1"></i>
+      &nbsp;
+      <strong class="me-auto">UUID copiado</strong>
+    </div>
+    <div class="toast-body bg-white">
+        La clave UUID <pre>{{ sistema.uuid_sistema }}</pre> ha sido copiada al
+        portapapeles.  
+    </div>
+</div>  
 </div>
 
 {% endblock content %}
@@ -31,10 +49,22 @@
 {{ block.super }}
 
 <script>
+
+function show_toast(message, level='warning') {
+    console.log('show_toast starts');
+    var copy_toast = document.getElementById('copyToast');
+    var options = { 'animation': true, 'delay': 2500 };
+    const toast = new bootstrap.Toast(copy_toast, options);
+    toast.show();
+    console.log('show_toast ends');
+    }
+
 async function copyClaveExterna() {
     let text = document.getElementById('clave-externa').innerHTML;
     await navigator.clipboard.writeText(text);
+    show_toast();
     }
+
 </script>
-    
+
 {% endblock scripts %}

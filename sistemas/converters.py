@@ -55,7 +55,7 @@ class ActivoConverter:
 
 class UserNameConverter:
 
-    regex = '[a-zA-Z][a-zA-Z0-9-._@]+'
+    regex = r'[a-zA-Z][-._@a-zA-Z0-9]+'
 
     def to_python(self, value):
         if isinstance(value, Usuario):

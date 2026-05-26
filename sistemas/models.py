@@ -18,9 +18,11 @@ from django.db.models import Max, Count
 from django.db.models import Q, F
 from django.db.models.functions import Coalesce
 from django.utils import timezone
+from django.contrib.auth import get_user_model
 
-from directorio.models import Organismo
+from comun.claves import generate_secret_token
 from directorio.models import Empresa
+from directorio.models import Organismo
 from familias.models import Familia
 from juriscan.models import Juriscan
 
@@ -30,6 +32,7 @@ from . import diagnosis, links
 Modelos definidos en sistemas.
 """
 
+
 # ~ Dominio para correo electrónico
 EMAIL_DOMAIN = "gobiernodecanarias.org"
 
@@ -37,7 +40,6 @@ EMAIL_DOMAIN = "gobiernodecanarias.org"
 TEMP_DIR = settings.BASE_DIR / Path("temp")
 if not TEMP_DIR.is_dir():
     TEMP_DIR.mkdir()
-
 
 
 
@@ -901,10 +903,25 @@ class Usuario(models.Model):
             | Q(apellidos__icontains=query)
             )
 
+    def _create_auth_user_if_not_exists(self):
+        User = get_user_model() 
+        if not User.objects.filter(username=self.login).exists():
+            password = generate_secret_token()
+            user = User.objects.create_user(
+                self.login,
+                self.email,
+                password,
+                )
+            user.first_name = self.nombre
+            user.last_name = self.apellidos
+            user.is_staff=True
+            user.save()
+
     def save(self, *args, **kwargs):
         if not self.email:
             self.email = f"{self.login}@{EMAIL_DOMAIN}"
         super().save(*args, **kwargs)
+        self._create_auth_user_if_not_exists()
 
     def nombre_completo(self):
         if self.nombre:
