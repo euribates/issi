@@ -165,10 +165,14 @@ def a_editar_usuario(usuario) -> str:
 
 def a_organismos() -> str:
     return _a('sistemas:listado_organismos')
-    
+
 
 def a_entes() -> str:
     return _a('sistemas:listado_entes')
+
+
+def a_empresas() -> str:
+    return _a('sistemas:listado_empresas')
     
 
 def a_detalle_ente(id_ente) -> str:

@@ -48,7 +48,8 @@ urlpatterns = [
     tie('organismo/', views.listado_organismos),
     tie('organismo/<org:organismo>/', views.detalle_organismo),
     tie('organismo/<org:organismo>/estudio/', views.estudio_organismo),
-
+    tie('empresa/', views.listado_empresas),
+    tie('empresa/<int:empresa>/', views.detalle_empresa),
     tie('usuario/', views.listado_usuarios),
     tie('usuario/buscar/', views.buscar_usuarios),
     tie('usuario/alta/', views.alta_usuario),

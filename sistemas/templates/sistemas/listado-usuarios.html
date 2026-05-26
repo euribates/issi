@@ -5,33 +5,28 @@
 
 <form method="get">
 
+  <div class="row justify-content-center m-4">
+    <div class="col-md-6">
+      <div class="search-container">
+        <input type="text"
+               name="query"
+               value="{{ query }}"            
+               class="form-control search-input"
+               placeholder="Buscar usuarios">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+    </div>
+  </div>
+
 <table class="table table-striped">
-  <thead>
+  <thead class="table-primary">
     <tr>
       <th>Login</th>  
       <th>Nombre</th>
       <th>Apellidos</th>
-      <th>Organismo</th>
+      <th>Organismo / Empresa</th>
     </tr>  
 
-    <tr>
-      <th>
-        {{ filterset.form|as_text_control:"login__icontains" }}
-      </th>  
-      <th>
-        {{ filterset.form|as_text_control:"nombre__icontains" }}
-      </th>
-      <th>
-        {{ filterset.form|as_text_control:"apellidos__icontains" }}
-      </th>
-      <th>
-        {{ filterset.form|as_text_control:"organismo__nombre_organismo__icontains" }}
-      </th>
-      <th>
-        <input type="submit" value="🔍" />
-      </th>
-    </tr> 
-    
   </thead> 
   <tbody>
     {% for usuario in filterset.qs.all %}<tr>
@@ -44,7 +39,13 @@
       </td>
       <td>{{ usuario.nombre }}</td>
       <td>{{ usuario.apellidos }}</td>
-      <td colspan="2">{{ usuario.organismo }}</td>
+      <td colspan="2">
+          {% if usuario.empresa %}
+            {{ usuario.empresa }}
+          {% else %}
+            {{ usuario.organismo }}
+          {% endif %}
+      </td>
     </tr>{% endfor %}
   
   </tbody>

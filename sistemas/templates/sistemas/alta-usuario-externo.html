@@ -20,14 +20,15 @@
 
 
     <div class="m-2">
-      <label for="id_login" class="form-label">Username / Login</label>
-      {{ form.login }}
-      {% if form.login.errors %}<ul class="form-errors">
-        {% for err in form.login.errors %}
+      <label for="id_login" class="form-label">Email</label>
+      {{ form.email }}
+      {% if form.email.errors %}<ul class="form-errors">
+        {% for err in form.email.errors %}
           <li>{{ err }}</li> 
         {% endfor %}
         </ul>{% endif %}
     </div>
+
 
     <div class="m-2">
       <label for="id_nombre" class="form-label">{{ form.nombre.label }}</label>

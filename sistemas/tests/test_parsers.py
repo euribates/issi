@@ -6,10 +6,8 @@ from uuid import UUID
 from comun.funcop import first
 
 from sistemas import parsers
-from sistemas.models import Usuario
 from sistemas.models import Tema
 from juriscan.models import Juriscan
-from directorio.models import Organismo
 
 
 # -------------------------------------------------[ Nombre sistema ]--

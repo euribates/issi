@@ -11,12 +11,18 @@ class UsuarioFilter(django_filters.FilterSet):
 
     class Meta:
         model = models.Usuario
-        fields = {
-            'login': ['icontains'],
-            'nombre': ['icontains'],
-            'apellidos': ['icontains'],
-            'organismo__nombre_organismo': ['icontains'],
-            }
+        fields = ['query']
+
+    query = django_filters.CharFilter(method='full_text', label="Search")
+
+    def full_text(self, queryset, name, value):
+        return queryset.filter(
+            Q(login__icontains=value) |
+            Q(nombre__icontains=value) |
+            Q(apellidos__icontains=value) |
+            Q(organismo__nombre_organismo__icontains=value) |
+            Q(empresa__nombre_empresa__icontains=value)
+            )
 
 
 class SistemaFilter(django_filters.FilterSet):

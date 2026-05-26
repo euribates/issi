@@ -13,38 +13,42 @@
           </h4>
       </div>
       <div class="card-body">
-        <table class="table">
-          <tr>
-              <th>Nombre</th>
-              <td>{{ usuario.nombre }}</td>
-          </tr>
-          <tr>
-              <th>Apellidos</th>
-              <td>{{ usuario.apellidos }}</td>
-          </tr>
-          <tr>
-              <th>Username</th>
-              <td>{{ usuario.login }}</td>
-          </tr>
-          <tr>
-              <th>Email</th>
-              <td>
+        <dl>
+          <dt>Nombre</dt>
+          <dd>{{ usuario.nombre }}</dd>
+          
+              <dt>Apellidos</dt>
+              <dd>{{ usuario.apellidos }}</dd>
+
+              <dt>Username</dt>
+              <dd>{{ usuario.login }}</dd>
+
+              <dt>Email</dt>
+              <dd>
                   <a class="email" 
                      href="mailto:{{ usuario.email }}">
                   {{ usuario.email }}
                   </a>
-              </td>
-          </tr>
-          <tr>
-          {% if usuario.empresa %}
-            <th>Empresa</th>
-            <td>{{ usuario.empresa }}</td>
-          {% else %}
-            <th>Adscrito a</th>
-            <td>{{ usuario.organismo.nombre_organismo }}</td>
-          {% endif %}
-          <tr>
-        </table>
+              </dd>
+            
+              <dt>Organismo</dt>
+              <dd>
+                {% if usuario.organismo %}
+                  {{ usuario.organismo }}
+                {% else %}
+                  N/A
+                  {% endif %}  
+              </dd>
+
+              <dt>Empresa</dt>
+              <dd>
+                {% if usuario.empresa %}
+                  {{ usuario.empresa }}
+                {% else %}
+                  N/A
+                  {% endif %}  
+              </dd>
+        </dl>
       </div>
       <div class="card-footer text-end">
           <a href="{% url 'sistemas:editar_usuario' usuario=usuario %}"
