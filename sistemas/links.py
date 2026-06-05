@@ -22,6 +22,10 @@ def _a(name: str, **kwargs) -> str:
     return str(reverse_lazy(name, kwargs=kwargs))
 
 
+def a_directorio():
+    return _a('sistemas:listado_organismos')
+
+
 @cache
 def a_detalle_organismo(id_organismo) -> str:
     return _a('sistemas:detalle_organismo', organismo=id_organismo)
