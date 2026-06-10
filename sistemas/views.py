@@ -12,7 +12,7 @@ from django.shortcuts import render
 from django.utils.safestring import mark_safe
 import pygal
 
-from comun.commands import Command
+from comun.commands import Commands
 from comun.funcop import agrupa
 from comun import graficas
 from comun.forms import EstaSeguroForm
@@ -37,38 +37,6 @@ from . import serializers
 """
 
 
-@dataclass(frozen=True)
-class CommandItem:
-
-    url : str
-    text : str
-    klass : str
-    icon : str
-
-    def __str__(self):
-        return mark_safe(
-          f'<a class="nav-link {{ self.klass }}" aria-current="page"'
-          f' href="{self.url}">'
-          f'{self.icon} {self.text}'
-          '</a>'
-          )
-
-class Commands:
-
-    def __init__(self, name, url):
-        self.name = name
-        self.url = url
-        self.menu = []
-
-    def __iter__(self):
-        for item in self.menu:
-            yield item
-
-    def add(self, url, text, klass, icon):
-        self.menu.append(CommandItem( url, text, klass, icon))
-        return self
-
-
 @cache
 def cmd_sistemas():
     return Commands('Sistemas', links.a_sistemas()).add(
@@ -87,6 +55,7 @@ def cmd_sistemas():
         klass='warning',
         icon='<i class="bi bi-plus-circle-fill"></i>',
     )
+
 
 @cache
 def cmd_usuarios():
@@ -711,8 +680,8 @@ def listado_usuarios(request):
     return render(request, 'sistemas/listado-usuarios.html', {
         'titulo': 'Usuarios registrados en el sistema',
         'breadcrumbs': bc.bc_usuarios(),
-        'tab': 'usuarios',
         'commands': cmd_usuarios(),
+        'tab': 'usuarios',
         'filterset': filterset,
         'query': request.GET.get('query', ''),
         })
@@ -723,6 +692,7 @@ def buscar_usuarios(request):
     return render(request, 'sistemas/buscar-usuarios.html', {
         'titulo': 'Buscar usuarios en pginas blancas',
         'subtitulo': 'Debe estar registrodo como usuario',
+        'commands': cmd_usuarios(),
         'breadcrumbs': bc.bc_usuarios(),
         'tab': 'usuarios',
         })
@@ -733,6 +703,7 @@ def alta_usuario(request, *args, **kwargs):
     return render(request, 'sistemas/alta-usuario.html', {
         'titulo': 'Dar de alta un nuevo usuario',
         'breadcrumbs': bc.bc_alta_usuario(),
+        'commands': cmd_usuarios(),
         'tab': 'usuarios',
         })
 
@@ -750,6 +721,7 @@ def alta_usuario_interno(request, *args, **kwargs):
     return render(request, 'sistemas/alta-usuario-interno.html', {
         'titulo': 'Dar de alta un nuevo usuario (Interno)',
         'breadcrumbs': bc.bc_alta_usuario_interno(),
+        'commands': cmd_usuarios(),
         'tab': 'usuarios',
         'form': form,
         })
@@ -768,6 +740,7 @@ def alta_usuario_externo(request, *args, **kwargs):
     return render(request, 'sistemas/alta-usuario-externo.html', {
         'titulo': 'Dar de alta un nuevo usuario (Externo)',
         'breadcrumbs': bc.bc_alta_usuario_externo(),
+        'commands': cmd_usuarios(),
         'tab': 'usuarios',
         'form': form,
         })
@@ -778,6 +751,7 @@ def detalle_usuario(request, usuario, *args, **kwargs):
     return render(request, 'sistemas/detalle-usuario.html', {
         'titulo': f'Detalles usuario {usuario}',
         'breadcrumbs': bc.bc_detalle_usuario(usuario),
+        'commands': cmd_usuarios(),
         'tab': 'usuarios',
         'usuario': usuario,
         })
@@ -794,6 +768,7 @@ def editar_usuario(request, usuario):
     return render(request, 'sistemas/editar-usuario.html', {
         'titulo': f'Editar usuario {usuario}',
         'breadcrumbs': bc.bc_editar_usuario(usuario),
+        'commands': cmd_usuarios(),
         'tab': 'usuarios',
         'form': form,
         'usuario': usuario,

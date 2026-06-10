@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       {% for cmd in commands %}  
-        <li class="nav-item"> {{ cmd }} </li>  
+      <li class="{{ commands.klass }}"> {{ cmd }} </li>  
       {% endfor %}
       </ul>
 
