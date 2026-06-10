@@ -3,6 +3,7 @@
 from django import forms
 from django.forms import widgets
 from django.core.exceptions import ValidationError
+from django.conf import settings
 
 from . import models
 from . import parsers
@@ -227,12 +228,17 @@ class AltaUsuarioInternoForm(BootstrapForm, forms.ModelForm):
         model = models.Usuario
         fields = [
             'login',
-            'email',
             'nombre',
             'apellidos',
             'organismo',
             ]
 
+    def save(self, commit=True):
+        usuario = super().save(commit=False)
+        usuario.email = f'{usuario.login}@{settings.EMAIL_DOMAIN}'
+        if commit:
+            usuario.save()
+        return usuario
 
 class AltaUsuarioExternoForm(BootstrapForm, forms.ModelForm):
 

@@ -33,13 +33,6 @@ Modelos definidos en sistemas.
 """
 
 
-# ~ Dominio para correo electrónico
-EMAIL_DOMAIN = "gobiernodecanarias.org"
-
-# ~ Directorio temporal
-TEMP_DIR = settings.BASE_DIR / Path("temp")
-if not TEMP_DIR.is_dir():
-    TEMP_DIR.mkdir()
 
 
 
@@ -584,7 +577,7 @@ https://www.gobiernodecanarias.org/libroazul/pdf/46083.pdf
         if not usuario:
             usuario = Usuario(
                 login=usuario_o_login,
-                email=f'{usuario_o_login}@{EMAIL_DOMAIN}',
+                email=f'{usuario_o_login}@{settings.EMAIL_DOMAIN}',
                 nombre='*',
                 apellidos='*',
                 organismo_id=1,
@@ -919,7 +912,7 @@ class Usuario(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.email:
-            self.email = f"{self.login}@{EMAIL_DOMAIN}"
+            self.email = f"{self.login}@{settings.EMAIL_DOMAIN}"
         super().save(*args, **kwargs)
         self._create_auth_user_if_not_exists()
 
@@ -1175,7 +1168,7 @@ class Ente(models.Model):
     def descargar_datos(self, url, force=False):
         slug = url.rsplit("/", 1)[1]
         filename = Path(f"{slug}.html")
-        target_file = TEMP_DIR / Path(filename)
+        target_file = settings.TEMP_DIR / Path(filename)
         if target_file.exists():
             stat = target_file.stat()
             mod_date = DateTime.fromtimestamp(stat.st_mtime)

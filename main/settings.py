@@ -254,7 +254,15 @@ if DEBUG:
 
 LC_TIME_SPANISH_LOCALE = config('LC_TIME_SPANISH_LOCALE', default='es_ES.utf8')
 
+# ~ Dominio para correo electrónico
+EMAIL_DOMAIN = "gobiernodecanarias.org"
+
 EMAIL_HOST = config('EMAIL_HOST')
 EMAIL_PORT = config('EMAIL_PORT', parser=int, default=582)
 EMAIL_USER = config('EMAIL_USER')
 EMAIL_PASSWORD = config('EMAIL_PASSWORD')
+
+# ~ Directorio temporal
+TEMP_DIR = BASE_DIR / Path("temp")
+if not TEMP_DIR.is_dir():
+    TEMP_DIR.mkdir()
