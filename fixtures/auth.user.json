@@ -4,7 +4,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$1200000$OTI9K4YwUPrw4tv5xJvvRE$2nfmhLGkbKwrfNkh2IuDc/BtKuvnR+YrFBP3YMrARDA=",
-        "last_login": "2026-05-05T11:13:00.940Z",
+        "last_login": "2026-06-02T09:51:32.633Z",
         "is_superuser": true,
         "username": "root",
         "first_name": "Root",
@@ -22,7 +22,7 @@
     "pk": 2,
     "fields": {
         "password": "pbkdf2_sha256$1200000$JtWkImghGjcV76LuwedjLr$9KOFwcug4qOql5elmKmVm1AGByh5Az7BNfiWWC6KedE=",
-        "last_login": "2026-05-15T07:46:56.654Z",
+        "last_login": "2026-06-10T07:28:42.052Z",
         "is_superuser": true,
         "username": "jrodleo",
         "first_name": "Juan Ignacio",
@@ -85,6 +85,6324 @@
         "is_staff": true,
         "is_active": true,
         "date_joined": "2026-04-29T09:29:54Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+        "password": "6!Ovzs2eDbXOJDhT7r?czM",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ext-msanrodf",
+        "first_name": "*",
+        "last_name": "*",
+        "email": "ext-msanrodf@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T11:49:44.005Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+        "password": "atW!dH6bLltFcK3IMow1U3",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ext-imejsua",
+        "first_name": "*",
+        "last_name": "*",
+        "email": "ext-imejsua@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:30:58.141Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+        "password": "A72cnG6lHI?5mhnRSNgkdG",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mromban",
+        "first_name": "*",
+        "last_name": "_",
+        "email": "mromban@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T21:11:55.381Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+        "password": "z13bI100Z3z.SCjeJeldqX",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jgaralb",
+        "first_name": "*",
+        "last_name": "_",
+        "email": "jgaralb@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:19:32.092Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+        "password": "EbMf*ydVD4AUnYTV_aMZFv",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jcascue",
+        "first_name": "*",
+        "last_name": "_",
+        "email": "jcascue@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:14:31.923Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 11,
+    "fields": {
+        "password": "s?8dxHu9JyPxd.zFe3rRij",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "alopperj",
+        "first_name": "*",
+        "last_name": "_",
+        "email": "alopperj@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T17:25:48.382Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+        "password": "W.t3v8*T9eJH_!UjRZarsK",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pendiente",
+        "first_name": "*",
+        "last_name": "_",
+        "email": "pendiente@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:24:21.830Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 13,
+    "fields": {
+        "password": "RgsD.g92Ad8YHqfWJveW?7",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rmedsos",
+        "first_name": "*",
+        "last_name": "_",
+        "email": "rmedsos@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T18:56:56.380Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 14,
+    "fields": {
+        "password": "1gxRh!YRWcIE5T.eitU!GZ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cpargar",
+        "first_name": "*",
+        "last_name": "_",
+        "email": "cpargar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:22:36.839Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 15,
+    "fields": {
+        "password": "RC?6siBT3g*o!OopzpY6Te",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "afalper",
+        "first_name": "Adolfo",
+        "last_name": "Faleh Pérez",
+        "email": "afalper@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T09:59:43.328Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 16,
+    "fields": {
+        "password": "YHfVWu?aLVecKXkybPxgGR",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "amarbri",
+        "first_name": "Agustín",
+        "last_name": "Martín Brito",
+        "email": "amarbri@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-07T15:33:45.060Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 17,
+    "fields": {
+        "password": "r*JezY_i0VML9RNh7LfjdQ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "apadfer",
+        "first_name": "Agustín",
+        "last_name": "Padilla Fernánez",
+        "email": "apadfer@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T12:23:18.845Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 18,
+    "fields": {
+        "password": "?s1wMXTGY6?Rj1vrzqKRas",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aumenperp",
+        "first_name": "Agustina",
+        "last_name": "Méndez Perera",
+        "email": "aumenperp@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.879Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 19,
+    "fields": {
+        "password": "uLTpFu9MEuIpP4dNV*!5HA",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aojeagu",
+        "first_name": "Ainhoa",
+        "last_name": "Ojeda Aguiar",
+        "email": "aojeagu@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:43:18.615Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 20,
+    "fields": {
+        "password": "f*wlgZ.G74azIr19hmKmFr",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "asanbenj",
+        "first_name": "Alba María",
+        "last_name": "Santiago Benítez",
+        "email": "asanbenj@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T10:41:29.814Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 21,
+    "fields": {
+        "password": "XmqAQIn52xSzU*rmuvaHpP",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "alemgor",
+        "first_name": "Alberto",
+        "last_name": "Lemus Gorrín",
+        "email": "alemgor@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:49:04.727Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 22,
+    "fields": {
+        "password": "?8ggp21IrXyHfqvWKFMHRJ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "asanmonx",
+        "first_name": "Alberto",
+        "last_name": "Santana Monagas",
+        "email": "asanmonx@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-11T08:14:20.576Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 23,
+    "fields": {
+        "password": "_da9cnyQMdflot37pNq0RQ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "epuecas",
+        "first_name": "Alberto Eugenio",
+        "last_name": "Puerta del Castillo",
+        "email": "epuecas@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:35:21.333Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 24,
+    "fields": {
+        "password": "_sNoVa6zBS5RtZV?oU8zpb",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aramtej",
+        "first_name": "Alberto Manuel",
+        "last_name": "Ramírez Tejera",
+        "email": "aramtej@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T12:23:27.566Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 25,
+    "fields": {
+        "password": "fVR6nc9Y?H5py4UGTqLtiH",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "arodall",
+        "first_name": "Alejandra",
+        "last_name": "Rodríguez Alloza",
+        "email": "arodall@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-11T08:27:32.715Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 26,
+    "fields": {
+        "password": "e!K6YzimHKpF97cghYLRTv",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aartrodc",
+        "first_name": "Alejandro",
+        "last_name": "Arteaga Rodríguez",
+        "email": "aartrodc@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:02:54.316Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 27,
+    "fields": {
+        "password": "Am1pTmlzEEiZft9QHC*Sf7",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aberrod",
+        "first_name": "Alejandro",
+        "last_name": "Bernal Rodríguez",
+        "email": "aberrod@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T09:54:07.077Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 28,
+    "fields": {
+        "password": "L28Y3HW9sBRBhE7h.hFUMn",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "atrudel",
+        "first_name": "Alexander",
+        "last_name": "Trujillo Delgado",
+        "email": "atrudel@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.814Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 29,
+    "fields": {
+        "password": "jbhMzdiWM4A5**esj.pyJv",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aloppui",
+        "first_name": "Alexis Jorge",
+        "last_name": "López Puig",
+        "email": "aloppui@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.456Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 30,
+    "fields": {
+        "password": "xxtyRv*lgwrK35om0UhzD?",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "avallop",
+        "first_name": "Alfredo Eugenio",
+        "last_name": "del Valle López",
+        "email": "avallop@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:03:09.858Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 31,
+    "fields": {
+        "password": "2a9cCrcY6WLmJDV*hc9AfG",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aberfer",
+        "first_name": "Alfredo Manuel",
+        "last_name": "Bermudez Ferrer",
+        "email": "aberfer@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.112Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 32,
+    "fields": {
+        "password": "o.Rp1WeW?1*RxZg.rb2ypk",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "apergarc",
+        "first_name": "Alicia",
+        "last_name": "Perera García",
+        "email": "apergarc@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.916Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 33,
+    "fields": {
+        "password": "1z.bRv1xTpC_9JQyr2PorM",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "avelram",
+        "first_name": "Alicia",
+        "last_name": "Velduque Ramos",
+        "email": "avelram@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-11T08:34:03.100Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 34,
+    "fields": {
+        "password": "FhQWg8kudVe2N9_z0w*R4O",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "almudena.alvarado",
+        "first_name": "Almudena",
+        "last_name": "Alvarado Lozano",
+        "email": "almudena.alvarado@essscan.es",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.948Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 35,
+    "fields": {
+        "password": "rcD8FUmCan2?l?m1AvjDFt",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "atorlan",
+        "first_name": "Álvaro Luis",
+        "last_name": "Torres Lana",
+        "email": "atorlan@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:02:59.549Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 36,
+    "fields": {
+        "password": "Q!*udddT.nG?2Cz?ozVpoF",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aaloperj",
+        "first_name": "Amilcar",
+        "last_name": "Alonso Pérez",
+        "email": "aaloperj@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T13:15:48.310Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 37,
+    "fields": {
+        "password": "D.*_6rMLG62cu_GczYQQNT",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aaznpal",
+        "first_name": "Ana",
+        "last_name": "Aznar Palenzuela",
+        "email": "aaznpal@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:20:20.511Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 38,
+    "fields": {
+        "password": "zgaag*ATLdLphVlupgDnQ*",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "atejmon",
+        "first_name": "Ana Esperanza",
+        "last_name": "Tejera Monzón",
+        "email": "atejmon@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:02:57.225Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 39,
+    "fields": {
+        "password": "5LJ8df5fKE_CjAE.0GCB.j",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "amedpen",
+        "first_name": "Ana Esther",
+        "last_name": "Medina Peñate",
+        "email": "amedpen@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T09:59:51.009Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 40,
+    "fields": {
+        "password": "PCh3RhrhS*PHbhDg*?!mMy",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "abarcab",
+        "first_name": "Ana Isabel",
+        "last_name": "Barrera Cacrera",
+        "email": "abarcab@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T18:37:09.828Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 41,
+    "fields": {
+        "password": "Hw4tAUAo0hIaFOYVAOZ0sY",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "agoncac",
+        "first_name": "Ana María",
+        "last_name": "González Cáceres",
+        "email": "agoncac@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-22T09:18:52.078Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 42,
+    "fields": {
+        "password": "!Jf7_ZntF7tGo1mUrM2e3M",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aheralo",
+        "first_name": "Ana María",
+        "last_name": "Hernández Alonso",
+        "email": "aheralo@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T09:54:11.007Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 43,
+    "fields": {
+        "password": "rnSqI!eqyvI.bpJRkR6!Rn",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "anarodriguez@essscan.es",
+        "first_name": "Ana María",
+        "last_name": "Rodríguez",
+        "email": "anarodriguez@essscan.es",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T10:30:36.313Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 44,
+    "fields": {
+        "password": "o5WZ8J*D0bW.Zv9zZLIMVD",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "abarbar",
+        "first_name": "Ángel Juan",
+        "last_name": "Barreto Barreto",
+        "email": "abarbar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:09:14.821Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 45,
+    "fields": {
+        "password": "!!f_yYAJTdVIDZsxaDwIDA",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "anhergue",
+        "first_name": "Aniano",
+        "last_name": "Hernández Guerra",
+        "email": "anhergue@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.494Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 46,
+    "fields": {
+        "password": "6DlfM.NwT?1hQO0jnN7ZzW",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aestmes",
+        "first_name": "Antonia María",
+        "last_name": "Estévez Mesa",
+        "email": "aestmes@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T10:42:43.826Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 47,
+    "fields": {
+        "password": "Hj.bbwx0PQ1ZuL!*BO5A2v",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "agilarm",
+        "first_name": "Antonia Rosa",
+        "last_name": "Gil Armas",
+        "email": "agilarm@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.412Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 48,
+    "fields": {
+        "password": "MbUqobHe9nSXrihHL7KGgk",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "agonherp",
+        "first_name": "Antonio",
+        "last_name": "González Hernández",
+        "email": "agonherp@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T18:13:22.549Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 49,
+    "fields": {
+        "password": "wVYiQEPw5l.BIt9bTCBzWs",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aherhoz",
+        "first_name": "Antonio",
+        "last_name": "Hernández de la Hoz",
+        "email": "aherhoz@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T14:44:27.776Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 50,
+    "fields": {
+        "password": "r1r0kQhTbeD22gjIP07pO*",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "allalag",
+        "first_name": "Antonio",
+        "last_name": "Llamas Bravo de Laguna",
+        "email": "allalag@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:23:18.265Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 51,
+    "fields": {
+        "password": "gip8XXEXeRjgaEb24rNoXA",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "amorcom",
+        "first_name": "Antonio",
+        "last_name": "Morales Comalat",
+        "email": "amorcom@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-02-12T12:14:24.181Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 52,
+    "fields": {
+        "password": "?!T!fNjJ4gQ8Z*VoYvoAju",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aojedom",
+        "first_name": "Antonio",
+        "last_name": "Ojeda Domínguez",
+        "email": "aojedom@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-12T09:23:14.849Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 53,
+    "fields": {
+        "password": "_4B9H?W4n17UluAYA__Nzt",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "aherver",
+        "first_name": "Antonio José",
+        "last_name": "Hernández Vera",
+        "email": "aherver@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:23:05.307Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 54,
+    "fields": {
+        "password": "kFbGnBMPIdi6*Wk!dUQcoR",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ajcabsan",
+        "first_name": "Antonio Juan",
+        "last_name": "Caballero Santiago",
+        "email": "ajcabsan@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T21:19:07.640Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 55,
+    "fields": {
+        "password": "jJmGm2Xy0dt!T4KvN!LXSo",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "acarromb",
+        "first_name": "Antonio Manuel",
+        "last_name": "Cardona Romero",
+        "email": "acarromb@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-16T11:23:53.255Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 56,
+    "fields": {
+        "password": "JU6DvEgMFuzFEiLW3*PRTe",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "acabhid",
+        "first_name": "Araceli",
+        "last_name": "Caballero Hidalgo",
+        "email": "acabhid@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:22:36.822Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 57,
+    "fields": {
+        "password": "Ynl2eb5Le.!.GOdBL7d!q_",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "armarmarr",
+        "first_name": "Ariel",
+        "last_name": "Martín Martín",
+        "email": "armarmarr@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T08:20:41.526Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 58,
+    "fields": {
+        "password": "krDcgLjg2wOv4*zvC8*Cle",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "barmdia",
+        "first_name": "Badayco",
+        "last_name": "Armas Díaz",
+        "email": "barmdia@cgpoliciacanaria.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-07T10:10:33.463Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 59,
+    "fields": {
+        "password": "G9T9k9oVWtFAz1RNMl_pi8",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "bgarjor",
+        "first_name": "Beatriz",
+        "last_name": "García de Celis Jorge",
+        "email": "bgarjor@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:03:39.919Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 60,
+    "fields": {
+        "password": "hwd5mHmEZORdMTpLvuH193",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "bherafor",
+        "first_name": "Beatriz Beata",
+        "last_name": "Hernández Afonso",
+        "email": "bherafor@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.274Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 61,
+    "fields": {
+        "password": "ETBvLyAqNpR_a?a198bVbH",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "bgonmar",
+        "first_name": "Beatriz Candelaria",
+        "last_name": "González Marrero",
+        "email": "bgonmar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:22:21.151Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 62,
+    "fields": {
+        "password": "ib4c5Ond.NRZo_vU2Et.7C",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "bnablop",
+        "first_name": "Blanca",
+        "last_name": "Nabal López",
+        "email": "bnablop@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:49:18.488Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 63,
+    "fields": {
+        "password": "GNoHm_2ckJNB3CeLHbN15r",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "bpesgon",
+        "first_name": "Blanca Delia",
+        "last_name": "Pestano González",
+        "email": "bpesgon@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:21:36.533Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 64,
+    "fields": {
+        "password": "2Je2VmwJhsUW1GdeZiT2qW",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "bfumfer",
+        "first_name": "Blas Jacinto",
+        "last_name": "Fumero Fernández",
+        "email": "bfumfer@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-07T10:25:55.193Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 65,
+    "fields": {
+        "password": "EdDGDch_oOavn9wzlvWA!t",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cperpri",
+        "first_name": "Cándido V.",
+        "last_name": "Pérez Prieto",
+        "email": "cperpri@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:16:45.970Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 66,
+    "fields": {
+        "password": "20e!NlzDqF_CDEBbypnGr1",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cgarherx",
+        "first_name": "Carlos",
+        "last_name": "García Hernández",
+        "email": "cgarherx@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T11:23:31.715Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 67,
+    "fields": {
+        "password": "i_b9UpUHThehAZ6OUJy_2l",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cperlui",
+        "first_name": "Carlos",
+        "last_name": "Pérez Luis",
+        "email": "cperlui@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-07T11:35:32.839Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 68,
+    "fields": {
+        "password": "9Lre2QyQSctkK_iU6TIajH",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cacobria",
+        "first_name": "Carlos Hugo",
+        "last_name": "Acosta Brito",
+        "email": "cacobria@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T18:56:33.390Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 69,
+    "fields": {
+        "password": "_fhqTVWTCS_*MU4jO7GXUD",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ccruram",
+        "first_name": "Carmen Delia",
+        "last_name": "Cruz Ramírez",
+        "email": "ccruram@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:04:55.650Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 70,
+    "fields": {
+        "password": "Mylg9*tr?52gu8V24kQ!bB",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cmarcac",
+        "first_name": "Carmen Delia",
+        "last_name": "Marrero Cáceres",
+        "email": "cmarcac@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:48:26.014Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 71,
+    "fields": {
+        "password": "q!_bvb*vXdU*NJjwo4JMBV",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cmorarm",
+        "first_name": "Carmen Elena",
+        "last_name": "Morilla de Armas",
+        "email": "cmorarm@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-13T10:51:05.802Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 72,
+    "fields": {
+        "password": "1QVnumo_3E0cnbozh2R*GI",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ctoscub",
+        "first_name": "Carmen Elvira",
+        "last_name": "Toste Cubas",
+        "email": "ctoscub@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:06:47.086Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 73,
+    "fields": {
+        "password": "F80vFlXuh4feV4f1S1?IJK",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cramaco",
+        "first_name": "Carmen Luisa",
+        "last_name": "Ramos Acosta",
+        "email": "cramaco@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:05:03.084Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 74,
+    "fields": {
+        "password": "Q_8N1e4wJO_0Rmdqf*.hu7",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cgonben",
+        "first_name": "Carmen Luz",
+        "last_name": "González Benítez",
+        "email": "cgonben@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:27:16.809Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 75,
+    "fields": {
+        "password": "Dm7gTqi!h9B76u14g64QFS",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cherramq",
+        "first_name": "Carolina",
+        "last_name": "Hernández Ramos",
+        "email": "cherramq@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-07T10:33:21.971Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 76,
+    "fields": {
+        "password": "e!B3Yx.8F48GOMMsoE*1DE",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cherroi",
+        "first_name": "Carolina",
+        "last_name": "Hernández Roig",
+        "email": "cherroi@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:19:32.065Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 77,
+    "fields": {
+        "password": "uW?5IFxe.Y8!3oEzjgELNJ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cahersanm",
+        "first_name": "Carolina",
+        "last_name": "Hernández Sánchez",
+        "email": "cahersanm@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:21:59.519Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 78,
+    "fields": {
+        "password": "?1r8fhB9Wt8cgX!Elpj?oh",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cberafo",
+        "first_name": "Ceferino",
+        "last_name": "Bermejo Afonso",
+        "email": "cberafo@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:31:13.522Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 79,
+    "fields": {
+        "password": "7uj2*VT0!P69QIHqYFQz?r",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "csamfer",
+        "first_name": "Celso",
+        "last_name": "Sampedro Fervenza",
+        "email": "csamfer@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-07T11:44:13.336Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 80,
+    "fields": {
+        "password": ".laNULoFcIExLb3GkZMvqc",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cevocab",
+        "first_name": "Clara Eugenia",
+        "last_name": "Évora Cabrera",
+        "email": "cevocab@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:04:58.435Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 81,
+    "fields": {
+        "password": "kLckBa?0eFpBVFZHQWyRyE",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "crivlez",
+        "first_name": "Claudio Alberto",
+        "last_name": "Rivero Lezcano",
+        "email": "crivlez@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-02T08:12:31Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 82,
+    "fields": {
+        "password": "oud1mNulfnd6.RI5WII1nm",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "csanort",
+        "first_name": "Criseida",
+        "last_name": "Santana Ortega",
+        "email": "csanort@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-22T08:37:44.981Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 83,
+    "fields": {
+        "password": "7tgOg_RQN38l7l?HT?xsRd",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "crrodrodv",
+        "first_name": "Cristina",
+        "last_name": "Rodríguez Rodríguez",
+        "email": "crrodrodv@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:22:25.718Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 84,
+    "fields": {
+        "password": "FQcFyPwvKla2b5M9ow4t9F",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "csecrod",
+        "first_name": "Cristina",
+        "last_name": "Sech Rodríguez",
+        "email": "csecrod@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:14:55.201Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 85,
+    "fields": {
+        "password": "9gEQmGLS61H_izErFbEjw8",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cgongomn",
+        "first_name": "Cristina Lucía",
+        "last_name": "González Gómez",
+        "email": "cgongomn@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:27:38.260Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 86,
+    "fields": {
+        "password": "Z4FGLY?ra6bEH4XsU._tbp",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "dsantos@icdcultural.org",
+        "first_name": "D.",
+        "last_name": "Santos",
+        "email": "dsantos@icdcultural.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-12T08:14:35.247Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 87,
+    "fields": {
+        "password": "K*rdIKz83cH*1x30mMzGpf",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "dcammel",
+        "first_name": "Dámaso",
+        "last_name": "Campos Melián",
+        "email": "dcammel@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:06:52.222Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 88,
+    "fields": {
+        "password": "A_2gpoOUeiGmi8OegERpT9",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "dmarsanl",
+        "first_name": "Daniel",
+        "last_name": "Marrero Sánchez",
+        "email": "dmarsanl@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.830Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 89,
+    "fields": {
+        "password": ".1MN7GOFM.OMPsTfi3?eQD",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "dsuapers",
+        "first_name": "David",
+        "last_name": "Suárez Perera",
+        "email": "dsuapers@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T12:58:36.190Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 90,
+    "fields": {
+        "password": "y3!oSU2Yu9D4VhRNHNxMuC",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "diego.moguel@essscan.es",
+        "first_name": "Diego",
+        "last_name": "Moguel",
+        "email": "diego.moguel@essscan.es",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T10:31:01.569Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 91,
+    "fields": {
+        "password": "eS33MuVIo9u?Ez_bEa5UiF",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "dnolsua",
+        "first_name": "Dolores Isabel",
+        "last_name": "Nolasco Suárez",
+        "email": "dnolsua@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.508Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 92,
+    "fields": {
+        "password": "HyWedMvH8YWDFg6YVylpe.",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "dafomar",
+        "first_name": "Domingo",
+        "last_name": "Afonso Martín",
+        "email": "dafomar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T19:10:06.902Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 93,
+    "fields": {
+        "password": "?TTMHIAQ_a!bPJX9!*DoiA",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "gpalara",
+        "first_name": "Domingo Guzmán",
+        "last_name": "Palacios Arazuri",
+        "email": "gpalara@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.801Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 94,
+    "fields": {
+        "password": "FTgD1FIR6QBGlEV60_uZGq",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "dfernak",
+        "first_name": "Dulce María",
+        "last_name": "Fernández Nakoura",
+        "email": "dfernak@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:07:00.478Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 95,
+    "fields": {
+        "password": "HQ3Gu?oX7x19vPidkvPaYD",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "esosperm",
+        "first_name": "Ehedey",
+        "last_name": "Sosa Pérez",
+        "email": "esosperm@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-10T12:39:29.409Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 96,
+    "fields": {
+        "password": "nYLFjSbwSEUZKw?x_z2V9T",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ebaudia",
+        "first_name": "Elena",
+        "last_name": "Baute Díaz",
+        "email": "ebaudia@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T09:59:43.303Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 97,
+    "fields": {
+        "password": "iOC1t7MuZLxZsdI2ipuicC",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "elopvil",
+        "first_name": "Elena",
+        "last_name": "López Villarubia",
+        "email": "elopvil@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:08:40.638Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 98,
+    "fields": {
+        "password": "0Io7eiEakcBDOO2ntIpaty",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "edenis",
+        "first_name": "Elisa",
+        "last_name": "de Herrera Nistal",
+        "email": "edenis@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T13:49:30.927Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 99,
+    "fields": {
+        "password": "jruzYr88rrMB**oy_68x1x",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "elsanher",
+        "first_name": "Elísabet",
+        "last_name": "Santiago Hernández",
+        "email": "elsanher@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T07:33:25.369Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 100,
+    "fields": {
+        "password": "HcN?blwY1*lbmHi_J.uNPF",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ehergony",
+        "first_name": "Elizabeth",
+        "last_name": "Hernández González",
+        "email": "ehergony@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:07:02.753Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 101,
+    "fields": {
+        "password": "PNmez_w_CgDkwGV5MN.zlP",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "emorfar",
+        "first_name": "Elizabeth",
+        "last_name": "Mereau Faria",
+        "email": "emorfar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:20:52.664Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 102,
+    "fields": {
+        "password": "5nOlul5ZN8KovTNDwppI!p",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "egueseg",
+        "first_name": "Elyoenai",
+        "last_name": "Guerra Segura",
+        "email": "egueseg@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:21:27.293Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 103,
+    "fields": {
+        "password": "HnRqp.jdxCRczPzXG3Hq*v",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "eschweich@triskellsoftware.com",
+        "first_name": "Estefanía",
+        "last_name": "Schweich",
+        "email": "eschweich@triskellsoftware.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T15:20:55.590Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 104,
+    "fields": {
+        "password": "pc_tKIjv*yJCUyXvVN1?KG",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "esgonnun",
+        "first_name": "Estefanía Margarita",
+        "last_name": "González Nuñez",
+        "email": "esgonnun@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-10T10:16:12.820Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 105,
+    "fields": {
+        "password": "tFm2R3fi68w7DvL?qQd*F5",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "evbetveg",
+        "first_name": "Eva María",
+        "last_name": "Betencort Vega",
+        "email": "evbetveg@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-22T19:57:28.517Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 106,
+    "fields": {
+        "password": "eQ_KyQf*UGvnJ2tDaB9nST",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fbezcar",
+        "first_name": "Fátima",
+        "last_name": "Bezares Carretero",
+        "email": "fbezcar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-02T08:12:31Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 107,
+    "fields": {
+        "password": "Zt86jaMpjUVkLmswC4*CyY",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fojechi",
+        "first_name": "Fátima Mercedes",
+        "last_name": "Ojeda Chirino",
+        "email": "fojechi@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.718Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 108,
+    "fields": {
+        "password": "hAYDFZXJ0IkQlW?bGfb.BA",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fartjor",
+        "first_name": "Federico J.",
+        "last_name": "Artiles Jorge",
+        "email": "fartjor@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.525Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 109,
+    "fields": {
+        "password": "fyxmV1.w.GhFQGepqsefiQ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fsanriv",
+        "first_name": "Felipe",
+        "last_name": "Sánchez Rivero",
+        "email": "fsanriv@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T18:04:43.738Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 110,
+    "fields": {
+        "password": "LG.K3.QF0!GmwAZF3wy6p7",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fherherv",
+        "first_name": "Fernando",
+        "last_name": "Herrera Hernández",
+        "email": "fherherv@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-11T18:34:22.615Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 111,
+    "fields": {
+        "password": ".vw9o!CvKaO?deDcGpksf?",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fsolrey",
+        "first_name": "Fernando",
+        "last_name": "Solis Reyes",
+        "email": "fsolrey@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:27:10.230Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 112,
+    "fields": {
+        "password": "9Aw2LOOt7!Vv_6NF?WN!si",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fmanmarp",
+        "first_name": "Fernando Akhenaton",
+        "last_name": "Manero Martínez",
+        "email": "fmanmarp@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:22:11.395Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 113,
+    "fields": {
+        "password": "CA*liNq_9vdTLvs_MOy8Nx",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fviegon",
+        "first_name": "Fernando Iván",
+        "last_name": "Viera González",
+        "email": "fviegon@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-03-24T08:15:26.599Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 114,
+    "fields": {
+        "password": "SLmiqVwv8jcXiKKpeQ*ZP.",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fgonsan",
+        "first_name": "Fernando José",
+        "last_name": "González Sánchez",
+        "email": "fgonsan@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:21:22.819Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 115,
+    "fields": {
+        "password": "SXOV8cOuuP9k1aqnSBLYOk",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "lgalrev",
+        "first_name": "Fidelina",
+        "last_name": "Galvez Revilla",
+        "email": "lgalrev@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.751Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 116,
+    "fields": {
+        "password": "f1u4lIj6Nsc2q*lnBNQjj*",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fblafer",
+        "first_name": "Florencio",
+        "last_name": "Blanco Fernández",
+        "email": "fblafer@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-22T09:16:51.539Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 117,
+    "fields": {
+        "password": "X5tJE33tPvG3ZuTxLeXa91",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ffermar",
+        "first_name": "Francisca",
+        "last_name": "Fernández Martínez",
+        "email": "ffermar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.431Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 118,
+    "fields": {
+        "password": "d?IfoNcVmZokw8OHJ_Ezwx",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fcabherl",
+        "first_name": "Francisca Teresa",
+        "last_name": "Caballero Hernández",
+        "email": "fcabherl@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-10T12:33:47.243Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 119,
+    "fields": {
+        "password": "YgVSGOv17Sj1l?d*sSd2dn",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fherpad",
+        "first_name": "Francisco",
+        "last_name": "Hernández Padilla",
+        "email": "fherpad@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T10:04:57.570Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 120,
+    "fields": {
+        "password": "k3p?UP9OWaPX*SM0?Nl2m_",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fmatbat",
+        "first_name": "Francisco",
+        "last_name": "Mateos Batista",
+        "email": "fmatbat@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:12:42.733Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 121,
+    "fields": {
+        "password": "sowhPa4_NgYaSlk.2vzl4A",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fsanmarj",
+        "first_name": "Francisco J.",
+        "last_name": "Santana Martín",
+        "email": "fsanmarj@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-12T09:18:27.045Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 122,
+    "fields": {
+        "password": "WP3iTXxZmB_6l3u_E?pXi*",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jjubper",
+        "first_name": "Francisco Javier",
+        "last_name": "Jubera Pérez",
+        "email": "jjubper@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:43:20.723Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 123,
+    "fields": {
+        "password": "Z1vQYe!H6Gsoq49Vj*Fpdg",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jmacgod",
+        "first_name": "Francisco Javier",
+        "last_name": "Machín Godoy",
+        "email": "jmacgod@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-02-12T12:16:01.824Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 124,
+    "fields": {
+        "password": "XRSsi5ZjI4!!p?r1FW7jhH",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fespsos",
+        "first_name": "Francisco José",
+        "last_name": "Espino Sosa",
+        "email": "fespsos@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-24T12:55:02.533Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 125,
+    "fields": {
+        "password": "qMD17T6Yz.j8JfyROPb.Ny",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "feugbau",
+        "first_name": "Francisco José",
+        "last_name": "Eugenio Baute",
+        "email": "feugbau@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.701Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 126,
+    "fields": {
+        "password": "JvU1_Rvzi*FLowbUQPjNWA",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fsanrodn",
+        "first_name": "Francisco José",
+        "last_name": "Santana Rodríguez",
+        "email": "fsanrodn@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:21:27.303Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 127,
+    "fields": {
+        "password": "P5RO2F1BXAi4p6V4s5bbDa",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "fmerboa",
+        "first_name": "Francisco Miguel",
+        "last_name": "Merino Boada",
+        "email": "fmerboa@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-11T11:23:41Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 128,
+    "fields": {
+        "password": "?4SMYm8YfS5YoWSLFQPfU6",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ggravar",
+        "first_name": "Germán",
+        "last_name": "Grassa Vargas",
+        "email": "ggravar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:16:58.956Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 129,
+    "fields": {
+        "password": "pIEcELI5sH0F?ShGJPalRh",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "gtorjua",
+        "first_name": "Gonzalo",
+        "last_name": "De la Torre de Juan",
+        "email": "gtorjua@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-13T11:17:48.020Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 130,
+    "fields": {
+        "password": "bAc8DkdJy?f5o?R.88aUV4",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "gojezam",
+        "first_name": "Gustavo",
+        "last_name": "Ojeda Zamora",
+        "email": "gojezam@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-05T20:17:11.181Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 131,
+    "fields": {
+        "password": "azCur2Mghau2BmWOEZklfG",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "hgargarg",
+        "first_name": "Héctor",
+        "last_name": "García García",
+        "email": "hgargarg@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.860Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 132,
+    "fields": {
+        "password": "nMwB399_S3ja45CYHBXiaP",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "hgonort",
+        "first_name": "Hector Javier",
+        "last_name": "González Ortega",
+        "email": "hgonort@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-02-26T10:28:36.392Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 133,
+    "fields": {
+        "password": "EBI6vKFtPLCmp3yaxf!Wt7",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "hherperv",
+        "first_name": "Herlinda",
+        "last_name": "Hernández Perera",
+        "email": "hherperv@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T12:11:19.012Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 134,
+    "fields": {
+        "password": "?ucDlJ8_UyZf9tQT3gOEA7",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ignaciodepaz@essscan.es",
+        "first_name": "Ignacio",
+        "last_name": "de Paz",
+        "email": "ignaciodepaz@essscan.es",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T10:29:48.671Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 135,
+    "fields": {
+        "password": "E5bdHN6QFAAxddRaqQxaxv",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "iloppuep",
+        "first_name": "Ignacio Carlos",
+        "last_name": "López Puech",
+        "email": "iloppuep@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:35:26.698Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 136,
+    "fields": {
+        "password": "rs5c!K2hWNBUrO*Wrqu*34",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "itrubos",
+        "first_name": "Ildefonso Mauro",
+        "last_name": "Trujillo Bosa",
+        "email": "itrubos@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.539Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 137,
+    "fields": {
+        "password": "jByXA2uF0GFsb*i_QjXZuH",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "iboscan",
+        "first_name": "Íñigo",
+        "last_name": "Bosch Canals",
+        "email": "iboscan@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T17:48:38.562Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 138,
+    "fields": {
+        "password": "rLKwmYqxPJqXGFFBF.Dnls",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "isanoje",
+        "first_name": "Inmaculada del Carmen",
+        "last_name": "Santana Ojeda",
+        "email": "isanoje@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-13T11:37:33.992Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 139,
+    "fields": {
+        "password": "Iplm!S?6EuHfm*atd9THbb",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ivgardia",
+        "first_name": "Iván",
+        "last_name": "García Díaz-Castroverde",
+        "email": "ivgardia@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T19:09:48.203Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 140,
+    "fields": {
+        "password": "qiC2aVt5UebAe_RsL1o4Ps",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "igoncar",
+        "first_name": "Iván",
+        "last_name": "González Carro",
+        "email": "igoncar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-10T13:35:54.803Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 141,
+    "fields": {
+        "password": "0Lplaa4vNPT1JmUGVGamlm",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jsanace",
+        "first_name": "Jacob",
+        "last_name": "Sánchez Acedo",
+        "email": "jsanace@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-06T13:06:26.660Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 142,
+    "fields": {
+        "password": "Dk4F9hv067ZhvGh1uoZVzE",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jaarjhid",
+        "first_name": "Javier",
+        "last_name": "Arjona Hidalgo",
+        "email": "jaarjhid@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-12T10:19:23.961Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 143,
+    "fields": {
+        "password": "W0vPrAkApIV2YHIfr4t4b2",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jcascuy",
+        "first_name": "Javier",
+        "last_name": "Casado Cuyas",
+        "email": "jcascuy@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T13:04:06.930Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 144,
+    "fields": {
+        "password": "LMH5A8Mv?QYx5CU8IRxOZ0",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jendbon",
+        "first_name": "Javier",
+        "last_name": "Endériz Bonnet",
+        "email": "jendbon@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:48:08.130Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 145,
+    "fields": {
+        "password": "aXutM1UHGIDzZhaZ7Y8VoU",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jlobgon",
+        "first_name": "Javier",
+        "last_name": "Lobato González",
+        "email": "jlobgon@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:14:37.239Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 146,
+    "fields": {
+        "password": "KifEzyQVBbcfqKhLf8F3kW",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jsersanp",
+        "first_name": "Javier",
+        "last_name": "Serrano Sánchez",
+        "email": "jsersanp@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-07T12:08:59.011Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 147,
+    "fields": {
+        "password": "QioRsCPt7ev1lr9WfixlBZ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jjgarcar",
+        "first_name": "Javier josé",
+        "last_name": "García Carballo",
+        "email": "jjgarcar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-11T08:16:32.125Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 148,
+    "fields": {
+        "password": ".R?kNYZsO4_O14VBHr_TOD",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jbejgar",
+        "first_name": "Jenaro",
+        "last_name": "Bejarano García",
+        "email": "jbejgar@gobierniodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-17T13:13:46.022Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 149,
+    "fields": {
+        "password": "39bwnVgwkk?Wx*ufkgtCmB",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jemarrod",
+        "first_name": "Jesús",
+        "last_name": "Martín de Bernardo Rodríguez",
+        "email": "jemarrod@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:35:24.252Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 150,
+    "fields": {
+        "password": "pxtzXjX*CF2u8Gfspfu4_c",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jgonyanp",
+        "first_name": "Jesús Alberto",
+        "last_name": "González Yanes",
+        "email": "jgonyanp@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.556Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 151,
+    "fields": {
+        "password": "Ij9rq0APq7aWIXFLo7Ey.2",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jgarbeng",
+        "first_name": "Jesús Manuel",
+        "last_name": "García Benítez",
+        "email": "jgarbeng@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.014Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 152,
+    "fields": {
+        "password": "kqhQ!.!wGvAuV7q!SJo9a2",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jrobper",
+        "first_name": "Jesús Pedro",
+        "last_name": "Robayna Perez",
+        "email": "jrobper@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T13:06:19.213Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 153,
+    "fields": {
+        "password": "8CgfkoO9hY!zxRKWk1K4kX",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jojenuej",
+        "first_name": "Jesús Rafael",
+        "last_name": "Ojeda Nuez",
+        "email": "jojenuej@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:21:36.557Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 154,
+    "fields": {
+        "password": "EC5Hd_8HROW26fvS42TFYT",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jgonveg",
+        "first_name": "Joaquín Nicanor",
+        "last_name": "González Vega",
+        "email": "jgonveg@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T11:39:32.227Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 155,
+    "fields": {
+        "password": "i6GNu1BLhuIthVkVT_FjPa",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jvilsar",
+        "first_name": "Jon Iván",
+        "last_name": "Vilches Sarasate",
+        "email": "jvilsar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-11T18:56:02.151Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 156,
+    "fields": {
+        "password": "x3d8DB7uKeFv1c1vFkIVrH",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jgonperk",
+        "first_name": "Jorge Luis",
+        "last_name": "González Pérez",
+        "email": "jgonperk@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-07T15:24:50.171Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 157,
+    "fields": {
+        "password": "obzOqBxEJweb8XcsP.kXZO",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jpermir",
+        "first_name": "José",
+        "last_name": "Pereira Miragaia",
+        "email": "jpermir@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:14:46.850Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 158,
+    "fields": {
+        "password": "ps.iEJd!PJrNSlVcwex1J0",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jtresan",
+        "first_name": "José",
+        "last_name": "Trejo Sánchez",
+        "email": "jtresan@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.039Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 159,
+    "fields": {
+        "password": "1.Vy2?tNIXOLkQYdxTeE1?",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jtardel",
+        "first_name": "José Alfonso",
+        "last_name": "Tarife Delgado",
+        "email": "jtardel@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-05T19:59:45.597Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 160,
+    "fields": {
+        "password": "kac1raPUsJAG0m?LLHHjzY",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jgonramp",
+        "first_name": "José Ángel",
+        "last_name": "González Rama",
+        "email": "jgonramp@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T19:21:17.416Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 161,
+    "fields": {
+        "password": "1zQ_YjJg?ajgO.L4aNeE*o",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jmunser",
+        "first_name": "José Antonio",
+        "last_name": "Muñoz Serradilla",
+        "email": "jmunser@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T07:36:24.964Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 162,
+    "fields": {
+        "password": "nbKy0WLXWUg4ktaYW2kQ7P",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "joquimel",
+        "first_name": "José Antonio",
+        "last_name": "Quintana Melián",
+        "email": "joquimel@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T11:11:01.798Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 163,
+    "fields": {
+        "password": "U43y1mBrpSG.esOVBt3zDo",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jferqui",
+        "first_name": "José Damián",
+        "last_name": "Ferrer Quintana",
+        "email": "jferqui@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:24:24.458Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 164,
+    "fields": {
+        "password": "_WuJjB6Y1Xu2YwOxp98db*",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jcalben",
+        "first_name": "José Eduardo",
+        "last_name": "Calderón Benito",
+        "email": "jcalben@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T12:23:21.308Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 165,
+    "fields": {
+        "password": "lfAi3a9vyAOlyrnPsYv8JG",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ecasala",
+        "first_name": "José Enrique",
+        "last_name": "Castellano Alayón",
+        "email": "ecasala@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-07T12:04:15.941Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 166,
+    "fields": {
+        "password": "X*W5SHpaWPs49_s*oJfh0j",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jmelsan",
+        "first_name": "Joséfa Carmen",
+        "last_name": "Melián Santana",
+        "email": "jmelsan@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:43:16.155Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 167,
+    "fields": {
+        "password": "q3sJ?1dL_Bs_5BalS*p82h",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jreyoje",
+        "first_name": "Josefa María",
+        "last_name": "Reyes García",
+        "email": "jreyoje@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T18:47:48.630Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 168,
+    "fields": {
+        "password": "Tt.6aktEGp?FFIS1YEGe?x",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jleoman",
+        "first_name": "José Francisco",
+        "last_name": "León Mañas",
+        "email": "jleoman@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T12:30:09.884Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 169,
+    "fields": {
+        "password": "UQ7Y59QiAOni97libsZU8Y",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jaldrua",
+        "first_name": "José Javier",
+        "last_name": "Aldunate Ruano",
+        "email": "jaldrua@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-01-27T09:50:01.095Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 170,
+    "fields": {
+        "password": "vQWoxVIbFEhkXS2AV1xTsC",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jmarcast",
+        "first_name": "José Javier",
+        "last_name": "Martín del Castillo",
+        "email": "jmarcast@goniernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-24T11:17:18.508Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 171,
+    "fields": {
+        "password": "9Q6P*8?uxdSRmFh3tLNkPC",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jreyalmx",
+        "first_name": "José Luis",
+        "last_name": "De los Reyes Almeida",
+        "email": "jreyalmx@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-24T12:56:30.625Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 172,
+    "fields": {
+        "password": "bwPTwh81OEAUNoQ2RiNivY",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jherbor",
+        "first_name": "José Manuel",
+        "last_name": "Hernández Borges",
+        "email": "jherbor@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-12T09:07:17.208Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 173,
+    "fields": {
+        "password": "a6HGI6!H3hERg1H0uaVRDE",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jmorrom",
+        "first_name": "José Ramón",
+        "last_name": "Moreira Romero",
+        "email": "jmorrom@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.934Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 174,
+    "fields": {
+        "password": "ClAdyEmjUqc6I6JQCow3r*",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jgarcat",
+        "first_name": "Josué",
+        "last_name": "García Catalá",
+        "email": "jgarcat@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:22:47.773Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 175,
+    "fields": {
+        "password": "lIxFvaSYf2TvEmKLaLMaqS",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "juvenrod",
+        "first_name": "Juan",
+        "last_name": "Ventura Rodríguez",
+        "email": "juvenrod@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T19:49:50.714Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 176,
+    "fields": {
+        "password": "DOwN?!Fgb03KcLIFGsH2V*",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jevobro",
+        "first_name": "Juan Antonio",
+        "last_name": "Évora Brondo",
+        "email": "jevobro@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T19:10:01.915Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 177,
+    "fields": {
+        "password": "vYP8M8R8nAmhnKM_7tcKR0",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jrosperf",
+        "first_name": "Juan Carlos",
+        "last_name": "Del Rosario Pérez",
+        "email": "jrosperf@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-10T12:35:18.029Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 178,
+    "fields": {
+        "password": "_Ik.b?i3sJ.f2aRMzy_kgd",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jgaravi",
+        "first_name": "Juan Carlos",
+        "last_name": "García Ávila",
+        "email": "jgaravi@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-12T08:19:13.650Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 179,
+    "fields": {
+        "password": "SE8STbpz9hfP1y1gmuAmnw",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jherfraq",
+        "first_name": "Juan Casto",
+        "last_name": "Herrera Francés",
+        "email": "jherfraq@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T08:53:02.766Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 180,
+    "fields": {
+        "password": "jS*5*sJQM9h7oIjw2AMLVJ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jfrosmar",
+        "first_name": "Juan Félix",
+        "last_name": "Rosa Martín",
+        "email": "jfrosmar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.160Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 181,
+    "fields": {
+        "password": "fThfN!XOVe7kT0M9?dhv*3",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jhersank",
+        "first_name": "Juan Francisco",
+        "last_name": "Herrera Sánchez",
+        "email": "jhersank@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:22:25.696Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 182,
+    "fields": {
+        "password": "BI1jY1MER7nk2CQ3Y_GLYJ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jrodriguez_itc",
+        "first_name": "Juan Francisco",
+        "last_name": "Rodríguez Alvarado",
+        "email": "jrodriguez@itccanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-03-04T12:48:36.764Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 183,
+    "fields": {
+        "password": "lc?pwMXo!2BkPrSee_HCzw",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jalvmar",
+        "first_name": "Juan José",
+        "last_name": "Álvarez Martín",
+        "email": "jalvmar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:48:08.144Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 184,
+    "fields": {
+        "password": "78_yK__0H_gdN4X0!hlgVV",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jhercrum",
+        "first_name": "Juan José",
+        "last_name": "Hernández Cruz",
+        "email": "jhercrum@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-10T10:24:00.103Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 185,
+    "fields": {
+        "password": "5*Bzs87RfUS0tH_H?jSI9r",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jpaclar",
+        "first_name": "Juan José",
+        "last_name": "Pacheco Lara",
+        "email": "jpaclar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-26T10:31:30.588Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 186,
+    "fields": {
+        "password": "nHrSxR9c1BdFkJQjp0kzpm",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jmenper",
+        "first_name": "Juan Manuel",
+        "last_name": "Méndez Pérez",
+        "email": "jmenper@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:14:44.522Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 187,
+    "fields": {
+        "password": "1t8ix?Uasr5el4AXq190hz",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jplamen",
+        "first_name": "Juan Manuel",
+        "last_name": "Plasencia Mendoza",
+        "email": "jplamen@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T10:23:21.036Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 188,
+    "fields": {
+        "password": "7NlHolZZ8pI1C7Ju.LkYXa",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jrosmar",
+        "first_name": "Juan Manuel",
+        "last_name": "Rosales Marrero",
+        "email": "jrosmar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T09:59:51.041Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 189,
+    "fields": {
+        "password": "*Fq3856v5Cm4a7ukZ7_GGz",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jgommar",
+        "first_name": "Juan Pedro",
+        "last_name": "Gómez Marrero",
+        "email": "jgommar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-05T19:50:46.856Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 190,
+    "fields": {
+        "password": "jJ.5z7z5S_tRg2QYbY_KVd",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jreymol",
+        "first_name": "Juan Pedro",
+        "last_name": "Reyes Molina",
+        "email": "jreymol@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:21:54.823Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 191,
+    "fields": {
+        "password": "2rAup.5zO*__GDNaUhzRWk",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "jcamdiad",
+        "first_name": "Julia",
+        "last_name": "Campos Díaz",
+        "email": "jcamdiad@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:27:58.264Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 192,
+    "fields": {
+        "password": "g.F!7Jec1GzHayjFeYc7VH",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ksangut",
+        "first_name": "Kevin",
+        "last_name": "Sanchéz Gutiérrez",
+        "email": "ksangut@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T13:31:39.257Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 193,
+    "fields": {
+        "password": "tviEEkiHYewalQw!jUHxFT",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "lruicar",
+        "first_name": "Laura",
+        "last_name": "Ruiz Caramés",
+        "email": "lruicar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-22T08:42:37.691Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 194,
+    "fields": {
+        "password": "1RfGVSsWNhiyo*v6thrBCe",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "lsangonw",
+        "first_name": "Laura",
+        "last_name": "Sánchez-Huete González",
+        "email": "lsangonw@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:27:38.273Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 195,
+    "fields": {
+        "password": "zW5h7?jc4Ccv.W8f?AHM5i",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "lrodfaln",
+        "first_name": "Lidia del Pino",
+        "last_name": "Rodríguez Falcón",
+        "email": "lrodfaln@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.227Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 196,
+    "fields": {
+        "password": "oZYqaL*1_A.o!0*VmEHA*n",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "lsanrodf",
+        "first_name": "Lidia Esther",
+        "last_name": "Sánchez Rodríguez",
+        "email": "lsanrodf@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:14:58.569Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 197,
+    "fields": {
+        "password": "XpBByEb8I6rAgrAVD5BTnq",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "lsalvaz",
+        "first_name": "Lucia",
+        "last_name": "Salas Vázquez",
+        "email": "lsalvaz@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:14:54.219Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 198,
+    "fields": {
+        "password": "kAUJs9AFOKOm!ULemaka3h",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "lbarqui",
+        "first_name": "Luis",
+        "last_name": "Barrera Quintero",
+        "email": "lbarqui@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-02-12T08:45:35.896Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 199,
+    "fields": {
+        "password": ".Nr6_*kgDn*4YHSLIusZcO",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "lelegon",
+        "first_name": "Luis",
+        "last_name": "De Elejabeitia González-Roca",
+        "email": "lelegon@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:21:50.332Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 200,
+    "fields": {
+        "password": "x8kWKZFCCmuuvTyRYEA5?L",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ljuarij",
+        "first_name": "Luis",
+        "last_name": "Juan Rijo",
+        "email": "ljuarij@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-20T10:46:17.658Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 201,
+    "fields": {
+        "password": "jpyksyURK2*iLKqAPa.zgi",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "luisprieto@funcatra.es",
+        "first_name": "Luis",
+        "last_name": "Prieto",
+        "email": "luisprieto@funcatra.es",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-12T11:35:41.161Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 202,
+    "fields": {
+        "password": "?f983PyM9DB5tOtlExtjXJ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "llopart",
+        "first_name": "Luisa Margarita",
+        "last_name": "López Arteaga",
+        "email": "llopart@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T19:22:39.222Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 203,
+    "fields": {
+        "password": "v7x86f6_wlhuTRM44ik!Fp",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mblabau",
+        "first_name": "Manuel",
+        "last_name": "Blanco Bautista",
+        "email": "mblabau@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-10T14:30:24.693Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 204,
+    "fields": {
+        "password": "9gVWipGMQjSz7?PrFM1Iv3",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mpeibos",
+        "first_name": "Manuel",
+        "last_name": "Peinado Bosch",
+        "email": "mpeibos@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-05T19:52:47.102Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 205,
+    "fields": {
+        "password": "f?ri5_QMtl8jpvmV_zRJQb",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mreydarz",
+        "first_name": "Manuel Alexis",
+        "last_name": "de los Reyes Darias",
+        "email": "mreydarz@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T07:38:35.338Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 206,
+    "fields": {
+        "password": "35TvBp!6XuXwx8lwBn4cgT",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mherartp",
+        "first_name": "Manuel Francisco",
+        "last_name": "Herrera Artiles",
+        "email": "mherartp@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:15:02.589Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 207,
+    "fields": {
+        "password": "bsWHyEe4b91iXnLJA!mJd5",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mltorher",
+        "first_name": "Manuel Luis",
+        "last_name": "Torres Herrera",
+        "email": "mltorher@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-11T18:35:55.722Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 208,
+    "fields": {
+        "password": "PwVOFgwmp*2?xrNBrJ4q5i",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mrodbraz",
+        "first_name": "Marcos Francisco",
+        "last_name": "Rodríguez Bravo",
+        "email": "mrodbraz@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-05T20:23:55.873Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 209,
+    "fields": {
+        "password": "?PtRfX4?FgWlzoxZCH7RBk",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "malvmar",
+        "first_name": "María",
+        "last_name": "Álvarez Martín",
+        "email": "malvmar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.899Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 210,
+    "fields": {
+        "password": "AtZt3Rml.1nWm*Fo5xxl5f",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mrodher10",
+        "first_name": "María",
+        "last_name": "Rodríguez Hernández",
+        "email": "mrodher10@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:49:18.477Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 211,
+    "fields": {
+        "password": "poi6P34RCpivyw2n*oW4sG",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mmauperw",
+        "first_name": "María Adela",
+        "last_name": "Maury Perera",
+        "email": "mmauperw@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:42:15.074Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 212,
+    "fields": {
+        "password": "nej3HJL!U2lADSpXjlblpO",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "adiaraml",
+        "first_name": "María Amparo",
+        "last_name": "Díaz Ramírez",
+        "email": "adiaraml@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-26T19:25:19.529Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 213,
+    "fields": {
+        "password": "6frm0NYNDEKLyp9c0fHw7!",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mcurpri",
+        "first_name": "María Ángeles",
+        "last_name": "Curbelo Prieto",
+        "email": "mcurpri@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T09:35:44.496Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 214,
+    "fields": {
+        "password": "exReSkQZ0pTIkhwFbNQO8l",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mrrodpere",
+        "first_name": "María Ángeles",
+        "last_name": "Rodríguez Pérez",
+        "email": "mrrodpere@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:22:14.447Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 215,
+    "fields": {
+        "password": "jAgb3bxyRcoEwoVkMZtMaV",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mtruled",
+        "first_name": "Mária Ángles",
+        "last_name": "Trujillo Ledesma",
+        "email": "mtruled@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.649Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 216,
+    "fields": {
+        "password": "JUKsAnoTRl0Pi??21paC_8",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mperbej",
+        "first_name": "María Antonia",
+        "last_name": "Pérez Bejarano",
+        "email": "mperbej@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-05T20:14:25.730Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 217,
+    "fields": {
+        "password": "UEj?VigRoEO6oEC!aMnAiy",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mdelluz",
+        "first_name": "María Asunción",
+        "last_name": "Delgado Luzardo",
+        "email": "mdelluz@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-11T09:23:18.591Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 218,
+    "fields": {
+        "password": "?qplFZ6f*sPOUSC6kg0Vgc",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mvalher",
+        "first_name": "María Candelaria",
+        "last_name": "Valido Hernández",
+        "email": "mvalher@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.612Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 219,
+    "fields": {
+        "password": "myWW7ihW9.PSm5FlLJ?0cq",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "cpergarm",
+        "first_name": "María Carolina",
+        "last_name": "Perera García",
+        "email": "cpergarm@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-07T15:36:38.661Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 220,
+    "fields": {
+        "password": "Wcpszfl6F!xSolrYfJY0Z5",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "magarmarl",
+        "first_name": "María Concepción",
+        "last_name": "Garrido Martín",
+        "email": "magarmarl@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T11:18:59.190Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 221,
+    "fields": {
+        "password": "b??GQqLh4828EkdGqs1Xp7",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mmaycac",
+        "first_name": "María Cristina",
+        "last_name": "Mayor Cáceres",
+        "email": "mmaycac@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-05T20:20:46.868Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 222,
+    "fields": {
+        "password": "jvL*3Uo0FuTl0nOIumYUQj",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "msuacol",
+        "first_name": "María Cristina",
+        "last_name": "Suarez Colomer",
+        "email": "msuacol@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.594Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 223,
+    "fields": {
+        "password": "PFttAU_6otdhvX*3qh0xR.",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mbarrivz",
+        "first_name": "María Davinia",
+        "last_name": "Barragán Rivero",
+        "email": "mbarrivz@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T09:59:43.316Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 224,
+    "fields": {
+        "password": "sjx*va7kpcguvVlv4Ag3Ll",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mrodbat",
+        "first_name": "María del Carmen",
+        "last_name": "Rodríguez Batista",
+        "email": "mrodbat@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.575Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 225,
+    "fields": {
+        "password": "PRCVN7.XKO3d*gF9lDSwEJ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mdiamen",
+        "first_name": "María del Cristo",
+        "last_name": "Díaz Méndez",
+        "email": "mdiamen@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:55:25.933Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 226,
+    "fields": {
+        "password": "c6yR3suc?xgPoLfTe48?7j",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mtorsua",
+        "first_name": "María del Cristo",
+        "last_name": "Torres Suárez",
+        "email": "mtorsua@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-21T17:21:30.631Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 227,
+    "fields": {
+        "password": "Kg?*S5Ao8jKaQ4GPngxyvP",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mmigred",
+        "first_name": "María del Mar",
+        "last_name": "Miguel Redondo",
+        "email": "mmigred@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-12T09:30:14.905Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 228,
+    "fields": {
+        "password": "2biXaX6nNAze__Tx.0FoSE",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mmirruix",
+        "first_name": "María de los Ángeles",
+        "last_name": "Miranda Ruiz",
+        "email": "mmirruix@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-13T11:39:29.544Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 229,
+    "fields": {
+        "password": "Z.JrN4NwWQfN_tztyJob8i",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "malmtru",
+        "first_name": "María del Pilar",
+        "last_name": "Almeida Trujillo",
+        "email": "malmtru@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:21:32.370Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 230,
+    "fields": {
+        "password": "s?KV4J1sbUGvfaYxUy60Sq",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mmarsan",
+        "first_name": "María del Pino",
+        "last_name": "Martínez Santana",
+        "email": "mmarsan@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:22:51.658Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 231,
+    "fields": {
+        "password": "XC_xYN_s4SGP95qTFxW4Pp",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mojeluj",
+        "first_name": "María del Pino",
+        "last_name": "Ojeda Luján",
+        "email": "mojeluj@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:21:54.810Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 232,
+    "fields": {
+        "password": "Uz!YiHTeH3Tg2BFuj*N5St",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "srobrod",
+        "first_name": "María del Socorro",
+        "last_name": "Robador Rodríguez",
+        "email": "srobrod@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T19:23:33.449Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 233,
+    "fields": {
+        "password": "ATUUweVyrTXeEQ6p*lN9l!",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "eferagu",
+        "first_name": "María Elena",
+        "last_name": "Fernández Aguirre",
+        "email": "eferagu@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.631Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 234,
+    "fields": {
+        "password": "sLBq1!MBdWQXo8Lil3vrgk",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mprigam",
+        "first_name": "María Elena",
+        "last_name": "Prieto Gámez",
+        "email": "mprigam@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:18:31.576Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 235,
+    "fields": {
+        "password": "SqIxWz*npHbrYo0BFacqe6",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mcabsany",
+        "first_name": "María Isabel",
+        "last_name": "Cabrera Santana",
+        "email": "mcabsany@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:22:47.894Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 236,
+    "fields": {
+        "password": "_nW3GUsHf6g8wQfto*B10C",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mmarbar",
+        "first_name": "María Isabel",
+        "last_name": "Marante Barreto",
+        "email": "mmarbar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-06T15:18:19.752Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 237,
+    "fields": {
+        "password": "maPH_68Y6ZfPNrHnpVQNuz",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mcuesal",
+        "first_name": "María Jesús",
+        "last_name": "Cuerva Salas",
+        "email": "mcuesal@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T11:06:19.552Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 238,
+    "fields": {
+        "password": "JYSpF65tSHEDHKc7yF8BfA",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mibamar",
+        "first_name": "María Jesús",
+        "last_name": "Ibarria Martín",
+        "email": "mibamar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T10:40:53.204Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 239,
+    "fields": {
+        "password": "ps*6o?MI_zgk0!kEmGoETL",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mmilmun",
+        "first_name": "María Jesús",
+        "last_name": "Millán Muñoz",
+        "email": "mmilmun@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-12-18T08:15:48.059Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 240,
+    "fields": {
+        "password": "Z1pcaKUf_u*9ko!NIqilHo",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mgarmerj",
+        "first_name": "María José",
+        "last_name": "García Mérida",
+        "email": "mgarmerj@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:15:00.643Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 241,
+    "fields": {
+        "password": "gjbid4.t3yg1RnXnveMg.i",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mjimdia",
+        "first_name": "María José",
+        "last_name": "Jiménez Díaz",
+        "email": "mjimdia@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-11T18:50:02.399Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 242,
+    "fields": {
+        "password": "bHUT78SE*!f9dI*RwgZmhz",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mfuedia",
+        "first_name": "María Loreto",
+        "last_name": "Fuertes Díaz",
+        "email": "mfuedia@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-02-12T09:01:18.625Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 243,
+    "fields": {
+        "password": "_ace0UUvH9VrtQ0yrQWgED",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mleogonk",
+        "first_name": "María Lourdes",
+        "last_name": "León González",
+        "email": "mleogonk@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T19:24:52.282Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 244,
+    "fields": {
+        "password": "qpepbEHCCxoD0we9zHYBN9",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mgongonq",
+        "first_name": "María Luisa",
+        "last_name": "González González",
+        "email": "mgongonq@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T12:23:16.255Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 245,
+    "fields": {
+        "password": "JE2fMnmtrh3Hrgs5FSvoBe",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mrisdia",
+        "first_name": "María Luisa",
+        "last_name": "Risueño Díaz",
+        "email": "mrisdia@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-22T20:27:01.136Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 246,
+    "fields": {
+        "password": "ZQ5_0AnnrhOoO?.uBKVLc6",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "msersanf",
+        "first_name": "María Luisa",
+        "last_name": "Serrano Sánchez",
+        "email": "msersanf@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:15:22.919Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 247,
+    "fields": {
+        "password": "..kwBdl5_dMqdWez6Yvs3D",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mrosher",
+        "first_name": "María Mar",
+        "last_name": "Rosa Hernández",
+        "email": "mrosher@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-12T09:09:21.606Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 248,
+    "fields": {
+        "password": "0Kua7*UtsfalsJiuZ0b*HJ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mmespad",
+        "first_name": "María Nela",
+        "last_name": "Mesa Padilla",
+        "email": "mmespad@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:39:54.204Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 249,
+    "fields": {
+        "password": "PK.7s6fD_x_DkD1CJmDD3Y",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mbrimiq",
+        "first_name": "María Oreto",
+        "last_name": "Briz Miquel",
+        "email": "mbrimiq@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-13T10:54:09.932Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 250,
+    "fields": {
+        "password": "hsW8C4kQ6bBnzc*cF!!kw3",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pgarcar",
+        "first_name": "María Paloma",
+        "last_name": "García de Carlos",
+        "email": "pgarcar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:17:55.458Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 251,
+    "fields": {
+        "password": "UuafpVgA!JpoB0!BXFwtih",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mmarmarf",
+        "first_name": "María Pilar",
+        "last_name": "Martín Martín",
+        "email": "mmarmarf@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T19:57:17.557Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 252,
+    "fields": {
+        "password": "6d67Oxqxp!gtaFMC9PUOia",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mrodlav",
+        "first_name": "María Pilar",
+        "last_name": "Rodrigo Lavandera",
+        "email": "mrodlav@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-10T10:20:29.416Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 253,
+    "fields": {
+        "password": "9tbc3mpOwWHxYqk?MhKxkQ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mspergon",
+        "first_name": "María Sheila",
+        "last_name": "Pérez González",
+        "email": "mspergon@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.475Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 254,
+    "fields": {
+        "password": "_ELVNPEc9.fz*oSigzDmDd",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mtherbor",
+        "first_name": "María Teresa",
+        "last_name": "Hernández Borges",
+        "email": "mtherbor@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T19:26:31.338Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 255,
+    "fields": {
+        "password": "d5jgtThcqtPO2dT9xh.2nE",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mnavherz",
+        "first_name": "María Teresa",
+        "last_name": "Navarro Hernández",
+        "email": "mnavherz@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.136Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 256,
+    "fields": {
+        "password": "JDzYrLIncyKjEBVxlxW2LR",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mpeigar",
+        "first_name": "María Teresa",
+        "last_name": "Peiró García-Machiñena",
+        "email": "mpeigar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:22:27.682Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 257,
+    "fields": {
+        "password": "cPZ2uk5p5IBRfc5Ml*chTl",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tpolnor",
+        "first_name": "María Teresa",
+        "last_name": "Polo Noreña",
+        "email": "tpolnor@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T09:59:43.341Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 258,
+    "fields": {
+        "password": "7dI79xNW9J5oKvi4O6VFOm",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mrodplac",
+        "first_name": "María Teresa",
+        "last_name": "Rodríguez Plácido",
+        "email": "mrodplac@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-11T18:29:07.159Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 259,
+    "fields": {
+        "password": "ogAD4RKpPPCqvpgq1A67o0",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mtorher1",
+        "first_name": "María Victoria",
+        "last_name": "Toral Hernández",
+        "email": "mtorherl@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-12T13:28:01.483Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 260,
+    "fields": {
+        "password": "uXyET4F5.GBvK3zGfm9lpR",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "marioacosta@tac7.com",
+        "first_name": "Mario",
+        "last_name": "Acosta",
+        "email": "marioacosta@tac7.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-12T08:23:05.046Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 261,
+    "fields": {
+        "password": "y3IWdmjGKBLZTTI21mmH!?",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mvegpri",
+        "first_name": "Mariola",
+        "last_name": "de la Vega Prieto",
+        "email": "mvegpri@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:15:37.091Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 262,
+    "fields": {
+        "password": "KuaEffuQ!hbtOtAl2M5zqX",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "msilbet",
+        "first_name": "Marta",
+        "last_name": "Da Silva Bethencourt",
+        "email": "msilbet@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-22T19:47:26.824Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 263,
+    "fields": {
+        "password": "1L672UUdS57nxkA6FpnOjR",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mdiaasct",
+        "first_name": "Marta",
+        "last_name": "Diaz Ascanio",
+        "email": "mdiaasct@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-26T13:04:02.183Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 264,
+    "fields": {
+        "password": "FAjci2BFCtoEBqknieEQQW",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mgonmar10",
+        "first_name": "Marta",
+        "last_name": "González Martín",
+        "email": "mgonmar10@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.964Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 265,
+    "fields": {
+        "password": "qNT8vClkD!?28FO1n8dVIT",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mrodrio",
+        "first_name": "Marta",
+        "last_name": "Rodríguez del Rio",
+        "email": "mrodrio@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:58:06.590Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 266,
+    "fields": {
+        "password": "wfzAr3LvI8tmNJdgERjK*4",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mjgarsan",
+        "first_name": "Mateo José",
+        "last_name": "Garrido Sanahuja",
+        "email": "mjgarsan@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.066Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 267,
+    "fields": {
+        "password": "RHN4*cz0m0*Ytfg_efvo2n",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mcalsua",
+        "first_name": "Matilde",
+        "last_name": "Calderín Suárez",
+        "email": "mcalsua@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:27:20.850Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 268,
+    "fields": {
+        "password": "MHqbO.aK7*GDW5_QPNxuCO",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mgonmarg",
+        "first_name": "M. Elena",
+        "last_name": "González Marrero",
+        "email": "mgonmarg@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T19:09:51.672Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 269,
+    "fields": {
+        "password": "LFEAhN4C.fYwvuVUo*rXEN",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mcabpen",
+        "first_name": "Mercedes",
+        "last_name": "Cabrera Peña",
+        "email": "mcabpen@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-26T10:23:53.555Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 270,
+    "fields": {
+        "password": "4bOh?SeccxDe0mso!Twq6u",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mnavfri",
+        "first_name": "Miguel",
+        "last_name": "Navarro Frias",
+        "email": "mnavfri@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-01-27T09:46:44.229Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 271,
+    "fields": {
+        "password": "6MF8m5!D4M5PJfYwG6xcQJ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mgarrodx",
+        "first_name": "Miguel Agustín",
+        "last_name": "García Rodríguez",
+        "email": "mgarrodx@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T12:55:23.386Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 272,
+    "fields": {
+        "password": "ZGU5AJ37X3zyQPMjyd8.0k",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mcabperd",
+        "first_name": "Miguel Ángel",
+        "last_name": "Cabrera Pérez",
+        "email": "mcabperd@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-11T14:16:08.181Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 273,
+    "fields": {
+        "password": "wwcgLIT*QGzX1CELh7QL8b",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mhorama",
+        "first_name": "Miguel Ángel",
+        "last_name": "Hormiga Amador",
+        "email": "mhorama@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.684Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 274,
+    "fields": {
+        "password": "MC0.IvpMqaysobTvWjspX!",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mruifue",
+        "first_name": "Miguel Ángel",
+        "last_name": "Ruiz Fuentes",
+        "email": "mruifue@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:48:12.748Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 275,
+    "fields": {
+        "password": "3p0vBFql5HKl.y4OkUher6",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mmarferc",
+        "first_name": "Miguel Jesús Martínez",
+        "last_name": "Carrasco Fernández",
+        "email": "mmarferc@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T12:56:11.542Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 276,
+    "fields": {
+        "password": "l*3jMrxG.JLzJy6_k2I6xK",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "msoslac",
+        "first_name": "Miguel José",
+        "last_name": "Sosa Lacruz",
+        "email": "msoslac@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-07T15:28:31.259Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 277,
+    "fields": {
+        "password": "A*rIOWCJFJV9aX4bpxNiCR",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mlomaras",
+        "first_name": "Miguel Santiago",
+        "last_name": "Lomba Aranda",
+        "email": "mlomaras@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T19:09:25.735Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 278,
+    "fields": {
+        "password": "BcuYNG*PZ5yMaV7SDlKfDJ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "marrlop",
+        "first_name": "Míkel",
+        "last_name": "Arrasate López",
+        "email": "marrlop@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T19:09:32.331Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 279,
+    "fields": {
+        "password": "58Xgxglzh6gk58QRQYz125",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mmartor",
+        "first_name": "Míriam",
+        "last_name": "Martín Torres",
+        "email": "mmartor@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:21:57.293Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 280,
+    "fields": {
+        "password": "ISWpzie6wdNp9uR2czPWIZ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "msegced",
+        "first_name": "Moises",
+        "last_name": "Segura Cedres",
+        "email": "msegced@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T12:23:21.297Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 281,
+    "fields": {
+        "password": "e**YKVc7MiI*aXa8TXPKXS",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mgridomb",
+        "first_name": "Mónica",
+        "last_name": "Grimón Domínguez",
+        "email": "mgridomb@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-22T08:26:19.150Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 282,
+    "fields": {
+        "password": "XZLwSQt.U0hRR8u4B9zlF9",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mogarsan",
+        "first_name": "Montserrat",
+        "last_name": "García Santana",
+        "email": "mogarsan@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.247Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 283,
+    "fields": {
+        "password": "c2K58Jz65IkoA17nhYWn?8",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mgonjorf",
+        "first_name": "Montserrat",
+        "last_name": "González Jorge",
+        "email": "mgonjorf@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.193Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 284,
+    "fields": {
+        "password": "SL3yi!Ib5WlL8LyT?bparq",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mromcash",
+        "first_name": "Montserrat",
+        "last_name": "Román Casamartina",
+        "email": "mromcash@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:24:10.038Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 285,
+    "fields": {
+        "password": "udCkDMYNw0_vF8IYDorrU5",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "nluiyan",
+        "first_name": "Natalia E.",
+        "last_name": "De Luis Yanes",
+        "email": "nluiyan@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.987Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 286,
+    "fields": {
+        "password": "sRtcAOCaUuT8YuYGaiqIaY",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "nferzam",
+        "first_name": "Nayra",
+        "last_name": "Fernández Zamora",
+        "email": "nferzam@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.180Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 287,
+    "fields": {
+        "password": "G!hf6VLTpnixP0o48a5dEV",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "nsangil",
+        "first_name": "Nicolás José",
+        "last_name": "Santana Gil",
+        "email": "nsangil@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:17:42.071Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 288,
+    "fields": {
+        "password": "drzyDzgngVpnMmVWo?lZYK",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "nbanmorw",
+        "first_name": "Nuria",
+        "last_name": "Bañón Morón",
+        "email": "nbanmorw@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:15:51.352Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 289,
+    "fields": {
+        "password": "pHxJK.zCU?lz*HqobB448z",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ocarleo",
+        "first_name": "Octavio Jesús",
+        "last_name": "Caraballo de León",
+        "email": "ocarleo@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-27T10:50:27.086Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 290,
+    "fields": {
+        "password": "TvzcLRK*_14Tvxo*vJfd2m",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "oascsua",
+        "first_name": "Octavio R.",
+        "last_name": "Ascanio Suárez",
+        "email": "oascsua@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T12:23:29.837Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 291,
+    "fields": {
+        "password": "FG9Aucz!.1.tB*7znHSd4V",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "obetcur",
+        "first_name": "Ofelia",
+        "last_name": "Betancourt Curbelo",
+        "email": "obetcur@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.668Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 292,
+    "fields": {
+        "password": "1grTRfTlhXU94f0AOM569y",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "oayzmas",
+        "first_name": "Olga",
+        "last_name": "Ayza Mascarell",
+        "email": "oayzmas@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-12T07:17:13.208Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 293,
+    "fields": {
+        "password": "K3ofzYbCtHT2o9ibTYy9sF",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "oviealm",
+        "first_name": "Óliver",
+        "last_name": "Almond Viera",
+        "email": "oviealm@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:21:22.807Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 294,
+    "fields": {
+        "password": "7!lT1KGjCIiO.Gp7OUQH1u",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "omarram",
+        "first_name": "Óscar José",
+        "last_name": "Marrero Ramírez",
+        "email": "omarram@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.207Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 295,
+    "fields": {
+        "password": "Lz1Y_xnLOl4!lBjaFOmFw7",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "osanveg",
+        "first_name": "Óscar José",
+        "last_name": "Santana Vega",
+        "email": "osanveg@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-22T08:40:19.394Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 296,
+    "fields": {
+        "password": "RsIvrGcJGQZyFH23!?ReGn",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pbetort",
+        "first_name": "Pablo",
+        "last_name": "Betancor Ortiz",
+        "email": "pbetort@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-07T08:49:52.445Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 297,
+    "fields": {
+        "password": "xuTFKaI6yDsVL33jjt*3ge",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "privvid",
+        "first_name": "Pablo",
+        "last_name": "Rivas Vidal",
+        "email": "privvid@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:22:05.475Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 298,
+    "fields": {
+        "password": "PvYNbRx1PbsybNCA1Qw7Tw",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pcanper",
+        "first_name": "Pablo Antonio",
+        "last_name": "Cano Pérez",
+        "email": "pcanper@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-02T08:12:31Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 299,
+    "fields": {
+        "password": "ZzYsVJ.CmmPc4QA0fG55vs",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pferher",
+        "first_name": "Pablo J.",
+        "last_name": "Fernández Hernández",
+        "email": "pferher@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T19:21:20.600Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 300,
+    "fields": {
+        "password": ".taGSQnZwBssi.IfZfCk*F",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pcaroje",
+        "first_name": "Patricia",
+        "last_name": "Carrillo Ojeda",
+        "email": "pcaroje@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:17:49.122Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 301,
+    "fields": {
+        "password": "VuETMkuD4a7O.CD1VHv2vB",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pagonmora",
+        "first_name": "Patricia",
+        "last_name": "Moreno González",
+        "email": "pagonmora@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:17:45.810Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 302,
+    "fields": {
+        "password": "CPcQUIGxfN8VluBDjMAIyK",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "poragal",
+        "first_name": "Patricia",
+        "last_name": "Oramas Gallar",
+        "email": "poragal@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.843Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 303,
+    "fields": {
+        "password": "__MQhlZPLgO_eeS45cfInV",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pruitov",
+        "first_name": "Patricia",
+        "last_name": "Ruiz de Galarreta Tovar",
+        "email": "pruitov@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-26T13:01:44.529Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 304,
+    "fields": {
+        "password": "gz2OgFS44N1yj34sQx3Q8!",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "prodpadn",
+        "first_name": "Patricia Orlanda",
+        "last_name": "Rodríguez Padrón",
+        "email": "prodpadn@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:33:56.992Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 305,
+    "fields": {
+        "password": "p85NysYei.8bzsuNBGllGR",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pfueher",
+        "first_name": "Pedro",
+        "last_name": "Fuentes Hernández",
+        "email": "pfueher@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-06T13:07:53.975Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 306,
+    "fields": {
+        "password": "o?SftuBvtasg3tRvAYqBfQ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ppelpue",
+        "first_name": "Pedro",
+        "last_name": "Peláez Puerto",
+        "email": "ppelpue@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T18:48:07.873Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 307,
+    "fields": {
+        "password": "IzHqlWUyaY41WjPcpb0Z_r",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pperdel",
+        "first_name": "Pedro",
+        "last_name": "Perdomo Delgado",
+        "email": "pperdel@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:42:33.887Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 308,
+    "fields": {
+        "password": "Lihlk0lo4dHXccTdviZYDo",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pbaqper",
+        "first_name": "Pedro Juan",
+        "last_name": "Baquero Pérez",
+        "email": "pbaqper@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-07T09:55:55.735Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 309,
+    "fields": {
+        "password": "PQ*6!YOZHPL007fcs_XTtl",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "pcovfue",
+        "first_name": "Pedro Wladimir",
+        "last_name": "Cova Fuentes",
+        "email": "pcovfue@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-10T13:04:54.659Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 310,
+    "fields": {
+        "password": "aYnrWx5InrP*nWttGAWt4g",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rrosver",
+        "first_name": "Rafael",
+        "last_name": "del Rosario Verdú",
+        "email": "rrosver@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.780Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 311,
+    "fields": {
+        "password": "2.I6XAh8tz4UwN3xI9n.f.",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rfercar",
+        "first_name": "Rafael",
+        "last_name": "Ferrando Carrasco",
+        "email": "rfercar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-22T08:27:36.141Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 312,
+    "fields": {
+        "password": "7ohFIax3v1Y?!b9uDGKW8m",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ragubau",
+        "first_name": "Rafael Carlos",
+        "last_name": "Aguiar Bautista",
+        "email": "ragubau@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T19:30:37.642Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 313,
+    "fields": {
+        "password": "oMXJA5xjuMM1K7llY.5wfi",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rlarave",
+        "first_name": "Rafael Carlos",
+        "last_name": "Larena-avellaneda Bridgeman-aldridge",
+        "email": "rlarave@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:27:24.163Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 314,
+    "fields": {
+        "password": "nQ5i!*jjx?NtT40LSGoFNC",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rperpadl",
+        "first_name": "Rafael Jesús",
+        "last_name": "Pérez Padrón",
+        "email": "rperpadl@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:22:13.625Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 315,
+    "fields": {
+        "password": "_PvTxE?tim5KbWL!OTFn_5",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rcrugon",
+        "first_name": "Rebeca",
+        "last_name": "Cruz González",
+        "email": "rcrugon@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-02-26T10:34:35.961Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 316,
+    "fields": {
+        "password": "wiFFbCodVaxSn14LML8LPr",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rregrod",
+        "first_name": "Ricardo",
+        "last_name": "Del Reguero Rodríguez",
+        "email": "rregrod@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-13T10:36:37.973Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 317,
+    "fields": {
+        "password": "9X19rk6QYvPXaPcpmiS5dj",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rgongon",
+        "first_name": "Ricardo",
+        "last_name": "González González",
+        "email": "rgongon@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-10T09:54:17.765Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 318,
+    "fields": {
+        "password": "600LFO8Z2snKb*Ancx_3jG",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rperlopf",
+        "first_name": "Ricardo Germán",
+        "last_name": "Pérez López",
+        "email": "rperlopf@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:18:06.767Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 319,
+    "fields": {
+        "password": "MEql_aYxfv9PTMflXIml*l",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rnegdia",
+        "first_name": "Rita María",
+        "last_name": "Negrín Díaz",
+        "email": "rnegdia@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:18:03.580Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 320,
+    "fields": {
+        "password": "kK9DFnFPacourDejmcMyNp",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rguicam",
+        "first_name": "Roger Ulises",
+        "last_name": "Guillén Campos",
+        "email": "rguicam@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T12:48:12.734Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 321,
+    "fields": {
+        "password": "sICGmpIYH1DA.scsPj3xpJ",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rpesper",
+        "first_name": "Rosa Delia",
+        "last_name": "Pestana Pérez",
+        "email": "rpesper@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T18:08:18.928Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 322,
+    "fields": {
+        "password": "zM4Ul?pV!MzKcpe4y2JtJW",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rgalrod",
+        "first_name": "Rosa María",
+        "last_name": "Galindo Rodríguez",
+        "email": "rgalrod@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-22T19:55:06.359Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 323,
+    "fields": {
+        "password": "1btuwn4bprY.theRMF5Jez",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rgongonj",
+        "first_name": "Rosa María",
+        "last_name": "González González",
+        "email": "rgongonj@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-26T19:10:23.948Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 324,
+    "fields": {
+        "password": "UQLyAool5DtMnE4J.bf?VD",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rmuncam",
+        "first_name": "Rosa Nieves",
+        "last_name": "Muñoz Campos",
+        "email": "rmuncam@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-02T08:12:31Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 325,
+    "fields": {
+        "password": "fLHu7BVjMoKyKSuSZ2RY?o",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "rtejchi",
+        "first_name": "Ruth Esther",
+        "last_name": "Tejera Chico",
+        "email": "rtejchi@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:33.395Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 326,
+    "fields": {
+        "password": "9QvcA7!dc10!gyGXv*6EZE",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "snundia",
+        "first_name": "Salvador Cruz",
+        "last_name": "Núñez Díaz",
+        "email": "snundia@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:28:36.393Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 327,
+    "fields": {
+        "password": "?!riohSVtA7LJ1XXo!K1Lm",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "sasegon",
+        "first_name": "Santiago",
+        "last_name": "Asenjo González-Valerio",
+        "email": "sasegon@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:28:18.939Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 328,
+    "fields": {
+        "password": "8ANHArwh?MttK9nQle.dP_",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "smarmor",
+        "first_name": "Sofía Isabel",
+        "last_name": "Martínez Morilla",
+        "email": "smarmor@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-13T11:16:10.429Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 329,
+    "fields": {
+        "password": "tELPWuIKS3I9Y8xl4lDoBr",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "smarabr",
+        "first_name": "Sonia",
+        "last_name": "Martín de Abreu",
+        "email": "smarabr@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-11T09:28:27.025Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 330,
+    "fields": {
+        "password": ".7up_n0plS_vZCL1ebh0PS",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "smarlat",
+        "first_name": "Sonia",
+        "last_name": "Martín Latorre",
+        "email": "smarlat@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-22T08:36:21.902Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 331,
+    "fields": {
+        "password": "pKN4YwreTeU_PAPEkl9K5W",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tmolher",
+        "first_name": "Tamia María",
+        "last_name": "Molina Herrera",
+        "email": "tmolher@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-12T10:12:39.281Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 332,
+    "fields": {
+        "password": "FAtkN!AXJ6fVUVdjsmB!eW",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tclafar",
+        "first_name": "Teresa",
+        "last_name": "Clavijo Fariñas",
+        "email": "tclafar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-08T12:23:16.237Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 333,
+    "fields": {
+        "password": "ir?VQrjAOocphhWLuRZE1V",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tcueapa",
+        "first_name": "Teresa de Jesús",
+        "last_name": "Cuesta Apausa",
+        "email": "tcueapa@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:28:40.549Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 334,
+    "fields": {
+        "password": "GjxkqWGigKF1CHhGMmRySx",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tsossua",
+        "first_name": "Teresa de Jesús",
+        "last_name": "Sosa Suárez",
+        "email": "tsossua@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T09:59:43.352Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 335,
+    "fields": {
+        "password": "b?mmxi.3ts4cs8?7xesLxA",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tbarbar",
+        "first_name": "Teresa María",
+        "last_name": "Barroso Barroso",
+        "email": "tbarbar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T11:49:43.979Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 336,
+    "fields": {
+        "password": "E_vd5.mFbuJqKfk9W1DjHR",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tlorare",
+        "first_name": "Tomás",
+        "last_name": "Lorente Arencibia",
+        "email": "tlorare@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T18:41:34.090Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 337,
+    "fields": {
+        "password": "gFIjMuWDDNP7rXHU_Gb7Wk",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tperherk",
+        "first_name": "Tomás Manuel",
+        "last_name": "Pérez Hernández",
+        "email": "tperherk@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T09:59:51.028Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 338,
+    "fields": {
+        "password": "Bh9EoO*ldAp!qZWpcu7hN1",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "tgongil",
+        "first_name": "Trinidad",
+        "last_name": "González Gil",
+        "email": "tgongil@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:27:54.047Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 339,
+    "fields": {
+        "password": "WpQM4jigizwzxwWV7vN7bo",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "msoscerd",
+        "first_name": "Vanesa",
+        "last_name": "Soza Cerezo",
+        "email": "msoscerd@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:22:41.934Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 340,
+    "fields": {
+        "password": "BLo6dzKKflx6Jf*dzCxLZ7",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "vfersan",
+        "first_name": "Vicente",
+        "last_name": "Fernández-Oliva Santana",
+        "email": "vfersan@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T11:29:31.146Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 341,
+    "fields": {
+        "password": "IMnNb!Kons03XKAVVXDiLq",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "vnarsin",
+        "first_name": "Victor",
+        "last_name": "Naranjo Sintes",
+        "email": "vnarsin@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:27:31.368Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 342,
+    "fields": {
+        "password": "OFN2xgM.3_C*H*lNqw5nTq",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "vsanari",
+        "first_name": "Victor",
+        "last_name": "Sánchez Arias",
+        "email": "vsanari@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T11:11:01.811Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 343,
+    "fields": {
+        "password": "A.1qil8YohBYDKWJNcji0x",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "valmmar",
+        "first_name": "Victor Manuel",
+        "last_name": "Almeida Martín",
+        "email": "valmmar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-11T08:29:14.987Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 344,
+    "fields": {
+        "password": "L3lTlC3uyTLbjgkr!ZYsEY",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "vrosbet",
+        "first_name": "Victor Manuel",
+        "last_name": "de Rosa Betancor",
+        "email": "vrosbet@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-11T18:39:06.805Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 345,
+    "fields": {
+        "password": "3dMw4DedDqIrvlx7C0qwbv",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "vrevbar",
+        "first_name": "Victor Manuel",
+        "last_name": "Reverón Barroso",
+        "email": "vrevbar@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-11T09:24:36.608Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 346,
+    "fields": {
+        "password": "?itosQy1c!GpjWX5NhA3GM",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "vferlop",
+        "first_name": "Vita Concepción",
+        "last_name": "Fernández López",
+        "email": "vferlop@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-11-05T20:12:09.547Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 347,
+    "fields": {
+        "password": "WpcGxWK3XXQrllQC4uVs6y",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "yviccab",
+        "first_name": "Yaiza",
+        "last_name": "Vicente Cabañas",
+        "email": "yviccab@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-03-04T10:24:57.004Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 348,
+    "fields": {
+        "password": "3djzrwAyg4eKgvWwuLWoOf",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ypermed",
+        "first_name": "Yaiza del Carmen",
+        "last_name": "Pérez Medina",
+        "email": "ypermed@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T13:27:18.065Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 349,
+    "fields": {
+        "password": "6Q1Jz7bYn3xR5fXxXPwOv?",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ysanalof",
+        "first_name": "Yeray",
+        "last_name": "Sánchez Alonso",
+        "email": "ysanalof@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-06T12:55:54.890Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 350,
+    "fields": {
+        "password": "4IFecPbYFIHH3aBdr*fhi7",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ybarcor",
+        "first_name": "Yeray Jacobo",
+        "last_name": "Barreiro Cortés",
+        "email": "ybarcor@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T18:56:49.864Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 351,
+    "fields": {
+        "password": "1ty0b!V*heXc8AEAkcUeu2",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "ydiagut",
+        "first_name": "Yolanda Isabel",
+        "last_name": "Díaz Gutiérrez",
+        "email": "ydiagut@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-04-27T10:21:32.508Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 352,
+    "fields": {
+        "password": "w!Hwi!uKD*cDl7_BoYXz.w",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "zoilofalcon@essscan.es",
+        "first_name": "Zoilo",
+        "last_name": "Falcón",
+        "email": "zoilofalcon@essscan.es",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-07T10:31:41.644Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 353,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$fa5clcG7O6tVZGvicmypMl$HdWGJvu/fMOfOvD0gF69GSPsbuUP2nfDUxHp+SerfGw=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mzurper",
+        "first_name": "María Nieves",
+        "last_name": "Zurita Pérez",
+        "email": "mzurper@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-09T11:19:47.790Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 354,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$ItLfJ1qxhwx7tteXve87mX$78hPQKb9/yF4TmUB/fNCAMPMSaL26mkh8hbvPwBo0GA=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "mareher",
+        "first_name": "Manuel Juan",
+        "last_name": "Arechavaleta Hernández",
+        "email": "mareher@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-10T08:57:56.934Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 355,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$oOM5Pbcbobta4QtSgPlNW9$4U8s9pEhZPPdcpkNIZrfF0XocyftmNudnP6R70Xm66A=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "avergal",
+        "first_name": "Manuel Ángel",
+        "last_name": "Vera Galván",
+        "email": "avergal@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-10T08:59:37.247Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 356,
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$6N5BHDg35WHSMwy18wnXP1$LzNlSfIa2cqNvG+1TGyoWL2mtN605Z2oRx6jIV+KpFw=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "eojelan",
+        "first_name": "Elízabeth Yolanda",
+        "last_name": "Ojeda Land",
+        "email": "eojelan@gobiernodecanarias.org",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-06-10T09:35:49.907Z",
         "groups": [],
         "user_permissions": []
     }

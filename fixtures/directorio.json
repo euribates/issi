@@ -13,7 +13,7 @@
         "ruta": "/",
         "url": null,
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-22T09:33:39.717Z",
+        "f_cambio": "2026-06-09T13:08:18.696Z",
         "f_baja": null
     }
 },
@@ -337,7 +337,7 @@
         "ruta": "/1/42091/7268",
         "url": "http://www.gobiernodecanarias.org/presidencia/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-12T11:55:24.951Z",
+        "f_cambio": "2026-06-09T08:45:23.047Z",
         "f_baja": null
     }
 },
@@ -1201,7 +1201,7 @@
         "ruta": "/1/42091",
         "url": "http://www.gobiernodecanarias.org/presidencia/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-12T11:55:24.955Z",
+        "f_cambio": "2026-06-09T08:45:23.052Z",
         "f_baja": null
     }
 },
@@ -1237,7 +1237,7 @@
         "ruta": "/1/42091/7268/42093",
         "url": "https://www.gobiernodecanarias.org/transformaciondigital",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-12T11:55:24.947Z",
+        "f_cambio": "2026-06-09T08:45:23.042Z",
         "f_baja": null
     }
 },
@@ -2389,7 +2389,7 @@
         "ruta": "/1/42159",
         "url": "https://www.gobiernodecanarias.org/transicionecologica/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-12T07:34:51.650Z",
+        "f_cambio": "2026-06-09T13:08:18.690Z",
         "f_baja": null
     }
 },
@@ -2407,7 +2407,7 @@
         "ruta": "/1/42159/42160",
         "url": "https://www.gobiernodecanarias.org/transicionecologica/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-12T07:34:51.645Z",
+        "f_cambio": "2026-06-09T13:08:18.685Z",
         "f_baja": null
     }
 },
@@ -2443,7 +2443,7 @@
         "ruta": "/1/42159/42160/42162",
         "url": "https://www.gobiernodecanarias.org/medioambiente/",
         "f_alta": "2025-11-27T13:28:21.221Z",
-        "f_cambio": "2026-05-05T11:18:17.115Z",
+        "f_cambio": "2026-06-09T13:08:18.678Z",
         "f_baja": null
     }
 },

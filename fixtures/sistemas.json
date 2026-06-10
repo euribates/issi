@@ -565,7 +565,7 @@
         "icono_width": 512,
         "icono": "sistemas/iconos/2025/logo-issi.png",
         "created": "2025-11-24T10:20:18.231Z",
-        "updated": "2026-05-03T20:57:46.574Z",
+        "updated": "2026-06-09T08:45:23.035Z",
         "archived": null
     }
 },
@@ -2607,7 +2607,7 @@
         "ente": "ACIISI",
         "codigo": "FAP_EPIRIS",
         "url": null,
-        "descripcion": "",
+        "descripcion": "Gestión de subvenciones",
         "finalidad": "Subvenciones destinadas a empresas para la realización de proyectos de innovación en áreas prioritarias de la Estrategia de Especialización Inteligente y Sostenible de Canarias —RIS3 ampliada—, con la finalidad de mejorar la competitividad del sector empresarial mediante la innovación y contribuir al fortalecimiento del entorno socioeconómico de Canarias.",
         "observaciones": "Orden nº 491/2024, de 12 de diciembre, https://www.gobiernodecanarias.org/boc/2024/258/4381.html Mediante Orden de 2 de diciembre de 2025 se corrige un error material en la base 19, apartado 3, letra c),  sobre la justificación de la subvención https://www.gobiernodecanarias.org/boc/2025/248/4266.html",
         "tema": "IDI",
@@ -13414,6 +13414,162 @@
     }
 },
 {
+    "model": "sistemas.sistema",
+    "pk": 558,
+    "fields": {
+        "uuid_sistema": "490442b0-b24c-4835-bd51-7e6ebcd04bdf",
+        "nombre_sistema": "Banco de Datos de Biodiversidad de Canarias",
+        "organismo": 42162,
+        "ente": null,
+        "codigo": "BIOTA",
+        "url": null,
+        "descripcion": "Banco de Datos de Biodiversidad de Canarias",
+        "finalidad": "Banco de Datos de Biodiversidad de Canarias",
+        "observaciones": "Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad.",
+        "tema": "FYF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2026/biota-logo.png",
+        "created": "2026-06-09T11:14:27.062Z",
+        "updated": "2026-06-10T07:38:53.232Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 559,
+    "fields": {
+        "uuid_sistema": "9a42da9c-157a-422f-9706-10367c9c675b",
+        "nombre_sistema": "Especies protegidas de Canarias",
+        "organismo": 42162,
+        "ente": null,
+        "codigo": "CENTINELA",
+        "url": null,
+        "descripcion": "Base de datos de especies protegidas",
+        "finalidad": "Base de datos de especies protegidas con imágenes e información relativa a su taxonomía y sistemática, distribución, estatus de protección y conservación, así como documentos técnicos y administrativos de interés.",
+        "observaciones": "Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad.",
+        "tema": "FYF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2026/centinela-logo.png",
+        "created": "2026-06-10T07:40:49.924Z",
+        "updated": "2026-06-10T08:17:36.474Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 560,
+    "fields": {
+        "uuid_sistema": "1054d9d3-ae71-48d3-8ab1-e8a84f3e1ba7",
+        "nombre_sistema": "Gestor de Autorizaciones",
+        "organismo": 42162,
+        "ente": null,
+        "codigo": "GESA",
+        "url": null,
+        "descripcion": "Gestor de Autorizaciones",
+        "finalidad": "Gestionar Autorizaciones",
+        "observaciones": "Actualmente se encuentra en desarrollo.\r\n\r\nLey 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad.",
+        "tema": "FYF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-06-10T08:24:27.572Z",
+        "updated": "2026-06-10T08:24:27.572Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 561,
+    "fields": {
+        "uuid_sistema": "110ea896-5d9b-42ce-a1ba-3723140441ea",
+        "nombre_sistema": "Portal de Referencia Natura 2000 de la Comunidad Autónoma de Canarias",
+        "organismo": 42162,
+        "ente": null,
+        "codigo": "INATURA",
+        "url": null,
+        "descripcion": "Web pública sobre espacios protegidos",
+        "finalidad": "La web pública de iNatura es un punto de encuentro de la información correspondiente a los espacios protegidos pertenecientes a la red ecológica europea Natura 2000 y cuya gestión se lleva a cabo por parte de administraciones públicas de la Comunidad Autónoma de Canarias.",
+        "observaciones": "",
+        "tema": "FYF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2026/inatura-logo.png",
+        "created": "2026-06-10T09:04:14.564Z",
+        "updated": "2026-06-10T09:25:18.713Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 562,
+    "fields": {
+        "uuid_sistema": "24e55780-d7e3-4cdf-a5e6-808182db5fd1",
+        "nombre_sistema": "Visor Cartográfico (Serv. Biodiversidad)",
+        "organismo": 42162,
+        "ente": null,
+        "codigo": "VISOR",
+        "url": null,
+        "descripcion": "Visor cartográfico",
+        "finalidad": "Visor cartográfico",
+        "observaciones": "Ley 42/2007, de 13 de diciembre, del Patrimonio Natural y de la Biodiversidad.",
+        "tema": "FYF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 0,
+        "icono_width": 0,
+        "icono": "",
+        "created": "2026-06-10T09:26:41.063Z",
+        "updated": "2026-06-10T09:26:41.063Z",
+        "archived": null
+    }
+},
+{
+    "model": "sistemas.sistema",
+    "pk": 563,
+    "fields": {
+        "uuid_sistema": "5d81c705-3ec6-48c4-8436-5bd58f852eea",
+        "nombre_sistema": "Especies introducidas en Canarias",
+        "organismo": 42162,
+        "ente": null,
+        "codigo": "EXOS",
+        "url": "https://www.biodiversidadcanarias.es/exos/",
+        "descripcion": "Base de datos de especies introducidas en Canarias",
+        "finalidad": "Base de datos de especies introducidas en Canarias establecidas y no establecidas, con imágenes e información relativa a su taxonomía y sistemática, distribución, normativa de aplicación, así como documentos técnicos y administrativos de interés.",
+        "observaciones": "",
+        "tema": "FYF",
+        "es_corporativo": false,
+        "es_subsistema_de": null,
+        "especial_importancia": false,
+        "familia": "_NA",
+        "icono_height": 512,
+        "icono_width": 512,
+        "icono": "sistemas/iconos/2026/exos-logo.png",
+        "created": "2026-06-10T09:33:24.735Z",
+        "updated": "2026-06-10T09:53:22.552Z",
+        "archived": null
+    }
+},
+{
     "model": "sistemas.activo",
     "pk": 1,
     "fields": {
@@ -13470,6 +13626,66 @@
         "datos_personales": "NO",
         "f_alta": "2026-04-20T19:27:57.502Z",
         "f_cambio": "2026-04-20T19:27:57.502Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.activo",
+    "pk": 5,
+    "fields": {
+        "sistema": 10,
+        "nombre_activo": "dim_usuarios",
+        "descripcion": "Tabla de usuarios del sistema",
+        "es_prioritario": false,
+        "georreferenciado": false,
+        "datos_personales": "DP",
+        "f_alta": "2026-06-09T07:53:02.187Z",
+        "f_cambio": "2026-06-09T07:53:02.187Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.activo",
+    "pk": 6,
+    "fields": {
+        "sistema": 10,
+        "nombre_activo": "dim_procedimientos",
+        "descripcion": "Relación de procedimientos del SICAC",
+        "es_prioritario": false,
+        "georreferenciado": false,
+        "datos_personales": "NO",
+        "f_alta": "2026-06-09T08:08:40.250Z",
+        "f_cambio": "2026-06-09T08:08:40.250Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.activo",
+    "pk": 7,
+    "fields": {
+        "sistema": 10,
+        "nombre_activo": "fact_asientos",
+        "descripcion": "Asientos de registro",
+        "es_prioritario": false,
+        "georreferenciado": false,
+        "datos_personales": "NO",
+        "f_alta": "2026-06-09T08:16:05.104Z",
+        "f_cambio": "2026-06-09T08:16:05.104Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.activo",
+    "pk": 8,
+    "fields": {
+        "sistema": 10,
+        "nombre_activo": "dim_oficinas",
+        "descripcion": "Oficinas de registro?",
+        "es_prioritario": false,
+        "georreferenciado": false,
+        "datos_personales": "NO",
+        "f_alta": "2026-06-09T11:29:38.569Z",
+        "f_cambio": "2026-06-09T11:29:38.569Z",
         "f_baja": null
     }
 },
@@ -14121,6 +14337,58 @@
     }
 },
 {
+    "model": "sistemas.arquetipo",
+    "pk": 47,
+    "fields": {
+        "tipo": "str",
+        "espacio": "",
+        "funcion": "fk",
+        "descripcion": "Clave foranea",
+        "created": "2026-06-09T07:56:37.635Z",
+        "updated": "2026-06-09T07:56:37.635Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 48,
+    "fields": {
+        "tipo": "datetime",
+        "espacio": "",
+        "funcion": "access",
+        "descripcion": "Fecha y hora de acceso",
+        "created": "2026-06-09T08:02:33.595Z",
+        "updated": "2026-06-09T08:02:33.595Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 49,
+    "fields": {
+        "tipo": "date",
+        "espacio": "",
+        "funcion": "date",
+        "descripcion": "Fecha",
+        "created": "2026-06-09T08:18:46.345Z",
+        "updated": "2026-06-09T08:18:46.345Z",
+        "deleted": null
+    }
+},
+{
+    "model": "sistemas.arquetipo",
+    "pk": 50,
+    "fields": {
+        "tipo": "int",
+        "espacio": "",
+        "funcion": "int",
+        "descripcion": "Número entero",
+        "created": "2026-06-09T08:22:24.188Z",
+        "updated": "2026-06-09T08:22:24.188Z",
+        "deleted": null
+    }
+},
+{
     "model": "sistemas.campo",
     "pk": 1,
     "fields": {
@@ -14358,6 +14626,356 @@
         "nombre_campo": "transversal",
         "descripcion": "Indica si el área competencial es transversal",
         "arquetipo": 41
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 25,
+    "fields": {
+        "activo": 5,
+        "nombre_campo": "id_usuario",
+        "descripcion": "identificador del usuario",
+        "arquetipo": 1
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 26,
+    "fields": {
+        "activo": 5,
+        "nombre_campo": "usuario",
+        "descripcion": "identificador del usuario (Username o login)",
+        "arquetipo": 46
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 27,
+    "fields": {
+        "activo": 5,
+        "nombre_campo": "usuario_ldap",
+        "descripcion": "Identificador del usuario en el sistema LDAP, si procede",
+        "arquetipo": 47
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 28,
+    "fields": {
+        "activo": 5,
+        "nombre_campo": "nombre",
+        "descripcion": "Nombre y apellidos del usuario",
+        "arquetipo": 6
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 29,
+    "fields": {
+        "activo": 5,
+        "nombre_campo": "utiliza_web_service",
+        "descripcion": "Verdadero si el usuario utiliza web service",
+        "arquetipo": 41
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 30,
+    "fields": {
+        "activo": 5,
+        "nombre_campo": "baja",
+        "descripcion": "Verdadero si el usuario está dado de baja",
+        "arquetipo": 36
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 31,
+    "fields": {
+        "activo": 5,
+        "nombre_campo": "fecha_ultimo_acceso",
+        "descripcion": "Fecha y hora del ultimo acceso al sistema del usuario",
+        "arquetipo": 48
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 32,
+    "fields": {
+        "activo": 6,
+        "nombre_campo": "id_sicac",
+        "descripcion": "Identificador del procedimiento (Debe coincider con el identificador en SICAC)",
+        "arquetipo": 1
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 33,
+    "fields": {
+        "activo": 6,
+        "nombre_campo": "id_procedimiento",
+        "descripcion": "A pesar del prefijo id, en realidad es el nombre del procedimiento SICAC",
+        "arquetipo": 6
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 34,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "asientobaseid",
+        "descripcion": "Clave primaria del asiento",
+        "arquetipo": 1
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 35,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "fecha",
+        "descripcion": "Fecha del asiento",
+        "arquetipo": 49
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 36,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "id_usuario",
+        "descripcion": "Clave foranea a la tabla HIPERREG:dim_usuarios",
+        "arquetipo": 2
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 37,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "usuariows",
+        "descripcion": "Se desconoce. Un identificador de usuario en algún otro sistema?",
+        "arquetipo": 50
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 38,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "id_oficina",
+        "descripcion": "Clave foránea de la tabla dim_oficinas",
+        "arquetipo": 2
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 39,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "documentacionfisica",
+        "descripcion": "Número de documentos físicos?",
+        "arquetipo": 3
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 40,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "documentoprincipal",
+        "descripcion": "Clave foránea a alguna tabla de documentos desconocida?",
+        "arquetipo": 50
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 41,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "destino_externo",
+        "descripcion": "Algún clasificador de tipo de destino. Los valores en la base de datos son 0, 1 y 2. No se ha encontrado la tabla de clasificación. Quizá en código?",
+        "arquetipo": 50
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 42,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "id_destino",
+        "descripcion": "Identificador del destino. Clave foránea de HIPERREG:dim_destinos.",
+        "arquetipo": 2
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 43,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "tipo",
+        "descripcion": "Clave foránea a la tabla HIPERREG:tipo [1: entradas, 2: salidas, 3: CIS].",
+        "arquetipo": 2
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 44,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "id_origen",
+        "descripcion": "Origen del asiento. Clave foránea a HIPERREG:dim_origen.",
+        "arquetipo": 2
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 45,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "id_procedimiento",
+        "descripcion": "Nombre del procedimiento SICAC, si procede (No siempre disponible / No fiable)",
+        "arquetipo": 39
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 46,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "id_resumen",
+        "descripcion": "Una descripción breve del tipo de procedimiento",
+        "arquetipo": 6
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 47,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "id_tipo_destino_key",
+        "descripcion": "?",
+        "arquetipo": 39
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 48,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "id_tipo_origen_key",
+        "descripcion": "?",
+        "arquetipo": 39
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 49,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "id_sicac",
+        "descripcion": "Identificador del procedimiento asociado con este asiento, si procede. Clave foránea de HIPERREG:dim_procedimientos.",
+        "arquetipo": 2
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 50,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "sst",
+        "descripcion": "Valores NULL,0 y 1. Parece un flag, pero de que?",
+        "arquetipo": 50
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 51,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "sst_motivo_no_envio",
+        "descripcion": "Texto explicativo de la razón por la que no se ha enviado?",
+        "arquetipo": 39
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 52,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "sst_origen",
+        "descripcion": "Valores posibles NULL o REGISTRO. Qué significa el valor NULL?",
+        "arquetipo": 39
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 53,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "origen_ws_platino",
+        "descripcion": "Valores 0 o NULL. Qué significa NULL? Debe entenderse como un booleano?",
+        "arquetipo": 50
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 54,
+    "fields": {
+        "activo": 7,
+        "nombre_campo": "hr_version",
+        "descripcion": "Valores 1 y 2. Número de versión de Hiperreg?",
+        "arquetipo": 50
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 55,
+    "fields": {
+        "activo": 8,
+        "nombre_campo": "id_oficina",
+        "descripcion": "Identificador de la oficina. Clave primaria.",
+        "arquetipo": 1
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 56,
+    "fields": {
+        "activo": 8,
+        "nombre_campo": "id_consejeria",
+        "descripcion": "Clave a una tabla de consejerías? Pero no es ni DIR3 ni código DIRCAC",
+        "arquetipo": 2
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 57,
+    "fields": {
+        "activo": 8,
+        "nombre_campo": "desc_oficina",
+        "descripcion": "Nombre de la oficina",
+        "arquetipo": 6
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 58,
+    "fields": {
+        "activo": 8,
+        "nombre_campo": "id_edificio",
+        "descripcion": "Referencia al edificio donde está la oficina. Clave foránea a HIPERREG:dim_edificios.",
+        "arquetipo": 2
+    }
+},
+{
+    "model": "sistemas.campo",
+    "pk": 59,
+    "fields": {
+        "activo": 8,
+        "nombre_campo": "fecha",
+        "descripcion": "Fecha de baja, quizá?",
+        "arquetipo": 49
     }
 },
 {
@@ -14973,6 +15591,20 @@
         "empresa": null,
         "f_alta": "2025-11-11T08:34:03.100Z",
         "f_cambio": "2025-11-11T08:34:03.100Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "avergal",
+    "fields": {
+        "email": "avergal@gobiernodecanarias.org",
+        "nombre": "Manuel Ángel",
+        "apellidos": "Vera Galván",
+        "organismo": 42162,
+        "empresa": null,
+        "f_alta": "2026-06-10T08:59:37.240Z",
+        "f_cambio": "2026-06-10T08:59:37.240Z",
         "f_baja": null
     }
 },
@@ -15631,6 +16263,20 @@
         "empresa": null,
         "f_alta": "2026-05-03T19:20:52.664Z",
         "f_cambio": "2026-05-05T09:15:53.263Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "eojelan",
+    "fields": {
+        "email": "eojelan@gobiernodecanarias.org",
+        "nombre": "Elízabeth Yolanda",
+        "apellidos": "Ojeda Land",
+        "organismo": 42162,
+        "empresa": null,
+        "f_alta": "2026-06-10T09:35:49.904Z",
+        "f_cambio": "2026-06-10T09:35:49.904Z",
         "f_baja": null
     }
 },
@@ -17218,6 +17864,20 @@
 },
 {
     "model": "sistemas.usuario",
+    "pk": "mareher",
+    "fields": {
+        "email": "mareher@gobiernodecanarias.org",
+        "nombre": "Manuel Juan",
+        "apellidos": "Arechavaleta Hernández",
+        "organismo": 42162,
+        "empresa": null,
+        "f_alta": "2026-06-10T08:57:56.926Z",
+        "f_cambio": "2026-06-10T08:57:56.926Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
     "pk": "marioacosta@tac7.com",
     "fields": {
         "email": "marioacosta@tac7.com",
@@ -18263,6 +18923,20 @@
         "empresa": null,
         "f_alta": "2026-05-03T20:15:37.091Z",
         "f_cambio": "2026-05-05T09:24:58.584Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.usuario",
+    "pk": "mzurper",
+    "fields": {
+        "email": "mzurper@gobiernodecanarias.org",
+        "nombre": "María Nieves",
+        "apellidos": "Zurita Pérez",
+        "organismo": 42162,
+        "empresa": null,
+        "f_alta": "2026-06-09T11:19:47.785Z",
+        "f_cambio": "2026-06-09T11:19:47.785Z",
         "f_baja": null
     }
 },
@@ -32970,6 +33644,198 @@
     }
 },
 {
+    "model": "sistemas.perfil",
+    "pk": 1150,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "FUN",
+        "sistema": 558,
+        "f_alta": "2026-06-09T11:14:54.444Z",
+        "f_cambio": "2026-06-09T11:14:54.444Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1151,
+    "fields": {
+        "usuario": "mzurper",
+        "cometido": "FUN",
+        "sistema": 558,
+        "f_alta": "2026-06-09T11:20:02.252Z",
+        "f_cambio": "2026-06-09T11:20:02.252Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1152,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "TEC",
+        "sistema": 558,
+        "f_alta": "2026-06-09T11:20:16.611Z",
+        "f_cambio": "2026-06-09T11:20:16.611Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1153,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "FUN",
+        "sistema": 559,
+        "f_alta": "2026-06-10T08:18:12.743Z",
+        "f_cambio": "2026-06-10T08:18:12.743Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1154,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "TEC",
+        "sistema": 559,
+        "f_alta": "2026-06-10T08:18:34.819Z",
+        "f_cambio": "2026-06-10T08:18:34.819Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1155,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "FUN",
+        "sistema": 560,
+        "f_alta": "2026-06-10T08:24:55.117Z",
+        "f_cambio": "2026-06-10T08:24:55.117Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1156,
+    "fields": {
+        "usuario": "mareher",
+        "cometido": "FUN",
+        "sistema": 560,
+        "f_alta": "2026-06-10T08:58:09.388Z",
+        "f_cambio": "2026-06-10T08:58:09.388Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1157,
+    "fields": {
+        "usuario": "avergal",
+        "cometido": "FUN",
+        "sistema": 560,
+        "f_alta": "2026-06-10T08:59:54.150Z",
+        "f_cambio": "2026-06-10T08:59:54.150Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1158,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "TEC",
+        "sistema": 560,
+        "f_alta": "2026-06-10T09:00:10.680Z",
+        "f_cambio": "2026-06-10T09:00:10.680Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1159,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "FUN",
+        "sistema": 561,
+        "f_alta": "2026-06-10T09:05:35.022Z",
+        "f_cambio": "2026-06-10T09:05:35.022Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1160,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "TEC",
+        "sistema": 561,
+        "f_alta": "2026-06-10T09:05:43.305Z",
+        "f_cambio": "2026-06-10T09:05:43.305Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1161,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "FUN",
+        "sistema": 562,
+        "f_alta": "2026-06-10T09:27:43.027Z",
+        "f_cambio": "2026-06-10T09:27:43.027Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1162,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "TEC",
+        "sistema": 562,
+        "f_alta": "2026-06-10T09:27:47.191Z",
+        "f_cambio": "2026-06-10T09:27:47.191Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1163,
+    "fields": {
+        "usuario": "eojelan",
+        "cometido": "FUN",
+        "sistema": 563,
+        "f_alta": "2026-06-10T09:35:58.698Z",
+        "f_cambio": "2026-06-10T09:35:58.698Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1164,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "FUN",
+        "sistema": 563,
+        "f_alta": "2026-06-10T09:36:14.753Z",
+        "f_cambio": "2026-06-10T09:36:14.753Z",
+        "f_baja": null
+    }
+},
+{
+    "model": "sistemas.perfil",
+    "pk": 1165,
+    "fields": {
+        "usuario": "mdelluz",
+        "cometido": "TEC",
+        "sistema": 563,
+        "f_alta": "2026-06-10T09:36:19.136Z",
+        "f_cambio": "2026-06-10T09:36:19.136Z",
+        "f_baja": null
+    }
+},
+{
     "model": "sistemas.juriscansistema",
     "pk": 1,
     "fields": {
@@ -34693,7 +35559,7 @@
 },
 {
     "model": "sistemas.ente",
-    "pk": "TEE",
+    "pk": "TEEN",
     "fields": {
         "organismo": 42159,
         "peso": 900,

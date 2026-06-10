@@ -844,6 +844,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "07d9c4bb-649e-11f1-800b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "558",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Banco de Datos de Biodiversidad de Canarias (BIOTA)",
+        "momento": "2026-06-10T07:28:52.452Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "07e5c8de-4d60-11f1-b994-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -1299,6 +1312,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "0d4358f7-64a5-11f1-8118-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "559",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Especies protegidas de Canarias (CENTINELA) ha sido asignado a la familia No aplicable",
+        "momento": "2026-06-10T08:19:08.010Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "0de93358-4ddb-11f1-838c-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -1320,6 +1346,19 @@
         "descripcion": "El sistema Cartera de Servicios (CARTERA_SERVICIOS) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T10:42:06.366Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "0dff9428-64ab-11f1-a5a3-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "560",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Gestor de Autorizaciones (GESA) ha sido actualizada a 'Gestor de Autorizaciones'",
+        "momento": "2026-06-10T09:02:06.223Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -1481,6 +1520,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "0efe3eb6-649e-11f1-a05b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "558",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Banco de Datos de Biodiversidad de Canarias (BIOTA) ha sido actualizada a 'Banco de Datos de Biodiversidad de Canarias'",
+        "momento": "2026-06-10T07:29:04.435Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "0f094d06-4a22-11f1-9ffc-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -1567,6 +1619,19 @@
         "descripcion": "La descripción del sistema Aplicación para la Cita Previa para todos los juzgados (excepto Registro Civil) (CITA_PREVIA_JUZGADOS) ha sido actualizada a 'Aplicación para la Cita Previa para todos los juzgados (excepto Registro Civil)'",
         "momento": "2026-05-08T09:19:48.322Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "0f778f2b-64b0-11f1-ab8d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "563",
+        "nombre_clase": "Sistema",
+        "descripcion": "La URL de entrada al sistema Especies introducidas en Canarias (EXOS) ha sido actualizada a 'https://www.biodiversidadcanarias.es/exos/'.\n",
+        "momento": "2026-06-10T09:37:56.171Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -1879,6 +1944,19 @@
         "descripcion": "Se ha dado de alta al usuario Kevin Sanchéz Gutiérrez",
         "momento": "2026-05-07T13:31:39.261Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "13d6119f-64a5-11f1-b683-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "559",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Especies protegidas de Canarias (CENTINELA) ha sido actualizada a 'Base de datos de especies protegidas'",
+        "momento": "2026-06-10T08:19:19.038Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -2334,6 +2412,19 @@
         "descripcion": "El usuario Juan Carlos García Ávila ha sido asignado como Responsable funcional del sistema Inventario Arquitectónico (BIENES_ARQUI)",
         "momento": "2026-05-12T08:32:22.539Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "18f52cd9-649e-11f1-acf3-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "558",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Banco de Datos de Biodiversidad de Canarias (BIOTA) ha sido asignado a la familia No aplicable",
+        "momento": "2026-06-10T07:29:21.153Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -3795,6 +3886,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "287c6a1d-63f5-11f1-8b16-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "558",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Nieves Zurita Pérez ha sido asignado como Responsable funcional del sistema Banco de Datos de Biodiversidad de Canarias (BIOTA)",
+        "momento": "2026-06-09T11:20:02.257Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "287d04b4-63f5-11f1-ade2-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mzurper\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Nieves Zurita Pérez ha sido asignado como Responsable funcional del sistema Banco de Datos de Biodiversidad de Canarias (BIOTA)",
+        "momento": "2026-06-09T11:20:02.261Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "28908188-4a1c-11f1-8cac-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -4432,6 +4549,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "2f932df3-64b0-11f1-9d84-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "560",
+        "nombre_clase": "Sistema",
+        "descripcion": "La URL de entrada al sistema Gestor de Autorizaciones (GESA) ha sido actualizada a None.\n",
+        "momento": "2026-06-10T09:38:50.039Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "2f957574-4ddf-11f1-8b1c-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -4517,6 +4647,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Servicios Electrónicos para la Gestión del Juego (REGISTRO_JUEGO_SERV_ELEC)",
         "momento": "2026-05-08T11:43:54.157Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "310b6e59-63f5-11f1-9bd0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "558",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Banco de Datos de Biodiversidad de Canarias (BIOTA)",
+        "momento": "2026-06-09T11:20:16.621Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "310c7e47-63f5-11f1-9a1b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Banco de Datos de Biodiversidad de Canarias (BIOTA)",
+        "momento": "2026-06-09T11:20:16.623Z",
         "usuario": "root",
         "payload": null
     }
@@ -4791,6 +4947,19 @@
         "descripcion": "Se ha dado de alta al usuario Elizabet Santiago Hernández",
         "momento": "2026-05-08T07:33:25.374Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3303a72d-64b2-11f1-a872-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "563",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado un icono al sistema Especies introducidas en Canarias (EXOS)",
+        "momento": "2026-06-10T09:53:14.803Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -5194,6 +5363,19 @@
         "descripcion": "El usuario Ildefonso Mauro Trujillo Bosa ha sido asignado como Responsable técnico del sistema Sistema de gestión del Plan de Prevención y Lucha contra el Fraude (PLF)",
         "momento": "2026-05-06T16:11:19.033Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "37a28a25-64b2-11f1-af9b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "563",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado un icono al sistema Especies introducidas en Canarias (EXOS)",
+        "momento": "2026-06-10T09:53:22.555Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -5753,6 +5935,32 @@
         "descripcion": "La URL de entrada al sistema Competencias Digitales para la Ciudadanía (CODECAN) ha sido actualizada a 'https://www.codecan.capacitaciondigital.edu.es/inicio'.\n",
         "momento": "2026-05-22T09:25:53.435Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3ae820e5-5a66-11f1-9fbb-920007977582",
+    "fields": {
+        "nivel_evento": "archive",
+        "sujeto": "1",
+        "nombre_clase": "Backlog",
+        "descripcion": "Se ha cerrado la tarea #1: Alta de enlace a Juriscan correspondiente al S.I. Inventario de sistemas de información (ISSI)",
+        "momento": "2026-05-28T07:24:14.673Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "3aea1907-5a66-11f1-9f94-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "1",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha cerrado la tarea #1: Alta de enlace a Juriscan correspondiente al S.I. Inventario de sistemas de información (ISSI)",
+        "momento": "2026-05-28T07:24:14.678Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -6538,6 +6746,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "43446058-6404-11f1-80ff-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "558",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado la entrada Juriscán nº 77111 al sistema Banco de Datos de Biodiversidad de Canarias (BIOTA)",
+        "momento": "2026-06-09T13:08:09.640Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "43593eaf-4a0f-11f1-88db-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -7149,6 +7370,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "48aad38f-6404-11f1-b014-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "558",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha desasingado la entrada nº 77111 al sistema Banco de Datos de Biodiversidad de Canarias (BIOTA)",
+        "momento": "2026-06-09T13:08:18.700Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "48adf21d-4958-11f1-aaea-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -7448,6 +7682,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "4bfd41a8-64ae-11f1-9a53-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "561",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado un icono al sistema Portal de Referencia Natura 2000 de la Comunidad Autónoma de Canarias (INATURA)",
+        "momento": "2026-06-10T09:25:18.717Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "4c501a47-4ace-11f1-8291-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -7521,6 +7768,19 @@
         "descripcion": "El código del sistema Programa de gestión de cursos (PROGESCUR) ha sido actualizada a 'PROGESCUR'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
         "momento": "2026-05-07T10:19:59.306Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "4d6294f0-64b2-11f1-bf9c-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "563",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Especies introducidas en Canarias (EXOS) ha sido actualizada a 'Base de datos de especies introducidas en Canarias'",
+        "momento": "2026-06-10T09:53:59.046Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -8079,6 +8339,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "Se ha añadido la tarea 7: Editar tarea al S.I. Inventario de Sistemas de Información (ISSI)",
         "momento": "2026-04-03T20:54:34.934Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "523187c8-5a66-11f1-9109-920007977582",
+    "fields": {
+        "nivel_evento": "archive",
+        "sujeto": "13",
+        "nombre_clase": "Backlog",
+        "descripcion": "Se ha cerrado la tarea #13: No funciona la opción de seleccionar familia correspondiente al S.I. Inventario de sistemas de información (ISSI)",
+        "momento": "2026-05-28T07:24:53.734Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "52325caa-5a66-11f1-8c22-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "1",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha cerrado la tarea #13: No funciona la opción de seleccionar familia correspondiente al S.I. Inventario de sistemas de información (ISSI)",
+        "momento": "2026-05-28T07:24:53.739Z",
         "usuario": "jrodleo",
         "payload": null
     }
@@ -8800,6 +9086,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "5a8027d2-64ab-11f1-8b97-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "561",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Portal de Referencia Natura 2000 de la Comunidad Autónoma de Canarias (INATURA)",
+        "momento": "2026-06-10T09:04:14.573Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "5a885f3a-2846-11f1-a01e-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -9463,6 +9762,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "60b35b5d-63f4-11f1-b3f9-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "558",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Banco de Datos de Biodiversidad de Canarias (BIOTA)",
+        "momento": "2026-06-09T11:14:27.073Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "60c77f2b-4d5d-11f1-8f95-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -9484,6 +9796,19 @@
         "descripcion": "El sistema Sistema para la gestión y control de dosis ionizantes (DOSIMETRIAS) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T11:05:53.816Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "6176e4dc-64ab-11f1-b30d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "561",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Portal de Referencia Natura 2000 de la Comunidad Autónoma de Canarias (INATURA) ha sido asignado a la familia No aplicable",
+        "momento": "2026-06-10T09:04:26.257Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -10581,6 +10906,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "6dae7bb1-64af-11f1-b0f0-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "563",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Especies introducidas en Canarias (EXOS)",
+        "momento": "2026-06-10T09:33:24.740Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "6df26fb8-649f-11f1-b791-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "558",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado un icono al sistema Banco de Datos de Biodiversidad de Canarias (BIOTA)",
+        "momento": "2026-06-10T07:38:53.238Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "6dfeb1b9-472e-11f1-85cb-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -10861,6 +11212,32 @@
         "nombre_clase": "Sistema",
         "descripcion": "El código del sistema Precio máximo de privada - Servicio de promoción privada (PRECIO_MAX_PUB) ha sido actualizada a 'PRECIO_MAX_PUB'.\n Tenga en cuenta que este cambio afecta a las dirección de la página web del sistema",
         "momento": "2026-05-07T14:17:12.079Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "71053597-63f4-11f1-b36f-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "558",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Banco de Datos de Biodiversidad de Canarias (BIOTA)",
+        "momento": "2026-06-09T11:14:54.459Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7106d51b-63f4-11f1-8b09-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Banco de Datos de Biodiversidad de Canarias (BIOTA)",
+        "momento": "2026-06-09T11:14:54.464Z",
         "usuario": "root",
         "payload": null
     }
@@ -11153,6 +11530,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "7495430b-64af-11f1-b0e0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "563",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Especies introducidas en Canarias (EXOS) ha sido asignado a la familia No aplicable",
+        "momento": "2026-06-10T09:33:36.319Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "7498f30f-4adb-11f1-be90-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -11413,6 +11803,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "7a05e476-64aa-11f1-94ec-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"mareher\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Manuel Juan Arechavaleta Hernández",
+        "momento": "2026-06-10T08:57:57.972Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "7a13fc85-49f2-11f1-b9b7-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -11660,6 +12063,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "7c1a7978-64ab-11f1-8316-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "561",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Portal de Referencia Natura 2000 de la Comunidad Autónoma de Canarias (INATURA) ha sido actualizada a 'Web pública sobre espacios protegidos'",
+        "momento": "2026-06-10T09:05:10.950Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "7c4507bd-4ac7-11f1-8818-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -11720,6 +12136,19 @@
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Consola web del sistema de grabación de señalamientos Arconte Áurea para la visualización, firma y gestión de los vídeos por los usuarios de justicia (ARCONTE_AUREA_GESTION)",
         "momento": "2026-05-08T19:02:41.344Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "7d139af4-64ae-11f1-9a00-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "562",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Visor Cartográfico (Serv. Biodiversidad) (VISOR)",
+        "momento": "2026-06-10T09:26:41.072Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -12050,6 +12479,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "80d636be-64aa-11f1-9065-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "560",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Manuel Juan Arechavaleta Hernández ha sido asignado como Responsable funcional del sistema Gestor de Autorizaciones (GESA)",
+        "momento": "2026-06-10T08:58:09.393Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "80d6be75-64aa-11f1-a156-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mareher\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Manuel Juan Arechavaleta Hernández ha sido asignado como Responsable funcional del sistema Gestor de Autorizaciones (GESA)",
+        "momento": "2026-06-10T08:58:09.397Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "812eff44-55b9-11f1-9609-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -12227,6 +12682,19 @@
         "descripcion": "Añadido el sistema de información Registro de personas afectadas por el volcán de La Palma (RAV) (SITA_RAV)",
         "momento": "2026-05-08T08:18:36.918Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "831f23fc-64ae-11f1-a862-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "562",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Visor Cartográfico (Serv. Biodiversidad) (VISOR) ha sido asignado a la familia No aplicable",
+        "momento": "2026-06-10T09:26:51.214Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -12921,6 +13389,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "8a74e5b4-64ab-11f1-856b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "561",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Portal de Referencia Natura 2000 de la Comunidad Autónoma de Canarias (INATURA)",
+        "momento": "2026-06-10T09:05:35.030Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8a75a206-64ab-11f1-be17-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Portal de Referencia Natura 2000 de la Comunidad Autónoma de Canarias (INATURA)",
+        "momento": "2026-06-10T09:05:35.035Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "8a882134-371e-11f1-853e-38d5470ea667",
     "fields": {
         "nivel_evento": "update",
@@ -13376,6 +13870,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "8da87e7c-63df-11f1-b299-920007977582",
+    "fields": {
+        "nivel_evento": "archive",
+        "sujeto": "1",
+        "nombre_clase": "Backlog",
+        "descripcion": "Se ha cerrado la tarea #1: Alta de enlace a Juriscan correspondiente al S.I. Inventario de sistemas de información (ISSI)",
+        "momento": "2026-06-09T08:45:23.075Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8daa786a-63df-11f1-a029-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "1",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha cerrado la tarea #1: Alta de enlace a Juriscan correspondiente al S.I. Inventario de sistemas de información (ISSI)",
+        "momento": "2026-06-09T08:45:23.081Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "8dec81f1-5539-11f1-b784-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -13540,6 +14060,32 @@
         "descripcion": "Se ha actualizado el texto de las observaciones del sistema Portal del Consejo General del Poder Judicial (PUNTO_NEUTRO_JUDICIAL)",
         "momento": "2026-05-08T08:47:35.157Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8f642f90-64ab-11f1-b9da-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "561",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Portal de Referencia Natura 2000 de la Comunidad Autónoma de Canarias (INATURA)",
+        "momento": "2026-06-10T09:05:43.309Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "8f64823a-64ab-11f1-af9b-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Portal de Referencia Natura 2000 de la Comunidad Autónoma de Canarias (INATURA)",
+        "momento": "2026-06-10T09:05:43.311Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -13935,6 +14481,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "928541c7-64ae-11f1-ab42-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "562",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Visor Cartográfico (Serv. Biodiversidad) (VISOR) ha sido actualizada a 'Visor cartográfico'",
+        "momento": "2026-06-10T09:27:17.049Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "9299bf62-4a1b-11f1-bb66-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -14085,6 +14644,19 @@
         "nombre_clase": "Usuario",
         "descripcion": "El usuario José Manuel Hernández Borges ha sido asignado como Responsable técnico del sistema Sistema de Información Entorno gestión de expedientes. (EGE)",
         "momento": "2026-05-12T09:18:45.815Z",
+        "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "93d78c1e-5937-11f1-98c5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "89",
+        "nombre_clase": "Sistema",
+        "descripcion": "La descripción del sistema Subvenciones para proyectos de innovación en áreas prioritarias de la RIS3 ampliada (FAP_EPIRIS) ha sido actualizada a 'Gestión de subvenciones'",
+        "momento": "2026-05-26T19:17:46.370Z",
         "usuario": "root",
         "payload": null
     }
@@ -15209,6 +15781,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "a050dd6f-64a5-11f1-b303-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "559",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Especies protegidas de Canarias (CENTINELA)",
+        "momento": "2026-06-10T08:23:14.723Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "a0a87876-4abb-11f1-9c37-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -15269,6 +15854,32 @@
         "descripcion": "La descripción del sistema Sistema de Información Unificado de Seguimiento de Beneficiarios (SEGUI) ha sido actualizada a 'Seguimiento de las personas beneficiarias y registradas en las aplicaciones del SCE'",
         "momento": "2026-05-12T10:52:12.630Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a20258a4-64ae-11f1-bbd1-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "562",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Visor Cartográfico (Serv. Biodiversidad) (VISOR)",
+        "momento": "2026-06-10T09:27:43.035Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a202f49f-64ae-11f1-a07f-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Visor Cartográfico (Serv. Biodiversidad) (VISOR)",
+        "momento": "2026-06-10T09:27:43.039Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -15594,6 +16205,32 @@
         "descripcion": "El usuario José Javier Aldunate Ruano ha sido asignado como Responsable funcional del sistema Libro Azul gestión (LIBRO_AZUL)",
         "momento": "2026-05-07T19:55:05.147Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a47d9f16-64ae-11f1-8a29-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "562",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Visor Cartográfico (Serv. Biodiversidad) (VISOR)",
+        "momento": "2026-06-10T09:27:47.198Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "a47e1dfb-64ae-11f1-b7ca-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Visor Cartográfico (Serv. Biodiversidad) (VISOR)",
+        "momento": "2026-06-10T09:27:47.201Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -17120,6 +17757,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "b38043f3-649f-11f1-bb42-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "559",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Especies protegidas de Canarias (CENTINELA)",
+        "momento": "2026-06-10T07:40:49.930Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "b407c65f-4d2a-11f1-8094-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -17245,6 +17895,19 @@
         "descripcion": "Se ha dado de alta al usuario María Concepción Garrido Martín",
         "momento": "2026-05-08T11:18:59.194Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b5d2d86d-64aa-11f1-a744-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"avergal\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Manuel Ángel Vera Galván",
+        "momento": "2026-06-10T08:59:38.291Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -17622,6 +18285,19 @@
         "descripcion": "La descripción del sistema egEasy (EGEASY) ha sido actualizada a 'Gestor de tareas'",
         "momento": "2026-05-07T12:31:51.228Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "b93462a5-64ae-11f1-ace7-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "562",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Visor Cartográfico (Serv. Biodiversidad) (VISOR)",
+        "momento": "2026-06-10T09:28:21.950Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -18090,6 +18766,32 @@
         "descripcion": "El usuario María Candelaria Valido Hernández ha sido asignado como Responsable técnico del sistema Gestión contrato de arrendamiento o acceso diferido de vivienda de promoción pública propiedad del ICV (GESTCONTRATO)",
         "momento": "2026-05-07T15:52:26.649Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "bf47bab8-64aa-11f1-aafb-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "560",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Manuel Ángel Vera Galván ha sido asignado como Responsable funcional del sistema Gestor de Autorizaciones (GESA)",
+        "momento": "2026-06-10T08:59:54.162Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "bf491d9d-64aa-11f1-97d7-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"avergal\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Manuel Ángel Vera Galván ha sido asignado como Responsable funcional del sistema Gestor de Autorizaciones (GESA)",
+        "momento": "2026-06-10T08:59:54.165Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -18654,6 +19356,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "c4d38450-64af-11f1-9b6f-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "\"eojelan\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "Se ha dado de alta al usuario Elízabeth Yolanda Ojeda Land",
+        "momento": "2026-06-10T09:35:50.945Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "c4d572db-4733-11f1-9df9-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -19031,6 +19746,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "c922e0db-64aa-11f1-9242-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "560",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Gestor de Autorizaciones (GESA)",
+        "momento": "2026-06-10T09:00:10.698Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c924893b-64aa-11f1-a911-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Gestor de Autorizaciones (GESA)",
+        "momento": "2026-06-10T09:00:10.703Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "c941704d-4abc-11f1-8715-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -19065,6 +19806,32 @@
         "descripcion": "El usuario Antonio Juan Caballero Santiago ha sido asignado como Responsable técnico del sistema Reporta (REPORTA)",
         "momento": "2026-05-03T21:19:36.331Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c973ae71-64af-11f1-9c12-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "563",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario Elízabeth Yolanda Ojeda Land ha sido asignado como Responsable funcional del sistema Especies introducidas en Canarias (EXOS)",
+        "momento": "2026-06-10T09:35:58.705Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "c97442a5-64af-11f1-bff3-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"eojelan\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario Elízabeth Yolanda Ojeda Land ha sido asignado como Responsable funcional del sistema Especies introducidas en Canarias (EXOS)",
+        "momento": "2026-06-10T09:35:58.709Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -19286,6 +20053,19 @@
         "descripcion": "La descripción del sistema Gestión de Comisiones de Servicios (GEST_COMISIONES_SERVICIOS) ha sido actualizada a 'Gestión de Comisiones de Servicios'",
         "momento": "2026-05-11T12:13:18.220Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "cbbdaee3-64a5-11f1-a297-920007977582",
+    "fields": {
+        "nivel_evento": "insert",
+        "sujeto": "560",
+        "nombre_clase": "Sistema",
+        "descripcion": "Añadido el sistema de información Gestor de Autorizaciones (GESA)",
+        "momento": "2026-06-10T08:24:27.578Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -19772,6 +20552,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "d2309dde-64a5-11f1-8ba0-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "560",
+        "nombre_clase": "Sistema",
+        "descripcion": "El sistema Gestor de Autorizaciones (GESA) ha sido asignado a la familia No aplicable",
+        "momento": "2026-06-10T08:24:38.399Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "d287aa88-4a1f-11f1-af91-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -19793,6 +20586,32 @@
         "descripcion": "El sistema Historia Clínica Compartida (HCC) ha sido asignado a la familia {familia}",
         "momento": "2026-05-11T12:20:39.761Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "d305717a-64af-11f1-92e6-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "563",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Especies introducidas en Canarias (EXOS)",
+        "momento": "2026-06-10T09:36:14.760Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "d3062289-64af-11f1-9867-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Especies introducidas en Canarias (EXOS)",
+        "momento": "2026-06-10T09:36:14.765Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -20084,6 +20903,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "d5a24ff4-64af-11f1-b294-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "563",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Especies introducidas en Canarias (EXOS)",
+        "momento": "2026-06-10T09:36:19.144Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "d5a2fd5d-64af-11f1-9fd5-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Especies introducidas en Canarias (EXOS)",
+        "momento": "2026-06-10T09:36:19.148Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "d60a4c6f-49fe-11f1-975a-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -20131,6 +20976,19 @@
         "descripcion": "Se ha asignado la entrada Juriscán nº 63917 al sistema Sede Electrónica de la Agencia Tributaria Canaria (SEDE_ELECTRONICA_ATC)",
         "momento": "2026-05-06T16:08:36.081Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "d6b539d8-64a4-11f1-b704-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "559",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha asignado un icono al sistema Especies protegidas de Canarias (CENTINELA)",
+        "momento": "2026-06-10T08:17:36.481Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -20677,6 +21535,32 @@
         "descripcion": "La descripción del sistema CEXSIL (CEXSIL) ha sido actualizada a 'Acceso a la base de datos de la Seguridad Social para la consulta de información laboral. Se trata de un acceso web proporcionado por la Seguridad Social.'",
         "momento": "2026-05-08T08:42:34.602Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "dc2890fb-64a5-11f1-aa80-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "560",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Gestor de Autorizaciones (GESA)",
+        "momento": "2026-06-10T08:24:55.122Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "dc290d9c-64a5-11f1-814d-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Gestor de Autorizaciones (GESA)",
+        "momento": "2026-06-10T08:24:55.126Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -22437,6 +23321,32 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "ec53574c-64a4-11f1-8d95-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "559",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Especies protegidas de Canarias (CENTINELA)",
+        "momento": "2026-06-10T08:18:12.750Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "ec53e574-64a4-11f1-a629-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable funcional del sistema Especies protegidas de Canarias (CENTINELA)",
+        "momento": "2026-06-10T08:18:12.753Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "ec8c66fc-4acf-11f1-80f9-920007977582",
     "fields": {
         "nivel_evento": "update",
@@ -22593,6 +23503,19 @@
 },
 {
     "model": "omnibus.evento",
+    "pk": "edc0a80b-64af-11f1-b817-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "560",
+        "nombre_clase": "Sistema",
+        "descripcion": "La URL de entrada al sistema Gestor de Autorizaciones (GESA) ha sido actualizada a 'https://www.gobiernodecanarias.org/medioambiente/materias/biodiversidad/sistemas-de-informacion-en-biodiversidad/exos/'.\n",
+        "momento": "2026-06-10T09:36:59.608Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
     "pk": "edd74d1b-4dea-11f1-ac7b-920007977582",
     "fields": {
         "nivel_evento": "insert",
@@ -22601,6 +23524,19 @@
         "descripcion": "Añadido el sistema de información Sistema de Información  de Prácticas en Empresa (PREM)",
         "momento": "2026-05-12T10:11:23.319Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "ede58761-64aa-11f1-8a80-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "560",
+        "nombre_clase": "Sistema",
+        "descripcion": "Se ha actualizado el texto de las observaciones del sistema Gestor de Autorizaciones (GESA)",
+        "momento": "2026-06-10T09:01:12.366Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
@@ -23875,6 +24811,32 @@
         "descripcion": "Se ha dado de alta al usuario José Manuel Hernández Borges",
         "momento": "2026-05-12T09:07:17.212Z",
         "usuario": "root",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f97bf5b1-64a4-11f1-b5a8-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "559",
+        "nombre_clase": "Sistema",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Especies protegidas de Canarias (CENTINELA)",
+        "momento": "2026-06-10T08:18:34.826Z",
+        "usuario": "jrodleo",
+        "payload": null
+    }
+},
+{
+    "model": "omnibus.evento",
+    "pk": "f97c9860-64a4-11f1-9c80-920007977582",
+    "fields": {
+        "nivel_evento": "update",
+        "sujeto": "\"mdelluz\"",
+        "nombre_clase": "Usuario",
+        "descripcion": "El usuario María Asunción Delgado Luzardo ha sido asignado como Responsable técnico del sistema Especies protegidas de Canarias (CENTINELA)",
+        "momento": "2026-06-10T08:18:34.830Z",
+        "usuario": "jrodleo",
         "payload": null
     }
 },
