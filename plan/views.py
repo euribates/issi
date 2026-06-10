@@ -19,7 +19,7 @@ def index(request):
 @login_required
 def detalle_tarea(request, tarea):
     return render(request, 'plan/detalle-tarea.html', {
-        'titulo': 'Detalles de la la tarea #{tarea.pk}',
+        'titulo': f'Detalles de la la tarea #{tarea.pk}',
         'subtitulo': str(tarea),
         'breadcrumbs': bc.bc_detalle_tarea(tarea),
         'tarea': tarea,
@@ -35,7 +35,7 @@ def editar_tarea(request, tarea):
             tarea = form.save()
             sistema.touch()
             Bus(request).pub_tarea_modificada(tarea)
-            return redirect(links.a_detalle_sistema(sistema.pk))
+            return redirect(links.a_tareas_sistema(sistema.pk))
     else:
         form = TareaForm(
             instance=tarea,
@@ -58,7 +58,7 @@ def cerrar_tarea(request, tarea):
         if form.is_valid():
             tarea.archive()
             Bus(request).pub_tarea_cerrada(tarea)
-            return redirect(links.a_detalle_sistema(tarea.sistema.pk))
+            return redirect(links.a_tareas_sistema(tarea.sistema.pk))
     else:
         form = EstaSeguroForm()
     return render(request, 'plan/cerrar-tarea.html', {
@@ -66,5 +66,6 @@ def cerrar_tarea(request, tarea):
         'breadcrumbs': bc.bc_cerrar_tarea(tarea),
         'tab': 'sistemas',
         'form': form,
-        'tarea': tarea,
-        })
+        'tarea': tarea,  
+        })               
+                         

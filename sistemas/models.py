@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from datetime import datetime as DateTime
+from datetime import timedelta as TimeDelta
 from decimal import Decimal
 from html import escape
 from pathlib import Path
@@ -658,6 +659,22 @@ https://www.gobiernodecanarias.org/libroazul/pdf/46083.pdf
         subtree = { _.pk for _ in qs.all() }
         return cls.objects.filter(organismo__in=subtree).all().order_by('codigo')
 
+    def tareas_en_curso(self):
+        """Tareas en curso: Las que no están terminadas o que
+        se han terminado en los tres días anteriores.
+        """
+        hoy = timezone.now().date()
+        desde = hoy - TimeDelta(days=3)
+        return (
+            self.tareas
+            .filter(
+                Q(f_finalizacion__gte=desde)
+                | Q(f_finalizacion__isnull=True)
+                )
+            .order_by('-f_finalizacion','f_creacion')
+            )
+
+        
 
 class Activo(models.Model):
     NIVELES_DATOS_PERSONALES = [

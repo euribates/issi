@@ -168,8 +168,6 @@ img.card-top-logo {
   font-weight: normal;
   }
 
-
-
 .dir3 {
   font-family: monospace,courier;
   background-color: white;
@@ -232,7 +230,6 @@ img.card-top-logo {
   text-decoration: none!important;
 }
 
-
 .sistema-codigo {
   text-align: right;
   font-size: 125%;
@@ -252,7 +249,7 @@ img.card-top-logo {
 
 .sistema-nombre {
   text-align: right;
-  font-size: 90%;
+  font-size: 110%;
   color: #303030;
   font-weight: normal;
   margin-top: 0;

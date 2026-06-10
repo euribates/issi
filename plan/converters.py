@@ -3,18 +3,18 @@
 from . import models
 
 
-class BacklogConverter:
+class TareaConverter:
 
     regex = '[0-9]+'
 
     def to_python(self, value) -> models.Backlog:
-        backlog = models.Backlog.load_backlog(int(value))
-        if not backlog:
+        tarea = models.Backlog.load_backlog(int(value))
+        if not tarea:
             raise ValueError(
                 "La tarea de backlog especificada"
                 " es incorrecta"
                 )
-        return backlog
+        return tarea
 
     def to_url(self, value) -> str:
         if isinstance(value, int):

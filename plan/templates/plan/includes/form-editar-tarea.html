@@ -1,15 +1,15 @@
-{% load cards %}
+{% load cards fechas %}
 
 <form method="POST"
-      action="{% url 'plan:editar_tarea' tarea=backlog %}">
+      action="{% url 'plan:editar_tarea' tarea=tarea %}">
 {% csrf_token %}
 
-<div class="card">
+<div class="card mt-3 mb-3">
   <div class="card-header">
     <h2 class="card-title h4">
-      Editar entrada {{ backlog.pk }}
-      del <i>backlog</i> de {{ sistema }}:
-      {{backlog}}
+      Editar tarea {{ tarea.pk }}
+      del sistema {{ sistema }}:
+      {{ tarea }}
     </h2>
   </div>
 
@@ -66,6 +66,19 @@
 
   </div>
 
+  <div class="card-footer">
+     Creada hace
+     <span title="{{ tarea.f_creacion|as_fecha }}">
+      {{ tarea.f_creacion|as_pasado }}
+      </span>
+      |
+     Modificada por última vez hace
+     <span title="{{ tarea.f_creacion|as_fecha }}">
+      {{ tarea.f_creacion|as_pasado }}
+      </span>
+
+
+  </div>
 
 
 </div>

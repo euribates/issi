@@ -64,8 +64,8 @@ def a_tareas_sistema(id_sistema: int) -> str:
     return _a('sistemas:tareas_sistema', sistema=id_sistema)
 
 
-def a_crear_backlog(id_sistema: int) -> str:
-    return _a('sistemas:crear_backlog', sistema=id_sistema)
+def a_crear_tarea(id_sistema: int) -> str:
+    return _a('sistemas:crear_tarea', sistema=id_sistema)
 
 
 def a_detalle_tarea(id_tarea: int) -> str:

@@ -1,7 +1,7 @@
 {% load cards %}
 
 <form method="POST"
-      action="{% url 'sistemas:crear_backlog' sistema=sistema %}">
+      action="{% url 'sistemas:crear_tarea' sistema=sistema %}">
 {% csrf_token %}
 
 <div class="card">

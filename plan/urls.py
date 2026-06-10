@@ -9,7 +9,7 @@ from . import converters
 app_name = 'plan'
 
 
-register_converter(converters.BacklogConverter, 'blg')
+register_converter(converters.TareaConverter, 'task')
 
 
 def tie(ruta, vista, name=None):
@@ -18,7 +18,7 @@ def tie(ruta, vista, name=None):
 
 urlpatterns = [
     tie('', views.index),
-    tie('backlog/<blg:tarea>/', views.detalle_tarea),
-    tie('backlog/<blg:tarea>/editar/', views.editar_tarea),
-    tie('backlog/<blg:tarea>/cerrar/', views.cerrar_tarea),
+    tie('tareas/<task:tarea>/', views.detalle_tarea),
+    tie('tareas/<task:tarea>/editar/', views.editar_tarea),
+    tie('tareas/<task:tarea>/cerrar/', views.cerrar_tarea),
     ]

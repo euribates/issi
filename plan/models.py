@@ -45,7 +45,7 @@ class Backlog(models.Model):
 
     id_backlog = models.BigAutoField(primary_key=True)
     sistema = models.ForeignKey(Sistema, 
-        related_name='backlog',
+        related_name='tareas',
         on_delete=models.CASCADE,
         )
     titulo = models.CharField(
@@ -82,20 +82,23 @@ class Backlog(models.Model):
     def __str__(self) -> str:
         return self.titulo
 
+    def is_finished(self) -> bool:
+        """Verdadero si la tarea ha sido marcada como terminada.
+        """
+        return self.f_finalizacion is not None
+
     def touch(self, updated_at: DateTime|None=None):
         ahora = timezone.now() if updated_at is None else updated_at
-        self.f_modificacion = updated_at
+        self.f_modificacion = ahora
         self.save(update_fields=['f_modificacion'])
         self.sistema.touch(ahora)
 
     def archive(self):
         """Marca la tarea como finalizada o descartada.
         """
-        ahora = timezone.now()
-        self.f_modificacion = ahora
-        self.f_finalizacion = ahora
-        self.save(update_fields=['f_modificacion', 'f_finalizacion'])
-        self.sistema.touch(ahora)
+        self.sistema.touch()
+        self.f_finalizacion = self.f_modificacion
+        self.save(update_fields=['f_finalizacion'])
 
     def impacto(self) -> float:
         return self.prioridad / self.estimacion

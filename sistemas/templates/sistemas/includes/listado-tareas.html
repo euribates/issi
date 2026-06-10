@@ -8,10 +8,10 @@
           <th>Estimación</th>
           <th>P/E</th>
           <th>Creado hace</th>
-          <th>Editar</th>
+          <th>Cerrar</th>
       </tr>
   </thead>
-  <tbody>{% for task in sistema.backlog.all %}
+  <tbody>{% for task in sistema.tareas_en_curso %}
       <tr>
           <td>
             <a role="button" class="btn btn-warning btn-sm"
@@ -22,7 +22,9 @@
             </a>
           </td>
           <td>
-              <big>{{ task.titulo }}</big><br>
+              <big>
+                {{ task.titulo }}
+              </big><br>
               
               <small>{{ task.explicacion|as_markdown }}</small>
           </td>
@@ -31,12 +33,17 @@
           <td>{{ task.impacto }}</td>
           <td>{{ task.f_creacion|as_pasado }}</td>
           <td>
-              <a role="button" class="btn btn-danger btn-sm"
-                href="{% url 'plan:cerrar_tarea' tarea=task %}"
-                title="Cerrar / Archivar tarea"
-                >
-                <i class="bi bi-x-square"></i>
-              </a>
+
+              {% if task.is_finished %}
+                <i class="bi bi-check-square"></i>
+              {% else %}
+                <a role="button"
+                    href="{% url 'plan:cerrar_tarea' tarea=task %}"
+                    title="Cerrar / Archivar tarea"
+                    >
+                    <i class="bi bi-square"></i>
+                </a>
+              {% endif %}  
           </td>
       </tr>
   {% endfor %}

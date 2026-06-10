@@ -71,10 +71,10 @@ def bc_tareas_sistema(sistema):
         )
 
 
-def bc_crear_backlog(sistema):
+def bc_crear_tarea(sistema):
     return bc_tareas_sistema(sistema).step(
         'Añadir tarea',
-        links.a_crear_backlog(sistema.pk),
+        links.a_crear_tarea(sistema.pk),
         )
 
 

@@ -1,22 +1,36 @@
 {% extends "comun/base.html" %}
-{% load fechas %}
+{% load fechas comun_filters %}
 
 {% block content %}
 
 <table class="table">
-    <tr>
-        <th>Id. Tarea</th>
-        <td>{{ tarea.pk }}</td>
-    </tr>
-    <tr>
-        <th>Sistema</th>
-        <td>{{ tarea.sistema }}</td>
-    </tr>
+  <tr>
+    <th>Id. Tarea</th>
+    <td>{{ tarea.pk }}</td>
+  </tr>
+  <tr>
+    <th>Sistema</th>
+    <td>
+      <a href="{{ tarea.sistema.get_absolute_url }}"
+         class="sistema-codigo">
+        {{ tarea.sistema.codigo }}
+      </a>
+      <span class="sistema-nombre">
+        {{ tarea.sistema.nombre_sistema }}
+      </span>
+    </td>
+  </tr>
 
   <tr>
       <th>Título</th>
       <td>{{ tarea.titulo }}</td>
   </tr>
+
+  <tr>
+      <th>Explicación</th>
+      <td>{{ tarea.explicacion|as_markdown }}</td>
+  </tr>
+
 
   <tr>
       <th>Estimación</th>
@@ -28,15 +42,23 @@
   </tr>
   <tr>
       <th>Impacto</th>
-      <td>{{ impacto }}</td>
+      <td>{{ tarea.impacto }}</td>
   </tr>
   <tr>
-      <th>Creada el</th>
-      <td>{{ tarea.f_creacion|as_pasado }}</td>
+    <th>Creada</th>
+    <td>hace 
+      <abbr title="{{ tarea.f_creacion|as_fecha }}">
+      {{ tarea.f_creacion|as_pasado }}
+      </abbr>
+    </td>
   </tr>
   <tr>
-      <th>Última modificación</th>
-      <td>{{ tarea.f_modificacion|as_fecha }}</td>
+    <th>Última modificación</th>
+    <td>Hace
+      <abbr title="{{ tarea.f_modificacion|as_fecha }}">
+      {{ tarea.f_modificacion|as_pasado }}
+      </abbr>
+    </td>
   </tr>
   {% if tarea.f_finalizacion %}
   <tr>

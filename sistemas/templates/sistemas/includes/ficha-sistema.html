@@ -1,26 +1,23 @@
 {% load comun_filters %}
-<div class="px-2 py-3 my-3 text-center shadow-sm">
+<div class="card p-2 shadow">
+  <div class="row">
 
-  {% if sistema.icono %}
-  <img width="96" height="96" class="d-block mx-auto mb-4"
-       src="{{ sistema.icono.url }}"
-       alt="{{ sistema }}">
-  {% else %}
-  <a href="{% url 'sistemas:asignar_icono' sistema=sistema %}">
-      Asignar icono
-  </a>
-  {% endif %}
-
-  <h1 class="display-5 fw-bold">{{ sistema.codigo }}
-     {% include "sistemas/includes/pb-editar-codigo.html" %}
-  </h1>
-
-  <div class="col-lg-8 mx-auto">
-    <p class="lead mb-3 fw-bold">{{ sistema.nombre_sistema }}
-    {% include "sistemas/includes/pb-editar-nombre.html" %}
-    </p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <div class="col-9 text-start">
+      <span class="sistema-codigo">{{ sistema.codigo }}</span> {% include "sistemas/includes/pb-editar-codigo.html" %}
+      <br><span class="sistema-nombre">{{ sistema.nombre_sistema }}</span> {% include "sistemas/includes/pb-editar-nombre.html" %}
       {{ sistema.finalidad|as_markdown }}
+    </div>    
+
+    <div class="col-3 text-end">
+      {% if sistema.icono %}
+      <img width="96" align="right" height="96" class="d-block mx-auto mb-4"
+          src="{{ sistema.icono.url }}"
+          alt="{{ sistema }}">
+      {% else %}
+      <a class="bnt btn-sm" href="{% url 'sistemas:asignar_icono' sistema=sistema %}">
+        Asignar icono
+      </a>
+      {% endif %}
     </div>
   </div>
-</div>    
+</div>

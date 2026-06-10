@@ -2,12 +2,14 @@
 
 from functools import cache
 from collections import defaultdict
+from dataclasses import dataclass
 
 from django.contrib.auth.decorators import login_required
 from django.db.models import Count
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
+from django.utils.safestring import mark_safe
 import pygal
 
 from comun.commands import Command
@@ -34,49 +36,76 @@ from . import serializers
 """Vistas de sistemas.
 """
 
+
+@dataclass(frozen=True)
+class CommandItem:
+
+    url : str
+    text : str
+    klass : str
+    icon : str
+
+    def __str__(self):
+        return mark_safe(
+          f'<a class="nav-link {{ self.klass }}" aria-current="page"'
+          f' href="{self.url}">'
+          f'{self.icon} {self.text}'
+          '</a>'
+          )
+
+class Commands:
+
+    def __init__(self, name, url):
+        self.name = name
+        self.url = url
+        self.menu = []
+
+    def __iter__(self):
+        for item in self.menu:
+            yield item
+
+    def add(self, url, text, klass, icon):
+        self.menu.append(CommandItem( url, text, klass, icon))
+        return self
+
+
 @cache
 def cmd_sistemas():
-    return [
-        Command(
-            url=links.a_importar_sistemas(),
-            text='Importar',
-            klass='info',
-            icon='<i class="bi bi-file-arrow-up"></i>',
-            ),
-        Command(
-            url=links.a_exportar_sistemas(),
-            text='Exportar',
-            klass='info',
-            icon='<i class="bi bi-file-arrow-down"></i>',
-            ),
-        Command(
-            url=links.a_alta_sistema(),
-            icon='<i class="bi bi-plus-circle-fill"></i>',
-            text='Alta sistema',
-            klass='warning',
-            ),
-        ]
+    return Commands('Sistemas', links.a_sistemas()).add(
+        url=links.a_importar_sistemas(),
+        text='Importar',
+        klass='info',
+        icon='<i class="bi bi-file-arrow-up"></i>',
+    ).add(
+        url=links.a_exportar_sistemas(),
+        text='Exportar',
+        klass='info',
+        icon='<i class="bi bi-file-arrow-down"></i>',
+    ).add(
+        url=links.a_alta_sistema(),
+        text='Alta sistema',
+        klass='warning',
+        icon='<i class="bi bi-plus-circle-fill"></i>',
+    )
 
 @cache
 def cmd_usuarios():
-    return [
-        Command(
-            links.a_alta_usuario(),
-            '⊞ Alta usuario',
-            klass='warning',
-            ),
-        ]
+    return Commands('Usuario', links.a_usuarios()).add(
+        url=links.a_alta_usuario(),
+        text='Alta usuario',
+        klass='warning',
+        icon='<i class="bi bi-person-add"></i>',
+        )
 
 
 @cache
 def cmd_activos():
-    return [
-        Command(
-            links.a_activos(),
-            'Listado',
-            klass='info',
-            ),
-        ]
+    return Commands('Activos', links.a_activos()).add(
+        url=links.a_activos(),
+        icon='<i class="bi bi-plus-square"></i>',
+        text='Listado',
+        klass='info',
+        )
 
 
 @login_required
@@ -605,7 +634,7 @@ def crear_tarea(request, sistema):
             tarea = form.save()
             sistema.touch()
             Bus(request).pub_alta_tarea(tarea)
-            return redirect(links.a_detalle_sistema(sistema.pk))
+            return redirect(links.a_tareas_sistema(sistema.pk))
     else:
         form = TareaForm(sistema=sistema)
     return render(request, 'sistemas/crear-tarea.html', {
@@ -1064,6 +1093,7 @@ def listado_activos(request):
     return render(request, 'sistemas/listado-activos.html', {
         'titulo': "Listado de activos",
         'breadcrumbs': bc.bc_activos(),
+        'commands': cmd_activos(),
         'tab': 'activos',
         "filterset": filterset,
         })
