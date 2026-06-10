@@ -2,14 +2,12 @@
 
 from functools import cache
 from collections import defaultdict
-from dataclasses import dataclass
 
 from django.contrib.auth.decorators import login_required
 from django.db.models import Count
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.shortcuts import render
-from django.utils.safestring import mark_safe
 import pygal
 
 from comun.commands import Commands
