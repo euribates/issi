@@ -660,9 +660,28 @@ def activos_sistema(request, sistema):
     return render(request, 'sistemas/activos-sistema.html', {
         'titulo': f'Activos de datos de {sistema}',
         'commands': cmd_sistemas(),
-        'breadcrumbs': bc.bc_activos_sistema(sistema),
+        'breadcrumbs': bc.bc_crear_activo(sistema),
         'tab': 'sistemas',
         'sistema': sistema,
+        })
+
+
+def crear_activo(request, sistema, *args, **kwargs):
+    if request.method == 'POST':
+        form = forms.AltaActivoForm(request.POST, sistema=sistema)
+        if form.is_valid():
+            form.save()
+            return redirect(links.a_activos_sistema(sistema))
+    else:
+        form = forms.AltaActivoForm(sistema=sistema)
+    return render(request, "sistemas/crear-activo.html", {
+        'titulo': "Añadir un activo",
+        'subtitulo': f"Al sistema {sistema}",
+        'commands': cmd_sistemas(),
+        'breadcrumbs': bc.bc_crear_activo(sistema),
+        'tab': 'sistemas',
+        'sistema': sistema,
+        'form': form,
         })
 
 

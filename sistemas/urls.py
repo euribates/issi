@@ -20,6 +20,7 @@ urlpatterns = [
     tie('sistema/<si:sistema>/', views.detalle_sistema),
     tie('sistema/<si:sistema>/historico/', views.historico_sistema),
     tie('sistema/<si:sistema>/activos/', views.activos_sistema),
+    tie('sistema/<si:sistema>/activos/crear/', views.crear_activo),
     tie('sistema/<si:sistema>/diagnostico/', views.diagnostico_sistema),
     tie('sistema/<si:sistema>/tareas/', views.tareas_sistema),
     tie('sistema/<si:sistema>/tareas/crear/', views.crear_tarea),

@@ -60,6 +60,10 @@ def a_activos_sistema(id_sistema: int) -> str:
     return _a('sistemas:activos_sistema', sistema=id_sistema)
 
 
+def a_crear_activo(id_sistema: int) -> str:
+    return _a('sistemas:crear_activo', sistema=id_sistema)
+
+
 def a_tareas_sistema(id_sistema: int) -> str:
     return _a('sistemas:tareas_sistema', sistema=id_sistema)
 

@@ -64,6 +64,13 @@ def bc_activos_sistema(sistema):
         )
 
 
+def bc_crear_activo(sistema):
+    return bc_activos_sistema(sistema).step(
+        'Añadir activo',
+        links.a_crear_activo(sistema.pk),
+        )
+
+
 def bc_tareas_sistema(sistema):
     return bc_detalle_sistema(sistema).step(
         'Tareas',

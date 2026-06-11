@@ -1,0 +1,102 @@
+{% extends "comun/base.html" %}
+{% load comun_filters cards %}
+
+{% block content %}
+
+<h2>
+Añadir activo al sistema de informacion
+{{ sistema.codigo }} : {{ sistema.nombre_sistema }}
+</h2>
+
+
+<div class="row m-3">
+  <div class="shadow rounded p-3 col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6">
+    <form method="POST" action=".">  
+    {% csrf_token %}
+    
+    <label for="id_nombre_activo" class="form-label">
+        {{ form.nombre_activo.label }}
+    </label>
+    {{ form.nombre_activo }}
+    {% if form.nombre_activo.errors %}<ul class="form-errors">
+        {% for error in form.nombre_activo.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>{% endif %}
+
+    <label for="id_descripcion" class="form-label">
+        {{ form.descripcion.label }}
+    </label>
+    {{ form.descripcion }}
+    {% if form.descripcion.errors %}<ul class="form-errors">
+        {% for error in form.descripcion.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>{% endif %}
+
+    <fieldset id="atributos" class="">
+        <legend>Atributos</legend>
+        
+        <table>
+        <tr>
+          <th>
+            <label for="id_es_prioritario" class="form-label">
+                {{ form.es_prioritario.label }}
+            </label>
+          </th>
+          
+          <td>
+              {{ form.es_prioritario }}
+              {% if form.es_prioritario.errors %}<ul class="form-errors">
+                  {% for error in form.es_prioritario.errors %}
+                  <li>{{ error }}</li>
+                  {% endfor %}
+              </ul>{% endif %}
+          </td>
+        </tr>
+
+        <tr>
+          <th>  
+            <label for="id_georreferenciado" class="form-label">
+                {{ form.georreferenciado.label }}
+            </label>
+          </th>
+          <td>
+            {{ form.georreferenciado }}
+            {% if form.georreferenciado.errors %}<ul class="form-errors">
+                {% for error in form.georreferenciado.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>{% endif %}
+          </td>  
+        </tr>
+
+        <tr>
+          <th> 
+            <label for="id_datos_personales" class="form-label">
+                {{ form.datos_personales.label }}
+            </label>
+          </th>   
+          <td>
+            {{ form.datos_personales }}
+            {% if form.datos_personales.errors %}<ul class="form-errors">
+                {% for error in form.datos_personales.errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+            </ul>{% endif %}
+          </td>  
+        </tr>
+
+        </table>
+    </fieldset>
+
+    <div class="card-footer text-center">
+    <input type="submit"
+           class="form-control btn btn-primary mt-3 w-75 text-center"
+           value="Añadir activo" name="pb_ok">
+    </div>
+
+  </div>
+</div>
+
+{% endblock content %}

@@ -28,6 +28,36 @@ class GranTextoForm(BootstrapForm, forms.Form):
 
 # ---------------------------------------[ Formularios para modelos ]--
 
+class AltaActivoForm(BootstrapForm, forms.ModelForm):
+
+    class Meta:
+        model = models.Activo
+        fields = [
+            'nombre_activo',
+            'descripcion',
+            'es_prioritario',
+            'georreferenciado',
+            'datos_personales',
+            ]
+        widgets = {
+            'descripcion': forms.Textarea(attrs={
+                'class': "form-control",
+                'cols': 80,
+                'rows': 5,
+                'placeholder': "Descripción del activo"
+                }),
+            }
+
+    def __init__(self, *args, **kwargs):
+        self.sistema = kwargs.pop('sistema')
+        super().__init__(*args, **kwargs)
+
+    def save(self, commit=True):
+        instance = super().save(commit=False)
+        instance.sistema = self.sistema
+        if commit:
+            instance.save()
+        return instance
 
 class AltaSistemaForm(BootstrapForm, forms.ModelForm):
 
@@ -283,7 +313,8 @@ class AltaOpcionForm(BootstrapForm, forms.ModelForm):
         instance = super().save(commit=False)
         instance.pregunta = self.pregunta
         instance.orden = instance.get_next_orden()
-        instance = super().save(commit=commit)
+        if commit:
+            instance.save()
         return instance
 
 
