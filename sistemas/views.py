@@ -670,8 +670,11 @@ def crear_activo(request, sistema, *args, **kwargs):
     if request.method == 'POST':
         form = forms.AltaActivoForm(request.POST, sistema=sistema)
         if form.is_valid():
-            form.save()
+            activo = form.save()
+            Bus(request).pub_crear_activo(activo)
+            activo.sistema.touch()
             return redirect(links.a_activos_sistema(sistema))
+
     else:
         form = forms.AltaActivoForm(sistema=sistema)
     return render(request, "sistemas/crear-activo.html", {

@@ -225,3 +225,14 @@ class Bus:
             )
         self.publica(tarea, msg, 'archive')
         self.publica(tarea.sistema, msg, 'update', user_feedback=False)
+
+    ## Activos
+
+    def pub_crear_activo(self, activo):
+        msg = (
+            f'Se ha añadido un activo de datos ({activo.nombre_activo})'
+            f' al S.I. {activo.sistema}'
+            )
+        self.publica(activo.sistema, msg, 'update', user_feedback=False)
+        self.publica(activo, msg, 'insert')
+
