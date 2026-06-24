@@ -318,9 +318,16 @@ def bc_activos() -> BreadCrumb:
 
 
 def bc_detalle_activo(activo) -> BreadCrumb:
-    return bc_activos().step(
+    return bc_activos_sistema(activo.sistema).step(
         str(activo),
         links.a_detalle_activo(activo.pk),
+        )
+
+
+def bc_crear_campo(activo):
+    return bc_detalle_activo(activo).step(
+        'Añadir campo',
+        links.a_crear_campo(activo.pk),
         )
 
 

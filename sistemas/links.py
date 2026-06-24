@@ -224,6 +224,10 @@ def a_detalle_activo(pk: int) -> str:
     return _a('sistemas:detalle_activo', activo=pk)
 
 
+def a_crear_campo(pk: int) -> str:
+    return _a('sistemas:crear_campo', activo=pk)
+
+
 def a_pendientes() -> str:
     return _a('sistemas:pendientes')
 

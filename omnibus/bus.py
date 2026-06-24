@@ -236,3 +236,13 @@ class Bus:
         self.publica(activo.sistema, msg, 'update', user_feedback=False)
         self.publica(activo, msg, 'insert')
 
+    ## Campos
+
+    def pub_crear_campo(self, campo):
+        msg = (
+            f'Se ha añadido un nuevo campo: ({campo.nombre_campo})'
+            f' al activo {campo.activo.nombre_activo}'
+            f' del S.I. {campo.activo.sistema.nombre_sistema}'
+            )
+        self.publica(campo.activo, msg, 'update', user_feedback=False)
+        self.publica(campo, msg, 'insert')

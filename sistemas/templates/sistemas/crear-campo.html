@@ -1,0 +1,50 @@
+{% extends "comun/base.html" %}
+{% load comun_filters cards %}
+
+{% block content %}
+
+<div class="row m-3">
+  <div class="shadow rounded p-3 col-12 offset-sm-2 col-sm-8 offset-md-3 col-md-6">
+    <form method="POST" action=".">  
+    {% csrf_token %}
+    
+    <label for="id_nombre_campo" class="form-label">
+        {{ form.nombre_campo.label }}
+    </label>
+    {{ form.nombre_campo }}
+    {% if form.nombre_campo.errors %}<ul class="form-errors">
+        {% for error in form.nombre_campo.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>{% endif %}
+
+    <label for="id_descripcion" class="form-label">
+        {{ form.descripcion.label }}
+    </label>
+    {{ form.descripcion }}
+    {% if form.descripcion.errors %}<ul class="form-errors">
+        {% for error in form.descripcion.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>{% endif %}
+
+    <label for="id_arquetipo" class="form-label">
+        {{ form.arquetipo.label }}
+    </label>
+    {{ form.arquetipo }}
+    {% if form.arquetipo.errors %}<ul class="form-errors">
+        {% for error in form.arquetipo.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+    </ul>{% endif %}
+
+    <div class="card-footer text-center">
+    <input type="submit"
+           class="form-control btn btn-primary mt-3 w-75 text-center"
+           value="Añadir campo" name="pb_ok">
+    </div>
+
+  </div>
+</div>
+
+{% endblock content %}

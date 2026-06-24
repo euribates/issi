@@ -59,6 +59,7 @@ class AltaActivoForm(BootstrapForm, forms.ModelForm):
             instance.save()
         return instance
 
+
 class AltaSistemaForm(BootstrapForm, forms.ModelForm):
 
     class Meta:
@@ -323,3 +324,31 @@ class NormativaForm(forms.Form):
     id_juriscan = forms.IntegerField()
 
 
+class AltaCampoForm(BootstrapForm, forms.ModelForm):
+
+    class Meta:
+        model = models.Campo
+        fields = [
+            'nombre_campo',
+            'descripcion',
+            'arquetipo',
+            ]
+        widgets = {
+            'descripcion': forms.Textarea(attrs={
+                'class': "form-control",
+                'cols': 80,
+                'rows': 5,
+                'placeholder': "Descripción del campo"
+                }),
+            }
+
+    def __init__(self, *args, **kwargs):
+        self.activo = kwargs.pop('activo')
+        super().__init__(*args, **kwargs)
+
+    def save(self, commit=True):
+        instance = super().save(commit=False)
+        instance.activo = self.activo
+        if commit:
+            instance.save()
+        return instance

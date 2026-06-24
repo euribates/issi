@@ -33,20 +33,25 @@
   <div class="col col-8">
 
     <div class="card">
-      <div class="card-header">
+      <div class="card-header bg-info d-flex justify-content-between">
         <h4 class="card-title">Campos del activo</h4>
-        <span class="badge">{{ activo.campos.count }}</span>
+        <span class="badge bg-primary">{{ activo.campos.count }}</span>
+        {% include "sistemas/includes/pb-crear-campo.html" with activo=activo %}
       </div>  
       <div class="card-body">
         <table class="table"><tbody>
         {% for campo in activo.campos.all %}<tr>
-          <th>
-              {% if campo.arquetipo.es_clave_primaria %}
-              <u>{{ campo.nombre_campo }}</ul>
-              {% else %}
-              {{ campo.nombre_campo }}
-              {% endif %}
-          </th>
+            <td>
+            {% if campo.arquetipo.es_clave_primaria %}
+              <span class="campo clave-primaria">
+            {% elif campo.arquetipo.es_clave_primaria %}
+              <span class="campo clave-foranea">
+            {% else %}
+              <span class="campo">
+            {% endif %}
+            {{ campo.nombre_campo }}
+            <span>
+          </td>
           <td>{{ campo.descripcion }}</td>
           <td>
               <code title="{{ campo.arquetipo.descripcion }}">

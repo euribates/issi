@@ -257,20 +257,30 @@ img.card-top-logo {
   border: 0px dashed green;
 }
 
-.clave-primaria {
-  padding: 4px;
-  font-size: 90%;
-  font-family: monospace;
-  color: #303030;
-  border: 1px solid silver;
-}
+
 
 .clave-externa {
-  padding: 2px;
   font-size: 85%;
+  padding: 2px;
   font-family: monospace;
   color: #303030;
   border: 1px solid silver;
+  }
+
+
+.campo {
+  padding: 4px;
+  font-family: monospace;
+  color: #303030;
+}
+
+.clave-primaria {
+  font-weight: bolder;
+  border-bottom: 1px solid #303030;
+}
+
+.clave-foranea {
+  border-bottom: 1px dashed #303030;
 }
 
 .card-organismo {

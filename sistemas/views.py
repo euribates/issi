@@ -1201,3 +1201,27 @@ def exportar_sistemas_todos(request):
     result.headers['Content-Disposition'] ='attachment; filename="sistemas-de-informacion-CAC.cvs'
     serializers.sistemas_a_csv(sistemas, result)
     return result
+
+
+
+def crear_campo(request, activo):
+    if request.method == 'POST':
+        form = forms.AltaCampoForm(request.POST, activo=activo)
+        if form.is_valid():
+            campo = form.save()
+            Bus(request).pub_crear_campo(campo)
+            activo.sistema.touch()
+            return redirect(links.a_detalle_activo(activo))
+    else:
+        form = forms.AltaCampoForm(activo=activo)
+    return render(request, "sistemas/crear-campo.html", {
+        'titulo': f"Añadir un campo al activo {activo}",
+        'subtitulo': f"Del sistema {activo.sistema}",
+        'commands': cmd_sistemas(),
+        'breadcrumbs': bc.bc_crear_campo(activo),
+        'tab': 'sistemas',
+        'activo': activo,
+        'form': form,
+        })
+
+

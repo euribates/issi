@@ -67,6 +67,7 @@ urlpatterns = [
 
     tie('activos/', views.listado_activos),
     tie('activos/<act:activo>/', views.detalle_activo),
+    tie('activos/<act:activo>/campo/crear/', views.crear_campo),
     tie('pendientes/', views.pendientes),
     tie('pendientes/temas/', views.sistemas_sin_tema),
     tie('exportar/', views.exportar_sistemas),
