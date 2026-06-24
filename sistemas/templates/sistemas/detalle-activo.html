@@ -52,7 +52,7 @@
             {{ campo.nombre_campo }}
             <span>
           </td>
-          <td>{{ campo.descripcion }}</td>
+          <td>{{ campo.descripcion|as_markdown }}</td>
           <td>
               <code title="{{ campo.arquetipo.descripcion }}">
               {{ campo.arquetipo }}
