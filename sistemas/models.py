@@ -86,6 +86,12 @@ class Tema(models.Model):
 class Sistema(models.Model):
     """Modelo Sistema de Información."""
 
+    class Etapas(models.TextChoices):
+        DESARROLLO = ('D', "En desarrollo")
+        EXPLOTACION = ('E', "En explotación")
+        SUSTITUCION = ('S', "En proceso de sustitución")
+        RETIRADO = ('X', "Retirado")
+
     class Meta:
         """Opciones para Sistema."""
 
@@ -93,6 +99,7 @@ class Sistema(models.Model):
             F("es_subsistema_de").desc(nulls_first=True),
             'nombre_sistema',
             ]
+        
 
     id_sistema = models.BigAutoField(primary_key=True)
     uuid_sistema = models.UUIDField(
@@ -174,6 +181,11 @@ class Sistema(models.Model):
         related_name="sistemas",
         on_delete=models.PROTECT,
     )
+    etapa = models.CharField(
+        max_length=1,
+        choices=Etapas,
+        default=Etapas.EXPLOTACION,
+        )
     icono_height = models.PositiveIntegerField(default=0)
     icono_width = models.PositiveIntegerField(default=0)
     icono = models.ImageField(

@@ -34,6 +34,7 @@ urlpatterns = [
     tie('sistema/<si:sistema>/editar/descripcion/', views.editar_descripcion),
     tie('sistema/<si:sistema>/editar/observaciones/', views.editar_observaciones),
     tie('sistema/<si:sistema>/editar/organismo/', views.asignar_organismo),
+    tie('sistema/<si:sistema>/cambiar/etapa/', views.cambiar_etapa),
     tie('sistema/<si:sistema>/asignar/responsable/', views.asignar_responsable),
     tie('sistema/<si:sistema>/desasignar/normativa/<int:juriscan>/', views.desasignar_normativa),
     tie('sistema/<si:sistema>/asignar/normativa/', views.asignar_normativa),
@@ -78,4 +79,5 @@ urlpatterns = [
     tie("patch/empresas/", patches.patch_empresas),
     tie("patch/usuarios/", patches.patch_usuarios),
     tie("patch/sistemas/", patches.patch_sistemas),
+    tie("patch/etapas/", patches.patch_etapas),
     ]

@@ -191,6 +191,16 @@ def asignar_organismo(request, sistema):
 
 
 @login_required
+def cambiar_etapa(request, sistema):
+    from django.http import HttpResponse
+    return HttpResponse(
+        'La vista cambiar_etapa aun no está implementada',
+        content_type='text/plain',
+        )
+
+
+
+@login_required
 def asignar_familia(request, sistema):
     if request.method == "POST":
         form = forms.AsignarFamiliaForm(request.POST, instance=sistema)

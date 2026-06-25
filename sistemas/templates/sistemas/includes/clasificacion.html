@@ -1,5 +1,26 @@
 {% load static comun_filters sistemas %}
 
+<div class="modal fade" id="exampleModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="card m-1">
   <div class="card-header bg-info">
       <h4 class="card-title">
@@ -19,9 +40,29 @@
     </tr>  
 
     <tr>
+      <th>Etapa</th>  
+      <td>{{ sistema.get_etapa_display }}</td>
       <td>
-        Área temática
+        {% include 'sistemas/includes/pb-cambiar-etapa.html' %}  
+        <hr>
+         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+    <button data-on:click="@get('/sistemas/patch/etapas')">
+        Open the pod bay doors, HAL.
+    </button>
+
+        <div id="dialog">
+        </div>
       </td>
+
+    </tr>
+
+    <tr>
+      <th>
+        Área temática
+      </th>
       <td>
         {{ sistema.tema|as_tema }}
       </td>

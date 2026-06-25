@@ -117,3 +117,18 @@ def patch_usuarios(request):
         f'<div id="control_usuarios">{result}</div>'
         f'<div id="contador">{contador}<div>'
         )
+
+
+@login_required
+def patch_etapas(request):
+    query = get_datastar_parameter(request, 'query')
+    buff = [
+        f'<input id="rb_etapa_{etapa}" type="radio" name="etapa" value="{etapa}">'
+        f'<label for="rb_etapa_{etapa}">'
+        f'{etapa.label}</label>\n'
+        for etapa in Sistema.Etapas
+        ]
+    result = '<br>'.join(buff)
+    return HttpResponse(f'<div id="dialog">{result}</div>')
+
+
