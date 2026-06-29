@@ -121,7 +121,7 @@ def patch_usuarios(request):
 
 @login_required
 def patch_etapas(request):
-    query = get_datastar_parameter(request, 'query')
+    _query = get_datastar_parameter(request, 'query')
     buff = [
         f'<input id="rb_etapa_{etapa}" type="radio" name="etapa" value="{etapa}">'
         f'<label for="rb_etapa_{etapa}">'

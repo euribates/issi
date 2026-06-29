@@ -7,7 +7,7 @@
       <br><span class="sistema-nombre">{{ sistema.nombre_sistema }}</span> {% include "sistemas/includes/pb-editar-nombre.html" %}
       {{ sistema.finalidad|as_markdown }}
       {% if sistema.etapa == 'E' %}
-      {{ sistema.get_etapa_display }}
+      <span class="etapa">{{ sistema.get_etapa_display }}</span>
       {% endif %}
     </div>    
 
