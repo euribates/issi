@@ -27,3 +27,4 @@ test_db.sqlite3
 imports/
 .ipynb_checkpoints/
 Session.vim
+certs/
