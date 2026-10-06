@@ -867,6 +867,7 @@ dependencies = [
     { name = "sentry-sdk" },
     { name = "sphinx" },
     { name = "ty" },
+    { name = "utm" },
     { name = "vulture" },
     { name = "watchdog" },
     { name = "werkzeug" },
@@ -936,6 +937,7 @@ requires-dist = [
     { name = "sentry-sdk", specifier = ">=2.68.1" },
     { name = "sphinx", specifier = "==8.2.3" },
     { name = "ty", specifier = "==0.0.17" },
+    { name = "utm", specifier = ">=0.9.0" },
     { name = "vulture", specifier = "==2.14" },
     { name = "watchdog", specifier = "==6.0.0" },
     { name = "werkzeug", specifier = "==3.1.3" },
@@ -2771,6 +2773,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/c7/24/5f1b3bdffd70275f6661c76461e25f024d5a38a46f04aaca912426a2b1d3/urllib3-2.6.3.tar.gz", hash = "sha256:1b62b6884944a57dbe321509ab94fd4d3b307075e0c2eae991ac71ee15ad38ed", size = 435556, upload-time = "2026-01-07T16:24:43.925Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/39/08/aaaad47bc4e9dc8c725e68f9d04865dbcb2052843ff09c97b08904852d84/urllib3-2.6.3-py3-none-any.whl", hash = "sha256:bf272323e553dfb2e87d9bfd225ca7b0f467b919d7bbd355436d3fd37cb0acd4", size = 131584, upload-time = "2026-01-07T16:24:42.685Z" },
+]
+
+[[package]]
+name = "utm"
+version = "0.9.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/58/9a/d2cd5fec4f65f963fdd4f7a8a7f8992edeae7830751a1d8bd7261703f3fb/utm-0.9.0.tar.gz", hash = "sha256:1c8ffa6032631379374ceef05e6fea0ad42e9f09be0c3f91f7cc1b23f27be8a7", size = 13381, upload-time = "2026-07-27T15:34:48.603Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/45/d2/ccf2f47bfeb607db0c09865dea382f6ec5e6c9b93416f98452633f3c1c8b/utm-0.9.0-py3-none-any.whl", hash = "sha256:767592281e457dfacd71323ac69ff38e2f290d74526af91ca0924637de0e1d53", size = 8608, upload-time = "2026-07-27T15:34:47.651Z" },
 ]
 
 [[package]]

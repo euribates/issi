@@ -1,16 +1,14 @@
 [project]
 name = "issi"
 version = "0.1.0"
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 dependencies = [
     "bandit==1.9.1",
     "beautifulsoup4==4.13.5",
     "codespell==2.4.1",
     "dj-database-url==3.1.2",
-    "django==6.0.2",
-    "django-debug-toolbar==6.2.0",
+    "django==6.1",
     "django-docs==0.3.3",
-    "django-extensions==4.1",
     "django-filter==25.2",
     "django-health-check==3.22.0",
     "django-import-export[ods]>=4.4.0",
@@ -54,6 +52,8 @@ python_files = [
     "test_*.py",
     "*_test.py",
     "testing/python/*.py",
+    "django-debug-toolbar==7.1.0",
+    "django-extensions==4.1",
     ]
 
 

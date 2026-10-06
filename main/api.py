@@ -31,8 +31,6 @@ class OrganismoSchema(Schema):
     nombre_organismo: str
     dir3: str
     id_sirhus: int
-
-
     
 
 class AltaSistemaSchema(Schema):
